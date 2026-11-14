@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/services/src/session/automationCronValidation.ts	61	a8784b7e	// [边界] monthly 还需过 MAX_MONTHLY_AUTOMATION_SCHEDULE_INTERVAL：其他 unit 只做正整数校验，不共用月度上限。
+packages/services/src/session/automationService.ts	395	a8784b7e	// [契约] maxRuns 只对比 getScheduledRunCount：手动执行无数次也不会把 max_runs 用尽。
+packages/services/src/session/continuousStreamCoalescer.ts	129	a8784b7e	// [顺序] clearFlushTimer 先判 flushTimer 再 clearTimeout：重复调用必须幂等，不能把 undefined 传进去。
+packages/services/src/session/offPeakRuntimeModel.ts	179	a8784b7e	// [失败路径] resolveSelectedOffPeakCodingPlan 抛错即终止：非法选择不落日志、不读 ACTIVE_OAUTH_PROVIDER_KEY。
+packages/services/src/session/offPeakServerClient.ts	211	a8784b7e	// [安全] warn 只带 bizCode/credentialKind/httpStatus：指纹与响应体原文一律不得进日志。
+packages/services/src/session/offPeakTaskRepo.ts	451	a8784b7e	// [边界] withSessionTitle 只决定 SELECT 是否带 title 联查：WHERE 与分页口径在两条分支完全相同。
+packages/services/src/session/offPeakWorkspaceIdentityMigration.ts	21	a8784b7e	// [顺序] 三列任一缺失即提前 return：结构未就绪时不写数据，等后续迁移建表后再跑。
+packages/services/src/session/sessionModeOptions.ts	115	a8784b7e	// [契约] 匹配用归一化比较：candidate.value 与 requestedMode 各自规范化后才等值，别名写法不同也能命中。
+packages/services/src/session/taskIndexRepo.ts	859	a8784b7e	// [边界] target 为空走复制分支：只换 task_id/acp_session_id，workspace_key 等列必须逐字保留。
+packages/services/src/session/tasksDatabase/migrations.ts	323	a8784b7e	// [契约] ready 要求每条迁移在账本内且 checksum 一致：只查账本行数会把半应用当成已完成。
+packages/services/src/session/zcodeTaskListTypes.ts	21	a8784b7e	// [契约] search 缺省或 trim 后为空都表示不过滤：不得把空串当成「匹配空内容」的过滤条件。
+packages/services/src/session/zcodeTaskService.ts	199	a8784b7e	// [契约] releaseWorkspacePreparation 只发起释放即返回：回收失败按 best-effort 处理，不让调用方等。
+packages/services/src/skill-sync/skillSync.ts	36	a8784b7e	// [契约] ServiceChannels.SkillSync 是跨版本协议面：改名即断旧客户端，只能走版本化迁移。
+packages/services/src/storage/app/storageService.ts	107	a8784b7e	// [契约] planStorageClean 是纯函数：candidates 与 now 一次性传入，删除副作用只发生在后续执行阶段。
+packages/services/src/storage/domain/cleanPlan.ts	41	a8784b7e	// [边界] cleanability=none 时直接返回空 targets：skippedCount 记为全部候选，不做逐条判定。
+packages/services/src/storage/domain/usageAggregate.ts	86	a8784b7e	// [契约] 缺失类别补零值而不是省略：前端拿到的 categories 长度恒等于 STORAGE_CATEGORY_IDS。
+packages/services/src/task-groups/contract.ts	51	a8784b7e	// [契约] save 收整份结构：id 缺失由服务端生成；color 缺失落默认值，返回落库后的完整对象。
+packages/services/src/usage-stats/providers/bigmodelUsageMonitorMapper.ts	393	a8784b7e	// [契约] heatmap 结构仅为类型兼容而保留：设置页已不再渲染热力图，字段值恒为空。
+packages/services/src/usage-stats/providers/bigmodelUsageQuotaProvider.ts	570	a8784b7e	// [失败路径] warnOnUnattributedStartPlanBuckets 只写日志：无归属桶不阻断快照构造，正常数据下零输出。
+packages/services/src/usage-stats/usageStats.ts	48	a8784b7e	// [契约] IUsageStatsService 用 ServiceChannels.UsageStats 绑描述符：频道名即协议面，改名须同步客户端桩。

@@ -1,0 +1,59 @@
+file	baseLine	blame	content
+packages/ui/src/settings/model-provider-section/constants.ts	20	a8784b7e479d3a	// 模块职责：模型厂商设置区的静态常量与展示名解析：预置厂商、编码套餐规格、导航项形态。
+packages/ui/src/settings/model-provider-section/constants.ts	40	a8784b7e479d3a	// 标识生成只转调统一工具
+packages/ui/src/settings/model-provider-section/constants.ts	41	a8784b7e479d3a	// [边界] 各处自行拼串会让格式分叉
+packages/ui/src/settings/model-provider-section/constants.ts	42	a8784b7e479d3a	// 返回值保证是字符串
+packages/ui/src/settings/model-provider-section/constants.ts	43	a8784b7e479d3a	// 调用方不关心具体算法
+packages/ui/src/settings/model-provider-section/constants.ts	44	a8784b7e479d3a	// 该函数无副作用，可在任意处调用
+packages/ui/src/settings/model-provider-section/constants.ts	61	a8784b7e479d3a	// 预置入口只有启动套餐两家，顺序即侧栏展示顺序
+packages/ui/src/settings/model-provider-section/constants.ts	62	a8784b7e479d3a	// 每家都带 oauth 标识，用于走对应授权流程
+packages/ui/src/settings/model-provider-section/constants.ts	63	a8784b7e479d3a	// 展示名是品牌短名，不含套餐后缀
+packages/ui/src/settings/model-provider-section/constants.ts	64	a8784b7e479d3a	// [失败路径] 顺序漂移会让侧栏入口位置变化
+packages/ui/src/settings/model-provider-section/constants.ts	65	a8784b7e479d3a	// 索引表在模块加载时一次建好，供按 id 查表
+packages/ui/src/settings/model-provider-section/constants.ts	66	a8784b7e479d3a	// 预置厂商不参与编码套餐额度查询
+packages/ui/src/settings/model-provider-section/constants.ts	84	a8784b7e479d3a	// 编码套餐 id 限定为六个内置标识
+packages/ui/src/settings/model-provider-section/constants.ts	85	a8784b7e479d3a	// 个人、团队、启动三类各两家，覆盖两个品牌
+packages/ui/src/settings/model-provider-section/constants.ts	86	a8784b7e479d3a	// [边界] 用字符串字面量而非枚举，序列化后天然可读
+packages/ui/src/settings/model-provider-section/constants.ts	87	a8784b7e479d3a	// 该类型同时用于规格表与导航项
+packages/ui/src/settings/model-provider-section/constants.ts	88	a8784b7e479d3a	// 新增标识必须同步规格表与展示名分支
+packages/ui/src/settings/model-provider-section/constants.ts	89	a8784b7e479d3a	// 该类型不做运行期校验，约束在编译期
+packages/ui/src/settings/model-provider-section/constants.ts	116	a8784b7e479d3a	// 规格表按 id 列出现有编码套餐，顺序即展示顺序
+packages/ui/src/settings/model-provider-section/constants.ts	117	a8784b7e479d3a	// 每条带 oauth 标识、展示标签与厂商名
+packages/ui/src/settings/model-provider-section/constants.ts	118	a8784b7e479d3a	// 购买链接指向对应品牌的自助购买页
+packages/ui/src/settings/model-provider-section/constants.ts	119	a8784b7e479d3a	// [失败路径] 链接缺失会被上层当成不支持自助购买
+packages/ui/src/settings/model-provider-section/constants.ts	120	a8784b7e479d3a	// 个人与团队套餐共用同一展示标签，品牌前缀按厂商
+packages/ui/src/settings/model-provider-section/constants.ts	121	a8784b7e479d3a	// 启动套餐同样列在表内，复用同一套连接流程
+packages/ui/src/settings/model-provider-section/constants.ts	159	a8784b7e479d3a	// 先按编码套餐标识直接给出统一展示名
+packages/ui/src/settings/model-provider-section/constants.ts	160	a8784b7e479d3a	// 启动套餐两个标识都显示为 Start Plan
+packages/ui/src/settings/model-provider-section/constants.ts	161	a8784b7e479d3a	// [边界] 其余厂商回落到通用表单标签，不在此硬编码
+packages/ui/src/settings/model-provider-section/constants.ts	162	a8784b7e479d3a	// 判断只读 providerId，不读运行期配置
+packages/ui/src/settings/model-provider-section/constants.ts	163	a8784b7e479d3a	// 返回的是纯展示文案，不参与业务分支
+packages/ui/src/settings/model-provider-section/constants.ts	164	a8784b7e479d3a	// 识别分支按标识精确比较，不做前缀匹配
+packages/ui/src/settings/model-provider-section/constants.ts	186	a8784b7e479d3a	// 导航项按类型区分预置、编码套餐、团队套餐、加载与自定义
+packages/ui/src/settings/model-provider-section/constants.ts	187	a8784b7e479d3a	// [边界] 团队项比个人项多团队名与组织项目身份
+packages/ui/src/settings/model-provider-section/constants.ts	188	a8784b7e479d3a	// 加载项只有展示字段，不携带状态
+packages/ui/src/settings/model-provider-section/constants.ts	189	a8784b7e479d3a	// 公共字段在各分支重复声明，便于各自收窄
+packages/ui/src/settings/model-provider-section/constants.ts	190	a8784b7e479d3a	// 两种编码套餐分支共享相同字段，团队分支在此之上扩展
+packages/ui/src/settings/pluginCapabilityProjection.ts	64	a8784b7e479d3a	// 先剔除未物化插件。
+packages/ui/src/settings/pluginCapabilityProjection.ts	65	a8784b7e479d3a	// 再按内置 id 集合分组。
+packages/ui/src/settings/pluginCapabilityProjection.ts	66	a8784b7e479d3a	// 内置组按文档优先级排序。
+packages/ui/src/settings/pluginCapabilityProjection.ts	67	a8784b7e479d3a	// 已安装组保持入参顺序。
+packages/ui/src/settings/pluginCapabilityProjection.ts	68	a8784b7e479d3a	// 两个分组互斥不重叠。
+packages/ui/src/settings/pluginCapabilityProjection.ts	69	a8784b7e479d3a	// 该函数不改写入参。
+packages/ui/src/settings/pluginCapabilityProjection.ts	83	a8784b7e479d3a	// 空查询直接返回副本。
+packages/ui/src/settings/pluginCapabilityProjection.ts	84	a8784b7e479d3a	// 查询归一化为小写。
+packages/ui/src/settings/pluginCapabilityProjection.ts	85	a8784b7e479d3a	// 市场条目按 id 对齐。
+packages/ui/src/settings/pluginCapabilityProjection.ts	86	a8784b7e479d3a	// 名称与描述合并匹配。
+packages/ui/src/settings/pluginCapabilityProjection.ts	87	a8784b7e479d3a	// 双语显示名同时参与。
+packages/ui/src/settings/pluginCapabilityProjection.ts	88	a8784b7e479d3a	// 任一关键词命中即保留。
+packages/ui/src/settings/pluginCapabilityProjection.ts	124	a8784b7e479d3a	// 先筛出启用插件。
+packages/ui/src/settings/pluginCapabilityProjection.ts	125	a8784b7e479d3a	// 建立 id 与名称两张索引。
+packages/ui/src/settings/pluginCapabilityProjection.ts	126	a8784b7e479d3a	// 非插件技能按作用域过滤。
+packages/ui/src/settings/pluginCapabilityProjection.ts	127	a8784b7e479d3a	// 有插件 id 时只认 id。
+packages/ui/src/settings/pluginCapabilityProjection.ts	128	a8784b7e479d3a	// 无 id 时按名称唯一回退。
+packages/ui/src/settings/pluginCapabilityProjection.ts	129	a8784b7e479d3a	// 重名插件不纳入技能。
+packages/ui/src/settings/pluginCapabilityProjection.ts	155	a8784b7e479d3a	// 用户命令按作用域映射。
+packages/ui/src/settings/pluginCapabilityProjection.ts	156	a8784b7e479d3a	// 非插件命令一律排除。
+packages/ui/src/settings/pluginCapabilityProjection.ts	157	a8784b7e479d3a	// 有市场时拼完整插件 id。
+packages/ui/src/settings/pluginCapabilityProjection.ts	158	a8784b7e479d3a	// 无市场时按名称唯一匹配。
+packages/ui/src/settings/pluginCapabilityProjection.ts	159	a8784b7e479d3a	// 重名插件命令不被采用。

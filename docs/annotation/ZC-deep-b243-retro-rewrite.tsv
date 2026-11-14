@@ -1,0 +1,4 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	136	477f5d6a4c1fd4	/** 实际生效的请求头（鉴权覆盖后的结果），与请求期快照一致。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	287	477f5d6a4c1fd4	/** 所有已安装插件记录，按 (id, scope) 唯一。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	307	477f5d6a4c1fd4	/** 关联插件 id；目录级诊断（非单插件）时缺省。 */

@@ -1,0 +1,25 @@
+# 池外 weak 自清登记（POOL-DIFF 门禁的白名单）
+# 格式：<file>:<line>	<batch>	<blame sha>	<分类>	<成因>	[auto]
+# 第 6 列：人工登记留空；自动登记（池外 + 本批未触碰 + blame 上游）固定写 auto，第 4 列写 auto-out-of-pool。
+# 两套计数分开：自动那批 `awk -F'\t' '$6=="auto"'`，人工那批 `awk -F'\t' '$6!="auto"'`，不许合并成一个数。
+# 只有登记过的行才允许在批后从 weak 集合里消失；未登记即判 UNREGISTERED SELF-CLEAR。池内自清一律硬失败，不进本表。
+# 这行不参与 done/remain（池外），登记的目的是不让「邻接改写导致归属漂移」静默发生。
+packages/ui/src/v4/workspaceConnectionRegistry.ts:184	b307	872ad960	out-of-pool	句元合并：`*/` 不以句末标点收尾，与下一行（原为无标识符短句）同判 weak；下一行写成强注释后整句转强
+apps/zcode-cli/packages/cli/src/commands-command.ts:279	b310	10e9df51	out-of-pool	邻接改写：280–282 由无锚点碎片句改成带标识符的整句后，279 所在的短句堆叠组不再成立，279 随之转强（本批未改这一行）
+packages/desktop/src/host/sourceServerManagementService.ts:354	b311	e6ff6fab	out-of-pool	邻接改写：355 由无锚点短句改成带 removeSourceServer 的整句后，354 与之同组判定时锚点成立，354 不再单独判弱（本批未改这一行）
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx:72	b312	872ad960	out-of-pool	块尾 */：句元与下一行同判，73 行改成带 targetKey 的整句后整句转强（本批未改这一行）
+apps/zcode-cli/packages/adapters/src/plugins/zip-source.ts:312	b313	522e851e	out-of-pool	块尾 */：句元与下一行同判，313 行改成带 entry 的整句后整句转强（本批未改这一行）；blame 属本线但提交早于池基线 8f7daaf0，故池外，按规则②不自动登记、人工登记
+packages/ui/src/mentions/providers/pluginsMentionProvider.ts:51	b325	872ad960de7ec172591f7e1952f7849229f94521	auto-out-of-pool	AUTO reason=adjacent（规则 auto-out-of-pool：与本批改写行直接相邻，写成强整句后该行随句元转强；该行 blame 为上游 872ad960、属池外，本批未触碰）	auto
+apps/zcode-cli/packages/core/src/plugin-reference/reminder.ts:228	b331	872ad960de7ec172591f7e1952f7849229f94521	auto-out-of-pool	AUTO reason=adjacent（规则 auto-out-of-pool：与本批改写行直接相邻，改写行补锚点后整句转强；该行 blame 为上游 872ad960、属池外，本批未触碰）	auto
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/transcript-hydration.ts:639	b341	872ad960de7ec172591f7e1952f7849229f94521	auto-out-of-pool	AUTO reason=adjacent（规则 auto-out-of-pool：与本批改写行直接相邻，改写行补锚点后整句转强；该行 blame 为上游 872ad960、属池外，本批未触碰）	auto
+packages/shared/src/zcode-protocol-v4/wire-codec.ts:49	b345	872ad960de7ec172591f7e1952f7849229f94521	auto-out-of-pool	AUTO reason=adjacent（规则 auto-out-of-pool：与第 50 行改写行直接相邻，该行补 maxBytes 后整段转强；该行 blame 为上游 872ad960、属池外，本批未触碰）	auto
+packages/ui/src/v4/composer/toolbarShortcuts.ts:218	b354	872ad960de7ec172591f7e1952f7849229f94521	auto-out-of-pool	AUTO reason=adjacent（规则 auto-out-of-pool：与 219 行改写行同一句元，219 行补 isShortcutRecordingActive 后整句转强；该行 blame 为上游 872ad960、属池外，本批未触碰）	auto
+apps/zcode-cli/packages/bootstrap/src/app/startup-marks.ts:37	b367	0f2ef80d29a8550b4c47fd90f15ecf2f4bf97c33	out-of-pool	块尾 */：句元与下一行同判，38 行改成带 discoverNodePluginsSync 的整段后整句转强（本批未改这一行）；该行内容为空，无法单独改写，属邻接自清；blame 属本线但早于池基线 8f7daaf0，故池外，按规则②人工登记
+packages/ui/src/side-pane-full-view/model.ts:131	b373	3c5b227649371507ddc4eb46ac5133afe6db1cab	auto-out-of-pool	AUTO reason=adjacent	auto
+packages/ui/src/ToolCallBlocks/renderers/submit-result.tsx:63	b382	872ad960de7ec172591f7e1952f7849229f94521	auto-out-of-pool	AUTO reason=adjacent	auto
+packages/ui/src/v4/WorkflowNotificationHoleRow.tsx:35	b382	aac4755666d09fdcd70272fcf063c077a639015f	auto-out-of-pool	AUTO reason=adjacent	auto
+packages/ui/src/WorkspaceHeader.tsx:46	b390	3c5b227649371507ddc4eb46ac5133afe6db1cab	auto-out-of-pool	AUTO reason=adjacent	auto
+apps/zcode-cli/packages/core/src/tool/handlers/bash-command-parser.ts:144	b392	54f51bad001c5a76202da1b4058b042b89e20081	out-of-pool	块尾 */：句元与下一行同判，145 行改成带 isBashCommandPermissionSafe 与 true 读法的整句后整句转强（本批未改这一行）；该行内容为空，无法单独改写，属邻接自清；blame 属本线但早于池基线 8f7daaf0，故池外，按规则②人工登记
+apps/zcode-cli/packages/debug/src/shared.ts:319	b392	3ead6c6ab8c5d1bcea35996d86838c13552d638c	out-of-pool	块尾 */：句元与下一行同判，320 行改成带 NetworkRequestAttribution 与 trace 视图的整句后整句转强（本批未改这一行）；该行内容为空，无法单独改写，属邻接自清；blame 属本线但早于池基线 8f7daaf0，故池外，按规则②人工登记
+apps/zcode-cli/packages/telemetry/src/agent-trace-runtime.ts:444	b392	b3cc6d24bf4cd83593413254555866d561dd9d65	out-of-pool	块尾 */：句元与下一行同判，445 行改成带 linkedRoot 与 ROOT_CONTEXT 的整句后整句转强（本批未改这一行）；该行内容为空，无法单独改写，属邻接自清；blame 属本线但早于池基线 8f7daaf0，故池外，按规则②人工登记
+packages/ui/src/settings/saved-workflows/savedWorkflowArgsForm.ts:60	b400	aac4755666d09fdcd70272fcf063c077a639015f	auto-out-of-pool	AUTO reason=adjacent	auto

@@ -1,0 +1,45 @@
+file	baseLine	blame	content
+packages/ui/src/components/ui/lightweight-diff-preview.tsx	32	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// LightweightDiffLineKind 只有 added / removed / context，不引入修改态
+packages/ui/src/components/ui/lightweight-diff-preview.tsx	33	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// context 行的 marker 固定为空串，内容取自 getPatchPreviewLineContent
+packages/ui/src/components/ui/lightweight-diff-preview.tsx	34	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// parseLightweightDiffLines 按行返回，组件内不缓存结果
+packages/ui/src/components/ui/lightweight-diff-preview.tsx	109	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// added / removed 各自返回 rowStyle 与 gutterStyle
+packages/ui/src/components/ui/lightweight-diff-preview.tsx	110	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// lineNumberClassName 与 rowStyle 同用 --color-diff-* 变量，避免色值漂移
+packages/ui/src/components/ui/lightweight-diff-preview.tsx	111	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// context 只给 text-foreground-subtlest 行号色，不设 rowStyle
+packages/ui/src/components/ui/lightweight-diff-preview.tsx	155	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 外层 overflow-auto 负责裁剪，内层 w-max 负责真实内容宽度
+packages/ui/src/components/ui/lightweight-diff-preview.tsx	185	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// parseTruncatedMarkerOmittedLineCount 先于内容识别，命中即渲染提示行
+packages/ui/src/components/ui/lightweight-diff-preview.tsx	186	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// getPatchPreviewLineContent 与 getLightweightDiffLineStyles 分开，便于单测
+packages/ui/src/components/ui/lightweight-diff-preview.tsx	187	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 行号在 sticky 列内右对齐，横向滚动不丢失
+packages/ui/src/components/ui/lightweight-diff-preview.tsx	188	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// showLineNumbers 为假时整列不渲染，内容占满剩余宽度
+packages/ui/src/feedback/FeedbackCenter.tsx	37	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// FeedbackCenter 用 memo 包一层，props 不变即跳过渲染
+packages/ui/src/feedback/FeedbackCenter.tsx	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// feedbackService 为 undefined 时直接 return null
+packages/ui/src/feedback/FeedbackCenter.tsx	39	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// open / featureRequestOpen / tab 都来自 useFeedbackStore
+packages/ui/src/feedback/FeedbackCenter.tsx	56	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// titleId 按 tab === "tickets" 切到 feedback.center.ticketsTitle
+packages/ui/src/feedback/FeedbackCenter.tsx	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 返回按钮仅在 tab === "tickets" 时渲染
+packages/ui/src/feedback/FeedbackCenter.tsx	58	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// XIcon 单独渲染，Dialog 内置关闭被隐藏
+packages/ui/src/feedback/FeedbackCenter.tsx	59	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// FeedbackBackgroundUploadIndicator 的 feedbackDialogOpen 覆盖两个弹窗
+packages/ui/src/feedback/FeedbackCenter.tsx	65	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// FeatureRequestDialog 与 Dialog 作兄弟节点，避免嵌套层级
+packages/ui/src/feedback/FeedbackCenter.tsx	66	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 提交表单的 key 取 submissionJobId
+packages/ui/src/feedback/FeedbackCenter.tsx	67	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 提交成功后 setTab("tickets") 切到票单页
+packages/ui/src/feedback/FeedbackCenter.tsx	68	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// DialogContent 的 max-h 按视口高度收口
+packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	39	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// getErrorMessage 对 Error 取 message，缺失时退到 name
+packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	40	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 普通对象带 message 字段时按字符串读取
+packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	41	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 其余值直接 String(error)
+packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// INITIAL_STATE.path 为 null，不假设文件存在
+packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	58	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// INITIAL_STATE.loading 从 true 开始，避免首帧误报
+packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	59	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// INITIAL_STATE.error 初始为 null
+packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	69	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// configuredServiceScope === "workspace" 时无条件用 workspaceZCodeService
+packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// "base" 作用域优先使用已就绪的 baseZCodeService
+packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	71	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 远程会话没有基础服务时返回 null，等待就绪
+packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	72	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 本地场景最后回退到 workspaceZCodeService
+packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	73	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resolveWorkspaceProviderConfigZCodeService 是唯一分派点
+packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onSelectTask 由 useCallback 保持稳定引用
+packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	39	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// latest.current 保存最新入参
+packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	40	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 卸载时 sequence.current++ 作废在途请求
+packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	41	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 打开流程只读 tree，不改列表
+packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isCurrent 先比 sequence.current === request
+packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	71	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 再比 activeWorkspaceIdentity 与 activeTaskId
+packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	72	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// draftFocusVersion 变化即视为过期
+packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	73	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// identity 存在时还要求任务仍在本工作区
+packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	83	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// webRemoteControlWorkspaceSwitcher 存在时优先走远控
+packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	84	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 读 tree 确认 host 后才调 openWebRemoteControlTask
+packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	85	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 连接前再调 isCurrent() 复核

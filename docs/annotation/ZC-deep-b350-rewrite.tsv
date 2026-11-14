@@ -1,0 +1,39 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/adapters/src/browser/page-command.ts	79	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// action 抛错直接向上抛，由调用层按 errorCode 分类。
+apps/zcode-cli/packages/adapters/src/browser/page-command.ts	80	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// modifiers 为空时只执行 action，不额外按键。
+apps/zcode-cli/packages/adapters/src/browser/page-command.ts	168	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 组合键语义：keys 除最后一项外都按 modifiers 按下。
+apps/zcode-cli/packages/adapters/src/browser/page-command.ts	188	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// drag 必须成对 mouse.down/up，否则页面停在拖拽态。
+apps/zcode-cli/packages/adapters/src/browser/page-command.ts	189	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// path 为空抛错，不静默返回成功。
+apps/zcode-cli/packages/adapters/src/browser/page-command.ts	190	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 中间点按 steps 插值 mouse.move，保证 drag 事件连续触发。
+apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-process.ts	68	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 该封装被 lifecycle 层复用，入参不感知业务类型。
+apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-process.ts	103	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先建 env 再 resolveCommand，顺序反了会丢 PATH。
+apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-process.ts	106	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// wrapped 命中时对 innerCommand 重新 resolve。
+apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-process.ts	319	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先等 pipe 自然关闭的 graceMs 窗口。
+apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-process.ts	320	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// keepAlive 为 true 时 timeout 传 Infinity。
+apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-process.ts	321	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 超时后先 killProcessTree 再 destroy stream。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-flags-git.ts	56	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// --date 需要取值，其余 flag 都是无值开关。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-flags-git.ts	77	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// --stat 类选项只改展示粒度，不写盘。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-flags-git.ts	89	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// --color 只影响 stdout，不影响只读判定。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-flags-git.ts	99	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 这些 flag 全为无值开关，可跨子命令复用。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-flags-git.ts	112	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 不在表中的 option 一律判危险，不猜语义。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-flags-git.ts	140	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// --quiet 与 --exit-code 只改语义，不写盘。
+apps/zcode-cli/packages/tui/src/app-selection-panel.tsx	49	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 非内容行数只算 title 与 border，再加 padding。
+apps/zcode-cli/packages/tui/src/app-selection-panel.tsx	51	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 这些常量同时决定 overlay 定位，改一个要连带改另一个。
+apps/zcode-cli/packages/tui/src/app-selection-panel.tsx	53	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 尺寸单位是终端 cell，不是 px。
+apps/zcode-cli/packages/tui/src/app-selection-panel.tsx	96	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 后续列宽预算都基于 usableWidth。
+apps/zcode-cli/packages/tui/src/app-selection-panel.tsx	97	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 子函数不要对 usableWidth 再次归一化。
+apps/zcode-cli/packages/tui/src/app-selection-panel.tsx	163	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// items 为空时只替换列表行，标题与边框仍保留。
+packages/ui/src/v4/composer/useDraftConfigControl.ts	87	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// pendingRequests 是模块级 Map，组件卸载不中断在飞的请求。
+packages/ui/src/v4/composer/useDraftConfigControl.ts	135	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 菜单处理器只调 setDraft，接口不暴露网络或存储能力。
+packages/ui/src/v4/composer/useDraftConfigControl.ts	276	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 模型服务读取以 waitForRemote 启动，入参只带 draft 里的选择。
+packages/ui/src/v4/composer/useDraftConfigControl.ts	293	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 这一步只改 draft 局部，持久化由后续 useEffect 统一完成。
+packages/ui/src/v4/composer/useDraftConfigControl.ts	365	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 回调读 draftRef.current 而非闭包 draft，后者是上一次渲染的旧值。
+packages/ui/src/v4/composer/useDraftConfigControl.ts	518	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 写回回调先校验 scope，再比对 draft 选择是否仍是捕获值。
+packages/ui/src/v4/composer/useDraftConfigControl.ts	749	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 计划模式是开关语义：开启写 plan，关闭回退到 previousMode。
+packages/ui/src/v4/workbenchLayout.ts	28	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// CSS 变量前缀 --v4-split- 是拖拽零渲染的契约。
+packages/ui/src/v4/workbenchLayout.ts	32	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// Rect 用 left/top/width/height 四个 CSS 表达式描述，不写像素。
+packages/ui/src/v4/workbenchLayout.ts	46	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// Splitter 同时记录 ratio 与 dragRect，拖动只改 ratio。
+packages/ui/src/v4/workbenchLayout.ts	78	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// leaf 节点直接产出 Rect 并终止递归。
+packages/ui/src/v4/workbenchLayout.ts	85	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// horizontal 分割切 width，vertical 切 height。
+packages/ui/src/v4/workbenchLayout.ts	148	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 对外只暴露 flatten 后的 Rect 列表，不暴露树。
+packages/ui/src/v4/workbenchLayout.ts	166	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// splitterStyle 按 orientation 分支返回 cursor 与尺寸。

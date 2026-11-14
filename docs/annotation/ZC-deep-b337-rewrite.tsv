@@ -1,0 +1,33 @@
+file	baseLine	blame	content
+docs/knip/docs/scripts/get-monthly-sponsorships-github.ts	20	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// token 只读 process.env.GITHUB_TOKEN_SPONSORSHIPS。
+docs/knip/docs/scripts/get-monthly-sponsorships-github.ts	54	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// graphql 查询用 first: 100 与 period: ALL 一次取全量。
+docs/knip/docs/scripts/get-monthly-sponsorships-github.ts	86	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// activeRecurring 以 sponsor.login 为键去重。
+docs/knip/docs/scripts/get-monthly-sponsorships-github.ts	98	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// recurringOnly 为真且 isOneTime 时直接 continue。
+docs/knip/docs/scripts/get-monthly-sponsorships-github.ts	104	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isOneTime 的 NEW_SPONSORSHIP 只累加 monthYear 当月。
+docs/knip/docs/scripts/get-monthly-sponsorships-github.ts	110	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// CANCELLED_SPONSORSHIP 从 activeRecurring 里 delete，不产生负数。
+docs/knip/docs/scripts/get-monthly-sponsorships-github.ts	112	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 每次变动后用 reduce 重算 activeRecurring 总额。
+docs/knip/docs/scripts/get-monthly-sponsorships-github.ts	131	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// startMonth 与 endMonth 的裁剪留在 getGitHubTotals，聚合层不猜。
+packages/ui/src/command-center/commandCenterSearchHistory.ts	26	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 历史上限只由 COMMAND_CENTER_HISTORY_LIMIT 一处决定。
+packages/ui/src/command-center/commandCenterSearchHistory.ts	49	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isCommandCenterSearchHistoryEntry 对每条记录做形状校验。
+packages/ui/src/command-center/commandCenterSearchHistory.ts	72	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// getStorage 返回 null 时直接 return []。
+packages/ui/src/command-center/commandCenterSearchHistory.ts	82	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先 filter 掉非法项，再用 slice 裁到 HISTORY_LIMIT。
+packages/ui/src/command-center/commandCenterSearchHistory.ts	102	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 写入前再 slice 一次，防止外部传入超长数组。
+packages/ui/src/command-center/commandCenterSearchHistory.ts	116	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// query 为 > 或 # 或 @ 这类纯前缀符号时直接返回旧历史。
+packages/ui/src/command-center/commandCenterSearchHistory.ts	126	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// dedupeKey 用 toLocaleLowerCase 去重，忽略大小写。
+packages/ui/src/command-center/commandCenterSearchHistory.ts	133	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// nextEntry 置顶后整体 slice 到 COMMAND_CENTER_HISTORY_LIMIT。
+packages/ui/src/lib/userActionTraceCatalog.ts	126	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// keyof typeof CORE_USER_ACTION_FEATURES 让新增分组键自动获得类型支持。
+packages/ui/src/lib/userActionTraceCatalog.ts	140	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// UserActionCatalogEntry 一次表达 group 与 operationKind 等五项字段。
+packages/ui/src/lib/userActionTraceCatalog.ts	141	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// operationKind 用于统计与告警分级。
+packages/ui/src/lib/userActionTraceCatalog.ts	142	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// surface 默认取 featureId，保持同一来源。
+packages/ui/src/lib/userActionTraceCatalog.ts	143	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// timeoutMs 统一 30_000，避免个别事件无限挂起。
+packages/ui/src/lib/userActionTraceCatalog.ts	170	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// featureId 以 settings. 开头且非刷新的动作按 preference 处理。
+packages/ui/src/lib/userActionTraceCatalog.ts	171	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// refresh_memory 与 import_browser_data 属于 command，不上调为 preference。
+packages/ui/src/lib/userActionTraceCatalog.ts	184	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// entriesFrom 把 Object.entries 分组展平，每个 action 生成一条。
+packages/ui/src/project-workflow/useWorkflowRunSave.ts	103	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// generation 变化时强制重查，一次作废让所有卡片刷新。
+packages/ui/src/project-workflow/useWorkflowRunSave.ts	119	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// setSaving(true) 在 await 之前执行。
+packages/ui/src/project-workflow/useWorkflowRunSave.ts	120	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// result.ok 时立刻 applySaved 回填缓存。
+packages/ui/src/project-workflow/useWorkflowRunSave.ts	121	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 回填的 name 与 meta 取自 input，保持一致。
+packages/ui/src/project-workflow/useWorkflowRunSave.ts	122	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// finally 里 setSaving(false)，无论成败都复位。
+packages/ui/src/project-workflow/useWorkflowRunSave.ts	171	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// launchTarget 显式传入时优先于 hook 的 target。
+packages/ui/src/project-workflow/useWorkflowRunSave.ts	172	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// host.sessionId 存在时用 resolveSessionDirectories 补 projectId。
+packages/ui/src/project-workflow/useWorkflowRunSave.ts	173	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 结果收敛为 { ok: true } 或带 error 的判别值。

@@ -1,0 +1,37 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/core/src/plugin-reference/reminder.ts	103	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// skill.source 非 plugin 的技能不参与归属，即使 pluginName 相同。
+apps/zcode-cli/packages/core/src/plugin-reference/reminder.ts	196	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// renderReminderBody 每个插件固定输出四行，对应 entry 的四个字段。
+apps/zcode-cli/packages/core/src/plugin-reference/reminder.ts	197	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 数组项经 JSON.stringify 序列化，避免第三方名称破坏结构。
+apps/zcode-cli/packages/core/src/plugin-reference/reminder.ts	198	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// capability metadata 头部声明这不是指令，也不是权限授予。
+apps/zcode-cli/packages/core/src/plugin-reference/reminder.ts	199	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// Rules 段落固定不变，便于模型稳定理解。
+apps/zcode-cli/packages/core/src/plugin-reference/reminder.ts	229	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// diagnostics 与 kept 的结果在循环外统一汇总。
+apps/zcode-cli/packages/core/src/plugin-reference/reminder.ts	230	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// references 中每个引用都由四道检查覆盖，顺序是标识、存在、启用、冲突。
+apps/zcode-cli/packages/core/src/plugin-reference/reminder.ts	231	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 能力解析后再按 MAX_PLUGIN_REFERENCE_REMINDER_BYTES 预算切片，并把截断事实写进 diagnostics。
+apps/zcode-cli/packages/core/src/plugin-reference/reminder.ts	314	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 被移除的插件按 no_capabilities 归类，与 kept 统计保持一致。
+packages/desktop/scripts/mcp-apps-host-fixture/sampling-extra-checks.ts	28	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// request 请求体保持最小，只含一条 text 消息。
+packages/desktop/scripts/mcp-apps-host-fixture/sampling-extra-checks.ts	29	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// scope 与 win 各建一次，全函数复用。
+packages/desktop/scripts/mcp-apps-host-fixture/sampling-extra-checks.ts	30	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 结束时销毁 win 窗口，避免残留。
+packages/desktop/scripts/mcp-apps-host-fixture/sampling-extra-checks.ts	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 所有 check 调用共用同一个 request。
+packages/desktop/scripts/mcp-apps-host-fixture/sampling-extra-checks.ts	43	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 独立测试工作区由 join(root, "sampling-extra-workspace") 给出。
+packages/desktop/scripts/mcp-apps-host-fixture/sampling-extra-checks.ts	44	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 独立会话作用域由 env.agent.session 创建。
+packages/desktop/scripts/mcp-apps-host-fixture/sampling-extra-checks.ts	45	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 复用 env.model.selection 同一模型选择。
+packages/desktop/scripts/mcp-apps-host-fixture/sampling-extra-checks.ts	52	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// page 在页面内执行脚本。
+packages/desktop/scripts/mcp-apps-host-fixture/sampling-extra-checks.ts	54	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// sample 把采样入口单独封装，返回 Promise。
+packages/server/src/source-server/sourceServerProbe.ts	48	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 首行 set +e 关闭立即退出。
+packages/server/src/source-server/sourceServerProbe.ts	49	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 各段以 SOURCE_SERVER_PROBE_MARKER_PREFIX 唯一标记开头。
+packages/server/src/source-server/sourceServerProbe.ts	50	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 可选段按 includeReleaseIdentity 开关展开。
+packages/server/src/source-server/sourceServerProbe.ts	51	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 整条命令以分号 join 串联。
+packages/server/src/source-server/sourceServerProbe.ts	103	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 低于 SOURCE_SERVER_MIN_GLIBC_VERSION 时抛 SourceServerProbeEnvironmentError。
+packages/server/src/source-server/sourceServerProbe.ts	123	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先检查 signal.aborted 是否已取消。
+packages/server/src/source-server/sourceServerProbe.ts	124	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// buildSourceServerProbeCommand 生成的命令只读不修改远端。
+packages/server/src/source-server/sourceServerProbe.ts	125	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 非零 exitCode 归 SourceServerProbeEnvironmentError。
+packages/server/src/source-server/sourceServerProbe.ts	126	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 未安装时让 installed 为假并提前返回。
+packages/services/src/session/offPeakResidentExecutions.ts	73	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 新注册的 userOwned 与 terminal 一律从 false 开始。
+packages/services/src/session/offPeakResidentExecutions.ts	84	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// runs.set 覆盖旧条目是安全的，旧条目只可能已 terminal 或 discarded。
+packages/services/src/session/offPeakResidentExecutions.ts	144	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// userOwned 或 terminal 为真时忽略续票，renewalId 不前进也忽略。
+packages/services/src/session/offPeakResidentExecutions.ts	212	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// renewalId 为 undefined 或 userOwned 时不再安装新票。
+packages/services/src/session/offPeakResidentExecutions.ts	264	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 期间 discarded 或 ticketDelivery 被替换时，本次结果作废。
+packages/services/src/session/offPeakResidentExecutions.ts	278	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// deps.renew 重试同样走续票入口，保持调度语义一致。
+packages/services/src/session/offPeakResidentExecutions.ts	285	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// cancel 是用户显式动作，立即置 userOwned 阻断自动续票。
+packages/services/src/session/offPeakResidentExecutions.ts	309	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// finish 的收口条件为 completedWritten 为真且 releasedTickets 含当前票。
+packages/services/src/session/offPeakResidentExecutions.ts	315	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 从 runs 移除后经 disposed 通知注册方做资源清理。

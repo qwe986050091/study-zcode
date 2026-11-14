@@ -1,0 +1,45 @@
+file	baseLine	blame	content
+packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	110	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 守卫后固定 activeRequest 与 activeWebview，供内部 hoisted function 使用
+packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	111	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 所有监听在 effect cleanup 中统一拆除
+packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	112	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// prepareTimeoutMs 取 resolveSurfacePrepareTimeoutMs(activeRequest.timeoutMs)
+packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	167	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// cancelPendingVerification 先 verificationVersion += 1，作废进行中的 run
+packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	168	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// verify 入口先判 disposed / reported，再调度 rAF 与 fallbackTimer
+packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	181	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// retry 在 Date.now() >= deadline 时 warn 并 return
+packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	182	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 超时分支只打一条 logger.warn，不再排下一轮
+packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	183	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 未超时则调 verify() 重新排队
+packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	245	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// restartVerification 把 firstFrame 置空，要求重新凑两帧
+packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	246	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 重置后立即 cancelPendingVerification 再 verify
+packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	247	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// disposed / reported 时 restartVerification 直接 return
+packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	31	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// snapshot 三态由调用方注入，接口不自行请求
+packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	32	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// loading 与 snapshot 正交，null 快照也可以 loading
+packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	33	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 接口只含 providerId / snapshot / loading 三个字段
+packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	41	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 非 bigmodel 家族统一回退 zaiIndividualCodingPlan
+packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	42	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// providerFamilyDomain 为 null 时同样走 zaiIndividualCodingPlan
+packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	61	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isTerminalCodingPlanLevel 先 normalizePlanLevel 再做 includes
+packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	62	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// normalized 命中 enterprise 或 team 即返回 true
+packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	63	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 终态只被 isUpgradableCodingPlanSnapshot 使用，不影响用量面板
+packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	141	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// modelProvidersLoading 为真时返回 undefined
+packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	142	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 候选收 loading=false 且在 availableProviders 中的 entitlement
+packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	143	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 优先 selectedProviderId 与在用套餐，都未命中才取首个可升级项
+packages/ui/src/remote-connection-flow/contract.ts	30	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// openIntentId 是首个字段，卡片恢复不改它
+packages/ui/src/remote-connection-flow/contract.ts	31	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onDeviceConnected 与 onSelectProject 各自独立回调
+packages/ui/src/remote-connection-flow/contract.ts	32	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// preferred* 五个字段连续排列
+packages/ui/src/remote-connection-flow/contract.ts	33	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 每个 on* 回调的 JSDoc 都写明触发条件
+packages/ui/src/remote-connection-flow/contract.ts	88	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// normalizeRemoteConnectionOptions 在解构处给默认值
+packages/ui/src/remote-connection-flow/contract.ts	89	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// open 解构为 controlledOpen，避免与外层变量遮蔽
+packages/ui/src/remote-connection-flow/contract.ts	90	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 返回对象按解构顺序逐字段展开
+packages/ui/src/remote-connection-flow/contract.ts	91	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// RemoteConnectionOptions 由 ReturnType<typeof normalizeRemoteConnectionOptions> 推导
+packages/ui/src/remote-connection-flow/contract.ts	148	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// operationId 标识同一次 Root flow
+packages/ui/src/remote-connection-flow/contract.ts	149	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// view 的类型是 RemoteWizardStep
+packages/ui/src/remote-connection-flow/contract.ts	150	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// cancelled 与 target 由宿主写入，投影层只读
+packages/ui/src/v4/pendingInteractionAdapter.ts	43	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// deny / rejectOnce / rejectAlways 都返回 decision: "deny"
+packages/ui/src/v4/pendingInteractionAdapter.ts	44	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// allowAlways 固定带一条 addRules 的 exact 规则
+packages/ui/src/v4/pendingInteractionAdapter.ts	45	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ruleContent 取 LEGACY_PERMISSION_RULE_INPUT_KEYS 首个非空值
+packages/ui/src/v4/pendingInteractionAdapter.ts	46	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 未命中任何 kind 时兜底 decision: "allow"
+packages/ui/src/v4/pendingInteractionAdapter.ts	84	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// fullAccessOption 追加在 payload.options 末尾
+packages/ui/src/v4/pendingInteractionAdapter.ts	85	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// option.response ?? permissionKindToResponse(...)，自带值优先
+packages/ui/src/v4/pendingInteractionAdapter.ts	86	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// origin 与 display 只在存在时展开进结果
+packages/ui/src/v4/pendingInteractionAdapter.ts	87	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// raw 缺失时兜底 { toolCallId, toolName }
+packages/ui/src/v4/pendingInteractionAdapter.ts	146	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// questions 为空时返回 null
+packages/ui/src/v4/pendingInteractionAdapter.ts	147	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// message 回退到 firstQuestion.question ?? payload.prompt
+packages/ui/src/v4/pendingInteractionAdapter.ts	148	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// multiSelect / answerDrafts 只在存在时展开

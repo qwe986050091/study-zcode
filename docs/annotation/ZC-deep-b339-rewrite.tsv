@@ -1,0 +1,33 @@
+file	baseLine	blame	content
+packages/ui/src/settings/RemoteSyncActions.tsx	1	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// RemoteSyncActions 把入口可见性判定与弹窗打开意图收在一处：
+packages/ui/src/settings/RemoteSyncActions.tsx	56	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错症状：RemoteSyncClientMode 放宽后手机端重连自动弹面板，用户误以为上次同步已确认。
+packages/ui/src/settings/RemoteSyncActions.tsx	62	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错症状：调小 REMOTE_SYNC_PREFLIGHT_TIMEOUT_MS 后弱网机器频繁报超时，用户重试叠加并发探测。
+packages/ui/src/settings/RemoteSyncActions.tsx	125	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错症状：shouldStartRemoteSyncOperation 放行双击，远端出现半截成功的中间数据。
+packages/ui/src/settings/RemoteSyncActions.tsx	148	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错症状：切换 targetKey 后旧弹窗自动重开，用户看到上一个环境的同步结果。
+packages/ui/src/settings/RemoteSyncActions.tsx	158	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错症状：rpcReady 短暂断开再恢复后同步面板自动弹出，用户误以为是自己触发的。
+packages/ui/src/settings/RemoteSyncActions.tsx	182	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 默认超时来自 REMOTE_SYNC_PREFLIGHT_TIMEOUT_MS，改小只会更早报错，后台操作保持运行。
+packages/ui/src/settings/RemoteSyncActions.tsx	213	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错症状：RemoteSyncMenuItems 的点击冒泡到父级触发器，菜单闪一下即关，用户点不到任何项。
+packages/ui/src/settings/model-provider-section/ProviderCardSections.tsx	167	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 每次打开菜单前不要重置 renameRequestedRef，复位只发生在消费点。
+packages/ui/src/settings/model-provider-section/ProviderCardSections.tsx	222	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 只在 renameRequestedRef 为真时阻止菜单关闭后的自动聚焦；
+packages/ui/src/settings/model-provider-section/ProviderCardSections.tsx	298	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// showApiFormat 不参与提交，只影响展示。
+packages/ui/src/settings/model-provider-section/ProviderCardSections.tsx	304	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// readOnlyBaseUrl 与 resolvedApiFormat 都不参与可编辑分支。
+packages/ui/src/settings/model-provider-section/ProviderCardSections.tsx	517	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// providerSettingsService 不参与持久化，提交仍走上层回调。
+packages/ui/src/settings/model-provider-section/ProviderCardSections.tsx	529	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// addSavingRef 为真时要允许关闭请求被忽略，而不是禁用按钮；
+packages/ui/src/settings/model-provider-section/ProviderCardSections.tsx	625	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// addDraftErrorMessage 不参与提交判定。
+packages/ui/src/settings/model-provider-section/ProviderCardSections.tsx	674	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// completeProperties 只影响提示，不阻塞保存。
+packages/ui/src/settings/model-provider-section/ProviderModelReasoningLevelEditor.tsx	55	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 进入编辑后 inputRef 自动聚焦，键盘用户无需再点一次输入框。
+packages/ui/src/settings/model-provider-section/ProviderModelReasoningLevelEditor.tsx	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 提交前先判空去重：nextValue 为空或与其它档位重名都不落盘。
+packages/ui/src/settings/model-provider-section/ProviderModelReasoningLevelEditor.tsx	72	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 校验失败时保持 editingIndex 不变，用户可以继续修正。
+packages/ui/src/settings/model-provider-section/ProviderModelReasoningLevelEditor.tsx	73	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// editingIndex 等于 values.length 时走追加，否则原地替换。
+packages/ui/src/settings/model-provider-section/ProviderModelReasoningLevelEditor.tsx	74	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 提交后把 editingIndex 置空，让输入框与档位互斥展示。
+packages/ui/src/settings/model-provider-section/ProviderModelReasoningLevelEditor.tsx	122	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// handleDrop 按 draggingIndex 与 targetIndex 调用 move。
+packages/ui/src/settings/model-provider-section/ProviderModelReasoningLevelEditor.tsx	123	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// targetIndex 越界由 move 兜底，这里不重复校验。
+packages/ui/src/settings/model-provider-section/ProviderModelReasoningLevelEditor.tsx	124	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 无论是否发生移动都把 draggingIndex 置空，避免高亮残留。
+packages/ui/src/settings/saved-workflows/SavedWorkflowArgsTable.tsx	42	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ARG_TYPES 四种可选类型与后端参数模型一一对应。
+packages/ui/src/settings/saved-workflows/SavedWorkflowArgsTable.tsx	43	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ARG_TYPES 顺序即下拉顺序，不要按字母重排。
+packages/ui/src/settings/saved-workflows/SavedWorkflowArgsTable.tsx	44	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 新增 ARG_TYPES 项必须同步默认值控件与校验规则。
+packages/ui/src/settings/saved-workflows/SavedWorkflowArgsTable.tsx	52	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 外层容器用 rounded-lg 与 border 画圆角边框，行之间只画分隔线。
+packages/ui/src/settings/saved-workflows/SavedWorkflowArgsTable.tsx	68	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 表头与数据行共用 columns 的网格列宽。
+packages/ui/src/settings/saved-workflows/SavedWorkflowArgsTable.tsx	88	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 行错误按 errors[row.key] 取，缺失即该行无错。
+packages/ui/src/settings/saved-workflows/SavedWorkflowArgsTable.tsx	89	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 名称错误同时标在 Input 与行下方。
+packages/ui/src/settings/saved-workflows/SavedWorkflowArgsTable.tsx	90	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// defaultValue 错误只影响默认值控件。

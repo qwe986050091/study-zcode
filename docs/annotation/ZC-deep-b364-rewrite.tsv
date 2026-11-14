@@ -1,0 +1,18 @@
+file	baseLine	blame	content
+packages/ui/src/LexicalChatInput.tsx	277	a8784b7e	// modifiedEnterSubmits 的条件全部由 && 连接：保持展开写法，合成一行后很难看出哪个条件被漏掉。
+packages/ui/src/LexicalChatInput.tsx	816	a8784b7e	// 这三个键都返回 false（不提交），由上层 normalizer 决定是否触发投递。
+packages/ui/src/LexicalChatInput.tsx	1288	a8784b7e	// getEditorMarkdown 与 entries[currentIndex] 不一致即视为用户已编辑，必须退出历史态。
+packages/ui/src/ModelTrajectorySearchBar.tsx	51	a8784b7e	// matchCount === 0 时上下跳转没有意义，disabled 必须一起禁用。
+packages/ui/src/ModelTrajectorySearchBar.tsx	63	a8784b7e	// type="search" 用原生搜索类型，获得系统级清除与 Esc 语义。
+packages/ui/src/ModelTrajectorySearchBar.tsx	119	a8784b7e	// 关闭按钮始终可用，disabled 必须只作用于跳转，不影响 onClose。
+packages/ui/src/project-sidebar/useProjectTaskActions.ts	61	a8784b7e	// catch 里先记 logger.error，再由 kind 选对应 toast 文案提示用户。
+packages/ui/src/project-sidebar/useProjectTaskActions.ts	69	a8784b7e	// mutate 成功后立即 await refresh()，保证列表与最新任务状态一致。
+packages/ui/src/project-sidebar/useProjectTaskActions.ts	100	a8784b7e	// 归档是取反操作，写回 archived: !task.archived，不能传固定值。
+packages/ui/src/remote/remoteWorkspaceController.ts	31	a8784b7e	// disconnect-device 只接受 sourceServerId，不携带 profileId 线路信息。
+packages/ui/src/remote/remoteWorkspaceController.ts	126	a8784b7e	// intent.origin !== "user-close" 时直接抛错，不做兜底关闭。
+packages/ui/src/remote/remoteWorkspaceController.ts	129	a8784b7e	// close-workspace 是最后一个分支，必须只接受 user-close，语义最窄。
+packages/ui/src/workspace-file-tree/WorkspaceFileTreeStickyFolders.tsx	67	a8784b7e	// items.length === 0 时直接返回 null，不渲染吸顶容器。
+packages/ui/src/workspace-file-tree/WorkspaceFileTreeStickyFolders.tsx	79	a8784b7e	// 先调 onToggle 交给父级切换，再决定是否 reveal。
+packages/ui/src/workspace-file-tree/WorkspaceFileTreeStickyFolders.tsx	91	a8784b7e	// layout="static" 保持静态布局，不参与虚拟列表定位。
+packages/services/src/usage-stats/providers/bigmodelUsageQuotaMapper.ts	48	a8784b7e	// BigModelUsageQuotaLimitPayload 是上游原始形状而非领域类型，故字段保持可选且不导出；
+packages/services/src/usage-stats/providers/bigmodelUsageQuotaMapper.ts	120	a8784b7e	// items 可能同时包含历史套餐、团队套餐与当前个人套餐；

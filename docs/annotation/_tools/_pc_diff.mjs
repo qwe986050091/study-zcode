@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const a = JSON.parse(fs.readFileSync('D:/code/_annot_baseline/_pc-noexcl.json', 'utf8')).pairs;
+const b = JSON.parse(fs.readFileSync('D:/code/_annot_baseline/_pc-excl.json', 'utf8')).pairs;
+const key = (p) => `${p.file}:${p.a}/${p.b}`;
+const kept = new Set(b.map(key));
+console.log('--- 排除规则吞掉的 ---');
+for (const p of a) if (!kept.has(key(p))) console.log(`${p.kind} ${p.sim} ${key(p)}\n  A:${p.textA}\n  B:${p.textB}`);
+console.log('--- 0.45 全量唯一命中 ---');
+const c = JSON.parse(fs.readFileSync('D:/code/_annot_baseline/zc-dups-045.json', 'utf8')).pairs;
+for (const p of c) console.log(`${p.kind} ${p.sim} ${key(p)}\n  A:${p.textA}\n  B:${p.textB}`);

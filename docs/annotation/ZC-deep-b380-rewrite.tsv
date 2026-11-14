@@ -1,0 +1,17 @@
+file	baseLine	blame	content
+packages/ui/src/settings/InstalledPluginManagement.tsx	169	a8784b7e	// `InstalledPluginManagement` 只把卸载回调绑到按钮，不判断插件是否可卸载。
+packages/ui/src/settings/InstalledPluginManagement.tsx	204	a8784b7e	// 停用态 `status === "disabled"` 也渲染真实组件：让用户看到停用不等于卸载。
+packages/ui/src/settings/InstalledPluginManagement.tsx	233	a8784b7e	// 刻意取舍：详情页只读，`onUninstall` 需用户看完内容后手动触发。
+packages/ui/src/settings/model-provider-section/enterpriseCodingPlanProducts.ts	316	a8784b7e	// `isEnterpriseCodingPlanThirdPartyPaymentRequired` 用支付内容兜底：拿不到可扫内容即不需要三方支付。
+packages/ui/src/settings/model-provider-section/enterpriseCodingPlanProducts.ts	500	a8784b7e	// 最后一条交给 `roundCurrencyAmount` 吃残差，其余按源金额占比分摊到分。
+packages/ui/src/settings/model-provider-section/enterpriseCodingPlanProducts.ts	530	a8784b7e	// [契约] 残差 = 总优惠 − 已分配额，由 `roundCurrencyAmount` 收敛到分。
+packages/ui/src/settings/model-provider-section/ProviderModelDraftState.ts	62	a8784b7e	// `updateModelDraft` 是补丁入口：推荐切换与记录覆写都在这一处分流。
+packages/ui/src/settings/model-provider-section/ProviderModelDraftState.ts	72	a8784b7e	// 重新开启推荐等价于恢复：`restoreModelDraft` 直接给出默认投影。
+packages/ui/src/settings/model-provider-section/ProviderModelDraftState.ts	76	a8784b7e	// 关闭推荐时先跑 `projectModelDraft` 保留当前投影结果。
+packages/ui/src/TaskSearchDialog.tsx	91	a8784b7e	// [契约] `normalizeSnippetForDedupe` 只看正文：剥首尾省略号 → 压空白 → 转小写。
+packages/ui/src/ToolCallBlocks.tsx	203	a8784b7e	// 键的规范化（去空白 / 空串视为无效）由 `normalizeToolEntranceAnimationKey` 在记录与查询两侧共用。
+packages/ui/src/ToolCallBlocks/renderers/cuaDetails.tsx	14	a8784b7e	// INV-14 `model.environmentRows` 有项才渲染：空环境显示空表属于改错故障。
+packages/ui/src/ToolCallBlocks/renderers/get-workflow-run.tsx	192	a8784b7e	// [契约] 日志缺年龄时只留正文：`GetWorkflowRunToolCallBlock` 绝不编造「刚刚」。
+packages/ui/src/UpdateStatusDialogController.tsx	85	a8784b7e	// 回退只在 `updateActionInFlight` 非空且实时模型缺 `displayVersion` 时生效。
+packages/zcode-server-cli/src/contracts.ts	130	a8784b7e	// [事务] `createStoppedServerStatus` 只构造停止态：不写盘，也不发送。
+packages/zcode-server-cli/src/packaging/stage.ts	389	a8784b7e	// [权衡] 关闭独立归档只跳过压缩与复制，`componentSpecs` 的组件身份与大小校验保持完整。

@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+const p = 'd:/code/_annot_baseline/spec-b3b-2.json';
+const s = JSON.parse(fs.readFileSync(p, 'utf8'));
+s.files = s.files.filter((f) => !f.path.endsWith('botConfigHelpers.ts'));
+const r = s.files.find((f) => f.path.endsWith('/repo.ts'));
+const e = r.edits.find((x) => x.anchor === 'const parsed = botsStateFileSchema.parse(state);');
+e.anchor = 'else delete state.bots[botId];';
+e.before = false;
+const t = s.files.find((f) => f.path.endsWith('/topicResource.ts'));
+const a = t.edits.find((x) => x.anchor === 'input.admission === "accepted" &&');
+a.anchor = '!source.threadId ||';
+a.lines = ['    // 话题授权必须绑定到具体 threadId。'];
+fs.writeFileSync(p, JSON.stringify(s, null, 2));
+console.log('patched files=' + s.files.length);

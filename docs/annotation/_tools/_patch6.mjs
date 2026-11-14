@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+const p = 'd:/code/_annot_baseline/spec-b3b-6.json';
+const s = JSON.parse(fs.readFileSync(p, 'utf8'));
+const f = s.files[0];
+const a = f.edits.find((e) => e.anchor === 'return normalizedPath;');
+a.anchor = 'const comparablePath = normalizedPath.toLowerCase();';
+a.lines = ['  // 小写比较，兼容 Windows 大小写不敏感。'];
+const b = f.edits.find((e) => e.anchor === 'const preview = getPermissionRequestPreview(request);');
+b.anchor = 'return `${t(options?.locale, "permissionRequired")}\\n${formatPermissionRequestTitle(request, preview, options)}`;';
+b.lines = ['  // 标题行：固定前缀 + 权限标题。'];
+fs.writeFileSync(p, JSON.stringify(s, null, 2));
+console.log('edits=' + f.edits.length);

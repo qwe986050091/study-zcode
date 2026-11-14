@@ -1,0 +1,25 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/server.ts	291	a8784b7e	// 插件侧有同名 getOperationId 副本，改这里的裁剪规则必须同步另一处，否则 cancel 键会一边命中一边落空。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/server.ts	501	a8784b7e	// [资源] 判 detached 的三个条件必须同时成立：已终态、无订阅者、无 record，缺一条都不释放引用。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/server.ts	633	a8784b7e	// [契约] 返回的是数组副本，调用方 push / splice 不会回写 outbox；要保留失败重试能力请改用 takePostResponseBatch。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/server.ts	653	a8784b7e	// [资源] clearPostResponseMessages 在 connection close 与 dispose 两处调用，clear 之后表内 batch 全部不可恢复。
+apps/zcode-cli/packages/core/src/agent/session-history-hydrator.ts	223	a8784b7e	// [契约] assistantTextFromParts / assistantReasoningFromParts / 工具部分三个投影互不替代，缺失任一也不会影响其它。
+apps/zcode-cli/packages/core/src/agent/session-history-hydrator.ts	408	a8784b7e	// 按 part.id 去重是唯一正确键：若改成按内容比对，用户重发同一条 prompt 会在历史里少一条。
+apps/zcode-cli/packages/core/src/agent/session-history-hydrator.ts	463	a8784b7e	// [契约] buildUserMessageEntries 的第一项才是真实用户信封，其余条目一律降级为 prompt_attachment。
+apps/zcode-cli/packages/core/src/agent/session-history-hydrator.ts	473	a8784b7e	// [契约] 返回非空用户消息的闸门是 shouldRestoreRealUserEnvelope 为真，或合成 / 提示附件条目非空，否则返回空。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-git-runtime-safety.ts	47	a8784b7e	// analysisContainsGitCommand 逐个拆开的 commandPart 检查，只看 argv 里是否出现 git。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-git-runtime-safety.ts	48	a8784b7e	// 命令名优先取 normalizeCommandName 的结果，取不到才退回原始 name。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-git-runtime-safety.ts	49	a8784b7e	// bash -c / env / xargs 这类包装形式也按内层命令识别，不只匹配第一层。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-git-runtime-safety.ts	140	a8784b7e	// 符号链接先 readlink 到真实路径，再判断该路径是否落在 cwdCanonical 之内。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-semantics.ts	56	a8784b7e	// EMPTY_CLASSIFICATION 把 isList / isRead / isSilent 等字段全部置 false，解析不确定时直接展开它。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-semantics.ts	101	a8784b7e	// BASH_SEMANTIC_NEUTRAL_COMMANDS（echo / printf / true 等）不改变语义，循环里直接跳过。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-semantics.ts	136	a8784b7e	// 先剥掉 VAR=x 赋值前缀与已知写选项，再按 BASH_READ_COMMANDS / BASH_LIST_COMMANDS 分类。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-semantics.ts	267	a8784b7e	// silent 判定要求每个 commandPart 都落在 BASH_SILENT_COMMANDS 内，任一不在就整体返回 false。
+apps/zcode-cli/packages/core/src/tool/handlers/node-repl.ts	71	a8784b7e	// activeToolContexts 在回合结束时立即删除该 SessionId 的条目，迟到回调读不到就回退到创建时上下文。
+apps/zcode-cli/packages/core/src/tool/handlers/node-repl.ts	77	a8784b7e	// 旧回调把 browserRuntimeGenerations 的当前值与闭包捕获值比较，不等即判过期结果。
+apps/zcode-cli/packages/core/src/tool/handlers/node-repl.ts	87	a8784b7e	// locator 的 click / fill / press 等写动作才计入表面变化，query / getText 这类读动作不计。
+apps/zcode-cli/packages/core/src/tool/handlers/node-repl.ts	147	a8784b7e	// 每次传输前后各断言一次 browserRuntimeGeneration，重置后到达的旧结果直接丢弃。
+apps/zcode-cli/packages/core/src/tool/json-schema.ts	101	a8784b7e	// validateNode 递归承担 properties / items / allOf 等全部分发，collector 一路下传。
+apps/zcode-cli/packages/core/src/tool/json-schema.ts	162	a8784b7e	// enum / const 与推导出的 type 同时存在时按两条独立规则各报一次，不因为类型已匹配就跳过值约束。
+apps/zcode-cli/packages/core/src/tool/json-schema.ts	317	a8784b7e	// minLength 与 maxLength 同时越界时两条 issue 都进 issues，不做去重也不合并成一条。
+apps/zcode-cli/packages/core/src/tool/json-schema.ts	336	a8784b7e	// minimum 与 maximum 各自独立判断，两个边界都越界时各报一条。

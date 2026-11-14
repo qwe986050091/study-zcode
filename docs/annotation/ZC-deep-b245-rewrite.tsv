@@ -1,0 +1,10 @@
+file	baseLine	blame	content
+packages/ui/src/ErrorBoundary.tsx	146	a8784b7e479d3a	// [资源] 外层纵向滚动加强制顶部对齐，堆栈再长也能保住重试与刷新按钮可达。
+packages/ui/src/ErrorBoundary.tsx	396	a8784b7e479d3a	// [事务] 重试等同清空错误态并触发重渲染，不复位子树实例。
+packages/ui/src/components/ui/carousel.tsx	115	a8784b7e479d3a	// [契约] 命中分支先阻止默认行为，防止页面滚动抢占按键。
+packages/ui/src/components/ui/carousel.tsx	117	a8784b7e479d3a	// [权衡] 只处理左右箭头，垂直模式下的上下箭头仍交给浏览器。
+packages/ui/src/components/ui/dropdown-menu.tsx	3	a8784b7e479d3a	// 做：统一外壳与条目的圆角、间距、阴影、层级、禁用态与高亮态。
+packages/ui/src/components/ui/dropdown-menu.tsx	222	a8784b7e479d3a	// [语义] 只是视觉分组标题，不进键盘序列，也不作为条目的可访问名称。
+packages/ui/src/conversation-share-interaction/conversationSharePopoverActions.ts	115	a8784b7e479d3a	// [权衡] 清空已确认范围牺牲了沿用上次选择的便利，换来的是新链接不继承旧范围这一可解释性。
+packages/ui/src/conversation-share-interaction/conversationSharePopoverActions.ts	187	a8784b7e479d3a	// [并发] 发布中同样早退，勾选与请求并发时以请求提交那一瞬间的范围为准。
+packages/ui/src/v4/ConversationComposer.tsx	847	a8784b7e479d3a	// 同一次挂载内相同错误只上报一次，防止流式刷新把同一错误刷成多条样本。

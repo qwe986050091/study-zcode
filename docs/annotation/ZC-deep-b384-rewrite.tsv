@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/services/src/bots/channelRuntime.ts	122	a8784b7e	// `removeBotRuntimeLockPath` 有限退避删除；不可重试错误立即上抛。
+packages/services/src/bots/channelRuntime.ts	211	a8784b7e	// `attempt < 2`：最多两轮，正常创建或接管一次。
+packages/services/src/bots/groupResultDelivery.ts	35	a8784b7e	// 以 `deps.read` 的落盘记录为准；`result` 只在首次发送时兜底。
+packages/services/src/bots/groupResultDelivery.ts	77	a8784b7e	// `deliveryReplyUnavailable` 为真时走降级：普通群去引用，话题退到根锚点。
+packages/services/src/conversation-share/conversationShareHttpClient.ts	292	a8784b7e	// 分开记录 `unsupportedArtifactTypes` 与 `unsupportedAccessModes`：前者决定哪些卡片能分享，后者决定谁能打开。
+packages/services/src/conversation-share/conversationShareHttpClient.ts	293	a8784b7e	// 合并成单条 `log.info` 会让日志无法回答「缺哪一项能力」。
+packages/services/src/conversation-share/conversationSharePublicProjection.ts	546	a8784b7e	// [权衡] `assertConversationSharePublicProjection` 用 O(n) 多趟遍历而非单趟：清晰度优先，分享行数远小于性能敏感区。
+packages/services/src/conversation-share/conversationSharePublicProjection.ts	1005	a8784b7e	// `assertConversationSharePublicProjection` 是最后一道闸：重编号与闭包假设在发送前被独立复核。
+packages/services/src/conversation-share/conversationShareWorkflowSnapshot.ts	110	a8784b7e	// 其余行不可能携带 `workflowLaunch` 或 `backgroundSource` 运行身份，提前过滤能让后续每步少一层判断。
+packages/services/src/conversation-share/conversationShareWorkflowSnapshot.ts	356	a8784b7e	// 先推进 `preflight` 的预算账本，同一批次里后续产物看到一致的剩余额度。
+packages/services/src/credential/providers/credentialCipherProvider.ts	17	a8784b7e	// `CredentialCipherProvider` 实现不得把明文或密钥写入日志与磁盘。
+packages/services/src/credential/providers/credentialCipherProvider.ts	60	a8784b7e	// `createCredentialDecryptError` 不携带密文细节，防止敏感内容进入日志。
+packages/services/src/feedback/feedbackLogArchive.ts	228	a8784b7e	// 超限时静默停止 `walk` 分支而不报错：归档要的是有代表性的样本，不是完整性。
+packages/services/src/feedback/feedbackLogArchive.ts	392	a8784b7e	// `stat` 得到的压缩体积可能远小于原始累计，调用方按实际字节判断是否还能上传。
+packages/services/src/git/repo/gitCliRepo.ts	511	a8784b7e	// 排序是契约的一部分：`isCurrent` 为真的分支置顶，用户打开列表第一眼就能确认所在分支。
+packages/services/src/git/repo/gitCliRepo.ts	1917	a8784b7e	// `parseNumstat` 的每条记录转成 `GitBranchComparisonChange`：补 `originalPath` 与 `kind`。
+packages/services/src/model-provider/codingPlanProviderAvailability.ts	339	a8784b7e	// `resolvedTeamContext` 为空（找到项目但类型不符）等价于「不在所属团队项目中」，属于明确无权益。
+packages/services/src/model-provider/codingPlanProviderAvailability.ts	539	a8784b7e	// 不做网络请求，纯读 `zcodejwttoken` 与 `provider.apiKey` 凭据。
+packages/services/src/session/claude-native/claudeNativeSessionHeadParser.ts	42	a8784b7e	// 空白串统一归为缺失，调用方无需再对 `normalized` 判空。
+packages/services/src/session/claude-native/claudeNativeSessionHeadParser.ts	123	a8784b7e	// `sanitizeClaudeVisibleText` 清洗后为空表示这条记录没有用户可见内容。

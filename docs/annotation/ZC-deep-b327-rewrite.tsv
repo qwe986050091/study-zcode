@@ -1,0 +1,41 @@
+file	baseLine	blame	content
+packages/desktop/scripts/mcp-apps-host-fixture/managed-renderer.tsx	90	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] pluginUiBridgeService 与另两个桥接服务共用 proxy 工厂，靠方法名在调用时动态转发。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-renderer.tsx	158	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] realSetTimeout 与 realClearTimeout 用同一条 const 声明绑定，让替换与还原始终成对出现。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-renderer.tsx	164	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] window.setTimeout 只拦截 300_000 这一档延迟，其余时长原样交给 realSetTimeout。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-renderer.tsx	174	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] clearTimeout 先查 fakeIds 表，命中则只撤 deadlines 登记，不触碰 realClearTimeout。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-renderer.tsx	263	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] useState 的初始值完全由 config.mode 推导，运行期只允许 renderState 驱动修改。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-renderer.tsx	472	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [并发] drained.add(check) 之后立即调用 check()，覆盖登记之前就已清空的竞态。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-renderer.tsx	548	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 这里复用产品侧 buildPluginUiSurfaceKey 的构造逻辑，而不是在夹具里手写拼接键。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-renderer.tsx	575	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 这里用 Promise.withResolvers 等待而不是轮询，暂停时长完全由 startFixture 脚本决定。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-renderer.tsx	583	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] rows 模式走独立的 ServiceProvider 装配，仍需保持与主夹具相同的 theme 与 locale 来源。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-renderer.tsx	585	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [资源] createRoot 的根引用不保留，页面销毁时由文档整体卸载承担清理。
+packages/ui/src/app-shell/workflow-artifacts/ArtifactOpenAsFileButton.tsx	56	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onReveal 显示原位回调完全可选。
+packages/ui/src/app-shell/workflow-artifacts/ArtifactOpenAsFileButton.tsx	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onReveal 缺席时菜单少一项「在工作区显示」。
+packages/ui/src/app-shell/workflow-artifacts/ArtifactOpenAsFileButton.tsx	73	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// platform 非空是 canOpenAsFile 的判型前提。
+packages/ui/src/app-shell/workflow-artifacts/ArtifactOpenAsFileButton.tsx	74	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// materializeWorkflowArtifactFile 与 openExternalFile 都必须存在。
+packages/ui/src/app-shell/workflow-artifacts/ArtifactOpenAsFileButton.tsx	75	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 两者任一为 undefined 时直接判定不支持。
+packages/ui/src/app-shell/workflow-artifacts/ArtifactOpenAsFileButton.tsx	76	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 该类型谓词同时供渲染与 openWith 菜单分流使用。
+packages/ui/src/app-shell/workflow-artifacts/ArtifactOpenAsFileButton.tsx	77	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// canOpenAsFile 是纯同步判定，不做任何异步探测。
+packages/ui/src/app-shell/workflow-artifacts/ArtifactOpenAsFileButton.tsx	114	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// bytes 为 null 时不发起物化。
+packages/ui/src/app-shell/workflow-artifacts/ArtifactOpenAsFileButton.tsx	115	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 成功后把 pending 写入 pathsRef 缓存。
+packages/ui/src/app-shell/workflow-artifacts/ArtifactOpenAsFileButton.tsx	116	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 失败时立刻从 pathsRef 删除该 key 以便重试。
+packages/ui/src/browser-use/HumanBrowserView.tsx	51	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// agentOpened 为真时取 DEFAULT_AGENT_BROWSER_VIEWPORT，否则取持久化偏好。
+packages/ui/src/browser-use/HumanBrowserView.tsx	52	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// initialPreferenceRef 只在 loading 转假后计算一次。
+packages/ui/src/browser-use/HumanBrowserView.tsx	53	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// settings 在 loading 为真时不参与初值计算。
+packages/ui/src/browser-use/HumanBrowserView.tsx	54	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// unifiedProps 的其余属性原样透传给子视图。
+packages/ui/src/browser-use/HumanBrowserView.tsx	77	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// commitPreference 保存前先经 clonePreference 做深拷贝。
+packages/ui/src/browser-use/HumanBrowserView.tsx	78	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// update 从 updateRef.current 读取，避免闭包过期。
+packages/ui/src/browser-use/HumanBrowserView.tsx	79	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// catch 分支只经 logger.warn 记录，不向上抛出。
+packages/ui/src/browser-use/HumanBrowserView.tsx	90	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// writeTimerRef.current 为 null 时直接返回。
+packages/ui/src/browser-use/HumanBrowserView.tsx	91	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// clearTimeout 之后把 writeTimerRef.current 置空。
+packages/ui/src/browser-use/HumanBrowserView.tsx	92	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// clearPendingWrite 幂等，重复调用安全。
+packages/ui/src/components/ai-elements/schema-display.tsx	92	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] SchemaDisplayContextType 不做嵌套分组，六个字段足够表达展示层需要的全部信息。
+packages/ui/src/components/ai-elements/schema-display.tsx	144	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// Badge 的 variant 固定为 secondary，颜色由方法样式覆盖。
+packages/ui/src/components/ai-elements/schema-display.tsx	145	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [边界] SchemaDisplayMethod 不校验 HttpMethod 是否合法，只做展示。
+packages/ui/src/components/ai-elements/schema-display.tsx	146	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// className 经 cn() 与方法样式合并，调用方可据此微调。
+packages/ui/src/components/ai-elements/schema-display.tsx	156	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] method 保持可选，是为了让 SchemaDisplayMethod 无参可用。
+packages/ui/src/components/ai-elements/schema-display.tsx	434	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// requestBody 逐项交给 SchemaDisplayProperty 渲染，depth 从零重新开始。
+packages/ui/src/components/ai-elements/schema-display.tsx	465	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] responseBody 与 requestBody 结构对称，复用同一套 SchemaDisplayProperty 与 Collapsible 语义。
+packages/ui/src/components/ai-elements/schema-display.tsx	469	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// responseBody 缺失时同样以空内容降级，不抛错。
+packages/ui/src/components/ai-elements/schema-display.tsx	570	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] SchemaDisplayBody 只做分隔线与内边距，不参与数据渲染。
+packages/ui/src/components/ai-elements/schema-display.tsx	573	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 保留 SchemaDisplayBody 与默认内容区两条路径，是为了让调用方在默认骨架与完全自定义之间平滑过渡。

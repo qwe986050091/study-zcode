@@ -1,0 +1,41 @@
+file	baseLine	blame	content
+packages/desktop/src/host/sourceServerConnectionManager.ts	169	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 该错误对象上的 retryable=false 是 isRetryableError 的唯一依据，不靠 code 判断。
+packages/desktop/src/host/sourceServerConnectionManager.ts	225	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// scheduleReconnect 见到 remote-connection-canceled 就不再排队，显式断开后不会被拉起。
+packages/desktop/src/host/sourceServerConnectionManager.ts	341	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// reconnectInputs.delete(sourceServerId) 即撤销恢复意图，后续 scheduleReconnect 无输入可用。
+packages/desktop/src/host/sourceServerConnectionManager.ts	359	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 不要改成指数计算：ONLINE_RETRY_DELAYS_MS 的三档延迟是产品口径，指数退避会拉长恢复窗口。
+packages/desktop/src/host/sourceServerConnectionManager.ts	376	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] isAutomaticRecoveryUserActionCode 认三个 code 由安装、升级、身份确认三类动作产生。
+packages/desktop/src/host/sourceServerConnectionManager.ts	377	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 命中这三类 code 后 getRetryable 返回 false，恢复循环停在终态等用户操作。
+packages/desktop/src/host/sourceServerConnectionManager.ts	378	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 新增用户动作码必须同步加进这个判断，否则 isRetryableError 放行、重试无限续排。
+packages/desktop/src/host/sourceServerConnectionManager.ts	496	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// reconnectInputs 在首次发布时 set，显式断开时 delete 同一 sourceServerId。
+packages/desktop/src/host/sourceServerConnectionManager.ts	678	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// reconnectOnStartup 触发真实连接，可能连带安装或升级，一律走后台限流队列。
+packages/desktop/src/host/sourceServerConnectionManager.ts	843	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [并发] 更新身份时先写 reconnectInputs 再清 recoveryTimer，避免清表与调度交错。
+packages/ui/src/SSHDialog.tsx	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 触发器与 RemoteConnectionDialog 同源开关：open 由 useRemoteConnectionFlow 给出。
+packages/ui/src/SSHDialog.tsx	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// open 与 currentStep 由 useRemoteConnectionFlow 持有，本组件不另存状态。
+packages/ui/src/SSHDialog.tsx	71	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// currentStep 决定下方 switch 走哪个 SSH 步骤分支。
+packages/ui/src/SSHDialog.tsx	72	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// minimizedProgress 经 usePublishRemoteConnectionProgress 对外发布。
+packages/ui/src/SSHDialog.tsx	77	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 关闭时不动焦点：open=false 时 effect 直接 return。
+packages/ui/src/SSHDialog.tsx	78	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// screenRef 内已有焦点就不抢，保留凭据输入框的焦点位置。
+packages/ui/src/SSHDialog.tsx	79	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 聚焦目标由 querySelector 选第一个可交互元素：input、button 或 [tabindex="0"]。
+packages/ui/src/SSHDialog.tsx	89	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// hideTriggerWhenClosed 为 true 时整块不渲染触发器。
+packages/ui/src/SSHDialog.tsx	90	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 对话框高度跟随 dvh 动态视口，软键盘弹出时不被裁切。
+packages/ui/src/SSHDialog.tsx	91	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// error 只在 currentStep 非连接步骤时显示。
+packages/ui/src/TaskInteractionBadge.tsx	40	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// presentation 由 kind、countdownProgress、canSnooze 三个字段组成。
+packages/ui/src/TaskInteractionBadge.tsx	50	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 旧 sessions-index 帧没有 toolName，autoResolution 是恢复时的兜底判据。
+packages/ui/src/TaskInteractionBadge.tsx	51	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// toolName 经 trim().toLowerCase() 归一后再与 "askuserquestion" 比较。
+packages/ui/src/TaskInteractionBadge.tsx	52	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// autoResolution 只在恢复历史帧时参与判定，新帧由 toolName 主判。
+packages/ui/src/TaskInteractionBadge.tsx	89	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// duration 由 Math.max(1, deadlineAt - visibleAt) 给出，避免相等时除零。
+packages/ui/src/TaskInteractionBadge.tsx	90	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// progress 按剩余时间线性衰减，再用 Math.min/max 夹到 0–1。
+packages/ui/src/TaskInteractionBadge.tsx	91	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// now 早于 visibleAt 或晚于 deadlineAt 时都落到边界值。
+packages/ui/src/TaskInteractionBadge.tsx	92	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// autoResolution.state 缺失按未延后处理，canSnooze 保持 true。
+packages/ui/src/TaskInteractionBadge.tsx	93	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 返回值由入参与常量决定，函数无副作用，可直接单测。
+packages/ui/src/TaskInteractionBadge.tsx	108	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// injectedNow 优先；未注入时 clockNow 只在 focus/visibilitychange 时校准一次。
+packages/web/src/web-remote-control/adapters/relayMessage.ts	33	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 字符串按 TextEncoder().encode(data).byteLength 计数，不是 length。
+packages/web/src/web-remote-control/adapters/relayMessage.ts	34	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ArrayBuffer 直接取 byteLength，Blob 取 size。
+packages/web/src/web-remote-control/adapters/relayMessage.ts	35	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 未知类型用 String(data) 转成字符串后再计数。
+packages/web/src/web-remote-control/adapters/relayMessage.ts	75	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先 readWebSocketData 取帧文本，null 表示超限。
+packages/web/src/web-remote-control/adapters/relayMessage.ts	76	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 超限直接返回 null，不进入 JSON.parse。
+packages/web/src/web-remote-control/adapters/relayMessage.ts	77	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// JSON.parse 与 parseWebRemoteControlRelayV2IncomingMessage 一起包在 try 里。
+packages/web/src/web-remote-control/adapters/relayMessage.ts	78	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 坏帧在 catch 里吞掉返回 null，不向上冒泡。
+packages/web/src/web-remote-control/adapters/relayMessage.ts	117	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// summarizeRelayMessageForTrace 按 type 只挑安全字段。
+packages/web/src/web-remote-control/adapters/relayMessage.ts	118	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 数据帧的 payload 走 safePayloadMetadata 白名单。
+packages/web/src/web-remote-control/adapters/relayMessage.ts	119	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 未知 type 只保留 type 字段本身。

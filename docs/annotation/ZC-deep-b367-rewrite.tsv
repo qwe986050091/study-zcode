@@ -1,0 +1,27 @@
+file	baseLine	blame	content
+packages/ui/src/v4/ConversationShareSelectionPanel.tsx	146	a8784b7e	// settings 查询落空时直接走通用定位，面板可能被设置面板遮挡，保持原有位置并接受这一已知降级。
+packages/ui/src/v4/ConversationShareSelectionPanel.tsx	147	a8784b7e	// 该下移分支要求 onConfirm 与 onCancel 同时存在：纯预览模式没有确认区，也就不需要下移。
+packages/ui/src/v4/ConversationShareSelectionPanel.tsx	183	a8784b7e	// ResizeObserver 缺失时面板保持首帧 syncNaturalHeight 的量测结果，尺寸变化后不再自适应。
+packages/ui/src/v4/ConversationShareSelectionPanel.tsx	199	a8784b7e	// visualThumb 是独立视觉层：原生滑块只保留拖动命中，绘制与位移全部由 updateVisualThumb 接管。
+packages/ui/src/v4/ConversationShareSelectionPanel.tsx	243	a8784b7e	// requestAnimationFrame 调度只保留最后一帧：中间态无保留价值，逐帧绘制会让滑块落后于手指。
+packages/web/src/main.tsx	731	a8784b7e	// [并发] document.hasFocus() 为真时 showTaskNotification 直接返回：用户已在页面内看到结果，再弹系统通知是噪声。
+packages/web/src/main.tsx	910	a8784b7e	// 回落后 clientId 只能由物理指纹派生，刷新或换容器都会变，取舍是先保住首屏可用再谈标识稳定。
+packages/web/src/main.tsx	1390	a8784b7e	// [并发] 覆盖方向只有 宿主 → 本地 一个方向（activeWorkspaceKey / activeTaskId 同理），禁止本地反向覆盖：反了会让一次列表刷新把选中项写回错误会话。
+packages/web/src/main.tsx	2206	a8784b7e	// 反例：若把 assistantCodeCommentCardsEnabled 写回 Host 状态，手机端的投影开关会污染桌面端 replay。
+packages/web/src/main.tsx	2307	a8784b7e	// await 期间用户可能已切设备，因此恢复后必须重查 terminated 与版本守卫，不能直接复用旧 ready。
+apps/zcode-cli/packages/adapters/src/exec/bash-shell-provider.ts	69	a8784b7e	// selection 是给 UI 与诊断用的可读描述，不参与解析决策。
+apps/zcode-cli/packages/adapters/src/exec/bash-shell-provider.ts	234	a8784b7e	// override.source === "user-config" 且 isExecutableCandidate 为真时直接采纳，跳过自动探测。
+apps/zcode-cli/packages/adapters/src/exec/bash-shell-provider.ts	235	a8784b7e	// ComSpec 为空时 baseline 校验必然失败，所以 cmd 分支绕过 baseline 只查 path 是否存在。
+apps/zcode-cli/packages/adapters/src/exec/bash-shell-provider.ts	421	a8784b7e	// 抛错（ENOENT / EACCES / 网络盘挂起）一律按不可执行处理：此处 fail-closed，宁可退回 legacy-shell。
+apps/zcode-cli/packages/adapters/src/model/failure-provider-business-codes.ts	74	a8784b7e	// [权衡] 配额耗尽更接近额度不足，但沿用 ModelRateLimited 能直接复用前端已有的升级引导分支，不需要前端再加分支。
+apps/zcode-cli/packages/adapters/src/model/failure-provider-business-codes.ts	107	a8784b7e	// PROVIDER_BUSINESS_CODE_MAPPINGS 的字面量段按语义分组（服务端错误 / 鉴权与配额 / 并发上限 / 恢复类 / 终止类），顺序不会影响后续循环补齐。
+apps/zcode-cli/packages/adapters/src/model/failure-provider-business-codes.ts	112	a8784b7e	// 500 不进入 TERMINAL_BUSINESS_MAPPING，因为上游服务端错误多为瞬时故障，重试成本低于误判终态。
+apps/zcode-cli/packages/adapters/src/model/failure-provider-business-codes.ts	191	a8784b7e	// 三字段必须同时成立：code=ModelRateLimited、retryReason=RateLimited、retryable=false，缺一项就退回可重试路径。
+apps/zcode-cli/packages/bootstrap/src/app/startup-marks.ts	38	a8784b7e	// 再跑一次 discoverNodePluginsSync 会让 MCP 与 hooks 拿到第二份事实，两处 enabled 状态随即分叉。
+apps/zcode-cli/packages/bootstrap/src/app/startup-marks.ts	48	a8784b7e	// pluginStorageRoot 优先取 input.options.pluginStorageRoot，缺省才回落到 getPluginStorageRoot(cliStorageRoot)。
+apps/zcode-cli/packages/bootstrap/src/app/startup-marks.ts	69	a8784b7e	// skillRoots 在 discoverNodePluginsSync 的返回值上就地过滤，按 includeVisualize 收窄而非重新发现。
+apps/zcode-cli/packages/bootstrap/src/app/startup-marks.ts	131	a8784b7e	// 两个布尔分开记：session store 与 artifact store 可以只注入其中一个，合并成一位会丢信息。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/conversation-telemetry-facts.ts	60	a8784b7e	// [契约] MAX_TRACKED_LIFECYCLE_KEYS = 2_000 是全局上限，五张旁路表共用同一个数。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/conversation-telemetry-facts.ts	73	a8784b7e	// [权衡] 不按轮次分表，BoundedKeySet 的清理统一交给 deletePrefix 完成，不会随轮次增加表数量。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/conversation-telemetry-facts.ts	151	a8784b7e	// [权衡] providerHostname 不做域名归一也不折叠大小写，保持与请求侧原始值一致。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/conversation-telemetry-facts.ts	470	a8784b7e	// [权衡] sourceCommandByTurn 只在 TurnStarted 分支登记，后续工具与用量事实靠它补齐来源命令。

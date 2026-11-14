@@ -1,0 +1,14 @@
+dir	path	cause
+-	packages/desktop/scripts/mcp-apps-host-fixture/agent.ts	annotation
+-	packages/desktop/scripts/mcp-apps-host-fixture/chain-combinations.ts	annotation
+-	packages/desktop/scripts/mcp-apps-host-fixture/widget.tsx	annotation
+-	packages/desktop/src/renderer/src/desktopPlatform.ts	annotation
+-	packages/desktop/src/renderer/src/main.tsx	annotation
+-	packages/desktop/src/renderer/src/plugin-sandbox/relay.ts	annotation
+-	packages/e2e-report/src/viewer/ChartPanels.tsx	annotation
+-	packages/provider/src/config/provider-data-schema.ts	annotation
+-	packages/rpc/src/channelClient.ts	annotation
+-	packages/services/src/bots/bots.ts	annotation
+-	packages/services/src/bots/channelMentionResolver.ts	annotation
+-	packages/services/src/bots/groupAdminAttention.ts	annotation
+-	packages/services/src/bots/messages.ts	annotation

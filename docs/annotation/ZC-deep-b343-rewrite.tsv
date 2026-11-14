@@ -1,0 +1,29 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/dynamic-workflow/src/schema/validate.ts	55	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先按 $ref 解引用再递归 check，resolveRef 失败单独记一条 unresolved 违规。
+apps/zcode-cli/packages/dynamic-workflow/src/schema/validate.ts	56	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resolved 为 undefined 时立即 return，不再对原值做兜底判断。
+apps/zcode-cli/packages/dynamic-workflow/src/schema/validate.ts	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 递归引用由 check 的调用栈深度自然收敛，不另设深度上限。
+apps/zcode-cli/packages/dynamic-workflow/src/schema/validate.ts	82	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// anyOf 逐个分支试算，任一分枝零违规则 matched 为真。
+apps/zcode-cli/packages/dynamic-workflow/src/schema/validate.ts	83	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 每个分支用独立 trial 列表试算，失败分支的违规不外泄到 out。
+apps/zcode-cli/packages/dynamic-workflow/src/schema/validate.ts	84	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 全部失败只 push 一条 one of N variants 聚合违规，避免逐分支刷屏。
+apps/zcode-cli/packages/dynamic-workflow/src/schema/validate.ts	99	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// typeName 把联合类型逐项拼接，报告里能看出候选集。
+apps/zcode-cli/packages/office-runtime/ui/i18n.ts	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// where 里的定位模板成对出现：pageLower 用于句中，page 用于句首。
+apps/zcode-cli/packages/office-runtime/ui/i18n.ts	153	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// errors 用 Record 宽类型标注，错误码由服务端扩展时无需同步改类型。
+apps/zcode-cli/packages/office-runtime/ui/i18n.ts	178	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// zh-CN 文案自行处理全角标点与空格，避免复用 en 拼接时混入半角空格。
+apps/zcode-cli/packages/office-runtime/ui/i18n.ts	273	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// strings 只看 locale 前缀，zh / zh-CN / zh-TW 会归入中文，其余则回落 en。
+apps/zcode-cli/packages/office-runtime/ui/i18n.ts	292	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 定位串由面板自身定义，新语法要先在 describeAt 登记模板再对外使用。
+apps/zcode-cli/packages/office-runtime/ui/i18n.ts	299	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 表格定位分 w.cell 与 w.table 两支，先试三段正则捕获再退回单值。
+apps/zcode-cli/packages/office-runtime/ui/i18n.ts	326	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 区域部分如 Sheet!A1:B2 的右半保持原样，不做大小写归一。
+packages/ui/src/ToolCallBlocks/renderers/create-workflow.tsx	115	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [事务] 补全行与正式卡共用 CreateWorkflowToolCallBlock，只换 useWorkflowHoleRow 返回的 vocabulary，站点数据仍同源。
+packages/ui/src/ToolCallBlocks/renderers/create-workflow.tsx	127	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [并发] retuning 为真时只改并发上限，既不写脚本也不编译，所以「正在校验」不能用它的在途态。
+packages/ui/src/ToolCallBlocks/renderers/create-workflow.tsx	128	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [事务] 是否退化成设置行由 ConversationRowView 在结算后裁定，本组件只出在途词汇，不复制这份判断。
+packages/ui/src/ToolCallBlocks/renderers/create-workflow.tsx	184	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [资源] useWorkflowCardModel 每次渲染会新建一份 model，graph 到达时整份替换，不在旧模型上就地改。
+packages/ui/src/ToolCallBlocks/renderers/create-workflow.tsx	185	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [事务] model 是时间线的唯一输入，站点、药丸与连线都由它派生，组件不另拼一份。
+packages/ui/src/ToolCallBlocks/renderers/create-workflow.tsx	205	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] scriptOpen 初值 false，让长脚本不抢聊天流的垂直空间，代价是读脚本要多点一次展开。
+packages/ui/src/ToolCallBlocks/renderers/create-workflow.tsx	304	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [事务] showFailureStatus 与 prelaunch 合流后直接返回行式反馈，不渲染 WorkflowTimeline，也不接跳转回调。
+packages/ui/src/components/ai-elements/markdown-table.tsx	337	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resolveMarkdownTableVerticalViewport 向上找能纵向滚动的祖先，作为吸底滚动的参考视口。
+packages/ui/src/components/ai-elements/markdown-table.tsx	542	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resolveMarkdownTableVirtualScrollMax 的返回值：tableWidth 减 trackWidth，负数归零。
+packages/ui/src/components/ai-elements/markdown-table.tsx	697	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// viewport.scrollWidth 在首帧可能含滚动条槽，是可接受的近似；
+packages/ui/src/components/ai-elements/markdown-table.tsx	995	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// scheduleMeasure 合帧：同一帧内多次调用只跑一次 requestAnimationFrame。
+packages/ui/src/components/ai-elements/markdown-table.tsx	1089	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 滚动后要重算 viewportMaxWidth，因为左借位被消耗完的瞬间，
+packages/ui/src/components/ai-elements/markdown-table.tsx	1090	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 内容层从 translateX 左移切换到真实滚动，calc 公式随之变化。
+packages/ui/src/components/ai-elements/markdown-table.tsx	1490	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 内容层宽度 = viewportMaxWidth + ceil(viewportLeftOffset)，即槽宽加已借出的左移量。

@@ -1,0 +1,25 @@
+file	baseLine	blame	content
+packages/shared/src/zcode-protocol-v4/wire-assembler.ts	148	a8784b7e	// [并发] `hasValidFragmentInner` 只读入参，任何阶段调用都不会与组装状态竞争。
+packages/shared/src/zcode-protocol-v4/wire-assembler.ts	200	a8784b7e	// [资源] `hardBound` 只在构造期执行一次，运行期不再重复做上限计算。
+packages/shared/src/zcode-protocol-v4/wire-assembler.ts	376	a8784b7e	// [权衡] 报错而不是静默替换：整帧与分片混用是协议违约，抛 `metadataMismatch` 让调用方重取。
+packages/shared/src/zcode-protocol-v4/wire-assembler.ts	508	a8784b7e	// [权衡] 用 `bytesEqual` 逐字节比较而不是哈希：单片大小有限，逻辑更直观。
+packages/ui/src/app-shell/workflow-artifacts/presets/ArtifactBoard.tsx	106	a8784b7e	// 空态仍渲染 `PresetHeading`：标题在场才能区分「空列表」与「未加载」。
+packages/ui/src/app-shell/workflow-artifacts/presets/ArtifactBoard.tsx	119	a8784b7e	// compact 侧板只渲染列名与计数，不实例化卡片本体。
+packages/ui/src/app-shell/workflow-artifacts/presets/ArtifactBoard.tsx	120	a8784b7e	// 列数由脚本输出决定，可能多于一屏，因此 `flex-wrap` 允许换行。
+packages/ui/src/app-shell/workflow-artifacts/presets/ArtifactBoard.tsx	121	a8784b7e	// 计数用 `font-mono` + `tabular-nums`，避免刷新时宽度跳动。
+packages/ui/src/app-shell/workflow-artifacts/WorkflowArtifactTilePreview.tsx	96	a8784b7e	// 空行直接跳过，列数截断到 `CSV_PREVIEW_COLUMNS`。
+packages/ui/src/app-shell/workflow-artifacts/WorkflowArtifactTilePreview.tsx	97	a8784b7e	// 单元格 trim 后超过 `CSV_CELL_MAX_CHARS` 就截断并补省略号。
+packages/ui/src/app-shell/workflow-artifacts/WorkflowArtifactTilePreview.tsx	98	a8784b7e	// 达到 `CSV_PREVIEW_ROWS` 立即 break，不读完整份文本。
+packages/ui/src/app-shell/workflow-artifacts/WorkflowArtifactTilePreview.tsx	162	a8784b7e	// 错误态与不支持预览的形态统一回退纸页字形，不复用空 div。
+packages/ui/src/chat-input-toolbar/contextQuotaResetOpportunityReminder.tsx	160	a8784b7e	// 外部点击判定：`trigger.contains(target)` 为真时直接返回 false，保留提醒。
+packages/ui/src/chat-input-toolbar/contextQuotaResetOpportunityReminder.tsx	188	a8784b7e	// initial 阶段：`GiftIcon` + 可用提示 + 关闭按钮，语气是告知而非催促。
+packages/ui/src/chat-input-toolbar/contextQuotaResetOpportunityReminder.tsx	189	a8784b7e	// urgent 阶段：`AlarmClock` + 倒计时徽标，用警告色强化剩余时间。
+packages/ui/src/chat-input-toolbar/contextQuotaResetOpportunityReminder.tsx	233	a8784b7e	// 关闭按钮：`onPointerDown` 与 `onClick` 都调 stopPropagation，避免外部点击处理器连容器一起关。
+packages/ui/src/components/ai-elements/mermaid-block.tsx	166	a8784b7e	// [资源] 探针 `span` 设为 `pointer-events:none` 的隐藏绝对定位，读取计算色后立即 remove()。
+packages/ui/src/components/ai-elements/mermaid-block.tsx	259	a8784b7e	// [权衡] 同时兼容 `addEventListener` 与旧版 `addListener`，按运行时能力二选一。
+packages/ui/src/components/ai-elements/mermaid-block.tsx	260	a8784b7e	// [事务] 监听回调只做 setRevision(prev => prev + 1)，重算交给渲染阶段统一处理。
+packages/ui/src/components/ai-elements/mermaid-block.tsx	327	a8784b7e	// [事务] setRenderState("loading") 与 onPreviewSvgChange(null) 在同一同步段完成，外部视口看不到中间态。
+packages/ui/src/lib/codingPlanFunnelTelemetry.ts	77	a8784b7e	// [权衡] `createFallbackFunnelId` 时间粒度较粗，只在 `randomUUID` 不可用时启用。
+packages/ui/src/lib/codingPlanFunnelTelemetry.ts	105	a8784b7e	// 入口卡片不是已购套餐全集，因此 entryPlanList 留空串，等 Provider 回填权威快照。
+packages/ui/src/lib/codingPlanFunnelTelemetry.ts	151	a8784b7e	// no_plan 分支把 entryPlanLevel 置空串，防止无套餐用户带上历史档位名。
+packages/ui/src/lib/codingPlanFunnelTelemetry.ts	192	a8784b7e	// 优先匹配个人版与团队版编码计划，不用含 Start 的宽泛 helper，避免误判体验档。

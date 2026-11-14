@@ -1,0 +1,31 @@
+file	baseLine	blame	content
+packages/ui/src/hooks/useCodingPlanEntryPlanList.ts	40	a8784b7e479d3a	// 凭据与订阅服务来自服务容器。
+packages/ui/src/hooks/useCodingPlanEntryPlanList.ts	140	a8784b7e479d3a	// 没有快照即视为缺失。
+packages/ui/src/hooks/useCodingPlanEntryPlanList.ts	141	a8784b7e479d3a	// 明确未开通不算缺失。
+packages/ui/src/hooks/useCodingPlanEntryPlanList.ts	142	a8784b7e479d3a	// 未认证或带原因视为缺失。
+packages/ui/src/hooks/useCodingPlanEntryPlanList.ts	143	a8784b7e479d3a	// 过滤保留仍需等待的项。
+packages/ui/src/previewPaneContent.tsx	119	a8784b7e479d3a	// [契约] 扩展名判断统一转小写后比较。
+packages/ui/src/previewPaneContent.tsx	322	a8784b7e479d3a	// [契约] 加载态只在既没有错误也还没有图片时成立。
+packages/ui/src/previewPaneContent.tsx	372	a8784b7e479d3a	// 这样两类二进制预览的行为一致，
+packages/ui/src/previewPaneContent.tsx	373	a8784b7e479d3a	// 新增类型时可以照抄这段三段式。
+packages/ui/src/previewPaneContent.tsx	459	a8784b7e479d3a	// [契约] 初始加载态需要同时满足正在加载与尚无数据。
+packages/ui/src/settings/BrowserSettingsSection.tsx	94	a8784b7e479d3a	// [契约] 该布尔同时驱动图标与可访问性表达，父级的整体禁用另算，两者不合并。
+packages/ui/src/settings/BrowserSettingsSection.tsx	154	a8784b7e479d3a	// [权衡] 不在组件内拼身份格式，格式构造属于上层服务，组件只做归一。
+packages/ui/src/settings/BrowserSettingsSection.tsx	159	a8784b7e479d3a	// [权衡] 用方法存在性而非版本号判断，兼容注入式平台实现与测试替身。
+packages/ui/src/settings/BrowserSettingsSection.tsx	343	a8784b7e479d3a	// [并发] 两套忙碌态独立，是为了让「切换插件」与「清理数据」在语义上互不阻塞。
+packages/ui/src/settings/BrowserSettingsSection.tsx	346	a8784b7e479d3a	// [权衡] 插件不可用由三种原因合并：没有工作区、列表加载中、官方插件不在列表里。
+packages/ui/src/settings/CodingPlanUpgradeDialogProvider.tsx	16	a8784b7e479d3a	// 模块职责：套餐升级弹窗的全局入口，负责就绪守卫、观察者回调与埋点。
+packages/ui/src/settings/CodingPlanUpgradeDialogProvider.tsx	62	a8784b7e479d3a	// 单槽位保存当前观察者。
+packages/ui/src/settings/CodingPlanUpgradeDialogProvider.tsx	97	a8784b7e479d3a	// 点击瞬间把整份套餐列表冻进埋点上下文。
+packages/ui/src/settings/CodingPlanUpgradeDialogProvider.tsx	130	a8784b7e479d3a	// 结果回调只指向当前观察者。
+packages/ui/src/settings/CodingPlanUpgradeDialogProvider.tsx	140	a8784b7e479d3a	// 必选上下文缺失属于接线错误，直接抛错。
+packages/ui/src/settings/usage-stats/CodingPlanUsagePanel.tsx	398	a8784b7e479d3a	// 这里不报错、不引导登录，交给设置页的整体空态语义。
+packages/ui/src/settings/usage-stats/CodingPlanUsagePanel.tsx	632	a8784b7e479d3a	// 同上；周卡与五小时卡各自独立判断，不可用「有任一卡」代替。
+packages/ui/src/settings/usage-stats/CodingPlanUsagePanel.tsx	779	a8784b7e479d3a	// 趋势区容器：只负责标题、区间选择与两个子区块排布，自身不取数。
+packages/ui/src/settings/usage-stats/CodingPlanUsagePanel.tsx	898	a8784b7e479d3a	// 默认按模型聚合：绝大多数用户关心的是「哪个模型花得多」。
+packages/ui/src/settings/usage-stats/CodingPlanUsagePanel.tsx	1240	a8784b7e479d3a	// 三列在 sm 以下自动堆叠；卡片高度由内容决定，不强行等高。
+packages/ui/src/v4/composer/modelTriggerDisplay.ts	51	a8784b7e479d3a	// 团队套餐单独归类。
+packages/ui/src/v4/composer/modelTriggerDisplay.ts	98	a8784b7e479d3a	// 菜单里没有就原样回退。
+packages/ui/src/v4/composer/modelTriggerDisplay.ts	127	a8784b7e479d3a	// 完整标签复用同一套解析。
+packages/ui/src/v4/composer/modelTriggerDisplay.ts	143	a8784b7e479d3a	// 模型名是断点内最小可见单位。
+packages/ui/src/v4/composer/modelTriggerDisplay.ts	155	a8784b7e479d3a	// 前缀单独存放，由容器决定显隐。

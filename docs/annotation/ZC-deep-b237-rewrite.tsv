@@ -1,0 +1,63 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	20	a8784b7e479d3a	// 模块职责：在生成与流式两条模型链路外侧落盘请求响应快照，供离线排障。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	21	a8784b7e479d3a	// 状态所有权：仅压缩基线缓存是模块级状态，按文件路径索引且可自然失效。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	22	a8784b7e479d3a	// 阅读顺序：先看记录入口，再看聚合解析，最后看落盘、轮转与压缩。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	23	522e851e0790e4	// ============================================================
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	24	522e851e0790e4	// model/runner-debug —— model I/O 诊断落盘（debug / rollout JSONL）
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	25	522e851e0790e4	// 定位：在 generate 与 stream 两条模型链路外侧记录请求/响应快照，供离线排障；
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	26	522e851e0790e4	//       并把单 session 的 JSONL 压缩为 delta/tail 基线，避免历史消息梯度重复。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	27	522e851e0790e4	// 输入：attempt、request、options、resolved、result/error、env、debugDir；输出：无返回值，仅落盘。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	28	522e851e0790e4	// 副作用：mkdir/appendFile/writeFile/rm 以及进程内 Map 缓存；不触碰网络与模型主流程。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	29	522e851e0790e4	// 失败语义：全部吞错（诊断失败绝不影响模型请求）；流失败聚合限时 1s，已 abort 时直接跳过。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	30	522e851e0790e4	// 不变量：默认每目录最多 3 个 session 文件、单文件 64MB；超限整文件重置而非 expand 历史；
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	31	522e851e0790e4	//         delta 仅在首/尾/采样指纹连续时成立；写盘前必须经过 sanitizeModelIODebugRecord 脱敏。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	32	522e851e0790e4	// ============================================================
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	133	522e851e0790e4	* 同步写盘；异常在内部吞掉，绝不向上影响模型请求。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	136	a8784b7e479d3a	// 未开启记录时一次判断就退出。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	137	a8784b7e479d3a	// 时长按起止毫秒差计算。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	138	a8784b7e479d3a	// 请求体三级取值，先真后补。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	139	a8784b7e479d3a	// 响应字段全部在存在时才填。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	140	a8784b7e479d3a	// 元数据标识逐项转字符串。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	141	a8784b7e479d3a	// 写盘失败不影响调用方。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	242	a8784b7e479d3a	// 失败路径先看是否已被中止。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	243	a8784b7e479d3a	// 已中止直接空快照，不等待聚合。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	244	a8784b7e479d3a	// 未中止时每项限时读取。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	245	a8784b7e479d3a	// 合成对象只为复用归一化函数。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	246	a8784b7e479d3a	// 聚合缺失时响应段整体省略。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	247	a8784b7e479d3a	// 外层捕获兜住所有诊断异常。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	392	522e851e0790e4	/** 原始响应体。 */
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	584	a8784b7e479d3a	// 脱敏永远发生在写盘之前。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	585	a8784b7e479d3a	// 目录按环境选择并递归创建。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	586	a8784b7e479d3a	// 文件名以会话片段命名。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	587	a8784b7e479d3a	// 全量保留跳过轮转与裁剪。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	588	a8784b7e479d3a	// 超限时整文件重写而不是追加。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	589	a8784b7e479d3a	// 压缩基线随写入同步刷新。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	875	a8784b7e479d3a	// 非数组集合直接跳过。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	876	a8784b7e479d3a	// 计数总是先写入。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	877	a8784b7e479d3a	// 能证明只增尾部就写增量。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	878	a8784b7e479d3a	// 超基线长度改为尾部切片。
+apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	879	a8784b7e479d3a	// 其余情况写完整集合。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	27	a8784b7e479d3a	// 在页面内轮询，避免 Node 侧忙等。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	28	a8784b7e479d3a	// 超时上限四秒，覆盖动画与延迟路径。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	29	a8784b7e479d3a	// 失败时把焦点元素、提示与弹层快照拼进错误。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	30	a8784b7e479d3a	// [失败路径] 拒绝信息必须足以定位问题。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	38	a8784b7e479d3a	// 先验证选项卡切换与键盘导航。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	39	a8784b7e479d3a	// 再确认浮动定位与图标库已注入。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	40	a8784b7e479d3a	// 随后插入一次性探针，覆盖动态图标、共享面板与提示。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	41	a8784b7e479d3a	// 所有探针在函数末尾统一移除。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	88	a8784b7e479d3a	// 每个方位都重设探针位置并触发触摸点击。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	89	a8784b7e479d3a	// 弹层边界必须落在视口内，允许一像素误差。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	90	a8784b7e479d3a	// 方位断言按上下左右分别检查相对关系。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	91	a8784b7e479d3a	// 结束后关闭弹层并确认只剩一个实例。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	134	a8784b7e479d3a	// 先确认日历已就绪且轮播停在首个变体。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	135	a8784b7e479d3a	// 前进与后退各点一次，验证状态可逆。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	136	a8784b7e479d3a	// 再挂载带事件与重叠日程的日历探针。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	137	a8784b7e479d3a	// 最后移除探针，避免影响后续检查。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	159	a8784b7e479d3a	// 所有日历读取都限定在探针阴影根内。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	160	a8784b7e479d3a	// 表达式由调用方提供，函数只负责包裹取值。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	161	a8784b7e479d3a	// 这样避免与页面其他日历实例混淆。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	162	a8784b7e479d3a	// 返回值直接透传，不做类型转换。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	181	a8784b7e479d3a	// 先创建带滑块的探针并等待分组出现。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	182	a8784b7e479d3a	// 通过宿主注入修改值，确认状态同步。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	183	a8784b7e479d3a	// 销毁后分组减少且状态回到初值。
+packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	184	a8784b7e479d3a	// 重新挂载开关后再次确认分组数量。

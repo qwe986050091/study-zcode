@@ -1,0 +1,14 @@
+file	baseLine	blame	content
+packages/ui/src/hooks/useProviderSettingsView.ts	111	a8784b7e	// generationRef.current 自增即作废旧代回调，晚到的 commit 会被丢弃。
+packages/ui/src/hooks/useProviderSettingsView.ts	121	a8784b7e	// generation !== generationRef.current 时直接 return，代际不符的回调丢弃。
+packages/ui/src/hooks/useSessionSubagents.ts	90	a8784b7e	// requestSeq 并发令牌只递增不重置，每次请求发出前取号，落地前比对，晚到的响应直接丢弃。
+packages/ui/src/hooks/useSessionSubagents.ts	159	a8784b7e	// loadMore 循环以 remaining 为界，只在 nextCursor 存在时继续，二者共同构成终止条件，缺一必须退出。
+packages/ui/src/lib/sidebarPurposeSectionPreferences.ts	205	a8784b7e	// expanded === fallback 时删除该分组键，用缺省表达继承，而不是写入同值。
+packages/ui/src/lib/sidebarPurposeSectionPreferences.ts	316	a8784b7e	// catch 里吞异常是刻意选择，不是遗漏，日志层必须不记录也不上报。
+packages/ui/src/project-sidebar/index.tsx	242	a8784b7e	// [契约] 排序是 reorder 偏好（用户手排加置顶优先），选择器只负责过滤与投影。
+packages/ui/src/project-sidebar/index.tsx	252	a8784b7e	// [契约] allExpanded 只驱动全部展开/收起按钮的语义，不参与单项目展开态。
+packages/ui/src/project-sidebar/RemoteProjectMenu.tsx	47	a8784b7e	// onOpenRemoteWorkspace 可选，远程入口是否存在由调用方决定。
+packages/ui/src/project-sidebar/RemoteProjectMenu.tsx	52	a8784b7e	// DropdownMenu 由单一菜单根承载，触发器与内容同源。
+packages/desktop/src/host/windowHostControllerService.ts	560	a8784b7e	// [并发] 三个列表由 Promise.all 并行读取，减少一次刷新对远端的往返次数。
+packages/desktop/src/host/windowHostControllerService.ts	623	a8784b7e	// [并发] 每次刷新把 generation 加一，让更早的在途结果必然失效。
+packages/desktop/src/host/windowHostControllerService.ts	1240	a8784b7e	// source 转 offline 只影响可连接性，projection 与 membership 必须原样保留。

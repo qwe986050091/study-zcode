@@ -1,0 +1,506 @@
+import fs from 'node:fs';
+
+const specs = [
+  {
+    file: 'apps/zcode-cli/packages/tui/src/app-selection-panel.tsx',
+    first: '// 通用选区弹层的渲染。',
+    target: 47,
+    header: [
+      '// INV-01 三态互斥且优先级固定为 input > pending > 列表：守住位置 SelectionPanel 的三元判断；改错故障 输入态被列表态覆盖，用户看不到正在输入的内容。',
+      '// INV-02 面板高度固定不随条目数变化：守住位置 CHOICE_PANEL_HEIGHT 常量；改错故障 上下翻页时弹层抖动。',
+      '// INV-03 可见窗口固定 5 行：守住位置 SELECTION_VISIBLE_COUNT；改错故障 选中项滚出可视区。',
+      '// INV-04 内容宽度必须归一化后才能进入布局：守住位置 normalizeSelectionContentWidth；改错故障 负数列宽导致裁切异常。',
+      '// INV-05 非法宽度回落到 80 列：守住位置 SELECTION_ROW_FALLBACK_CONTENT_WIDTH；改错故障 无宽度信息时渲染成 0 列。',
+      '// INV-06 detail 预算不得超过内容宽度的 55%：守住位置 SELECTION_ROW_MAX_DETAIL_RATIO；改错故障 主文本被压缩到不可读。',
+      '// INV-07 主文本至少保留 1 列：守住位置 fitSelectionRow 的 Math.max；改错故障 极窄终端出现负宽。',
+      '// INV-08 主文本最小宽度预留 8 列：守住位置 SELECTION_ROW_MIN_PRIMARY_WIDTH；改错故障 detail 独占整行。',
+      '// INV-09 内容最小宽度为 12 列：守住位置 SELECTION_ROW_MIN_CONTENT_WIDTH；改错故障 窄屏下选择器与文本重叠。',
+      '// INV-10 禁用项仍渲染且只改色不隐藏：守住位置 SelectionRow 的 primaryColor；改错故障 列表行数随状态跳动。',
+      '// INV-11 选中标记固定 2 列：守住位置 SELECTION_ROW_SELECTOR_WIDTH；改错故障 主文本起始列漂移。',
+      '// INV-12 detail 前的弹性间隔固定 2 列：守住位置 SELECTION_ROW_DETAIL_GAP_WIDTH；改错故障 补充信息贴住主文本。',
+      '// INV-13 detail 宽度按显示列而非字符数计算：守住位置 displayWidth；改错故障 中文站点右对齐错位。',
+      '// INV-14 所有文本裁切都走 truncateDisplay：守住位置 输入行、主文本与 detail；改错故障 宽字符被截成半个。',
+      '// INV-15 空列表渲染 emptyMessage 且面板不塌陷：守住位置 visibleWindow.items 判断；改错故障 出现空白弹层。',
+      '// INV-16 帮助行缺失时用 copy 默认文案兜底：守住位置 help 的空值合并；改错故障 帮助行显示 undefined。',
+      '// INV-17 detail 片段为空时不得留下分隔符：守住位置 filter 与 join；改错故障 行尾出现多余空格。',
+      '// INV-18 组件不持有筛选与选中状态：守住位置 入参只读；改错故障 键盘事件与渲染状态不同步。',
+      '//',
+      '// 模块职责：按输入态、等待态与列表态渲染通用选区弹层，并保证终端列宽下的稳定布局。',
+      '// 状态所有权：过滤结果、选中索引与过滤词全部由调用方持有，本文件只读。',
+      '// 阅读顺序：先看尺寸常量与三态分派，再读三种内容构造，最后看行裁切与列宽预算。',
+    ],
+    blocks: [
+      {
+        anchor: 'const PANEL_CHROME_ROWS = 4;',
+        lines: [
+          '非内容行数只统计标题、边框与内边距。',
+          '列表高度固定 7 行，等于 5 行内容加 2 行提示。',
+          '这些常量同时影响弹层定位，不要单独调整。',
+          '行高固定为 1，禁止条目换行。',
+          '所有尺寸单位都是终端单元格而不是像素。',
+        ],
+      },
+      {
+        anchor: 'const rowContentWidth = normalizeSelectionContentWidth(contentWidth);',
+        lines: [
+          '入参宽度可能来自尚未完成布局的终端。',
+          'undefined 与非有限数都视为未知宽度。',
+          '归一化后宽度一定不小于 12 列。',
+          '后续所有列宽预算都基于该值。',
+          '不要在子函数里再次归一化。',
+        ],
+      },
+      {
+        anchor: 'function inputSelectionContent(',
+        lines: [
+          '输入行前缀固定两字符，不计入内容宽度。',
+          '空输入使用 muted 色表示尚未键入。',
+          'secondary 与 help 允许自动换行。',
+          '输入行按内容宽度裁切，避免横向溢出。',
+          '空片段返回 null 后统一过滤。',
+        ],
+      },
+      {
+        anchor: 'function selectionContent(',
+        lines: [
+          '第一行永远是 prompt，第二行永远是帮助行。',
+          '空列表只替换列表段，不省略前两行。',
+          '每行 detail 先汇总再统一裁切。',
+          '选中索引来自窗口计算结果而不是遍历下标。',
+          '行键使用条目 id，避免重排错位。',
+        ],
+      },
+      {
+        anchor: 'function fitSelectionRow(',
+        lines: [
+          'detail 先按预算裁切，再据实际宽度反推主文本预算。',
+          '主文本预算至少为 1，防止出现负值。',
+          'detail 为空时不保留间隔宽度。',
+          '返回的 detailWidth 与裁切结果保持一致。',
+          '该函数是纯计算，不读取终端状态。',
+        ],
+      },
+    ],
+  },
+  {
+    file: 'packages/client/src/webRemoteControlAcknowledgedRelayProtocolTypes.ts',
+    first: 'import type { ConnectionFlowControl, Event, IMessagePassingProtocol } from "@zcode/rpc";',
+    target: 45,
+    header: [
+      '// INV-01 所有上限都是字节数而不是条目数：守住位置 常量对象的字段语义；改错故障 大帧绕过背压。',
+      '// INV-02 高水位必须为正安全整数：守住位置 requirePositiveSafeInteger；改错故障 NaN 使比较恒假。',
+      '// INV-03 低水位允许为 0 但不得为负：守住位置 requireNonnegativeSafeInteger；改错故障 负水位导致永远触发饱和。',
+      '// INV-04 低水位不得超过高水位：守住位置 resolveAcknowledgedRelayLimits 的显式比较；改错故障 背压区间倒挂。',
+      '// INV-05 重放缓冲上限只能收紧不能放宽：守住位置 Math.min 与常量；改错故障 调用方传入更大值导致内存膨胀。',
+      '// INV-06 重放宽限期同样只能收紧：守住位置 Math.min；改错故障 断线重连窗口被无限延长。',
+      '// INV-07 装配超时复用共享传输限制：守住位置 常量引用；改错故障 两端超时不一致。',
+      '// INV-08 帧字节必须逐帧校验后才累加：守住位置 measureAcknowledgedRelayBatchBytes 的循环；改错故障 非法帧被计入总数。',
+      '// INV-09 非法字节数必须抛错而不是跳过：守住位置 三个条件判断；改错故障 静默少算导致背压失效。',
+      '// INV-10 身份匹配要求三个字段全部相等：守住位置 rawIdentityMatches；改错故障 跨会话帧被误接收。',
+      '// INV-11 身份匹配必须先排除非对象：守住位置 typeof 与 null 判断；改错故障 空候选触发异常。',
+      '// INV-12 原始候选只认两种 zcode_type：守住位置 isRawTransportCandidate；改错故障 普通 RPC 帧被重复处理。',
+      '// INV-13 批次外层字节由帧字节求和得出：守住位置 AcknowledgedRelayOutboundBatch 的字段含义；改错故障 背压与实际流量不符。',
+      '// INV-14 批次必须携带排队时间与进度游标：守住位置 queuedAt 与 nextFrameIndex；改错故障 重放重复发送已确认帧。',
+      '// INV-15 适配器接口继承连接流控：守住位置 extends ConnectionFlowControl；改错故障 上层无法统一施加背压。',
+      '// INV-16 降级事件只暴露故障类型：守住位置 onDegraded 泛型；改错故障 内部错误对象泄漏到渲染层。',
+      '// INV-17 本文件只声明类型与纯函数，不持有状态：守住位置 模块边界；改错故障 阈值被隐式缓存。',
+      '// INV-18 默认值集中在常量对象，便于两端比对：守住位置 as const 常量；改错故障 客户端与服务端各写一份数字。',
+      '//',
+      '// 模块职责：声明带确认的远控中继协议常量、选项与适配器契约，并提供纯校验函数。',
+      '// 状态所有权：无运行时状态；水位、缓冲与超时都由调用方按本文件的解析结果持有。',
+      '// 阅读顺序：先看常量与两个水位校验，再读身份与帧校验，最后看上限解析。',
+    ],
+    blocks: [
+      {
+        anchor: 'export const ACKNOWLEDGED_WEB_REMOTE_CONTROL_RELAY_LIMITS = {',
+        lines: [
+          '饱和高水位为 1 MiB，超过即暂停发送。',
+          '低水位为 256 KiB，降到此处才恢复。',
+          '重放缓冲硬上限 8 MiB，防止断线期间无限堆积。',
+          '宽限期 45 秒，覆盖常见网络抖动。',
+          '装配超时直接复用共享传输限制。',
+        ],
+      },
+      {
+        anchor: 'export function requirePositiveSafeInteger(value: number, name: string): number {',
+        lines: [
+          '非安全整数包含 NaN 与 Infinity，一律拒绝。',
+          '零与负数同样拒绝。',
+          '错误信息只带参数名，不带具体数值。',
+          '返回值用于后续比较，避免重复校验。',
+        ],
+      },
+      {
+        anchor: 'export function rawIdentityMatches(',
+        lines: [
+          '三个身份字段必须同时相等。',
+          '只接受普通对象，数组与原始值直接判否。',
+          '该函数不抛出，供消息入口快速过滤。',
+          '字段读取通过索引签名完成，避免类型断言扩散。',
+        ],
+      },
+      {
+        anchor: 'export function resolveAcknowledgedRelayLimits(',
+        lines: [
+          '高水位先解析，作为低水位的上界。',
+          '低水位允许为 0，表示降到零才恢复。',
+          '低水位大于高水位时直接抛错。',
+          '三个可收紧上限都与常量取最小值。',
+          '返回对象字段与内部契约一一对应。',
+        ],
+      },
+      {
+        anchor: 'export function measureAcknowledgedRelayBatchBytes(',
+        lines: [
+          '逐帧测量，任何一帧异常整批失败。',
+          '单帧上限来自共享传输限制。',
+          '求和结果用于外层背压判断。',
+          '不允许零字节或负数字节帧。',
+          '测量函数由调用方注入，便于测试替身。',
+        ],
+      },
+    ],
+  },
+  {
+    file: 'packages/desktop/src/main/desktopContextPromptRollout.ts',
+    first: 'import {',
+    firstNth: 1,
+    target: 46,
+    header: [
+      '// INV-01 未下发配置视为关闭而不是沿用旧快照：守住位置 空配置分支；改错故障 服务端撤下开关后客户端仍长期开启。',
+      '// INV-02 业务码非零或 success=false 一律判为无效响应：守住位置 信封判断；改错故障 失败响应被当成关闭。',
+      '// INV-03 enabled 必须是布尔值，否则判无效：守住位置 typeof 检查；改错故障 字符串 false 被当成开启。',
+      '// INV-04 config_version 只接受去空白后的非空字符串：守住位置 trim 与长度判断；改错故障 版本号为空串污染缓存键。',
+      '// INV-05 版本号缺失时不得输出该字段：守住位置 条件展开；改错故障 序列化出现多余空键。',
+      '// INV-06 默认值必须是关闭：守住位置 defaultValue；改错故障 拉取失败时默认开启。',
+      '// INV-07 请求超时固定 3 秒：守住位置 DESKTOP_CONTEXT_PROMPT_REQUEST_TIMEOUT_MS；改错故障 启动被慢接口阻塞。',
+      '// INV-08 配置缓存 1 小时：守住位置 缓存时长常量；改错故障 频繁请求配置接口。',
+      '// INV-09 响应体上限 1 MiB：守住位置 最大响应字节常量；改错故障 超大响应耗尽内存。',
+      '// INV-10 超限必须中止请求并拒绝：守住位置 累计字节判断；改错故障 继续读取已超限响应。',
+      '// INV-11 非 2xx 状态直接失败：守住位置 statusCode 区间判断；改错故障 错误页被当成 JSON 解析。',
+      '// INV-12 所有结束路径只结算一次：守住位置 settled 标记；改错故障 resolve 与 reject 同时触发。',
+      '// INV-13 中止信号必须在结算时移除监听：守住位置 removeEventListener；改错故障 长生命周期信号泄漏闭包。',
+      '// INV-14 请求取消走 abort 而不是忽略结果：守住位置 onAbort；改错故障 中止后仍等待网络。',
+      '// INV-15 终点地址必须动态解析：守住位置 resolveEndpointOrigin；改错故障 环境切换后仍打旧域名。',
+      '// INV-16 请求头统一由来源上下文构造：守住位置 buildZCodeSourceHeadersFromContext；改错故障 缺少设备或语言标识。',
+      '// INV-17 解析失败保留原始错误类型：守住位置 instanceof Error 判断；改错故障 错误堆栈丢失。',
+      '// INV-18 本模块不缓存配置，缓存由单功能 rollout 负责：守住位置 模块边界；改错故障 两层缓存导致过期不一致。',
+      '//',
+      '// 模块职责：解析桌面上下文提示开关的远端配置，并产出 Electron 侧的配置拉取函数。',
+      '// 状态所有权：配置快照与缓存由单功能 rollout 持有；本文件只做解析与单次 HTTP 拉取。',
+      '// 阅读顺序：先看解析的失败语义，再看 rollout 装配，最后读请求生命周期与结算。',
+    ],
+    blocks: [
+      {
+        anchor: 'export const DESKTOP_CONTEXT_PROMPT_REQUEST_TIMEOUT_MS = 3_000;',
+        lines: [
+          '超时以单功能 rollout 的入参形式传入。',
+          '缓存有效期按小时计，避免频繁拉取。',
+          '响应体上限是防御性阈值，不是业务限制。',
+          '三个数值不要在调用点重复硬编码。',
+          '调整超时需同步评估启动耗时。',
+        ],
+      },
+      {
+        anchor: 'export function resolveDesktopContextPromptConfig(',
+        lines: [
+          '先排除非对象载荷。',
+          '业务码与 success 共同决定响应是否可信。',
+          '成功但缺少配置段等价于关闭。',
+          'enabled 类型不对时宁可判无效。',
+          '版本号去空白后再决定是否携带。',
+        ],
+      },
+      {
+        anchor: 'export function createDesktopContextPromptRollout(options: {',
+        lines: [
+          '解析函数与默认值在此绑定。',
+          '日志标签用于区分不同单功能开关。',
+          '拉取与缓存参数原样透传。',
+          '默认关闭保证失败安全。',
+          '返回类型由泛型参数固定。',
+        ],
+      },
+      {
+        anchor: 'export function createElectronDesktopContextPromptConfigFetcher(options: {',
+        lines: [
+          'electron 模块延迟导入，避免主进程启动期加载。',
+          '终点地址在每次请求时解析。',
+          '查询参数只包含版本与平台。',
+          '请求头按统一来源上下文生成。',
+          '返回函数符合中止信号约定。',
+        ],
+      },
+      {
+        anchor: 'if (responseBytes > DESKTOP_CONTEXT_PROMPT_MAX_RESPONSE_BYTES) {',
+        lines: [
+          '先累加再判断，保证跨块累计。',
+          '超限立即结算并中止请求。',
+          '中止后不再追加响应正文。',
+          '该分支与状态码分支共用结算标记。',
+        ],
+      },
+    ],
+  },
+  {
+    file: 'packages/desktop/src/main/embeddedBrowserJavaScriptDialog.ts',
+    first: 'import { BrowserWindow, dialog, nativeImage, webContents } from "electron";',
+    target: 46,
+    header: [
+      '// INV-01 只有 browser 前缀的标签会被登记：守住位置 bindGuest 前缀判断；改错故障 普通标签页被拦截原生弹窗。',
+      '// INV-02 登记前先解绑同 id 旧记录：守住位置 unbindGuest 调用；改错故障 重绑后仍持有失效 guest。',
+      '// INV-03 guest 必须存在、未销毁且类型正确：守住位置 guest 校验；改错故障 向已销毁对象注册监听。',
+      '// INV-04 销毁监听必须校验注册身份：守住位置 registration 相等判断；改错故障 新绑定被旧回调误删。',
+      '// INV-05 同一 guest 不允许并发弹窗：守住位置 openDialogGuestIds；改错故障 递归弹窗叠加系统框。',
+      '// INV-06 自动化期间必须交还原生对话框：守住位置 shouldUseNativeDialog；改错故障 自动化脚本被阻塞。',
+      '// INV-07 自动化结束后保留宽限窗口：守住位置 passthroughUntil；改错故障 收尾阶段弹窗被抢走。',
+      '// INV-08 释放函数必须幂等：守住位置 released 标记；改错故障 计数被重复递减。',
+      '// INV-09 计数归零才启动清理定时器：守住位置 activeCount 判断；改错故障 并行自动化互相清除状态。',
+      '// INV-10 清理定时器必须 unref：守住位置 unref 调用；改错故障 进程无法退出。',
+      '// INV-11 清理时校验状态仍是同一对象：守住位置 current 与 state 的相等判断；改错故障 新状态被旧定时器删除。',
+      '// INV-12 来源标签只信任可信协议与源：守住位置 resolveEmbeddedBrowserDialogSource；改错故障 伪造协议冒充可信站点。',
+      '// INV-13 无法解析时使用中性标签：守住位置 兜底返回值；改错故障 暴露内部地址。',
+      '// INV-14 空白地址必须回退到 guest 主文档地址：守住位置 双候选传入；改错故障 弹窗显示空白来源。',
+      '// INV-15 创建失败不得伪造用户选择：守住位置 catch 分支返回未处理；改错故障 用户被当成已确认。',
+      '// INV-16 弹窗期间必须登记并最终移除：守住位置 try 与 finally；改错故障 一次异常后该 guest 永久无法弹窗。',
+      '// INV-17 父窗口必须存在且未销毁：守住位置 窗口查找后的校验；改错故障 无父窗口时创建游离对话框。',
+      '// INV-18 dispose 必须清空全部映射与定时器：守住位置 dispose；改错故障 窗口关闭后仍持有 guest 引用。',
+      '//',
+      '// 模块职责：接管用户浏览器标签页的原生 alert 与 confirm，并保证自动化期间不拦截。',
+      '// 状态所有权：guest 登记、弹窗中集合与每窗口自动化状态都由控制器实例持有。',
+      '// 阅读顺序：先看请求解析与来源标签，再读弹窗主流程，最后看自动化计数与释放。',
+    ],
+    blocks: [
+      {
+        anchor: 'const DEFAULT_AUTOMATION_GRACE_MS = 3_000;',
+        lines: [
+          '宽限期覆盖自动化脚本收尾阶段。',
+          '可通过构造参数覆盖，便于测试压缩时间。',
+          '前缀用于区分用户浏览器标签。',
+          '前缀不匹配的标签不参与弹窗接管。',
+        ],
+      },
+      {
+        anchor: 'export function resolveEmbeddedBrowserDialogSource(',
+        lines: [
+          '按 frame 优先、guest 次之的顺序尝试。',
+          '只接受带 host 的 http 与 https。',
+          'blob 源解析后走同样校验。',
+          '解析异常时继续尝试下一候选。',
+          '全部失败使用中性标签。',
+        ],
+      },
+      {
+        anchor: 'handleDialogRequest(',
+        lines: [
+          '解析、登记与自动化状态任一不满足都不接管。',
+          '自动化期间交还原生处理路径。',
+          '弹窗期间登记 guest 标识防止重入。',
+          '成功路径按类型返回确认值。',
+          '失败路径记录日志后交还原生接口。',
+        ],
+      },
+      {
+        anchor: 'beginAutomation(windowId: number): () => void {',
+        lines: [
+          '取得或创建该窗口的自动化状态。',
+          '开始前先取消待执行的清理定时器。',
+          '进入自动化时把穿透截止时间设为无穷。',
+          '每次开始都递增计数。',
+          '返回的释放函数只生效一次。',
+          '计数归零后启动带宽限的清理定时器。',
+        ],
+      },
+      {
+        anchor: 'dispose(): void {',
+        lines: [
+          '解绑所有 guest 并移除销毁监听。',
+          '清理所有待执行定时器。',
+          '清空自动化与弹窗登记表。',
+          '该方法幂等，可重复调用。',
+        ],
+      },
+    ],
+  },
+  {
+    file: 'packages/desktop/src/main/localTtftSpans.ts',
+    first: 'import { createHash } from "node:crypto";',
+    target: 46,
+    header: [
+      '// INV-01 traceId 由观测标识去掉连字符得到：守住位置 replaceAll；改错故障 跨度无法与观测记录关联。',
+      '// INV-02 根 spanId 取 traceId 前 16 位：守住位置 slice；改错故障 父子关系不成立。',
+      '// INV-03 非根 spanId 由名称与附加属性哈希确定：守住位置 哈希输入；改错故障 重发记录产生重复标识。',
+      '// INV-04 根跨度只在需要上报记录时产出：守住位置 条件展开；改错故障 完成记录被重复上报。',
+      '// INV-05 子跨度的父上下文固定指向根跨度：守住位置 parentSpanContext；改错故障 跨度树断裂。',
+      '// INV-06 所有跨度都以未设置状态上报：守住位置 status 字段；改错故障 分析侧误判失败率。',
+      '// INV-07 值为空的属性必须剔除：守住位置 filter；改错故障 序列化出现空值。',
+      '// INV-08 布尔属性统一转成字符串：守住位置 显式转换；改错故障 属性类型在导出侧不一致。',
+      '// INV-09 首次输出记录才补未归因时长与缺失阶段：守住位置 kind 判断；改错故障 其他类型带上无意义字段。',
+      '// INV-10 缺失阶段只统计完成记录中确实缺席的阶段：守住位置 阶段过滤；改错故障 缺失列表恒为空。',
+      '// INV-11 每个区间映射为一个子跨度并保留时钟来源：守住位置 区间映射；改错故障 无法区分渲染侧与主进程时钟。',
+      '// INV-12 明细跨度名称按阶段前缀规范化：守住位置 三段判断；改错故障 阶段名散落难以聚合。',
+      '// INV-13 未结束明细必须以 started 后缀区分：守住位置 结束时间判断；改错故障 零长度与未完成混淆。',
+      '// INV-14 明细缺结束时间时用开始时间兜底：守住位置 空值合并；改错故障 出现负时长。',
+      '// INV-15 覆盖时长只统计与总区间相交的部分：守住位置 上下界夹取；改错故障 未归因时长被算成负数。',
+      '// INV-16 时钟不可信时只统计渲染侧区间：守住位置 quality 过滤；改错故障 跨时钟区间被重复计入。',
+      '// INV-17 区间合并按起点排序后线性扫描：守住位置 排序与游标；改错故障 重叠区间重复累加。',
+      '// INV-18 毫秒转时间元组必须保留纳秒部分：守住位置 hr 函数取整；改错故障 跨度时长精度丢失。',
+      '//',
+      '// 模块职责：把本地首字耗时记录转换为 OpenTelemetry 跨度，供统一采集链路导出。',
+      '// 状态所有权：无状态；输入记录与资源由调用方提供，本文件只做映射。',
+      '// 阅读顺序：先看属性表与跨度工厂，再读三类跨度产出，最后看覆盖时长合并。',
+    ],
+    blocks: [
+      {
+        anchor: 'export function createLocalTtftSpans(',
+        lines: [
+          '输入是单条观测记录与对应的完成记录。',
+          'traceId 直接复用观测标识，便于跨系统跳转。',
+          '属性表在创建跨度前一次算好并复用。',
+          '上报开关决定是否产出根跨度。',
+          '返回顺序为根跨度、区间跨度、明细跨度。',
+        ],
+      },
+      {
+        anchor: 'const span = (',
+        lines: [
+          '根跨度复用根标识，子跨度按内容哈希。',
+          '哈希输入包含名称与附加属性，确保可区分。',
+          '所有跨度都是内部跨度并标记采样。',
+          '时间统一由 hr 转换。',
+          '资源与仪表作用域由调用方注入。',
+        ],
+      },
+      {
+        anchor: '...(includeRecord',
+        lines: [
+          '只有需要上报记录本身时才产出根跨度。',
+          '根名称按记录类型区分。',
+          '首次输出记录才标记为根。',
+          '检查点缺失时回退到类型名。',
+        ],
+      },
+      {
+        anchor: '...record.intervals.map((interval) =>',
+        lines: [
+          '每个区间都是根跨度下的子跨度。',
+          '名称带统一前缀便于聚合。',
+          '时钟来源写入属性以支持可信度分析。',
+          '区间跨度不参与根标记。',
+        ],
+      },
+      {
+        anchor: 'function coveredMs(record: LocalTtftRecord): number {',
+        lines: [
+          '区间来源包含总区间与已结束的明细。',
+          '时钟不可信时丢弃非渲染侧区间。',
+          '所有区间先夹取到总区间内。',
+          '结束早于开始的区间被过滤。',
+          '排序后按游标累加，避免重叠重复计数。',
+          '返回值用于计算未归因时长。',
+        ],
+      },
+    ],
+  },
+  {
+    file: 'packages/shared/src/database-startup.ts',
+    first: 'import { z } from "zod";',
+    target: 46,
+    header: [
+      '// INV-01 错误码枚举是跨进程契约，只能追加不能改名：守住位置 错误码 schema；改错故障 旧宿主无法识别新错误。',
+      '// INV-02 分类优先使用结构化原因而不是文案：守住位置 classifyDatabaseStartupError 的注释与实现；改错故障 本地化文案变化导致误判。',
+      '// INV-03 主错误码取低 8 位：守住位置 位掩码；改错故障 扩展错误码被当成未知。',
+      '// INV-04 满盘判定同时接受空间不足与配额超限：守住位置 返回分支；改错故障 配额超限被误判为普通 IO 错误。',
+      '// INV-05 权限类错误全并到同一错误码：守住位置 第二分支；改错故障 同类失败出现多种错误码。',
+      '// INV-06 遍历原因链必须带环检测与深度上限：守住位置 已见集合与计数上限；改错故障 自引用错误导致死循环。',
+      '// INV-07 分类兜底为 SQL 失败而不是未知码：守住位置 兜底初值；改错故障 前端无对应文案。',
+      '// INV-08 明细只传错误码与迁移标识：守住位置 明细函数；改错故障 SQL 或凭据泄漏到渲染进程。',
+      '// INV-09 系统错误码必须匹配大写枚举形状：守住位置 正则；改错故障 任意字符串被当作系统码。',
+      '// INV-10 迁移标识只允许有限字符集：守住位置 两处正则；改错故障 路径注入风险。',
+      '// INV-11 明细 schema 与函数输出字段保持一致：守住位置 明细 schema；改错故障 校验与生产脱节。',
+      '// INV-12 磁盘摘要必须是严格对象且数值非负：守住位置 严格模式与非负约束；改错故障 负数污染容量展示。',
+      '// INV-13 已提交数不得超过已执行数：守住位置 迁移事实的细化校验；改错故障 统计页出现负的待提交量。',
+      '// INV-14 无迁移时执行数必须为零：守住位置 同一细化校验；改错故障 空迁移被记成执行过。',
+      '// INV-15 启动状态版本号固定为 1：守住位置 字面量校验；改错故障 新旧版本状态互串。',
+      '// INV-16 磁盘摘要最多 8 条：守住位置 数组上限；改错故障 异常输入撑爆状态体积。',
+      '// INV-17 重试条件必须排除已装配服务后的失败：守住位置 失败阶段判断；改错故障 重试产生重复启动副作用。',
+      '// INV-18 损坏与失联类错误不可重试：守住位置 错误码排除列表；改错故障 无效重试掩盖真实故障。',
+      '//',
+      '// 模块职责：定义数据库启动状态的错误码、状态 schema 与可重试判定。',
+      '// 状态所有权：全部为纯 schema 与纯函数；启动状态快照由宿主进程持有。',
+      '// 阅读顺序：先看错误分类与安全明细，再读各层 schema，最后看重试条件。',
+    ],
+    blocks: [
+      {
+        anchor: 'export function classifyDatabaseStartupError(error: unknown): DatabaseStartupErrorCode {',
+        lines: [
+          '从最外层错误开始逐层读取原因。',
+          '每层先看数据库主码，再看系统错误码。',
+          '可恢复映射写入兜底，强特征直接返回。',
+          '枚举型原因只作为兜底证据。',
+          '遍历有环检测与次数上限。',
+          '最终返回兜底码而不是抛出。',
+        ],
+      },
+      {
+        anchor: 'export function databaseStartupErrorDetails(error: unknown): {',
+        lines: [
+          '仅提取三个可安全跨进程的字段。',
+          '数据库主码要求安全整数。',
+          '系统错误码限制为大写枚举形状。',
+          '迁移标识限制字符集与长度。',
+          '其余字段一律不进入结果。',
+        ],
+      },
+      {
+        anchor: 'export const databaseStartupStateSchema = z',
+        lines: [
+          '版本号使用字面量以便未来迁移。',
+          '启动阶段与数据库阶段分开表达。',
+          '迁移事实同时保留当前值与基线。',
+          '磁盘摘要限制条数。',
+          '错误明细字段直接展开复用同一 schema。',
+        ],
+      },
+      {
+        anchor: 'export const databaseStartupControlSchema = z.discriminatedUnion("action", [',
+        lines: [
+          '快照与退出不接受额外字段。',
+          '重试必须携带新的尝试标识。',
+          '判别字段固定为 action。',
+          '未知动作直接校验失败。',
+        ],
+      },
+      {
+        anchor: 'export function canRetryDatabaseStartup(',
+        lines: [
+          '只有失败阶段才可重试。',
+          '已进入服务装配阶段后必须走退出重开。',
+          '损坏、校验失败与传输关闭不可重试。',
+          '其余错误码允许手动重试。',
+        ],
+      },
+    ],
+  },
+];
+
+let index = 0;
+for (const spec of specs) {
+  const firstItem = { anchor: spec.first, raw: spec.header };
+  if (spec.firstNth) firstItem.nth = spec.firstNth;
+  const items = [firstItem];
+  for (const block of spec.blocks) {
+    const item = { anchor: block.anchor, lines: block.lines };
+    if (block.nth) item.nth = block.nth;
+    items.push(item);
+  }
+  const total = spec.header.length + spec.blocks.reduce((sum, b) => sum + b.lines.length, 0);
+  const bodyTotal = spec.blocks.reduce((sum, b) => sum + b.lines.length, 0);
+  console.log(`${spec.file} header=${spec.header.length} body=${bodyTotal} total=${total} expect=${spec.target} ${total === spec.target ? 'OK' : 'MISMATCH'}`);
+  fs.writeFileSync(
+    `ZC-deep-b109-spec-${index}.json`,
+    JSON.stringify({ files: [{ file: spec.file, items }] }, null, 2),
+    'utf8',
+  );
+  index += 1;
+}

@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/ui/src/lib/conversationShareError.ts	256	a8784b7e	// `diagnostics` 逐键过滤：白名单之外的一律不进入结果，减少跨端日志差异面。
+packages/ui/src/lib/conversationShareError.ts	444	a8784b7e	// `formatConversationShareArtifactType` 只负责展示，不校验类型是否合法。
+packages/ui/src/lib/nodeReplToolDisplay.ts	305	a8784b7e	// [权衡] `removeLeadingBlankLines` 只删开头空白行：缩进本身是代码语义。
+packages/ui/src/lib/nodeReplToolDisplay.ts	479	a8784b7e	// [并发] `buildNodeReplDisplayModel` 无副作用且不读时间，渲染期可反复重入。
+packages/ui/src/lib/planModeTool.ts	69	a8784b7e	// `PLANISH_TOOL_PATTERNS` 只产出候选，最终由结构化判定和步骤数复核把关。
+packages/ui/src/lib/planModeTool.ts	534	a8784b7e	// `getPlanToolPayload` 宁多解析：误判只多一次空解析，漏判则整块面板不显示。
+packages/ui/src/lib/promptInputTriggers.ts	133	a8784b7e	// [契约] 空关键词列表用 `Number.POSITIVE_INFINITY` 兜底，缺席时不参与最小值竞争。
+packages/ui/src/lib/promptInputTriggers.ts	297	a8784b7e	// [契约] `getBestPromptInputSuggestionIndex` 只接受严格更小分数，同分保留先出现项。
+packages/ui/src/lib/remoteWorkspaceHistory.ts	56	a8784b7e	// `removeRemoteWorkspaceSessionEntries` 保持纯计算：调用方可预览、撤销或与其他写入合并。
+packages/ui/src/lib/remoteWorkspaceHistory.ts	926	a8784b7e	// `mergeIdentityAliases` 是三张别名表的统一裁决点，调用方不得二次覆盖。
+packages/ui/src/lib/taskModelRecovery.ts	33	a8784b7e	// `parseProviderQualifiedModel` 无副作用且不读环境：同一入参在渲染期得到同一结果。
+packages/ui/src/lib/taskModelRecovery.ts	65	a8784b7e	// `resolveGlmRecoveredTaskModelValue` 只关心值的形态，选项缺失由上层合成逻辑补齐。
+packages/ui/src/lib/webElementContext.ts	131	a8784b7e	// `isWebElementContextRemoveFromChatEvent` 与添加判型刻意对称：便于对照排查「加有反应、删没反应」。
+packages/ui/src/lib/webElementContext.ts	167	a8784b7e	// [契约] `truncateMarkdownValue` 把空白值归一为空串，调用方按空串决定整行省略。
+packages/ui/src/lib/zcodeSessionProjection.ts	70	a8784b7e	//   `currentValue` 为空时工具栏无档位选中：用户会误以为模型不支持思考档，实际只是投影缺省。
+packages/ui/src/lib/zcodeSessionProjection.ts	671	a8784b7e	// `summarizePersistedMessageForTimelineDiag` 的排查目标就是压缩，其余类型没有诊断价值。
+packages/ui/src/lib/zcodeUiError.ts	27	a8784b7e	// `ZCodeUiError` 只做错误形状收敛，输出可直接交给错误分类与渲染层。
+packages/ui/src/lib/zcodeUiError.ts	30	a8784b7e	// `ZCodeUiError` 不弹提示也不写日志：副作用一律留在调用方。
+packages/ui/src/ModelTrajectoryPaneParts.tsx	503	a8784b7e	// [契约] `startedAt` 永远存在，直接入列作为元数据末项且不做条件判断。
+packages/ui/src/ModelTrajectoryPaneParts.tsx	505	a8784b7e	// [权衡] `formatTrajectoryClockTime` 放最后：宽度变化时右侧最不易被压缩。

@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+const s = JSON.parse(fs.readFileSync('d:/code/_annot_baseline/_d42_spec.json', 'utf8'));
+const out = s.filter((e) => /parser\.rs|build_requires\.rs|installer\.rs/.test(e.file));
+const p = out.find((e) => e.file.includes('parser'));
+const pi = p.items.find((i) => i.line === 69);
+delete pi.anchor;
+const q = out.find((e) => e.file.includes('installer'));
+const qi = q.items.find((i) => i.line === 46);
+qi.line = 45;
+fs.writeFileSync('d:/code/_annot_baseline/_d42_spec3.json', JSON.stringify(out, null, 2));
+console.log('written', out.map((e) => e.file));

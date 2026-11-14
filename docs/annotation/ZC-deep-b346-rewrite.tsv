@@ -1,0 +1,29 @@
+file	baseLine	blame	content
+packages/ui/src/WorkspaceFileTree.tsx	74	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ResizeObserver 监听 containerRef 宽度决定 isNarrow，仅在挂载时绑定一次。
+packages/ui/src/WorkspaceFileTree.tsx	102	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 桌面宽屏直接读 workspace store 的偏好，缺省为展开。
+packages/ui/src/WorkspaceFileTree.tsx	115	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// navigationOnly 用 Panel 的折叠与展开代替样式隐藏，避免外层仍占位。
+packages/ui/src/WorkspaceFileTree.tsx	116	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// useLayoutEffect 在绘制前同步布局，避免收起时闪一下再消失。
+packages/ui/src/WorkspaceFileTree.tsx	117	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// directoryPanelRef 与预览面板的显隐依赖同一组 navigationOnly，保证宽度分配一致。
+packages/ui/src/WorkspaceFileTree.tsx	130	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 导航前从 workspace store 补齐目标工作区，防止跨工作区打开时丢上下文。
+packages/ui/src/WorkspaceFileTree.tsx	132	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 自动收起只改临时覆盖的 state，不写回用户持久偏好。
+packages/ui/src/components/ai-elements/image-preview-dialog.tsx	9	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	//   - 不转码、不生成缩略图、不做断点续传，blob 会原样交给 createObjectURL。
+packages/ui/src/components/ai-elements/image-preview-dialog.tsx	117	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 不要改成手写白名单，imageExtensionByMediaType 新增类型时两边必然漂移。
+packages/ui/src/components/ai-elements/image-preview-dialog.tsx	143	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错后果：maxX/maxY 少了 0 下限会导致位移越界，缩小后图片停在角落，用户以为缩放按钮失灵。
+packages/ui/src/components/ai-elements/image-preview-dialog.tsx	288	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错后果：空 src 的 anchor 会导航，点击下载触发页面跳转，预览上下文全部丢失。
+packages/ui/src/components/ai-elements/image-preview-dialog.tsx	324	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错后果：imageDownloadFilename 与 blob.type 不符，系统预览器按错误解码器打开。
+packages/ui/src/components/ai-elements/image-preview-dialog.tsx	391	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错后果：activeItemIsVideo 未同帧更新，视频项会短暂显示缩放条与下载按钮。
+packages/ui/src/components/ai-elements/image-preview-dialog.tsx	547	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错后果：pointer 未先 delete，双指变单指后图片瞬移或拖拽方向反向。
+packages/ui/src/components/ai-elements/inline-citation.tsx	3	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// InlineCitation 组件族：角标展示首条来源域名，悬浮卡片内用 Carousel 浏览多来源详情。
+packages/ui/src/components/ai-elements/inline-citation.tsx	77	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// openDelay 缺省 0 是引用浏览的默认手感，调用方需要缓冲时应显式覆盖。
+packages/ui/src/components/ai-elements/inline-citation.tsx	80	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// openDelay 与 open 同属行为契约，改动需同步调用方的悬浮期望。
+packages/ui/src/components/ai-elements/inline-citation.tsx	147	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// InlineCitationCarousel 宽度由外层容器决定，组件自身不写死像素宽度。
+packages/ui/src/components/ai-elements/inline-citation.tsx	288	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// InlineCitationCarouselNext 与上一页共享对称实现，scrollNext 方向向后。
+packages/ui/src/components/ai-elements/inline-citation.tsx	327	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// InlineCitationSource 的所有片段均为纯展示，不构造可点击链接也不触发导航。
+packages/ui/src/components/ai-elements/inline-citation.tsx	356	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// InlineCitationQuote 的 children 原样透传，不插入编者注也不自动补齐来源。
+packages/ui/src/components/ui/pptx-preview-viewer.tsx	421	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] Thumbnail 是纯展示 + 选择入口，除 onSelect 外不承载交互。
+packages/ui/src/components/ui/pptx-preview-viewer.tsx	433	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [资源] buttonRef 同时是 ResizeObserver 观测目标与 scrollIntoView 定位目标。
+packages/ui/src/components/ui/pptx-preview-viewer.tsx	464	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// button 未挂载分支不需要 cleanup，因为没有创建任何观察器。
+packages/ui/src/components/ui/pptx-preview-viewer.tsx	645	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 随后会把 pageIndex、scale、selection 与 editDraft 逐项复位。
+packages/ui/src/components/ui/pptx-preview-viewer.tsx	744	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 只豁免 INPUT/TEXTAREA 与 contentEditable，按钮等仍允许翻页。
+packages/ui/src/components/ui/pptx-preview-viewer.tsx	776	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] fitScale 先按视口适配再乘 zoom，两步不可合并。
+packages/ui/src/components/ui/pptx-preview-viewer.tsx	809	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// referenceNavigation 有指令时先清 selection，引用跳转不应恢复旧元素选择。

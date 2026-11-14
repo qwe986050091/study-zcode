@@ -1,0 +1,4 @@
+batch	round	hits	changed_lines	seconds	note
+b354	1	2	2	n/a	judge 首跑 hits=2（GitBranchSwitcher.tsx:224 / :283，均 L 无信息列举）
+b354	2	0	1	n/a	复判前改 :283 一处（「因此」不在 PREDICATE 表，改成「由 open 决定挂载」）
+b354	-	total	3	n/a	record_runs=3；两次回改的秒数未单列，全部落在可控段 198s 内

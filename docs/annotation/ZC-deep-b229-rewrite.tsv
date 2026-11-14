@@ -1,0 +1,51 @@
+file	baseLine	blame	content	judge
+packages/provider/src/registry.ts	69	a8784b7e479d3a	// 视图与索引分开保存。	改写（weak 行）
+packages/provider/src/registry.ts	70	a8784b7e479d3a	// 索引用于按标识直达。	改写（weak 行）
+packages/provider/src/registry.ts	71	a8784b7e479d3a	// 监听集合只存回调。	改写（weak 行）
+packages/provider/src/registry.ts	72	a8784b7e479d3a	// 构造时即完成首次建索引。	改写（weak 行）
+packages/provider/src/registry.ts	73	a8784b7e479d3a	// 版本号只随替换递增。	改写（weak 行）
+packages/provider/src/registry.ts	74	a8784b7e479d3a	// 冻结保证外部只读。	改写（weak 行）
+packages/provider/src/registry.ts	102	a8784b7e479d3a	// 先确认供应商存在。	改写（weak 行）
+packages/provider/src/registry.ts	103	a8784b7e479d3a	// 再按标识取模型。	改写（weak 行）
+packages/provider/src/registry.ts	104	a8784b7e479d3a	// 两级缺失给不同编码。	改写（weak 行）
+packages/provider/src/registry.ts	105	a8784b7e479d3a	// 命中后交给选项校验。	改写（weak 行）
+packages/provider/src/registry.ts	106	a8784b7e479d3a	// 所有失败都返回判别对象。	改写（weak 行）
+packages/provider/src/registry.ts	107	a8784b7e479d3a	// 不抛异常避免打断调用方。	改写（weak 行）
+packages/provider/src/registry.ts	128	a8784b7e479d3a	// 新视图版本号加一。	改写（weak 行）
+packages/provider/src/registry.ts	129	a8784b7e479d3a	// 索引随视图一起重建。	改写（weak 行）
+packages/provider/src/registry.ts	130	a8784b7e479d3a	// 事件只带版本与原因。	改写（weak 行）
+packages/provider/src/registry.ts	131	a8784b7e479d3a	// 广播在索引就绪之后。	改写（weak 行）
+packages/provider/src/registry.ts	132	a8784b7e479d3a	// 监听异常不影响替换。	改写（weak 行）
+packages/provider/src/registry.ts	133	a8784b7e479d3a	// 旧视图仍对旧持有者有效。	改写（weak 行）
+packages/provider/src/registry.ts	169	a8784b7e479d3a	// 只读取发布给界面的选项。	改写（weak 行）
+packages/provider/src/registry.ts	170	a8784b7e479d3a	// 缺少思考档视为失败。	改写（weak 行）
+packages/provider/src/registry.ts	171	a8784b7e479d3a	// 档位必须在支持集合内。	改写（weak 行）
+packages/provider/src/registry.ts	172	a8784b7e479d3a	// 错误带供应商与模型标识。	改写（weak 行）
+packages/provider/src/registry.ts	173	a8784b7e479d3a	// 支持集合冻结后返回。	改写（weak 行）
+packages/provider/src/registry.ts	174	a8784b7e479d3a	// 通过时返回单一成功形状。	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	75	a8784b7e479d3a	// 外层只持有一份草稿与一份初始值	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	76	a8784b7e479d3a	// 初始值在挂载时定下，之后入参变化不再重算	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	77	a8784b7e479d3a	// [边界] 用效果追踪入参会把用户正在改的值拽回起点	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	78	a8784b7e479d3a	// 并发默认值来自可调设置，作为空值与文案的基准	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	79	a8784b7e479d3a	// 每次改动先落草稿，再把内容推给父组件	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	80	a8784b7e479d3a	// 改动集合一次算好，分别喂给两行	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	135	a8784b7e479d3a	// 可调性与禁用状态决定这一行是否提供控件	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	136	a8784b7e479d3a	// 可选条件同时要求可调与宿主提供模型目录	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	137	a8784b7e479d3a	// 不可用时给出警告徽标，但仍允许用户换一个	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	138	a8784b7e479d3a	// [失败路径] 不可用时直接隐藏控件会让用户无法纠正	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	139	a8784b7e479d3a	// 选中会话模型时徽标说明当前沿用会话	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	140	a8784b7e479d3a	// 重置尾巴只在值相对初始值改动后出现	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	174	a8784b7e479d3a	// 可选项数组必须稳定引用，否则 memo 组件每帧重渲染	语义重复（文本不同，信息为 :173 子集）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	175	a8784b7e479d3a	// [失败路径] 内联数组会让下拉在每次父级渲染时重建	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	176	a8784b7e479d3a	// 数组内容只有会话模型一项，其余分组由清单给出	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	177	a8784b7e479d3a	// 依赖只取该项本身，清单更新时自然换引用	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	178	a8784b7e479d3a	// 这里不做去重，会话模型不在普通分组的候选里	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	179	a8784b7e479d3a	// 不可选时仍渲染这一行的容器，保持两行布局稳定	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	199	a8784b7e479d3a	// 会话模型或无法归一为具体模型时，名字后跟会话徽标	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	200	a8784b7e479d3a	// 名字读不出时不再叠同词徽标，避免重复	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	201	a8784b7e479d3a	// 具体模型走子代理模型描述，得到正文与提示	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	202	a8784b7e479d3a	// 标签与提示都按当前语言格式化	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	203	a8784b7e479d3a	// 具体模型的描述依赖厂商名，用于拼接提示里的品牌	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	341	a8784b7e479d3a	// 确认窗的模型不受锁定规则约束	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	342	a8784b7e479d3a	// 该常量只在渲染下拉时使用	改写（weak 行）
+packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	343	a8784b7e479d3a	// 常量函数在模块加载时创建一次，整个模块共用	改写（weak 行）

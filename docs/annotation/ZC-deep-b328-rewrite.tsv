@@ -1,0 +1,41 @@
+file	baseLine	blame	content
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetOpportunity.tsx	42	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// remainingSeconds 由 useState 的惰性初始化器调用 getRemainingSeconds 得到。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetOpportunity.tsx	43	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// dialogOpen 与 uncontrolledDialogOpen 共用 resolvedDialogOpen 一个开关。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetOpportunity.tsx	44	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// hasMultipleOpportunities 与单机会分支共用 effectiveVisible 可见性。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetOpportunity.tsx	45	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resolvedDialogOpen 为真时 effectiveVisible 保持徽标在场。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetOpportunity.tsx	83	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// openDialogLabel 的文案随 count 变化。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetOpportunity.tsx	84	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// countdownLabel 由 formatCodingPlanQuotaResetCountdown 单独格式化。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetOpportunity.tsx	85	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// label 与 aria-label 同源，避免视觉与读屏不一致。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetOpportunity.tsx	120	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 只有 dialog 存在时才渲染可点入口。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetOpportunity.tsx	121	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onClick 先调 event.preventDefault 与 stopPropagation 阻断默认行为与冒泡。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetOpportunity.tsx	122	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 两处开关都复用 setDialogOpen 这一个设置函数。
+packages/ui/src/components/ui/pptx-selection-action-bar.tsx	54	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// PptxSelectionActionBar 不持有选择状态，选中集合由调用方经 children 传入。
+packages/ui/src/components/ui/pptx-selection-action-bar.tsx	55	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// comment 草稿只在 editing 为真期间存在。
+packages/ui/src/components/ui/pptx-selection-action-bar.tsx	56	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// compositionActiveRef 用 useRef 保存组合输入标记。
+packages/ui/src/components/ui/pptx-selection-action-bar.tsx	75	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// editing 转假时 setComment("") 清空草稿。
+packages/ui/src/components/ui/pptx-selection-action-bar.tsx	76	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 同一 effect 里把 compositionActiveRef.current 复位为 false。
+packages/ui/src/components/ui/pptx-selection-action-bar.tsx	77	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// useEffect 的依赖数组只有 editing 一项。
+packages/ui/src/components/ui/pptx-selection-action-bar.tsx	85	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// Popover 的 modal 固定为 false，避免抢焦点。
+packages/ui/src/components/ui/pptx-selection-action-bar.tsx	86	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 锚点在幻灯片内，PopoverContent 经 Portal 渲染因而独立于幻灯片缩放。
+packages/ui/src/components/ui/pptx-selection-action-bar.tsx	87	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// role="toolbar" 与 aria-label 把工具栏语义交给读屏软件。
+packages/ui/src/components/ui/pptx-selection-action-bar.tsx	111	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 非编辑态走 onExitSelection 回调退出选择。
+packages/ui/src/conversation-workspace-target/usePluginCreator.ts	37	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// create 与 busyScope 忙碌态一起从 usePluginCreator 返回。
+packages/ui/src/conversation-workspace-target/usePluginCreator.ts	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isWebRemoteControl 为真时 group 与 paneLayout 都取缺省值。
+packages/ui/src/conversation-workspace-target/usePluginCreator.ts	39	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// scope 的可用性由 target 与 onCreateTask 共同决定。
+packages/ui/src/conversation-workspace-target/usePluginCreator.ts	53	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 目标解析与创建时都调用 resolveWorkbenchNewTaskTarget。
+packages/ui/src/conversation-workspace-target/usePluginCreator.ts	54	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 远端模式把 paneLayout 回退为 INITIAL_PANE_LAYOUT。
+packages/ui/src/conversation-workspace-target/usePluginCreator.ts	55	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// targetKey 优先取 workspaceIdentity，缺失才回落到 workspacePath。
+packages/ui/src/conversation-workspace-target/usePluginCreator.ts	80	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// pending.current 等于 scope 时直接忽略重复触发。
+packages/ui/src/conversation-workspace-target/usePluginCreator.ts	81	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resolution.rpcReady 为假时用 toast 给出提示。
+packages/ui/src/conversation-workspace-target/usePluginCreator.ts	82	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// loadPluginCreatorPrefill 返回空时不创建任务。
+packages/ui/src/conversation-workspace-target/usePluginCreator.ts	83	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 结束后按 scope 作用域清理 pending 与 busyScope。
+packages/ui/src/git-action-menu/currentSessionFileScope.ts	26	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// normalizeCommitScopePath 先 trim 首尾空白。
+packages/ui/src/git-action-menu/currentSessionFileScope.ts	27	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 反斜杠经 replace 统一为正斜杠。
+packages/ui/src/git-action-menu/currentSessionFileScope.ts	28	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// replace 用 /^\.?\// 去掉前导的点斜杠。
+packages/ui/src/git-action-menu/currentSessionFileScope.ts	29	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 第四步 replace 去掉尾部连续斜杠。
+packages/ui/src/git-action-menu/currentSessionFileScope.ts	47	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// normalizedPath 或 normalizedBasePath 为空时返回 null。
+packages/ui/src/git-action-menu/currentSessionFileScope.ts	48	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 两者相等时返回空串而不是 null。
+packages/ui/src/git-action-menu/currentSessionFileScope.ts	49	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 原始前缀不匹配时改用 toLowerCase 再比一次。
+packages/ui/src/git-action-menu/currentSessionFileScope.ts	137	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先由 buildCurrentSessionFileScope 构造当前会话范围。
+packages/ui/src/git-action-menu/currentSessionFileScope.ts	138	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// scope 为空时把全部文件放行。
+packages/ui/src/git-action-menu/currentSessionFileScope.ts	139	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 逐文件交给 isPreviewFileInScope 按三种路径判定命中。

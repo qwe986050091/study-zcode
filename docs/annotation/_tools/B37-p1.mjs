@@ -1,0 +1,178 @@
+// B37 P1：rdmaPostRecv / rdmaMemoryAlloc / rdmaMemoryFree / rdmaDestroyIoBuf /
+// rdmaSetupIoBuf / rdmaCreateResource / rdmaReleaseResource / rdmaAdjustSendbuf。
+import fs from 'node:fs';
+
+const SRC = 'd:/code/opensource/valkey/src/rdma.c';
+const DIR = 'd:/code/_annot_baseline/VK-B37';
+const PX = 'p1';
+
+const E = [
+  [300, '/* sge 描述一个内存段：addr/length/lkey 三项，RECV 只用一个段。 */'],
+  [301, '/* 固定 32 字节，必须与对端 SEND 的长度一致，否则 CQ 报 length 不符。 */'],
+  [302, '/* recv_wr 是本次 WR，bad_wr 由 ibv_post_recv 回填首个失败项。 */'],
+  [303, '/* ibv_post_recv 返回值，EAGAIN 单独放行。 */'],
+  [305, '/* fork 子进程不能碰 MR，先拒绝再构造 WR。 */'],
+  [306, '/* 返回 C_ERR 让 rdmaSetupIoBuf 走 destroy_iobuf 回收。 */'],
+  [309, '/* cmd 必须指向 cmd_buf 的 RECV 区，地址直接交给硬件。 */'],
+  [310, '/* length 与 sge.length 同为 32，硬件按此写入。 */'],
+  [311, '/* 用 cmd_mr->lkey（本端键），远端 rkey 与此无关。 */'],
+  [313, '/* wr_id 存 cmd 指针，CQ 完成时靠它反查槽位。 */'],
+  [314, '/* 单段 sg_list 指向上面的 sge。 */'],
+  [315, '/* num_sge=1，硬件只写 32 字节到该 cmd。 */'],
+  [316, '/* 单 WR 链，next 必须显式置 NULL。 */'],
+  [318, '/* 投递到 cm_id->qp，失败时 bad_wr 指向被拒的 WR。 */'],
+  [319, '/* EAGAIN 是接收队列瞬满，硬件稍后会接受，不算错误。 */'],
+  [320, '/* 其他错误码说明 QP 已坏，打日志后交给上层断链。 */'],
+  [321, '/* 返回 C_ERR，调用方不再继续投递后续槽位。 */'],
+  [324, '/* 投递成功返回 C_OK，槽位从此由硬件持有。 */'],
+  [349, '/* 向上对齐到 page_size：(size + page-1) & ~(page-1)。 */'],
+  [350, '/* ptr 保存 mmap 返回的原始基址，返回时再加一页。 */'],
+  [352, '/* 多出前后各一页守护页，munmap 时长度必须与此一致。 */'],
+  [353, '/* MAP_ANONYMOUS 单独 VMA，便于对首尾页做 mprotect。 */'],
+  [354, '/* MAP_FAILED 说明地址空间不足，继续用会写坏空指针。 */'],
+  [355, '/* 分配失败直接 panic，RDMA 缓冲缺一块都不安全。 */'],
+  [358, '/* DONTDUMP 让 coredump 跳过这块 VMA，避免 dump 巨大 RX 缓冲。 */'],
+  [362, '/* 跳过顶部守护页，返回给调用方的指针必然页对齐。 */'],
+  [369, '/* real_ptr 是 mmap 原始基址，由 ptr 回退一页得到。 */'],
+  [370, '/* real_size 与 aligned_size 必须与分配时同式重算，不能用 size。 */'],
+  [372, '/* ptr 为 NULL 直接返回，允许在失败路径上重复调用。 */'],
+  [373, '/* 无需释放，保持幂等。 */'],
+  [376, '/* 指针被改写会让 munmap 长度错位，这里 panic 是唯一防线。 */'],
+  [377, '/* 断言失败即 serverPanic，避免误删相邻 VMA。 */'],
+  [380, '/* 与 rdmaMemoryAlloc 相同公式，保证长度逐字节一致。 */'],
+  [381, '/* real_size 含两页守护页。 */'],
+  [382, '/* 回退一页就是 mmap 返回的原始基址。 */'],
+  [384, '/* munmap 失败说明映射已损坏，继续运行会泄漏或踩内存。 */'],
+  [385, '/* 直接 panic，不做「尽力释放」的假恢复。 */'],
+  [395, '/* rx.mr 非空才 dereg，失败路径可能从未注册过。 */'],
+  [396, '/* dereg 会等待该 MR 上的在途 WR 完成。 */'],
+  [397, '/* 置 NULL 让本函数可重复进入。 */'],
+  [400, '/* 先 dereg 再 munmap，顺序反了内核会 EFAULT 且 MR 泄漏。 */'],
+  [401, '/* addr 置空，避免下次误用悬空指针。 */'],
+  [403, '/* tx.mr 单独判空：TX 缓冲可能尚未注册。 */'],
+  [404, '/* 撤销 TX 的翻译表项。 */'],
+  [405, '/* 置 NULL 保持幂等。 */'],
+  [408, '/* 释放 TX 的 VMA，长度用 tx.length。 */'],
+  [409, '/* 置空 tx.addr，send 路径靠 tx.mr 判空跳过。 */'],
+  [411, '/* cmd_mr 覆盖整块 cmd_buf。 */'],
+  [412, '/* 撤销 cmd 区翻译表项后收发都不能再用。 */'],
+  [413, '/* 置 NULL 防止二次 dereg。 */'],
+  [416, '/* 长度按分配时的 2*MAX_WQE*32 计算，少算会留下映射。 */'],
+  [417, '/* 置空 cmd_buf，与 cmd_mr 同步失效。 */'],
+  [429, '/* 只给 LOCAL_WRITE：RECV 只需本端可写，多给权限就是扩大攻击面。 */'],
+  [430, '/* 整块 cmd_buf 长度，前后两半共用同一个 MR。 */'],
+  [431, '/* cmd 在循环里指向当前槽位。 */'],
+  [432, '/* i 同时用于 RECV 区与 SEND 区两段循环。 */'],
+  [436, '/* 先注册再投递，未注册就 post_recv 会以无效 lkey 失败。 */'],
+  [437, '/* reg_mr 失败通常是 pin 页超限或 pd 已释放。 */'],
+  [438, '/* errno 来自 ibv_reg_mr，打印它才能区分 ENOMEM 与 EINVAL。 */'],
+  [439, '/* 统一走 destroy_iobuf，已注册的部分会被判空跳过。 */'],
+  [442, '/* 前一半槽位全部投递成 RECV，初始就有 1024 个接收 WR。 */'],
+  [443, '/* 逐槽位投递，cmd 必须落在 [0, MAX_WQE) 区间。 */'],
+  [445, '/* 任一槽位投递失败就整体失败，半投递会让 RX 队列深度不足。 */'],
+  [446, '/* 跳到回收，已投递的 WR 随 QP 销毁一起失效。 */'],
+  [450, '/* 后一半是 SEND 区，只需标记空闲，不注册也不投递。 */'],
+  [451, '/* 索引从 MAX_WQE 起，与 RECV 区物理隔离。 */'],
+  [452, '/* INVALID 是空闲哨兵，rdmaSendCommand 靠它挑槽位。 */'],
+  [457, '/* RX 长度取配置值，默认 1MB，范围由 parseOptions 校验。 */'],
+  [458, '/* 页对齐 + 守护页，对端写越界会立刻 SIGSEGV。 */'],
+  [459, '/* 记录长度，对端按此注册 TX，双方必须一致。 */'],
+  [460, '/* REMOTE_READ|REMOTE_WRITE 让对端能直接写这块 RX。 */'],
+  [461, '/* 注册失败说明权限位与驱动能力不匹配。 */'],
+  [462, '/* errno 区分 EACCES 与 ENOMEM。 */'],
+  [463, '/* 统一回收，cmd MR 也会被撤销。 */'],
+  [466, '/* 两块缓冲都就绪，返回成功。 */'],
+  [468, '/* 失败统一回收：三个 MR 与 VMA 都判空，可重复进入。 */'],
+  [469, '/* rdmaDestroyIoBuf 幂等，部分初始化也安全。 */'],
+  [470, '/* 返回 C_ERR 让上层决定是否 reject 连接。 */'],
+  [484, '/* ret 统一表示 C_OK/C_ERR，成功路径不中途返回。 */'],
+  [485, '/* device_attr 只用到 max_sge，用于 QP 的 send sge 上限。 */'],
+  [486, '/* init_attr 是 QP 创建参数，下面逐字段填。 */'],
+  [487, '/* 局部变量先建后挂 ctx，失败时不污染 ctx。 */'],
+  [488, '/* cq 同理，创建成功才写回 ctx->cq。 */'],
+  [489, '/* pd 在 MR 注册前必须先有，故最先分配。 */'],
+  [490, '/* 配置里的完成向量，负数在下面转成随机值。 */'],
+  [492, '/* 查设备能力，失败说明 verbs 句柄已失效。 */'],
+  [493, '/* 非 0 即错误，直接返回不创建任何资源。 */'],
+  [494, '/* 打印 ret 而非 errno，ibv_query_device 用返回值报错。 */'],
+  [495, '/* 无资源可回收，直接失败。 */'],
+  [498, '/* PD 是所有 MR 的父对象，必须先于 MR 创建。 */'],
+  [499, '/* 分配失败通常是设备资源耗尽。 */'],
+  [500, '/* errno 给出 ENOMEM 或 EMFILE。 */'],
+  [501, '/* 直接返回，ctx->pd 仍为 NULL。 */'],
+  [504, '/* 挂到 ctx 后，失败路径由上层 release 统一回收。 */'],
+  [506, '/* 完成通道绑定 cm_id->verbs，跨设备复用会投递到错误 fd。 */'],
+  [507, '/* 创建失败说明该设备不支持 comp channel。 */'],
+  [508, '/* 记录 errno 便于区分 fd 耗尽。 */'],
+  [509, '/* 返回失败，PD 由上层 release 回收。 */'],
+  [512, '/* comp_channel fd 稍后会成为 conn->fd。 */'],
+  [516, '/* 负数表示随机，abs 后仍需对 num_comp_vectors 取模。 */'],
+  [519, '/* 深度 2*MAX_WQE：收发共用一个 CQ，按单方向深度会 ENOMEM。 */'],
+  [521, '/* CQ 创建失败通常是深度超过设备上限。 */'],
+  [522, '/* 打印 errno，深度超限是 EINVAL。 */'],
+  [523, '/* 返回失败，comp_channel 由上层 release 回收。 */'],
+  [526, '/* 挂到 ctx，后续 notify 与 poll 都用它。 */'],
+  [527, '/* 先武装一次，否则第一批完成事件不会被投递。 */'],
+  [529, '/* init_attr 清零，未显式设置的字段必须是 0。 */'],
+  [530, '/* send WR 上限 1024，与 SEND 区槽位数一致。 */'],
+  [531, '/* recv WR 上限 1024，与 RECV 区槽位数一致。 */'],
+  [532, '/* send sge 数取设备上限，writev 才不会被截断。 */'],
+  [533, '/* RECV 固定单 sge，与 rdmaPostRecv 的 num_sge=1 对应。 */'],
+  [534, '/* RC 提供可靠有序传输，控制面报文依赖它不重排。 */'],
+  [535, '/* send_cq 与 recv_cq 指向同一个 cq，完成事件单点回收。 */'],
+  [536, '/* recv_cq 同上，两个方向共用一个完成队列。 */'],
+  [537, '/* rdma_create_qp 内部建 QP 并挂到 cm_id。 */'],
+  [538, '/* 非 0 即创建失败，QP 未建立不能继续。 */'],
+  [539, '/* 常见原因是 max_sge 超过设备能力。 */'],
+  [540, '/* 返回失败，前面的 cq/pd 由上层 release 回收。 */'],
+  [543, '/* QP 建好后才能注册 MR：reg_mr 需要 pd，post_recv 需要 qp。 */'],
+  [544, '/* IO 缓冲失败由 rdmaSetupIoBuf 自己回收，这里直接返回。 */'],
+  [547, '/* 全部资源就绪。 */'],
+  [558, '/* 先撤 MR/VMA，再销毁 CQ：dereg 的 flush 完成需要 CQ 在场。 */'],
+  [560, '/* cq 判空，失败路径可能尚未创建。 */'],
+  [561, '/* 销毁 CQ 前必须保证没有在途 WR，否则驱动返回 EBUSY。 */'],
+  [564, '/* comp_channel 判空，未创建时跳过。 */'],
+  [565, '/* 销毁完成通道，其 fd 不能再被 ae 使用。 */'],
+  [568, '/* pd 最后释放，之前所有 MR 都挂在它上面。 */'],
+  [569, '/* dealloc 后 ctx->pd 成悬空指针，随后 ctx 即被 zfree。 */'],
+  [582, '/* TX 要被对端读，故加 REMOTE_READ；REMOTE_WRITE 供对端回写。 */'],
+  [584, '/* 长度相同直接复用，reg_mr 会 pin 物理页，不宜频繁做。 */'],
+  [585, '/* 复用旧缓冲，tx.mr 与 tx.addr 保持不变。 */'],
+  [590, '/* 先撤销翻译表项再释放 VMA，顺序反了内核返回 EFAULT。 */'],
+  [591, '/* 历史路径用 zlibc_malloc 分配，必须用 zlibc_free 释放。 */'],
+  [592, '/* 归零长度，失败时不会误判为「已有缓冲」。 */'],
+  [597, '/* 记录新长度，connRdmaWrite 用它裁剪可写字节数。 */'],
+  [598, '/* TX 注册为 REMOTE_READ|REMOTE_WRITE，对端才能读这块内存。 */'],
+  [599, '/* 注册失败时 addr 已分配，必须回滚成无缓冲状态。 */'],
+  [600, '/* 写 neterr 供上层报错。 */'],
+  [601, '/* 同时打一条 FATAL 日志，说明控制面已错乱。 */'],
+  [602, '/* 释放刚分配的 VMA，避免泄漏。 */'],
+  [603, '/* addr 置空，send 路径据此跳过。 */'],
+  [604, '/* 回到「无 TX 缓冲」合法状态，connRdmaWrite 会返回 0。 */'],
+  [605, '/* 返回 C_ERR，调用方不得再写。 */'],
+  [608, '/* 新缓冲就绪。 */'],
+];
+
+const lines = fs.readFileSync(SRC, 'utf8').split('\n');
+const ops = [];
+for (const [ln, c] of E) {
+  const cur = lines[ln - 1];
+  if (cur === undefined) {
+    console.error(`MISSING ${ln}`);
+    process.exit(2);
+  }
+  const t = cur.trim();
+  if (!t || t.startsWith('/*') || t.startsWith('//') || t.startsWith('*')) {
+    console.error(`BADANCHOR ${ln} ${t}`);
+    process.exit(2);
+  }
+  ops.push({ line: ln, expect: t, lines: [c] });
+}
+ops.sort((a, b) => b.line - a.line);
+fs.writeFileSync(`${DIR}/ins-${PX}.json`, JSON.stringify([{ file: 'src/rdma.c', ops }], null, 1));
+
+const out = `${DIR}/out-rdma.json`;
+const prev = JSON.parse(fs.readFileSync(out, 'utf8'));
+const entries = ops.map((o) => ({ line: o.line, c: o.lines }));
+fs.writeFileSync(out, JSON.stringify([...prev, ...entries], null, 1));
+console.log(`${PX} ops=${ops.length} entries=${prev.length + entries.length}`);

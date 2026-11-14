@@ -1,0 +1,50 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	51	a8784b7e479d3a	// serial 缺省由 provider 选设备。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	52	a8784b7e479d3a	// avd 只在需要新开时生效。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	53	a8784b7e479d3a	// 超时约束整体等待。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	54	a8784b7e479d3a	// 三条工具共享同一形状。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	55	a8784b7e479d3a	// 改这里会波及十余个工具。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	80	10e9df5188396e	* 构建类工具共享参数：projectDir 为相对路径，module/variant/applicationId 留空时由 provider
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	81	10e9df5188396e	* 按 Gradle 项目实际发现结果补齐，避免调用方硬编码模块名。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	83	a8784b7e479d3a	// 构建参数在设备参数之上扩展。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	84	a8784b7e479d3a	// 模块与变体都可留空。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	85	a8784b7e479d3a	// 应用标识允许显式覆盖。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	86	a8784b7e479d3a	// 留空项由发现结果补齐。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	87	a8784b7e479d3a	// 组合工具再添加启动项。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	102	a8784b7e479d3a	// 名称与版本对客户端可见。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	103	a8784b7e479d3a	// 改名会改变工具命名空间。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	104	a8784b7e479d3a	// 实例是注册的唯一入口。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	105	a8784b7e479d3a	// 传输在入口函数才连接。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	106	a8784b7e479d3a	// 注册顺序不影响调用。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	446	a8784b7e479d3a	// 仅使用标准输入输出传输。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	447	a8784b7e479d3a	// 连接后阻塞在事件循环。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	448	a8784b7e479d3a	// 由宿主作为子进程拉起。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	449	a8784b7e479d3a	// 初始化失败会让进程退出。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	464	a8784b7e479d3a	// 工具层的唯一错误收敛点。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	465	a8784b7e479d3a	// 成功结果原样透传。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	466	a8784b7e479d3a	// 异常转成失败结果。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	467	a8784b7e479d3a	// 只保留消息不带堆栈。
+apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	468	a8784b7e479d3a	// 收敛后连接保持可用。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	48	a8784b7e479d3a	// 用格式化结果反推偏移。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	49	a8784b7e479d3a	// 秒级截断后再相减。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	50	a8784b7e479d3a	// 解析失败一律回退零。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	51	a8784b7e479d3a	// 不依赖运行环境时区。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	52	a8784b7e479d3a	// 只在解析时创建格式化器。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	53	a8784b7e479d3a	// 返回值单位是毫秒。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	87	0f2ef80d29a855	// 四档热力等级按 max 的 25%/50%/75% 分界；无 token 或 max 为 0 一律 0 级。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	88	a8784b7e479d3a	// 非正数直接归零级。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	89	a8784b7e479d3a	// 比例按最大值计算。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	90	a8784b7e479d3a	// 四档阈值依次判断。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	91	a8784b7e479d3a	// 大于七成五为最高档。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	92	a8784b7e479d3a	// 零级不参与比例计算。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	93	a8784b7e479d3a	// 阈值之间不留空洞。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	104	a8784b7e479d3a	// 非全量区间用起点日。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	105	a8784b7e479d3a	// 起点由毫秒偏移换算。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	106	a8784b7e479d3a	// 全量时汇总两处日索引。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	107	a8784b7e479d3a	// 无数据退化为结束日。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	108	a8784b7e479d3a	// 取最小值作为起点。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	134	a8784b7e479d3a	// 命中率分母不重复累加。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	135	a8784b7e479d3a	// 三项错误率各自除零保护。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	136	a8784b7e479d3a	// 日映射供连续与热力图共用。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	137	a8784b7e479d3a	// 热力图按七天切周。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	138	a8784b7e479d3a	// 末尾不足一周补空位。

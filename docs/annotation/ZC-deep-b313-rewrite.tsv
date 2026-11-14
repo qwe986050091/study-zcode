@@ -1,0 +1,37 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/adapters/src/plugins/zip-source.ts	313	a8784b7e479d3a	// 逐条读取，条目数为零时也要正常收束。
+apps/zcode-cli/packages/adapters/src/plugins/zip-source.ts	314	a8784b7e479d3a	// 目录条目只建目录，文件条目才计入累计大小。
+apps/zcode-cli/packages/adapters/src/plugins/zip-source.ts	315	a8784b7e479d3a	// 单条读取失败即拒绝整个解压。
+apps/zcode-cli/packages/adapters/src/plugins/zip-source.ts	464	a8784b7e479d3a	// 流式累计字节，超过单文件上限即销毁并报错。
+apps/zcode-cli/packages/adapters/src/plugins/zip-source.ts	465	a8784b7e479d3a	// 取消时销毁流，监听器在结束或出错时移除。
+apps/zcode-cli/packages/adapters/src/plugins/zip-source.ts	466	a8784b7e479d3a	// 错误与结束路径都清理监听，避免泄漏。
+apps/zcode-cli/packages/adapters/src/plugins/zip-source.ts	598	a8784b7e479d3a	// 只允许安全协议；明文仅限本机回环。
+apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	47	a8784b7e479d3a	// 仅持有已结束列表展开开关。
+apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	49	a8784b7e479d3a	// 运行中与已结束按开关合并。
+apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	50	a8784b7e479d3a	// 交互全部上抛给调用方。
+apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	68	a8784b7e479d3a	// 运行中始终排在前面。
+apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	69	a8784b7e479d3a	// 已结束按开关追加。
+apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	70	a8784b7e479d3a	// 选中态按会话标识判断。
+apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	71	a8784b7e479d3a	// 点击前先阻止冒泡。
+apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	74	a8784b7e479d3a	// 每条按两行估算。
+apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	75	a8784b7e479d3a	// 已结束标题占一行。
+apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	76	a8784b7e479d3a	// 分页按钮只在有游标时占位。
+apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	77	a8784b7e479d3a	// 高度最终夹在一与上限之间。
+packages/ui/src/lib/remotePluginSyncRefresh.ts	42	a8784b7e479d3a	// 拉取命令时按需带标识。
+packages/ui/src/lib/remotePluginSyncRefresh.ts	43	a8784b7e479d3a	// 仅归属一致才写回设置页。
+packages/ui/src/lib/remotePluginSyncRefresh.ts	44	a8784b7e479d3a	// 命令面板数据显式写回会话。
+packages/ui/src/lib/remotePluginSyncRefresh.ts	45	a8784b7e479d3a	// 失败时只清加载态并记日志。
+packages/ui/src/lib/remotePluginSyncRefresh.ts	111	a8784b7e479d3a	// 没有工作区路径直接返回。
+packages/ui/src/lib/remotePluginSyncRefresh.ts	112	a8784b7e479d3a	// 标识先修剪再决定透传。
+packages/ui/src/lib/remotePluginSyncRefresh.ts	113	a8784b7e479d3a	// 三段刷新按顺序串行。
+packages/ui/src/lib/remotePluginSyncRefresh.ts	134	a8784b7e479d3a	// 技能刷新带同一组参数。
+packages/ui/src/lib/remotePluginSyncRefresh.ts	135	a8784b7e479d3a	// 随后刷新命令数据。
+packages/ui/src/lib/remotePluginSyncRefresh.ts	136	a8784b7e479d3a	// 最后通知已挂载投影。
+packages/ui/src/side-pane-full-view/ConversationHost.tsx	41	a8784b7e479d3a	// 收起态是底部吸附下的输入框本身，最小化态是圆形按钮，两者不要混为一谈。
+packages/ui/src/side-pane-full-view/ConversationHost.tsx	168	a8784b7e479d3a	// 所有样式写入、矩形测量与焦点查询都基于它，换成选择器可能命中错误实例。
+packages/ui/src/side-pane-full-view/ConversationHost.tsx	203	a8784b7e479d3a	// [契约] 操作栏可见需要同时满足浮窗、非最小化，以及展开、聚焦、菜单打开、拖拽之一。
+packages/ui/src/side-pane-full-view/ConversationHost.tsx	238	a8784b7e479d3a	// [资源] 离开浮窗形态时只重置基线，不清空已有气泡：看过的回答不应在切回时重弹。
+packages/ui/src/side-pane-full-view/ConversationHost.tsx	267	a8784b7e479d3a	// 两个回调都用稳定引用包装，因此上下文只在模式切换时变化，减少对话树重渲染。
+packages/ui/src/side-pane-full-view/ConversationHost.tsx	328	a8784b7e479d3a	// 最小化切换时需要临时关闭过渡并强制一次回流，让新几何立即生效后再恢复过渡。
+packages/ui/src/side-pane-full-view/ConversationHost.tsx	503	a8784b7e479d3a	// 这里不调用上层的吸附变更，取消意味着放弃本次落点。
+packages/ui/src/side-pane-full-view/ConversationHost.tsx	536	a8784b7e479d3a	// [契约] 最小化按钮上的图标只区分运行中与空闲，运行中显示旋转指示。

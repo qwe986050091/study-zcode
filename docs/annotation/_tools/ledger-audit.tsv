@@ -1,0 +1,1412 @@
+批次	台账登记	文件	HEAD	末次提交	工作区+	工作区-	判定	备注
+ZC-DEEP-b1	1175	packages/ui/src/v4/SessionPane.tsx	7aeaf5ba	docs(注释): 收尾提交 packages 各包纯注释增量	1175	0	未提交	
+ZC-DEEP-b2	900	packages/desktop/src/host/index.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	900	0	未提交	
+ZC-DEEP-b2	895	packages/ui/src/lib/zcodeSessionProjection.ts	7aeaf5ba	docs(注释): 收尾提交 packages 各包纯注释增量	895	0	未提交	
+ZC-DEEP-b3	853	packages/shared/src/zcode-protocol/index.ts	0a1fc56d	chore: sync ZCode source	853	0	未提交	
+ZC-DEEP-b3	847	packages/desktop/src/main/browserView/browserGuestManager.ts	cce264eb	docs(注释): B228 补 releaseToUser 两个索引清理注释	0	0	已提交且干净	
+ZC-DEEP-b4	791	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/server-operations.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	791	0	未提交	
+ZC-DEEP-b4	742	packages/ui/src/settings/AutomationEditView.tsx	0a1fc56d	chore: sync ZCode source	742	0	未提交	
+ZC-DEEP-b5	656	packages/ui/src/app-shell/WorkspaceShellLayout.tsx	3c5b2276	chore: sync ZCode source	656	0	未提交	
+ZC-DEEP-b5	586	packages/ui/src/SettingsPage.tsx	3c5b2276	chore: sync ZCode source	584	0	部分未提交	差 2 行
+ZC-DEEP-b5	561	apps/zcode-cli/packages/core/src/subagent/runner.ts	0a1fc56d	chore: sync ZCode source	561	0	未提交	
+ZC-DEEP-b6	567	packages/ui/src/settings/RemotePluginSyncDialog.tsx	0a1fc56d	chore: sync ZCode source	567	0	未提交	
+ZC-DEEP-b6	543	packages/ui/src/remote-connection-flow/index.ts	0a1fc56d	chore: sync ZCode source	543	0	未提交	
+ZC-DEEP-b6	536	packages/ui/src/root/useRemoteWorkspaceHistory.ts	3c5b2276	chore: sync ZCode source	536	0	未提交	
+ZC-DEEP-b7	521	packages/ui/src/v4/ConversationRowView.tsx	0a1fc56d	chore: sync ZCode source	521	0	未提交	
+ZC-DEEP-b7	513	packages/desktop/src/main/index.ts	65d659a1	注释(desktop): index.ts b15 — 启动装配层逐条补完（+90 行）	0	0	已提交且干净	
+ZC-DEEP-b7	524	packages/ui/src/settings/SubagentsSection.tsx	0a1fc56d	chore: sync ZCode source	524	0	未提交	
+ZC-DEEP-b8	493	packages/desktop/src/main/webRemoteControlManager.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b8	494	packages/ui/src/v4/ConversationComposer.tsx	3c5b2276	chore: sync ZCode source	494	0	未提交	
+ZC-DEEP-b8	491	packages/web/src/main.tsx	0a1fc56d	chore: sync ZCode source	491	0	未提交	
+ZC-DEEP-b8	490	packages/ui/src/settings/SourceServerManagementPanel.tsx	0a1fc56d	chore: sync ZCode source	490	0	未提交	
+ZC-DEEP-b9	485	packages/ui/src/v4/ConversationStatusPanel.tsx	0a1fc56d	chore: sync ZCode source	485	0	未提交	
+ZC-DEEP-b9	479	packages/ui/src/PreviewPane.tsx	0a1fc56d	chore: sync ZCode source	479	0	未提交	
+ZC-DEEP-b9	475	packages/ui/src/settings/AutomationsSection.tsx	0a1fc56d	chore: sync ZCode source	475	0	未提交	
+ZC-DEEP-b9	516	packages/server/src/remote/remoteAssetCache.ts	0a1fc56d	chore: sync ZCode source	516	0	未提交	
+ZC-DEEP-b10	471	packages/desktop/src/main/autoUpdater.ts	27e46c34	注释(desktop): autoUpdater 全文件收口 1,168/1,168（+1,078/−0）	0	0	已提交且干净	
+ZC-DEEP-b10	425	packages/desktop/src/main/desktopRemoteSessions.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b10	427	packages/ui/src/settings/ExternalAgentImportDialog.tsx	aac47556	feat: update to v3.15.1	427	0	未提交	
+ZC-DEEP-b10	506	packages/shared/src/validation.ts	0a1fc56d	chore: sync ZCode source	506	0	未提交	
+ZC-DEEP-b11	418	packages/ui/src/settings/PluginsSection.tsx	0a1fc56d	chore: sync ZCode source	418	0	未提交	
+ZC-DEEP-b11	403	packages/ui/src/settings/McpSettingsSection.tsx	0a1fc56d	chore: sync ZCode source	403	0	未提交	
+ZC-DEEP-b11	392	packages/ui/src/GitActionMenu.tsx	872ad960	feat: open source	392	0	未提交	
+ZC-DEEP-b11	463	apps/zcode-cli/packages/debug/src/App.tsx	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	463	0	未提交	
+ZC-DEEP-b11	443	packages/ui/src/v4/telemetry/conversationTelemetrySupervisor.ts	0a1fc56d	chore: sync ZCode source	443	0	未提交	
+ZC-DEEP-b12	371	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/v4-bridge.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	371	0	未提交	
+ZC-DEEP-b12	396	packages/ui/src/lib/conversationTelemetryParityScenarioDefinitions.ts	aac47556	feat: update to v3.15.1	396	0	未提交	
+ZC-DEEP-b12	364	packages/ui/src/Root.tsx	3c5b2276	chore: sync ZCode source	364	0	未提交	
+ZC-DEEP-b12	394	packages/ui/src/lib/messageTelemetry.ts	0a1fc56d	chore: sync ZCode source	394	0	未提交	
+ZC-DEEP-b12	371	apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	522e851e	docs(注释): L2-B6 adapters	371	0	未提交	
+ZC-DEEP-b13	383	apps/dev-docs/src/data/protocolDocs.ts	55f48e6d	docs(注释): 收尾提交 插件宿主与 dev-docs 纯注释增量	383	0	未提交	
+ZC-DEEP-b13	352	packages/ui/src/app-shell/AnimatedSidePanePanel.tsx	3c5b2276	chore: sync ZCode source	352	0	未提交	
+ZC-DEEP-b13	366	packages/ui/src/components/ai-elements/message.tsx	872ad960	feat: open source	366	0	未提交	
+ZC-DEEP-b13	349	packages/ui/src/v4/ConversationTurnGroup.tsx	0a1fc56d	chore: sync ZCode source	349	0	未提交	
+ZC-DEEP-b13	348	packages/ui/src/v4/ConversationTimeline.tsx	3c5b2276	chore: sync ZCode source	348	0	未提交	
+ZC-DEEP-b14	328	packages/ui/src/App.tsx	3c5b2276	chore: sync ZCode source	328	0	未提交	
+ZC-DEEP-b14	337	packages/ui/src/hooks/useAppPanels.ts	0a1fc56d	chore: sync ZCode source	337	0	未提交	
+ZC-DEEP-b14	335	packages/ui/src/lib/workspaceSidePane.ts	0a1fc56d	chore: sync ZCode source	335	0	未提交	
+ZC-DEEP-b14	332	packages/desktop/src/main/browserView/browserPlaywrightLocatorExecutor.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b14	320	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/session-mapper.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	320	0	未提交	
+ZC-DEEP-b14	347	apps/zcode-cli/packages/adapters/src/model/runner-stream.ts	522e851e	docs(注释): L2-B6 adapters	347	0	未提交	
+ZC-DEEP-b15	314	packages/ui/src/components/ai-elements/markdown-table.tsx	872ad960	feat: open source	314	0	未提交	
+ZC-DEEP-b15	311	packages/ui/src/settings/model-provider-section/Detail.tsx	aac47556	feat: update to v3.15.1	311	0	未提交	
+ZC-DEEP-b15	310	packages/ui/src/v4/ConversationShareReadonlyTimeline.tsx	0a1fc56d	chore: sync ZCode source	297	0	部分未提交	差 13 行
+ZC-DEEP-b15	304	packages/ui/src/RemoteConnectionFields.tsx	0a1fc56d	chore: sync ZCode source	268	0	部分未提交	差 36 行
+ZC-DEEP-b15	297	packages/ui/src/BotsDialog.tsx	0a1fc56d	chore: sync ZCode source	269	0	部分未提交	差 28 行
+ZC-DEEP-b15	324	apps/zcode-cli/packages/debug/server/analyzer.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	324	0	未提交	
+ZC-DEEP-b16	276	packages/desktop/src/main/taskRealtimeBus.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b16	280	packages/ui/src/ElicitationDialog.tsx	aac47556	feat: update to v3.15.1	275	0	部分未提交	差 5 行
+ZC-DEEP-b16	334	packages/ui/src/settings/usage-stats/CodingPlanUsagePanel.tsx	aac47556	feat: update to v3.15.1	301	0	部分未提交	差 33 行
+ZC-DEEP-b16	307	packages/ui/src/settings/SkillsSection.tsx	0a1fc56d	chore: sync ZCode source	275	0	部分未提交	差 32 行
+ZC-DEEP-b16	335	packages/ui/src/LexicalChatInput.tsx	aac47556	feat: update to v3.15.1	324	0	部分未提交	差 11 行
+ZC-DEEP-b16	348	packages/ui/src/settings/ModelProviderSection.tsx	0a1fc56d	chore: sync ZCode source	345	0	部分未提交	差 3 行
+ZC-DEEP-b16	314	apps/dev-docs/src/App.tsx	55f48e6d	docs(注释): 收尾提交 插件宿主与 dev-docs 纯注释增量	314	0	未提交	
+ZC-DEEP-b17	290	apps/zcode-cli/packages/core/src/browser-client/facade.ts	aac47556	feat: update to v3.15.1	290	0	未提交	
+ZC-DEEP-b17	278	packages/ui/src/remote-connection/RemoteConnectionConnectingStep.tsx	0a1fc56d	chore: sync ZCode source	278	0	未提交	
+ZC-DEEP-b17	275	packages/ui/src/settings/model-provider-section/StatusCards.tsx	aac47556	feat: update to v3.15.1	275	0	未提交	
+ZC-DEEP-b17	319	packages/ui/src/command-center/CommandCenterDialog.tsx	0a1fc56d	chore: sync ZCode source	319	0	未提交	
+ZC-DEEP-b17	418	packages/ui/src/v4/composer/V4ComposerToolbar.tsx	0a1fc56d	chore: sync ZCode source	418	0	未提交	
+ZC-DEEP-b17	276	packages/ui/src/v4/ConversationShareConfirmationDock.tsx	0a1fc56d	chore: sync ZCode source	276	0	未提交	
+ZC-DEEP-b17	290	packages/ui/src/chat-input-toolbar/contextUsage.tsx	0a1fc56d	chore: sync ZCode source	290	0	未提交	
+ZC-DEEP-b18	296	packages/desktop/src/host/windowRemoteConnectionRegistry.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	296	0	未提交	
+ZC-DEEP-b18	267	packages/ui/src/v4/composer/useComposerAttachments.ts	0a1fc56d	chore: sync ZCode source	267	0	未提交	
+ZC-DEEP-b18	260	packages/ui/src/components/ui/pptx-preview-viewer.tsx	872ad960	feat: open source	260	0	未提交	
+ZC-DEEP-b18	262	packages/desktop/src/main/desktopStabilityTelemetry.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b18	262	packages/formal-proof/src/main.ts	872ad960	feat: open source	262	0	未提交	
+ZC-DEEP-b18	255	packages/formal-proof/src/model.ts	872ad960	feat: open source	255	0	未提交	
+ZC-DEEP-b18	300	packages/server/src/remote/remoteAssetInstaller.ts	0a1fc56d	chore: sync ZCode source	300	0	未提交	
+ZC-DEEP-b18	259	apps/zcode-cli/packages/core/src/runtime/methods/steering.ts	26a74c66	docs(注释): L1-A4 目标队列与 MCP	351	0	台账与实测不符	超出 92 行
+ZC-DEEP-b19	250	apps/zcode-cli/packages/core/src/runtime/methods/session-fork.ts	ccc8ef74	docs(注释): L1-A3 持久化与回退	250	0	未提交	
+ZC-DEEP-b19	254	packages/desktop/src/host/sourceServerDirectory.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	254	0	未提交	
+ZC-DEEP-b19	243	packages/ui/src/store/taskQueryCacheStore.ts	aac47556	feat: update to v3.15.1	243	0	未提交	
+ZC-DEEP-b19	250	packages/desktop/src/main/exportLogs.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b19	240	packages/ui/src/lib/conversationTelemetryLegacyParityE2E.ts	aac47556	feat: update to v3.15.1	240	0	未提交	
+ZC-DEEP-b19	244	packages/ui/src/TaskListItem.tsx	3c5b2276	chore: sync ZCode source	244	0	未提交	
+ZC-DEEP-b19	236	packages/shared/src/web-remote-control.ts	0a1fc56d	chore: sync ZCode source	236	0	未提交	
+ZC-DEEP-b19	235	packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	0a1fc56d	chore: sync ZCode source	235	0	未提交	
+ZC-DEEP-b20	243	apps/zcode-cli/packages/adapters/src/fs/index.ts	522e851e	docs(注释): L2-B6 adapters	243	0	未提交	
+ZC-DEEP-b20	431	apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/product-projection.ts	ee933d52	docs(注释): 补齐被剔除的 contracts/bootstrap-v4 注释改写	431	0	未提交	
+ZC-DEEP-b20	227	packages/shared/src/bots.ts	0a1fc56d	chore: sync ZCode source	227	0	未提交	
+ZC-DEEP-b20	225	packages/ui/src/settings/PluginStorePage.tsx	0a1fc56d	chore: sync ZCode source	225	0	未提交	
+ZC-DEEP-b20	225	packages/web/src/share/ConversationShareLandingPage.tsx	0a1fc56d	chore: sync ZCode source	225	0	未提交	
+ZC-DEEP-b20	222	packages/ui/src/store/zcodeSessionStoreTaskSlice.ts	0a1fc56d	chore: sync ZCode source	222	0	未提交	
+ZC-DEEP-b20	221	packages/ui/src/settings/model-provider-section/InlineEditableProviderCard.tsx	aac47556	feat: update to v3.15.1	221	0	未提交	
+ZC-DEEP-b20	222	packages/ui/src/RemoteConnectionDialogContent.tsx	0a1fc56d	chore: sync ZCode source	222	0	未提交	
+ZC-DEEP-b20	235	packages/ui/src/store/zcodeSessionStoreWorkspaceSlice.ts	0a1fc56d	chore: sync ZCode source	235	0	未提交	
+ZC-DEEP-b21	221	packages/ui/src/v4/workbenchGroupStore.ts	aac47556	feat: update to v3.15.1	221	0	未提交	
+ZC-DEEP-b21	227	packages/desktop/src/host/sourceServerConnectionManager.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	227	0	未提交	
+ZC-DEEP-b21	230	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/server.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	230	0	未提交	
+ZC-DEEP-b21	215	packages/ui/src/project-sidebar/grouped/group-item.tsx	0a1fc56d	chore: sync ZCode source	215	0	未提交	
+ZC-DEEP-b21	242	apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/transcript-hydration.ts	ee933d52	docs(注释): 补齐被剔除的 contracts/bootstrap-v4 注释改写	242	0	未提交	
+ZC-DEEP-b21	217	packages/shared/src/web-remote-control-rpc-transport.ts	aac47556	feat: update to v3.15.1	217	0	未提交	
+ZC-DEEP-b21	216	packages/ui/src/lib/remoteWorkspaceHistory.ts	0a1fc56d	chore: sync ZCode source	216	0	未提交	
+ZC-DEEP-b21	217	packages/ui/src/project-sidebar/ProjectEditor.tsx	0a1fc56d	chore: sync ZCode source	217	0	未提交	
+ZC-DEEP-b21	214	packages/ui/src/ModelConfigSelect.tsx	3c5b2276	chore: sync ZCode source	214	0	未提交	
+ZC-DEEP-b22	206	apps/zcode-cli/packages/adapters/src/storage/session-store/migrations.ts	522e851e	docs(注释): L2-B6 adapters	206	0	未提交	
+ZC-DEEP-b22	207	packages/ui/src/PermissionDialog.tsx	0a1fc56d	chore: sync ZCode source	207	0	未提交	
+ZC-DEEP-b22	209	apps/zcode-cli/packages/adapters/src/storage/session-store/sqlite-session-store.ts	0a1fc56d	chore: sync ZCode source	297	6	台账与实测不符	超出 88 行
+ZC-DEEP-b22	202	packages/ui/src/WorkspaceHeaderSections.tsx	0a1fc56d	chore: sync ZCode source	202	0	未提交	
+ZC-DEEP-b22	203	apps/dev-docs/src/data/productCapabilityMap.ts	55f48e6d	docs(注释): 收尾提交 插件宿主与 dev-docs 纯注释增量	203	0	未提交	
+ZC-DEEP-b22	191	packages/ui/src/components/ai-elements/diagram-preview-dialog.tsx	872ad960	feat: open source	191	0	未提交	
+ZC-DEEP-b22	190	packages/ui/src/settings/OffPeakEditView.tsx	0a1fc56d	chore: sync ZCode source	190	0	未提交	
+ZC-DEEP-b22	198	packages/desktop/src/main/desktopMainIpcRemote.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b22	191	packages/provider/src/config-service.ts	872ad960	feat: open source	191	0	未提交	
+ZC-DEEP-b23	192	packages/desktop/src/main/chromeLocalStorageManager.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b23	190	packages/ui/src/v4/ConversationDraftSuggestedPromptsContainer.tsx	0a1fc56d	chore: sync ZCode source	190	0	未提交	
+ZC-DEEP-b23	198	packages/desktop/src/host/windowHostControllerService.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	198	0	未提交	
+ZC-DEEP-b23	188	packages/provider/src/facades.ts	872ad960	feat: open source	188	0	未提交	
+ZC-DEEP-b23	188	packages/ui/src/components/ui/code-viewer.tsx	872ad960	feat: open source	188	0	未提交	
+ZC-DEEP-b23	188	packages/web/src/web-remote-control/adapters/webRemoteControlTransport.ts	0a1fc56d	chore: sync ZCode source	188	0	未提交	
+ZC-DEEP-b23	185	packages/desktop/src/main/desktopCommandHandlers.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b23	184	packages/desktop/src/main/forceUpdatePrompt.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b24	189	packages/ui/src/terminal/TerminalSession.tsx	872ad960	feat: open source	189	0	未提交	
+ZC-DEEP-b24	183	packages/ui/src/lib/webElementPickerScript.ts	872ad960	feat: open source	183	0	未提交	
+ZC-DEEP-b24	184	packages/ui/src/TreemappingPane.tsx	872ad960	feat: open source	184	0	未提交	
+ZC-DEEP-b24	181	packages/ui/src/settings/RemoteMcpSyncDialog.tsx	aac47556	feat: update to v3.15.1	181	0	未提交	
+ZC-DEEP-b24	181	packages/desktop/src/main/desktopHostProcess.ts	cea5a675	注释(desktop): desktopHostProcess.ts b9 — 类型契约、loadWindow 与剩余分支逐条补完（+64 行）	0	0	已提交且干净	
+ZC-DEEP-b24	180	packages/ui/src/workspace-file-tree/useWorkspaceFileTreeData.ts	0a1fc56d	chore: sync ZCode source	180	0	未提交	
+ZC-DEEP-b24	176	apps/zcode-cli/packages/cli/src/run.ts	e0060254	增加日志记录	176	0	未提交	
+ZC-DEEP-b24	174	packages/ui/src/v4/featureSuggestedPrompts.ts	872ad960	feat: open source	124	0	部分未提交	差 50 行
+ZC-DEEP-b25	173	apps/zcode-cli/packages/core/src/browser-client/manifest.ts	872ad960	feat: open source	173	0	未提交	
+ZC-DEEP-b25	178	packages/ui/src/browser-use/UnifiedBrowserView.tsx	aac47556	feat: update to v3.15.1	178	0	未提交	
+ZC-DEEP-b25	176	packages/ui/src/hooks/useCodingPlanQuotaResetUi.ts	aac47556	feat: update to v3.15.1	176	0	未提交	
+ZC-DEEP-b25	173	packages/ui/src/settings/model-provider-section/ProviderCardSections.tsx	0a1fc56d	chore: sync ZCode source	173	0	未提交	
+ZC-DEEP-b25	174	packages/ui/src/mentions/MentionPlugin.tsx	0a1fc56d	chore: sync ZCode source	174	0	未提交	
+ZC-DEEP-b25	180	apps/zcode-cli/packages/bootstrap/src/app/create-app.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	180	0	未提交	
+ZC-DEEP-b25	168	packages/ui/src/lib/treemappingActivity.ts	0a1fc56d	chore: sync ZCode source	168	0	未提交	
+ZC-DEEP-b25	166	packages/ui/src/web-remote-control/WebRemoteControlDialog.tsx	0a1fc56d	chore: sync ZCode source	166	0	未提交	
+ZC-DEEP-b26	165	packages/ui/src/components/ai-elements/image-preview-dialog.tsx	0a1fc56d	chore: sync ZCode source	165	0	未提交	
+ZC-DEEP-b26	164	packages/ui/src/project-sidebar/ProjectComposerMenu.tsx	0a1fc56d	chore: sync ZCode source	164	0	未提交	
+ZC-DEEP-b26	165	packages/ui/src/root/useRootWorkspaceActions.ts	0a1fc56d	chore: sync ZCode source	165	0	未提交	
+ZC-DEEP-b26	162	packages/ui/src/project-sidebar/grouped/view.ts	0a1fc56d	chore: sync ZCode source	162	0	未提交	
+ZC-DEEP-b26	162	packages/server/src/remote/wsl-backend.ts	0a1fc56d	chore: sync ZCode source	162	0	未提交	
+ZC-DEEP-b26	158	packages/ui/src/lib/codeViewer.ts	aac47556	feat: update to v3.15.1	158	0	未提交	
+ZC-DEEP-b26	160	packages/zcode-server-cli/src/cli.ts	0a1fc56d	chore: sync ZCode source	160	0	未提交	
+ZC-DEEP-b27	160	apps/zcode-cli/packages/adapters/src/storage/session-store/repositories/usage.ts	522e851e	docs(注释): L2-B6 adapters	160	0	未提交	
+ZC-DEEP-b27	159	packages/ui/src/v4/agentConversationTransport.ts	0a1fc56d	chore: sync ZCode source	159	0	未提交	
+ZC-DEEP-b27	158	packages/ui/src/settings/ComputerUseSection.tsx	872ad960	feat: open source	158	0	未提交	
+ZC-DEEP-b27	156	packages/ui/src/settings/model-provider-section/useModelProviderNavigation.ts	aac47556	feat: update to v3.15.1	156	0	未提交	
+ZC-DEEP-b27	159	apps/zcode-cli/packages/bootstrap/src/app/session-facade.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	159	0	未提交	
+ZC-DEEP-b27	156	packages/server/src/remote/deploy.ts	872ad960	feat: open source	156	0	未提交	
+ZC-DEEP-b27	155	packages/shared/src/validationAppSettings.ts	3c5b2276	chore: sync ZCode source	155	0	未提交	
+ZC-DEEP-b27	153	packages/ui/src/project-sidebar/TaskGroupedView.tsx	3c5b2276	chore: sync ZCode source	153	0	未提交	
+ZC-DEEP-b28	153	packages/ui/src/settings/PluginStoreDetailView.tsx	3c5b2276	chore: sync ZCode source	153	0	未提交	
+ZC-DEEP-b28	155	packages/ui/src/store/mcpStore.ts	0a1fc56d	chore: sync ZCode source	155	0	未提交	
+ZC-DEEP-b28	154	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/interaction-broker.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	154	0	未提交	
+ZC-DEEP-b28	152	packages/shared/src/zcode-protocol-v4/wire-assembler.ts	aac47556	feat: update to v3.15.1	152	0	未提交	
+ZC-DEEP-b28	149	packages/ui/src/components/ai-elements/voice-selector.tsx	aac47556	feat: update to v3.15.1	149	0	未提交	
+ZC-DEEP-b28	149	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/plugins.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	149	0	未提交	
+ZC-DEEP-b28	148	packages/desktop/scripts/mcp-apps-host-fixture/background-main.ts	0a1fc56d	chore: sync ZCode source	148	0	未提交	
+ZC-DEEP-b28	148	packages/ui/src/BotsDialog/ProviderSettingsCard.tsx	aac47556	feat: update to v3.15.1	148	0	未提交	
+ZC-DEEP-b29	148	packages/ui/src/settings/PluginStoreListView.tsx	0a1fc56d	chore: sync ZCode source	148	0	未提交	
+ZC-DEEP-b29	145	packages/ui/src/settings/CommandsSection.tsx	0a1fc56d	chore: sync ZCode source	145	0	未提交	
+ZC-DEEP-b29	143	packages/ui/src/settings/RemoteSkillSyncDialog.tsx	aac47556	feat: update to v3.15.1	143	0	未提交	
+ZC-DEEP-b29	138	packages/ui/src/settings/HooksSection.tsx	0a1fc56d	chore: sync ZCode source	138	0	未提交	
+ZC-DEEP-b29	138	packages/ui/src/settings/model-provider-section/useCodingPlanProducts.ts	0a1fc56d	chore: sync ZCode source	138	0	未提交	
+ZC-DEEP-b29	145	packages/ui/src/ToolCallBlocks/renderers/explore.tsx	0a1fc56d	chore: sync ZCode source	145	0	未提交	
+ZC-DEEP-b29	139	packages/ui/src/GitPane.tsx	0a1fc56d	chore: sync ZCode source	116	0	部分未提交	差 23 行
+ZC-DEEP-b29	138	packages/ui/src/WorkspaceSidebarFooter.tsx	0a1fc56d	chore: sync ZCode source	106	0	部分未提交	差 32 行
+ZC-DEEP-b29	135	packages/ui/src/OpenSplitButton.tsx	0a1fc56d	chore: sync ZCode source	92	0	部分未提交	差 43 行
+ZC-DEEP-b29	135	packages/ui/src/previewPaneContent.tsx	0a1fc56d	chore: sync ZCode source	103	0	部分未提交	差 32 行
+ZC-DEEP-b29	135	packages/ui/src/TaskList.tsx	0a1fc56d	chore: sync ZCode source	101	0	部分未提交	差 34 行
+ZC-DEEP-b30	139	packages/ui/src/components/ai-elements/stack-trace.tsx	aac47556	feat: update to v3.15.1	139	0	未提交	
+ZC-DEEP-b30	134	packages/ui/src/components/ai-elements/reasoning.tsx	0a1fc56d	chore: sync ZCode source	134	0	未提交	
+ZC-DEEP-b30	132	packages/ui/src/components/ai-elements/schema-display.tsx	aac47556	feat: update to v3.15.1	132	0	未提交	
+ZC-DEEP-b30	138	packages/ui/src/project-sidebar/grouped/task-row.tsx	0a1fc56d	chore: sync ZCode source	138	0	未提交	
+ZC-DEEP-b30	130	packages/ui/src/project-sidebar/grouped/drag.ts	0a1fc56d	chore: sync ZCode source	130	0	未提交	
+ZC-DEEP-b30	138	packages/ui/src/hooks/useGitRepository.ts	aac47556	feat: update to v3.15.1	138	0	未提交	
+ZC-DEEP-b30	135	packages/ui/src/hooks/useSettingsSync.ts	0a1fc56d	chore: sync ZCode source	135	0	未提交	
+ZC-DEEP-b30	131	packages/ui/src/hooks/useBuiltinAgentCli.ts	aac47556	feat: update to v3.15.1	131	0	未提交	
+ZC-DEEP-b30	138	packages/ui/src/store/automationManagementStore.ts	0a1fc56d	chore: sync ZCode source	138	0	未提交	
+ZC-DEEP-b30	133	packages/ui/src/WorkspaceSidebarFooterUsageSummary.tsx	0a1fc56d	chore: sync ZCode source	133	0	未提交	
+ZC-DEEP-b30	148	packages/ui/src/side-pane-full-view/ConversationHost.tsx	3c5b2276	chore: sync ZCode source	148	0	未提交	
+ZC-DEEP-b30	145	packages/ui/src/v4/composer/useDraftConfigControl.ts	0a1fc56d	chore: sync ZCode source	145	0	未提交	
+ZC-DEEP-b31	146	packages/shared/src/task-realtime-core.ts	aac47556	feat: update to v3.15.1	146	0	未提交	
+ZC-DEEP-b31	143	packages/shared/src/coding-plan-subscription.ts	aac47556	feat: update to v3.15.1	143	0	未提交	
+ZC-DEEP-b31	140	packages/shared/src/zcode-protocol-legacy-types.ts	3c5b2276	chore: sync ZCode source	140	0	未提交	
+ZC-DEEP-b31	148	apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/conversation-telemetry-facts.ts	deb218da	docs(注释): L2-B7 bootstrap-v4	148	0	未提交	
+ZC-DEEP-b31	145	apps/zcode-cli/packages/adapters/src/model/runner-generate.ts	522e851e	docs(注释): L2-B6 adapters	145	0	未提交	
+ZC-DEEP-b31	142	apps/zcode-cli/packages/core/src/runtime/methods/events.ts	c788b9f1	docs(注释): 收尾提交 core 与 contracts 纯注释增量	142	0	未提交	
+ZC-DEEP-b31	146	packages/ui/src/feedback/feedbackSubmissionJob.ts	aac47556	feat: update to v3.15.1	146	0	未提交	
+ZC-DEEP-b31	142	packages/ui/src/root/useRootPlatformEffects.ts	0a1fc56d	chore: sync ZCode source	142	0	未提交	
+ZC-DEEP-b31	135	packages/ui/src/ToolCallBlocks/renderers/cua.tsx	aac47556	feat: update to v3.15.1	135	0	未提交	
+ZC-DEEP-b31	139	packages/desktop/scripts/mcp-apps-host-fixture/managed-renderer.tsx	0a1fc56d	chore: sync ZCode source	139	0	未提交	
+ZC-DEEP-b31	139	packages/desktop/src/main/editors.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b31	142	packages/desktop/src/preload/index.ts	0a1fc56d	chore: sync ZCode source	142	0	未提交	
+ZC-DEEP-b32	147	packages/provider/src/config/model-config.ts	872ad960	feat: open source	147	0	未提交	
+ZC-DEEP-b32	128	packages/provider/src/config/provider-config.ts	872ad960	feat: open source	128	0	未提交	
+ZC-DEEP-b32	135	apps/zcode-cli/packages/core/src/agent/session-history-hydrator.ts	0a1fc56d	chore: sync ZCode source	135	0	未提交	
+ZC-DEEP-b32	131	apps/zcode-cli/packages/core/src/runtime/methods/rewind-message.ts	55fedda3	docs(注释): L1-B1 其余 runtime 与 hooks	131	0	未提交	
+ZC-DEEP-b32	131	apps/zcode-cli/packages/core/src/browser-client/playwright.ts	c788b9f1	docs(注释): 收尾提交 core 与 contracts 纯注释增量	131	0	未提交	
+ZC-DEEP-b32	135	packages/shared/src/browser-use/commands.ts	aac47556	feat: update to v3.15.1	135	0	未提交	
+ZC-DEEP-b32	127	packages/desktop/src/main/windowsChromeAppBoundKey.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b32	133	packages/ui/src/v4/pendingCommandRegistry.ts	0a1fc56d	chore: sync ZCode source	133	0	未提交	
+ZC-DEEP-b32	129	packages/ui/src/store/pluginStore.ts	872ad960	feat: open source	129	0	未提交	
+ZC-DEEP-b32	128	packages/ui/src/ToolCallBlocks/renderers/edit.tsx	872ad960	feat: open source	128	0	未提交	
+ZC-DEEP-b32	127	packages/ui/src/components/ai-elements/code-block.tsx	872ad960	feat: open source	127	0	未提交	
+ZC-DEEP-b32	126	packages/ui/src/chat-input-toolbar/CodingPlanContextUsage.tsx	aac47556	feat: update to v3.15.1	126	0	未提交	
+ZC-DEEP-b33	126	packages/ui/src/settings/model-provider-section/ProviderModelMetadata.ts	872ad960	feat: open source	126	0	未提交	
+ZC-DEEP-b33	125	packages/ui/src/settings/model-provider-section/Navigation.tsx	0a1fc56d	chore: sync ZCode source	125	0	未提交	
+ZC-DEEP-b33	128	packages/ui/src/settings/model-provider-section/providerFamilyConnectionVisibility.ts	aac47556	feat: update to v3.15.1	128	0	未提交	
+ZC-DEEP-b33	122	packages/ui/src/settings/HookForm.tsx	0a1fc56d	chore: sync ZCode source	122	0	未提交	
+ZC-DEEP-b33	121	packages/ui/src/settings/BrowserSettingsSection.tsx	0a1fc56d	chore: sync ZCode source	121	0	未提交	
+ZC-DEEP-b33	126	packages/ui/src/v4/officeSuggestedPrompts.ts	aac47556	feat: update to v3.15.1	126	0	未提交	
+ZC-DEEP-b33	124	packages/ui/src/components/ui/toast.tsx	0a1fc56d	chore: sync ZCode source	124	0	未提交	
+ZC-DEEP-b33	123	packages/ui/src/ModelTrajectoryPaneParts.tsx	872ad960	feat: open source	123	0	未提交	
+ZC-DEEP-b33	122	packages/ui/src/GitBranchSwitcher.tsx	aac47556	feat: update to v3.15.1	122	0	未提交	
+ZC-DEEP-b33	123	packages/ui/src/plugin-ui/adapters/pluginUiManagedPage.ts	0a1fc56d	chore: sync ZCode source	123	0	未提交	
+ZC-DEEP-b33	120	packages/ui/src/mentions/components/MentionPanel.tsx	0a1fc56d	chore: sync ZCode source	120	0	未提交	
+ZC-DEEP-b33	125	packages/ui/src/CodingPlanUsageRemainingPanel.tsx	aac47556	feat: update to v3.15.1	125	0	未提交	
+ZC-DEEP-b34	131	apps/dev-docs/src/feature-boundary-graph/FeatureBoundaryGraphView.tsx	55f48e6d	docs(注释): 收尾提交 插件宿主与 dev-docs 纯注释增量	131	0	未提交	
+ZC-DEEP-b34	128	packages/desktop/scripts/gen-ui-fixture/main.ts	0a1fc56d	chore: sync ZCode source	128	0	未提交	
+ZC-DEEP-b34	126	packages/server/src/remote/zcodeAgentDevDeploy.ts	3c5b2276	chore: sync ZCode source	126	0	未提交	
+ZC-DEEP-b34	125	packages/desktop/src/main/chromeCookieManager.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b34	126	apps/zcode-cli/packages/core/src/permission/service.ts	0a1fc56d	chore: sync ZCode source	126	0	未提交	
+ZC-DEEP-b34	124	packages/desktop/src/main/browserView/electronBrowserWebmRecorder.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b34	126	packages/zcode-server-cli/src/supervisor/supervisor.ts	0a1fc56d	chore: sync ZCode source	126	0	未提交	
+ZC-DEEP-b34	130	packages/shared/src/zcode-protocol-v4/transport.ts	0a1fc56d	chore: sync ZCode source	130	0	未提交	
+ZC-DEEP-b34	120	packages/ui/src/settings/InstalledPluginManagement.tsx	0a1fc56d	chore: sync ZCode source	120	0	未提交	
+ZC-DEEP-b34	123	packages/ui/src/store/tabStore.ts	0a1fc56d	chore: sync ZCode source	123	0	未提交	
+ZC-DEEP-b34	122	packages/ui/src/components/ai-elements/prompt-input.tsx	872ad960	feat: open source	122	0	未提交	
+ZC-DEEP-b34	123	packages/ui/src/v4/sessionsIndexStore.ts	aac47556	feat: update to v3.15.1	123	0	未提交	
+ZC-DEEP-b35	119	packages/desktop/scripts/mcp-apps-host-fixture/chain-main.ts	aac47556	feat: update to v3.15.1	119	0	未提交	
+ZC-DEEP-b35	118	packages/desktop/scripts/gen-ui-fixture/presentation-checks.ts	0a1fc56d	chore: sync ZCode source	118	0	未提交	
+ZC-DEEP-b35	119	packages/client/src/webRemoteControlAcknowledgedRelayProtocol.ts	aac47556	feat: update to v3.15.1	119	0	未提交	
+ZC-DEEP-b35	118	packages/shared/src/source-server/contracts.ts	0a1fc56d	chore: sync ZCode source	118	0	未提交	
+ZC-DEEP-b35	121	apps/zcode-cli/packages/office-runtime/ui/main.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	121	0	未提交	
+ZC-DEEP-b35	116	packages/server/src/http.ts	0a1fc56d	chore: sync ZCode source	116	0	未提交	
+ZC-DEEP-b35	120	packages/ui/src/v4/telemetry/conversationTelemetryParityE2E.ts	aac47556	feat: update to v3.15.1	120	0	未提交	
+ZC-DEEP-b35	119	packages/ui/src/git-branch-switcher/GitBranchDialogs.tsx	872ad960	feat: open source	119	0	未提交	
+ZC-DEEP-b35	120	packages/ui/src/project-sidebar/ProjectNodeContent.tsx	0a1fc56d	chore: sync ZCode source	120	0	未提交	
+ZC-DEEP-b35	118	packages/ui/src/project-sidebar/index.tsx	3c5b2276	chore: sync ZCode source	118	0	未提交	
+ZC-DEEP-b35	118	packages/ui/src/store/subagentsStore.ts	0a1fc56d	chore: sync ZCode source	118	0	未提交	
+ZC-DEEP-b35	117	packages/ui/src/onboarding/OnboardingFlowParts.tsx	872ad960	feat: open source	117	0	未提交	
+ZC-DEEP-b36	116	packages/ui/src/lib/conversationShareError.ts	0a1fc56d	chore: sync ZCode source	116	0	未提交	
+ZC-DEEP-b36	116	packages/ui/src/v4/ConversationFileSummaryPanel.tsx	aac47556	feat: update to v3.15.1	116	0	未提交	
+ZC-DEEP-b36	119	packages/desktop/src/main/desktopWindowChrome.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b36	115	packages/desktop/src/main/desktopZCodeDataSizeTelemetry.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b36	117	packages/server/src/remote/ssh-backend.ts	cd758978	注释(server): ssh-backend 全文件收口 351/351（+423/−0）	0	0	已提交且干净	
+ZC-DEEP-b36	114	packages/desktop/src/main/browserView/browserPlaywrightDomSnapshot.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b36	115	packages/ui/src/settings/McpServerForm.tsx	0a1fc56d	chore: sync ZCode source	115	0	未提交	
+ZC-DEEP-b36	115	packages/ui/src/TaskSearchDialog.tsx	aac47556	feat: update to v3.15.1	115	0	未提交	
+ZC-DEEP-b36	115	packages/ui/src/workspace-file-tree/model.ts	872ad960	feat: open source	115	0	未提交	
+ZC-DEEP-b36	114	packages/ui/src/components/marketing-touch/MarketingTouchProvider.tsx	aac47556	feat: update to v3.15.1	114	0	未提交	
+ZC-DEEP-b36	114	packages/ui/src/feedback/FeedbackSubmitForm.tsx	aac47556	feat: update to v3.15.1	114	0	未提交	
+ZC-DEEP-b36	113	packages/ui/src/settings/usage-stats/CodingPlanUsageBarChart.tsx	872ad960	feat: open source	113	0	未提交	
+ZC-DEEP-b37	117	apps/zcode-cli/packages/core/src/runtime/methods/file-rewind.ts	872ad960	feat: open source	199	8	台账与实测不符	超出 82 行
+ZC-DEEP-b37	116	apps/zcode-cli/packages/office-runtime/src/adapters/server.ts	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	116	0	未提交	
+ZC-DEEP-b37	114	apps/zcode-cli/packages/office-runtime/ui/shell/parts.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	114	0	未提交	
+ZC-DEEP-b37	112	packages/shared/src/index.ts	0a1fc56d	chore: sync ZCode source	112	0	未提交	
+ZC-DEEP-b37	111	packages/shared/src/background-task-controls.ts	872ad960	feat: open source	111	0	未提交	
+ZC-DEEP-b37	111	packages/shared/src/conversation-preview-artifacts.ts	872ad960	feat: open source	111	0	未提交	
+ZC-DEEP-b37	114	packages/ui/src/hooks/useUsageEntitlement.ts	0a1fc56d	chore: sync ZCode source	114	0	未提交	
+ZC-DEEP-b37	113	packages/ui/src/lib/chatAttachments.ts	aac47556	feat: update to v3.15.1	113	0	未提交	
+ZC-DEEP-b37	115	packages/ui/src/WelcomeScreen.tsx	0a1fc56d	chore: sync ZCode source	115	0	未提交	
+ZC-DEEP-b37	112	packages/ui/src/v4/ConversationQueuePanel.tsx	0a1fc56d	chore: sync ZCode source	112	0	未提交	
+ZC-DEEP-b37	111	packages/ui/src/v4/useConversationTimelineFind.ts	aac47556	feat: update to v3.15.1	111	0	未提交	
+ZC-DEEP-b37	112	packages/desktop/src/main/desktopMainIpcPlatform.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b38	110	packages/server/src/remote/localTarGz.ts	872ad960	feat: open source	110	0	未提交	
+ZC-DEEP-b38	110	packages/ui/src/settings/saved-workflows/SavedWorkflowDetailView.tsx	0a1fc56d	chore: sync ZCode source	110	0	未提交	
+ZC-DEEP-b38	106	packages/ui/src/ToolCallBlocks/renderers/agent.tsx	0a1fc56d	chore: sync ZCode source	106	0	未提交	
+ZC-DEEP-b38	112	packages/ui/src/chat-input-toolbar/display.tsx	0a1fc56d	chore: sync ZCode source	112	0	未提交	
+ZC-DEEP-b38	111	packages/desktop/src/main/desktopOAuthDeepLink.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b38	111	packages/ui/src/settings/model-provider-section/ProviderModelMetadataDialog.tsx	aac47556	feat: update to v3.15.1	111	0	未提交	
+ZC-DEEP-b38	107	packages/ui/src/components/ai-elements/open-in-chat.tsx	aac47556	feat: update to v3.15.1	107	0	未提交	
+ZC-DEEP-b38	110	packages/ui/src/ToolCallBlocks/renderers/node-repl.tsx	872ad960	feat: open source	110	0	未提交	
+ZC-DEEP-b38	109	packages/ui/src/feedback/FeatureRequestDialog.tsx	0a1fc56d	chore: sync ZCode source	109	0	未提交	
+ZC-DEEP-b38	110	packages/ui/src/prompt-editor/ChatPromptEditor.tsx	3c5b2276	chore: sync ZCode source	110	0	未提交	
+ZC-DEEP-b38	107	packages/ui/src/ToolCallBlocks/renderers/execute.tsx	aac47556	feat: update to v3.15.1	107	0	未提交	
+ZC-DEEP-b38	109	packages/desktop/src/main/networkTelemetryAggregator.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b39	106	packages/ui/src/WhiteboardPane.tsx	872ad960	feat: open source	106	0	未提交	
+ZC-DEEP-b39	106	packages/ui/src/git-graph/GitGraphPane.tsx	aac47556	feat: update to v3.15.1	106	0	未提交	
+ZC-DEEP-b39	107	packages/ui/src/lib/assistantPreviewCards.ts	aac47556	feat: update to v3.15.1	107	0	未提交	
+ZC-DEEP-b39	105	packages/ui/src/lib/askUserQuestion.ts	aac47556	feat: update to v3.15.1	105	0	未提交	
+ZC-DEEP-b39	106	packages/ui/src/lib/taskChangeSummary.ts	aac47556	feat: update to v3.15.1	91	0	部分未提交	差 15 行
+ZC-DEEP-b39	107	packages/ui/src/workspace-file-tree/WorkspaceFileTreeRowView.tsx	0a1fc56d	chore: sync ZCode source	107	0	未提交	
+ZC-DEEP-b39	106	packages/ui/src/components/ui/pdf-viewer.tsx	872ad960	feat: open source	106	0	未提交	
+ZC-DEEP-b39	109	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/subagent-session-query.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	109	0	未提交	
+ZC-DEEP-b39	108	packages/ui/src/store/pluginManagementStore.ts	0a1fc56d	chore: sync ZCode source	108	0	未提交	
+ZC-DEEP-b39	108	packages/ui/src/v4/V4WorkspaceChatArea.tsx	3c5b2276	chore: sync ZCode source	108	0	未提交	
+ZC-DEEP-b39	109	apps/zcode-cli/packages/cli/src/prompt-command.ts	e0060254	增加日志记录	109	0	未提交	
+ZC-DEEP-b39	110	apps/zcode-cli/packages/office-runtime/ui/viewers/PdfView.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	110	0	未提交	
+ZC-DEEP-b40	105	packages/shared/src/zcodeEndpoint.ts	0a1fc56d	chore: sync ZCode source	105	0	未提交	
+ZC-DEEP-b40	105	apps/zcode-cli/packages/telemetry/src/bootstrap.ts	872ad960	feat: open source	105	0	未提交	
+ZC-DEEP-b40	107	packages/server/src/source-server/transportAdapter.ts	0a1fc56d	chore: sync ZCode source	107	0	未提交	
+ZC-DEEP-b40	106	packages/ui/src/hooks/useRemoteConnectionForm.ts	0a1fc56d	chore: sync ZCode source	106	0	未提交	
+ZC-DEEP-b40	107	packages/desktop/src/host/windowHostControllerProjection.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	107	0	未提交	
+ZC-DEEP-b40	106	apps/zcode-cli/packages/core/src/tool/handlers/bash.ts	bce5596a	docs(注释): 补齐被剔除的 runtime/tool 注释改写	185	0	台账与实测不符	超出 79 行
+ZC-DEEP-b40	111	apps/zcode-cli/packages/adapters/src/plugins/index.ts	522e851e	docs(注释): L2-B6 adapters	111	0	未提交	
+ZC-DEEP-b40	105	packages/provider/src/resolver.ts	872ad960	feat: open source	105	0	未提交	
+ZC-DEEP-b40	107	packages/ui/src/app-shell/SidePaneTabTrigger.tsx	0a1fc56d	chore: sync ZCode source	107	0	未提交	
+ZC-DEEP-b40	106	packages/ui/src/SlashCommandPlugin.tsx	0a1fc56d	chore: sync ZCode source	106	0	未提交	
+ZC-DEEP-b40	106	packages/ui/src/gen-ui/adapters/page.ts	0a1fc56d	chore: sync ZCode source	106	0	未提交	
+ZC-DEEP-b40	106	packages/ui/src/ModelTrajectoryPane.tsx	aac47556	feat: update to v3.15.1	106	0	未提交	
+ZC-DEEP-b41	103	packages/ui/src/settings/model-provider-section/ProviderFormControls.tsx	872ad960	feat: open source	103	0	未提交	
+ZC-DEEP-b41	106	packages/ui/src/settings/model-provider-section/enterpriseCodingPlanProducts.ts	aac47556	feat: update to v3.15.1	106	0	未提交	
+ZC-DEEP-b41	103	apps/zcode-cli/packages/core/src/runtime/methods/index.ts	55fedda3	docs(注释): L1-B1 其余 runtime 与 hooks	103	0	未提交	
+ZC-DEEP-b41	104	packages/ui/src/onboarding/OnboardingDialog.tsx	0a1fc56d	chore: sync ZCode source	104	0	未提交	
+ZC-DEEP-b41	105	packages/ui/src/lib/planModeTool.ts	aac47556	feat: update to v3.15.1	105	0	未提交	
+ZC-DEEP-b41	105	packages/ui/src/lib/settingsNavigation.ts	0a1fc56d	chore: sync ZCode source	105	0	未提交	
+ZC-DEEP-b41	103	packages/e2e-report/src/viewer/trendData.ts	aac47556	feat: update to v3.15.1	103	0	未提交	
+ZC-DEEP-b41	104	packages/desktop/src/main/desktopCrashCapture.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b41	104	packages/desktop/src/main/browserView/browserScreenshotSurfaceCoordinator.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b41	103	packages/ui/src/settings/saved-workflows/SavedWorkflowProjectGroup.tsx	0a1fc56d	chore: sync ZCode source	103	0	未提交	
+ZC-DEEP-b41	104	apps/zcode-cli/packages/core/src/mcp/index.ts	0a1fc56d	chore: sync ZCode source	104	0	未提交	
+ZC-DEEP-b41	104	packages/ui/src/v4/ConversationShareSelectionPanel.tsx	0a1fc56d	chore: sync ZCode source	104	0	未提交	
+ZC-DEEP-b42	102	packages/desktop/scripts/mcp-apps-host-fixture/sampling-main.ts	aac47556	feat: update to v3.15.1	102	0	未提交	
+ZC-DEEP-b42	103	packages/desktop/scripts/mcp-apps-host-fixture/showcase-main.ts	aac47556	feat: update to v3.15.1	103	0	未提交	
+ZC-DEEP-b42	102	packages/desktop/src/main/openInEditor.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b42	103	packages/ui/src/highspeed/highspeedTurnStore.ts	aac47556	feat: update to v3.15.1	103	0	未提交	
+ZC-DEEP-b42	102	packages/ui/src/hooks/useUsageStats.ts	aac47556	feat: update to v3.15.1	102	0	未提交	
+ZC-DEEP-b42	102	packages/ui/src/ModelTrajectoryExpandableMessage.tsx	872ad960	feat: open source	102	0	未提交	
+ZC-DEEP-b42	109	packages/ui/src/settingsPageHelpers.tsx	3c5b2276	chore: sync ZCode source	109	0	未提交	
+ZC-DEEP-b42	102	packages/ui/src/chat-input-toolbar/ThoughtLevelCycleControl.tsx	0a1fc56d	chore: sync ZCode source	102	0	未提交	
+ZC-DEEP-b42	100	packages/ui/src/chat-input-toolbar/ComposerModelMenu.tsx	0a1fc56d	chore: sync ZCode source	100	0	未提交	
+ZC-DEEP-b42	102	packages/ui/src/ToolCallBlocks/fileSummaryHeuristics.ts	872ad960	feat: open source	102	0	未提交	
+ZC-DEEP-b42	103	packages/ui/src/v4/WorkbenchPane.tsx	3c5b2276	chore: sync ZCode source	103	0	未提交	
+ZC-DEEP-b42	100	packages/ui/src/EmbeddedBrowserPaneParts.tsx	0a1fc56d	chore: sync ZCode source	100	0	未提交	
+ZC-DEEP-b43	101	packages/ui/src/lib/remoteConnectionWizard.ts	0a1fc56d	chore: sync ZCode source	101	0	未提交	
+ZC-DEEP-b43	99	packages/ui/src/lib/remoteConnectionPresentation.ts	0a1fc56d	chore: sync ZCode source	99	0	未提交	
+ZC-DEEP-b43	99	packages/ui/src/lib/webElementContext.ts	aac47556	feat: update to v3.15.1	99	0	未提交	
+ZC-DEEP-b43	100	packages/ui/src/settings/RemoteSyncActions.tsx	0a1fc56d	chore: sync ZCode source	100	0	未提交	
+ZC-DEEP-b43	100	packages/ui/src/settings/OffPeakTaskList.tsx	0a1fc56d	chore: sync ZCode source	100	0	未提交	
+ZC-DEEP-b43	98	packages/ui/src/settings/HooksList.tsx	aac47556	feat: update to v3.15.1	98	0	未提交	
+ZC-DEEP-b43	100	packages/ui/src/settings/usage-stats/UsageHeatmap.tsx	872ad960	feat: open source	100	0	未提交	
+ZC-DEEP-b43	99	packages/ui/src/components/ai-elements/context.tsx	872ad960	feat: open source	99	0	未提交	
+ZC-DEEP-b43	100	packages/ui/src/components/ai-elements/attachments.tsx	872ad960	feat: open source	100	0	未提交	
+ZC-DEEP-b43	98	packages/ui/src/components/ai-elements/mic-selector.tsx	aac47556	feat: update to v3.15.1	98	0	未提交	
+ZC-DEEP-b43	98	packages/ui/src/Terminal.tsx	0a1fc56d	chore: sync ZCode source	98	0	未提交	
+ZC-DEEP-b43	98	packages/ui/src/DeveloperToolsPane.tsx	872ad960	feat: open source	98	0	未提交	
+ZC-DEEP-b44	101	packages/ui/src/hooks/useGitBranchSwitcher.ts	872ad960	feat: open source	101	0	未提交	
+ZC-DEEP-b44	101	packages/ui/src/presentation/presentationPdfPrintExport.ts	aac47556	feat: update to v3.15.1	101	0	未提交	
+ZC-DEEP-b44	99	packages/desktop/src/main/browserView/browserPlaywrightExecutor.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b44	100	packages/web/src/web-remote-control/ui/webRemoteControlDeviceListPage.tsx	0a1fc56d	chore: sync ZCode source	100	0	未提交	
+ZC-DEEP-b44	98	packages/ui/src/plugin-ui/app/pluginUiHostController.ts	aac47556	feat: update to v3.15.1	98	0	未提交	
+ZC-DEEP-b44	98	packages/ui/src/project-sidebar/useProjectTree.ts	0a1fc56d	chore: sync ZCode source	98	0	未提交	
+ZC-DEEP-b44	98	packages/ui/src/remote-connection/RemoteConnectionSelection.tsx	0a1fc56d	chore: sync ZCode source	98	0	未提交	
+ZC-DEEP-b44	98	packages/ui/src/v4/telemetry/localTtftObserver.ts	872ad960	feat: open source	98	0	未提交	
+ZC-DEEP-b44	98	packages/ui/src/v4/V4InteractionDialogs.tsx	aac47556	feat: update to v3.15.1	98	0	未提交	
+ZC-DEEP-b44	97	packages/ui/src/lib/toolIdentity.ts	0a1fc56d	chore: sync ZCode source	97	0	未提交	
+ZC-DEEP-b44	98	packages/ui/src/root/useRootOAuthEffects.ts	0a1fc56d	chore: sync ZCode source	98	0	未提交	
+ZC-DEEP-b44	98	packages/ui/src/onboarding/OccupationOnboarding.tsx	0a1fc56d	chore: sync ZCode source	98	0	未提交	
+ZC-DEEP-b45	101	apps/zcode-cli/packages/core/src/agent/message-history.ts	c788b9f1	docs(注释): 收尾提交 core 与 contracts 纯注释增量	101	0	未提交	
+ZC-DEEP-b45	99	apps/zcode-cli/packages/tui/src/app.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	99	0	未提交	
+ZC-DEEP-b45	97	apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-multiword-gh.ts	54f51bad	docs(注释): L2-B3 handlers a-o	97	0	未提交	
+ZC-DEEP-b45	97	packages/zcode-server-cli/src/runtime/componentCache.ts	872ad960	feat: open source	97	0	未提交	
+ZC-DEEP-b45	96	packages/web/src/web-remote-control/domain/webRemoteControlScreenCopy.ts	0a1fc56d	chore: sync ZCode source	96	0	未提交	
+ZC-DEEP-b45	96	apps/zcode-cli/packages/cli/src/tui-prompt-handler.ts	e0060254	增加日志记录	96	0	未提交	
+ZC-DEEP-b45	96	packages/ui/src/ChatErrorBanner.tsx	0a1fc56d	chore: sync ZCode source	96	0	未提交	
+ZC-DEEP-b45	95	apps/zcode-cli/packages/core/src/tool/handlers/bash-command-permission-policy.ts	54f51bad	docs(注释): L2-B3 handlers a-o	95	0	未提交	
+ZC-DEEP-b45	95	packages/desktop/src/main/chromeInstallationCandidates.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b45	95	packages/ui/src/components/ai-elements/test-results.tsx	872ad960	feat: open source	95	0	未提交	
+ZC-DEEP-b45	96	packages/ui/src/lib/userActionTelemetry.ts	aac47556	feat: update to v3.15.1	96	0	未提交	
+ZC-DEEP-b45	96	packages/ui/src/root/sourceServerUpdateNotifications.ts	0a1fc56d	chore: sync ZCode source	96	0	未提交	
+ZC-DEEP-b46	97	apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-run.ts	522e851e	docs(注释): L2-B6 adapters	97	0	未提交	
+ZC-DEEP-b46	96	apps/zcode-cli/packages/adapters/src/model/failure-classifier.ts	522e851e	docs(注释): L2-B6 adapters	96	0	未提交	
+ZC-DEEP-b46	95	packages/ui/src/v4/ConversationDraftSuggestedPrompts.tsx	872ad960	feat: open source	83	0	部分未提交	差 12 行
+ZC-DEEP-b46	95	packages/ui/src/app-shell/WorkflowWorkspaceCard.tsx	872ad960	feat: open source	95	0	未提交	
+ZC-DEEP-b46	94	packages/ui/src/DirectoryBrowser.tsx	0a1fc56d	chore: sync ZCode source	88	0	部分未提交	差 6 行
+ZC-DEEP-b46	94	packages/ui/src/v4/composer/composerDraftStore.ts	0a1fc56d	chore: sync ZCode source	94	0	未提交	
+ZC-DEEP-b46	94	packages/shared/src/project-access-token-client.ts	0a1fc56d	chore: sync ZCode source	94	0	未提交	
+ZC-DEEP-b46	93	packages/ui/src/lib/chatErrorAttributionEvidence.ts	aac47556	feat: update to v3.15.1	93	0	未提交	
+ZC-DEEP-b46	93	packages/ui/src/project-sidebar/ChatRemoteFolderSelection.tsx	0a1fc56d	chore: sync ZCode source	90	0	部分未提交	差 3 行
+ZC-DEEP-b46	92	packages/ui/src/lib/nodeReplToolDisplay.ts	0a1fc56d	chore: sync ZCode source	92	0	未提交	
+ZC-DEEP-b46	92	packages/shared/src/permission-request-preview.ts	872ad960	feat: open source	92	0	未提交	
+ZC-DEEP-b46	92	packages/ui/src/components/ui/chart.tsx	872ad960	feat: open source	85	0	部分未提交	差 7 行
+ZC-DEEP-b47	94	packages/desktop/src/main/fileApplications.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b47	93	packages/desktop/src/main/browserView/browserVirtualClipboard.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b47	91	packages/desktop/src/main/desktopApplicationMenu.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b47	91	packages/desktop/src/main/windowsCuaOperationIndicator.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b47	92	packages/ui/src/components/ai-elements/markdown-image.tsx	872ad960	feat: open source	92	0	未提交	
+ZC-DEEP-b47	92	packages/ui/src/components/marketing-touch/marketingTouchController.ts	0a1fc56d	chore: sync ZCode source	92	0	未提交	
+ZC-DEEP-b47	92	packages/ui/src/highspeed/HighspeedShareNoticeCard.tsx	aac47556	feat: update to v3.15.1	83	0	部分未提交	差 9 行
+ZC-DEEP-b47	92	packages/ui/src/previewPaneImageContent.tsx	0a1fc56d	chore: sync ZCode source	89	0	部分未提交	差 3 行
+ZC-DEEP-b47	92	packages/ui/src/prompt-editor/ChatPromptActionMenu.tsx	872ad960	feat: open source	90	0	部分未提交	差 2 行
+ZC-DEEP-b47	90	packages/ui/src/CodingPlanBillingDiscount.tsx	aac47556	feat: update to v3.15.1	88	0	部分未提交	差 2 行
+ZC-DEEP-b47	91	packages/ui/src/settings/model-provider-section/CodingPlanStatusMeta.tsx	aac47556	feat: update to v3.15.1	91	0	未提交	
+ZC-DEEP-b47	92	apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-flags-text.ts	54f51bad	docs(注释): L2-B3 handlers a-o	92	0	未提交	
+ZC-DEEP-b48	95	apps/zcode-cli/packages/core/src/tool/handlers/edit.ts	bce5596a	docs(注释): 补齐被剔除的 runtime/tool 注释改写	246	0	台账与实测不符	超出 151 行
+ZC-DEEP-b48	94	apps/zcode-cli/packages/core/src/workflow/lifecycle.ts	73782160	docs(注释): L2-B9 context/memory/workflow	94	0	未提交	
+ZC-DEEP-b48	89	apps/zcode-cli/packages/core/src/mcp/image-normalization.ts	872ad960	feat: open source	89	0	未提交	
+ZC-DEEP-b48	90	apps/zcode-cli/packages/core/src/runtime/internal-turn-methods.ts	ad6dc0eb	docs(注释): L2-B2 runtime	90	0	未提交	
+ZC-DEEP-b48	90	packages/ui/src/lib/assistantDirectiveParser.ts	aac47556	feat: update to v3.15.1	90	0	未提交	
+ZC-DEEP-b48	89	packages/ui/src/lib/chatErrorAttribution.ts	aac47556	feat: update to v3.15.1	89	0	未提交	
+ZC-DEEP-b48	90	packages/ui/src/lib/toolDiffPreview.ts	872ad960	feat: open source	90	0	未提交	
+ZC-DEEP-b48	90	packages/ui/src/UpdateStatusDialog.tsx	872ad960	feat: open source	90	0	未提交	
+ZC-DEEP-b48	90	packages/ui/src/v4/conversationAssistantWorkItems.ts	aac47556	feat: update to v3.15.1	90	0	未提交	
+ZC-DEEP-b48	89	packages/ui/src/quickpick/quickPickCommands.ts	872ad960	feat: open source	89	0	未提交	
+ZC-DEEP-b48	94	apps/zcode-cli/packages/cli/src/command-center/create.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	94	0	未提交	
+ZC-DEEP-b48	90	apps/zcode-cli/packages/cli/src/command-center/slash-commands.ts	aac47556	feat: update to v3.15.1	90	0	未提交	
+ZC-DEEP-b49	89	packages/ui/src/browser-use/EmbeddedBrowserPermissionPrompts.tsx	0a1fc56d	chore: sync ZCode source	89	0	未提交	
+ZC-DEEP-b49	87	packages/ui/src/feedback/FeedbackSupplementComposer.tsx	aac47556	feat: update to v3.15.1	87	0	未提交	
+ZC-DEEP-b49	90	packages/ui/src/settings/CodingPlanEmbeddedWebviewDialog.tsx	aac47556	feat: update to v3.15.1	83	0	部分未提交	差 7 行
+ZC-DEEP-b49	87	packages/ui/src/settings/MigrationCandidatesCard.tsx	872ad960	feat: open source	80	0	部分未提交	差 7 行
+ZC-DEEP-b49	88	packages/ui/src/ToolCallBlocks/renderers/changes-group.tsx	0a1fc56d	chore: sync ZCode source	88	0	未提交	
+ZC-DEEP-b49	89	packages/ui/src/ToolCallBlocks/renderers/mcp.tsx	aac47556	feat: update to v3.15.1	89	0	未提交	
+ZC-DEEP-b49	87	packages/ui/src/app-shell/WorkflowWorkspaceCardBody.tsx	872ad960	feat: open source	87	0	未提交	
+ZC-DEEP-b49	87	packages/ui/src/AssistantPreviewCards.tsx	0a1fc56d	chore: sync ZCode source	80	0	部分未提交	差 7 行
+ZC-DEEP-b49	88	packages/ui/src/quickpick/TaskFindDialog.tsx	872ad960	feat: open source	82	0	部分未提交	差 6 行
+ZC-DEEP-b49	87	packages/ui/src/store/offPeakTaskStore.ts	aac47556	feat: update to v3.15.1	87	0	未提交	
+ZC-DEEP-b49	91	packages/shared/src/zcode-protocol-v4/controller.ts	0a1fc56d	chore: sync ZCode source	91	0	未提交	
+ZC-DEEP-b49	90	packages/server/src/remote/remoteAssetDeployDecision.ts	0a1fc56d	chore: sync ZCode source	90	0	未提交	
+ZC-DEEP-b50	86	packages/ui/src/settingsCodePreview.tsx	872ad960	feat: open source	86	0	未提交	
+ZC-DEEP-b50	86	packages/ui/src/components/ai-elements/environment-variables.tsx	aac47556	feat: update to v3.15.1	86	0	未提交	
+ZC-DEEP-b50	85	packages/ui/src/lib/pptxElementReference.ts	aac47556	feat: update to v3.15.1	85	0	未提交	
+ZC-DEEP-b50	86	packages/ui/src/remote-connection/EditConnectionProfileDialog.tsx	0a1fc56d	chore: sync ZCode source	80	0	部分未提交	差 6 行
+ZC-DEEP-b50	84	packages/ui/src/components/ai-elements/commit.tsx	872ad960	feat: open source	84	0	未提交	
+ZC-DEEP-b50	84	packages/ui/src/feedback/feedbackTimeline.tsx	aac47556	feat: update to v3.15.1	84	0	未提交	
+ZC-DEEP-b50	84	packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	aac47556	feat: update to v3.15.1	84	0	未提交	
+ZC-DEEP-b50	86	packages/ui/src/settings/saved-workflows/useSavedWorkflowGlobalGroup.ts	872ad960	feat: open source	86	0	未提交	
+ZC-DEEP-b50	86	apps/zcode-cli/packages/tui/src/app-view.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	86	0	未提交	
+ZC-DEEP-b50	85	packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetDialog.tsx	aac47556	feat: update to v3.15.1	85	0	未提交	
+ZC-DEEP-b50	87	packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	0a1fc56d	chore: sync ZCode source	87	0	未提交	
+ZC-DEEP-b50	94	apps/zcode-cli/packages/core/src/runtime/methods/subagent.ts	26a74c66	docs(注释): L1-A4 目标队列与 MCP	94	0	未提交	
+ZC-DEEP-b51	83	packages/ui/src/lib/codingPlanQuotaResetCoordinator.ts	872ad960	feat: open source	83	0	未提交	
+ZC-DEEP-b51	85	packages/ui/src/settings/PluginStoreCard.tsx	3c5b2276	chore: sync ZCode source	80	0	部分未提交	差 5 行
+ZC-DEEP-b51	83	packages/ui/src/v4/ConversationShareContent.tsx	0a1fc56d	chore: sync ZCode source	83	0	未提交	
+ZC-DEEP-b51	83	packages/ui/src/gen-ui/components/GenUiCard.tsx	0a1fc56d	chore: sync ZCode source	75	0	部分未提交	差 8 行
+ZC-DEEP-b51	82	packages/ui/src/login/LoginApiKeyForm.tsx	0a1fc56d	chore: sync ZCode source	76	0	部分未提交	差 6 行
+ZC-DEEP-b51	84	packages/ui/src/ToolCallBlocks.tsx	0a1fc56d	chore: sync ZCode source	84	0	未提交	
+ZC-DEEP-b51	82	packages/ui/src/ToolCallBlocks/renderers/cua-group.tsx	0a1fc56d	chore: sync ZCode source	82	0	未提交	
+ZC-DEEP-b51	83	packages/ui/src/ToolCallBlocks/toolResultDisplay.ts	aac47556	feat: update to v3.15.1	83	0	未提交	
+ZC-DEEP-b51	84	packages/desktop/scripts/mcp-apps-host-fixture/main.ts	aac47556	feat: update to v3.15.1	84	0	未提交	
+ZC-DEEP-b51	82	packages/desktop/scripts/mcp-apps-host-fixture/managed-environment.ts	0a1fc56d	chore: sync ZCode source	82	0	未提交	
+ZC-DEEP-b51	85	packages/desktop/src/main/mcpUserDirectory/index.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b51	84	packages/desktop/src/main/desktopWindowLifecycle.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b52	89	packages/desktop/src/main/localTtftExporter.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b52	82	packages/desktop/src/main/browserView/browserCommandPageHandlers.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b52	85	packages/desktop/src/main/cuaAccessibilitySettings.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b52	82	packages/desktop/src/main/pluginSandbox/host.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b52	82	packages/desktop/src/main/browserView/browserScreenshotActivityController.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b52	80	packages/desktop/src/main/desktopBrowserViewIpc.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b52	81	packages/desktop/src/main/desktopFinderOpenFolderWorkflow.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b52	81	packages/ui/src/components/ai-elements/file-tree.tsx	aac47556	feat: update to v3.15.1	81	0	未提交	
+ZC-DEEP-b52	81	packages/ui/src/ToolCallBlocks/renderers/read-session-context.tsx	872ad960	feat: open source	78	0	部分未提交	差 3 行
+ZC-DEEP-b52	81	packages/shared/src/git.ts	872ad960	feat: open source	81	0	未提交	
+ZC-DEEP-b52	81	packages/rpc/src/channelServer.ts	0a1fc56d	chore: sync ZCode source	81	0	未提交	
+ZC-DEEP-b52	82	packages/server/src/remote/docker-backend.ts	0a1fc56d	chore: sync ZCode source	82	0	未提交	
+ZC-DEEP-b53	81	packages/ui/src/project-sidebar/ProjectCreation.tsx	0a1fc56d	chore: sync ZCode source	81	0	未提交	
+ZC-DEEP-b53	79	packages/ui/src/app-shell/SidePaneTabOverview.tsx	872ad960	feat: open source	79	0	未提交	
+ZC-DEEP-b53	80	packages/ui/src/app-shell/useWorkspaceTaskNavigation.ts	872ad960	feat: open source	80	0	未提交	
+ZC-DEEP-b53	79	packages/ui/src/feedback/FeedbackBackgroundUploadIndicator.tsx	aac47556	feat: update to v3.15.1	79	0	未提交	
+ZC-DEEP-b53	81	packages/ui/src/lib/uiPerfArmsTelemetry.ts	aac47556	feat: update to v3.15.1	81	0	未提交	
+ZC-DEEP-b53	79	packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	aac47556	feat: update to v3.15.1	79	0	未提交	
+ZC-DEEP-b53	79	packages/ui/src/rewards/RewardsWebview.tsx	aac47556	feat: update to v3.15.1	74	0	部分未提交	差 5 行
+ZC-DEEP-b53	80	packages/shared/src/workspace-hook-digest.ts	872ad960	feat: open source	80	0	未提交	
+ZC-DEEP-b53	80	packages/client/src/remoteServiceAccess.ts	0a1fc56d	chore: sync ZCode source	80	0	未提交	
+ZC-DEEP-b53	79	packages/desktop/scripts/mcp-apps-host-fixture/managed-lifecycle-checks.ts	0a1fc56d	chore: sync ZCode source	79	0	未提交	
+ZC-DEEP-b53	79	packages/desktop/src/main/rendererActionTraceBroker.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b53	93	apps/zcode-cli/packages/i18n/src/types.ts	872ad960	feat: open source	93	0	未提交	
+ZC-DEEP-b54	91	packages/stream-animate/src/server/deepseekRunner.ts	aac47556	feat: update to v3.15.1	91	0	未提交	
+ZC-DEEP-b54	78	packages/stream-animate/src/server/http.ts	aac47556	feat: update to v3.15.1	78	0	未提交	
+ZC-DEEP-b54	104	apps/zcode-cli/packages/bootstrap/src/plugins.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	104	0	未提交	
+ZC-DEEP-b54	82	apps/zcode-cli/packages/bootstrap/src/app/input-facade.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	82	0	未提交	
+ZC-DEEP-b54	87	apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/cold-event-merge.ts	deb218da	docs(注释): L2-B7 bootstrap-v4	87	0	未提交	
+ZC-DEEP-b54	113	apps/zcode-cli/packages/adapters/src/mcp/index.ts	522e851e	docs(注释): L2-B6 adapters	113	0	未提交	
+ZC-DEEP-b54	87	packages/zcode-server-cli/src/server-core/http.ts	0a1fc56d	chore: sync ZCode source	87	0	未提交	
+ZC-DEEP-b54	79	apps/zcode-cli/packages/core/src/tool/handlers/apply-patch.ts	54f51bad	docs(注释): L2-B3 handlers a-o	79	0	未提交	
+ZC-DEEP-b54	79	packages/shared/src/workspace-hook-config.ts	872ad960	feat: open source	79	0	未提交	
+ZC-DEEP-b54	80	packages/ui/src/ErrorBoundary.tsx	872ad960	feat: open source	80	0	未提交	
+ZC-DEEP-b54	78	packages/ui/src/v4/ConversationTurnNavigator.tsx	0a1fc56d	chore: sync ZCode source	75	0	部分未提交	差 3 行
+ZC-DEEP-b54	81	packages/ui/src/ToolCallBlocks/renderers/create-workflow.tsx	aac47556	feat: update to v3.15.1	77	0	部分未提交	差 4 行
+ZC-DEEP-b55	89	packages/e2e-report/src/viewer/App.tsx	aac47556	feat: update to v3.15.1	80	0	部分未提交	差 9 行
+ZC-DEEP-b55	89	apps/zcode-cli/packages/node-repl-host/src/server.ts	aac47556	feat: update to v3.15.1	89	0	未提交	
+ZC-DEEP-b55	79	packages/ui/src/settings/usage-stats/AppUsageDailyModelTrendChart.tsx	872ad960	feat: open source	75	0	部分未提交	差 4 行
+ZC-DEEP-b55	80	apps/zcode-cli/packages/office-runtime/ui/viewers/PptxView.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	80	0	未提交	
+ZC-DEEP-b55	78	packages/desktop/src/main/chromeExecutableDiscovery.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b55	79	packages/ui/src/components/ai-elements/inline-citation.tsx	aac47556	feat: update to v3.15.1	79	0	未提交	
+ZC-DEEP-b55	79	packages/ui/src/settings/pluginManagedResourceGroups.ts	aac47556	feat: update to v3.15.1	79	0	未提交	
+ZC-DEEP-b55	80	packages/ui/src/store/codingPlanQuotaResetState.ts	aac47556	feat: update to v3.15.1	80	0	未提交	
+ZC-DEEP-b55	87	apps/zcode-cli/packages/adapters/src/model/model-execution.ts	522e851e	docs(注释): L2-B6 adapters	87	0	未提交	
+ZC-DEEP-b55	77	packages/desktop/src/main/chromeProfileDiscovery.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b55	77	packages/desktop/src/main/web-remote-relay/webRemoteControlTransport.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b55	78	packages/shared/src/zcode-protocol-v4/telemetry.ts	0a1fc56d	chore: sync ZCode source	78	0	未提交	
+ZC-DEEP-b56	78	packages/ui/src/components/ai-elements/mermaid-block.tsx	872ad960	feat: open source	78	0	未提交	
+ZC-DEEP-b56	78	packages/ui/src/root/reconnectRemoteWorkspaceHistoryEntry.ts	0a1fc56d	chore: sync ZCode source	78	0	未提交	
+ZC-DEEP-b56	78	packages/ui/src/ToolCallBlocks/ToolLayout.tsx	872ad960	feat: open source	75	0	部分未提交	差 3 行
+ZC-DEEP-b56	80	packages/ui/src/v4/composer/useDraftSessionPrewarm.ts	0a1fc56d	chore: sync ZCode source	80	0	未提交	
+ZC-DEEP-b56	77	apps/zcode-cli/packages/core/src/runtime/methods/compact-persistence.ts	55fedda3	docs(注释): L1-B1 其余 runtime 与 hooks	77	0	未提交	
+ZC-DEEP-b56	76	packages/desktop/src/main/browserView/browserTabRecoveryStore.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b56	76	packages/desktop/src/main/mcpUserDirectory/claude.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b56	76	packages/desktop/src/main/windowsInstallResourceLocks.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b56	77	packages/ui/src/app-shell/types.ts	3c5b2276	chore: sync ZCode source	77	0	未提交	
+ZC-DEEP-b56	76	packages/ui/src/git-graph/layout.ts	aac47556	feat: update to v3.15.1	76	0	未提交	
+ZC-DEEP-b56	76	packages/ui/src/lib/codeCommentContext.ts	872ad960	feat: open source	76	0	未提交	
+ZC-DEEP-b56	78	packages/ui/src/settings/automationFormat.ts	aac47556	feat: update to v3.15.1	78	0	未提交	
+ZC-DEEP-b57	76	packages/e2e-report/src/viewer/ChartPanels.tsx	aac47556	feat: update to v3.15.1	74	0	部分未提交	差 2 行
+ZC-DEEP-b57	76	packages/ui/src/feedback/TicketsView.tsx	aac47556	feat: update to v3.15.1	64	0	部分未提交	差 12 行
+ZC-DEEP-b57	76	packages/ui/src/lib/conversationSelectionReference.ts	0a1fc56d	chore: sync ZCode source	76	0	未提交	
+ZC-DEEP-b57	76	packages/ui/src/ModelTrajectoryPaneDetails.tsx	aac47556	feat: update to v3.15.1	76	0	未提交	
+ZC-DEEP-b57	76	packages/ui/src/settings/model-provider-section/ProviderFamilyModeHeader.tsx	0a1fc56d	chore: sync ZCode source	69	0	部分未提交	差 7 行
+ZC-DEEP-b57	77	packages/ui/src/settings/saved-workflows/SavedWorkflowsSection.tsx	3c5b2276	chore: sync ZCode source	71	0	部分未提交	差 6 行
+ZC-DEEP-b57	88	packages/ui/src/v4/conversationProjectionStore.ts	7aeaf5ba	docs(注释): 收尾提交 packages 各包纯注释增量	88	0	未提交	
+ZC-DEEP-b57	77	packages/ui/src/WindowsCaptionMenuButton.tsx	aac47556	feat: update to v3.15.1	64	0	部分未提交	差 13 行
+ZC-DEEP-b57	75	apps/zcode-cli/packages/bootstrap/src/app/workflow-methods.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	75	0	未提交	
+ZC-DEEP-b57	76	apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-flags-process.ts	54f51bad	docs(注释): L2-B3 handlers a-o	76	0	未提交	
+ZC-DEEP-b57	78	packages/desktop/src/main/desktopRuntimeEnv.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b57	76	packages/ui/src/app-shell/WorkflowWorkspaceSidePane.tsx	aac47556	feat: update to v3.15.1	76	0	未提交	
+ZC-DEEP-b58	75	packages/ui/src/git-graph/layoutAlgorithm.ts	aac47556	feat: update to v3.15.1	75	0	未提交	
+ZC-DEEP-b58	76	packages/ui/src/root/useRemoteWorkspaceTabLifecycle.ts	0a1fc56d	chore: sync ZCode source	76	0	未提交	
+ZC-DEEP-b58	75	packages/ui/src/settings/CommandForm.tsx	0a1fc56d	chore: sync ZCode source	64	0	部分未提交	差 11 行
+ZC-DEEP-b58	76	packages/zcode-server-cli/src/platform/serviceManager.ts	3c5b2276	chore: sync ZCode source	76	0	未提交	
+ZC-DEEP-b58	79	apps/zcode-cli/packages/bootstrap/src/app/bundled-plugins.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	79	0	未提交	
+ZC-DEEP-b58	74	apps/zcode-cli/packages/telemetry/src/otlp-exporter.ts	aac47556	feat: update to v3.15.1	74	0	未提交	
+ZC-DEEP-b58	74	packages/desktop/scripts/gen-ui-fixture/react.tsx	0a1fc56d	chore: sync ZCode source	71	0	部分未提交	差 3 行
+ZC-DEEP-b58	76	packages/ui/src/app-shell/WorkflowArtifactSidePane.tsx	aac47556	feat: update to v3.15.1	76	0	未提交	
+ZC-DEEP-b58	74	packages/ui/src/BotsDialog/BotSummaryCard.tsx	29628c9a	feat: update v3.14.3	69	0	部分未提交	差 5 行
+ZC-DEEP-b58	74	packages/ui/src/components/cloud-content-dialog/CloudDialogHero.tsx	aac47556	feat: update to v3.15.1	74	0	未提交	
+ZC-DEEP-b58	75	packages/ui/src/i18n/IntlProvider.tsx	aac47556	feat: update to v3.15.1	75	0	未提交	
+ZC-DEEP-b58	73	packages/shared/src/conversation-share-content.ts	0a1fc56d	chore: sync ZCode source	73	0	未提交	
+ZC-DEEP-b59	74	packages/ui/src/ToolCallBlocks/renderers/read.tsx	872ad960	feat: open source	71	0	部分未提交	差 3 行
+ZC-DEEP-b59	73	packages/ui/src/ToolCallBlocks/renderers/eval-workflow-snippet.tsx	872ad960	feat: open source	64	0	部分未提交	差 9 行
+ZC-DEEP-b59	71	packages/ui/src/v4/agentSessionsIndexTransport.ts	aac47556	feat: update to v3.15.1	71	0	未提交	
+ZC-DEEP-b59	71	packages/ui/src/v4/conversationCuaGroups.ts	aac47556	feat: update to v3.15.1	71	0	未提交	
+ZC-DEEP-b59	72	packages/ui/src/v4/conversationTurnRenderUnits.ts	aac47556	feat: update to v3.15.1	72	0	未提交	
+ZC-DEEP-b59	74	packages/ui/src/store/index.ts	3c5b2276	chore: sync ZCode source	74	0	未提交	
+ZC-DEEP-b59	72	packages/ui/src/store/hooksStore.ts	0a1fc56d	chore: sync ZCode source	72	0	未提交	
+ZC-DEEP-b59	73	packages/desktop/scripts/mcp-apps-host-fixture/rows-main.ts	aac47556	feat: update to v3.15.1	73	0	未提交	
+ZC-DEEP-b59	69	packages/desktop/scripts/mcp-apps-host-fixture/chain-combinations.ts	aac47556	feat: update to v3.15.1	69	0	未提交	
+ZC-DEEP-b59	70	packages/desktop/src/main/about.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b59	72	packages/shared/src/conversation-message-projection-policy.ts	aac47556	feat: update to v3.15.1	72	0	未提交	
+ZC-DEEP-b59	71	packages/ui/src/hooks/useClaudeSessionMigration.ts	aac47556	feat: update to v3.15.1	71	0	未提交	
+ZC-DEEP-b60	74	packages/ui/src/settings/model-provider-section/useCodingPlanEntitlements.ts	aac47556	feat: update to v3.15.1	74	0	未提交	
+ZC-DEEP-b60	72	packages/ui/src/workspace-plugin-preview/WorkspacePluginPreview.tsx	0a1fc56d	chore: sync ZCode source	66	0	部分未提交	差 6 行
+ZC-DEEP-b60	74	packages/desktop/src/main/resourceManagerWindow.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b60	73	packages/desktop/src/renderer/src/main.tsx	0a1fc56d	chore: sync ZCode source	73	0	未提交	
+ZC-DEEP-b60	72	packages/ui/src/plugin-ui/adapters/pluginUiPagePlane.ts	0a1fc56d	chore: sync ZCode source	72	0	未提交	
+ZC-DEEP-b60	72	packages/desktop/src/host/windowHostSessionsIndexObserver.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	72	0	未提交	
+ZC-DEEP-b60	71	packages/desktop/src/renderer/src/plugin-sandbox/aliasRuntime.ts	aac47556	feat: update to v3.15.1	71	0	未提交	
+ZC-DEEP-b60	70	packages/ui/src/components/ui/dropdown-menu.tsx	0a1fc56d	chore: sync ZCode source	70	0	未提交	
+ZC-DEEP-b60	70	packages/ui/src/lib/assistantFileReferences.ts	aac47556	feat: update to v3.15.1	70	0	未提交	
+ZC-DEEP-b60	70	packages/ui/src/lib/fileDisplay.tsx	aac47556	feat: update to v3.15.1	70	0	未提交	
+ZC-DEEP-b60	70	packages/ui/src/plugin-ui/components/PluginUiLauncherItems.tsx	3c5b2276	chore: sync ZCode source	59	0	部分未提交	差 11 行
+ZC-DEEP-b60	71	packages/ui/src/v4/ConversationDraftEmptyState.tsx	aac47556	feat: update to v3.15.1	71	0	未提交	
+ZC-DEEP-b61	71	apps/zcode-cli/packages/core/src/hooks/runner.ts	c788b9f1	docs(注释): 收尾提交 core 与 contracts 纯注释增量	71	0	未提交	
+ZC-DEEP-b61	70	apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-callbacks.ts	54f51bad	docs(注释): L2-B3 handlers a-o	70	0	未提交	
+ZC-DEEP-b61	71	apps/zcode-cli/packages/core/src/session-context/read-session-context.ts	c788b9f1	docs(注释): 收尾提交 core 与 contracts 纯注释增量	71	0	未提交	
+ZC-DEEP-b61	71	apps/zcode-cli/packages/dynamic-workflow/src/index.ts	aac47556	feat: update to v3.15.1	71	0	未提交	
+ZC-DEEP-b61	71	apps/zcode-cli/packages/bootstrap/src/app/script-workflow-tool-port.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	71	0	未提交	
+ZC-DEEP-b61	70	packages/shared/src/gen-ui/contract.ts	0a1fc56d	chore: sync ZCode source	70	0	未提交	
+ZC-DEEP-b61	69	packages/shared/src/subagent-profile-frontmatter.ts	aac47556	feat: update to v3.15.1	69	0	未提交	
+ZC-DEEP-b61	71	packages/ui/src/store/pluginManagementStoreLoading.ts	0a1fc56d	chore: sync ZCode source	71	0	未提交	
+ZC-DEEP-b61	69	packages/ui/src/lib/sidebarPurposeSectionPreferences.ts	0a1fc56d	chore: sync ZCode source	69	0	未提交	
+ZC-DEEP-b61	70	packages/ui/src/components/ai-elements/speech-input.tsx	aac47556	feat: update to v3.15.1	68	0	部分未提交	差 2 行
+ZC-DEEP-b61	68	packages/desktop/src/main/desktopDeepLinkUrl.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b61	69	packages/desktop/src/main/desktopLinuxDeepLinkRegistration.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b62	68	packages/ui/src/project-sidebar/grouped/task-context-menu-content.tsx	0a1fc56d	chore: sync ZCode source	62	0	部分未提交	差 6 行
+ZC-DEEP-b62	68	packages/ui/src/project-sidebar/grouped/useGroupedDrag.ts	3c5b2276	chore: sync ZCode source	68	0	未提交	
+ZC-DEEP-b62	69	packages/ui/src/project-sidebar/useProjectUnreadSignals.ts	0a1fc56d	chore: sync ZCode source	69	0	未提交	
+ZC-DEEP-b62	69	packages/ui/src/root/useBotBroadcastEffects.ts	29628c9a	feat: update v3.14.3	69	0	未提交	
+ZC-DEEP-b62	68	packages/ui/src/store/commandsStore.ts	872ad960	feat: open source	68	0	未提交	
+ZC-DEEP-b62	68	packages/ui/src/lib/codingPlanFunnelTelemetry.ts	aac47556	feat: update to v3.15.1	68	0	未提交	
+ZC-DEEP-b62	68	packages/ui/src/components/ai-elements/jsx-preview.tsx	aac47556	feat: update to v3.15.1	63	0	部分未提交	差 5 行
+ZC-DEEP-b62	68	packages/ui/src/settings/MigrationSection.tsx	872ad960	feat: open source	54	0	部分未提交	差 14 行
+ZC-DEEP-b62	69	packages/desktop/src/main/browserView/browserCommandInput.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b62	67	packages/desktop/src/main/browserDataManager.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b62	71	packages/desktop/src/main/desktopResourceTelemetry.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b62	68	packages/rpc/src/channelClient.ts	0a1fc56d	chore: sync ZCode source	68	0	未提交	
+ZC-DEEP-b63	69	apps/dev-docs/src/capability-map/CapabilityMapView.tsx	10e9df51	docs(注释): L2-B10b-1 覆盖补齐 a-c 段索引	69	0	未提交	
+ZC-DEEP-b63	71	apps/zcode-cli/packages/adapters/src/browser/index.ts	522e851e	docs(注释): L2-B6 adapters	71	0	未提交	
+ZC-DEEP-b63	70	apps/zcode-cli/packages/tui/src/app-sidebar.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	70	0	未提交	
+ZC-DEEP-b63	67	packages/desktop/scripts/mcp-apps-host-fixture/renderer.ts	aac47556	feat: update to v3.15.1	67	0	未提交	
+ZC-DEEP-b63	67	packages/model-option-map/src/parser.ts	872ad960	feat: open source	67	0	未提交	
+ZC-DEEP-b63	69	apps/zcode-cli/packages/adapters/src/model/failure-provider-business-codes.ts	522e851e	docs(注释): L2-B6 adapters	69	0	未提交	
+ZC-DEEP-b63	68	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/message-mapper.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	68	0	未提交	
+ZC-DEEP-b63	67	packages/desktop/src/main/browserView/browserCommandInteractionHandlers.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b63	66	packages/desktop/src/main/desktopRemoteUsageArmsTelemetry.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b63	67	packages/ui/src/components/ai-elements/web-preview.tsx	aac47556	feat: update to v3.15.1	62	0	部分未提交	差 5 行
+ZC-DEEP-b63	67	packages/ui/src/lib/zcodeSessionRestore.ts	aac47556	feat: update to v3.15.1	67	0	未提交	
+ZC-DEEP-b63	67	packages/ui/src/store/skillStore.ts	0a1fc56d	chore: sync ZCode source	67	0	未提交	
+ZC-DEEP-b64	67	apps/zcode-cli/packages/cli/src/command-center/types.ts	aac47556	feat: update to v3.15.1	67	0	未提交	
+ZC-DEEP-b64	69	packages/desktop/src/scheduler/index.ts	0a1fc56d	chore: sync ZCode source	69	0	未提交	
+ZC-DEEP-b64	66	packages/ui/src/browser-use/BrowserViewportToolbar.tsx	0a1fc56d	chore: sync ZCode source	60	0	部分未提交	差 6 行
+ZC-DEEP-b64	66	packages/ui/src/project-sidebar/RemoteProjectList.tsx	0a1fc56d	chore: sync ZCode source	66	0	未提交	
+ZC-DEEP-b64	67	packages/ui/src/ToolCallBlocks/renderers/cuaListDetails.tsx	0a1fc56d	chore: sync ZCode source	67	0	未提交	
+ZC-DEEP-b64	67	packages/ui/src/v4/composer/V4ComposerModeControls.tsx	0a1fc56d	chore: sync ZCode source	58	0	部分未提交	差 9 行
+ZC-DEEP-b64	67	packages/zcode-server-cli/src/contracts.ts	0a1fc56d	chore: sync ZCode source	67	0	未提交	
+ZC-DEEP-b64	67	packages/zcode-server-cli/src/runtime/updatePreparation.ts	aac47556	feat: update to v3.15.1	67	0	未提交	
+ZC-DEEP-b64	74	apps/zcode-cli/packages/core/src/runtime/methods/turn-model-step.ts	bce5596a	docs(注释): 补齐被剔除的 runtime/tool 注释改写	74	0	未提交	
+ZC-DEEP-b64	65	packages/desktop/src/main/desktopSaveFile.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b64	66	packages/ui/src/components/cloud-content-dialog/CloudContentDialog.tsx	aac47556	feat: update to v3.15.1	61	0	部分未提交	差 5 行
+ZC-DEEP-b64	66	packages/ui/src/settings/McpServerList.tsx	0a1fc56d	chore: sync ZCode source	66	0	未提交	
+ZC-DEEP-b65	67	packages/ui/src/v4/windowControllerTaskListRegistry.ts	0a1fc56d	chore: sync ZCode source	67	0	未提交	
+ZC-DEEP-b65	65	packages/desktop/src/main/forceUpdateGuard.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b65	66	packages/ui/src/components/ai-elements/package-info.tsx	aac47556	feat: update to v3.15.1	66	0	未提交	
+ZC-DEEP-b65	66	packages/ui/src/feedback/FeedbackScreenshotPicker.tsx	872ad960	feat: open source	50	0	部分未提交	差 16 行
+ZC-DEEP-b65	66	packages/ui/src/resource-manager/ResourceManagerApp.tsx	0a1fc56d	chore: sync ZCode source	66	0	未提交	
+ZC-DEEP-b65	65	packages/ui/src/settings/usage-stats/AppUsagePanel.tsx	aac47556	feat: update to v3.15.1	57	0	部分未提交	差 8 行
+ZC-DEEP-b65	66	packages/ui/src/ToolCallBlocks/renderers/agentHelpers.ts	aac47556	feat: update to v3.15.1	66	0	未提交	
+ZC-DEEP-b65	68	packages/zcode-server-cli/src/packaging/stage.ts	3c5b2276	chore: sync ZCode source	68	0	未提交	
+ZC-DEEP-b65	66	apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-lifecycle.ts	522e851e	docs(注释): L2-B6 adapters	66	0	未提交	
+ZC-DEEP-b65	65	apps/zcode-cli/packages/cli/src/arguments.ts	e0060254	增加日志记录	65	0	未提交	
+ZC-DEEP-b65	67	apps/zcode-cli/packages/core/src/runtime/methods/context-usage.ts	783d49a6	docs(注释): L1-A2 压缩与预算	67	0	未提交	
+ZC-DEEP-b65	65	packages/server/src/remote/remoteAssetLiveIdentity.ts	872ad960	feat: open source	65	0	未提交	
+ZC-DEEP-b66	66	packages/ui/src/components/ui/carousel.tsx	aac47556	feat: update to v3.15.1	66	0	未提交	
+ZC-DEEP-b66	67	packages/ui/src/ToolCallBlocks/renderers/list-models.tsx	0a1fc56d	chore: sync ZCode source	67	0	未提交	
+ZC-DEEP-b66	67	packages/ui/src/WebRemoteControlMobileShell.tsx	0a1fc56d	chore: sync ZCode source	61	0	部分未提交	差 6 行
+ZC-DEEP-b66	66	packages/ui/src/WorkspaceHeader.tsx	3c5b2276	chore: sync ZCode source	49	0	部分未提交	差 17 行
+ZC-DEEP-b66	65	apps/zcode-cli/packages/dynamic-workflow/src/testing/journal-contract-reads.ts	aac47556	feat: update to v3.15.1	65	0	未提交	
+ZC-DEEP-b66	67	apps/zcode-cli/packages/tui/src/app-events.ts	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	67	0	未提交	
+ZC-DEEP-b66	66	packages/shared/src/usage-stats.ts	aac47556	feat: update to v3.15.1	66	0	未提交	
+ZC-DEEP-b66	65	packages/ui/src/app-shell/SubagentDirectorySidePane.tsx	aac47556	feat: update to v3.15.1	53	0	部分未提交	差 12 行
+ZC-DEEP-b66	65	packages/ui/src/hooks/useZCodeTaskService.ts	aac47556	feat: update to v3.15.1	65	0	未提交	
+ZC-DEEP-b66	65	packages/ui/src/root/remoteWorkspaceSessionPersistence.ts	0a1fc56d	chore: sync ZCode source	65	0	未提交	
+ZC-DEEP-b66	64	packages/ui/src/store/whiteboardStore.ts	872ad960	feat: open source	64	0	未提交	
+ZC-DEEP-b66	64	packages/ui/src/components/ui/smooth-metric-value.tsx	aac47556	feat: update to v3.15.1	64	0	未提交	
+ZC-DEEP-b67	66	packages/ui/src/app-shell/WorkflowRunPhaseList.tsx	aac47556	feat: update to v3.15.1	66	0	未提交	
+ZC-DEEP-b67	64	packages/ui/src/components/ai-elements/audio-player.tsx	aac47556	feat: update to v3.15.1	64	0	未提交	
+ZC-DEEP-b67	66	packages/ui/src/lib/markdownFileLink.ts	872ad960	feat: open source	66	0	未提交	
+ZC-DEEP-b67	65	packages/ui/src/MessageChangeSummaryPanel.tsx	0a1fc56d	chore: sync ZCode source	46	0	部分未提交	差 19 行
+ZC-DEEP-b67	66	packages/ui/src/settings/saved-workflows/SavedWorkflowCard.tsx	0a1fc56d	chore: sync ZCode source	60	0	部分未提交	差 6 行
+ZC-DEEP-b67	66	packages/ui/src/ToolCallBlocks/renderers/get-workflow-run.tsx	872ad960	feat: open source	62	0	部分未提交	差 4 行
+ZC-DEEP-b67	65	packages/ui/src/v4/useV4SessionQuotaBanner.ts	872ad960	feat: open source	65	0	未提交	
+ZC-DEEP-b67	67	apps/zcode-cli/packages/adapters/src/config/index.ts	522e851e	docs(注释): L2-B6 adapters	67	0	未提交	
+ZC-DEEP-b67	65	apps/zcode-cli/packages/core/src/runtime/methods/target-completion-verification.ts	26a74c66	docs(注释): L1-A4 目标队列与 MCP	65	0	未提交	
+ZC-DEEP-b67	65	apps/zcode-cli/packages/core/src/workflow/scheduler/collection-planner.ts	73782160	docs(注释): L2-B9 context/memory/workflow	65	0	未提交	
+ZC-DEEP-b67	66	packages/desktop/src/host/remoteMediaPreviewProxy.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	66	0	未提交	
+ZC-DEEP-b67	66	packages/desktop/src/host/serverRemoteConnection.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	66	0	未提交	
+ZC-DEEP-b68	64	packages/ui/src/settings/usage-stats/CodingPlanUsageLineChart.tsx	872ad960	feat: open source	64	0	未提交	
+ZC-DEEP-b68	64	packages/ui/src/ToolCallBlocks/ToolSummaryRow.tsx	0a1fc56d	chore: sync ZCode source	64	0	未提交	
+ZC-DEEP-b68	64	apps/zcode-cli/packages/debug/src/shared.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	64	0	未提交	
+ZC-DEEP-b68	64	packages/desktop/scripts/mcp-apps-host-fixture/managed-checks.ts	0a1fc56d	chore: sync ZCode source	64	0	未提交	
+ZC-DEEP-b68	64	packages/ui/src/components/ui/select.tsx	aac47556	feat: update to v3.15.1	64	0	未提交	
+ZC-DEEP-b68	64	packages/ui/src/feedback/TicketDetail.tsx	aac47556	feat: update to v3.15.1	58	0	部分未提交	差 6 行
+ZC-DEEP-b68	64	packages/ui/src/lib/promptInputTriggers.ts	aac47556	feat: update to v3.15.1	64	0	未提交	
+ZC-DEEP-b68	64	packages/ui/src/lib/toolDisplay.ts	0a1fc56d	chore: sync ZCode source	64	0	未提交	
+ZC-DEEP-b68	63	packages/ui/src/lib/whiteboard.ts	aac47556	feat: update to v3.15.1	63	0	未提交	
+ZC-DEEP-b68	64	packages/ui/src/resource-manager/storage/StorageSection.tsx	0a1fc56d	chore: sync ZCode source	54	0	部分未提交	差 10 行
+ZC-DEEP-b68	63	packages/ui/src/v4/ConversationFileRewindDialog.tsx	0a1fc56d	chore: sync ZCode source	50	0	部分未提交	差 13 行
+ZC-DEEP-b68	67	apps/zcode-cli/packages/adapters/src/model/transform.ts	522e851e	docs(注释): L2-B6 adapters	67	0	未提交	
+ZC-DEEP-b69	63	packages/ui/src/components/cloud-content-dialog/CloudDialogMediaHero.tsx	aac47556	feat: update to v3.15.1	63	0	未提交	
+ZC-DEEP-b69	64	packages/ui/src/lib/zcodeUiError.ts	aac47556	feat: update to v3.15.1	64	0	未提交	
+ZC-DEEP-b69	63	packages/ui/src/ToolCallBlocks/renderers/send-message.tsx	872ad960	feat: open source	63	0	未提交	
+ZC-DEEP-b69	64	packages/ui/src/ToolCallBlocks/renderers/skill.tsx	872ad960	feat: open source	61	0	部分未提交	差 3 行
+ZC-DEEP-b69	63	packages/ui/src/v4/conversationFindIndex.ts	aac47556	feat: update to v3.15.1	63	0	未提交	
+ZC-DEEP-b69	64	packages/ui/src/v4/highspeed/HighSpeedDiffusionCanvas.tsx	aac47556	feat: update to v3.15.1	64	0	未提交	
+ZC-DEEP-b69	64	packages/web/src/share/conversationSharePreviewClient.ts	0a1fc56d	chore: sync ZCode source	64	0	未提交	
+ZC-DEEP-b69	64	apps/zcode-cli/packages/adapters/src/browser/page-command.ts	522e851e	docs(注释): L2-B6 adapters	64	0	未提交	
+ZC-DEEP-b69	63	apps/zcode-cli/packages/core/src/tool/handlers/bash-read-file-sources.ts	54f51bad	docs(注释): L2-B3 handlers a-o	63	0	未提交	
+ZC-DEEP-b69	63	packages/desktop/src/main/aboutWindow.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b69	62	packages/shared/src/subagent-profile-parser.ts	aac47556	feat: update to v3.15.1	62	0	未提交	
+ZC-DEEP-b69	65	packages/ui/src/app-shell/WorkflowRunSidePaneSections.tsx	0a1fc56d	chore: sync ZCode source	54	0	部分未提交	差 11 行
+ZC-DEEP-b70	62	packages/desktop/scripts/mcp-apps-host-fixture/widget.tsx	aac47556	feat: update to v3.15.1	62	0	未提交	
+ZC-DEEP-b70	63	packages/model-option-map/src/evaluator.ts	872ad960	feat: open source	63	0	未提交	
+ZC-DEEP-b70	62	packages/shared/src/zcode-slash-command-help.ts	aac47556	feat: update to v3.15.1	62	0	未提交	
+ZC-DEEP-b70	62	packages/ui/src/components/ai-elements/chain-of-thought.tsx	aac47556	feat: update to v3.15.1	62	0	未提交	
+ZC-DEEP-b70	62	packages/ui/src/settings/MemorySettingsViewer.tsx	0a1fc56d	chore: sync ZCode source	54	0	部分未提交	差 8 行
+ZC-DEEP-b70	63	packages/ui/src/store/subagentsContextStore.ts	0a1fc56d	chore: sync ZCode source	63	0	未提交	
+ZC-DEEP-b70	62	packages/ui/src/project-sidebar/grouped/sticky-group-header.tsx	0a1fc56d	chore: sync ZCode source	52	0	部分未提交	差 10 行
+ZC-DEEP-b70	63	packages/ui/src/feedback/FeedbackSubmitSections.tsx	0a1fc56d	chore: sync ZCode source	50	0	部分未提交	差 13 行
+ZC-DEEP-b70	63	packages/ui/src/lib/planUsageArmsTelemetry.ts	aac47556	feat: update to v3.15.1	63	0	未提交	
+ZC-DEEP-b70	63	packages/ui/src/hooks/useModelSelectionView.ts	0a1fc56d	chore: sync ZCode source	63	0	未提交	
+ZC-DEEP-b70	63	packages/ui/src/v4/paneLayoutPersistence.ts	aac47556	feat: update to v3.15.1	63	0	未提交	
+ZC-DEEP-b70	65	apps/zcode-cli/packages/cli/src/plugins-command.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	65	0	未提交	
+ZC-DEEP-b71	61	packages/ui/src/git-graph/GitGraphDialog.tsx	872ad960	feat: open source	61	0	未提交	
+ZC-DEEP-b71	61	packages/ui/src/presentation/pptxRendererPreviewEngine.ts	872ad960	feat: open source	61	0	未提交	
+ZC-DEEP-b71	62	packages/ui/src/presentation/presentationElementModel.ts	aac47556	feat: update to v3.15.1	62	0	未提交	
+ZC-DEEP-b71	61	apps/zcode-cli/packages/core/src/browser-client/documentation.ts	872ad960	feat: open source	61	0	未提交	
+ZC-DEEP-b71	62	packages/desktop/src/main/browserView/browserTabResidencyCoordinator.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b71	62	packages/server/src/remote/zcodeAgentDeploy.ts	872ad960	feat: open source	62	0	未提交	
+ZC-DEEP-b71	63	packages/ui/src/UpdateStatusDialogController.tsx	872ad960	feat: open source	63	0	未提交	
+ZC-DEEP-b71	63	packages/ui/src/v4/sessionQuotaBannerState.ts	aac47556	feat: update to v3.15.1	63	0	未提交	
+ZC-DEEP-b71	65	packages/ui/src/v4/V4ConversationContext.tsx	0a1fc56d	chore: sync ZCode source	65	0	未提交	
+ZC-DEEP-b71	64	apps/zcode-cli/packages/adapters/src/exec/shell-init-snapshot.ts	522e851e	docs(注释): L2-B6 adapters	64	0	未提交	
+ZC-DEEP-b71	64	apps/zcode-cli/packages/core/src/runtime/methods/target.ts	aac47556	feat: update to v3.15.1	119	2	台账与实测不符	超出 55 行
+ZC-DEEP-b71	63	packages/ui/src/project-workflow/WorkflowRunSaveControls.tsx	0a1fc56d	chore: sync ZCode source	63	0	未提交	
+ZC-DEEP-b72	62	packages/ui/src/settings/model-provider-section/codingPlanEmbeddedWebview.ts	aac47556	feat: update to v3.15.1	62	0	未提交	
+ZC-DEEP-b72	62	packages/ui/src/settings/saved-workflows/SavedWorkflowGlobalGroup.tsx	0a1fc56d	chore: sync ZCode source	56	0	部分未提交	差 6 行
+ZC-DEEP-b72	61	packages/ui/src/ToolCallBlocks/ToolCallBody.tsx	0a1fc56d	chore: sync ZCode source	40	0	部分未提交	差 21 行
+ZC-DEEP-b72	62	packages/ui/src/useTaskListItemContextActions.ts	aac47556	feat: update to v3.15.1	62	0	未提交	
+ZC-DEEP-b72	61	apps/dev-docs/src/capability-map/CapabilityMapDetail.tsx	10e9df51	docs(注释): L2-B10b-1 覆盖补齐 a-c 段索引	61	0	未提交	
+ZC-DEEP-b72	63	apps/zcode-cli/packages/bootstrap/src/zcode-protocol-entrypoint.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	63	0	未提交	
+ZC-DEEP-b72	63	apps/zcode-cli/packages/core/src/tool/edit-matchers.ts	c3590b12	docs(注释): L2-B4 handlers p-z 与 tool 其余	63	0	未提交	
+ZC-DEEP-b72	60	packages/client/src/webRemoteControlRelayProtocol.ts	aac47556	feat: update to v3.15.1	60	0	未提交	
+ZC-DEEP-b72	61	packages/desktop/src/main/applicationIcons.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b72	62	packages/server/src/remote/connect.ts	aac47556	feat: update to v3.15.1	62	0	未提交	
+ZC-DEEP-b72	61	packages/shared/src/tool-call-summary.ts	872ad960	feat: open source	61	0	未提交	
+ZC-DEEP-b72	61	packages/ui/src/onboarding/useOnboardingMigration.ts	872ad960	feat: open source	61	0	未提交	
+ZC-DEEP-b73	61	packages/desktop/scripts/mcp-apps-host-fixture/retention-renderer.ts	aac47556	feat: update to v3.15.1	61	0	未提交	
+ZC-DEEP-b73	60	packages/desktop/src/main/manifestUpdateProvider.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b73	61	packages/desktop/src/main/pluginSandbox/protocol.ts	abe7f439	注释(desktop): protocol 全文件收口 153/153（+134/−0）	0	0	已提交且干净	
+ZC-DEEP-b73	60	packages/stream-animate/src/client/FrameChart.tsx	aac47556	feat: update to v3.15.1	54	0	部分未提交	差 6 行
+ZC-DEEP-b73	61	packages/ui/src/project-sidebar/grouped/virtualized-group-task-list.tsx	0a1fc56d	chore: sync ZCode source	61	0	未提交	
+ZC-DEEP-b73	61	packages/ui/src/settings/automationTemplateCatalog.ts	aac47556	feat: update to v3.15.1	61	0	未提交	
+ZC-DEEP-b73	61	packages/ui/src/settings/MemorySettingsSection.tsx	0a1fc56d	chore: sync ZCode source	57	0	部分未提交	差 4 行
+ZC-DEEP-b73	61	packages/ui/src/TaskActionMenuContent.tsx	3c5b2276	chore: sync ZCode source	54	0	部分未提交	差 7 行
+ZC-DEEP-b73	60	packages/web/src/auth/zaiWebOAuthProvider.ts	872ad960	feat: open source	60	0	未提交	
+ZC-DEEP-b73	60	packages/zcode-server-cli/src/runtime/lock.ts	872ad960	feat: open source	60	0	未提交	
+ZC-DEEP-b73	61	apps/zcode-cli/packages/core/src/tool/handlers/bash-command-parser.ts	54f51bad	docs(注释): L2-B3 handlers a-o	61	0	未提交	
+ZC-DEEP-b73	62	apps/zcode-cli/packages/tui/src/app-keyboard.ts	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	62	0	未提交	
+ZC-DEEP-b74	60	packages/ui/src/settings/model-provider-section/StartPlanCard.tsx	aac47556	feat: update to v3.15.1	56	0	部分未提交	差 4 行
+ZC-DEEP-b74	61	packages/ui/src/settings/PluginConfigControls.tsx	0a1fc56d	chore: sync ZCode source	53	0	部分未提交	差 8 行
+ZC-DEEP-b74	62	packages/ui/src/settings/pluginStoreListing.ts	3c5b2276	chore: sync ZCode source	62	0	未提交	
+ZC-DEEP-b74	60	packages/ui/src/settings/model-provider-section/codingPlanProductPresentation.ts	aac47556	feat: update to v3.15.1	60	0	未提交	
+ZC-DEEP-b74	64	packages/ui/src/store/zcodeSessionStoreTypes.ts	0a1fc56d	chore: sync ZCode source	64	0	未提交	
+ZC-DEEP-b74	59	packages/ui/src/store/conversationShareSelectionStore.ts	0a1fc56d	chore: sync ZCode source	59	0	未提交	
+ZC-DEEP-b74	62	packages/ui/src/ToolCallBlocks/renderers/list-saved-workflows-presentation.tsx	0a1fc56d	chore: sync ZCode source	62	0	未提交	
+ZC-DEEP-b74	61	packages/ui/src/v4/conversationFindHighlightDom.ts	aac47556	feat: update to v3.15.1	61	0	未提交	
+ZC-DEEP-b74	61	packages/zcode-server-cli/src/packaging/stageCli.ts	3c5b2276	chore: sync ZCode source	61	0	未提交	
+ZC-DEEP-b74	61	apps/zcode-cli/packages/bootstrap/src/app/workflow-facade.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	61	0	未提交	
+ZC-DEEP-b74	59	packages/desktop/scripts/mcp-apps-host-fixture/agent.ts	0a1fc56d	chore: sync ZCode source	59	0	未提交	
+ZC-DEEP-b74	59	packages/shared/src/zcode-protocol-v4/workspace-hook-review.ts	872ad960	feat: open source	59	0	未提交	
+ZC-DEEP-b75	59	apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-history.ts	54f51bad	docs(注释): L2-B3 handlers a-o	59	0	未提交	
+ZC-DEEP-b75	59	packages/shared/src/localTtft.ts	872ad960	feat: open source	59	0	未提交	
+ZC-DEEP-b75	58	packages/server/src/remote/remoteDeployLock.ts	0a1fc56d	chore: sync ZCode source	58	0	未提交	
+ZC-DEEP-b75	58	packages/desktop/src/renderer/src/plugin-sandbox/genUi.ts	0a1fc56d	chore: sync ZCode source	58	0	未提交	
+ZC-DEEP-b75	60	packages/web/src/web-remote-control/app/webRemoteControlEntry.ts	0a1fc56d	chore: sync ZCode source	60	0	未提交	
+ZC-DEEP-b75	59	packages/ui/src/v4/conversationTurnWorkSegments.ts	0a1fc56d	chore: sync ZCode source	59	0	未提交	
+ZC-DEEP-b75	61	packages/ui/src/app-shell/workflow-artifacts/presets/ArtifactChartView.tsx	872ad960	feat: open source	61	0	未提交	
+ZC-DEEP-b75	59	packages/ui/src/chat-input-toolbar/ComposerProviderMenu.tsx	0a1fc56d	chore: sync ZCode source	59	0	未提交	
+ZC-DEEP-b75	60	packages/ui/src/components/ai-elements/terminal.tsx	872ad960	feat: open source	60	0	未提交	
+ZC-DEEP-b75	60	packages/ui/src/lib/taskModelRecovery.ts	aac47556	feat: update to v3.15.1	60	0	未提交	
+ZC-DEEP-b75	60	packages/ui/src/plugin-ui/adapters/usePluginUiToolCallModel.ts	0a1fc56d	chore: sync ZCode source	60	0	未提交	
+ZC-DEEP-b75	59	packages/ui/src/ToolCallBlocks/renderers/task-stop.tsx	872ad960	feat: open source	55	0	部分未提交	差 4 行
+ZC-DEEP-b76	60	apps/zcode-cli/packages/bootstrap/src/app/script-workflow-runtime.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	60	0	未提交	
+ZC-DEEP-b76	59	apps/zcode-cli/packages/core/src/hooks/workspace-hook-review-flow.ts	c788b9f1	docs(注释): 收尾提交 core 与 contracts 纯注释增量	59	0	未提交	
+ZC-DEEP-b76	59	apps/zcode-cli/packages/core/src/runtime/methods/context.ts	55fedda3	docs(注释): L1-B1 其余 runtime 与 hooks	59	0	未提交	
+ZC-DEEP-b76	60	apps/zcode-cli/packages/tui/src/app-tool-transcript.ts	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	60	0	未提交	
+ZC-DEEP-b76	60	packages/ui/src/components/ai-elements/queue.tsx	872ad960	feat: open source	60	0	未提交	
+ZC-DEEP-b76	60	packages/ui/src/DesktopTopOverlay.tsx	0a1fc56d	chore: sync ZCode source	47	0	部分未提交	差 13 行
+ZC-DEEP-b77	59	packages/ui/src/hooks/useComposerConnectionSwitch.ts	0a1fc56d	chore: sync ZCode source	59	0	未提交	
+ZC-DEEP-b77	59	packages/ui/src/hooks/useSessionSubagents.ts	aac47556	feat: update to v3.15.1	59	0	未提交	
+ZC-DEEP-b77	58	packages/ui/src/lib/builtinSkillI18n.ts	0a1fc56d	chore: sync ZCode source	58	0	未提交	
+ZC-DEEP-b77	59	packages/ui/src/mentions/providers/sessionsMentionProvider.ts	0a1fc56d	chore: sync ZCode source	59	0	未提交	
+ZC-DEEP-b77	58	packages/ui/src/remote-connection/RemoteConnectionHistoryInput.tsx	0a1fc56d	chore: sync ZCode source	54	0	部分未提交	差 4 行
+ZC-DEEP-b77	58	packages/ui/src/ToolCallBlocks/fileSummaries.ts	872ad960	feat: open source	58	0	未提交	
+ZC-DEEP-b78	59	packages/ui/src/GitPaneChangeCard.tsx	872ad960	feat: open source	43	0	部分未提交	差 16 行
+ZC-DEEP-b78	60	packages/ui/src/ToolCallBlocks/QueuedSummaryContent.tsx	aac47556	feat: update to v3.15.1	60	0	未提交	
+ZC-DEEP-b78	58	packages/ui/src/browser-use/ResponsiveBrowserResizeHandles.tsx	0a1fc56d	chore: sync ZCode source	58	0	未提交	
+ZC-DEEP-b78	58	packages/ui/src/cua-permission/CuaPermissionObservationAttachment.tsx	aac47556	feat: update to v3.15.1	58	0	未提交	
+ZC-DEEP-b78	58	packages/ui/src/gen-ui/adapters/retainedPage.ts	aac47556	feat: update to v3.15.1	58	0	未提交	
+ZC-DEEP-b78	58	packages/ui/src/git-branch-switcher/display.ts	872ad960	feat: open source	58	0	未提交	
+ZC-DEEP-b79	58	packages/ui/src/ToolCallBlocks/renderers/cron-create.tsx	0a1fc56d	chore: sync ZCode source	58	0	未提交	
+ZC-DEEP-b79	58	packages/ui/src/ToolCallBlocks/renderers/goal.tsx	872ad960	feat: open source	58	0	未提交	
+ZC-DEEP-b79	57	packages/desktop/src/renderer/src/desktopPlatform.ts	0a1fc56d	chore: sync ZCode source	57	0	未提交	
+ZC-DEEP-b79	61	packages/shared/src/zcode-protocol-v4/snapshot.ts	0a1fc56d	chore: sync ZCode source	61	0	未提交	
+ZC-DEEP-b79	57	packages/ui/src/components/ai-elements/model-selector.tsx	aac47556	feat: update to v3.15.1	49	0	部分未提交	差 8 行
+ZC-DEEP-b79	58	packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetAction.tsx	872ad960	feat: open source	58	0	未提交	
+ZC-DEEP-b80	57	packages/ui/src/hooks/useModelProviders.ts	872ad960	feat: open source	57	0	未提交	
+ZC-DEEP-b80	57	packages/ui/src/hooks/usePlugins.ts	872ad960	feat: open source	57	0	未提交	
+ZC-DEEP-b80	57	packages/zcode-server-cli/src/runtime/updateCommand.ts	0a1fc56d	chore: sync ZCode source	57	0	未提交	
+ZC-DEEP-b80	57	packages/zcode-server-cli/src/runtime/updateHandoff.ts	0a1fc56d	chore: sync ZCode source	57	0	未提交	
+ZC-DEEP-b80	58	packages/ui/src/conversation-share-interaction/conversationSharePopoverActions.ts	0a1fc56d	chore: sync ZCode source	58	0	未提交	
+ZC-DEEP-b80	58	packages/ui/src/components/workflow-timeline/WorkflowSaveFields.tsx	aac47556	feat: update to v3.15.1	34	0	部分未提交	差 24 行
+ZC-DEEP-b81	57	packages/shared/src/desktopMenu.ts	872ad960	feat: open source	57	0	未提交	
+ZC-DEEP-b81	57	packages/shared/src/node/atomicFileLock.ts	872ad960	feat: open source	57	0	未提交	
+ZC-DEEP-b81	57	packages/shared/src/telemetry.ts	0a1fc56d	chore: sync ZCode source	57	0	未提交	
+ZC-DEEP-b81	59	apps/zcode-cli/packages/core/src/errors/error-payload.ts	aac47556	feat: update to v3.15.1	108	8	台账与实测不符	超出 49 行
+ZC-DEEP-b81	56	packages/e2e-report/src/viewer/CoveragePanel.tsx	aac47556	feat: update to v3.15.1	50	0	部分未提交	差 6 行
+ZC-DEEP-b81	57	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/plugin-reference-catalog.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	57	0	未提交	
+ZC-DEEP-b82	56	packages/ui/src/project-sidebar/useProjectRemoteSync.tsx	0a1fc56d	chore: sync ZCode source	56	0	未提交	
+ZC-DEEP-b82	57	packages/ui/src/project-sidebar/view.ts	3c5b2276	chore: sync ZCode source	57	0	未提交	
+ZC-DEEP-b82	55	packages/ui/src/project-sidebar/ArchiveManagement.tsx	0a1fc56d	chore: sync ZCode source	49	0	部分未提交	差 6 行
+ZC-DEEP-b82	57	packages/ui/src/store/remoteWorkspaceSessionStore.ts	0a1fc56d	chore: sync ZCode source	57	0	未提交	
+ZC-DEEP-b82	57	packages/ui/src/v4/attachmentUploadTransaction.ts	aac47556	feat: update to v3.15.1	57	0	未提交	
+ZC-DEEP-b82	57	packages/ui/src/v4/telemetry/ConversationTelemetryAttachment.tsx	872ad960	feat: open source	57	0	未提交	
+ZC-DEEP-b83	55	packages/desktop/src/main/webRemoteControlSharedHostAttachments.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b83	54	packages/desktop/src/main/desktopNetworkTelemetry.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b83	55	packages/desktop/src/main/mcpUserDirectory/legacy.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b83	54	packages/shared/src/settings-sync.ts	872ad960	feat: open source	28	0	部分未提交	差 26 行
+ZC-DEEP-b83	55	packages/desktop/scripts/gen-ui-fixture/external-links-checks.ts	aac47556	feat: update to v3.15.1	32	0	部分未提交	差 23 行
+ZC-DEEP-b83	55	packages/desktop/scripts/mcp-apps-host-fixture/interaction-main.ts	0a1fc56d	chore: sync ZCode source	28	0	部分未提交	差 27 行
+ZC-DEEP-b84	55	packages/ui/src/lib/codingPlanUsageSources.ts	aac47556	feat: update to v3.15.1	55	0	未提交	
+ZC-DEEP-b84	54	packages/ui/src/lib/assistantCodeComment.ts	aac47556	feat: update to v3.15.1	54	0	未提交	
+ZC-DEEP-b84	56	packages/ui/src/lib/taskListMembershipSets.ts	aac47556	feat: update to v3.15.1	56	0	未提交	
+ZC-DEEP-b84	55	packages/ui/src/components/workflow-timeline/WorkflowAskSettingsLines.tsx	aac47556	feat: update to v3.15.1	55	0	未提交	
+ZC-DEEP-b84	55	packages/ui/src/components/workflow-timeline/WorkflowRunSettingsPopover.tsx	aac47556	feat: update to v3.15.1	55	0	未提交	
+ZC-DEEP-b84	56	packages/ui/src/settings/model-provider-section/constants.ts	aac47556	feat: update to v3.15.1	56	0	未提交	
+ZC-DEEP-b85	55	packages/ui/src/ConfirmDialog.tsx	0a1fc56d	chore: sync ZCode source	40	0	部分未提交	差 15 行
+ZC-DEEP-b85	54	packages/ui/src/ModelTrajectoryTimeline.tsx	872ad960	feat: open source	45	0	部分未提交	差 9 行
+ZC-DEEP-b85	54	packages/ui/src/WorkspaceEditorButtonGroup.tsx	aac47556	feat: update to v3.15.1	41	0	部分未提交	差 13 行
+ZC-DEEP-b85	55	packages/ui/src/previewPaneOfficeDocxContent.tsx	872ad960	feat: open source	41	0	部分未提交	差 14 行
+ZC-DEEP-b85	54	packages/ui/src/v4/ConversationHookDetailsAction.tsx	0a1fc56d	chore: sync ZCode source	42	0	部分未提交	差 12 行
+ZC-DEEP-b85	55	packages/ui/src/v4/ConversationShareSuccessDock.tsx	0a1fc56d	chore: sync ZCode source	33	0	部分未提交	差 22 行
+ZC-DEEP-b86	56	packages/ui/src/chat-input-toolbar/contextQuotaResetOpportunityReminder.tsx	aac47556	feat: update to v3.15.1	56	0	未提交	
+ZC-DEEP-b86	56	packages/ui/src/components/ui/floating-particles.tsx	aac47556	feat: update to v3.15.1	56	0	未提交	
+ZC-DEEP-b86	57	packages/ui/src/plugin-ui/adapters/usePluginUiSidePaneModel.tsx	0a1fc56d	chore: sync ZCode source	57	0	未提交	
+ZC-DEEP-b86	56	apps/zcode-cli/packages/office-runtime/ui/i18n.ts	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	56	0	未提交	
+ZC-DEEP-b86	55	packages/ui/src/components/cloud-content-dialog/CloudDialogDescription.tsx	aac47556	feat: update to v3.15.1	55	0	未提交	
+ZC-DEEP-b86	57	packages/ui/src/settings/saved-workflows/SavedWorkflowLaunchDialog.tsx	0a1fc56d	chore: sync ZCode source	50	0	部分未提交	差 7 行
+ZC-DEEP-b87	55	packages/ui/src/workspace-file-tree/WorkspaceFileTreeList.tsx	aac47556	feat: update to v3.15.1	52	0	部分未提交	差 3 行
+ZC-DEEP-b87	54	packages/provider/src/config/rule-data-schema.ts	aac47556	feat: update to v3.15.1	54	0	未提交	
+ZC-DEEP-b87	54	packages/ui/src/project-sidebar/ArchiveGroupCard.tsx	0a1fc56d	chore: sync ZCode source	43	0	部分未提交	差 11 行
+ZC-DEEP-b87	54	packages/ui/src/settings/model-provider-section/StartPlanBalanceCard.tsx	aac47556	feat: update to v3.15.1	50	0	部分未提交	差 4 行
+ZC-DEEP-b87	54	packages/ui/src/terminal/terminalComposedInputFallback.ts	872ad960	feat: open source	54	0	未提交	
+ZC-DEEP-b87	54	packages/ui/src/WorkspaceSidebar/RemoteProjectDetailsPopover.tsx	0a1fc56d	chore: sync ZCode source	48	0	部分未提交	差 6 行
+ZC-DEEP-b88	53	packages/ui/src/lib/composerPlanGroups.ts	0a1fc56d	chore: sync ZCode source	53	0	未提交	
+ZC-DEEP-b88	53	packages/ui/src/lib/keyboardShortcuts.ts	aac47556	feat: update to v3.15.1	53	0	未提交	
+ZC-DEEP-b88	53	packages/ui/src/lib/remoteConnectionPresentationErrors.ts	0a1fc56d	chore: sync ZCode source	53	0	未提交	
+ZC-DEEP-b88	53	packages/ui/src/ModelTrajectorySearch.ts	aac47556	feat: update to v3.15.1	53	0	未提交	
+ZC-DEEP-b88	54	packages/ui/src/resource-manager/resourceUsageParts.tsx	aac47556	feat: update to v3.15.1	50	0	部分未提交	差 4 行
+ZC-DEEP-b88	53	packages/ui/src/components/ai-elements/persona.tsx	872ad960	feat: open source	53	0	未提交	
+ZC-DEEP-b89	53	packages/ui/src/settings/settingsPageConfig.ts	0a1fc56d	chore: sync ZCode source	53	0	未提交	
+ZC-DEEP-b89	54	packages/ui/src/settings/WorkspaceFileSearchSection.tsx	872ad960	feat: open source	54	0	未提交	
+ZC-DEEP-b89	53	packages/ui/src/settings/model-provider-section/ProviderModelReasoningLevelEditor.tsx	872ad960	feat: open source	53	0	未提交	
+ZC-DEEP-b89	53	packages/shared/src/marketingTouch.ts	aac47556	feat: update to v3.15.1	53	0	未提交	
+ZC-DEEP-b89	53	packages/shared/src/streaming-tool-input-preview.ts	872ad960	feat: open source	53	0	未提交	
+ZC-DEEP-b89	54	packages/shared/src/zcode-protocol-v4/wire-reassembly.ts	aac47556	feat: update to v3.15.1	54	0	未提交	
+ZC-DEEP-b90	53	packages/ui/src/components/ui/command.tsx	872ad960	feat: open source	53	0	未提交	
+ZC-DEEP-b90	53	packages/ui/src/previewPaneOfficeXlsxContent.tsx	872ad960	feat: open source	53	0	未提交	
+ZC-DEEP-b90	53	packages/ui/src/project-sidebar/ProjectSidebarNode.tsx	0a1fc56d	chore: sync ZCode source	53	0	未提交	
+ZC-DEEP-b90	54	packages/ui/src/settings-sync/SettingsSyncSelectionStep.tsx	872ad960	feat: open source	54	0	未提交	
+ZC-DEEP-b90	53	packages/ui/src/v4/BotGroupDeliveryAction.tsx	aac47556	feat: update to v3.15.1	49	0	部分未提交	差 4 行
+ZC-DEEP-b90	53	packages/ui/src/WorkspaceFileTree.tsx	3c5b2276	chore: sync ZCode source	50	0	部分未提交	差 3 行
+ZC-DEEP-b91	54	apps/zcode-cli/packages/tui/src/app-components.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	54	0	未提交	
+ZC-DEEP-b91	54	apps/zcode-cli/packages/tui/src/app-transcript-components.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	54	0	未提交	
+ZC-DEEP-b91	56	apps/zcode-cli/packages/office-runtime/ui/viewers/XlsxView.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	56	0	未提交	
+ZC-DEEP-b91	54	apps/zcode-cli/packages/office-runtime/ui/shell/panes.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	54	0	未提交	
+ZC-DEEP-b91	52	desktop/scripts/.../model.ts			0	0	台账与实测不符	file-missing
+ZC-DEEP-b91	52	packages/desktop/scripts/mcp-apps-host-fixture/rows-renderer.tsx	aac47556	feat: update to v3.15.1	46	0	部分未提交	差 6 行
+ZC-DEEP-b92	52	packages/ui/src/components/marketing-touch/marketingResources.ts	aac47556	feat: update to v3.15.1	52	0	未提交	
+ZC-DEEP-b92	52	packages/ui/src/DeleteAllArchivedTasksButton.tsx	872ad960	feat: open source	49	0	部分未提交	差 3 行
+ZC-DEEP-b92	52	packages/ui/src/hooks/useSubagents.ts	0a1fc56d	chore: sync ZCode source	52	0	未提交	
+ZC-DEEP-b92	52	packages/ui/src/mentions/nodes/PromptMentionNode.ts	872ad960	feat: open source	52	0	未提交	
+ZC-DEEP-b92	54	packages/ui/src/previewPaneOfficeLegacyDocContent.tsx	872ad960	feat: open source	54	0	未提交	
+ZC-DEEP-b92	52	packages/ui/src/resource-manager/NetworkSection.tsx	aac47556	feat: update to v3.15.1	46	0	部分未提交	差 6 行
+ZC-DEEP-b93	55	apps/zcode-cli/packages/core/src/tool/handlers/node-repl.ts	54f51bad	docs(注释): L2-B3 handlers a-o	55	0	未提交	
+ZC-DEEP-b93	52	apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-flags-git.ts	54f51bad	docs(注释): L2-B3 handlers a-o	52	0	未提交	
+ZC-DEEP-b93	52	apps/zcode-cli/packages/core/src/tool/handlers/bash-semantics.ts	54f51bad	docs(注释): L2-B3 handlers a-o	52	0	未提交	
+ZC-DEEP-b93	54	packages/desktop/src/main/crashDumpAnnotations.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b93	53	packages/desktop/src/main/desktopTray.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b93	52	packages/desktop/src/main/embeddedBrowserPermissionUiBridge.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b94	54	packages/ui/src/v4/replaceableConversationTransport.ts	0a1fc56d	chore: sync ZCode source	54	0	未提交	
+ZC-DEEP-b94	53	packages/ui/src/v4/telemetry/useSessionOpenArmsTelemetry.ts	aac47556	feat: update to v3.15.1	53	0	未提交	
+ZC-DEEP-b94	51	packages/ui/src/v4/ConversationUserInputContent.tsx	aac47556	feat: update to v3.15.1	51	0	未提交	
+ZC-DEEP-b94	51	packages/ui/src/v4/V4ChatPane.tsx	0a1fc56d	chore: sync ZCode source	48	0	部分未提交	差 3 行
+ZC-DEEP-b94	53	packages/ui/src/settings/SettingsPageParts.tsx	aac47556	feat: update to v3.15.1	50	0	部分未提交	差 3 行
+ZC-DEEP-b94	52	packages/ui/src/root/oauthProviderFamilySelectionRefresh.ts	0a1fc56d	chore: sync ZCode source	52	0	未提交	
+ZC-DEEP-b95	53	apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-results.ts	522e851e	docs(注释): L2-B6 adapters	53	0	未提交	
+ZC-DEEP-b95	52	apps/zcode-cli/packages/adapters/src/exec/bash-shell-provider.ts	522e851e	docs(注释): L2-B6 adapters	52	0	未提交	
+ZC-DEEP-b95	56	apps/zcode-cli/packages/adapters/src/model/runner-diagnostics.ts	522e851e	docs(注释): L2-B6 adapters	152	0	台账与实测不符	超出 96 行
+ZC-DEEP-b95	51	apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	522e851e	docs(注释): L2-B6 adapters	51	0	未提交	
+ZC-DEEP-b95	54	apps/zcode-cli/packages/adapters/src/plugins/zip-source.ts	522e851e	docs(注释): L2-B6 adapters	54	0	未提交	
+ZC-DEEP-b95	51	packages/desktop/src/main/mcpUserDirectory/toml.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b96	51	packages/ui/src/store/zcodeSessionStoreSelectors.ts	aac47556	feat: update to v3.15.1	51	0	未提交	
+ZC-DEEP-b96	50	packages/ui/src/terminal/terminalPanelState.ts	aac47556	feat: update to v3.15.1	50	0	未提交	
+ZC-DEEP-b96	51	packages/ui/src/lib/userActionTraceCatalog.ts	aac47556	feat: update to v3.15.1	51	0	未提交	
+ZC-DEEP-b96	51	packages/ui/src/remote/remoteWorkspaceProjection.ts	0a1fc56d	chore: sync ZCode source	51	0	未提交	
+ZC-DEEP-b96	50	packages/ui/src/project-sidebar/useProjectSidebarPreferences.ts	3c5b2276	chore: sync ZCode source	50	0	未提交	
+ZC-DEEP-b96	49	packages/ui/src/settings/PluginStoreSourcesDialog.tsx	0a1fc56d	chore: sync ZCode source	40	0	部分未提交	差 9 行
+ZC-DEEP-b97	53	apps/zcode-cli/packages/cli/src/plugins-command-format.ts	872ad960	feat: open source	53	0	未提交	
+ZC-DEEP-b97	59	packages/provider-node/src/zcode-builtin-remote-synchronizer.ts	872ad960	feat: open source	59	0	未提交	
+ZC-DEEP-b97	53	packages/web/src/auth/webAuthService.ts	3c5b2276	chore: sync ZCode source	53	0	未提交	
+ZC-DEEP-b97	53	packages/web/src/web-remote-control/ui/webRemoteControlConnectionSheet.tsx	0a1fc56d	chore: sync ZCode source	45	0	部分未提交	差 8 行
+ZC-DEEP-b97	53	packages/zcode-server-cli/src/packaging/stageDependencies.ts	0a1fc56d	chore: sync ZCode source	53	0	未提交	
+ZC-DEEP-b97	54	apps/zcode-cli/packages/core/src/tool/json-schema.ts	c3590b12	docs(注释): L2-B4 handlers p-z 与 tool 其余	54	0	未提交	
+ZC-DEEP-b98	54	packages/ui/src/components/ui/lightweight-diff-preview.tsx	872ad960	feat: open source	54	0	未提交	
+ZC-DEEP-b98	50	packages/ui/src/components/workflow-timeline/workflow-face-motion.ts	872ad960	feat: open source	50	0	未提交	
+ZC-DEEP-b98	52	packages/ui/src/components/workflow-timeline/WorkflowTimeline.tsx	aac47556	feat: update to v3.15.1	52	0	未提交	
+ZC-DEEP-b98	51	packages/ui/src/components/workflow-timeline/WorkflowTimelineStation.tsx	aac47556	feat: update to v3.15.1	51	0	未提交	
+ZC-DEEP-b98	49	packages/ui/src/app-shell/workflow-artifacts/WorkflowArtifactTilePreview.tsx	aac47556	feat: update to v3.15.1	49	0	未提交	
+ZC-DEEP-b98	50	packages/ui/src/conversation-share-interaction/ConversationSharePreflightStatus.tsx	0a1fc56d	chore: sync ZCode source	50	0	未提交	
+ZC-DEEP-b99	50	packages/ui/src/ModelTrajectoryExpandedContent.tsx	872ad960	feat: open source	61	0	台账与实测不符	超出 11 行
+ZC-DEEP-b99	49	packages/ui/src/TaskInteractionBadge.tsx	aac47556	feat: update to v3.15.1	49	0	未提交	
+ZC-DEEP-b99	51	packages/ui/src/WorkspaceWebRemoteControlTrigger.tsx	0a1fc56d	chore: sync ZCode source	51	0	未提交	
+ZC-DEEP-b99	51	packages/ui/src/ToolCallBlocks/renderers.tsx	872ad960	feat: open source	51	0	未提交	
+ZC-DEEP-b99	50	packages/ui/src/hooks/useGlobalTaskList.ts	872ad960	feat: open source	50	0	未提交	
+ZC-DEEP-b99	52	packages/ui/src/settings/OffPeakHistoryTab.tsx	aac47556	feat: update to v3.15.1	36	0	部分未提交	差 16 行
+ZC-DEEP-b100	49	packages/shared/src/model-provider-family.ts	872ad960	feat: open source	49	0	未提交	
+ZC-DEEP-b100	50	packages/shared/src/zcode-protocol-v4/wire-codec.ts	872ad960	feat: open source	50	0	未提交	
+ZC-DEEP-b100	49	packages/shared/src/zcode-protocol-v4/workflow-observation-display.ts	872ad960	feat: open source	49	0	未提交	
+ZC-DEEP-b100	48	packages/shared/src/task-realtime.ts	872ad960	feat: open source	48	0	未提交	
+ZC-DEEP-b100	49	packages/provider/src/account-provider-resolution.ts	0a1fc56d	chore: sync ZCode source	49	0	未提交	
+ZC-DEEP-b100	50	packages/ui/src/web-remote-control/domain/presentation.ts	0a1fc56d	chore: sync ZCode source	50	0	未提交	
+ZC-DEEP-b101	51	apps/zcode-cli/packages/dynamic-workflow/src/schema/emit.ts	872ad960	feat: open source	51	0	未提交	
+ZC-DEEP-b101	48	apps/zcode-cli/packages/dynamic-workflow/src/schema/validate.ts	872ad960	feat: open source	48	0	未提交	
+ZC-DEEP-b101	49	packages/ui/src/settings/saved-workflows/SavedWorkflowArgsTable.tsx	872ad960	feat: open source	38	0	部分未提交	差 11 行
+ZC-DEEP-b101	48	packages/ui/src/settings/PluginScopeMenu.tsx	0a1fc56d	chore: sync ZCode source	45	0	部分未提交	差 3 行
+ZC-DEEP-b101	48	packages/ui/src/settings/SourceServerMigrationReportPanel.tsx	0a1fc56d	chore: sync ZCode source	45	0	部分未提交	差 3 行
+ZC-DEEP-b101	53	packages/ui/src/app-shell/WorkflowRunSidePane.tsx	0a1fc56d	chore: sync ZCode source	53	0	未提交	
+ZC-DEEP-b102	53	apps/zcode-cli/packages/core/src/workflow/scheduler/node-runner.ts	73782160	docs(注释): L2-B9 context/memory/workflow	53	0	未提交	
+ZC-DEEP-b102	50	packages/desktop/src/main/browserView/browserScreenshotCapture.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b102	52	packages/desktop/tsup.config.ts	0a1fc56d	chore: sync ZCode source	52	0	未提交	
+ZC-DEEP-b102	50	apps/dev-docs/src/capability-map/CapabilityMapFlowElements.tsx	10e9df51	docs(注释): L2-B10b-1 覆盖补齐 a-c 段索引	50	0	未提交	
+ZC-DEEP-b102	49	packages/ui/src/browser-use/useResponsiveBrowserViewportControl.ts	0a1fc56d	chore: sync ZCode source	49	0	未提交	
+ZC-DEEP-b102	49	packages/ui/src/lib/sessionOpenArmsTelemetry.ts	aac47556	feat: update to v3.15.1	49	0	未提交	
+ZC-DEEP-b103	50	packages/ui/src/mentions/providers/fileMentionProvider.ts	0a1fc56d	chore: sync ZCode source	50	0	未提交	
+ZC-DEEP-b103	52	apps/zcode-cli/packages/adapters/src/storage/session-target.ts	522e851e	docs(注释): L2-B6 adapters	52	0	未提交	
+ZC-DEEP-b103	48	apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-core.ts	54f51bad	docs(注释): L2-B3 handlers a-o	48	0	未提交	
+ZC-DEEP-b103	50	apps/zcode-cli/packages/core/src/tool/handlers/cron.ts	bce5596a	docs(注释): 补齐被剔除的 runtime/tool 注释改写	50	0	未提交	
+ZC-DEEP-b103	48	packages/ui/src/AssistantCodeCommentCards.tsx	872ad960	feat: open source	48	0	未提交	
+ZC-DEEP-b103	48	packages/ui/src/components/workflow-run-line/TaskWorkflowRunLines.tsx	aac47556	feat: update to v3.15.1	48	0	未提交	
+ZC-DEEP-b104	49	packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	aac47556	feat: update to v3.15.1	49	0	未提交	
+ZC-DEEP-b104	48	packages/ui/src/project-sidebar/ProjectTaskRows.tsx	0a1fc56d	chore: sync ZCode source	48	0	未提交	
+ZC-DEEP-b104	47	packages/ui/src/v4/composer/useCodeCommentContexts.ts	aac47556	feat: update to v3.15.1	47	0	未提交	
+ZC-DEEP-b104	50	apps/zcode-cli/packages/adapters/src/storage/session-store/repositories/session-inputs.ts	522e851e	docs(注释): L2-B6 adapters	50	0	未提交	
+ZC-DEEP-b104	48	apps/zcode-cli/packages/core/src/plugin-reference/reminder.ts	872ad960	feat: open source	48	0	未提交	
+ZC-DEEP-b104	50	apps/zcode-cli/packages/debug/server/network-capture.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	50	0	未提交	
+ZC-DEEP-b105	47	packages/ui/src/app-shell/useAppChromeState.ts	872ad960	feat: open source	40	0	部分未提交	差 7 行
+ZC-DEEP-b105	47	packages/ui/src/components/TaskTitleOverflowText.tsx	872ad960	feat: open source	31	0	部分未提交	差 16 行
+ZC-DEEP-b105	47	packages/ui/src/global-notice/globalNoticeStore.ts	aac47556	feat: update to v3.15.1	28	0	部分未提交	差 19 行
+ZC-DEEP-b105	48	packages/ui/src/highspeed/highspeedShare.ts	aac47556	feat: update to v3.15.1	29	0	部分未提交	差 19 行
+ZC-DEEP-b105	46	packages/ui/src/lib/toolCallTree.ts	aac47556	feat: update to v3.15.1	28	0	部分未提交	差 18 行
+ZC-DEEP-b105	48	packages/ui/src/mentions/mentionMarkdown.ts	aac47556	feat: update to v3.15.1	28	0	部分未提交	差 20 行
+ZC-DEEP-b106	49	apps/zcode-cli/packages/tui/src/app-shiki-diff-view.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	49	0	未提交	
+ZC-DEEP-b106	47	docs/knip/docs/scripts/generate-plugin-docs.ts	aac47556	feat: update to v3.15.1	47	0	未提交	
+ZC-DEEP-b106	47	packages/desktop/scripts/gen-ui-fixture/runtime-checks.ts	aac47556	feat: update to v3.15.1	47	0	未提交	
+ZC-DEEP-b106	46	packages/desktop/scripts/mcp-apps-host-fixture/managed-model-checks.ts	aac47556	feat: update to v3.15.1	46	0	未提交	
+ZC-DEEP-b106	48	packages/desktop/src/main/desktopCronScheduler.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b106	47	packages/desktop/src/main/pluginSandbox/registry.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b107	47	packages/provider-node/src/zcode-builtin-provider-config-source.ts	872ad960	feat: open source	47	0	未提交	
+ZC-DEEP-b107	49	packages/shared/src/mcp.ts	0a1fc56d	chore: sync ZCode source	49	0	未提交	
+ZC-DEEP-b107	47	packages/shared/src/web-remote-relay/contract.ts	0a1fc56d	chore: sync ZCode source	47	0	未提交	
+ZC-DEEP-b107	47	packages/ui/src/components/workflow-timeline/WorkflowAskSettingsParts.tsx	aac47556	feat: update to v3.15.1	47	0	未提交	
+ZC-DEEP-b107	48	packages/ui/src/hooks/useWorkspaceProviderConfigFile.ts	aac47556	feat: update to v3.15.1	48	0	未提交	
+ZC-DEEP-b107	47	packages/ui/src/resource-manager/storage/StorageCategoryDetail.tsx	0a1fc56d	chore: sync ZCode source	31	0	部分未提交	差 16 行
+ZC-DEEP-b108	46	packages/ui/src/settings/model-provider-section/ProviderTemplatePicker.tsx	0a1fc56d	chore: sync ZCode source	28	0	部分未提交	差 18 行
+ZC-DEEP-b108	47	packages/ui/src/ToolCallBlocks/renderers/list-workflow-runs.tsx	872ad960	feat: open source	29	0	部分未提交	差 18 行
+ZC-DEEP-b108	46	apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-flags-file.ts	54f51bad	docs(注释): L2-B3 handlers a-o	28	0	部分未提交	差 18 行
+ZC-DEEP-b108	47	apps/zcode-cli/packages/core/src/tool/handlers/off-peak.ts	54f51bad	docs(注释): L2-B3 handlers a-o	28	0	部分未提交	差 19 行
+ZC-DEEP-b108	50	apps/zcode-cli/packages/ios-simulator-plugin/src/mcp/server.ts	32fe1002	fix(注释): 修复注释插入引入的语法错误与重复代码块	40	0	部分未提交	差 10 行
+ZC-DEEP-b108	49	apps/zcode-cli/packages/office-runtime/ui/viewers/DocxView.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	29	0	部分未提交	差 20 行
+ZC-DEEP-b109	47	apps/zcode-cli/packages/tui/src/app-selection-panel.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	47	0	未提交	
+ZC-DEEP-b109	45	packages/client/src/webRemoteControlAcknowledgedRelayProtocolTypes.ts	aac47556	feat: update to v3.15.1	45	0	未提交	
+ZC-DEEP-b109	46	packages/desktop/src/main/desktopContextPromptRollout.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b109	46	packages/desktop/src/main/embeddedBrowserJavaScriptDialog.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b109	46	packages/desktop/src/main/localTtftSpans.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b109	46	packages/shared/src/database-startup.ts	872ad960	feat: open source	46	0	未提交	
+ZC-DEEP-b110	45	packages/shared/src/tool-plan-adapter.ts	aac47556	feat: update to v3.15.1	39	0	部分未提交	差 6 行
+ZC-DEEP-b110	47	packages/ui/src/chat-input-toolbar/StartPlanContextBalance.tsx	aac47556	feat: update to v3.15.1	37	0	部分未提交	差 10 行
+ZC-DEEP-b110	46	packages/ui/src/components/ui/diff-viewer.tsx	872ad960	feat: open source	38	0	部分未提交	差 8 行
+ZC-DEEP-b110	46	packages/ui/src/hooks/useBotGroupTask.ts	aac47556	feat: update to v3.15.1	38	0	部分未提交	差 8 行
+ZC-DEEP-b110	47	packages/ui/src/hooks/useTaskNotifications.ts	872ad960	feat: open source	38	0	部分未提交	差 9 行
+ZC-DEEP-b110	45	packages/ui/src/RemoteConnectionWizardChrome.tsx	0a1fc56d	chore: sync ZCode source	36	0	部分未提交	差 9 行
+ZC-DEEP-b111	45	packages/ui/src/root/GlobalDatabaseStartupLoading.tsx	872ad960	feat: open source	27	0	部分未提交	差 18 行
+ZC-DEEP-b111	46	packages/ui/src/settings/mcpSettingsShared.ts	aac47556	feat: update to v3.15.1	27	0	部分未提交	差 19 行
+ZC-DEEP-b111	46	packages/ui/src/settings/RemoteSkillSyncSelectionList.tsx	872ad960	feat: open source	27	0	部分未提交	差 19 行
+ZC-DEEP-b111	46	packages/ui/src/TodoPanel.tsx	aac47556	feat: update to v3.15.1	27	0	部分未提交	差 19 行
+ZC-DEEP-b111	45	packages/ui/src/ToolCallBlocks/renderers/search.tsx	0a1fc56d	chore: sync ZCode source	27	0	部分未提交	差 18 行
+ZC-DEEP-b111	45	packages/ui/src/v4/ConversationQuotaBanner.tsx	aac47556	feat: update to v3.15.1	27	0	部分未提交	差 18 行
+ZC-DEEP-b112	46	packages/ui/src/WorkspaceHelpMenuButton.tsx	0a1fc56d	chore: sync ZCode source	31	0	部分未提交	差 15 行
+ZC-DEEP-b112	46	packages/web/src/auth/oauthStateCodec.ts	0a1fc56d	chore: sync ZCode source	31	0	部分未提交	差 15 行
+ZC-DEEP-b112	46	packages/zcode-server-cli/src/runtime/serviceInstallation.ts	aac47556	feat: update to v3.15.1	30	0	部分未提交	差 16 行
+ZC-DEEP-b112	48	apps/zcode-cli/packages/adapters/src/commands/index.ts	522e851e	docs(注释): L2-B6 adapters	32	0	部分未提交	差 16 行
+ZC-DEEP-b112	48	apps/zcode-cli/packages/adapters/src/plugins/mcp.ts	522e851e	docs(注释): L2-B6 adapters	31	0	部分未提交	差 17 行
+ZC-DEEP-b112	47	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/mcp-ui/protocol.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	32	0	部分未提交	差 15 行
+ZC-DEEP-b113	46	apps/zcode-cli/packages/cli/src/command-center/handlers/plugins.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	42	0	部分未提交	差 4 行
+ZC-DEEP-b113	47	apps/zcode-cli/packages/core/src/runtime/internal-methods.ts	ad6dc0eb	docs(注释): L2-B2 runtime	39	0	部分未提交	差 8 行
+ZC-DEEP-b113	45	apps/zcode-cli/packages/node-repl-host/src/cua-bridge.ts	872ad960	feat: open source	42	0	部分未提交	差 3 行
+ZC-DEEP-b113	64	apps/zcode-cli/packages/telemetry/src/agent-trace-runtime.ts	b3cc6d24	docs(注释): L2-B10b 覆盖补齐 telemetry 与 prompt-trajectory	55	0	部分未提交	差 9 行
+ZC-DEEP-b113	46	apps/zcode-cli/packages/tui/src/app-input-status.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	36	0	部分未提交	差 10 行
+ZC-DEEP-b113	46	apps/zcode-cli/packages/tui/src/app-model-suggestion-panel.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	40	0	部分未提交	差 6 行
+ZC-DEEP-b114	44	packages/desktop/scripts/mcp-apps-host-fixture/retention-main.ts	aac47556	feat: update to v3.15.1	44	0	未提交	
+ZC-DEEP-b114	47	packages/desktop/src/main/unreadBadge.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b114	45	packages/desktop/src/main/zcodeDataSizeScanner.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b114	44	packages/provider/src/config/schema.ts	872ad960	feat: open source	44	0	未提交	
+ZC-DEEP-b114	45	packages/shared/src/feedbackPrivacy.ts	872ad960	feat: open source	45	0	未提交	
+ZC-DEEP-b114	45	packages/shared/src/gen-ui/tweakProtocol.ts	aac47556	feat: update to v3.15.1	45	0	未提交	
+ZC-DEEP-b115	45	packages/shared/src/project-access-token.ts	aac47556	feat: update to v3.15.1	45	0	未提交	
+ZC-DEEP-b115	45	packages/shared/src/remoteUsageTelemetry.ts	aac47556	feat: update to v3.15.1	45	0	未提交	
+ZC-DEEP-b115	44	packages/shared/src/zcode-network-debug-status.ts	872ad960	feat: open source	44	0	未提交	
+ZC-DEEP-b115	46	packages/shared/src/zcode-session-visible-content.ts	872ad960	feat: open source	46	0	未提交	
+ZC-DEEP-b115	48	packages/ui/src/app-shell/WorkflowRunDirectorySidePane.tsx	872ad960	feat: open source	23	0	部分未提交	差 25 行
+ZC-DEEP-b115	46	packages/ui/src/ChatMediaAttachmentPreviewDialog.tsx	aac47556	feat: update to v3.15.1	46	0	未提交	
+ZC-DEEP-b116	45	packages/ui/src/components/ui/highlighted-lightweight-diff-preview.tsx	872ad960	feat: open source	45	0	未提交	
+ZC-DEEP-b116	46	packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	aac47556	feat: update to v3.15.1	46	0	未提交	
+ZC-DEEP-b116	45	packages/ui/src/feedback/feedbackMeta.ts	aac47556	feat: update to v3.15.1	45	0	未提交	
+ZC-DEEP-b116	46	packages/ui/src/hooks/useTabPersistence.ts	0a1fc56d	chore: sync ZCode source	46	0	未提交	
+ZC-DEEP-b116	45	packages/ui/src/hooks/useWorkspaceActiveTaskState.ts	0a1fc56d	chore: sync ZCode source	45	0	未提交	
+ZC-DEEP-b116	44	packages/ui/src/lib/automationTelemetry.ts	aac47556	feat: update to v3.15.1	44	0	未提交	
+ZC-DEEP-b117	46	packages/ui/src/lib/composerRecent.ts	0a1fc56d	chore: sync ZCode source	46	0	未提交	
+ZC-DEEP-b117	45	packages/ui/src/lib/fileDisplayHelpers.ts	872ad960	feat: open source	45	0	未提交	
+ZC-DEEP-b117	45	packages/ui/src/lib/workspaceFileDrag.ts	aac47556	feat: update to v3.15.1	45	0	未提交	
+ZC-DEEP-b117	44	packages/ui/src/project-sidebar/contract.ts	3c5b2276	chore: sync ZCode source	44	0	未提交	
+ZC-DEEP-b117	50	packages/ui/src/project-sidebar/grouped/virtualized-top-level-list.tsx	0a1fc56d	chore: sync ZCode source	37	0	部分未提交	差 13 行
+ZC-DEEP-b117	67	packages/ui/src/root/RootWorkspaceContent.tsx	0a1fc56d	chore: sync ZCode source	43	0	部分未提交	差 24 行
+ZC-DEEP-b118	45	packages/ui/src/settings/pluginCapabilityProjection.ts	aac47556	feat: update to v3.15.1	45	0	未提交	
+ZC-DEEP-b118	46	packages/ui/src/settings/ShortcutSettingsSection.tsx	3c5b2276	chore: sync ZCode source	46	0	未提交	
+ZC-DEEP-b118	43	packages/ui/src/settings/AddMarketplaceSourceDialog.tsx	0a1fc56d	chore: sync ZCode source	43	0	未提交	
+ZC-DEEP-b118	43	packages/ui/src/settings/SettingsResourceHeaderActions.tsx	872ad960	feat: open source	43	0	未提交	
+ZC-DEEP-b118	43	packages/ui/src/settings/usage-stats/usageStatsUiParts.tsx	aac47556	feat: update to v3.15.1	43	0	未提交	
+ZC-DEEP-b118	43	packages/ui/src/project-sidebar/ProjectNode.tsx	0a1fc56d	chore: sync ZCode source	43	0	未提交	
+ZC-DEEP-b119	44	packages/ui/src/terminal/terminalLinks.ts	aac47556	feat: update to v3.15.1	44	0	未提交	
+ZC-DEEP-b119	43	packages/ui/src/lib/exploreToolCall.ts	0a1fc56d	chore: sync ZCode source	43	0	未提交	
+ZC-DEEP-b119	44	packages/ui/src/hooks/useSystemService.ts	aac47556	feat: update to v3.15.1	44	0	未提交	
+ZC-DEEP-b119	44	packages/ui/src/project-sidebar/RemoteIdentityHoverCard.tsx	0a1fc56d	chore: sync ZCode source	44	0	未提交	
+ZC-DEEP-b119	44	packages/ui/src/ToolCallBlocks/renderers/cuaDetails.tsx	872ad960	feat: open source	44	0	未提交	
+ZC-DEEP-b119	44	packages/ui/src/ToolCallBlocks/renderers/todo.tsx	872ad960	feat: open source	44	0	未提交	
+ZC-DEEP-b120a	45	packages/ui/src/components/workflow-timeline/WorkflowTimelineFills.tsx	aac47556	feat: update to v3.15.1	31	0	部分未提交	差 14 行
+ZC-DEEP-b120a	44	packages/ui/src/GitPane/helpers.ts	aac47556	feat: update to v3.15.1	44	0	未提交	
+ZC-DEEP-b120a	44	packages/ui/src/UpdateStatusButton.tsx	872ad960	feat: open source	30	0	部分未提交	差 14 行
+ZC-DEEP-b120a	59	packages/ui/src/v4/OffPeakNewTaskEntry.tsx	aac47556	feat: update to v3.15.1	36	0	部分未提交	差 23 行
+ZC-DEEP-b120b	42	packages/ui/src/BotsDialog/shared.tsx	29628c9a	feat: update v3.14.3	42	0	未提交	
+ZC-DEEP-b120b	43	packages/ui/src/components/ui/input-group.tsx	872ad960	feat: open source	30	0	部分未提交	差 13 行
+ZC-DEEP-b121	44	packages/shared/src/assistant-presentation.ts	872ad960	feat: open source	44	0	未提交	
+ZC-DEEP-b121	44	packages/shared/src/workspaceFileSearch.ts	872ad960	feat: open source	44	0	未提交	
+ZC-DEEP-b121	43	packages/ui/src/lib/chatPrepareError.ts	aac47556	feat: update to v3.15.1	26	0	部分未提交	差 17 行
+ZC-DEEP-b121	45	packages/ui/src/lib/patchDiffPreview.ts	872ad960	feat: open source	45	0	未提交	
+ZC-DEEP-b122	43	packages/ui/src/components/ui/usePdfZoomOverlay.ts	872ad960	feat: open source	43	0	未提交	
+ZC-DEEP-b122	44	packages/ui/src/components/workflow-timeline/WorkflowSavePopover.tsx	aac47556	feat: update to v3.15.1	44	0	未提交	
+ZC-DEEP-b122	42	packages/ui/src/feedback/feedbackUserView.ts	aac47556	feat: update to v3.15.1	42	0	未提交	
+ZC-DEEP-b122	42	packages/ui/src/hooks/useRemoteConnectionLogs.ts	0a1fc56d	chore: sync ZCode source	42	0	未提交	
+ZC-DEEP-b123	44	packages/ui/src/project-sidebar/PurposeSections.tsx	0a1fc56d	chore: sync ZCode source	44	0	未提交	
+ZC-DEEP-b123	43	packages/ui/src/project-sidebar/RemoteConnectionProgressSection.tsx	0a1fc56d	chore: sync ZCode source	43	0	未提交	
+ZC-DEEP-b123	42	packages/ui/src/project-sidebar/RemoteConversationDisconnected.tsx	0a1fc56d	chore: sync ZCode source	42	0	未提交	
+ZC-DEEP-b123	44	packages/ui/src/SaveWorkflowPermissionBlock.tsx	0a1fc56d	chore: sync ZCode source	44	0	未提交	
+ZC-DEEP-b124	42	packages/ui/src/lib/taskNotificationOrchestrator.ts	872ad960	feat: open source	55	0	台账与实测不符	超出 13 行
+ZC-DEEP-b124	42	packages/ui/src/store/mcpStoreHelpers.ts	aac47556	feat: update to v3.15.1	42	0	未提交	
+ZC-DEEP-b124	43	packages/ui/src/ToolCallBlocks/renderers/cuaResultState.ts	aac47556	feat: update to v3.15.1	43	0	未提交	
+ZC-DEEP-b124	42	packages/ui/src/resource-manager/storage/StorageDiskCard.tsx	0a1fc56d	chore: sync ZCode source	42	0	未提交	
+ZC-DEEP-b125	44	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/usage-stats-builder.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	44	0	未提交	
+ZC-DEEP-b125	45	apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	54f51bad	docs(注释): L2-B3 handlers a-o	45	0	未提交	
+ZC-DEEP-b125	45	apps/zcode-cli/packages/tui/src/app-submit.ts	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	45	0	未提交	
+ZC-DEEP-b125	43	apps/zcode-cli/packages/cli/src/clipboard-image.ts	10e9df51	docs(注释): L2-B10b-1 覆盖补齐 a-c 段索引	43	0	未提交	
+ZC-DEEP-b126	44	packages/e2e-report/src/shared/types.ts	aac47556	feat: update to v3.15.1	44	0	未提交	
+ZC-DEEP-b126	44	packages/server/src/remote/docker-detect.ts	872ad960	feat: open source	44	0	未提交	
+ZC-DEEP-b126	42	apps/zcode-cli/packages/cli/src/provider-runtime-env.ts	872ad960	feat: open source	42	0	未提交	
+ZC-DEEP-b126	41	packages/desktop/src/main/desktopArmsCustomEvent.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b127	42	packages/shared/src/sqlite-migrations/backup.ts	0a1fc56d	chore: sync ZCode source	42	0	未提交	
+ZC-DEEP-b127	42	packages/ui/src/app-shell/useWorkspaceSessionReload.ts	872ad960	feat: open source	42	0	未提交	
+ZC-DEEP-b127	42	packages/desktop/src/main/pluginSandbox/guestPolicy.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b127	58	packages/provider-node/src/personal-provider-config-repository.ts	872ad960	feat: open source	59	0	台账与实测不符	超出 1 行
+ZC-DEEP-b128	42	packages/desktop/scripts/gen-ui-fixture/renderer.ts	aac47556	feat: update to v3.15.1	42	0	未提交	
+ZC-DEEP-b128	42	packages/ui/src/hooks/useSettingService.ts	0a1fc56d	chore: sync ZCode source	42	0	未提交	
+ZC-DEEP-b128	44	apps/zcode-cli/packages/adapters/src/storage/session-store/migration-runner.ts	0a1fc56d	chore: sync ZCode source	176	22	台账与实测不符	超出 132 行
+ZC-DEEP-b128	45	apps/zcode-cli/packages/tui/src/app-question-state.ts	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	45	0	未提交	
+ZC-DEEP-b129	44	apps/zcode-cli/packages/core/src/tool/handlers/grep.ts	54f51bad	docs(注释): L2-B3 handlers a-o	44	0	未提交	
+ZC-DEEP-b129	43	apps/zcode-cli/packages/core/src/runtime/methods/workspace-generate-text.ts	55fedda3	docs(注释): L1-B1 其余 runtime 与 hooks	43	0	未提交	
+ZC-DEEP-b129	41	packages/ui/src/lib/modelConfigSync.ts	aac47556	feat: update to v3.15.1	41	0	未提交	
+ZC-DEEP-b129	42	packages/ui/src/lib/chatErrorBannerTelemetry.ts	aac47556	feat: update to v3.15.1	50	0	台账与实测不符	超出 8 行
+ZC-DEEP-b130	48	packages/provider-node/src/provider-config-runtime.ts	872ad960	feat: open source	74	0	台账与实测不符	超出 26 行
+ZC-DEEP-b130	42	packages/ui/src/hooks/usePptxFileWatch.ts	aac47556	feat: update to v3.15.1	42	0	未提交	
+ZC-DEEP-b130	44	packages/ui/src/app-shell/workflow-artifacts/presets/apply.ts	aac47556	feat: update to v3.15.1	44	0	未提交	
+ZC-DEEP-b130	42	packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	0a1fc56d	chore: sync ZCode source	42	0	未提交	
+ZC-DEEP-b131	43	packages/ui/src/settings/model-provider-section/ProviderDetailFeedback.tsx	aac47556	feat: update to v3.15.1	43	0	未提交	
+ZC-DEEP-b131	43	packages/ui/src/settings/model-provider-section/SortableProviderModelList.tsx	aac47556	feat: update to v3.15.1	43	0	未提交	
+ZC-DEEP-b131	43	packages/ui/src/settings/SourceServerUpdateActivity.tsx	0a1fc56d	chore: sync ZCode source	43	0	未提交	
+ZC-DEEP-b131	45	apps/zcode-cli/packages/bootstrap/src/app/standalone-account-provider-runtime.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	45	0	未提交	
+ZC-DEEP-b132	44	packages/ui/src/app-shell/workflow-artifacts/WorkflowArtifactBody.tsx	aac47556	feat: update to v3.15.1	44	0	未提交	
+ZC-DEEP-b132	41	packages/ui/src/components/ui/alert-dialog.tsx	872ad960	feat: open source	41	0	未提交	
+ZC-DEEP-b132	42	packages/ui/src/hooks/useWorkspaceServices.tsx	0a1fc56d	chore: sync ZCode source	42	0	未提交	
+ZC-DEEP-b132	41	packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	0a1fc56d	chore: sync ZCode source	41	0	未提交	
+ZC-DEEP-b133	48	packages/ui/src/WorkflowPermissionBlock.tsx	aac47556	feat: update to v3.15.1	24	0	部分未提交	差 24 行
+ZC-DEEP-b133	41	packages/ui/src/browser-use/BrowserSitePermissionsPage.tsx	aac47556	feat: update to v3.15.1	41	0	未提交	
+ZC-DEEP-b133	41	packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	0a1fc56d	chore: sync ZCode source	41	0	未提交	
+ZC-DEEP-b134	40	packages/ui/src/app-shell/sidePaneTabPresentation.ts	0a1fc56d	chore: sync ZCode source	40	0	未提交	
+ZC-DEEP-b134	40	packages/ui/src/app-shell/BackgroundBashOutputSidePane.tsx	872ad960	feat: open source	40	0	未提交	
+ZC-DEEP-b134	41	packages/web/src/web-remote-control/ui/webRemoteControlConnectingScreen.tsx	0a1fc56d	chore: sync ZCode source	41	0	未提交	
+ZC-DEEP-b135	40	packages/server/src/remote/wsl-detect.ts	67be296b	注释(server): b135 补提交 — wslProxy / wsl-detect / tokenizer（+120 行，原批漏提交）	0	0	已提交且干净	
+ZC-DEEP-b135	40	packages/server/src/remote/wslProxy.ts	67be296b	注释(server): b135 补提交 — wslProxy / wsl-detect / tokenizer（+120 行，原批漏提交）	0	0	已提交且干净	
+ZC-DEEP-b135	40	packages/model-option-map/src/tokenizer.ts	67be296b	注释(server): b135 补提交 — wslProxy / wsl-detect / tokenizer（+120 行，原批漏提交）	0	0	已提交且干净	
+ZC-DEEP-b136	41	packages/ui/src/components/ui/dialog.tsx	0a1fc56d	chore: sync ZCode source	41	0	未提交	
+ZC-DEEP-b136	42	packages/ui/src/app-shell/WorkflowRunSpineParts.tsx	aac47556	feat: update to v3.15.1	42	0	未提交	
+ZC-DEEP-b136	42	packages/ui/src/components/workflow-timeline/WorkflowTimelineTracks.tsx	aac47556	feat: update to v3.15.1	42	0	未提交	
+ZC-DEEP-b136	40	packages/ui/src/hooks/useGitAutoRefresh.ts	872ad960	feat: open source	40	0	未提交	
+ZC-DEEP-b137	42	apps/zcode-cli/packages/core/src/hooks/configured-runner-callback.ts	c788b9f1	docs(注释): 收尾提交 core 与 contracts 纯注释增量	42	0	未提交	
+ZC-DEEP-b137	44	apps/zcode-cli/packages/core/src/runtime/methods/rewind.ts	872ad960	feat: open source	123	7	台账与实测不符	超出 79 行
+ZC-DEEP-b137	43	apps/zcode-cli/packages/core/src/tool/handlers/agent.ts	bce5596a	docs(注释): 补齐被剔除的 runtime/tool 注释改写	43	0	未提交	
+ZC-DEEP-b137	41	apps/zcode-cli/packages/tui/src/app-effort-suggestion-panel.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	41	0	未提交	
+ZC-DEEP-b138	47	apps/zcode-cli/packages/adapters/src/config/schema.ts	522e851e	docs(注释): L2-B6 adapters	47	0	未提交	
+ZC-DEEP-b138	46	apps/zcode-cli/packages/android-emulator-plugin/src/mcp/server.ts	32fe1002	fix(注释): 修复注释插入引入的语法错误与重复代码块	46	0	未提交	
+ZC-DEEP-b138	43	packages/ui/src/components/workflow-timeline/WorkflowRunSettingsFields.tsx	aac47556	feat: update to v3.15.1	43	0	未提交	
+ZC-DEEP-b138	41	packages/desktop/src/main/processResourceMcpTelemetrySource.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b139	40	packages/desktop/src/main/rendererActionTraceIpc.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b139	64	packages/provider/src/registry-service.ts	7aeaf5ba	docs(注释): 收尾提交 packages 各包纯注释增量	67	0	台账与实测不符	超出 3 行
+ZC-DEEP-b139	46	packages/provider/src/registry.ts	872ad960	feat: open source	46	0	未提交	
+ZC-DEEP-b139	41	packages/stream-animate/src/App.tsx	aac47556	feat: update to v3.15.1	41	0	未提交	
+ZC-DEEP-b140	41	packages/ui/src/hooks/useWebElementPicker.ts	872ad960	feat: open source	41	0	未提交	
+ZC-DEEP-b140	40	packages/ui/src/plugin-ui/adapters/useRecommendedUiPlugins.ts	3c5b2276	chore: sync ZCode source	40	0	未提交	
+ZC-DEEP-b140	40	packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	872ad960	feat: open source	40	0	未提交	
+ZC-DEEP-b140	40	packages/ui/src/settings/usage-stats/AppUsageModelUsagePieChart.tsx	872ad960	feat: open source	40	0	未提交	
+ZC-DEEP-b141	40	packages/ui/src/settings/AutomationDesignPrimitives.tsx	0a1fc56d	chore: sync ZCode source	40	0	未提交	
+ZC-DEEP-b141	41	packages/ui/src/ToolCallBlocks/renderers/plan-guidance.tsx	872ad960	feat: open source	41	0	未提交	
+ZC-DEEP-b141	41	packages/ui/src/v4/composer/useWebElementContexts.ts	aac47556	feat: update to v3.15.1	41	0	未提交	
+ZC-DEEP-b141	41	packages/ui/src/v4/conversationSharePreflightCache.ts	aac47556	feat: update to v3.15.1	41	0	未提交	
+ZC-DEEP-b142	41	apps/zcode-cli/packages/adapters/src/browser/snapshot.ts	522e851e	docs(注释): L2-B6 adapters	41	0	未提交	
+ZC-DEEP-b142	41	apps/zcode-cli/packages/bootstrap/src/custom-command-shell-expansion.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	41	0	未提交	
+ZC-DEEP-b142	42	apps/zcode-cli/packages/bootstrap/src/subagents.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	42	0	未提交	
+ZC-DEEP-b142	43	apps/zcode-cli/packages/core/src/repl/node-repl-session.ts	aac47556	feat: update to v3.15.1	43	0	未提交	
+ZC-DEEP-b143	40	packages/ui/src/v4/useAssistantPreviewCardsForRow.ts	aac47556	feat: update to v3.15.1	40	0	未提交	
+ZC-DEEP-b143	41	apps/zcode-cli/packages/core/src/runtime/methods/workspace-fork.ts	55fedda3	docs(注释): L1-B1 其余 runtime 与 hooks	41	0	未提交	
+ZC-DEEP-b143	40	apps/zcode-cli/packages/core/src/subagent/persistent-memory-prompt.ts	c788b9f1	docs(注释): 收尾提交 core 与 contracts 纯注释增量	40	0	未提交	
+ZC-DEEP-b143	41	apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	41	0	未提交	
+ZC-DEEP-b144	40	packages/desktop/scripts/gen-ui-fixture/standalone-checks.ts	0a1fc56d	chore: sync ZCode source	40	0	未提交	
+ZC-DEEP-b144	43	packages/desktop/src/host/browserControlMainBridge.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	43	0	未提交	
+ZC-DEEP-b144	42	packages/desktop/src/host/remoteWorkspaceServiceCollection.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	42	0	未提交	
+ZC-DEEP-b144	40	packages/desktop/src/main/desktopNetworkPolicy.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b145	39	packages/provider-node/src/legacy-reasoning-level-renames.ts	0a1fc56d	chore: sync ZCode source	39	0	未提交	
+ZC-DEEP-b145	39	packages/provider-node/src/provider-config-file-codec.ts	872ad960	feat: open source	39	0	未提交	
+ZC-DEEP-b145	39	packages/shared/src/channel-mention.ts	aac47556	feat: update to v3.15.1	39	0	未提交	
+ZC-DEEP-b145	39	packages/shared/src/rendererActionTrace.ts	872ad960	feat: open source	39	0	未提交	
+ZC-DEEP-b146	39	packages/ui/src/BotsDialog/WorkspaceAccessCard.tsx	0a1fc56d	chore: sync ZCode source	39	0	未提交	
+ZC-DEEP-b146	46	packages/ui/src/components/workflow-timeline/WorkflowRunDigest.tsx	0a1fc56d	chore: sync ZCode source	46	0	未提交	
+ZC-DEEP-b146	39	packages/ui/src/feedback/feedbackTimelineSummary.ts	aac47556	feat: update to v3.15.1	39	0	未提交	
+ZC-DEEP-b146	39	packages/ui/src/gen-ui/components/TweakPanel.tsx	aac47556	feat: update to v3.15.1	39	0	未提交	
+ZC-DEEP-b147	39	packages/ui/src/lib/mermaidRenderBudget.ts	aac47556	feat: update to v3.15.1	39	0	未提交	
+ZC-DEEP-b147	40	packages/ui/src/lib/officeFilePreview.ts	aac47556	feat: update to v3.15.1	40	0	未提交	
+ZC-DEEP-b147	40	packages/ui/src/plugin-ui/app/pluginUiPageManager.ts	aac47556	feat: update to v3.15.1	40	0	未提交	
+ZC-DEEP-b147	39	packages/ui/src/previewPaneOfficeContent.tsx	872ad960	feat: open source	39	0	未提交	
+ZC-DEEP-b148	40	packages/ui/src/remote-connection-flow/ui/RemoteConnectionProgress.tsx	0a1fc56d	chore: sync ZCode source	40	0	未提交	
+ZC-DEEP-b148	39	packages/ui/src/settings/DataBaseDirControl.tsx	0a1fc56d	chore: sync ZCode source	39	0	未提交	
+ZC-DEEP-b148	39	packages/ui/src/store/codeCommentPreviewStore.ts	aac47556	feat: update to v3.15.1	39	0	未提交	
+ZC-DEEP-b148	40	packages/ui/src/store/pluginManagementStoreEnabled.ts	0a1fc56d	chore: sync ZCode source	40	0	未提交	
+ZC-DEEP-b149	39	packages/ui/src/ToolCallBlocks/renderers/task-output.tsx	872ad960	feat: open source	39	0	未提交	
+ZC-DEEP-b149	39	packages/ui/src/v4/ConversationSelectionTooltip.tsx	872ad960	feat: open source	39	0	未提交	
+ZC-DEEP-b149	40	packages/ui/src/v4/ConversationUserInputBody.tsx	aac47556	feat: update to v3.15.1	40	0	未提交	
+ZC-DEEP-b149	39	packages/ui/src/v4/featureSuggestedPromptRotation.ts	872ad960	feat: open source	39	0	未提交	
+ZC-DEEP-b150	40	packages/ui/src/v4/WorkbenchSplitDivider.tsx	0a1fc56d	chore: sync ZCode source	40	0	未提交	
+ZC-DEEP-b150	39	packages/zcode-server-cli/src/runtime/releaseDownload.ts	aac47556	feat: update to v3.15.1	39	0	未提交	
+ZC-DEEP-b150	40	packages/zcode-server-cli/src/server-core/core.ts	0a1fc56d	chore: sync ZCode source	40	0	未提交	
+ZC-DEEP-b150	41	apps/dev-docs/src/capability-map/capabilityMapLayout.ts	10e9df51	docs(注释): L2-B10b-1 覆盖补齐 a-c 段索引	41	0	未提交	
+ZC-DEEP-b151	55	apps/zcode-cli/packages/core/src/runtime/methods/turn.ts	32fe1002	fix(注释): 修复注释插入引入的语法错误与重复代码块	55	0	未提交	
+ZC-DEEP-b152	40	apps/zcode-cli/packages/core/src/agent/turn-state.ts	0a1fc56d	chore: sync ZCode source	40	0	未提交	
+ZC-DEEP-b152	41	apps/zcode-cli/packages/core/src/runtime-task/workflow-notification-copy.ts	0a1fc56d	chore: sync ZCode source	41	0	未提交	
+ZC-DEEP-b152	42	apps/zcode-cli/packages/core/src/runtime/methods/session-title.ts	55fedda3	docs(注释): L1-B1 其余 runtime 与 hooks	42	0	未提交	
+ZC-DEEP-b152	39	apps/zcode-cli/packages/core/src/tool/handlers/bash-git-runtime-safety.ts	54f51bad	docs(注释): L2-B3 handlers a-o	39	0	未提交	
+ZC-DEEP-b153	40	apps/zcode-cli/packages/adapters/src/exec/outputEncoding.ts	522e851e	docs(注释): L2-B6 adapters	40	0	未提交	
+ZC-DEEP-b153	39	apps/zcode-cli/packages/cli/src/commands-command.ts	10e9df51	docs(注释): L2-B10b-1 覆盖补齐 a-c 段索引	39	0	未提交	
+ZC-DEEP-b153	39	packages/server/src/remote/remoteAssetPreflight.ts	0a1fc56d	chore: sync ZCode source	39	0	未提交	
+ZC-DEEP-b153	39	packages/shared/src/cloudContent.ts	aac47556	feat: update to v3.15.1	39	0	未提交	
+ZC-DEEP-b154	39	packages/ui/src/browser-use/useBrowserScreenshotSurfaceReady.ts	872ad960	feat: open source	39	0	未提交	
+ZC-DEEP-b154	38	packages/ui/src/ControlHintTooltip.tsx	0a1fc56d	chore: sync ZCode source	38	0	未提交	
+ZC-DEEP-b154	40	packages/ui/src/embeddedBrowserHelpers.ts	aac47556	feat: update to v3.15.1	40	0	未提交	
+ZC-DEEP-b154	38	packages/ui/src/lib/chatSessionScrollMemory.ts	aac47556	feat: update to v3.15.1	38	0	未提交	
+ZC-DEEP-b155	38	packages/ui/src/lib/modeConfigUpdateGuard.ts	aac47556	feat: update to v3.15.1	38	0	未提交	
+ZC-DEEP-b155	38	packages/ui/src/mentions/mentionSearch.ts	aac47556	feat: update to v3.15.1	38	0	未提交	
+ZC-DEEP-b155	38	packages/ui/src/project-sidebar/grouped/task-item.tsx	0a1fc56d	chore: sync ZCode source	38	0	未提交	
+ZC-DEEP-b155	38	packages/ui/src/settings/useWorkspaceHookInlineTrust.ts	0a1fc56d	chore: sync ZCode source	38	0	未提交	
+ZC-DEEP-b156	40	packages/ui/src/ToolCallBlocks/renderers/switch-mode.tsx	872ad960	feat: open source	40	0	未提交	
+ZC-DEEP-b156	38	packages/ui/src/v4/composer/useConversationSelectionReferences.ts	0a1fc56d	chore: sync ZCode source	38	0	未提交	
+ZC-DEEP-b156	39	packages/ui/src/v4/telemetry/localTtftRecord.ts	872ad960	feat: open source	39	0	未提交	
+ZC-DEEP-b156	38	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/session-debug.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	38	0	未提交	
+ZC-DEEP-b157	40	apps/zcode-cli/packages/core/src/runtime/methods/title-generation-sidecar.ts	55fedda3	docs(注释): L1-B1 其余 runtime 与 hooks	40	0	未提交	
+ZC-DEEP-b157	49	apps/zcode-cli/packages/core/src/tool/executor/background-tasks.ts	aac47556	feat: update to v3.15.1	251	32	台账与实测不符	超出 202 行
+ZC-DEEP-b157	37	docs/knip/docs/src/util/post.ts	aac47556	feat: update to v3.15.1	37	0	未提交	
+ZC-DEEP-b157	37	packages/desktop/scripts/mcp-apps-host-fixture/sampling-extra-checks.ts	aac47556	feat: update to v3.15.1	37	0	未提交	
+ZC-DEEP-b158	40	packages/desktop/src/host/sourceServerManagementService.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	40	0	未提交	
+ZC-DEEP-b158	39	packages/desktop/src/host/taskRealtimeBridge.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	39	0	未提交	
+ZC-DEEP-b158	37	packages/desktop/src/main/databaseStartupTelemetry.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b158	38	packages/server/src/remote/remoteAssetCdn.ts	872ad960	feat: open source	38	0	未提交	
+ZC-DEEP-b159	37	packages/server/src/source-server/sourceServerTransportRuntime.ts	0a1fc56d	chore: sync ZCode source	37	0	未提交	
+ZC-DEEP-b159	38	packages/shared/src/feedback.ts	872ad960	feat: open source	38	0	未提交	
+ZC-DEEP-b159	38	packages/ui/src/components/marketing-touch/MarketingBanner.tsx	aac47556	feat: update to v3.15.1	38	0	未提交	
+ZC-DEEP-b159	38	packages/ui/src/components/ui/flip-metric-value.tsx	872ad960	feat: open source	38	0	未提交	
+ZC-DEEP-b160	37	packages/ui/src/lib/shikiHighlighter.ts	aac47556	feat: update to v3.15.1	37	0	未提交	
+ZC-DEEP-b160	38	packages/ui/src/lib/zcodeFileCitation.ts	aac47556	feat: update to v3.15.1	38	0	未提交	
+ZC-DEEP-b160	37	packages/ui/src/lib/zcodeSessionEventOrder.ts	aac47556	feat: update to v3.15.1	37	0	未提交	
+ZC-DEEP-b160	38	packages/ui/src/project-workflow/useWorkflowRunSave.ts	0a1fc56d	chore: sync ZCode source	38	0	未提交	
+ZC-DEEP-b161	38	packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	872ad960	feat: open source	34	0	部分未提交	差 4 行
+ZC-DEEP-b161	38	packages/ui/src/settings/saved-workflows/SavedWorkflowRunHistoryPanel.tsx	0a1fc56d	chore: sync ZCode source	38	0	未提交	
+ZC-DEEP-b161	37	packages/web/src/web-remote-control/ui/webRemoteControlFailureScreen.tsx	0a1fc56d	chore: sync ZCode source	37	0	未提交	
+ZC-DEEP-b161	41	apps/zcode-cli/packages/adapters/src/storage/index.ts	522e851e	docs(注释): L2-B6 adapters	41	0	未提交	
+ZC-DEEP-b162	37	apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	37	0	未提交	
+ZC-DEEP-b162	38	apps/zcode-cli/packages/bootstrap/src/auth-login.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	38	0	未提交	
+ZC-DEEP-b162	36	apps/zcode-cli/packages/cli/src/command-center/login-flow.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	36	0	未提交	
+ZC-DEEP-b162	36	apps/zcode-cli/packages/cli/src/command-center/slash-command-types.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	36	0	未提交	
+ZC-DEEP-b163	39	apps/zcode-cli/packages/core/src/runtime/deps.ts	ad6dc0eb	docs(注释): L2-B2 runtime	39	0	未提交	
+ZC-DEEP-b163	41	apps/zcode-cli/packages/core/src/tool/executor/result-display.ts	fb9e504b	docs(注释): L1-A5 工具执行器	41	0	未提交	
+ZC-DEEP-b163	37	apps/zcode-cli/packages/core/src/tool/handlers/bash-output.ts	54f51bad	docs(注释): L2-B3 handlers a-o	37	0	未提交	
+ZC-DEEP-b163	36	apps/zcode-cli/packages/core/src/tool/handlers/guarded/git.ts	aac47556	feat: update to v3.15.1	36	0	未提交	
+ZC-DEEP-b164	37	packages/ui/src/app-shell/workflow-artifacts/ArtifactOpenAsFileButton.tsx	aac47556	feat: update to v3.15.1	37	0	未提交	
+ZC-DEEP-b164	38	packages/ui/src/components/workflow-timeline/WorkflowArtifactIndex.tsx	872ad960	feat: open source	38	0	未提交	
+ZC-DEEP-b164	38	packages/ui/src/components/workflow-timeline/WorkflowCompletionCard.tsx	aac47556	feat: update to v3.15.1	38	0	未提交	
+ZC-DEEP-b164	36	packages/ui/src/hooks/useCodingPlanEntryPlanList.ts	872ad960	feat: open source	36	0	未提交	
+ZC-DEEP-b165	36	packages/desktop/scripts/gen-ui-fixture/style-checks.ts	0a1fc56d	chore: sync ZCode source	36	0	未提交	
+ZC-DEEP-b165	36	packages/desktop/scripts/mcp-apps-host-fixture/managed-main.ts	0a1fc56d	chore: sync ZCode source	36	0	未提交	
+ZC-DEEP-b165	36	packages/desktop/scripts/mcp-apps-host-fixture/storage-checks.ts	aac47556	feat: update to v3.15.1	36	0	未提交	
+ZC-DEEP-b165	38	packages/desktop/src/host/sourceServerReleaseResolver.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	38	0	未提交	
+ZC-DEEP-b166	37	packages/ui/src/project-sidebar/useTaskGroups.ts	0a1fc56d	chore: sync ZCode source	37	0	未提交	
+ZC-DEEP-b166	37	packages/ui/src/root/useAccountConnectionLossNotification.ts	872ad960	feat: open source	37	0	未提交	
+ZC-DEEP-b166	37	packages/ui/src/settings/workspaceHookReviewCommands.ts	aac47556	feat: update to v3.15.1	37	0	未提交	
+ZC-DEEP-b166	36	packages/ui/src/WorkspaceSidebar/RemoteProjectConnectionDetails.tsx	0a1fc56d	chore: sync ZCode source	36	0	未提交	
+ZC-DEEP-b167	37	apps/zcode-cli/packages/telemetry/src/error-sanitizer.ts	872ad960	feat: open source	37	0	未提交	
+ZC-DEEP-b167	38	apps/zcode-cli/packages/tui/src/app-file-mentions.ts	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	38	0	未提交	
+ZC-DEEP-b167	41	packages/desktop/src/main/desktopCuaPermissionIpc.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b167	36	packages/stream-animate/src/server/frameForecast.ts	aac47556	feat: update to v3.15.1	36	0	未提交	
+ZC-DEEP-b168	37	apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-base.ts	522e851e	docs(注释): L2-B6 adapters	37	0	未提交	
+ZC-DEEP-b168	45	apps/zcode-cli/packages/adapters/src/model/runner-debug.ts	522e851e	docs(注释): L2-B6 adapters	45	0	未提交	
+ZC-DEEP-b168	37	apps/zcode-cli/packages/adapters/src/storage/session-store/repositories/script-workflow-activities.ts	522e851e	docs(注释): L2-B6 adapters	37	0	未提交	
+ZC-DEEP-b168	36	apps/zcode-cli/packages/bootstrap/src/app/legacy-cli-personal-provider-config-importer.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	36	0	未提交	
+ZC-DEEP-b169	36	packages/ui/src/index.ts	0a1fc56d	chore: sync ZCode source	36	0	未提交	
+ZC-DEEP-b169	48	packages/ui/src/browser-use/BrowserViewportSurface.tsx	0a1fc56d	chore: sync ZCode source	28	0	部分未提交	差 20 行
+ZC-DEEP-b169	35	packages/ui/src/components/ai-elements/tool.tsx	872ad960	feat: open source	35	0	未提交	
+ZC-DEEP-b169	35	packages/ui/src/components/ai-elements/transcription.tsx	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b170	35	packages/ui/src/feedback/feedbackSubmitSubmission.ts	872ad960	feat: open source	35	0	未提交	
+ZC-DEEP-b170	36	packages/ui/src/hooks/usePluginReferenceCatalog.ts	aac47556	feat: update to v3.15.1	36	0	未提交	
+ZC-DEEP-b170	36	packages/ui/src/lib/taskSidePaneMemory.ts	3c5b2276	chore: sync ZCode source	36	0	未提交	
+ZC-DEEP-b170	35	packages/ui/src/lib/zcodeTimelineIdentity.ts	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b171	35	packages/ui/src/settings/model-provider-section/CodingPlanStatusActions.tsx	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b171	35	packages/ui/src/settings/model-provider-section/useProviderModelDraft.ts	872ad960	feat: open source	35	0	未提交	
+ZC-DEEP-b171	36	packages/ui/src/settings/SettingsHeaderBreadcrumb.tsx	872ad960	feat: open source	36	0	未提交	
+ZC-DEEP-b171	36	packages/ui/src/root/accountConnectionLossSuggestion.ts	0a1fc56d	chore: sync ZCode source	36	0	未提交	
+ZC-DEEP-b172	38	apps/zcode-cli/packages/core/src/runtime/methods/compact-summary-model-request.ts	783d49a6	docs(注释): L1-A2 压缩与预算	38	0	未提交	
+ZC-DEEP-b172	37	apps/zcode-cli/packages/core/src/runtime/methods/goal-summary-title.ts	55fedda3	docs(注释): L1-B1 其余 runtime 与 hooks	37	0	未提交	
+ZC-DEEP-b172	36	apps/zcode-cli/packages/core/src/runtime/methods/workspace-checkpoint-persistence.ts	55fedda3	docs(注释): L1-B1 其余 runtime 与 hooks	36	0	未提交	
+ZC-DEEP-b172	36	apps/zcode-cli/packages/core/src/tool/handlers/bash-model-content.ts	54f51bad	docs(注释): L2-B3 handlers a-o	36	0	未提交	
+ZC-DEEP-b173	36	packages/zcode-server-cli/src/runtime/paths.ts	0a1fc56d	chore: sync ZCode source	36	0	未提交	
+ZC-DEEP-b173	36	apps/zcode-cli/packages/adapters/src/exec/execution-command.ts	522e851e	docs(注释): L2-B6 adapters	36	0	未提交	
+ZC-DEEP-b173	36	apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-process.ts	522e851e	docs(注释): L2-B6 adapters	36	0	未提交	
+ZC-DEEP-b173	35	apps/zcode-cli/packages/core/src/tool/handlers/bash-read-file-state.ts	54f51bad	docs(注释): L2-B3 handlers a-o	35	0	未提交	
+ZC-DEEP-b174	38	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/mcp-ui/handlers.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	38	0	未提交	
+ZC-DEEP-b174	35	apps/zcode-cli/packages/core/src/mcp/app-tools.ts	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b174	35	apps/zcode-cli/packages/dynamic-workflow/src/testing/journal-contract-nodes.ts	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b174	37	apps/zcode-cli/packages/office-runtime/src/adapters/parse/docx.ts	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	37	0	未提交	
+ZC-DEEP-b175	34	packages/ui/src/lib/sidebarCodingPlanUpgrade.ts	aac47556	feat: update to v3.15.1	34	0	未提交	
+ZC-DEEP-b175	35	packages/ui/src/lib/taskNavigationHistory.ts	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b175	35	packages/ui/src/settings/memoryUpdatedAt.ts	872ad960	feat: open source	35	0	未提交	
+ZC-DEEP-b175	34	packages/ui/src/hooks/useBotBoundGroups.ts	aac47556	feat: update to v3.15.1	34	0	未提交	
+ZC-DEEP-b176	35	packages/ui/src/ModelTrajectorySearchHighlight.ts	872ad960	feat: open source	35	0	未提交	
+ZC-DEEP-b176	35	packages/ui/src/store/mcpStoreMigration.ts	872ad960	feat: open source	35	0	未提交	
+ZC-DEEP-b176	35	packages/shared/src/browser-use/command-metadata.ts	872ad960	feat: open source	35	0	未提交	
+ZC-DEEP-b176	34	packages/rpc/src/network-telemetry-middleware.ts	872ad960	feat: open source	34	0	未提交	
+ZC-DEEP-b177	35	docs/knip/docs/scripts/get-monthly-sponsorships-opencollective.ts	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b177	35	packages/ui/src/settings/offPeakUiPresentation.ts	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b177	34	packages/ui/src/v4/ackActivationBarrier.ts	aac47556	feat: update to v3.15.1	34	0	未提交	
+ZC-DEEP-b177	35	packages/ui/src/store/workspaceHookReviewStore.ts	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b178	35	packages/ui/src/ToolCallBlocks/renderers/execute-group.tsx	0a1fc56d	chore: sync ZCode source	35	0	未提交	
+ZC-DEEP-b178	34	packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	872ad960	feat: open source	34	0	未提交	
+ZC-DEEP-b178	36	packages/ui/src/ToolCallBlocks/renderers/get-workflow-run-roster.tsx	872ad960	feat: open source	36	0	未提交	
+ZC-DEEP-b178	35	packages/ui/src/app-shell/WorkflowRunPhasePills.tsx	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b179	35	packages/ui/src/quickpick/QuickPickCommandDialog.tsx	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b179	34	packages/ui/src/components/ui/context-menu.tsx	872ad960	feat: open source	34	0	未提交	
+ZC-DEEP-b179	34	packages/ui/src/components/ui/pptx-selection-action-bar.tsx	872ad960	feat: open source	34	0	未提交	
+ZC-DEEP-b179	34	packages/ui/src/slashCommandPanelSections.tsx	0a1fc56d	chore: sync ZCode source	34	0	未提交	
+ZC-DEEP-b180	34	packages/ui/src/conversation-share-interaction/conversationSharePreflightResponse.ts	0a1fc56d	chore: sync ZCode source	34	0	未提交	
+ZC-DEEP-b180	34	packages/ui/src/settings/model-provider-section/ProviderModelMetadataDialogActions.tsx	872ad960	feat: open source	34	0	未提交	
+ZC-DEEP-b180	34	packages/ui/src/SSHDialog.tsx	0a1fc56d	chore: sync ZCode source	34	0	未提交	
+ZC-DEEP-b180	35	packages/ui/src/v4/ConversationWorkflowCompletion.tsx	0a1fc56d	chore: sync ZCode source	35	0	未提交	
+ZC-DEEP-b181	34	packages/ui/src/v4/MarkdownSelectionTooltip.tsx	0a1fc56d	chore: sync ZCode source	34	0	未提交	
+ZC-DEEP-b181	34	packages/ui/src/workspace-file-tree/useWorkspaceFileTreeWatchers.ts	872ad960	feat: open source	34	0	未提交	
+ZC-DEEP-b181	36	packages/ui/src/WorkspaceSidebar/WorkspacePurposeSection.tsx	0a1fc56d	chore: sync ZCode source	36	0	未提交	
+ZC-DEEP-b181	34	packages/web-share/src/main.tsx	0a1fc56d	chore: sync ZCode source	34	0	未提交	
+ZC-DEEP-b182	35	packages/desktop/src/main/desktopWebRemoteControlIpc.ts	35f676c6	注释(desktop): desktopWebRemoteControlIpc.ts b1 — 远控启动操作与四通道接线（+63 行）	0	0	已提交且干净	
+ZC-DEEP-b182	34	packages/desktop/src/main/desktopMainIpcHelpers.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b182	33	packages/desktop/src/main/browserView/browserScreenshotSurfaceContracts.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b182	36	packages/desktop/src/main/embeddedBrowserPermissionPolicy.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b183	33	packages/ui/src/BotsDialog/BoundGroupsCard.tsx	aac47556	feat: update to v3.15.1	33	0	未提交	
+ZC-DEEP-b183	33	packages/ui/src/conversation-workspace-target/usePluginCreator.ts	0a1fc56d	chore: sync ZCode source	33	0	未提交	
+ZC-DEEP-b183	33	packages/ui/src/feedback/FeedbackCenter.tsx	872ad960	feat: open source	33	0	未提交	
+ZC-DEEP-b183	32	packages/ui/src/mentions/providers/pluginsMentionProvider.ts	aac47556	feat: update to v3.15.1	32	0	未提交	
+ZC-DEEP-b184	35	apps/zcode-cli/packages/bootstrap/src/app/process-provider-registry-runtime.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	35	0	未提交	
+ZC-DEEP-b184	36	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/mcp-ui/appTools.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	36	0	未提交	
+ZC-DEEP-b184	34	apps/zcode-cli/packages/bootstrap/src/zcode-protocol/storage-startup.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	34	0	未提交	
+ZC-DEEP-b184	34	apps/zcode-cli/packages/adapters/src/exec/embedded-search-prelude.ts	522e851e	docs(注释): L2-B6 adapters	34	0	未提交	
+ZC-DEEP-b185	33	packages/ui/src/onboarding/onboardingMeshRenderer.ts	872ad960	feat: open source	33	0	未提交	
+ZC-DEEP-b185	33	packages/ui/src/project-sidebar/useProjectTaskNavigation.ts	0a1fc56d	chore: sync ZCode source	33	0	未提交	
+ZC-DEEP-b185	33	packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	aac47556	feat: update to v3.15.1	33	0	未提交	
+ZC-DEEP-b185	33	packages/ui/src/v4/pendingInteractionAdapter.ts	872ad960	feat: open source	33	0	未提交	
+ZC-DEEP-b186	33	packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	0a1fc56d	chore: sync ZCode source	33	0	未提交	
+ZC-DEEP-b186	34	packages/ui/src/v4/composer/ConversationSelectionReferenceChip.tsx	aac47556	feat: update to v3.15.1	34	0	未提交	
+ZC-DEEP-b186	34	packages/ui/src/v4/composer/useDraftModelReadinessGate.ts	0a1fc56d	chore: sync ZCode source	34	0	未提交	
+ZC-DEEP-b186	35	packages/ui/src/ToolCallBlocks/renderers/save-workflow.tsx	872ad960	feat: open source	35	0	未提交	
+ZC-DEEP-b187	35	packages/stream-animate/src/client/RunForm.tsx	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b187	34	apps/zcode-cli/packages/tui/src/app-sidebar-subagents.tsx	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	34	0	未提交	
+ZC-DEEP-b187	35	packages/desktop/src/host/remotePromptAttachments.ts	e6ff6fab	docs(注释): 提交 desktop host 目录纯注释增量	35	0	未提交	
+ZC-DEEP-b187	34	packages/desktop/src/main/localMediaPreviewProtocol.ts	4702929e	注释(desktop): localMediaPreviewProtocol.ts b1 — 授权表与本地媒体协议注册（+94 行）	0	0	已提交且干净	
+ZC-DEEP-b188	34	packages/desktop/vite.config.ts	0a1fc56d	chore: sync ZCode source	34	0	未提交	
+ZC-DEEP-b188	33	packages/provider-node/src/zcode-builtin-download.ts	872ad960	feat: open source	33	0	未提交	
+ZC-DEEP-b188	33	packages/shared/src/model-config.ts	872ad960	feat: open source	33	0	未提交	
+ZC-DEEP-b188	34	packages/shared/src/zcode-protocol-v4/wire.ts	872ad960	feat: open source	34	0	未提交	
+ZC-DEEP-b189	34	packages/ui/src/v4/workspaceConnectionRegistry.ts	aac47556	feat: update to v3.15.1	34	0	未提交	
+ZC-DEEP-b189	33	packages/web/src/share/mockConversationSharePreviewClient.ts	872ad960	feat: open source	33	0	未提交	
+ZC-DEEP-b189	33	packages/zcode-server-cli/src/ipc/controlServer.ts	0a1fc56d	chore: sync ZCode source	33	0	未提交	
+ZC-DEEP-b189	33	packages/zcode-server-cli/src/runtime/immutableRelease.ts	aac47556	feat: update to v3.15.1	33	0	未提交	
+ZC-DEEP-b190	34	packages/zcode-server-cli/src/runtime/releaseManager.ts	872ad960	feat: open source	34	0	未提交	
+ZC-DEEP-b190	33	apps/zcode-cli/packages/bootstrap/src/app/script-workflow-meta.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	33	0	未提交	
+ZC-DEEP-b190	32	apps/zcode-cli/packages/cli/src/command-center/handlers/expert.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	32	0	未提交	
+ZC-DEEP-b190	34	apps/zcode-cli/packages/debug/server/observation-events.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	34	0	未提交	
+ZC-DEEP-b191	32	packages/desktop/src/main/appTelemetryRuntime.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b191	32	packages/desktop/src/main/desktopMcpTelemetry.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b191	32	packages/desktop/src/main/desktopNotifications.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b191	33	packages/desktop/src/main/pluginSandbox/permissionGate.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b192	32	packages/desktop/src/main/resourceManagerNetwork.ts	a17e1a6e	注释(desktop): resourceManagerNetwork.ts b1 — 网络采集会话与 IPC 授权（+65 行）	0	0	已提交且干净	
+ZC-DEEP-b192	33	packages/server/src/source-server/sourceServerProbe.ts	3c5b2276	chore: sync ZCode source	33	0	未提交	
+ZC-DEEP-b192	32	packages/shared/src/background-task-notifications.ts	872ad960	feat: open source	32	0	未提交	
+ZC-DEEP-b192	32	packages/shared/src/mcp-apps/sampling.ts	aac47556	feat: update to v3.15.1	32	0	未提交	
+ZC-DEEP-b193	34	packages/shared/src/runtimeEnv.ts	872ad960	feat: open source	34	0	未提交	
+ZC-DEEP-b193	32	packages/shared/src/source-server/compatibility.ts	0a1fc56d	chore: sync ZCode source	32	0	未提交	
+ZC-DEEP-b193	34	packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	0a1fc56d	chore: sync ZCode source	34	0	未提交	
+ZC-DEEP-b193	32	packages/ui/src/browser-use/HumanBrowserView.tsx	872ad960	feat: open source	32	0	未提交	
+ZC-DEEP-b194	32	packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetOpportunity.tsx	872ad960	feat: open source	32	0	未提交	
+ZC-DEEP-b194	32	packages/ui/src/git-action-menu/currentSessionFileScope.ts	872ad960	feat: open source	32	0	未提交	
+ZC-DEEP-b194	32	packages/ui/src/lib/remotePluginSyncRefresh.ts	0a1fc56d	chore: sync ZCode source	32	0	未提交	
+ZC-DEEP-b194	32	packages/ui/src/lib/taskMainActivity.ts	aac47556	feat: update to v3.15.1	32	0	未提交	
+ZC-DEEP-b195	32	packages/ui/src/mentions/nodes/mentionIconDom.ts	aac47556	feat: update to v3.15.1	32	0	未提交	
+ZC-DEEP-b195	32	packages/ui/src/onboarding/useOnboardingTelemetry.ts	872ad960	feat: open source	32	0	未提交	
+ZC-DEEP-b195	33	packages/ui/src/remote-connection-flow/contract.ts	0a1fc56d	chore: sync ZCode source	33	0	未提交	
+ZC-DEEP-b195	33	packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	872ad960	feat: open source	33	0	未提交	
+ZC-DEEP-b196	33	packages/ui/src/TaskRenameDialog.tsx	872ad960	feat: open source	33	0	未提交	
+ZC-DEEP-b196	32	packages/ui/src/v4/composer/PptxElementReferenceChip.tsx	872ad960	feat: open source	32	0	未提交	
+ZC-DEEP-b196	33	packages/ui/src/v4/ConversationWorkflowDigests.tsx	aac47556	feat: update to v3.15.1	33	0	未提交	
+ZC-DEEP-b196	32	packages/web/src/web-remote-control/adapters/payloadRequester.ts	0a1fc56d	chore: sync ZCode source	32	0	未提交	
+ZC-DEEP-b197	32	packages/web/src/web-remote-control/adapters/relayMessage.ts	0a1fc56d	chore: sync ZCode source	32	0	未提交	
+ZC-DEEP-b197	32	packages/zcode-server-cli/src/server-core/taskActivityTracker.ts	0a1fc56d	chore: sync ZCode source	32	0	未提交	
+ZC-DEEP-b197	33	apps/dev-docs/vite.config.ts	55f48e6d	docs(注释): 收尾提交 插件宿主与 dev-docs 纯注释增量	33	0	未提交	
+ZC-DEEP-b197	33	apps/zcode-cli/packages/bootstrap/src/app/runtime-config.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	33	0	未提交	
+ZC-DEEP-b198	35	apps/zcode-cli/packages/debug/server/sources.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	35	0	未提交	
+ZC-DEEP-b198	35	apps/zcode-cli/packages/dynamic-workflow/src/testing/journal-contract-runs.ts	aac47556	feat: update to v3.15.1	35	0	未提交	
+ZC-DEEP-b198	31	docs/knip/docs/astro.config.ts	aac47556	feat: update to v3.15.1	31	0	未提交	
+ZC-DEEP-b198	31	packages/client/src/websocket.ts	0a1fc56d	chore: sync ZCode source	31	0	未提交	
+ZC-DEEP-b199	31	packages/desktop/src/main/databaseStartupRelay.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b199	31	packages/desktop/src/main/pluginSandbox/session.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b199	31	packages/provider/src/config/provider-data-schema.ts	aac47556	feat: update to v3.15.1	31	0	未提交	
+ZC-DEEP-b199	35	packages/shared/src/conversation-share.ts	0a1fc56d	chore: sync ZCode source	35	0	未提交	
+ZC-DEEP-b200	31	packages/shared/src/forceUpdate.ts	872ad960	feat: open source	31	0	未提交	
+ZC-DEEP-b200	31	packages/shared/src/sqlite-migrations/runner.ts	0a1fc56d	chore: sync ZCode source	31	0	未提交	
+ZC-DEEP-b200	32	packages/shared/src/subagents-types.ts	aac47556	feat: update to v3.15.1	32	0	未提交	
+ZC-DEEP-b200	31	packages/ui/src/app-shell/workflow-artifacts/presets/ArtifactBoard.tsx	872ad960	feat: open source	31	0	未提交	
+ZC-DEEP-b201	31	packages/ui/src/components/marketing-touch/marketingPopupAdapter.ts	aac47556	feat: update to v3.15.1	31	0	未提交	
+ZC-DEEP-b201	31	packages/ui/src/git-branch-switcher/switchAssist.ts	872ad960	feat: open source	31	0	未提交	
+ZC-DEEP-b201	32	packages/ui/src/hooks/useOAuth.ts	872ad960	feat: open source	32	0	未提交	
+ZC-DEEP-b201	31	packages/ui/src/hooks/useWebRemoteControlTaskOpen.ts	0a1fc56d	chore: sync ZCode source	31	0	未提交	
+ZC-DEEP-b202	33	packages/ui/src/lib/providerBusinessError.ts	aac47556	feat: update to v3.15.1	33	0	未提交	
+ZC-DEEP-b202	31	packages/ui/src/lib/slashCommands.ts	aac47556	feat: update to v3.15.1	31	0	未提交	
+ZC-DEEP-b202	31	packages/ui/src/previewPaneCodeContent.tsx	872ad960	feat: open source	29	0	部分未提交	差 2 行
+ZC-DEEP-b202	31	packages/ui/src/settings/model-provider-section/ModelConfigHelp.tsx	aac47556	feat: update to v3.15.1	28	0	部分未提交	差 3 行
+ZC-DEEP-b203	31	packages/ui/src/settings/model-provider-section/ProviderModelModalityOptions.tsx	872ad960	feat: open source	31	0	未提交	
+ZC-DEEP-b203	33	packages/ui/src/settings/saved-workflows/savedWorkflowArgsForm.ts	aac47556	feat: update to v3.15.1	33	0	未提交	
+ZC-DEEP-b203	32	packages/ui/src/ToolCallBlocks/renderers/resolve-workflow-question.tsx	872ad960	feat: open source	32	0	未提交	
+ZC-DEEP-b203	31	packages/ui/src/v4/agentConversationTransportWorkflowRuns.ts	872ad960	feat: open source	31	0	未提交	
+ZC-DEEP-b204	33	packages/ui/src/v4/composer/toolbarShortcuts.ts	aac47556	feat: update to v3.15.1	33	0	未提交	
+ZC-DEEP-b204	30	packages/web/src/web-remote-control/contracts/transport.ts	0a1fc56d	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b204	34	apps/zcode-cli/packages/adapters/src/model/runner-status.ts	522e851e	docs(注释): L2-B6 adapters	34	0	未提交	
+ZC-DEEP-b204	32	apps/zcode-cli/packages/bootstrap/src/app/workspace-hook-trust.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	32	0	未提交	
+ZC-DEEP-b205	30	apps/zcode-cli/packages/cli/src/plugins-command-shared.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b205	31	apps/zcode-cli/packages/core/src/runtime/methods/browser-turn-screenshot.ts	55fedda3	docs(注释): L1-B1 其余 runtime 与 hooks	31	0	未提交	
+ZC-DEEP-b205	31	apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-argv-flags.ts	54f51bad	docs(注释): L2-B3 handlers a-o	31	0	未提交	
+ZC-DEEP-b205	32	apps/zcode-cli/packages/office-runtime/src/adapters/parse/xlsx.ts	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	32	0	未提交	
+ZC-DEEP-b206	33	apps/zcode-cli/packages/tui/src/app-selection-keyboard.ts	a7af675d	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime	33	0	未提交	
+ZC-DEEP-b206	30	packages/desktop/src/main/browserView/browserVirtualClipboardPageScript.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b206	30	packages/desktop/src/main/desktopLinuxAppImageIcon.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b206	30	packages/desktop/src/main/windowsAumidIcon.ts	6a8cc6c9	注释(desktop): windowsAumidIcon.ts 补脚本结构说明（+3 行，字符串内 38 单元登记为豁免）	0	0	已提交且干净	
+ZC-DEEP-b207	30	packages/shared/src/node/privateFilePersistence.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b207	30	packages/shared/src/plan-identity.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b207	30	packages/shared/src/remoteSshHostKey.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b207	30	packages/shared/src/session-debug.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b208	31	packages/shared/src/zcode-api-retry-status.ts	872ad960	feat: open source	31	0	未提交	
+ZC-DEEP-b208	30	packages/ui/src/app-shell/PlanDetailSidePane.tsx	872ad960	feat: open source	29	0	部分未提交	差 1 行
+ZC-DEEP-b208	30	packages/ui/src/chat-input-toolbar/CodingPlanUsageHeaderAction.tsx	872ad960	feat: open source	26	0	部分未提交	差 4 行
+ZC-DEEP-b208	30	packages/ui/src/components/ai-elements/conversation.tsx	872ad960	feat: open source	28	0	部分未提交	差 2 行
+ZC-DEEP-b209	30	packages/ui/src/components/marketing-touch/MarketingDialogs.tsx	aac47556	feat: update to v3.15.1	28	0	部分未提交	差 2 行
+ZC-DEEP-b209	30	packages/ui/src/gen-ui/app/tweaks.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b209	30	packages/ui/src/git-action-menu/commitConversationContext.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b209	30	packages/ui/src/mentions/providers/subagentsMentionProvider.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b210	30	packages/ui/src/ModelTrajectorySearchBar.tsx	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b210	30	packages/ui/src/openWorkspacePageThemeHero.tsx	872ad960	feat: open source	29	0	部分未提交	差 1 行
+ZC-DEEP-b210	30	packages/ui/src/project-sidebar/remote-project-connection.ts	3c5b2276	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b210	30	packages/ui/src/project-sidebar/RemoteProjectMenu.tsx	0a1fc56d	chore: sync ZCode source	24	0	部分未提交	差 6 行
+ZC-DEEP-b211	30	packages/ui/src/remote-connection-flow/requestRemoteProjectConnection.ts	0a1fc56d	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b211	30	packages/ui/src/remote-connection/RemoteConnectionTags.tsx	0a1fc56d	chore: sync ZCode source	29	0	部分未提交	差 1 行
+ZC-DEEP-b211	31	packages/ui/src/remote/remoteWorkspaceController.ts	0a1fc56d	chore: sync ZCode source	31	0	未提交	
+ZC-DEEP-b211	31	packages/ui/src/root/useReconnectingRemoteWorkspaceLogs.ts	0a1fc56d	chore: sync ZCode source	31	0	未提交	
+ZC-DEEP-b212	30	packages/ui/src/resource-manager/storage/StorageCategoryList.tsx	0a1fc56d	chore: sync ZCode source	26	0	部分未提交	差 4 行
+ZC-DEEP-b212	30	packages/ui/src/resource-manager/storage/useStorageUsage.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b212	30	packages/ui/src/settings/automationAgentConfigOptions.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b212	30	packages/ui/src/settings/model-provider-section/useStartPlanPreview.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b213	30	packages/ui/src/settings/saved-workflows/SavedWorkflowDetailHeader.tsx	0a1fc56d	chore: sync ZCode source	24	0	部分未提交	差 6 行
+ZC-DEEP-b213	30	packages/ui/src/side-pane-full-view/model.ts	3c5b2276	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b213	30	packages/ui/src/ToolCallBlocks/renderers/submit-result.tsx	872ad960	feat: open source	29	0	部分未提交	差 1 行
+ZC-DEEP-b213	30	packages/ui/src/updateStatusModel.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b214	30	packages/ui/src/v4/composer/modelTriggerDisplay.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b214	30	packages/ui/src/v4/index.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b214	30	packages/ui/src/v4/useDraftSuggestedPluginActionPopover.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b214	30	packages/ui/src/v4/workspaceSessionsIndexSubscriptionSet.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b215	30	packages/ui/src/workspace-file-tree/WorkspaceFileTreeStickyFolders.tsx	872ad960	feat: open source	29	0	部分未提交	差 1 行
+ZC-DEEP-b215	30	apps/zcode-cli/packages/core/src/runtime/methods/runtime-command-queue.ts	26a74c66	docs(注释): L1-A4 目标队列与 MCP	30	0	未提交	
+ZC-DEEP-b215	30	docs/knip/docs/scripts/get-monthly-sponsorships-github.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b215	30	packages/desktop/scripts/mcp-apps-host-fixture/managed-late-checks.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b216	30	packages/shared/src/zcode-protocol-v4/apply.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b216	30	packages/shared/src/zcode-protocol-v4/rows.ts	0a1fc56d	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b216	30	packages/ui/src/browser-use/useBrowserResizeOperationWarning.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b216	30	packages/ui/src/command-center/commandCenterSearchHistory.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b217	30	packages/ui/src/components/workflow-timeline/timeline-model.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b217	30	packages/ui/src/feedback/FeedbackProcessView.tsx	aac47556	feat: update to v3.15.1	24	0	部分未提交	差 6 行
+ZC-DEEP-b217	30	packages/ui/src/highspeed/highspeedOutputFooter.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b217	30	packages/ui/src/hooks/useProviderSettingsView.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b218	30	packages/ui/src/lib/mcpStatusProbe.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b218	30	packages/ui/src/onboarding/OnboardingAgentsFileStep.tsx	872ad960	feat: open source	24	0	部分未提交	差 6 行
+ZC-DEEP-b218	30	packages/ui/src/plugin-ui/domain/pluginUiToolFeed.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b218	30	packages/ui/src/project-sidebar/useProjectTaskActions.ts	0a1fc56d	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b219	30	packages/ui/src/root/botsTaskBroadcast.ts	29628c9a	feat: update v3.14.3	30	0	未提交	
+ZC-DEEP-b219	30	packages/ui/src/settings/CodingPlanUpgradeDialogProvider.tsx	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b219	30	packages/ui/src/settings/model-provider-section/ProviderModelDraftState.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b219	30	packages/ui/src/settings/model-provider-section/SectionLayout.tsx	0a1fc56d	chore: sync ZCode source	26	0	部分未提交	差 4 行
+ZC-DEEP-b220	30	packages/ui/src/settings/useShortcutRecording.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b220	30	packages/ui/src/slashCommandHelpers.ts	0a1fc56d	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b220	30	packages/ui/src/TaskListItemContextMenu.tsx	3c5b2276	chore: sync ZCode source	27	0	部分未提交	差 3 行
+ZC-DEEP-b220	30	packages/ui/src/ToolCallBlocks/ToolPresentation.tsx	0a1fc56d	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b221	30	packages/ui/src/v4/ConversationTurnRow.tsx	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b221	30	packages/ui/src/v4/workbenchLayout.ts	3c5b2276	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b221	30	packages/ui/src/v4/WorkflowNotificationHoleRow.tsx	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b221	30	packages/web/src/web-remote-control/adapters/webRemoteControlDeviceInfo.ts	0a1fc56d	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b222	30	packages/zcode-server-cli/src/packaging/stageArchives.ts	0a1fc56d	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b222	30	apps/zcode-cli/packages/adapters/src/fs/text-range-reader.ts	522e851e	docs(注释): L2-B6 adapters	30	0	未提交	
+ZC-DEEP-b222	30	apps/zcode-cli/packages/bootstrap/src/app/node-repl-browser-broker.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	30	0	未提交	
+ZC-DEEP-b222	30	apps/zcode-cli/packages/bootstrap/src/app/startup-marks.ts	0f2ef80d	docs(注释): L2-B8 bootstrap 其余	30	0	未提交	
+ZC-DEEP-b223	30	apps/zcode-cli/packages/cli/src/command-center/handlers/goal.ts	3ead6c6a	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量	30	0	未提交	
+ZC-DEEP-b223	30	apps/zcode-cli/packages/core/src/runtime/helpers/attachment-media-resolver.ts	ad6dc0eb	docs(注释): L2-B2 runtime	30	0	未提交	
+ZC-DEEP-b223	30	apps/zcode-cli/packages/core/src/runtime/methods/usage-observability.ts	c788b9f1	docs(注释): 收尾提交 core 与 contracts 纯注释增量	30	0	未提交	
+ZC-DEEP-b223	30	apps/zcode-cli/packages/core/src/session-context/topic-archive.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b224	30	packages/desktop/src/main/appARMSBootstrap.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b224	30	packages/desktop/src/main/browserView/browserCommandExecutor.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b224	30	packages/desktop/src/main/desktopWindowsOpenFolderContextMenu.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b224	30	packages/desktop/src/main/startupWorkspace.ts	b34d5ba5	docs(注释): B228 片 1-5 与相邻队列纯注释增量	0	0	已提交且干净	
+ZC-DEEP-b225	30	packages/desktop/src/renderer/src/plugin-sandbox/relay.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b225	30	packages/model-option-map/src/merge-patch.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b225	30	packages/provider-node/src/endpoint-scoped-zcode-builtin-source.ts	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b225	30	packages/shared/src/source-server/connectionErrors.ts	0a1fc56d	chore: sync ZCode source	30	0	未提交	
+ZC-DEEP-b226	30	packages/desktop/scripts/gen-ui-fixture/file-summary.tsx	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b226	30	packages/stream-animate/src/server/dataStore.ts	aac47556	feat: update to v3.15.1	30	0	未提交	
+ZC-DEEP-b226	30	packages/ui/src/components/ai-elements/prompt-input-actions.tsx	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b226	30	packages/ui/src/components/ai-elements/snippet.tsx	872ad960	feat: open source	30	0	未提交	
+ZC-DEEP-b228	0				0	0	台账解析失败	no-table

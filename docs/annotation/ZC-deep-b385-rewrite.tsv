@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/services/src/session/claude-native/sessionHistoryJsonl.ts	21	a8784b7e	// `readJsonLinesFile` 过滤空行后再编号，空行不进入统计。
+packages/services/src/session/claude-native/sessionHistoryJsonl.ts	52	a8784b7e	// `maxLines` 配额与解析都跳过空行：行号仍按物理行递增。
+packages/services/src/session/controllerRemoteIdentityMigration.ts	121	a8784b7e	// `updateIdentityColumn` 同时改写两张表：列名不同，语义一致。
+packages/services/src/session/controllerRemoteIdentityMigration.ts	228	a8784b7e	// `migrateBootstrap` 不做合并：目标已有行时删除旧行，否则改 key。
+packages/services/src/setting/settingService.ts	238	a8784b7e	// `useFileLock: false` 是约定：外层 `withAtomicFileLock` 已持锁，内层再锁会自锁。
+packages/services/src/setting/settingService.ts	368	a8784b7e	// `writeSettings` 在队列内二次判等：等待期间被别的写处理过即跳过。
+packages/services/src/terminal/terminalProfileMacOs.ts	251	a8784b7e	// `readThemeColor` 依次尝试候选键名，命中即停：同一语义可能有多个键。
+packages/services/src/terminal/terminalProfileMacOs.ts	301	a8784b7e	// 五次 `readThemeColor` 调用各写各的槽位，互不覆盖。
+packages/ui/src/git-graph/GitGraphDialog.tsx	136	a8784b7e	// `refreshCommits` 重新读第一页：成功后整体替换列表并重置选中项，不做增量合并。
+packages/ui/src/git-graph/GitGraphDialog.tsx	139	a8784b7e	// 与 `loadInitialCommits` 的差异有意为之：首屏无内容用内联错误，刷新有内容用轻提示。
+packages/ui/src/GitActionMenu.tsx	1606	a8784b7e	// `handleCommitSubmit` 与 `handleCommitAndPushSubmit` 拆成两个入口，调用点语义更清晰。
+packages/ui/src/GitActionMenu.tsx	1656	a8784b7e	// `handlePrimaryAction` 在有改动时开提交弹窗，干净且可推时开推送弹窗。
+packages/ui/src/highspeed/highspeedTurnStore.ts	87	a8784b7e	// 单条执行上限 1.5s：低于 `abortAfterMs` 的命令一律放行，不做秒级预检。
+packages/ui/src/highspeed/highspeedTurnStore.ts	103	a8784b7e	// 进程正常退出时也置 `timedOutRef`：宁可多报一次也不漏报。
+packages/ui/src/hooks/useCodingPlanQuotaResetUi.ts	133	a8784b7e	// `latestUsedAtForType` 不格式化时间，所有比较都基于原始数字。
+packages/ui/src/hooks/useCodingPlanQuotaResetUi.ts	445	a8784b7e	// `wait` 只按 `delayMs` 等待，退避策略由调用方给定。
+packages/ui/src/hooks/useModelProviders.ts	90	a8784b7e	// `latestRefreshTokenRef` 初值零：第一次刷新拿到一，更早请求的令牌都小于当前值。
+packages/ui/src/hooks/useModelProviders.ts	94	a8784b7e	// [并发] 主动拉取不去重：连点都是有效意图，`latestRefreshTokenRef` 只让最后一次收尾。
+packages/ui/src/hooks/useSubagents.ts	44	a8784b7e	// `explicitIdentity` 只归一化一次，后续比较都读这个值。
+packages/ui/src/hooks/useSubagents.ts	79	a8784b7e	// `explicitIdentity` 优先，缺失时取 `workspaceRpcTarget.workspaceIdentity`。

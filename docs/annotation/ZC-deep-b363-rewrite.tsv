@@ -1,0 +1,20 @@
+file	baseLine	blame	content
+packages/ui/src/onboarding/OnboardingAgentsFileStep.tsx	35	a8784b7e	// status?.supported 不为 true 时 selected 必须为 false，避免选中不可用的迁移项。
+packages/ui/src/onboarding/OnboardingAgentsFileStep.tsx	69	a8784b7e	// supported 为 false 时 disabled 直接为 true，整卡不可点。
+packages/ui/src/onboarding/OnboardingAgentsFileStep.tsx	71	a8784b7e	// 整卡 button 就是切换入口，onClick 必须调 setSelected(!selected)，不额外渲染按钮。
+packages/ui/src/onboarding/OnboardingAgentsFileStep.tsx	78	a8784b7e	// 用透明文字模拟空图标占位，size-4 尺寸保持不跳动。
+packages/ui/src/gen-ui/app/tweaks.ts	34	a8784b7e	// selection 是全局单值，同一时刻只能有一个控件被选中，切换由 register 覆盖。
+packages/ui/src/gen-ui/app/tweaks.ts	44	a8784b7e	// 入口先跑 genUiTweakMessageSchema.parse，后续分支可以放心按类型收窄。
+packages/ui/src/gen-ui/app/tweaks.ts	113	a8784b7e	// 逐控件比较 annotationControls 的当前值与提交值，相同即跳过不发变更。
+packages/ui/src/highspeed/highspeedOutputFooter.ts	85	a8784b7e	// cardStateById.set 后写覆盖前写，lastUnitIndex 最终停在组尾。
+packages/ui/src/highspeed/highspeedOutputFooter.ts	104	a8784b7e	// expiresAt 已过、lastUnitIndex 为组尾、hasOutput 为真三条同时成立才判完成，缺一条必须跳过。
+packages/ui/src/highspeed/highspeedOutputFooter.ts	136	a8784b7e	// outputTokens ≤ 0 时直接返回 null，零输出没有可分享的指标。
+packages/services/src/client-config/clientConfigService.ts	43	a8784b7e	// 每次 fetchSnapshot 新建 AbortController，超时只影响本次请求。
+packages/services/src/client-config/clientConfigService.ts	57	a8784b7e	// 请求与超时由 Promise.race 竞速，先完成者决定结果，另一方随后被丢弃。
+packages/services/src/client-config/clientConfigService.ts	85	a8784b7e	// options 先过 clientConfigReadOptionsSchema.parse，非法输入直接抛错而不是被静默忽略。
+packages/shared/src/zcode-protocol-v4/apply.ts	98	a8784b7e	// row.appended 同时更新 rows.total 与 rows 首行锚点，两者必须同增。
+packages/shared/src/zcode-protocol-v4/apply.ts	125	a8784b7e	// 从首行开始裁剪时必须重置整条活跃分支，否则 activeBranch 会指向已删行。
+packages/shared/src/zcode-protocol-v4/apply.ts	154	a8784b7e	// state.updated 按键级整体替换，绝不深合并旧值。
+packages/stream-animate/src/server/dataStore.ts	26	a8784b7e	// createRunId 由时间戳加随机后缀组成，同秒多次启动也不会撞名。
+packages/stream-animate/src/server/dataStore.ts	50	a8784b7e	// createRawWriter 以 flags: "a" 追加写出原始记录，支持断点续采。
+packages/stream-animate/src/server/dataStore.ts	53	a8784b7e	// flags 必须是 "a" 而不是 "w"，否则重启会覆盖已采数据。

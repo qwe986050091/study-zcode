@@ -1,0 +1,50 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	89	a8784b7e479d3a	// // 组件入口：单次函数式渲染，无 hooks、无本地 state、无事件订阅，只输出一个根 box。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	90	a8784b7e479d3a	// // 入参只读：copy 与 developerMode 在入口一次性解析，后续子函数共享同一份语义。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	91	18e274fccfa0b3	// // 交互归属：按键与焦点都归宿主，AppSidebar 只声明 layout 与回调。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	108	a8784b7e479d3a	// // 版本头永远第一个渲染，保证品牌与版本号位置稳定，不随其他分区增减而移动。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	109	a8784b7e479d3a	// // 品牌名占用 PRODUCT_NAME_WIDTH，版本号占用剩余列宽，两段互不挤压。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	110	a8784b7e479d3a	// // 版本缺省走 DEFAULT_PRODUCT_VERSION，避免界面出现 undefined 或空串。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	122	a8784b7e479d3a	// // 子 Agent 是可选分区：宿主未注入 controller 时整段不渲染，不占任何行高。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	123	a8784b7e479d3a	// // onOpen 缺省回退到 controller 自带的 open，减少宿主额外接线。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	124	a8784b7e479d3a	// // expanded 缺省为 true，展开态由 sectionExpansion 决定并经 onToggle 上抛。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	134	a8784b7e479d3a	// // run 分区只存在于开发者模式，位置固定在子 Agent 之后、MCP 之前。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	135	a8784b7e479d3a	// // 条件展开用数组展开语法，数组为空即不占位，不产生多余行或空 key。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	136	a8784b7e479d3a	// // 分区顺序是隐性契约：调整顺序会改变用户定位调试信息的肌肉记忆。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	144	a8784b7e479d3a	// // 改动文件分区把 modifiedFiles 原样透传，本层不做过滤、去重或排序。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	145	a8784b7e479d3a	// // 数据归属在 session 投影层，侧栏只负责把列表渲染成固定高度的区块。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	146	a8784b7e479d3a	// // 折叠回调固定携带 modifiedFiles 标识，避免与相邻分区串号。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	154	a8784b7e479d3a	// // todos 是核心分区且可折叠，标题点击回调固定携带 todos 标识。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	155	a8784b7e479d3a	// // 行内容在 todoLines 中一次算完，容器只承担标题与展开门控。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	156	a8784b7e479d3a	// // developerMode 不影响 todos 的位置，普通用户同样能看到任务进度。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	172	a8784b7e479d3a	// // 弹性占位 box 吸收剩余高度，把工作区页脚压到侧栏底部。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	173	a8784b7e479d3a	// // 缺少该占位时内容稀疏会让页脚停在中间，视觉上像是布局断裂。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	174	a8784b7e479d3a	// // 页脚只读工作区路径与 git 分支，不参与比较或交互。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	228	a8784b7e479d3a	// // 通用分区容器：collapse 存在时渲染可折叠标题，否则渲染不可折叠加粗标题。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	229	a8784b7e479d3a	// // children 已由调用方算好，容器不再遍历原始数据，避免渲染期重复计算。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	230	a8784b7e479d3a	// // marginTop 固定 1 行，是分区之间的唯一间距来源，便于整体调整密度。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	259	a8784b7e479d3a	// // 展开门控只作用于 children：折叠时标题保留、内容整段丢弃。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	260	18e274fccfa0b3	// // 折叠时卸载而非 display:none：不占纵向空间，侧栏高度随之还原。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	261	a8784b7e479d3a	// // 缺省 expanded 视为 true，宿主未给展开态时分区默认可见。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	268	a8784b7e479d3a	// // 状态行颜色由 busy 决定：运行中用强调色，空闲用正文色，只改颜色不改文案。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	269	a8784b7e479d3a	// // 本分区不修改任何状态，状态真相仍由宿主投影进 props。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	270	a8784b7e479d3a	// // statusDetails 与 lastError 属于补充信息，固定排在主状态行之后。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	287	a8784b7e479d3a	// // 失败路径：lastError 非空时追加一行 danger 色错误，不覆盖已有行。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	288	a8784b7e479d3a	// // 错误行放在详情之后，保证主状态与进度信息先被用户看到。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	289	a8784b7e479d3a	// // 长错误文本按内容宽度截断，避免一条错误撑破整个侧栏。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	367	a8784b7e479d3a	// // 空态分支：todos 为空时只渲染 empty 文案并立即返回。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	368	a8784b7e479d3a	// // 提前返回避免继续计算进度与 more 提示，空列表不产生多余行。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	369	a8784b7e479d3a	// // 空态文案走 i18n copy，缺省时由 DEFAULT_TUI_COPY 兜底。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	375	a8784b7e479d3a	// // 截断策略：最多渲染 6 条 todo，分区高度上限因此固定。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	376	a8784b7e479d3a	// // key 由序号与正文拼成，正文变化时强制重建行，避免复用旧文本。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	377	a8784b7e479d3a	// // 正文按 SIDEBAR_TODO_CONTENT_WIDTH 截断，为状态标记与缩进预留列。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	396	a8784b7e479d3a	// // 键值行布局：label 右补空格到 9 列，value 截断到剩余宽度。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	397	a8784b7e479d3a	// // 固定列宽让同分区多行的冒号列对齐，降低纵向扫读成本。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	398	a8784b7e479d3a	// // 中间 1 列空格是 label 与 value 的硬间隔，改宽度需同步两个常量。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	421	a8784b7e479d3a	// // 上下文档位文案：used 与 window 都缺失时输出 -，不猜默认值。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	422	a8784b7e479d3a	// // 只有窗口为正数时才做除法，未知或零窗口一律不出百分比。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	423	a8784b7e479d3a	// // 仅知已用量时只显示数字，避免用未知窗口制造假百分比。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	489	a8784b7e479d3a	// // todo 状态标记固定 3 字符：[x] 完成、[>] 进行中、[ ] 未开始。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	490	a8784b7e479d3a	// // 固定宽度让多条 todo 的正文起始列一致，列表可以纵向扫读。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	491	a8784b7e479d3a	// // 状态集合由上游类型限定，这里按状态做穷尽映射并以未开始兜底。
+packages/services/src/zcode-agent/zcodeTaskServiceAdapter.ts	5380	a8784b7e479d3a	// //（历史 bug：最终回答前的前言被当成同一消息的前缀）。

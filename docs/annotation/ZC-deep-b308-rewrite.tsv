@@ -1,0 +1,37 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/debug/server/observation-events.ts	72	a8784b7e479d3a	// 编码器与时钟在流创建时固定。
+apps/zcode-cli/packages/debug/server/observation-events.ts	73	a8784b7e479d3a	// 首帧发重试指令再发问候。
+apps/zcode-cli/packages/debug/server/observation-events.ts	74	a8784b7e479d3a	// 每轮仅比对指纹并推进版本。
+apps/zcode-cli/packages/debug/server/observation-events.ts	75	a8784b7e479d3a	// 取消时停止定时器并标记关闭。
+apps/zcode-cli/packages/debug/server/observation-events.ts	165	a8784b7e479d3a	// 目标顺序固定便于比对。
+apps/zcode-cli/packages/debug/server/observation-events.ts	166	a8784b7e479d3a	// 逐项计算不抛错。
+apps/zcode-cli/packages/debug/server/observation-events.ts	167	a8784b7e479d3a	// 不存在的源记为缺失。
+apps/zcode-cli/packages/debug/server/observation-events.ts	168	a8784b7e479d3a	// 不递归扫描整棵仓库。
+apps/zcode-cli/packages/debug/server/observation-events.ts	228	a8784b7e479d3a	// 目录列出直接子项。
+apps/zcode-cli/packages/debug/server/observation-events.ts	229	a8784b7e479d3a	// 子项按名称排序后拼接。
+apps/zcode-cli/packages/debug/server/observation-events.ts	230	a8784b7e479d3a	// 子项读取失败记缺失。
+apps/zcode-cli/packages/debug/server/observation-events.ts	231	a8784b7e479d3a	// 共享内存只比较大小。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	33	a8784b7e479d3a	// 首次可见时才创建终端。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	34	a8784b7e479d3a	// 收起只隐藏不卸载。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	35	a8784b7e479d3a	// 拖拽中降频调整尺寸。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	36	a8784b7e479d3a	// 工作区标识用于错误边界。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	68	a8784b7e479d3a	// 结束拖拽只改一个标记。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	69	a8784b7e479d3a	// 不触碰终端实例本身。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	70	a8784b7e479d3a	// 供三类全局事件共用。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	71	a8784b7e479d3a	// 重复调用结果一致。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	119	a8784b7e479d3a	// 拖拽手柄仅可见时渲染。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	120	a8784b7e479d3a	// 面板折叠只在显式关闭时开启。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	121	a8784b7e479d3a	// 隐藏时禁用尺寸拖拽目标。
+packages/ui/src/app-shell/AnimatedTerminalPanel.tsx	122	a8784b7e479d3a	// 终端实例放在错误边界内。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	105	a8784b7e479d3a	// 翻页收敛到单个数组，调用方不感知游标协议。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	106	a8784b7e479d3a	// 命中单实例上限或没有下一页即停止。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	107	a8784b7e479d3a	// 游标不前进视为页面异常，直接停止避免死循环。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	108	a8784b7e479d3a	// 全部失败向上抛，由刷新段统一记日志。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	123	a8784b7e479d3a	// 归一化后丢弃不合规工具，仅记录被跳过的数量。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	158	a8784b7e479d3a	// 刷新中直接置尾随标志，由本次刷新结束时补排。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	178	a8784b7e479d3a	// 重试次数针对传输层抖动，不针对业务拒绝。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	179	a8784b7e479d3a	// 退避按尝试序号线性增长，整体仍留在认领期限内。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	180	a8784b7e479d3a	// [失败路径] 达到上限原样抛出，由调用方记日志。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	181	a8784b7e479d3a	// 每次尝试都重新执行，不做请求缓存。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	198	a8784b7e479d3a	// 取消发生在认领与执行之间时立即退出，不回传。
+packages/ui/src/plugin-ui/app/pluginUiAppTools.ts	225	a8784b7e479d3a	// 端口更替即开启新纪元，旧纪元的所有在途操作随之失效。

@@ -1,0 +1,11 @@
+file	baseLine	blame	content
+packages/provider/src/config/provider-config.ts	280	a8784b7e479d3a	// 改错后：更新排序时把个人模型列表重置为空，用户自选模型全部消失。
+packages/provider/src/config/provider-config.ts	638	a8784b7e479d3a	// 改错后：每次保存都产生仅键差异的变更，触发无意义落盘与同步广播。
+packages/provider/src/facades.ts	599	a8784b7e479d3a	// [资源] 清理只在当前项仍是队尾时执行，防止删除后来者的队尾。
+packages/provider/src/facades.ts	619	a8784b7e479d3a	// [契约] 只等待当前队尾，不阻止后续新写入。
+packages/server/src/remote/localTarGz.ts	88	a8784b7e479d3a	// 两个全零结束块是规范要求，这里只消费第一个就退出，第二个由循环条件自然排除。
+packages/server/src/remote/localTarGz.ts	415	a8784b7e479d3a	// 归一化结果是上跳、空串或以两点斜杠开头的，一律抛错，不降级为跳过。
+packages/shared/src/marketingTouch.ts	133	a8784b7e479d3a	// 图片与视频都要求默认素材，深色与回退素材可选。
+packages/shared/src/marketingTouch.ts	161	a8784b7e479d3a	// 弹窗结构固定：标题、描述、可选主视觉与最多四个按钮。
+packages/shared/src/web-remote-control.ts	254	a8784b7e479d3a	// [权衡] 只归一尾斜杠，不做大小写或编码归一。
+packages/shared/src/web-remote-control.ts	867	a8784b7e479d3a	// [权衡] 不在这里做过滤，过滤属于选择逻辑。

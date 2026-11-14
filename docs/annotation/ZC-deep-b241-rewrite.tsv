@@ -1,0 +1,13 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/bootstrap/src/app/node-repl-browser-broker.ts	161	a8784b7e479d3a	// 错误监听覆盖写响应阶段。
+apps/zcode-cli/packages/bootstrap/src/app/node-repl-browser-broker.ts	212	a8784b7e479d3a	// 令牌不符直接抛错，不做降级。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/product-projection.ts	269	a8784b7e479d3a	// 新增解释器只影响展示，不改变任何安全判定；不要把它当成允许列表使用。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/product-projection.ts	2556	a8784b7e479d3a	// 不得在本地发明补丁或误删。
+apps/zcode-cli/packages/cli/src/arguments.ts	129	a8784b7e479d3a	// [权衡] 全局注册的代价是其他命令也能接受这些旗标而不报错，属于已知取舍，不要为此在解析层再加一层白名单。
+apps/zcode-cli/packages/cli/src/arguments.ts	193	a8784b7e479d3a	// 该常量登记驼峰与短横线两种拼写，是剥离逻辑唯一的成员清单，不在别处复制字面量。
+apps/zcode-cli/packages/cli/src/command-center/slash-commands.ts	379	a8784b7e479d3a	// 清单与建议列表同源，包含自定义命令。
+apps/zcode-cli/packages/cli/src/command-center/slash-commands.ts	421	a8784b7e479d3a	// 别名行只在存在别名时加入，且统一加斜杠前缀，与列表和补全的展示形态一致；
+apps/zcode-cli/packages/core/src/browser-client/playwright.ts	127	a8784b7e479d3a	// 不要改成「只包装一层」：每次派生都要重新套，缺一层就等于没有白名单。
+apps/zcode-cli/packages/core/src/browser-client/playwright.ts	375	a8784b7e479d3a	// [契约] 这里不做本地超时、不做重试，只负责把选择器与操作装配成一条命令。
+apps/zcode-cli/packages/core/src/hooks/workspace-hook-review-flow.ts	126	a8784b7e479d3a	// 这三个条件任一不满足都属于调用方的编排错误，不是可恢复的交互结果。
+apps/zcode-cli/packages/core/src/hooks/workspace-hook-review-flow.ts	250	a8784b7e479d3a	// 这里不触发新请求，只是把当前代际正常收口。

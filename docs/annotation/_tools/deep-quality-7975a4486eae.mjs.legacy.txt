@@ -1,0 +1,1157 @@
+#!/usr/bin/env node
+// 深度注释质量度量（DEEP-SPEC v2 配套工具）
+//
+// 替代 v1 的「注释行 ÷ 代码行 ≥ 30%」单指标闸门，输出三个可计算的指标：
+//   1. 语句覆盖度 statementCoverage：有多少代码单元（语句/分支/字段）上方或行尾有解释
+//   2. 实质率     substanceRate    ：注释行里含真实标识符 / 数字 / 反引号片段的占比
+//   3. 注水率     fillerRate       ：与 deep-boilerplate 同源的单源判据——连续 3 行以上的
+//                                    短句堆叠 / 纯排比 / 同义重复。不再把「无锚点的功能描述」算作注水。
+//   4. 缺锚点率   weakRate         ：行内缺少标识符/数字/代码片段锚点，或只复述代码动作而未给
+//                                    原因/前置/后果。这是「补深缺口」而不是注水，单独度量。
+//
+// 输出约定（v1.7 起）：SUMMARY 行之后固定再打一行 RATIOS，给 weak 与 filler 的分子/分母。
+//   原因：百分比保留一位小数时，1/2,336 = 0.043% 会显示成 0.0%，与零条不可区分。
+//   报数只用 RATIOS 的分子/分母，SUMMARY 里的 weak% / filler% 仅作趋势参考。
+//
+// 输出约定（v1.8 起）：--list-weak 逐行打印 `WEAK <文件>:<行> <原因> <原文摘要>`，
+//   末尾再给 `WEAK lines=<条数> files=<文件数>`。条数与 RATIOS 的分子必须相等，不等即尺子有 bug。
+//   定位 weak 行只能走这个开关，不要再从本文件切片取 isWeakLine（v1.7 期间用过两次，属兜底手段）。
+//
+// 用法：
+//   node deep-quality.mjs <repo> [--files a,b,c] [--file-list x.txt]
+//                               [--root src] [--ext .rs,.py] [--exclude glob]
+//                               [--diff] [--diff-base HEAD] [--baseline <dir>]
+//                               [--json out.json] [--quiet] [--top N]
+//                               [--min-substance 0] [--max-filler 100]
+//
+//   <repo>            被测仓库根目录（必填）
+//   --files           逗号分隔的相对路径；给了就不再按 --root/--ext 遍历
+//   --file-list       每行一个相对路径的文件清单（与 --files 二选一即可）
+//   --root            源码子目录，逗号分隔，默认 src
+//   --ext             扩展名，逗号分隔，默认自动按语言集合
+//   --exclude         glob（* 匹配单段、** 匹配任意段），可重复
+//   --diff            只把 git diff 里的新增注释行计入「实质率 / 注水率」，
+//                     语句覆盖度仍按整文件算（覆盖率是文件属性，不是新增行属性）；
+//                     同时额外报告「新增代码单元的覆盖度」。默认 base = HEAD
+//   --diff-base       指定 diff 比较基准（默认 HEAD；可传 origin/master 等）
+//   --baseline <dir>  不用 git，改用基线快照目录 diff --no-index 取新增行
+//   --min-substance   实质率低于该百分比时非零退出（默认不启用）
+//   --max-filler      注水率高于该百分比时非零退出（默认不启用）
+//
+// 退出码：0 = 度量完成（默认不因指标低而失败）；1 = 读文件/解析/diff 失败；2 = 参数错误。
+// 口径细节见 docs/annotation/DEEP-SPEC.md v2 第 4 节与第 7 节。
+import fs from 'node:fs';
+import path from 'node:path';
+import { spawnSync } from 'node:child_process';
+
+const USAGE = `usage: node deep-quality.mjs <repo> [--files a,b,c | --file-list f.txt] [--root src]
+       [--ext .rs,.py] [--exclude glob] [--diff] [--diff-base HEAD] [--baseline dir]
+       [--json out.json] [--quiet] [--top N] [--min-substance pct] [--max-filler pct]
+       [--uncovered out.txt] [--list-weak] [--field-mode ast|legacy] [--metric-version v2|v3] [--unit-lines]`;
+
+const DEFAULT_EXT = ['.rs', '.py', '.ts', '.tsx', '.js', '.jsx', '.mjs', '.cjs', '.go', '.c', '.h', '.cc', '.cpp', '.hpp', '.java', '.kt'];
+
+const argv = process.argv.slice(2);
+if (argv.length === 0 || argv[0].startsWith('--')) {
+  console.error(USAGE);
+  process.exit(2);
+}
+const repo = path.resolve(argv[0]);
+const opt = {
+  files: [],
+  fileList: '',
+  root: 'src',
+  ext: DEFAULT_EXT,
+  exclude: [],
+  diff: false,
+  diffBase: 'HEAD',
+  baseline: '',
+  json: '',
+  quiet: false,
+  top: 10,
+  minSubstance: null,
+  maxFiller: null,
+  uncovered: '',
+  listWeak: false,
+  blank: false,
+  fieldMode: 'ast',
+  metricVersion: 'v3',
+  unitLines: false,
+};
+for (let i = 1; i < argv.length; i++) {
+  const a = argv[i];
+  const need = () => {
+    const v = argv[++i];
+    if (v === undefined) {
+      console.error('ERROR: ' + a + ' 缺少参数值');
+      process.exit(2);
+    }
+    return v;
+  };
+  if (a === '--files') opt.files = need().split(',').map((s) => s.trim()).filter(Boolean);
+  else if (a === '--file-list') opt.fileList = need();
+  else if (a === '--root') opt.root = need();
+  else if (a === '--ext') opt.ext = need().split(',').map((s) => s.trim()).filter(Boolean);
+  else if (a === '--exclude') opt.exclude.push(need());
+  else if (a === '--diff') opt.diff = true;
+  else if (a === '--diff-base') {
+    opt.diffBase = need();
+    opt.diff = true;
+  } else if (a === '--baseline') {
+    opt.baseline = need();
+    opt.diff = true;
+  } else if (a === '--json') opt.json = need();
+  else if (a === '--quiet') opt.quiet = true;
+  else if (a === '--blank') opt.blank = true;
+  else if (a === '--top') opt.top = Number(need());
+  else if (a === '--min-substance') opt.minSubstance = Number(need());
+  else if (a === '--max-filler') opt.maxFiller = Number(need());
+  else if (a === '--uncovered') opt.uncovered = need();
+  else if (a === '--list-weak') opt.listWeak = true;
+  else if (a === '--unit-lines') opt.unitLines = true;
+  else if (a === '--field-mode') {
+    opt.fieldMode = need();
+    if (!['ast', 'legacy'].includes(opt.fieldMode)) {
+      console.error('ERROR: --field-mode 只能是 ast 或 legacy');
+      process.exit(2);
+    }
+  }
+  else if (a === '--metric-version') {
+    opt.metricVersion = need();
+    if (!['v2', 'v3'].includes(opt.metricVersion)) {
+      console.error('ERROR: --metric-version 只能是 v2 或 v3');
+      process.exit(2);
+    }
+  }
+  else {
+    console.error('unknown arg: ' + a);
+    process.exit(2);
+  }
+}
+if (!fs.existsSync(repo)) {
+  console.error('ERROR: repo not found: ' + repo);
+  process.exit(2);
+}
+if (opt.minSubstance !== null && !(opt.minSubstance >= 0 && opt.minSubstance <= 100)) {
+  console.error('ERROR: --min-substance 必须是 0~100');
+  process.exit(2);
+}
+if (opt.maxFiller !== null && !(opt.maxFiller >= 0 && opt.maxFiller <= 100)) {
+  console.error('ERROR: --max-filler 必须是 0~100');
+  process.exit(2);
+}
+
+// ---------- 文本模型 ----------
+
+// 语言判定只看扩展名：Python 只认 #；其余按 C 家族（// 与 /* */）处理。
+function langOf(file) {
+  return path.extname(file).toLowerCase() === '.py' ? 'py' : 'c';
+}
+
+// 把字符串/字符字面量内容抹掉，用于探测行注释起点，避免 "http://" 被当成注释。
+function stripStrings(s) {
+  let out = '';
+  let i = 0;
+  while (i < s.length) {
+    const c = s[i];
+    if (c === '"' || c === "'" || c === '`') {
+      const q = c;
+      i++;
+      while (i < s.length) {
+        if (s[i] === '\\') {
+          i += 2;
+          continue;
+        }
+        if (s[i] === q) {
+          i++;
+          break;
+        }
+        i++;
+      }
+      out += '""';
+      continue;
+    }
+    out += c;
+    i++;
+  }
+  return out;
+}
+
+// 行尾注释（只用于「覆盖」判定，不参与实质率/注水率，也绝不计入 v1 密度）
+function trailingComment(line, lang) {
+  const stripped = stripStrings(line);
+  if (lang === 'py') {
+    const idx = stripped.indexOf('#');
+    return idx >= 0 ? line.slice(idx + 1).trim() : '';
+  }
+  const idx = stripped.indexOf('//');
+  return idx >= 0 ? line.slice(idx + 2).trim() : '';
+}
+
+function parseFile(text, lang) {
+  const lines = text.split('\n').map((l) => l.replace(/\r$/, ''));
+  if (lines.length && lines[lines.length - 1] === '') lines.pop();
+  const rows = [];
+  let inBlock = false;
+  let inFence = false;
+  let inPyTriple = null;
+  for (const line of lines) {
+    const t = line.trim();
+    if (t === '') {
+      rows.push({ kind: 'blank', text: line });
+      continue;
+    }
+    if (lang === 'c') {
+      if (inBlock) {
+        // JSDoc 里的 Markdown 代码围栏（```ts … ```）：围栏内是示例代码而不是散文，
+        // 逐行判「无解释」会稳定误报（`});`、`{` 之类），因此标 structural，不进注水统计。
+        const body = t.replace(/^\*+\s?/, '');
+        const isFence = /^(?:```|~~~)/.test(body);
+        rows.push({ kind: 'comment', text: line, content: cleanBlock(t), block: true, structural: inFence || isFence });
+        if (isFence) inFence = !inFence;
+        if (t.includes('*/')) {
+          inBlock = false;
+          inFence = false;
+        }
+        continue;
+      }
+      if (t.startsWith('/*')) {
+        rows.push({ kind: 'comment', text: line, content: cleanBlock(t), block: true });
+        if (!t.includes('*/')) inBlock = true;
+        continue;
+      }
+      if (t.startsWith('//')) {
+        rows.push({ kind: 'comment', text: line, content: t.replace(/^\/{2,}\s?/, '') });
+        continue;
+      }
+    } else if (lang === 'py' && inPyTriple) {
+      // 三引号字符串内部的 '#' 属于文档/示例，不是注释：必须先于 '#' 分支判断，
+      // 否则 docstring 里 ```python 示例（以 # 开头的命名空间清单）会被当成
+      // 本工程的注释，稳定误报成「无解释」注水。
+      rows.push({ kind: 'doc', text: line });
+      if (line.includes(inPyTriple)) inPyTriple = null;
+      continue;
+    } else if (t.startsWith('#')) {
+      rows.push({ kind: 'comment', text: line, content: t.replace(/^#+\s?/, '') });
+      continue;
+    } else if (lang === 'py') {
+      // 多行字符串（含 docstring）内部不是语句：连续行标 doc，不参与单元/覆盖统计。
+      // 若不排除，interrupt.py 这类「全是 TypedDict + 上游 docstring」的文件会被
+      // 稳定算成 20% 覆盖，且会把上游英文文档当成「未解释的代码」。
+      const m = t.match(/^[rbuf]{0,2}("""|''')/i);
+      if (m) {
+        const q = m[1];
+        const rest = t.slice(t.indexOf(q) + 3);
+        const closes = rest.includes(q);
+        // docstring 判定：文件首条语句，或上一条代码行以 ':' 结尾（def/class 头）。
+        let prevCode = null;
+        for (let k = rows.length - 1; k >= 0; k--) {
+          if (rows[k].kind === 'blank' || rows[k].kind === 'comment' || rows[k].kind === 'doc') continue;
+          prevCode = rows[k].text.trim();
+          break;
+        }
+        const isDocstring = prevCode == null || /:\s*$/.test(prevCode);
+        rows.push({ kind: isDocstring ? 'doc' : 'code', text: line });
+        if (!closes) inPyTriple = q;
+        continue;
+      }
+    }
+    rows.push({ kind: 'code', text: line });
+  }
+  return rows;
+}
+
+function cleanBlock(t) {
+  return t.replace(/^\/\*+/, '').replace(/\*+\/$/, '').replace(/^\*+\s?/, '').trim();
+}
+
+// 纯结构行：单行只有括号/分号/逗号，或 else/try/finally 之类的连接行。
+const STRUCT_ONLY = /^[{}()[\];,]+$/;
+function isStructural(t) {
+  if (STRUCT_ONLY.test(t)) return true;
+  if (/^\}?\s*(else|try|finally|do)\s*\{?$/.test(t)) return true;
+  // 装饰器 / 属性（@dataclass、#[derive(...)]）是下一条语句的附属，不单独算单元
+  if (/^@[A-Za-z_]/.test(t) || /^#\[/.test(t)) return true;
+  return false;
+}
+
+// import / use / include 不是「语句」，不进入覆盖率分母（它们很少需要逐行解释）。
+function isImport(t) {
+  return /^(use\s|import\s|from\s+\S+\s+import\s|#include\b|#import\b|require\s*\(|const\s+[\w$]+\s*=\s*require\s*\()/.test(t);
+}
+
+// 续行：闭合括号、方法链、布尔连接、以及上一行以开口符号/运算符结尾的片段。
+// 成员行：对象字面量 / zod schema / TS 类型体内成员 / Rust struct 字段。
+// 允许 TS 与 Rust 常见修饰符前缀；带尾逗号也不影响判定。
+const MEMBER_LINE =
+  /^(?:(?:pub(?:\([^)]*\))?|private|protected|public|readonly|static|declare|abstract|override)\s+)*[A-Za-z_$][\w$]*\s*\??\s*:/;
+
+function isContinuation(cur, prev, ver) {
+  if (!prev) return false;
+  const c = cur.trim();
+  if (/^[)\]}]/.test(c)) return true;
+  if (/^\./.test(c)) return true;
+  if (/^(\&\&|\|\|)/.test(c)) return true;
+  // v3 起：逗号分隔的成员行是新单元，不因上一行以逗号结尾而被当作续行；
+  // 否则对象字面量/zod/schema 除每组首字段外全部漏计。
+  if (ver !== 'v2' && MEMBER_LINE.test(c)) return false;
+  const p = prev.trim();
+  // import 的多行花括号：`import {` / `import type {` 的下一行是导入清单，不是单元。
+  // 只对 import 认 `{`——若把 `function f() {` 也算开口，函数体首句会被吞成续行，分母反而变小。
+  if (/^import\b/.test(p) && /\{$/.test(p)) return true;
+  if (/[,([+*/=]$/.test(p) || /(\&\&|\|\|)$/.test(p)) {
+    if (!/^(\}?\s*)?(if|elif|else|for|while|match|case|switch|return|let|const|var|pub|fn|def|class)\b/.test(c)) return true;
+  }
+  return false;
+}
+
+// 分支单元：真正会发生跳转/取不同路径的行。
+const BRANCH = /^(?:\}\s*)?(?:else\s+if|else|if|elif|for|while|match|case|switch|catch|except|guard|when|loop)\b/;
+// 字段单元（近似）：`name: Type,` 形态；用于报告「字段是否有解释」，不追求语言完备。
+// legacy 口径：只认行尾逗号，TS 类型成员/类属性普遍不写尾逗号，会系统性低估。
+const FIELD = /^(?:pub(?:\([^)]*\))?\s+)?[A-Za-z_]\w*\s*:\s*[^=;]+,\s*$/;
+// ast 口径：先定位类型体（interface / type 对象字面量 / class），体内成员不再要求尾逗号。
+const FIELD_MEMBER = /^(?:(?:pub(?:\([^)]*\))?|declare|public|private|protected|static|readonly|abstract|override)\s+)*["']?[A-Za-z_$][\w$]*["']?\??\s*:/;
+
+// 用括号栈标记「字段行」：只认类型体成员（interface / type 字面量 / class / struct）。
+// 只做词法级扫描，不引入 TS 依赖：跳过字符串/模板/块注释，避免 coordinatorMode 这类长模板字符串里的花括号污染栈。
+// 2026-11-10 口径定稿：field 是「类型契约的解释度」，只算对象的成员。形参是调用的输入，
+// 对象字面量与调用实参是运行期的值，三者一律归 unit 覆盖率，不进 field 分子分母。
+
+// `(` 是否是形参列表：只认声明（function / constructor / 箭头 / class 体内方法），不认普通调用。
+// 形参本身不计字段，区分它只为识别「形参里的内联对象类型」——那里面的成员是类型字面量成员，仍算 field。
+function isParamParen(prefix, topKind) {
+  const p = prefix.trim();
+  if (/(?:^|\s)function\s*\*?\s*[\w$]+(?:<[^>]*>)?\s*$/.test(p)) return true;
+  if (/(?:^|\s)constructor\s*$/.test(p)) return true;
+  if (/^(?:export\s+)?(?:const|let|var)\s+[\w$]+\s*=\s*(?:async\s*)?$/.test(p)) return true;
+  if (
+    topKind === 'class' &&
+    /^(?:(?:public|private|protected|static|async|readonly|override|abstract|get|set|declare)\s+)*\*?\s*[\w$]+\s*(?:<[^>]*>)?\s*$/.test(p)
+  )
+    return true;
+  return false;
+}
+
+// `{` 是否开启类型体：接口/类/struct、type 别名、返回类型对象、形参里的内联对象类型。
+// 对象字面量（`return {`、`foo: {` 在代码语境）保持 other，不被当成字段。
+function isTypeBrace(prefix, topKind) {
+  const p = prefix.trim();
+  // 类型联合臂的对象成员：`| {`
+  if (p === '|') return true;
+  if (/\b(?:interface|class|struct)\s+[\w$]+(?:<[^>]*>)?[^{]*$/.test(p)) return true;
+  if (/\btype\s+[\w$]+(?:<[^>]*>)?\s*=/.test(p)) return true;
+  // 返回类型对象：`): Promise<{` / `): {`
+  if (/\)\s*:\s*(?:[\w$.]+(?:\s*<[^<>]*>?)?\s*)?$/.test(p)) return true;
+  // 形参内联对象类型：`meta: {` / `meta: Array<{`
+  if (topKind === 'param' && /:\s*(?:[\w$.]+(?:\s*<[^<>]*>?)?\s*)?$/.test(p)) return true;
+  // 类型体内的嵌套对象：`field: {` / `field: Array<{`
+  if (topKind === 'type' && /[:(]\s*(?:[\w$.]+(?:\s*<[^<>]*>?)?\s*)?$/.test(p)) return true;
+  // 类字段的嵌套对象类型：`private cache: Map<string, {`（初始化器 `= {` 不算）
+  if (topKind === 'class' && !p.includes('=') && !p.includes('(') && /:\s*(?:[\w$.]+(?:\s*<[^<>]*>?)?\s*)?$/.test(p))
+    return true;
+  return false;
+}
+
+function scanTypeMemberLines(model) {
+  const members = new Set();
+  // 非字段上下文：普通括号内的调用实参、声明形参、代码语境里的对象字面量（return { / foo({）。
+  // 这些行即使形如 `name: value,` 也不是字段，必须排除在 FIELD 正则之外。
+  const nonField = new Set();
+  const stack = [];
+  const topKind = () => stack[stack.length - 1];
+  let mode = 'code';
+  let exprDepth = 0;
+  for (let i = 0; i < model.length; i++) {
+    const r = model[i];
+    if (r.kind !== 'code') continue;
+    const line = r.text;
+    const startKind = topKind();
+    const t = line.trim();
+    if (startKind === 'other' || startKind === 'paren' || startKind === 'param') nonField.add(i);
+    if ((startKind === 'type' || startKind === 'class') && FIELD_MEMBER.test(t)) {
+      const beforeColon = t.split(':')[0];
+      if (!beforeColon.includes('(') && !t.startsWith('[')) members.add(i);
+    }
+    let j = 0;
+    while (j < line.length) {
+      const c = line[j];
+      if (mode === 'block') {
+        if (c === '*' && line[j + 1] === '/') { mode = 'code'; j += 2; continue; }
+        j++;
+        continue;
+      }
+      if (mode === 'template') {
+        if (c === '\\') { j += 2; continue; }
+        if (c === '`') { mode = 'code'; j++; continue; }
+        if (c === '$' && line[j + 1] === '{') { mode = 'code'; exprDepth = 1; j += 2; continue; }
+        j++;
+        continue;
+      }
+      if (c === '/' && line[j + 1] === '/') break;
+      if (c === '/' && line[j + 1] === '*') { mode = 'block'; j += 2; continue; }
+      if (c === '"' || c === "'") {
+        const q = c;
+        j++;
+        while (j < line.length) {
+          if (line[j] === '\\') { j += 2; continue; }
+          if (line[j] === q) { j++; break; }
+          j++;
+        }
+        continue;
+      }
+      if (c === '`') { mode = 'template'; j++; continue; }
+      if (c === '(') {
+        // 只区分「形参列表」与「普通括号」：前者内部按 `name: Type` 计字段（含 `?` 与默认值），
+        // 后者（调用实参、for/if 条件）保持不计数，避免把实参对象字面量算成字段。
+        stack.push(isParamParen(line.slice(0, j), topKind()) ? 'param' : 'paren');
+        j++;
+        continue;
+      }
+      if (c === ')') {
+        const k = topKind();
+        if (k === 'param' || k === 'paren') stack.pop();
+        j++;
+        continue;
+      }
+      if (c === '{') {
+        const prefix = line.slice(0, j);
+        if (exprDepth > 0) {
+          exprDepth++;
+          stack.push('other');
+        } else if (isTypeBrace(prefix, topKind())) {
+          stack.push(/\b(?:class|struct)\s+[\w$]+/.test(prefix) ? 'class' : 'type');
+        } else {
+          stack.push('other');
+        }
+        j++;
+        continue;
+      }
+      if (c === '}') {
+        if (exprDepth > 0) {
+          exprDepth--;
+          if (exprDepth === 0) mode = 'template';
+          else stack.pop();
+          j++;
+          continue;
+        }
+        stack.pop();
+        j++;
+        continue;
+      }
+      j++;
+    }
+  }
+  return { members, nonField };
+}
+
+// 找第 i 行代码上方最近的整行注释；中间允许 <=gap 个空行，遇到代码行即断开。
+function commentAbove(rows, i, gap) {
+  let blanks = 0;
+  for (let j = i - 1; j >= 0; j--) {
+    if (rows[j].kind === 'blank') {
+      blanks++;
+      if (blanks > gap) return -1;
+      continue;
+    }
+    if (rows[j].kind === 'comment') return j;
+    // 装饰器/属性行是下一条语句的附属，向上找注释时跳过
+    if (rows[j].kind === 'code') {
+      const t = rows[j].text.trim();
+      if (/^@[A-Za-z_]/.test(t) || /^#\[/.test(t)) continue;
+    }
+    return -1;
+  }
+  return -1;
+}
+
+// ---------- 注释质量判定 ----------
+
+const TAG_STOP = new Set(['STEP', 'INV', 'TODO', 'FIXME', 'NOTE', 'SAFETY', 'XXX', 'HACK']);
+const PRONOUN = /(该|这个|那个|这些|那些|此处|这里|其中|上述|如下|相关|对应|其|它|此)/;
+const WEAK = /(注意|小心|务必|需要关注|值得注意|应当注意|特别提醒)/;
+const CONSEQUENCE = /(否则|会|导致|破坏|失败|panic|死锁|泄露|泄漏|损坏|越界|不一致|未定义|undefined|crash|error|回滚|重放)/i;
+const PREDICATE = /(若|则|会|导致|必须|不能|只能|返回|抛出|写入|读取|分配|释放|等于|大于|小于|防止|保证|确保|因为|所以|但是|而|由|让|保持|限制|覆盖|指向|持有|借用|观测|依赖|产生|触发|恢复|丢弃|重试|拒绝|跳过|合并|拆分|先|再|最后)/;
+// 前置条件 / 顺序依赖 / 失败后果：满足其一的注释，即使没有标识符也算「解释」。
+// 这条口径直接来自 v2 新增要求：不许用「代码平凡」当借口写站位描述。
+const PRECOND = /(前提|前置|依赖|必须先|先于|在.{0,12}之前|之后|顺序|调用前|调用后|传入|返回|失败|否则|会|导致|造成|破坏|panic|死锁|回滚|重放|越界|不变量|INV-|保证|确保|无法|不能|只能|必须|拒绝|抛出|未|若|如果|一旦|冲突|泄漏|泄露|只有|才|截断|说明|便于|以免|避免|取决于|用于|供|风险|收益|直到|算起|对应|双重|互斥|优先级|重复)/;
+// 不变量词汇：说明「这行代码守住什么」也算解释，即使没写标识符。
+const INVARIANT = /(唯一|不可变|幂等|原子|有序|单调|只读|线程安全|可重入|有界|不共享|恒定|固定|稳定|从\s*\d+\s*开始)/;
+// 中文具体名词锚点：v2 要求「写出真实标识符」，但中文行文里常用「缓冲区/边界/残行」
+// 指代具体对象；这类词在语义上等价于标识符。此表只用于统计口径，不改注释内容。
+const CN_NOUN = /(缓冲区|边界|残行|换行|指针|计数|位置|偏移|目录|文件|路径|参数|配置|规则|权限|窗口|阈值|消息|会话|连接|进程|线程|缓存|索引|映射|集合|节点|字段|标记|长度|队列|句柄|状态|数组|对象|字节|摘要|快照|分段|视图|正则|转义|扫描|字符串|字符|引号|文本|枚举|事件|任务|标识|文案)/;
+const HEADING = /[:：]\s*$/;
+const ORDINAL = /^(首先|其次|然后|最后|第一|第二|第三|第四|其一|其二)[,，、]/;
+
+// 锚点：长度 ≥3 的标识符，或全大写缩写（≥2 字符，如 UI / ID / API）。
+// 与 zc-gate 的 ident() 保持同一口径；两把尺子对「UI」给出不同答案会让明细与统计对不上。
+function identTokens(s) {
+  const long = s.match(/[A-Za-z_][A-Za-z0-9_]{2,}/g) ?? [];
+  const caps = s.match(/\b[A-Z]{2,}\b/g) ?? [];
+  return [...long, ...caps].filter((t) => !TAG_STOP.has(t));
+}
+
+// 实质：含真实标识符 / 数字 / 反引号片段 / 中文谓词。
+// 2026-11-10 语言中立化：旧口径把任意英文单词当 identifier，英文 JSDoc 几乎必过，
+// 而「同一次事务内重试，失败即整体回滚」这类合格中文句因无 ASCII 被判非实质。
+// 这不是注释质量差，是尺子只认一种语言；CN_PREDICATE 补上后果/条件/约束一路。
+const CN_PREDICATE = /(否则|会导致|导致|只|仅|必须|不得|才|则|失败时|越界|残留|幂等|哨兵|上限|下限|顺序依赖|依赖|一旦|若|如果|除非|即使|即便|禁止|不允许|保证|确保|回滚|泄漏|泄露|超时|截断|互斥|不变量|原子|有界|单调|只读|唯一|固定|默认|优先级|重试|丢弃|跳过|拒绝|兜底|降级|先于|之后|之前|避免|防止|最后|随后)/;
+
+function substanceOf(content) {
+  if (/\d/.test(content)) return 'digit';
+  if (/`[^`]+`/.test(content)) return 'code-span';
+  if (identTokens(content).length > 0) return 'identifier';
+  if (CN_PREDICATE.test(content)) return 'cn-predicate';
+  return '';
+}
+
+function effLen(content) {
+  return [...content.replace(/\s+/g, '')].length;
+}
+
+function bigrams(s) {
+  const cs = [...s.replace(/\s+/g, '')];
+  const out = new Set();
+  for (let i = 0; i + 1 < cs.length; i++) out.add(cs[i] + cs[i + 1]);
+  return out;
+}
+function jaccard(a, b) {
+  if (!a.size || !b.size) return 0;
+  let inter = 0;
+  for (const x of a) if (b.has(x)) inter++;
+  return inter / (a.size + b.size - inter);
+}
+
+// 结构性标记：Markdown 代码围栏（```ts / ```）、JSDoc 段落装饰、指令注释
+// （eslint-disable / prettier-ignore / @ts-*）、文件内分区标记。它们不承载解释语义，
+// 但删掉会破坏文档渲染或工具行为，因此不进注水判定；此豁免只改统计口径，不改内容。
+const STRUCTURAL_MARKER = /^(?:```|~~~|eslint-|prettier-|@ts-|#region\b|#endregion\b|\*+$|[═─━]{3,})/;
+
+// 句末标点：出现即可与下一行断开；`:`/`：` 视作标题收尾同样断开。
+const SENTENCE_END = /[。！？!?；;.：:]\s*$/;
+
+// 取当前注释行所在的整句：把上下相邻、尚未以句末标点收尾的注释行并进来。
+// 注释折行后单看半句会稳定误判「无解释」（例如一句被切成「…不兼容，」+「…会 400。」），
+// 判定单元应当是整句而不是物理行；该合并只影响解释/注水判定，不改动任何内容。
+function sentenceUnit(rows, i) {
+  let s = i;
+  while (s - 1 >= 0 && rows[s - 1].kind === 'comment' && !rows[s - 1].structural && !SENTENCE_END.test(rows[s - 1].content ?? '')) s--;
+  let e = i;
+  while (e + 1 < rows.length && rows[e + 1].kind === 'comment' && !rows[e + 1].structural && !SENTENCE_END.test(rows[e].content ?? '')) e++;
+  return rows
+    .slice(s, e + 1)
+    .map((r) => r.content ?? '')
+    .join('');
+}
+
+// 单行注水判定；inHeader 用于豁免文件头「本文件负责…」这类概述句。
+function isWeakLine(content, inHeader) {
+  if (isSeparator(content)) return false;
+  if (STRUCTURAL_MARKER.test(content)) return false; // 结构性标记不是注水
+  if (HEADING.test(content)) return false; // 小节标题不是解释，但也不该算注水
+  if (inHeader) return false;
+  if (identTokens(content).length > 0) return false;
+  if (/\d/.test(content)) return false; // 数字是具体锚点（行号/阈值/长度）
+  if (/`[^`]+`/.test(content)) return false; // 代码片段是具体锚点
+  if (CN_NOUN.test(content)) return false; // 中文具体名词等价于标识符
+  if (PRECOND.test(content)) return false;
+  if (INVARIANT.test(content)) return false;
+  return true;
+}
+
+function lineFiller(content, prevContent, inHeader, unitText) {
+  const reasons = [];
+  const hasAnchor = /\d/.test(content) || /`[^`]+`/.test(content) || identTokens(content).length > 0;
+  const unit = unitText ?? content;
+  // 指代是否可解析：以整句为范围找锚点，避免折行后「它/这里」的先行词落在上一行被误判。
+  const unitAnchor = hasAnchor || /\d/.test(unit) || /`[^`]+`/.test(unit) || CN_NOUN.test(unit);
+  const c = content.replace(/应该|不该|活该|其它/g, '');
+  // 指代豁免：句子里已有谓词/前置条件/不变量时，「这里/此时/据此/它」是承接上下文的
+  // 连接词而不是缺先行词的悬空指代。此前的口径会把「因此这里返回时…」整句判成无指代。
+  const unitExplains = PREDICATE.test(unit) || PRECOND.test(unit) || INVARIANT.test(unit);
+  if (!unitAnchor && !unitExplains && PRONOUN.test(c)) reasons.push('无指代');
+  if (!unitAnchor && WEAK.test(content) && !CONSEQUENCE.test(content)) reasons.push('空泛提醒');
+  if (ORDINAL.test(content) && !unitAnchor) reasons.push('序数空转');
+  // 纯名词清单：有 >=2 个顿号/逗号分隔项，但没有任何谓词/约束词
+  const seps = (content.match(/[、,，]/g) ?? []).length;
+  if (seps >= 2 && !PREDICATE.test(unit) && !PRECOND.test(unit) && !unitAnchor) reasons.push('无信息列举');
+  // v2 新增：既无真实标识符，也没说前置条件/顺序/后果 → 站位描述，不算有效行。
+  // 判定用整句（unitText），避免把折行后的半句当成完整体。
+  if (isWeakLine(unitText ?? content, inHeader)) reasons.push('无解释');
+  if (prevContent) {
+    const a = bigrams(content);
+    const b = bigrams(prevContent);
+    if (effLen(content) < 60 && effLen(prevContent) < 60 && jaccard(a, b) >= 0.6) reasons.push('同义重复');
+  }
+  return reasons;
+}
+
+// 一段连续注释行整体判定：>=3 行、每行有效字符 <25、组内无标识符与数字锚点
+// → 短句堆叠/排比。单独一行的注释符（`#`）是分段装饰，不参与。
+const ANCHOR = /\d|`[^`]+`/;
+function isSeparator(content) {
+  return content.replace(/[\s\-=*#/]/g, '') === '';
+}
+function blockFillerSet(blockRows) {
+  const flagged = new Map(); // rowIndex -> reasons[]
+  const add = (idx, reason) => {
+    if (!flagged.has(idx)) flagged.set(idx, []);
+    const arr = flagged.get(idx);
+    if (!arr.includes(reason)) arr.push(reason);
+  };
+  for (let start = 0; start < blockRows.length; ) {
+    let end = start;
+    while (
+      end < blockRows.length &&
+      !isSeparator(blockRows[end].content) &&
+      !ANCHOR.test(blockRows[end].content) &&
+      effLen(blockRows[end].content) < 25 &&
+      identTokens(blockRows[end].content).length === 0
+    ) end++;
+    if (end - start >= 3) {
+      const group = blockRows.slice(start, end);
+      const lead = (s) => [...s.replace(/\s+/g, '')].slice(0, 2).join('');
+      const sameLead = group.every((r) => lead(r.content) === lead(group[0].content));
+      const avgSim = group.slice(1).reduce((sum, r, k) => {
+        return sum + jaccard(bigrams(r.content), bigrams(group[k].content));
+      }, 0) / Math.max(1, group.length - 1);
+      const reason = avgSim >= 0.35 ? '同义重复' : sameLead ? '纯排比' : '短句堆叠';
+      for (let k = start; k < end; k++) add(blockRows[k].idx, reason);
+      start = end;
+    } else {
+      start++;
+    }
+  }
+  return flagged;
+}
+
+// ---------- git diff：取新增行 ----------
+
+function runGit(args) {
+  const r = spawnSync('git', ['-C', repo, '--no-pager', ...args], {
+    encoding: 'utf8',
+    maxBuffer: 256 * 1024 * 1024,
+  });
+  if (r.error) throw new Error('git 调用失败: ' + String(r.error));
+  if (r.status !== 0) throw new Error('git 退出码 ' + r.status + ': ' + (r.stderr || '').trim());
+  return r.stdout || '';
+}
+
+// git 在路径含反斜杠/空格时会加引号并做 C 风格转义（--no-index 常见），这里还原成普通路径。
+function unquoteGitPath(s) {
+  let v = s.trim();
+  if (v.startsWith('"') && v.endsWith('"')) {
+    v = v
+      .slice(1, -1)
+      .replace(/\\\\/g, '\\')
+      .replace(/\\"/g, '"')
+      .replace(/\\t/g, '\t')
+      .replace(/\\n/g, '\n');
+  }
+  return v.replace(/\\/g, '/');
+}
+
+// 解析 -U0 diff，返回 Map<相对路径, Map<新行号, 新增文本>>
+function parseAddedLines(diffText, fileFilter) {
+  const out = new Map();
+  let cur = null;
+  let newNo = 0;
+  let inHunk = false;
+  for (const raw of diffText.split(/\r?\n/)) {
+    if (inHunk) {
+      const hunk = raw.match(/^@@ -\d+(?:,\d+)? \+(\d+)(?:,\d+)? @@/);
+      if (hunk) {
+        newNo = Number(hunk[1]);
+        continue;
+      }
+      if (raw.startsWith('\\')) continue; // "\ No newline at end of file"
+      if (raw.startsWith('+')) {
+        out.get(cur).set(newNo, raw.slice(1).replace(/\r$/, ''));
+        newNo++;
+        continue;
+      }
+      if (raw.startsWith('-')) continue; // 删除行不推进新行号
+      if (raw.startsWith(' ')) {
+        newNo++;
+        continue;
+      }
+      inHunk = false; // 落到文件头（diff --git ...）
+    }
+    if (raw.startsWith('diff --git')) {
+      cur = null;
+      continue;
+    }
+    const hunk = raw.match(/^@@ -\d+(?:,\d+)? \+(\d+)(?:,\d+)? @@/);
+    if (hunk) {
+      inHunk = true;
+      newNo = Number(hunk[1]);
+      continue;
+    }
+    if (raw.startsWith('+++ ')) {
+      let p = unquoteGitPath(raw.slice(4));
+      if (p.startsWith('b/')) p = p.slice(2);
+      if (fileFilter && !fileFilter.has(p)) {
+        cur = null;
+        continue;
+      }
+      cur = p;
+      out.set(p, new Map());
+      continue;
+    }
+  }
+  return out;
+}
+
+function collectDiff(files) {
+  const rels = new Set(files.map((f) => path.relative(repo, f).replace(/\\/g, '/')));
+  if (opt.baseline) {
+    const baseDir = path.resolve(opt.baseline);
+    if (!fs.existsSync(baseDir)) throw new Error('baseline 目录不存在: ' + baseDir);
+    const out = new Map();
+    for (const rel of rels) {
+      const baseFile = path.join(baseDir, rel);
+      const curFile = path.join(repo, rel);
+      if (!fs.existsSync(baseFile)) throw new Error('基线缺文件: ' + baseFile);
+      const r = spawnSync('git', ['--no-pager', 'diff', '--no-index', '-U0', '--', baseFile, curFile], {
+        encoding: 'utf8',
+        maxBuffer: 64 * 1024 * 1024,
+      });
+      // diff --no-index 在「有差异」时退出码为 1，属于正常情况
+      if (r.error) throw new Error('git diff --no-index 失败: ' + String(r.error));
+      // 单文件 diff 不需要再按路径过滤：+++ 行给的是 b/xxx 形式，
+      // 与 curFile 的绝对路径对不上，传过滤集会把 cur 置空并导致 out.get(null)。
+      const parsed = parseAddedLines(r.stdout || '', null);
+      const first = [...parsed.values()][0] ?? new Map();
+      out.set(rel, first);
+    }
+    return out;
+  }
+  const diffText = runGit(['diff', opt.diffBase, '-U0', '--', ...rels]);
+  return parseAddedLines(diffText, rels);
+}
+
+// ---------- 文件收集 ----------
+
+function globToRegExp(g) {
+  let out = '';
+  for (let i = 0; i < g.length; i++) {
+    const c = g[i];
+    if (c === '*') {
+      if (g[i + 1] === '*') {
+        out += '.*';
+        i++;
+        if (g[i + 1] === '/') i++;
+      } else out += '[^/]*';
+    } else if ('\\^$.|?+()[]{}'.includes(c)) out += '\\' + c;
+    else out += c;
+  }
+  return new RegExp('^' + out + '$');
+}
+
+function walk(dir, out, exts) {
+  let entries;
+  try {
+    entries = fs.readdirSync(dir, { withFileTypes: true });
+  } catch (e) {
+    throw new Error('无法读取目录 ' + dir + ': ' + e.message);
+  }
+  for (const ent of entries) {
+    const p = path.join(dir, ent.name);
+    if (ent.isDirectory()) {
+      if (['target', 'node_modules', '.git', 'dist', 'build', '.venv', '__pycache__'].includes(ent.name)) continue;
+      walk(p, out, exts);
+    } else if (ent.isFile() && exts.some((e) => ent.name.endsWith(e))) {
+      out.push(p);
+    }
+  }
+}
+
+function resolveFiles() {
+  let list = [];
+  if (opt.files.length || opt.fileList) {
+    const names = opt.files.slice();
+    if (opt.fileList) {
+      const txt = fs.readFileSync(path.resolve(opt.fileList), 'utf8');
+      for (const l of txt.split(/\r?\n/)) {
+        const v = l.trim();
+        if (v) names.push(v);
+      }
+    }
+    for (const n of names) {
+      const abs = path.resolve(repo, n);
+      if (!fs.existsSync(abs)) throw new Error('文件不存在: ' + n);
+      list.push(abs);
+    }
+  } else {
+    for (const r of opt.root.split(',').map((s) => s.trim()).filter(Boolean)) {
+      const dir = path.join(repo, r);
+      if (!fs.existsSync(dir)) throw new Error('源码目录不存在: ' + dir);
+      walk(dir, list, opt.ext);
+    }
+  }
+  const exRes = opt.exclude.map(globToRegExp);
+  if (exRes.length) {
+    list = list.filter((f) => {
+      const rel = path.relative(repo, f).replace(/\\/g, '/');
+      return !exRes.some((re) => re.test(rel));
+    });
+  }
+  list = [...new Set(list.map((f) => path.resolve(f)))].sort();
+  if (!list.length) throw new Error('没有匹配到文件');
+  return list;
+}
+
+// ---------- 主流程 ----------
+
+let files;
+try {
+  files = resolveFiles();
+} catch (e) {
+  console.error('ERROR: ' + e.message);
+  process.exit(1);
+}
+
+let added = null;
+if (opt.diff) {
+  try {
+    added = collectDiff(files);
+  } catch (e) {
+    console.error('ERROR: ' + e.message);
+    process.exit(1);
+  }
+}
+
+const rows = [];
+let errors = 0;
+for (const abs of files) {
+  const rel = path.relative(repo, abs).replace(/\\/g, '/');
+  let text;
+  try {
+    text = fs.readFileSync(abs, 'utf8');
+  } catch (e) {
+    console.error('ERROR: 无法读取 ' + rel + ': ' + e.message);
+    errors++;
+    continue;
+  }
+  const lang = langOf(abs);
+  const model = parseFile(text, lang);
+  const addedMap = opt.diff ? added.get(rel) ?? new Map() : null;
+  const memberScan = opt.fieldMode === 'ast' ? scanTypeMemberLines(model) : null;
+
+  // 1) 代码单元与覆盖
+  const units = [];
+  const branchUnits = [];
+  const fieldUnits = [];
+  const addedCodeUnits = [];
+  let prevCodeText = null;
+  for (let i = 0; i < model.length; i++) {
+    const r = model[i];
+    if (r.kind === 'blank') continue;
+    if (r.kind === 'comment') continue;
+    if (r.kind === 'doc') continue;
+    const t = r.text.trim();
+    const cont = isContinuation(t, prevCodeText, opt.metricVersion);
+    prevCodeText = t;
+    if (isStructural(t) || isImport(t) || cont) continue;
+    const idx = units.push(i) - 1;
+    if (BRANCH.test(t)) branchUnits.push(idx);
+    if (opt.fieldMode === 'ast' ? (!memberScan.nonField.has(i) && FIELD.test(t)) || memberScan.members.has(i) : FIELD.test(t)) fieldUnits.push(idx);
+    if (addedMap && addedMap.has(i + 1)) addedCodeUnits.push(idx);
+  }
+  const isCovered = (idx) => {
+    const i = units[idx];
+    if (commentAbove(model, i, 2) >= 0) return true;
+    return trailingComment(model[i].text, lang) !== '';
+  };
+  const coveredCount = units.reduce((n, _, k) => n + (isCovered(k) ? 1 : 0), 0);
+  const uncoveredUnits = units
+    .map((i, k) => ({ i, k }))
+    .filter(({ k }) => !isCovered(k))
+    .map(({ i, k }) => ({
+      line: i + 1,
+      text: model[i].text.trim().slice(0, 100),
+      branch: branchUnits.includes(k),
+    }));
+  const branchCovered = branchUnits.reduce((n, k) => n + (isCovered(k) ? 1 : 0), 0);
+  const fieldCovered = fieldUnits.reduce((n, k) => n + (isCovered(k) ? 1 : 0), 0);
+  const newCovCount = addedCodeUnits.reduce((n, k) => n + (isCovered(k) ? 1 : 0), 0);
+
+  // 2) 注释质量（默认全文；--diff 时只统计新增注释行）
+  // structural = 代码围栏内的示例代码 / 分隔线 / 工具指令，不承载解释语义，不进分母。
+  const commentIdx = [];
+  for (let i = 0; i < model.length; i++) if (model[i].kind === 'comment' && !model[i].structural) commentIdx.push(i);
+  const inScope = commentIdx.filter((i) => !addedMap || addedMap.has(i + 1));
+
+  // 1b) 注释行 → 单元 的映射统计（2026-11-10 增补，只用于解释 coverage 与 comments 的差额，不参与任何判定）
+  // strict：只有被 commentAbove 直接命中的那一行算已映射（coverage 的实际口径）；
+  // block：该行所在连续注释块只要有一行命中单元，整块都算已映射（读者视角：整段都在解释它）。
+  const strictMapped = new Set();
+  const blockMapped = new Set();
+  for (const ui of units) {
+    const j = commentAbove(model, ui, 2);
+    if (j < 0) continue;
+    strictMapped.add(j);
+    for (let x = j; x >= 0 && model[x].kind === 'comment'; x--) blockMapped.add(x);
+    for (let x = j + 1; x < model.length && model[x].kind === 'comment'; x++) blockMapped.add(x);
+  }
+  let mappedStrict = 0;
+  let mappedBlock = 0;
+  const unmappedReasons = { import: 0, structural: 0, continuation: 0, gap: 0, eof: 0, other: 0 };
+  for (const i of commentIdx) {
+    if (strictMapped.has(i)) mappedStrict++;
+    if (blockMapped.has(i)) {
+      mappedBlock++;
+      continue;
+    }
+    // 该注释块没映射到任何单元：向下找第一个代码行，归类原因
+    let j = i + 1;
+    let blanks = 0;
+    while (j < model.length && (model[j].kind === 'blank' || model[j].kind === 'comment')) {
+      if (model[j].kind === 'blank') blanks++;
+      j++;
+    }
+    if (j >= model.length) unmappedReasons.eof++;
+    else if (blanks > 2) unmappedReasons.gap++;
+    else {
+      const t = model[j].text.trim();
+      let prevCode = null;
+      for (let k = j - 1; k >= 0; k--) if (model[k].kind === 'code') { prevCode = model[k].text.trim(); break; }
+      if (isImport(t)) unmappedReasons.import++;
+      else if (isStructural(t)) unmappedReasons.structural++;
+      else if (isContinuation(t, prevCode, opt.metricVersion)) unmappedReasons.continuation++;
+      else unmappedReasons.other++;
+    }
+  }
+  const commentMap = { strict: mappedStrict, block: mappedBlock, reasons: unmappedReasons };
+
+  // 连续注释块 → 块内整体判定（短句堆叠/排比）
+  const blockFlags = new Map();
+  for (let s = 0; s < commentIdx.length; ) {
+    let e = s;
+    while (e + 1 < commentIdx.length && commentIdx[e + 1] === commentIdx[e] + 1) e++;
+    const block = [];
+    for (let k = s; k <= e; k++) block.push({ idx: commentIdx[k], content: model[commentIdx[k]].content ?? '' });
+    const flagged = blockFillerSet(block);
+    for (const [idx, reasons] of flagged) blockFlags.set(idx, reasons);
+    s = e + 1;
+  }
+
+  // 文件头 = 文件开头（允许空行）起的第一段连续注释块
+  let headerEnd = -1;
+  for (let i = 0; i < model.length; i++) {
+    if (model[i].kind === 'blank') continue;
+    if (model[i].kind !== 'comment') break;
+    let j = i;
+    while (j + 1 < model.length && model[j + 1].kind === 'comment') j++;
+    headerEnd = j;
+    break;
+  }
+
+  const fillerLines = [];
+  const weakLines = [];
+  let substantive = 0;
+  let explained = 0;
+  for (const i of inScope) {
+    const content = model[i].content ?? '';
+    const unit = sentenceUnit(model, i);
+    if (substanceOf(content)) substantive++;
+    if (!isWeakLine(unit, i <= headerEnd)) explained++;
+    const prev = i > 0 && model[i - 1].kind === 'comment' ? model[i - 1].content ?? '' : '';
+    const reasons = [];
+    for (const r of lineFiller(content, prev, i <= headerEnd, unit)) reasons.push(r);
+    const blockReasons = blockFlags.get(i) ?? [];
+    for (const r of blockReasons) reasons.push(r);
+    // 注水只看结构性标记（与 deep-boilerplate 完全同源），保证两个脚本对同一份代码结论一致。
+    if (blockReasons.length) fillerLines.push({ line: i + 1, content, reasons: blockReasons, unit });
+    // 缺锚点/无解释是补深缺口，单独记在 weakLines，不再混入注水率。
+    if (reasons.length) weakLines.push({ line: i + 1, content, reasons: [...new Set(reasons)], unit });
+  }
+
+  const pct = (a, b) => (b === 0 ? null : (a / b) * 100);
+  rows.push({
+    path: rel,
+    lang,
+    metricVersion: opt.metricVersion,
+    loc: model.length,
+    units: units.length,
+    covered: coveredCount,
+    coverage: pct(coveredCount, units.length),
+    branch: branchUnits.length,
+    branchCovered,
+    branchCoverage: pct(branchCovered, branchUnits.length),
+    field: fieldUnits.length,
+    fieldCovered,
+    fieldCoverage: pct(fieldCovered, fieldUnits.length),
+    comments: inScope.length,
+    totalComments: commentIdx.length,
+    commentMap,
+    substanceRate: pct(substantive, inScope.length),
+    explainRate: pct(explained, inScope.length),
+    fillerRate: pct(fillerLines.length, inScope.length),
+    weakRate: pct(weakLines.length, inScope.length),
+    fillerLines,
+    weakLines,
+    uncoveredUnits,
+    // 真正空白：未覆盖且向上 8 行内没有任何注释行。
+    // 不用 commentAbove：向上遇到代码行就断开，会把「块级说明只记块首一个单元」
+    // 造成的摊薄也判成空白（ZCode 用同一口径发现 109 个里有 81 个其实有邻近注释）。
+    blankUncovered: uncoveredUnits.filter((u) => {
+      const i = u.line - 1;
+      for (let j = Math.max(0, i - 8); j < i; j++) if (model[j].kind === 'comment') return false;
+      return true;
+    }).length,
+    ...(opt.unitLines
+      ? {
+          unitLines: units.map((i) => i + 1),
+          branchLines: branchUnits.map((k) => units[k] + 1),
+          fieldLines: fieldUnits.map((k) => units[k] + 1),
+        }
+      : {}),
+    newComments: addedMap ? inScope.length : 0,
+    addedCodeUnits: addedMap ? addedCodeUnits.length : null,
+    newCodeCoverage: addedMap ? pct(newCovCount, addedCodeUnits.length) : null,
+  });
+}
+
+const fmt = (v) => (v === null || v === undefined ? '-' : v.toFixed(1));
+const sum = (arr, f) => arr.reduce((n, r) => n + f(r), 0);
+
+if (!opt.quiet) {
+  console.log('metric\tcoverage%\tbranch%\tfield%\tunits\tcomments\tsubstance%\texplain%\tfiller%\tnewC\tpath');
+  for (const r of rows) {
+    console.log(
+      `${r.metricVersion}\t${fmt(r.coverage)}\t${fmt(r.branchCoverage)}\t${fmt(r.fieldCoverage)}\t${r.units}\t${r.comments}\t${fmt(
+        r.substanceRate,
+      )}\t${fmt(r.explainRate)}\t${fmt(r.fillerRate)}\t${opt.diff ? r.newComments : '-'}\t${r.path}`,
+    );
+  }
+}
+
+if (opt.uncovered) {
+  const lines = [];
+  for (const r of rows) {
+    for (const u of r.uncoveredUnits ?? []) {
+      lines.push(`${r.path}\t${u.line}\t${u.branch ? 'B' : '-'}\t${u.text}`);
+    }
+  }
+  fs.writeFileSync(opt.uncovered, lines.join('\n') + (lines.length ? '\n' : ''), 'utf8');
+  console.log(`UNCOVERED units=${lines.length} out=${opt.uncovered}`);
+}
+
+if (opt.listWeak) {
+  let n = 0
+  for (const r of rows) {
+    for (const w of r.weakLines ?? []) {
+      n++
+      console.log(`WEAK\t${r.path}:${w.line}\t${w.reasons.join(',')}\t${String(w.content).slice(0, 100)}`)
+    }
+  }
+  console.log(`WEAK lines=${n} files=${rows.filter((r) => (r.weakLines ?? []).length).length}`)
+}
+
+if (opt.blank) {
+  console.log('BLANK\tuncovered\tblank\tblockDilution\tpath');
+  for (const r of rows) {
+    const u = r.uncoveredUnits.length;
+    console.log(`BLANK\t${u}\t${r.blankUncovered}\t${u - r.blankUncovered}\t${r.path}`);
+  }
+}
+
+const totalUnits = sum(rows, (r) => r.units);
+const totalCovered = sum(rows, (r) => r.covered);
+const totalBranch = sum(rows, (r) => r.branch);
+const totalBranchCovered = sum(rows, (r) => r.branchCovered);
+const totalField = sum(rows, (r) => r.field);
+const totalFieldCovered = sum(rows, (r) => r.fieldCovered);
+const totalComments = sum(rows, (r) => r.comments);
+const totalSubstance = sum(rows, (r) => Math.round(((r.substanceRate ?? 0) / 100) * r.comments));
+const totalExplain = sum(rows, (r) => Math.round(((r.explainRate ?? 0) / 100) * r.comments));
+const totalMapStrict = sum(rows, (r) => r.commentMap?.strict ?? 0);
+const totalMapBlock = sum(rows, (r) => r.commentMap?.block ?? 0);
+const totalMapReasons = rows.reduce((acc, r) => {
+  for (const [k, v] of Object.entries(r.commentMap?.reasons ?? {})) acc[k] = (acc[k] ?? 0) + v;
+  return acc;
+}, {});
+const totalFiller = sum(rows, (r) => r.fillerLines.length);
+const totalWeak = sum(rows, (r) => r.weakLines.length);
+const totalNew = sum(rows, (r) => r.newComments);
+const newUnits = sum(rows, (r) => r.addedCodeUnits ?? 0);
+const newCovered = sum(rows, (r) => Math.round(((r.newCodeCoverage ?? 0) / 100) * (r.addedCodeUnits ?? 0)));
+const coverage = totalUnits ? (totalCovered / totalUnits) * 100 : null;
+const substance = totalComments ? (totalSubstance / totalComments) * 100 : null;
+const explain = totalComments ? (totalExplain / totalComments) * 100 : null;
+const filler = totalComments ? (totalFiller / totalComments) * 100 : null;
+const weak = totalComments ? (totalWeak / totalComments) * 100 : null;
+
+console.log(
+  `SUMMARY metric=${opt.metricVersion} files=${rows.length} units=${totalUnits} coverage=${fmt(coverage)}% branch=${fmt(
+    totalBranch ? (totalBranchCovered / totalBranch) * 100 : null,
+  )}% field=${fmt(totalField ? (totalFieldCovered / totalField) * 100 : null)}% comments=${totalComments} substance=${fmt(
+    substance,
+  )}% explain=${fmt(explain)}% filler=${fmt(filler)}% weak=${fmt(weak)}%${opt.diff ? ` newComments=${totalNew} newCodeCoverage=${fmt(newUnits ? (newCovered / newUnits) * 100 : null)}%` : ''}`,
+);
+console.log(
+  `RATIOS weak=${totalWeak}/${totalComments} filler=${totalFiller}/${totalComments}`,
+);
+console.log(
+  `MAP comments=${totalComments} mappedStrict=${totalMapStrict} mappedBlock=${totalMapBlock} unmapped=${totalComments - totalMapBlock} reasons=${Object.entries(
+    totalMapReasons,
+  )
+    .map(([k, v]) => `${k}:${v}`)
+    .join(',')}`,
+);
+
+const worstFiller = [...rows].filter((r) => r.comments > 0).sort((a, b) => (b.fillerRate ?? 0) - (a.fillerRate ?? 0)).slice(0, opt.top);
+const worstCov = [...rows].filter((r) => r.units > 0).sort((a, b) => (a.coverage ?? 0) - (b.coverage ?? 0)).slice(0, opt.top);
+
+if (opt.json) {
+  fs.writeFileSync(
+    path.resolve(opt.json),
+    JSON.stringify(
+      {
+        repo,
+        mode: opt.diff ? 'diff' : 'full',
+        diffBase: opt.diff ? opt.diffBase : null,
+        summary: {
+          files: rows.length,
+          units: totalUnits,
+          coverage,
+          branchCoverage: totalBranch ? (totalBranchCovered / totalBranch) * 100 : null,
+          fieldCoverage: totalField ? (totalFieldCovered / totalField) * 100 : null,
+          comments: totalComments,
+          substanceRate: substance,
+          explainRate: explain,
+          fillerRate: filler,
+          weakRate: weak,
+          newComments: opt.diff ? totalNew : null,
+          newCodeCoverage: opt.diff && newUnits ? (newCovered / newUnits) * 100 : null,
+          commentMapping: {
+            total: totalComments,
+            mappedStrict: totalMapStrict,
+            mappedBlock: totalMapBlock,
+            unmapped: totalComments - totalMapBlock,
+            reasons: totalMapReasons,
+          },
+        },
+        worstFiller,
+        worstCoverage: worstCov,
+        rows,
+      },
+      null,
+      2,
+    ),
+  );
+}
+
+if (errors > 0) {
+  console.error(`FAIL: ${errors} 个文件读取失败`);
+  process.exit(1);
+}
+if (opt.minSubstance !== null && substance !== null && substance + 1e-9 < opt.minSubstance) {
+  console.error(`FAIL: 实质率 ${fmt(substance)}% < --min-substance ${opt.minSubstance}%`);
+  process.exit(1);
+}
+if (opt.maxFiller !== null && filler !== null && filler > opt.maxFiller + 1e-9) {
+  console.error(`FAIL: 注水率 ${fmt(filler)}% > --max-filler ${opt.maxFiller}%`);
+  process.exit(1);
+}

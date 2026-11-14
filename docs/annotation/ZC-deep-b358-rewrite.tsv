@@ -1,0 +1,31 @@
+file	baseLine	blame	content
+packages/ui/src/BotsDialog/ProviderSettingsCard.tsx	68	a8784b7e479d3a	// logger 记录时不得包含 credential 或二维码内容，只允许错误信息；上报问题时由本地日志文件附带上下文。
+packages/ui/src/BotsDialog/ProviderSettingsCard.tsx	115	a8784b7e479d3a	// [权衡] QRCode.toDataURL 在挂载时调用而不是点击时调用，因此面板一出现就有图可扫，不必多一次交互。
+packages/ui/src/BotsDialog/ProviderSettingsCard.tsx	201	a8784b7e479d3a	// ProviderSettingsCard 的 on* 回调只做意图上抛，是否允许由父级判定；禁用态由 Button 的 disabled 落实。
+packages/ui/src/BotsDialog/ProviderSettingsCard.tsx	365	a8784b7e479d3a	// loading 只能控制按钮禁用与图标，不能控制二维码展示，两者状态由不同分支维护。
+packages/ui/src/BotsDialog/ProviderSettingsCard.tsx	366	a8784b7e479d3a	// 不要给按钮叠加「是否已有二维码」这类禁用条件；二维码未就绪时用户仍需重试入口，否则只能刷新页面。
+packages/ui/src/app-shell/WorkflowArtifactSidePane.tsx	78	a8784b7e479d3a	// 租约登记必须放在 useEffect 里，渲染期只做纯计算，因此首帧不读取任何会话数据。
+packages/ui/src/app-shell/WorkflowArtifactSidePane.tsx	189	a8784b7e479d3a	// 正文通道由 preset 分流：看板走预置渲染，普通产物读字节，因此子组件不再重复判断。
+packages/ui/src/app-shell/WorkflowArtifactSidePane.tsx	198	a8784b7e479d3a	// 因此再次打开时 selectedVersion 必须回到 tab.version：查看历史只是临时动作，不写回 tab。
+packages/ui/src/app-shell/WorkflowArtifactSidePane.tsx	224	a8784b7e479d3a	// version 与 artifact.version 不等时必须提示还有更新，因此正文读 isLatestVersion 而不是 artifact.version。
+packages/ui/src/app-shell/WorkflowArtifactSidePane.tsx	293	a8784b7e479d3a	// preset、bytes 与 isTextArtifactContentType 缺任一条都直接隐藏按钮，而不是点击后再告知不可复制。
+packages/ui/src/chat-input-toolbar/CodingPlanContextUsage.tsx	97	a8784b7e479d3a	// [权衡] hasChatCodingPlanUsageRemaining 只看能否进入，不看数据是否新鲜；新鲜度由面板内降级分支处理。
+packages/ui/src/chat-input-toolbar/CodingPlanContextUsage.tsx	302	a8784b7e479d3a	// [契约] 是否挂载由父层决定，本组件只在挂载后判断是否产出内容，因此 state 为空时直接返回 null。
+packages/ui/src/chat-input-toolbar/CodingPlanContextUsage.tsx	350	a8784b7e479d3a	// [契约] 周额度按日期展示，与五小时的时分口径区分；format 由 "time" 改为 "date"，重置时间因此只带日。
+packages/ui/src/chat-input-toolbar/CodingPlanContextUsage.tsx	351	a8784b7e479d3a	// weeklyTokenLimit 无重置时间时 weeklyResetTime 保持 undefined；额度条据此省略时间后缀，不留孤立分隔点。
+packages/ui/src/chat-input-toolbar/CodingPlanContextUsage.tsx	390	a8784b7e479d3a	// 缺失项直接跳过，末尾用类型守卫滤掉空项；quotaMeters 因此不含空条目，下游不必再判空。
+packages/ui/src/components/ai-elements/jsx-preview.tsx	90	a8784b7e479d3a	// 判定顺序固定为自闭合、闭合、开启：自闭合标签同时带斜杠与尖括号，先判它才不会被误认成闭合，因此顺序不可交换。
+packages/ui/src/components/ai-elements/jsx-preview.tsx	111	a8784b7e479d3a	// stripIncompleteTag 从最后一个 '<' 向左找，没有配对 '>' 就整段截掉，避免残缺属性进入解析器。
+packages/ui/src/components/ai-elements/jsx-preview.tsx	132	a8784b7e479d3a	// [资源] completeJsxTag 每轮只匹配剩余片段，复杂度与标签数量线性相关；因此长文本也不会退化成平方级。
+packages/ui/src/components/ai-elements/jsx-preview.tsx	150	a8784b7e479d3a	// 开标签入栈、自闭合不动、闭合标签出栈，栈只存 tagName；补全时由栈逆序生成闭合标签。
+packages/ui/src/components/ai-elements/jsx-preview.tsx	351	a8784b7e479d3a	// error 为 null 时组件返回 null，不能占位；错误由 useJSXPreview 上下文提供，与内容组件同源。
+packages/ui/src/components/ai-elements/stack-trace.tsx	126	a8784b7e479d3a	// [契约] 先对原始行 trim 再匹配，缩进与尾随空格属于排版噪声；后续判断只看 trimmed，避免同一行两种结论。
+packages/ui/src/components/ai-elements/stack-trace.tsx	188	a8784b7e479d3a	// parseStackTrace 不抛错：任何异常输入都收敛成空列表或原文，调用方因此不必再包 try/catch。
+packages/ui/src/components/ai-elements/stack-trace.tsx	435	a8784b7e479d3a	// [资源] timeoutRef 初值保持 0，清理时直接 clearTimeout(0)，不会因为句柄为空而多一次判空。
+packages/ui/src/components/ai-elements/stack-trace.tsx	546	a8784b7e479d3a	// 默认展示全部帧，包括 node_modules 与 node: 内部帧；过滤只在 showInternalFrames 为 false 时生效。
+packages/ui/src/components/ai-elements/stack-trace.tsx	547	a8784b7e479d3a	// [权衡] 过滤放在渲染期而不是解析期，frames 与运行时保持一致，切换 showInternalFrames 不必重新解析堆栈。
+packages/ui/src/hooks/usePlugins.ts	32	a8784b7e479d3a	// pluginsService 缺失时不在本 hook 抛错；各动作的空值分支各自给出可读提示，因此调用方无需预判。
+packages/ui/src/hooks/usePlugins.ts	105	a8784b7e479d3a	// [并发] refresh 期间旧列表继续可见，用户看到的是上一份服务端结果；空列表只出现在首次加载。
+packages/ui/src/hooks/usePlugins.ts	145	a8784b7e479d3a	// [并发] 安装是跨工作区的长动作：从点击到发请求之间上下文可能已切换，因此发请求前必须重新读实时快照。
+packages/ui/src/hooks/usePlugins.ts	147	a8784b7e479d3a	// 归属键与 loadedWorkspacePath 不一致时先补一次 initialize，让安装结果落到当前工作区，而不是写进旧上下文。
+packages/ui/src/hooks/usePlugins.ts	149	a8784b7e479d3a	// [权衡] 该检查读 usePluginStore.getState() 的实时值，而不是渲染期闭包值；因此同一帧内多次切换也不会读到过期快照。

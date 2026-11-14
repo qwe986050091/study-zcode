@@ -1,0 +1,31 @@
+file	baseLine	blame	content
+packages/stream-animate/src/server/deepseekRunner.ts	350	a8784b7e	// `buildMetrics` 是速率指标的唯一定义处：同一数值不允许多处按不同公式各算一遍。
+packages/stream-animate/src/server/deepseekRunner.ts	351	a8784b7e	// 分桶在 `buildMetrics` 构建时就已完成：原始 `TimedCharEvent` 不进快照。
+packages/stream-animate/src/server/deepseekRunner.ts	352	a8784b7e	// `durationMs` 为 0 时速率直接记为 0，不走除法。
+packages/ui/src/AssistantPreviewCards.tsx	79	a8784b7e	// 新增卡片形态只改 `buildAssistantPreviewPptxAutoOpenRequest` 一处：自动打开与可见卡片的筛选口径各自独立。
+packages/ui/src/AssistantPreviewCards.tsx	98	a8784b7e	// 入参 `visibleCards` 已是校验后的最终投影，不要再按隐藏标记过滤一遍。
+packages/ui/src/AssistantPreviewCards.tsx	139	a8784b7e	// [权衡] 并集判断不拆早退：`shouldRenderAssistantPreviewCardAsFile` 的图标与打开目标两处调用必须拿到同一个布尔值。
+packages/ui/src/components/ai-elements/attachments.tsx	213	a8784b7e	// `AttachmentsProps` 只透传 div 属性与 `variant`；滚动与虚拟化由上层列表负责。
+packages/ui/src/components/ai-elements/attachments.tsx	451	a8784b7e	// `showMediaType` 只决定是否显示 MIME 文本，不参与分类判断。
+packages/ui/src/components/ai-elements/attachments.tsx	651	a8784b7e	// `AttachmentEmpty` 只做居中占位：加载态与错误态由调用方自己渲染。
+packages/ui/src/components/ai-elements/diagram-preview-dialog.tsx	618	a8784b7e	// `handleKeyDown` 只认 + / = / - 三个键：方向键留给页面滚动。
+packages/ui/src/components/ai-elements/diagram-preview-dialog.tsx	667	a8784b7e	// `panDiagram` 取负位移的原因：滚轮向下时内容应向上移动。
+packages/ui/src/components/ai-elements/diagram-preview-dialog.tsx	724	a8784b7e	// `nextDistance` 与冻结 `gesture.distance` 的比值就是本帧缩放增量，不能拿累计比值连乘。
+packages/ui/src/components/ai-elements/reasoning.tsx	95	a8784b7e	// `useReasoning` 在渲染期抛错：属于开发期就能发现的错误，不能降级成警告日志。
+packages/ui/src/components/ai-elements/reasoning.tsx	170	a8784b7e	// [并发] `useControllableState` 在受控切换瞬间可能多渲染一次：属于桥接库的既定行为，不要加防抖掩盖。
+packages/ui/src/components/ai-elements/reasoning.tsx	184	a8784b7e	// 流式结束时按 `startTimeRef` 里那份起点算总时长并立即清空：下一轮不能继承旧起点。
+packages/ui/src/components/cloud-content-dialog/CloudDialogDescription.tsx	29	a8784b7e	// `TAGS` 只收排版类语义标签：`script` / `iframe` / 表单控件一律不进白名单。
+packages/ui/src/components/cloud-content-dialog/CloudDialogDescription.tsx	91	a8784b7e	// `BLOCK_TAGS` 在行内模式下一律降级为行内容器：标题与列表会把行高撑破。
+packages/ui/src/components/cloud-content-dialog/CloudDialogDescription.tsx	92	a8784b7e	// `BLOCK_TAGS` 与 `TAGS` 刻意分开维护：允许的结构不等于行内可用的结构。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetAction.tsx	35	a8784b7e	// [权衡] `MANUAL_RESET_SUCCESS_DISPLAY_MS` 与 `burstCodingPlanQuotaResetConfetti` 解耦后两处节奏可分别调整，代价是勾选已收回时粒子可能仍在飘。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetAction.tsx	131	a8784b7e	// `previousCompletedAtRef` 存上一次渲染看到的 `completedAt`：用来识别服务端刚把值推进到新时间的那次跳变。
+packages/ui/src/components/coding-plan-quota-reset/CodingPlanQuotaResetAction.tsx	210	a8784b7e	// `awaitingSuccessRender` 在渲染期补一个三条件合取：`completedAt` 有值 / 由本机发起 / 与基线不同。
+packages/ui/src/components/marketing-touch/marketingPopupAdapter.ts	24	a8784b7e	// `canOpenMarketingPopup` 先看 `visibilityState`：标签页不可见时不弹，免得用户回来撞见一串弹窗。
+packages/ui/src/components/marketing-touch/marketingPopupAdapter.ts	25	a8784b7e	// 只要 `[role="dialog"]` 或 `[role="alertdialog"]` 在场就算被打断，本次机会直接放弃。
+packages/ui/src/components/marketing-touch/marketingPopupAdapter.ts	26	a8784b7e	// 选择器列表覆盖三类弹窗：通用对话框角色以及升级入口与补充材料（`additionalRequestModalSelectors`）。
+packages/ui/src/components/marketing-touch/marketingResources.ts	66	a8784b7e	// `empty()` 自带空操作 `release`：调用方不必先判空再释放。
+packages/ui/src/components/marketing-touch/marketingResources.ts	81	a8784b7e	// `entitlements` 只取前 32 条：避免异常载荷拖慢格式化。
+packages/ui/src/components/marketing-touch/marketingResources.ts	82	a8784b7e	// 只累计 `meter === "model_usage"` 的权益：其余类型不进 `maximum`。
+packages/ui/src/components/ui/floating-particles.tsx	59	a8784b7e	// `seededUnit` 的 `salt` 决定取值维度：换一个盐值就是另一条近似独立的序列。
+packages/ui/src/components/ui/floating-particles.tsx	69	a8784b7e	// `opacity` 按 `highlight` 分两档区间：高亮粒子始终更实。
+packages/ui/src/components/ui/floating-particles.tsx	107	a8784b7e	// `createParticleSprite` 对高亮粒子额外加 `shadowBlur` 与辉光色：普通粒子只画实心圆。

@@ -1,0 +1,20 @@
+file	baseLine	blame	content
+packages/shared/src/conversation-share.ts	247	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 逐个 artifact type 尝试收窄，认识的才进入 supported 能力表。
+packages/shared/src/conversation-share.ts	248	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// unsupportedArtifactTypes 去重后回报，便于排查白名单是否漏配。
+packages/shared/src/conversation-share.ts	249	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 丢弃只对客户端确实产不出的类型无损，可产出的类型漏配会静默消失。
+packages/shared/src/conversation-share.ts	250	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// access mode 同理：认不出的模式不能进能力表让用户选到。
+packages/ui/src/git-branch-switcher/display.ts	86	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// normalizedBranchName 为空串时与 undefined 收敛到同一个 fallback 分支
+packages/ui/src/git-branch-switcher/display.ts	87	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 判空用 normalizedBranchName.length 而不是真值，避免全空格被当成有效标题
+packages/ui/src/git-branch-switcher/display.ts	88	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 展示侧只取 options.currentBranchName 原值，不做大小写或截断改写
+packages/ui/src/git-branch-switcher/display.ts	175	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先按 path.trim().length 过滤空白路径，空白项不应占用 visible 名额
+packages/ui/src/git-branch-switcher/display.ts	176	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// filter 发生在 slice 截断之前，剩余数才基于真实非空项计算
+packages/ui/src/git-branch-switcher/display.ts	177	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// paths 缺失时按空数组处理，摘要退化为零条
+packages/ui/src/git-branch-switcher/display.ts	178	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// normalizedPaths 保留原始顺序，先后由上游调用方决定
+packages/ui/src/lib/workspaceSidePane.ts	173	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// PluginMarketSidePaneTab 的内层导航由页面自身维护，切走再回来重置是预期行为。
+packages/ui/src/lib/workspaceSidePane.ts	182	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// DeveloperToolsSidePaneTab 是单例页，作为调试入口不参与最近关闭恢复。
+packages/ui/src/lib/workspaceSidePane.ts	762	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 这里按 parent 分组逐项回填最小可用 ordinal，并保持已存在的编号不变。
+packages/ui/src/lib/workspaceSidePane.ts	1688	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 三元组未命中 current scope 时后台挂载 guest，不抢焦点。
+packages/ui/src/settings/saved-workflows/SavedWorkflowsSection.tsx	128	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 【设计权衡】宁可少一个入口，也不让用户点进 dynamicWorkflowConfig 里不存在的设置行。
+packages/ui/src/settings/saved-workflows/SavedWorkflowsSection.tsx	194	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 【设计权衡】只让全局组触发 handleMoved，项目组没有同时改动两组的动作，少一条回调就少一处竞态。
+packages/ui/src/settings/saved-workflows/SavedWorkflowsSection.tsx	243	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 【设计权衡】emptyCardTarget 只挑项目不挑全局档，空态卡语义就是在一个项目里创建。
+packages/ui/src/settings/saved-workflows/SavedWorkflowsSection.tsx	328	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 【设计权衡】allProjectsEmpty 有意忽略全局组空满，全局档存在时项目仍为空也照样给创建引导。

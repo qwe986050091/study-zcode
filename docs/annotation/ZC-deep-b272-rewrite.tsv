@@ -1,0 +1,101 @@
+file	baseLine	blame	content
+apps/dev-docs/src/capability-map/CapabilityMapFlowElements.tsx	64	a8784b7e479d3a	// 虚线大框加半透明底表达「区域」而非「可点击实体」。
+apps/dev-docs/src/capability-map/CapabilityMapFlowElements.tsx	148	a8784b7e479d3a	// 压暗与选中态可以叠加，透明度不影响点击命中。
+apps/dev-docs/src/capability-map/CapabilityMapFlowElements.tsx	217	a8784b7e479d3a	// 首点直接写入起点指令，中间点用二次贝塞尔倒角，末点补直线收尾。
+apps/dev-docs/src/capability-map/CapabilityMapFlowElements.tsx	248	a8784b7e479d3a	// 样式类名按关系类型、高亮、压暗、群内四个维度拼接，全部可选。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	78	a8784b7e479d3a	// 带值集合当前刻意留空。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	79	a8784b7e479d3a	// 危险集合含配置与目录重定向。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	80	a8784b7e479d3a	// 三类集合互不重叠。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	104	a8784b7e479d3a	// 只允许裸命令的最严格。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	105	a8784b7e479d3a	// 任意参数仅用于无写命令。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	107	a8784b7e479d3a	// 双横线语义按命令关闭。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	108	a8784b7e479d3a	// 回调负责子命令级追加判断。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	109	a8784b7e479d3a	// 未登记命令由上层按需审批。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	228	a8784b7e479d3a	// 集合在逐命令表之前生效。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	229	a8784b7e479d3a	// 因此不能放任何写操作命令。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	230	a8784b7e479d3a	// 仅收录参数只影响查询的命令。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	231	a8784b7e479d3a	// 新增条目需先确认无副作用。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	232	a8784b7e479d3a	// 条目顺序无关但保持字母序。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	233	a8784b7e479d3a	// 与白名单重复的条目是有意为之。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	285	a8784b7e479d3a	// 列举子命令不改变守护进程。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	286	a8784b7e479d3a	// 参数只缩小查询范围。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	287	a8784b7e479d3a	// 前缀按数组逐段比较。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	288	a8784b7e479d3a	// 新增前缀需同族审查。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-simple-commands.ts	289	a8784b7e479d3a	// 不拼接过长的命令字符串。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	41	a8784b7e479d3a	// 可见条数与面板外观行数分开。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	42	a8784b7e479d3a	// 行高恒为一行。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	43	a8784b7e479d3a	// 选择符与间隔各占固定列。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	44	a8784b7e479d3a	// 最小内容宽保护窄终端。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	45	a8784b7e479d3a	// 比例上限与最小名称宽共同约束。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	81	a8784b7e479d3a	// 可见窗口由独立函数给出。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	82	a8784b7e479d3a	// 内容宽先归一化再使用。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	83	a8784b7e479d3a	// 候选逐行拟合为单行模型。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	84	a8784b7e479d3a	// 面板高按可见行数计算。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	85	a8784b7e479d3a	// 空候选仍占一行提示。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	167	a8784b7e479d3a	// 空候选或上限非正直接返回空窗。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	168	a8784b7e479d3a	// 全局下标先夹取到范围内。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	169	a8784b7e479d3a	// 可见条数取上限与总数较小值。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	170	a8784b7e479d3a	// 起点让选中项尽量靠底部。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	171	a8784b7e479d3a	// 返回值中包含全局起点。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	191	a8784b7e479d3a	// 选择符与名称宽度固定不伸缩。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	192	a8784b7e479d3a	// 说明为空时省略间隔与文本。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	193	a8784b7e479d3a	// 间隔用弹性盒吸收剩余宽度。
+apps/zcode-cli/packages/tui/src/app-mode-suggestion-panel.tsx	194	a8784b7e479d3a	// 颜色取自当前主题面板。
+packages/shared/src/database-startup.ts	42	a8784b7e479d3a	// 从最外层错误开始逐层读取原因。
+packages/shared/src/database-startup.ts	43	a8784b7e479d3a	// 每层先看数据库主码，再看系统错误码。
+packages/shared/src/database-startup.ts	44	a8784b7e479d3a	// 可恢复映射写入兜底，强特征直接返回。
+packages/shared/src/database-startup.ts	45	a8784b7e479d3a	// 枚举型原因只作为兜底证据。
+packages/shared/src/database-startup.ts	46	a8784b7e479d3a	// 遍历有环检测与次数上限。
+packages/shared/src/database-startup.ts	47	a8784b7e479d3a	// 最终返回兜底码而不是抛出。
+packages/shared/src/database-startup.ts	72	a8784b7e479d3a	// 仅提取三个可安全跨进程的字段。
+packages/shared/src/database-startup.ts	73	a8784b7e479d3a	// 数据库主码要求安全整数。
+packages/shared/src/database-startup.ts	74	a8784b7e479d3a	// 系统错误码限制为大写枚举形状。
+packages/shared/src/database-startup.ts	75	a8784b7e479d3a	// 迁移标识限制字符集与长度。
+packages/shared/src/database-startup.ts	76	a8784b7e479d3a	// 其余字段一律不进入结果。
+packages/shared/src/database-startup.ts	150	a8784b7e479d3a	// 版本号使用字面量以便未来迁移。
+packages/shared/src/database-startup.ts	151	a8784b7e479d3a	// 启动阶段与数据库阶段分开表达。
+packages/shared/src/database-startup.ts	152	a8784b7e479d3a	// 迁移事实同时保留当前值与基线。
+packages/shared/src/database-startup.ts	153	a8784b7e479d3a	// 磁盘摘要限制条数。
+packages/shared/src/database-startup.ts	206	a8784b7e479d3a	// 只有失败阶段才可重试。
+packages/shared/src/database-startup.ts	207	a8784b7e479d3a	// 已进入服务装配阶段后必须走退出重开。
+packages/shared/src/database-startup.ts	208	a8784b7e479d3a	// 损坏、校验失败与传输关闭不可重试。
+packages/shared/src/database-startup.ts	209	a8784b7e479d3a	// 其余错误码允许手动重试。
+packages/shared/src/sqlite-migrations/backup.ts	35	a8784b7e479d3a	// 涉及表先去重再快照。
+packages/shared/src/sqlite-migrations/backup.ts	36	a8784b7e479d3a	// 全空表直接跳过。
+packages/shared/src/sqlite-migrations/backup.ts	37	a8784b7e479d3a	// 元数据不含行数据。
+packages/shared/src/sqlite-migrations/backup.ts	38	a8784b7e479d3a	// 目录按优先级逐个尝试。
+packages/shared/src/sqlite-migrations/backup.ts	39	a8784b7e479d3a	// 空间不足换下一个目录。
+packages/shared/src/sqlite-migrations/backup.ts	113	a8784b7e479d3a	// 固定余量先计入。
+packages/shared/src/sqlite-migrations/backup.ts	114	a8784b7e479d3a	// 每格至少三十二字节。
+packages/shared/src/sqlite-migrations/backup.ts	115	a8784b7e479d3a	// 二进制按真实长度。
+packages/shared/src/sqlite-migrations/backup.ts	117	a8784b7e479d3a	// 总量乘二留浮动空间。
+packages/shared/src/sqlite-migrations/backup.ts	144	a8784b7e479d3a	// 只认对象形态的错误。
+packages/shared/src/sqlite-migrations/backup.ts	145	a8784b7e479d3a	// 必须带码字段。
+packages/shared/src/sqlite-migrations/backup.ts	146	a8784b7e479d3a	// 空间与权限归为不可用。
+packages/shared/src/sqlite-migrations/backup.ts	147	a8784b7e479d3a	// 其他错误原样抛出。
+packages/shared/src/sqlite-migrations/backup.ts	148	a8784b7e479d3a	// 不吞掉程序缺陷。
+packages/shared/src/sqlite-migrations/backup.ts	158	a8784b7e479d3a	// 只扫描同前缀目录。
+packages/shared/src/sqlite-migrations/backup.ts	159	a8784b7e479d3a	// 无元数据的目录跳过。
+packages/shared/src/sqlite-migrations/backup.ts	160	a8784b7e479d3a	// 保留额度含当前目录。
+packages/shared/src/sqlite-migrations/backup.ts	161	a8784b7e479d3a	// 超出部分递归删除。
+packages/shared/src/sqlite-migrations/backup.ts	162	a8784b7e479d3a	// 不触碰普通文件。
+packages/ui/src/TaskList.tsx	127	a8784b7e479d3a	// [资源] 置顶 id 集合按置顶列表缓存。
+packages/ui/src/TaskList.tsx	128	a8784b7e479d3a	// 每行都要查询，
+packages/ui/src/TaskList.tsx	129	a8784b7e479d3a	// 不缓存会让长列表出现平方级遍历。
+packages/ui/src/TaskList.tsx	134	a8784b7e479d3a	// [契约] 查找表合并普通与置顶任务。
+packages/ui/src/TaskList.tsx	135	a8784b7e479d3a	// 重命名与右键都需要按 id 找任务，
+packages/ui/src/TaskList.tsx	136	a8784b7e479d3a	// 两处共用这一份顺序。
+packages/ui/src/TaskList.tsx	141	a8784b7e479d3a	// [契约] 归档待确认是单一 id 而不是集合。
+packages/ui/src/TaskList.tsx	142	a8784b7e479d3a	// 同一时刻只允许一行处于确认态，
+packages/ui/src/TaskList.tsx	143	a8784b7e479d3a	// 避免多行同时闪烁。
+packages/ui/src/TaskList.tsx	168	a8784b7e479d3a	// [契约] 取消确认只清 id。
+packages/ui/src/TaskList.tsx	169	a8784b7e479d3a	// 不能顺带清重命名状态，
+packages/ui/src/TaskList.tsx	170	a8784b7e479d3a	// 两个交互可以独立存在。
+packages/ui/src/TaskList.tsx	175	a8784b7e479d3a	// [契约] 取消重命名同时清空草稿。
+packages/ui/src/TaskList.tsx	176	a8784b7e479d3a	// 只清 id 会让下次打开时残留上一次的输入。
+packages/ui/src/TaskList.tsx	177	a8784b7e479d3a	// 取消是纯本地操作，不通知父级。
+packages/ui/src/TaskList.tsx	189	a8784b7e479d3a	// [契约] 行只上报目标 id，菜单由列表级单例渲染。
+packages/ui/src/TaskList.tsx	190	a8784b7e479d3a	// 每行常驻菜单根节点会放大浮层挂载成本。
+packages/ui/src/TaskList.tsx	191	a8784b7e479d3a	// 打开菜单时若该行正处于归档确认，要先取消。
+packages/ui/src/TaskList.tsx	334	a8784b7e479d3a	// 让上层决定是否展示全局错误。
+packages/ui/src/TaskList.tsx	445	a8784b7e479d3a	// [契约] 右键目标消失后关闭菜单。

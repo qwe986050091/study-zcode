@@ -1,0 +1,31 @@
+file	baseLine	blame	content
+packages/provider-node/src/zcode-builtin-remote-synchronizer.ts	75	a8784b7e	// 同一实例的并发刷新复用 #inFlight 在途 Promise，重复调用方共享同一次下载结果，不会各自再发网络请求。
+packages/provider-node/src/zcode-builtin-remote-synchronizer.ts	108	a8784b7e	// dispose 只置 #disposed 并触发 #abortController.abort()，不等在途请求收敛：在途分支随后走取消路径自行释放租约。
+packages/provider-node/src/zcode-builtin-remote-synchronizer.ts	188	a8784b7e	// success === "cancelled" 时保持 failureCount 与既有退避窗口不变，只把 nextEligibleAt 归零。
+packages/provider-node/src/zcode-builtin-remote-synchronizer.ts	189	a8784b7e	// success === true 时 failureCount 清零并恢复 successIntervalMs 的正常间隔，下一次刷新按点触发。
+packages/provider-node/src/zcode-builtin-remote-synchronizer.ts	190	a8784b7e	// success === false 时按 failureCount 指数退避，delay 封顶 failureMaxDelayMs，防止连续失败把刷新频率压到不可用。
+packages/server/src/remote/deploy.ts	174	a8784b7e	// [资源] componentResolver 只快照配置，不会发起网络请求；manifest 解析推迟到首次调用，避免部署前多打一轮 CDN。
+packages/server/src/remote/deploy.ts	359	a8784b7e	// [权衡] 版本升级时宁可让 glm 多下一次，也不复用旧制品：同 SHA cache 命中旧包会让升级静默失效。
+packages/server/src/remote/deploy.ts	533	a8784b7e	// [契约] caller-serialized 只跳过 acquireRemoteDeployLock，决策与资源检查一步不减，串行化责任上移给调用方。
+packages/server/src/remote/deploy.ts	561	a8784b7e	// [契约] catch 先存 deployOutcome 不立即抛，等 releaseOutcome 落定后再统一抛出，否则锁会泄漏。
+packages/server/src/remote/deploy.ts	578	a8784b7e	// [事务] releaseOutcome 与 deployOutcome 分开保存，两者组合决定抛 AggregateError 还是单因异常，且先报根因。
+packages/services/src/session/taskChangeSummary.ts	27	a8784b7e	// 每轮在 turn.snapshots 内部独立算 diff，轮次之间不共享状态：前一轮的写入不会改变后一轮的摘要。
+packages/services/src/session/taskChangeSummary.ts	103	a8784b7e	// 与 buildPerTurnChangeSummaries 的唯一差别是聚合范围（跨轮 vs 按轮），两者都返回 ZCodeTaskChangeSummary，字段一致。
+packages/services/src/session/taskChangeSummary.ts	118	a8784b7e	// 后续轮次只覆盖 finalContent、累加 writeCount、推进 lastTurnIndex，并保持条目身份不变，不会重复计入 files。
+packages/services/src/session/taskChangeSummary.ts	126	a8784b7e	// 首次出现时把 originalContent 与 finalContent 一起写入，后续轮次只改这两个字段，不会新建条目。
+packages/services/src/session/taskChangeSummary.ts	148	a8784b7e	// 用 originalContent 与 finalContent 直接算总 diff，跳过中间轮次：中间状态对整任务结果没有意义。
+packages/ui/src/ModelTrajectoryPaneDetails.tsx	39	a8784b7e	// 【并发】ContentPartView 是纯渲染函数，不写模块级可变状态，同一 part 并发渲染不会互相污染。
+packages/ui/src/ModelTrajectoryPaneDetails.tsx	40	a8784b7e	// 【生命周期】组件不注册订阅或定时器，没有 cleanup 可写，反复挂载也不会累积监听器。
+packages/ui/src/ModelTrajectoryPaneDetails.tsx	120	a8784b7e	// 【生命周期】图片片段只渲染占位符（part.mediaType 文本），不发起加载也不缓存二进制，滚出视口不会留下引用。
+packages/ui/src/ModelTrajectoryPaneDetails.tsx	209	a8784b7e	// 【权衡】CodeBlock 用 max-h-64 + overflow-auto 封顶，牺牲一次性看全，让长日志保持可浏览。
+packages/ui/src/ModelTrajectoryPaneDetails.tsx	265	a8784b7e	// 【权衡】EmptyState 的 tone 只区分错误与普通，用颜色而非图标表达，不需要额外图标资源。
+packages/ui/src/previewPaneCodeContent.tsx	104	a8784b7e	// showLineNumbers 与 fontSizePx 都取自 codePreviewSettings，组件内不写死默认值。
+packages/ui/src/previewPaneCodeContent.tsx	105	a8784b7e	// firstLineNumber 由调用方按片段位置传入：只有代码形态需要行号起点，其它形态不传。
+packages/ui/src/previewPaneCodeContent.tsx	106	a8784b7e	// wrapLongLines 由调用方传入，与 codePreviewSettings 解耦，可按形态覆盖换行策略。
+packages/ui/src/previewPaneCodeContent.tsx	109	a8784b7e	// comments、focusedRange 与 enableLineSelection 全部保持原样透传给 CodeViewer，组件不解释也不缓存。
+packages/ui/src/previewPaneCodeContent.tsx	121	a8784b7e	// 需要行内编辑的调用方必须同时传 enableLineSelection 与 enableGutterUtility，默认值不在这里兜底。
+packages/ui/src/store/zcodeSessionStoreWorkspaceSlice.ts	90	a8784b7e	// [契约] currentValue 仍命中 option.options 时原样返回 option，保持引用不变，上层按引用判等可直接短路。
+packages/ui/src/store/zcodeSessionStoreWorkspaceSlice.ts	243	a8784b7e	// [契约] nextTaskOptions 与 currentTaskOptions 引用相等、或 updater 返回空值时都不写补丁，直接返回 null。
+packages/ui/src/store/zcodeSessionStoreWorkspaceSlice.ts	570	a8784b7e	// [事务] startDraft 在同一个返回对象里重置 draftProjectId、composerInitialization、draftRuntime 与 draftFocusVersion，不会出现中间帧混合态。
+packages/ui/src/store/zcodeSessionStoreWorkspaceSlice.ts	661	a8784b7e	// draftRuntimeInvalidationVersion 与草稿字段在同一次写回里落库，不会出现新草稿配旧 runtime 的中间态。
+packages/ui/src/store/zcodeSessionStoreWorkspaceSlice.ts	682	a8784b7e	// [契约] 每次进入草稿态把 draftFocusVersion 加一，ChatView 监听该版本后主动 focus 到 Lexical 输入框。

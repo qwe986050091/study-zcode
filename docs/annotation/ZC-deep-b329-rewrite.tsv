@@ -1,0 +1,41 @@
+file	baseLine	blame	content
+packages/ui/src/lib/taskMainActivity.ts	44	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// task_run_started 与 goal_iteration_started 两个 type 算激活。
+packages/ui/src/lib/taskMainActivity.ts	45	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// agent_message_chunk 与 agent_thought_chunk 要求 event.content 非空。
+packages/ui/src/lib/taskMainActivity.ts	46	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// tool_call 与 tool_call_update 只认 isMainAgentStreamEvent 为真。
+packages/ui/src/lib/taskMainActivity.ts	47	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// default 分支一律返回 false，不激活。
+packages/ui/src/lib/taskMainActivity.ts	64	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// message.role 必须是 "assistant"。
+packages/ui/src/lib/taskMainActivity.ts	65	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// message.streaming 必须为 true。
+packages/ui/src/lib/taskMainActivity.ts	66	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isTaskChatTimelineMessage 为真的占位消息不算。
+packages/ui/src/lib/taskMainActivity.ts	95	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// creating 与 restoring 阶段直接判忙碌。
+packages/ui/src/lib/taskMainActivity.ts	96	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// streaming 状态同样算忙碌。
+packages/ui/src/lib/taskMainActivity.ts	97	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 最后再合并 hasForegroundActivityFromMessages 与运行态判定。
+packages/ui/src/mentions/nodes/mentionIconDom.ts	29	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// SVG_NS 只在此处声明一次。
+packages/ui/src/mentions/nodes/mentionIconDom.ts	30	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 后续 createElementNS 全部复用 SVG_NS。
+packages/ui/src/mentions/nodes/mentionIconDom.ts	31	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// tagName 与 attrs 的名称都取自常量表。
+packages/ui/src/mentions/nodes/mentionIconDom.ts	32	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 名称写错时由 satisfies 的类型断言拦下。
+packages/ui/src/mentions/nodes/mentionIconDom.ts	35	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// path 与 circle 与 rect 三种基础图形标签是唯一允许值。
+packages/ui/src/mentions/nodes/mentionIconDom.ts	36	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// attrs 的类型是 Readonly<Record<string, string>>。
+packages/ui/src/mentions/nodes/mentionIconDom.ts	37	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// readonly 同时作用于外层表与内层字符串映射。
+packages/ui/src/mentions/nodes/mentionIconDom.ts	146	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先经 createElementNS 建根元素再补固定属性。
+packages/ui/src/mentions/nodes/mentionIconDom.ts	147	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 逐个 data 项 appendChild 生成子节点。
+packages/ui/src/mentions/nodes/mentionIconDom.ts	148	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 最后原样返回 root 变量指向的根元素。
+packages/ui/src/presentation/presentationPdfPrintExport.ts	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// SYMBOL_PROBE 只取箭头与星形等常用符号，字体缺失时的回退字形与原字形宽度差异明显。
+packages/ui/src/presentation/presentationPdfPrintExport.ts	78	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] PRINT_LOSSY_FONTS 只收屏幕能画却在打印时丢字的字体，普通缺失交由可用性探测处理。
+packages/ui/src/presentation/presentationPdfPrintExport.ts	119	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 这里不调 toLowerCase，写回样式时需要保留原始大小写，归一由各自比较处负责。
+packages/ui/src/presentation/presentationPdfPrintExport.ts	195	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isChineseLike 对混少量英文的文本仍判为中文，因为决定覆盖范围的是中文字形。
+packages/ui/src/presentation/presentationPdfPrintExport.ts	196	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 纯标点与表情走 symbol 分支，这条结果直接决定后面选哪条回退链。
+packages/ui/src/presentation/presentationPdfPrintExport.ts	234	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// fontFamilyForChinese 只区分 serif 与 sans-serif，窄体与等宽直接并入无衬线链。
+packages/ui/src/presentation/presentationPdfPrintExport.ts	286	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 局部包装 isFontAvailableForPrint 把通用族名视为可用，把丢字字体视为不可用。
+packages/ui/src/presentation/presentationPdfPrintExport.ts	287	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 通用族名不参与 measureText 量宽，因为它由浏览器决定具体字体，探测结果没有意义。
+packages/ui/src/presentation/presentationPdfPrintExport.ts	405	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] PRINT_STYLE 固定打印管线的全部约定，每页按固定尺寸铺平且末页不分页。
+packages/ui/src/presentation/presentationPdfPrintExport.ts	476	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 字体改写可能命中 document.fonts 新注册的网络字体，第二次就绪等待不可省略。
+packages/ui/src/settings/RemotePluginSyncDialog.tsx	410	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 默认全选 exists 为假的项，已存在的项一律不选。
+packages/ui/src/settings/RemotePluginSyncDialog.tsx	836	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 这条捷径不影响正确性，abortRef 为空就意味着没有中断源。
+packages/ui/src/settings/RemotePluginSyncDialog.tsx	1161	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 逐项再查一次 stopRequested，上一项耗时长时用户可能刚点过停止。
+packages/ui/src/settings/RemotePluginSyncDialog.tsx	1317	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 同一 pluginId 的重试两次不该经 abortController 互相取消。
+packages/ui/src/settings/RemotePluginSyncDialog.tsx	1585	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// RemotePluginSyncTargetRow 把 targetLabel 与过滤开关合成一行。
+packages/ui/src/settings/RemotePluginSyncDialog.tsx	1618	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// RemotePluginSyncSelectAll 的三态复选框驱动 checked 与 indeterminate。
+packages/ui/src/settings/RemotePluginSyncDialog.tsx	2071	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// open 转真时重新 load 并整体重置，转假时不动。
+packages/ui/src/settings/RemotePluginSyncDialog.tsx	2231	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// preflight 把「整批不可写」提前变成一条清晰提示，且不产生任何远端写。
+packages/ui/src/settings/RemotePluginSyncDialog.tsx	2235	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 被过滤隐藏但仍在 selectedIds 里的项不应触发一次空同步。
+packages/ui/src/settings/RemotePluginSyncDialog.tsx	2270	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 过滤只影响 visibleRows，不改变 selectedIds 的内容；

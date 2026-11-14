@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/services/src/bots/providers/feishuGroupMessages.ts	182	a8784b7e	// [边界] isGroupControlCard 只认控件结构（button/form/select）而不看消息类型：interactive 既可能是操作卡，也可能是普通回复载体。
+packages/services/src/bots/topicResource.ts	68	a8784b7e	// [契约] authorize 闭包固定同一套 request/deps：前后两次鉴权必须走同一实现，第二次只用于确认下载期间权限未被收回。
+packages/services/src/commands/commandFileParser.ts	128	a8784b7e	// [契约] name 必须带前导 / 并剥掉 .md（大小写不敏感）：注册表按带斜杠的形式查找，缺前缀或带后缀都匹配不到用户输入。
+packages/services/src/conversation-share/conversationShareInlineImages.ts	105	a8784b7e	// [失败路径] 单张图扩展名不在 allowed_artifacts 时只跳过并记 artifact_type_not_allowed，整轮分享继续：不支持的图不能拖垮整段对话。
+packages/services/src/feedback/feedbackService.ts	1	a8784b7e	// [契约] IFeedbackService 门面只暴露工单创建与附件上传：日志归档和重试都下沉到 FeedbackHttpClient，前端只依赖这一层。
+packages/services/src/git/gitCommitMessageGenerator.ts	30	a8784b7e	// [顺序] 上下文截断保留尾部 MAX_CONVERSATION_CONTEXT_MESSAGES 条：用户最新指令在末尾，取头部会丢掉真正要提交的意图。
+packages/services/src/highspeed/highspeedMockTransport.ts	26	a8784b7e	// [契约] delay 由 options 注入：测试可传零延迟跳过等待，默认实现用 setTimeout 模拟网络耗时。
+packages/services/src/index.ts	283	a8784b7e	// [契约] IUsageStatsService 的聚合口径由服务端定义：桌面端与 Web 端只消费同一份统计结果，不在本地重算。
+packages/services/src/marketing-touch/marketingTouchService.ts	49	a8784b7e	// [边界] device 必须先过 z.string().uuid()：缺失或非法直接抛错，不能发空 X-Device-Mid 让远端按空值匹配用户。
+packages/services/src/memory/projectMemoryStableRead.ts	14	a8784b7e	// [失败路径] inode/size/mtime 任一变化都抛带错误码的异常：调用方依错误码重读或提示，绝不返回半旧内容。
+packages/services/src/model-provider/accountProviderTeamPlanRequestKey.ts	61	a8784b7e	// [边界] 旧槽位 ZCODE_JWT_TOKEN_KEY 只用于脏数据识别：读不到按空串处理，不阻断正常投影流程。
+packages/services/src/oauth/oauthProviderLogout.ts	11	a8784b7e	// [边界] deleteApiKey 只删当前 accountProvider 维度：切换账号或退出登录时，其余已登录账号的凭据不受影响。
+packages/services/src/plugin-sync/pluginSyncService.ts	324	a8784b7e	// [资源] sizeBytes 在候选阶段用 computeRecursiveSize 算一次：列表展示与导出估算共用，避免两次遍历大目录。
+packages/services/src/process/processResourceSampler.ts	377	a8784b7e	// [顺序] baselines 每轮无条件覆盖（含不可复用的新进程）：基线推进独立于 reusable，后者只决定本轮是否算百分比。
+packages/services/src/project-storage/project-repository.ts	298	a8784b7e	// [顺序] read 闭包在事务内才构造树：includeTasks 为 false 时完全不调用 readTasks，省掉全表解析。
+packages/services/src/project-workspace-navigation/index.ts	135	a8784b7e	// [权衡] assertCurrent 只比对 entry id 与 owner/membership：条目内容可重命名，id 复用才说明归属被替换。
+packages/services/src/providers/api/nodeApiClient.ts	469	a8784b7e	// [顺序] onZcodeJwtInvalid 触发前必须再查 signal.aborted：本地登出不可逆，调用方已放弃的请求不能再引发副作用。
+packages/services/src/providers/codexConfigToml.ts	140	a8784b7e	// [边界] removeStart 只回退一格：再往前会删掉上一个表的最后一个键值行，少退一格又会残留连续空行。
+packages/services/src/providers/zaiBusinessTokenResolver.ts	57	a8784b7e	// [契约] this.now 存 Date.now 函数引用而非时间戳：每次 resolve 判断有效性时才能读到当时的时钟。
+packages/services/src/runtime-tools/runtimeLoginShellEnvCapture.ts	293	a8784b7e	// [边界] setLoginShellEnvSnapshot 是同步一次性入口：execFileSync 无 deadline 中断手段，只能靠 timeout 与 maxBuffer 兜底。

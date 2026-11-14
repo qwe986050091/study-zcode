@@ -1,0 +1,43 @@
+file	baseLine	blame	content
+packages/ui/src/settings/CommandForm.tsx	34	a8784b7e479d3a	// // 【不变量】命令名只允许字母、数字、下划线与连字符，点号与斜杠会破坏文件名映射。
+packages/ui/src/settings/CommandForm.tsx	35	a8784b7e479d3a	// // 【设计权衡】用白名单正则而非黑名单，新增非法字符时无需逐个补充排除规则。
+packages/ui/src/settings/CommandForm.tsx	40	a8784b7e479d3a	// // 【设计权衡】字段标签抽成局部组件，保证五个字段的行高、字重与下间距完全一致。
+packages/ui/src/settings/CommandForm.tsx	47	a8784b7e479d3a	// // 【不变量】作用域选择器只接收 scopeKey 与变更回调，不持有第二份作用域状态。
+packages/ui/src/settings/CommandForm.tsx	48	a8784b7e479d3a	// // 【资源生命周期】PluginScopeMenu 由父级重渲染驱动，内部不缓存 workspaceTabs 快照。
+packages/ui/src/settings/CommandForm.tsx	49	a8784b7e479d3a	// // 【失败路径】disabled 为真时选择菜单只读，点击不会触发 onChange 回调。
+packages/ui/src/settings/CommandForm.tsx	78	a8784b7e479d3a	// // 【不变量】保存回调同时携带 config 与 scopeKey，作用域随一次提交原子传递。
+packages/ui/src/settings/CommandForm.tsx	79	a8784b7e479d3a	// // 【并发/事务】onSave 返回 Promise，调用方负责串行化，表单本身不排队也不重试。
+packages/ui/src/settings/CommandForm.tsx	80	a8784b7e479d3a	// // 【失败路径】onDelete 为可选，缺省时编辑态不提供删除入口。
+packages/ui/src/settings/CommandForm.tsx	93	a8784b7e479d3a	// // 【资源生命周期】字段状态在挂载时由 initial 快照初始化，之后不再回读 props。
+packages/ui/src/settings/CommandForm.tsx	94	a8784b7e479d3a	// // 【设计权衡】草稿只存在于组件本地，避免与服务端配置形成双写。
+packages/ui/src/settings/CommandForm.tsx	95	a8784b7e479d3a	// // 【不变量】saving 由外部注入，组件不自行推导提交中状态。
+packages/ui/src/settings/CommandForm.tsx	96	a8784b7e479d3a	// // 【失败路径】initial 变化不会重置已输入内容，父级应以 key 重建表单。
+packages/ui/src/settings/CommandForm.tsx	109	a8784b7e479d3a	// // 【不变量】展示名与存储名的差异仅限一个前导斜杠。
+packages/ui/src/settings/CommandForm.tsx	110	a8784b7e479d3a	// // 【失败路径】名称缺失或为空时回退为空串，新建表单从空白开始。
+packages/ui/src/settings/CommandForm.tsx	111	a8784b7e479d3a	// // 【设计权衡】去斜杠只在初始化做一次，输入过程中不再过滤，避免光标跳动。
+packages/ui/src/settings/CommandForm.tsx	119	a8784b7e479d3a	// // 【不变量】canSave 与 handleSubmit 共用同一 trim 规则，判定与实际写入一致。
+packages/ui/src/settings/CommandForm.tsx	120	a8784b7e479d3a	// // 【失败路径】纯空白名称 trim 后为空，长度校验直接判失败。
+packages/ui/src/settings/CommandForm.tsx	122	a8784b7e479d3a	// // 【不变量】新建态要求名称合法且提示词非空，编辑态只需提示词非空。
+packages/ui/src/settings/CommandForm.tsx	123	a8784b7e479d3a	// // 【设计权衡】可用性预判只做廉价计算，完整文案校验留给提交时的 validate。
+packages/ui/src/settings/CommandForm.tsx	124	a8784b7e479d3a	// // 【失败路径】任一条件为假时保存按钮置灰，用户无法触发无效提交。
+packages/ui/src/settings/CommandForm.tsx	133	a8784b7e479d3a	// // 【不变量】validate 只写错误状态并返回布尔，不产生任何外部副作用。
+packages/ui/src/settings/CommandForm.tsx	134	a8784b7e479d3a	// // 【并发/事务】错误状态按提交次序覆盖，旧错误在下次校验中被清空或替换。
+packages/ui/src/settings/CommandForm.tsx	135	a8784b7e479d3a	// // 【失败路径】返回假值时 handleSubmit 提前退出，配置不进入 onSave。
+packages/ui/src/settings/CommandForm.tsx	136	a8784b7e479d3a	// // 【设计权衡】校验同步执行，避免异步校验与保存按钮之间出现时序窗口。
+packages/ui/src/settings/CommandForm.tsx	140	a8784b7e479d3a	// // 【设计权衡】模块级正则复用到局部变量，防止每次校验重建正则实例。
+packages/ui/src/settings/CommandForm.tsx	145	a8784b7e479d3a	// // 【不变量】长度越界优先于字符集报错，用户先看到可数的长度提示。
+packages/ui/src/settings/CommandForm.tsx	146	a8784b7e479d3a	// // 【失败路径】提示文案插入 min 与 max 实参，边界值与常量保持同源。
+packages/ui/src/settings/CommandForm.tsx	158	a8784b7e479d3a	// // 【失败路径】字符集不匹配时给出合法字符说明，不暴露正则本身。
+packages/ui/src/settings/CommandForm.tsx	169	a8784b7e479d3a	// // 【失败路径】提示词为空白时置 promptError 并标记整体校验失败。
+packages/ui/src/settings/CommandForm.tsx	183	a8784b7e479d3a	// // 【不变量】提交路径唯一，全部写入都经过 onSave 这一个出口。
+packages/ui/src/settings/CommandForm.tsx	184	a8784b7e479d3a	// // 【并发/事务】等待 onSave 期间组件不解锁按钮，重复提交由 saving 拦截。
+packages/ui/src/settings/CommandForm.tsx	185	a8784b7e479d3a	// // 【失败路径】onSave 抛错由上层捕获，表单保留当前输入不清空。
+packages/ui/src/settings/CommandForm.tsx	186	a8784b7e479d3a	// // 【资源生命周期】事件对象只在同步阶段使用，等待之后不再读取。
+packages/ui/src/settings/CommandForm.tsx	192	a8784b7e479d3a	// // 【不变量】config 的四个字段都取 trim 后的快照，提交后不再随输入变化。
+packages/ui/src/settings/CommandForm.tsx	193	a8784b7e479d3a	// // 【设计权衡】可选字段用空串转 undefined，保持配置文件最小化。
+packages/ui/src/settings/CommandForm.tsx	194	a8784b7e479d3a	// // 【失败路径】argumentHint 受能力开关控制，关闭时不写入任何值。
+packages/ui/src/settings/CommandForm.tsx	203	a8784b7e479d3a	// // 【资源生命周期】作用域控件在渲染期构造一次，随表单一起重渲染。
+packages/ui/src/settings/CommandForm.tsx	214	a8784b7e479d3a	// // 【不变量】表单只绑定 onSubmit，回车与点击保存走同一处理函数。
+packages/ui/src/settings/CommandForm.tsx	229	a8784b7e479d3a	// // 【不变量】名称输入框的只读性完全由 initial 是否存在决定。
+packages/ui/src/settings/CommandForm.tsx	230	a8784b7e479d3a	// // 【失败路径】只读态仍保留 value 展示，用户能看到但不能改动历史名称。
+packages/ui/src/settings/CommandForm.tsx	292	a8784b7e479d3a	// // 【不变量】删除入口需要既有待删对象又有删除处理器，二者缺一即不渲染。

@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import { execSync } from 'node:child_process';
+const REPO = 'd:/code/opensource/valkey';
+const DIR = 'd:/code/_annot_baseline/VK-B56';
+const REL = 'src/lolwut5.c';
+fs.mkdirSync(`${DIR}/orig/${REL.replace(/\/[^/]+$/, '')}`, { recursive: true });
+const buf = execSync(`git show HEAD:${REL}`, { cwd: REPO, maxBuffer: 1 << 26 });
+fs.writeFileSync(`${DIR}/orig/${REL}`, buf);
+fs.writeFileSync(`${DIR}/_files.txt`, REL + '\n');
+fs.copyFileSync('d:/code/_annot_baseline/VK-B55/annot-shim.h', `${DIR}/annot-shim.h`);
+fs.writeFileSync(`${DIR}/out-lolwut5.json`, '[]');
+console.log('snapshot', buf.length, 'bytes');

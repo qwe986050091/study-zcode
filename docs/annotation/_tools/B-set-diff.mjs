@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+const md = fs.readFileSync('d:/code/opensource/valkey/docs/annotation/README-rework.md', 'utf8');
+const sec = md.split('## 3.')[1].split('## 4.')[0];
+const names = new Set();
+for (const m of sec.matchAll(/`([A-Za-z0-9_./-]+\.(?:c|h))`/g)) names.add(m[1]);
+const cOnly = [...names].filter((n) => n.endsWith('.c'));
+console.log('§3 enumerated .c=' + cOnly.length + ' (plus headers: ' + [...names].filter((n) => n.endsWith('.h')).join(',') + ')');
+const queue = fs.readFileSync('d:/code/_annot_baseline/B-remaining.txt', 'utf8').split(/\r?\n/).filter(Boolean).map((l) => l.split('\t')[0]);
+const qset = new Set(queue.map((p) => p.replace(/^src\//, '')));
+const s3 = new Set(cOnly);
+console.log('queue=' + queue.length);
+console.log('§3 not in queue (' + [...s3].filter((n) => !qset.has(n)).length + '): ' + [...s3].filter((n) => !qset.has(n)).join(', '));
+console.log('queue not in §3 (' + [...qset].filter((n) => !s3.has(n)).length + '): ' + [...qset].filter((n) => !s3.has(n)).join(', '));

@@ -1,0 +1,41 @@
+file	baseLine	blame	content
+packages/shared/src/mcp-apps/sampling.ts	69	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// messages 的 .min(1) 与 .max(MCP_APPS_SAMPLING_MAX_BLOCKS) 同时限制条数与块数。
+packages/shared/src/mcp-apps/sampling.ts	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// systemPrompt 单独受 MCP_APPS_SAMPLING_MAX_BYTES 限制，与消息预算分开。
+packages/shared/src/mcp-apps/sampling.ts	71	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// includeContext 只接受字面量 "none"，宿主不支持上下文注入。
+packages/shared/src/mcp-apps/sampling.ts	72	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// metadataBytes 计入 .superRefine 的总字节上限，不额外放行。
+packages/shared/src/mcp-apps/sampling.ts	129	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// decodedBytes 按 base64 四字符三字节估算原始长度。
+packages/shared/src/mcp-apps/sampling.ts	130	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 末尾 "==" 由 base64 填充规则扣 2 字节，单个 "=" 扣 1 字节。
+packages/shared/src/mcp-apps/sampling.ts	131	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// decodedBytes 的结果与 .refine 里的 MCP_APPS_IMAGE_MAX_BYTES 比较。
+packages/shared/src/mcp-apps/sampling.ts	135	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// result.role 是 z.literal("assistant")，模型不能改角色。
+packages/shared/src/mcp-apps/sampling.ts	136	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// model 与 stopReason 都是 .min(1) 必填，空串会被拒。
+packages/shared/src/mcp-apps/sampling.ts	137	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// content 是 .strict() 的 text 块，image 与 audio 不接受。
+packages/shared/src/source-server/compatibility.ts	33	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 清单只由 schemaVersion、productVersion、minCompatibleVersion 三个字段组成。
+packages/shared/src/source-server/compatibility.ts	34	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// productVersion 与 minCompatibleVersion 都先 .trim()，前后空白不算版本差异。
+packages/shared/src/source-server/compatibility.ts	35	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 两个版本字段都带 .min(1)，trim 后空串会被 schema 拒绝。
+packages/shared/src/source-server/compatibility.ts	36	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// .strict() 让多余字段直接解析失败，不静默丢弃。
+packages/shared/src/source-server/compatibility.ts	67	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// parseVersion 的正则允许可选的 v 前缀与 +build 构建号。
+packages/shared/src/source-server/compatibility.ts	68	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 预发布段 match[4] 按 "." 切分存入 prerelease 数组。
+packages/shared/src/source-server/compatibility.ts	69	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 正则不匹配时抛 Error("Invalid compatibility version")，不做默认值兜底。
+packages/shared/src/source-server/compatibility.ts	91	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// compareCompatibilityVersions 先比 major、再比 minor、最后比 patch。
+packages/shared/src/source-server/compatibility.ts	92	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 正式版 prerelease 为空，此时比同号预发布版本高。
+packages/shared/src/source-server/compatibility.ts	93	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// prerelease 逐段交给 compareIdentifier：数字段按数值、字母段按 localeCompare。
+packages/ui/src/mentions/providers/pluginsMentionProvider.ts	52	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 官方市场条目排在企业自带条目之前，排序键由 sortPluginStoreEntries 决定。
+packages/ui/src/mentions/providers/pluginsMentionProvider.ts	53	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 非公开市场条目原样拼在已排序段之后，不参与 sortPluginStoreEntries。
+packages/ui/src/mentions/providers/pluginsMentionProvider.ts	54	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// filter(entry => entry.enabled) 在映射前剔除禁用插件，禁用项不会出现在提及列表。
+packages/ui/src/mentions/providers/pluginsMentionProvider.ts	55	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// conflictingPluginIds 命中的条目仍保留，但带 disabled: true 与 labels.conflictReason。
+packages/ui/src/mentions/providers/pluginsMentionProvider.ts	129	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// modeOrder 取 order?.work 或 order?.code，由 useIsOfficeMode 决定。
+packages/ui/src/mentions/providers/pluginsMentionProvider.ts	130	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// enabled 为 false 时 usePluginReferenceCatalog 不发请求，直接返回空目录。
+packages/ui/src/mentions/providers/pluginsMentionProvider.ts	131	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 目录请求失败时把 error 包成异常对象返回，调用方据此展示错误态。
+packages/ui/src/mentions/providers/pluginsMentionProvider.ts	147	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// displayLabel 走 resolvePluginDisplayName，按当前 locale 取显示名。
+packages/ui/src/mentions/providers/pluginsMentionProvider.ts	148	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// item.label 固定 entry.name，chip 与 markdown 载体都不随 locale 变化。
+packages/ui/src/mentions/providers/pluginsMentionProvider.ts	149	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// keywords 合并 listing.displayNameI18n 的全部语言名，中文界面外也能搜到。
+packages/ui/src/onboarding/useOnboardingTelemetry.ts	29	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// workDirections 把 OccupationValue 映射为上报用的软件行业分类值。
+packages/ui/src/onboarding/useOnboardingTelemetry.ts	30	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// Record<OccupationValue, string> 是穷尽映射，新增职业时 TS 会要求补全。
+packages/ui/src/onboarding/useOnboardingTelemetry.ts	31	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// occupation 为 null 时上报字面量 "null"，不猜一个默认行业。
+packages/ui/src/onboarding/useOnboardingTelemetry.ts	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// memory、suggestions、migration 三个业务开关由引导组件持有，本钩子不落状态。
+packages/ui/src/onboarding/useOnboardingTelemetry.ts	58	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// exposure 只记录本次真实展示过的 mode 与 preferenceValues。
+packages/ui/src/onboarding/useOnboardingTelemetry.ts	59	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// exposure 用 useRef 持有，重渲染不会重置当次曝光。
+packages/ui/src/onboarding/useOnboardingTelemetry.ts	60	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ended 标记放在 exposure.current 里，退出回调用它挡住重复上报。
+packages/ui/src/onboarding/useOnboardingTelemetry.ts	119	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// useCallback 闭包捕获点击瞬间的 occupation 与三个偏好开关。
+packages/ui/src/onboarding/useOnboardingTelemetry.ts	120	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 返回的退出回调在 ended 置位后直接 return，同一轮曝光只上报一次。
+packages/ui/src/onboarding/useOnboardingTelemetry.ts	121	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 重复点击命中 exposure.current.ended 时跳过 reportAppTelemetryEvent。

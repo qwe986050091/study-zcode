@@ -1,0 +1,29 @@
+file	baseLine	blame	content
+packages/ui/src/previewPaneOfficeXlsxContent.tsx	37	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// (index + delta + count) % count 回绕，首尾相接符合 Tab 惯例。
+packages/ui/src/previewPaneOfficeXlsxContent.tsx	66	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// sheetNames.length === 1 时不渲染 tab bar，省掉无意义的占位。
+packages/ui/src/previewPaneOfficeXlsxContent.tsx	67	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 切换时记录 sheetNames[index]，便于排查渲染异常。
+packages/ui/src/previewPaneOfficeXlsxContent.tsx	68	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// tab bar 固定在预览顶部，不随表格纵向滚动。
+packages/ui/src/previewPaneOfficeXlsxContent.tsx	85	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ArrowLeft/ArrowRight 换算为下一标签下标，返回 null 表示不接管该键。
+packages/ui/src/previewPaneOfficeXlsxContent.tsx	86	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// preventDefault 阻止默认滚动，再把焦点移到目标 tab 按钮。
+packages/ui/src/previewPaneOfficeXlsxContent.tsx	171	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// wrapper 撑满父级并 overflow: hidden，表格滚动交给 viewer 内部。
+packages/ui/src/project-sidebar/useProjectRemoteSync.tsx	102	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// deps 包含派生值本身，保证每次重新派生后都复核一次
+packages/ui/src/project-sidebar/useProjectRemoteSync.tsx	103	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// cleanup 只重置本地 selection，不触碰外部 session 登记
+packages/ui/src/project-sidebar/useProjectRemoteSync.tsx	104	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 不 setInterval 轮询，状态变化由渲染链路自然触发
+packages/ui/src/project-sidebar/useProjectRemoteSync.tsx	105	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 该 useEffect 没有 cleanup，因为重置本身是幂等的
+packages/ui/src/project-sidebar/useProjectRemoteSync.tsx	112	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// actionId 包含 rootIndex，多根项目下仍保证全局唯一
+packages/ui/src/project-sidebar/useProjectRemoteSync.tsx	113	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// label 仅在 roots.length > 1 时附加根路径，单根保持简洁
+packages/ui/src/project-sidebar/useProjectRemoteSync.tsx	114	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 点击只写 selection，实际同步由对话框中 onConfirm 触发
+packages/ui/src/remote-connection-flow/index.ts	494	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 日志按 phase 三选一：connectingRequestId 存在时取实时日志，另两路为升级日志：
+packages/ui/src/remote-connection-flow/index.ts	667	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	//   B. 重置 form 与 intent；
+packages/ui/src/remote-connection-flow/index.ts	752	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	//   其余（form 阶段）：直接放行，不打断用户。
+packages/ui/src/remote-connection-flow/index.ts	778	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// confirm 与 execute 的两段式包装，中间隔着一次 epoch 复核。
+packages/ui/src/remote-connection-flow/index.ts	1202	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 通知的 continue 按钮需 epoch 与 phase 同时命中，缺一不显示。
+packages/ui/src/remote-connection-flow/index.ts	1907	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 清理时机选在 applyPreferredTarget 换目标时而非关闭时，连续改地址同样需要清。
+packages/ui/src/remote-connection-flow/index.ts	2081	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 凭据错误要内联补输入而非只显示红字，故按 errorCode 再分一次类。
+packages/ui/src/settings/PluginStoreListView.tsx	67	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] retired 条目只从商店投影剔除，插件管理页仍按原始条目管理已安装 instance。
+packages/ui/src/settings/PluginStoreListView.tsx	190	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 分组按 locale 比较名称、按 mode 权重排组内次序。
+packages/ui/src/settings/PluginStoreListView.tsx	205	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] fallback title 只取一次而非每次解析名字都取，减少 formatMessage 调用。
+packages/ui/src/settings/PluginStoreListView.tsx	257	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] toggleGroup 不包 useCallback：只下传给子树，重建成本可忽略。
+packages/ui/src/settings/PluginStoreListView.tsx	263	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 搜索分支无 loading 态，因为它是对已加载投影的本地 filter。
+packages/ui/src/settings/PluginStoreListView.tsx	441	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 两列断点用 container query，窄侧栏里也能落成单列。
+packages/ui/src/settings/PluginStoreListView.tsx	569	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] isEmpty 空态用虚线提示块而非整页插画，与搜索空态同一视觉语言。

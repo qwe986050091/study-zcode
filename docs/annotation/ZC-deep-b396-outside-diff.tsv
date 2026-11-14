@@ -1,0 +1,10 @@
+dir	path	cause
+-	packages/services/src/zcode-agent/agentStderrCollector.ts	annotation
+-	packages/services/src/zcode-agent/groupAttachmentUpload.ts	annotation
+-	packages/services/src/zcode-agent/localRuntimeNetworkCapture.ts	annotation
+-	packages/services/src/zcode-agent/topicResourceBridge.ts	annotation
+-	packages/services/src/zcode-agent/zcodeProtocolClient.ts	annotation
+-	packages/services/src/zcode-agent/zcodeProtocolTransport.ts	annotation
+-	packages/services/src/zcode-agent/zcodeStorageStartupGate.ts	annotation
+-	packages/shared/src/forceUpdate.ts	annotation
+-	packages/shared/src/zcode-protocol-v4/rows.ts	annotation

@@ -1,0 +1,15 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/product-projection.ts	2548	ee933d5234c662	* 不得在本地发明补丁或误删。
+apps/zcode-cli/packages/core/src/runtime/helpers/attachment-media-resolver.ts	118	a8784b7e479d3a	// 内存媒体按类型分三条子链路。
+apps/zcode-cli/packages/core/src/runtime/helpers/attachment-media-resolver.ts	236	a8784b7e479d3a	// 其余类型交回上层继续分派。
+apps/zcode-cli/packages/core/src/runtime/helpers/attachment-media-resolver.ts	310	ad6dc0eb51ebe5	* - 其余大小/格式问题由子链路给出更精确的错误码。
+apps/zcode-cli/packages/core/src/runtime/helpers/attachment-media-resolver.ts	648	ad6dc0eb51ebe5	* 无副作用。
+apps/zcode-cli/packages/core/src/runtime/internal-methods.ts	231	a8784b7e479d3a	// 启动预留同样计入繁忙。
+apps/zcode-cli/packages/core/src/runtime/internal-methods.ts	232	a8784b7e479d3a	// 常驻池使用独立判定方法。
+apps/zcode-cli/packages/core/src/runtime/internal-turn-methods.ts	322	a8784b7e479d3a	// 代价是同一次调用遍历两遍工具列表，两遍之间工具面可能已被刷新。
+apps/zcode-cli/packages/core/src/runtime/internal-turn-methods.ts	520	a8784b7e479d3a	// 只记录待生效的模型切换，不立即改运行态；真正生效点在下一轮请求。
+apps/zcode-cli/packages/core/src/runtime/methods/session-fork.ts	223	a8784b7e479d3a	// [权衡] 一次性预分配全部 id，换取第二遍改写无需回填。
+apps/zcode-cli/packages/core/src/runtime/methods/session-fork.ts	379	a8784b7e479d3a	// [权衡] 大历史下两遍遍历是 O(n)，换来实现上的确定性。
+apps/zcode-cli/packages/core/src/session-context/read-session-context.ts	52	a8784b7e479d3a	// 默认值只在调用方没给预算时兜底，任何显式值都要再过一遍夹紧。
+apps/zcode-cli/packages/core/src/session-context/read-session-context.ts	112	a8784b7e479d3a	// 输出预算先夹紧再下传，后续所有裁剪都以夹紧后的值为准。
+apps/zcode-cli/packages/core/src/session-context/read-session-context.ts	465	c788b9f1d5bd5e	// 剩余预算太小时宁可不追加，也不输出一段被截到几乎没有信息量的残片。

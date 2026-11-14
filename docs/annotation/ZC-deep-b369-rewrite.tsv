@@ -1,0 +1,25 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/debug/src/App.tsx	133	a8784b7e	// 把 lastChangeAt 换成 Date.now() 会漏掉断线期间的服务端变更。
+apps/zcode-cli/packages/debug/src/App.tsx	1298	a8784b7e	// EmptyLine 的 text 必须写「下一步做什么」，只写「暂无数据」会让使用者以为后端没返回。
+apps/zcode-cli/packages/debug/src/App.tsx	1304	a8784b7e	// 别在调用处用三元拼分隔符：那会在 items 为空时留下一个孤立的「·」。
+apps/zcode-cli/packages/debug/src/App.tsx	1906	a8784b7e	// isFullscreen 时 axis 取 top、否则 item 取 bottom：刻度贴条目，长列表滚动后仍看得见。
+apps/zcode-cli/packages/tui/src/app-components.tsx	64	a8784b7e	// 两种形态共用同一份 sidebar 子树，切换 docked / overlay 只换外层容器，不会重建内容。
+apps/zcode-cli/packages/tui/src/app-components.tsx	65	a8784b7e	// flexGrow 恒为 1，右边距只在 docked 分支设为 1 列，overlay 下不占位。
+apps/zcode-cli/packages/tui/src/app-components.tsx	66	a8784b7e	// overlay 用 position=absolute 覆盖父级，zIndex 高于主区以免被内容遮住。
+apps/zcode-cli/packages/tui/src/app-components.tsx	241	a8784b7e	// 四个扣减项里只有 sidebarWidth 随布局变化，其余三项是外壳常量，改外壳样式必须同步这里。
+apps/zcode-cli/packages/tui/src/app-transcript-components.tsx	41	a8784b7e	// h 这个 createElement 别名只在文件内使用、不 export，外部不会绕过类型收窄。
+apps/zcode-cli/packages/tui/src/app-transcript-components.tsx	50	a8784b7e	// USER_MESSAGE_VERTICAL_PADDING 固定为 1 行：再多会让用户消息在窄终端里占掉整屏。
+apps/zcode-cli/packages/tui/src/app-transcript-components.tsx	145	a8784b7e	// MessageRow 把两种颜色作为 props 下传，AgentMessage 与 SystemMessage 不需要知道角色到颜色的映射。
+apps/zcode-cli/packages/tui/src/app-transcript-components.tsx	194	a8784b7e	// parts.length > 0 时整段正文分支不渲染，不会出现同一内容渲染两次。
+packages/desktop/scripts/mcp-apps-host-fixture/retention-main.ts	33	a8784b7e	// 参数顺序固定为 root、profile，写反不会报错但会把数据写进错误目录。
+packages/desktop/scripts/mcp-apps-host-fixture/retention-main.ts	34	a8784b7e	// 缺参数时 root! / profile! 会抛 TypeError 直接退出，不静默用默认目录跑压测。
+packages/desktop/scripts/mcp-apps-host-fixture/retention-main.ts	35	a8784b7e	// 脚本不校验路径是否可写，压测前由宿主自己保证 userData 目录存在。
+packages/desktop/scripts/mcp-apps-host-fixture/retention-main.ts	51	a8784b7e	// width 1000 / height 900 只为让 webview 有确定视口，不参与时序测量。
+packages/provider/src/account-provider-resolution.ts	39	a8784b7e	// AccountProviderConnectionResult 是判别联合：不可用分支带 reason，可用分支才带 connectionKey 与 effectiveAt。
+packages/provider/src/account-provider-resolution.ts	40	a8784b7e	// resetPrevious 只在本次 resolve 内生效，落盘前被剔除，不会进入配置文件。
+packages/provider/src/account-provider-resolution.ts	41	a8784b7e	// entitlementSourceProviderId 指向母体 Provider，派生入口发布时读母体的最终权益而不是自己的。
+packages/provider/src/account-provider-resolution.ts	154	a8784b7e	// resolveAccountProviderConfigs 用访问栈记录已展开的 ProviderId，重复进入即抛循环引用错误。
+packages/services/src/coding-plan-subscription/bigmodelCodingPlanSubscriptionProvider.ts	273	a8784b7e	// credentialService.load 走本地 I/O，开销比一次网络往返低两个数量级，所以不缓存凭据。
+packages/services/src/coding-plan-subscription/bigmodelCodingPlanSubscriptionProvider.ts	406	a8784b7e	// 用 flatMap 返回空数组而不是 filter：类型收窄后下面的 planId 已是非空 string。
+packages/services/src/coding-plan-subscription/bigmodelCodingPlanSubscriptionProvider.ts	1135	a8784b7e	// 这里只做附加：teamProjects 为空时 response 引用原样返回，不新建 envelope。
+packages/services/src/coding-plan-subscription/bigmodelCodingPlanSubscriptionProvider.ts	1734	a8784b7e	// unwrapClientConfigStartPlanPreview 只校验 code 与必要字段，单条权益异常过滤掉而不是整体返回 null。

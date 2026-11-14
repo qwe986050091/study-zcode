@@ -1,0 +1,24 @@
+file	baseLine	blame	content
+packages/ui/src/components/ai-elements/model-selector.tsx	44	a8784b7e479d3a	// 类型直接派生自对话组件的属性，底座升级后新增能力自动透出，不必维护白名单。
+packages/ui/src/components/ai-elements/model-selector.tsx	47	a8784b7e479d3a	// 因此这里的类型就是对话层契约，而不是展示层契约。
+packages/ui/src/components/ai-elements/model-selector.tsx	52	a8784b7e479d3a	// 卸载即关闭：对话层消失时整棵子树卸载，搜索词与高亮项一并丢弃，下次打开是干净起点。
+packages/ui/src/components/ai-elements/model-selector.tsx	69	a8784b7e479d3a	// 组合根：把对话外壳、命令面板与无障碍标题拼成固定骨架，调用方只负责填充条目。
+packages/ui/src/components/ai-elements/model-selector.tsx	81	a8784b7e479d3a	// 显式置空描述关联，向底座声明这个弹层确实没有描述，从而抑制缺失描述的开发期告警。
+packages/ui/src/hooks/useAppPanels.ts	319	a8784b7e479d3a	// 与最近关闭列表不同，这里只记 id，不保留内容。
+packages/ui/src/hooks/useAppPanels.ts	705	a8784b7e479d3a	// 其余情况在打开后统一展开面板。
+packages/ui/src/hooks/useAppPanels.ts	1601	a8784b7e479d3a	// 菜单深处通过单例 store 发起轨迹请求，这里按 workspaceKey 匹配后消费；
+packages/ui/src/hooks/useAppPanels.ts	1960	a8784b7e479d3a	// 过滤只影响菜单展示，不影响底层记录，切回普通模式后条目仍在。
+packages/ui/src/project-sidebar/ProjectSidebarNode.tsx	55	a8784b7e479d3a	// 服务可选：没有远端能力时相关动作自然不可用。
+packages/ui/src/project-sidebar/ProjectSidebarNode.tsx	85	a8784b7e479d3a	// 内容层属性整体透传，本层只补动作与设置入口。
+packages/ui/src/project-sidebar/ProjectSidebarNode.tsx	123	a8784b7e479d3a	// 跳转前先记录待进入的分区意图，打开设置页即落在远程设备。
+packages/ui/src/project-sidebar/ProjectSidebarNode.tsx	135	a8784b7e479d3a	// 桌面端走重连流程以复用凭据与安装步骤，其余端直接连主机。
+packages/ui/src/project-sidebar/ProjectSidebarNode.tsx	202	a8784b7e479d3a	// 确认后带补根标志重试，成功后统一刷新列表。
+packages/ui/src/settings/CommandsSection.tsx	99	a8784b7e479d3a	// [权衡] 列表与编辑器共用一份数据源，不做本地副本，刷新只走服务端投影。
+packages/ui/src/settings/CommandsSection.tsx	396	a8784b7e479d3a	// [契约] 编辑目标由命令自身的作用域决定：项目命令回到父级作用域，其余回到用户级。
+packages/ui/src/settings/CommandsSection.tsx	458	a8784b7e479d3a	// [契约] 可见数量是本地命令与插件命令之和，搜索已在分组阶段生效，这里不再二次过滤。
+packages/ui/src/settings/CommandsSection.tsx	514	a8784b7e479d3a	// [契约] 非表单态把表单目标上报为空，父级据此禁用与编辑器相关的入口。
+packages/ui/src/settings/CommandsSection.tsx	587	a8784b7e479d3a	// [契约] 搜索无结果只影响内容区，页签头部与操作按钮仍然可用。
+packages/ui/src/store/index.ts	323	a8784b7e479d3a	// 初始值在构造时一次性求值：存储偏好与实际字体在此刻定格；
+packages/ui/src/v4/ConversationStatusPanel.tsx	665	a8784b7e479d3a	// 已验证完成：不给任何可点控件，只留一个成功色勾。此时暂停/恢复都无意义，
+packages/ui/src/v4/ConversationStatusPanel.tsx	666	a8784b7e479d3a	// 而「重新开始」属于新一轮目标，不应该从这个入口发起。
+packages/ui/src/v4/ConversationStatusPanel.tsx	786	a8784b7e479d3a	// 「末尾三条」是全部完成时的退化：此时用户最可能回看最近做完的几步。

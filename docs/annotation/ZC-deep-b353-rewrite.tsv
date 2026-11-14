@@ -1,0 +1,36 @@
+file	baseLine	blame	content
+packages/ui/src/settings/SourceServerManagementPanel.tsx	288	a8784b7e479d3a	// [并发] 与编辑目标分开存放：查看错误不应打断正在填写的编辑表单。
+packages/ui/src/settings/SourceServerManagementPanel.tsx	291	a8784b7e479d3a	// [事务] 三个展开态各自独立：设备区、项目列表、日志面板的折叠互不影响；
+packages/ui/src/settings/SourceServerManagementPanel.tsx	802	a8784b7e479d3a	// [事务] 桌面端更新是全局动作：它更新的是本机客户端二进制，
+packages/ui/src/settings/SourceServerManagementPanel.tsx	1006	a8784b7e479d3a	// 设备出错时用户最需要的是查看原因，而不是被一并锁住。
+packages/ui/src/settings/SourceServerManagementPanel.tsx	1356	a8784b7e479d3a	// 这是展示层兼容，不改存储值。
+packages/ui/src/settings/SourceServerManagementPanel.tsx	1438	a8784b7e479d3a	// 读屏用户需要知道这条是被禁用，而不是从列表里消失。
+packages/ui/src/settings/model-provider-section/SectionLayout.tsx	42	a8784b7e479d3a	// 任一来源在加载就显示刷新态。
+packages/ui/src/settings/model-provider-section/SectionLayout.tsx	47	a8784b7e479d3a	// 两路加载是或的关系。
+packages/ui/src/settings/model-provider-section/SectionLayout.tsx	68	a8784b7e479d3a	// 合并结果只算一次。
+packages/ui/src/settings/model-provider-section/SectionLayout.tsx	75	a8784b7e479d3a	// 外层只负责纵向间距。
+packages/ui/src/settings/model-provider-section/SectionLayout.tsx	98	a8784b7e479d3a	// 导航列自己滚动。
+packages/ui/src/settings/model-provider-section/SectionLayout.tsx	113	a8784b7e479d3a	// 详情列自己滚动。
+packages/ui/src/settingsPageHelpers.tsx	311	a8784b7e479d3a	// 该布尔只影响展示分支，不参与任何设置值计算。
+packages/ui/src/settingsPageHelpers.tsx	329	a8784b7e479d3a	// 相等即视为无改动，保存按钮随之禁用，回车也不提交。
+packages/ui/src/settingsPageHelpers.tsx	330	a8784b7e479d3a	// 不要在比较时忽略大小写：字体族名在部分平台上大小写不等价。
+packages/ui/src/settingsPageHelpers.tsx	405	a8784b7e479d3a	// 代理影响所有出站请求，故不做输入即生效的乐观写入。
+packages/ui/src/settingsPageHelpers.tsx	445	a8784b7e479d3a	// 保存提交归一化后的逗号串，空串表示不使用例外列表。
+packages/ui/src/terminal/terminalPanelState.ts	49	a8784b7e479d3a	// 外壳标签先留空，等探测结果再补。
+packages/ui/src/terminal/terminalPanelState.ts	94	a8784b7e479d3a	// 只从现存会话推导已用编号。
+packages/ui/src/terminal/terminalPanelState.ts	95	a8784b7e479d3a	// 从一递增找最小空位，关闭后编号可复用。
+packages/ui/src/terminal/terminalPanelState.ts	96	a8784b7e479d3a	// 不保存只增不减的派生计数，避免两份状态漂移。
+packages/ui/src/terminal/terminalPanelState.ts	184	a8784b7e479d3a	// 已退出则连记录一起删除，交由后续懒创建。
+packages/ui/src/terminal/terminalPanelState.ts	198	a8784b7e479d3a	// 活动工作区决定是否收起面板。
+packages/ui/src/web-remote-control/domain/presentation.ts	27	a8784b7e479d3a	// 空闲与错误态不构成同一目标，调用方应重新发起。
+packages/ui/src/web-remote-control/domain/presentation.ts	28	a8784b7e479d3a	// 只凭会话标识存在会复用其他工作区的旧会话。
+packages/ui/src/web-remote-control/domain/presentation.ts	29	a8784b7e479d3a	// 先比较工作区键，身份优先于路径。
+packages/ui/src/web-remote-control/domain/presentation.ts	30	a8784b7e479d3a	// 再比较远程会话标识，双方都去空白。
+packages/ui/src/web-remote-control/domain/presentation.ts	31	a8784b7e479d3a	// 最后要求至少一个窗口级或普通会话标识存在。
+packages/ui/src/web-remote-control/domain/presentation.ts	150	a8784b7e479d3a	// 设备名优先取平台，其次取名称。
+packages/web/src/web-remote-control/ui/webRemoteControlDeviceListPage.tsx	110	a8784b7e479d3a	// 尺寸由这里锁死，行高由行组件控制，此处不要额外加外边距。
+packages/web/src/web-remote-control/ui/webRemoteControlDeviceListPage.tsx	246	a8784b7e479d3a	// 按钮用负外边距抵消容器内边距，只调整视觉对齐，不扩大点击区域。
+packages/web/src/web-remote-control/ui/webRemoteControlDeviceListPage.tsx	247	a8784b7e479d3a	// 不要给按钮加禁用态，加载中切换账号同样需要可用。
+packages/web/src/web-remote-control/ui/webRemoteControlDeviceListPage.tsx	312	a8784b7e479d3a	// [契约] 可用性统一入口：加载中或出错时整页设备不可进入，但不隐藏已有列表。
+packages/web/src/web-remote-control/ui/webRemoteControlDeviceListPage.tsx	314	a8784b7e479d3a	// 错误时保留列表但禁止点击，用户仍能看到上次结果并手动刷新。
+packages/web/src/web-remote-control/ui/webRemoteControlDeviceListPage.tsx	318	a8784b7e479d3a	// 两个分组各遍历一次，设备量小不做单次分桶，保持可读。

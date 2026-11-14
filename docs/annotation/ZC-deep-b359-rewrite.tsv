@@ -1,0 +1,31 @@
+file	baseLine	blame	content
+packages/ui/src/mentions/providers/fileMentionProvider.ts	139	a8784b7e	// 会话优先：sessionId 存在时由 resolveSessionDirectories 返回附加目录，多根场景靠它补齐。
+packages/ui/src/mentions/providers/fileMentionProvider.ts	140	a8784b7e	// 无会话但有 projectId 时读 readProjects 根列表，项目不存在就抛 "project.not-found"，不静默降级。
+packages/ui/src/mentions/providers/fileMentionProvider.ts	141	a8784b7e	// sessionId 与 projectId 都缺失时返回空数组，只保留工作区主根，调用方无需再判空。
+packages/ui/src/mentions/providers/fileMentionProvider.ts	142	a8784b7e	// 根解析在每次查询前执行，因此新建项目下一次查询即可见，不依赖缓存刷新。
+packages/ui/src/mentions/providers/fileMentionProvider.ts	194	a8784b7e	// 异常统一收敛成 scope.error 交给面板展示，不在此重试，避免与上层重试叠加。
+packages/ui/src/mentions/providers/subagentsMentionProvider.ts	35	a8784b7e	// source === "user" 的用户级来源排在第二档，优先级取 1。
+packages/ui/src/mentions/providers/subagentsMentionProvider.ts	39	a8784b7e	// 其余来源（plugin、built-in）一律返回 2，排序时与工作区级拉开。
+packages/ui/src/mentions/providers/subagentsMentionProvider.ts	59	a8784b7e	// enabled 为 false 的条目在去重前直接跳过，避免占用同名位置。
+packages/ui/src/mentions/providers/subagentsMentionProvider.ts	63	a8784b7e	// 去重键由 name.trim().toLowerCase() 生成，大小写与首尾空白都归一。
+packages/ui/src/mentions/providers/subagentsMentionProvider.ts	87	a8784b7e	// description 非空时把 sourceLabel 前置，用户先看到来源再看描述。
+packages/ui/src/ToolCallBlocks/renderers/cron-create.tsx	58	a8784b7e	// isScheduleRule 只做外部数据到内部契约的准入检查，完整结构校验由 describe 层负责。
+packages/ui/src/ToolCallBlocks/renderers/cron-create.tsx	176	a8784b7e	// [权衡] candidates 先取 toolCall.output：它最接近最终展示意图，但历史数据里常为空。
+packages/ui/src/ToolCallBlocks/renderers/cron-create.tsx	257	a8784b7e	// [权衡] 这里禁用而不是隐藏按钮，让有无 onOpenAutomationsMain 时卡片高度保持 1 档不变。
+packages/ui/src/ToolCallBlocks/renderers/cron-create.tsx	258	a8784b7e	// onClick 仍用可选链调用，防止热更新撤掉回调后触发空引用异常。
+packages/ui/src/ToolCallBlocks/renderers/cron-create.tsx	279	a8784b7e	// 该分支位于 CronCreateToolCallBlock 组件体最前且无副作用，先于任何 hook 返回，避免多余计算。
+packages/ui/src/ToolCallBlocks/renderers/cua.tsx	114	a8784b7e	// [契约] 标题先读 toolCall.input，再回退到 raw.rawInput 与 raw.input，三处都空才返回 null。
+packages/ui/src/ToolCallBlocks/renderers/cua.tsx	136	a8784b7e	// [权衡] 每层同时接受 bundle_id 与 bundleId，兼容模型输入与后端结果两套命名风格。
+packages/ui/src/ToolCallBlocks/renderers/cua.tsx	194	a8784b7e	// [契约] 合法形状只有 element+index 与坐标对两种，其余类型一律视为没有目标并返回 null。
+packages/ui/src/ToolCallBlocks/renderers/cua.tsx	372	a8784b7e	// [契约] screenshot 只在 success 为真时保留，失败分支直接置 undefined。
+packages/ui/src/ToolCallBlocks/renderers/cua.tsx	516	a8784b7e	// [契约] keyName 由 readCuaActionDetail 读取，key 与 hold_key 共用同一条入口。
+packages/ui/src/project-sidebar/TaskGroupedView.tsx	168	a8784b7e	// [契约] currentDraftGroupId 是内存中的草稿归属，空正文不再写 localStorage。
+packages/ui/src/project-sidebar/TaskGroupedView.tsx	203	a8784b7e	// [契约] renameDraft 只活在弹窗生命周期内，关闭弹窗即重置为空串。
+packages/ui/src/project-sidebar/TaskGroupedView.tsx	260	a8784b7e	// [事务] 提交前不动本地投影：拖动层已负责临时展示，等 organization.move 返回再刷新。
+packages/ui/src/project-sidebar/TaskGroupedView.tsx	359	a8784b7e	// [事务] moveTask 先生成 groupedMoveCommand 再提交；命令为空表示无需移动，直接返回。
+packages/ui/src/project-sidebar/TaskGroupedView.tsx	470	a8784b7e	// [契约] overlayStyle 的宽度由拖动层测量提供，缺失时返回 undefined 交给默认样式。
+packages/ui/src/workspace-file-tree/WorkspaceFileTreeList.tsx	50	a8784b7e	// 遮罩只隐藏视口顶部与吸顶等高的区域，mask-image 的其余部分保持可见。
+packages/ui/src/workspace-file-tree/WorkspaceFileTreeList.tsx	86	a8784b7e	// 选中比较必须走 normalizePath 归一后再比，不能直接用字符串相等。
+packages/ui/src/workspace-file-tree/WorkspaceFileTreeList.tsx	87	a8784b7e	// 行键取完整路径，目录展开导致行序变化时仍能命中同一 key。
+packages/ui/src/workspace-file-tree/WorkspaceFileTreeList.tsx	88	a8784b7e	// virtualItems 可能含越界下标，映射时必须逐项判空再取 rows[index]。
+packages/ui/src/workspace-file-tree/WorkspaceFileTreeList.tsx	141	a8784b7e	// rootError、showInitialLoading 与空列表三种分支共用 WorkspaceFileTreeNotice 的图标与标题结构。

@@ -1,0 +1,63 @@
+file	line	content_before
+src/acl.c	654	返回已注册的用户指针
+src/acl.c	873	返回新建角色指针
+src/acl.c	883	返回查到的角色或 NULL
+src/acl.c	1833	返回十六进制摘要串
+src/acl.c	1849	返回命令指针或 NULL
+src/acl.c	2731	返回构造好的默认用户
+src/acl.c	2828	直接返回不附带额外细节
+src/acl.c	2887	返回最终认证结果
+src/acl.c	2944	返回用户指针或 NULL
+src/acl.c	3352	已结束则直接返回 NULL
+src/acl.c	3673	返回需要保留的通道集合
+src/acl.c	3691	未判定断开前逐个检查
+src/acl.c	3711	未判定断开前逐个检查
+src/acl.c	5091	不记录任何日志直接返回
+src/acl.c	5313	返回命令规则描述
+src/acl.c	5392	返回 db 权限描述
+src/acl.c	5433	不执行任何修改直接返回
+src/acl.c	5493	返回实际删除数量
+src/acl.c	5501	用户不存在返回 NULL
+src/acl.c	5947	直接返回，不删除任何角色
+src/acl.c	5968	返回删除的角色数
+src/bgiteration.c	1577	条目存在才需要继续判断是否已处理或仍被引用。
+src/blocked.c	1319	没有阻塞客户端直接返回。
+src/db.c	2852	逐个遍历所有存在阻塞客户端的键，直到字典条目取尽
+src/db.c	2876	遍历被清空库里所有存在阻塞者的键，逐个确认键是否已经消失
+src/db.c	2887	原值存在，记下它的类型并标记这个键在旧库里曾经存在
+src/db.c	3224	结束计时，紧接着把样本送入延迟直方图
+src/db.c	4182	匹配到规格后开始按起始位置与数量填充结果，命中即进入填充流程。
+src/evict.c	312	返回全部应扣除的字节数。
+src/expire.c	838	返回字典条目数，即被跟踪的键数量。
+src/hashtable.c	825	前进到下一个子桶，直到链尾。
+src/hashtable.c	970	前进到子桶，直到链尾。
+src/hashtable.c	1312	主桶没有命中就检查子桶，直到链尾。
+src/hashtable.c	1420	一直走到没有子桶的桶，它就是链尾。
+src/hashtable.c	1528	前进到子桶，继续检查是否还有空位。
+src/hashtable.c	1856	遍历所有主桶，每个主桶可能带一条子桶链。
+src/hashtable.c	1889	前进到子桶，直到链尾。
+src/hashtable.c	2149	未超限，本次不做扩容。
+src/hashtable.c	2176	高于下限，本次不缩容。
+src/hashtable.c	2334	空表没有槽位可返回，直接给 NULL。
+src/hashtable.c	2585	前进到子桶，直到链尾。
+src/hashtable.c	2782	取出桶指针，循环里多次使用。
+src/hashtable.c	2934	逐个读取结果，命中则置位。
+src/hashtable.c	3101	前进到下一个子桶，链尾为 NULL 时结束。
+src/hashtable.c	3708	把超长链截断到直方图最后一格的下标。
+src/hashtable.c	3711	直方图中该链长的计数加一，最后一格收纳所有溢出链。
+src/hashtable.c	3831	层级加一，下一轮打印更深一层子桶。
+src/hashtable.c	3885	一行打印完就换行，进入下一层。
+src/hashtable.c	3902	逐主桶统计，链长与桶数成正比。
+src/multi.c	504	已回复，直接返回。
+src/multi.c	519	直接返回，不执行任何命令。
+src/multi.c	990	直接返回，不重复登记键。
+src/rdb.c	3981	回收包装对象，结束本次旧编码加载
+src/replication.c	3069	返回，等可写事件再次进入写路径。
+src/replication.c	4882	本次从新块读取的字节数取配额与块大小的较小值。
+src/replication.c	4986	删除已消费节点，释放其内存。
+src/replication.c	7188	报错后返回，不进入阻塞逻辑。
+src/replication.c	7214	立即返回，不进入阻塞。
+src/sds.c	1116	更新绝对写位置，供下一个占位符或普通字符继续写入。
+src/sds.c	1156	未知占位符已按字面写出一个字符，本次分发处理结束。
+src/sds.c	1159	% 分支处理结束，回到外层循环继续解析下一个格式字节。
+src/sds.c	1167	普通字符处理结束，继续处理下一个格式字节内容。

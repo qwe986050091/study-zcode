@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/services/src/bots/channelReply.ts	67	a8784b7e	// if (!bot?.enabled || ...) 中任一项不满足都视为授权已变更，直接返回 stale。
+packages/services/src/bots/channelReply.ts	240	a8784b7e	// 查询期间可能已被并发请求完成，binding 返回 fresh 前必须再查一次 replay。
+packages/services/src/bots/channelReply.ts	260	a8784b7e	// channelContentText(parts) 为空或超过 2000 字时必须在发送前拦截，避免空消息入频道。
+packages/services/src/bots/feishuChannelRuntime.ts	53	a8784b7e	// acquireWebSocketLock 可选注入，测试由替换实现接管，生产必须用 acquireFeishuWebSocketLock。
+packages/services/src/bots/feishuChannelRuntime.ts	75	a8784b7e	// credentialRef 缺失时按空串参与指纹，保证配置未变时指纹不变。
+packages/services/src/bots/feishuChannelRuntime.ts	390	a8784b7e	// scheduleRefresh 的后台刷新吞掉错误只记日志，不能让一次 config 读取失败中断定时器。
+packages/services/src/bots/statusFormatting.ts	91	a8784b7e	// 完成态优先取 snapshot 上报的 actualDurationMs，缺失时才回退墙钟差值。
+packages/services/src/bots/statusFormatting.ts	204	a8784b7e	// content 与 thought 同级，逆序遍历取最新非空片段作为正文。
+packages/services/src/bots/statusFormatting.ts	208	a8784b7e	// 没有正文时用 tool-call 片段作兜底进度，返回工具名而不是空串。
+packages/services/src/bots/topicHistory.ts	32	a8784b7e	// 分页窗口可能重叠，必须用 seen 按 id 去重后再拼接。
+packages/services/src/bots/topicHistory.ts	36	a8784b7e	// request.checkpoint 缺失时 checkpointFound 直接为 true，表示不限下界。
+packages/services/src/bots/topicHistory.ts	103	a8784b7e	// 先收集控制卡片 id 到 cards，再把它们的父引用一并加入过滤集合。
+packages/shared/src/source-server/connectionErrors.ts	44	a8784b7e	// phaseCodes 只作顶层兜底，不能当作已确认的阶段事实。
+packages/shared/src/source-server/connectionErrors.ts	63	a8784b7e	// visit 递归遍历 cause 链，applyPhaseFallback 只有顶层调用才置 true。
+packages/shared/src/source-server/connectionErrors.ts	105	a8784b7e	// 取消以 record.name === "AbortError" 为准，不看 message 文案。
+packages/shared/src/source-server/connectionErrors.ts	147	a8784b7e	// visit(error, true) 仅在最外层允许阶段码兜底，内层必须保持 false。
+packages/web/src/web-remote-control/adapters/webRemoteControlDeviceInfo.ts	54	a8784b7e	// Number.isFinite 为 false 时一律返回 undefined，不把 NaN 当数值。
+packages/web/src/web-remote-control/adapters/webRemoteControlDeviceInfo.ts	69	a8784b7e	// resolvedOptions().timeZone 取不到时返回 undefined，不抛错，时区是可选字段。
+packages/web/src/web-remote-control/adapters/webRemoteControlDeviceInfo.ts	75	a8784b7e	// collectWebRemoteControlMobileDeviceInfo 的默认参数由浏览器全局 navigator 提供，可在测试中注入替换。
+packages/web/src/web-remote-control/adapters/webRemoteControlDeviceInfo.ts	127	a8784b7e	// updatedAt 由注入的 now() 决定，测试可用固定时钟复现。

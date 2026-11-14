@@ -1,0 +1,37 @@
+file	baseLine	blame	content
+packages/shared/src/model-provider-family.ts	37	a8784b7e479d3a	// 团队套餐管理地址在构建期按环境推导，不写死。
+packages/shared/src/model-provider-family.ts	86	a8784b7e479d3a	// 值类型保留字面量，读取处不必再收窄。
+packages/shared/src/model-provider-family.ts	93	a8784b7e479d3a	// 展开后每个套餐只归属一个家族。
+packages/shared/src/model-provider-family.ts	123	a8784b7e479d3a	// 主机名统一转小写后再比较。
+packages/shared/src/model-provider-family.ts	124	a8784b7e479d3a	// 精确匹配根域，或匹配其子域。
+packages/shared/src/model-provider-family.ts	125	a8784b7e479d3a	// 遍历顺序即表顺序，先命中先返回。
+packages/shared/src/telemetry.ts	212	a8784b7e479d3a	// 解析失败同样返回空串，不把原始输入当作降级结果
+packages/shared/src/telemetry.ts	213	a8784b7e479d3a	// 结果统一小写，保证不同大小写写法落在同一维度
+packages/shared/src/telemetry.ts	214	a8784b7e479d3a	// 该函数只做提取不做校验，调用方据空串判断是否可用
+packages/shared/src/telemetry.ts	308	a8784b7e479d3a	// 屏幕尺寸缺失时用零尺寸占位，而不是抛错中断采集
+packages/shared/src/telemetry.ts	309	a8784b7e479d3a	// 观测来源优先级：显式入参、运行时全局、固定默认值
+packages/shared/src/telemetry.ts	310	a8784b7e479d3a	// 三者都只是上报用的近似值，不参与业务判定
+packages/ui/src/browser-use/useResponsiveBrowserViewportControl.ts	87	a8784b7e479d3a	// 视口复制一份再上报，防止调用方持有内部引用后修改。
+packages/ui/src/browser-use/useResponsiveBrowserViewportControl.ts	104	a8784b7e479d3a	// 只在假转真时把缩放重置为默认值。
+packages/ui/src/browser-use/useResponsiveBrowserViewportControl.ts	107	a8784b7e479d3a	// 该函数不触发宿主同步，调用方负责按场景决定是否再调同步。
+packages/ui/src/browser-use/useResponsiveBrowserViewportControl.ts	119	a8784b7e479d3a	// 传空值表示退出响应式，恢复普通浏览器视口。
+packages/ui/src/browser-use/useResponsiveBrowserViewportControl.ts	141	a8784b7e479d3a	// 只在响应式模式持续期间响应页面缩放变化。
+packages/ui/src/browser-use/useResponsiveBrowserViewportControl.ts	156	a8784b7e479d3a	// 订阅宿主侧的视口变更，来源是模型工具调用而非人类操作。
+packages/ui/src/feedback/FeatureRequestDialog.tsx	65	a8784b7e479d3a	// 需求弹窗与问题反馈弹窗共用输入组件，尺寸差异只允许出现在这里。
+packages/ui/src/feedback/FeatureRequestDialog.tsx	152	a8784b7e479d3a	// 关闭语义：提交中先尝试取消，取消成功就不再关闭，让用户看到取消结果。
+packages/ui/src/feedback/FeatureRequestDialog.tsx	163	a8784b7e479d3a	// 重置只清描述、方案与错误，不清联系方式，联系方式属于跨次偏好。
+packages/ui/src/feedback/FeatureRequestDialog.tsx	174	a8784b7e479d3a	// [事务] 提交是多阶段过程：本地校验、组装正文、启动作业、绑定订阅、收尾。
+packages/ui/src/feedback/FeatureRequestDialog.tsx	260	a8784b7e479d3a	// 启动作业同步抛错时没有作业可清理，只需复位提交态。
+packages/ui/src/feedback/FeatureRequestDialog.tsx	450	a8784b7e479d3a	// 正文模板结构固定：描述、期望方案、来源三段二级标题加内容。
+packages/ui/src/feedback/feedbackSubmissionJob.ts	179	a8784b7e479d3a	// [并发] 新监听器从下一次广播开始收到通知，在回调里同步退订不影响本轮遍历。
+packages/ui/src/feedback/feedbackSubmissionJob.ts	192	a8784b7e479d3a	// [契约] 关闭只移除展示项，不中断已经开始运行的提交。
+packages/ui/src/feedback/feedbackSubmissionJob.ts	272	a8784b7e479d3a	// [资源] 上传结束、切到暂停、异常退出三条路都要清回空值。
+packages/ui/src/feedback/feedbackSubmissionJob.ts	479	a8784b7e479d3a	// [权衡] 已有工单不允许撤销：工单已落库，能做的是停止上传而不是删除。
+packages/ui/src/feedback/feedbackSubmissionJob.ts	560	a8784b7e479d3a	// [事务] 三段式：准备压缩包、带进度上传、被取消后暂停并等待用户继续。
+packages/ui/src/feedback/feedbackSubmissionJob.ts	598	a8784b7e479d3a	// [并发] 循环只由取消错误驱动，正常情况下第一轮就置为假退出。
+packages/ui/src/hooks/useWebRemoteControlTaskOpen.ts	78	a8784b7e479d3a	// 先算出两边的工作区键，后续所有判断都基于这两个键。
+packages/ui/src/hooks/useWebRemoteControlTaskOpen.ts	79	a8784b7e479d3a	// 跨区通知要早于任何请求，让面板先收起。
+packages/ui/src/hooks/useWebRemoteControlTaskOpen.ts	85	a8784b7e479d3a	// 三个条件同时满足才写未读，缺一不可。
+packages/ui/src/hooks/useWebRemoteControlTaskOpen.ts	86	a8784b7e479d3a	// 写入失败只告警，不阻断打开；首页快照会恢复蓝点。
+packages/ui/src/hooks/useWebRemoteControlTaskOpen.ts	87	a8784b7e479d3a	// 必须显式表达已读，不能依赖桌面选择的缓存命中。
+packages/ui/src/hooks/useWebRemoteControlTaskOpen.ts	155	a8784b7e479d3a	// 断连时退回首页，让用户看到重连入口而不是错误提示。

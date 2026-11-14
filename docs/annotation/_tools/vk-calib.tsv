@@ -1,0 +1,101 @@
+seq	file	line	comment	code1	code2
+1	src/crc16_slottable.c	17	一、表的用途	const char crc16_slot_table[][4] = {	"06S", "Qi", "5L5", "4Iu", "4gY", "460", "1Y7", "1LV", "0QG", "ru", "7Ok", "4ji", "4DE", "65n", "2JH", "I8", "F9", "SX", "7nF", "4KD",
+2	src/crc16_slottable.c	60	五、三个不可违反的契约	const char crc16_slot_table[][4] = {	"06S", "Qi", "5L5", "4Iu", "4gY", "460", "1Y7", "1LV", "0QG", "ru", "7Ok", "4ji", "4DE", "65n", "2JH", "I8", "F9", "SX", "7nF", "4KD",
+3	src/crc16_slottable.c	77	每条源码行放 20 个条目：16384 / 20 = 819.2，所以最后一行只有 4 条。	const char crc16_slot_table[][4] = {	"06S", "Qi", "5L5", "4Iu", "4gY", "460", "1Y7", "1LV", "0QG", "ru", "7Ok", "4ji", "4DE", "65n", "2JH", "I8", "F9", "SX", "7nF", "4KD",
+4	src/crc16_slottable.c	100	段内占比：2 字符 19.9%、3 字符 80.1%、1 字符 0.0%（分母 1024）。	"06S", "Qi", "5L5", "4Iu", "4gY", "460", "1Y7", "1LV", "0QG", "ru", "7Ok", "4ji", "4DE", "65n", "2JH", "I8", "F9", "SX", "7nF", "4KD",	"4eh", "6PK", "2ke", "1Ng", "0Sv", "4L", "491", "4hX", "4Ft", "5C4", "2Hy", "09R", "021", "0cX", "4Xv", "6mU", "6Cy", "42R", "0Mt", "nF",
+5	src/crc16_slottable.c	179	47 + 209 = 256，本子段无 1 字符条目。	"21E", "25", "5ka", "6Nc", "74f", "4Ul", "0nB", "Mp", "1f2", "0cr", "bbo", "79V", "578", "42x", "395", "nl", "am", "364", "4yq", "589",	"76W", "bmn", "0ls", "OA", "Bq", "0aC", "4Zm", "6oN", "6Ab", "40I", "0Oo", "2zL", "0Qm", "6W", "7OA", "4jC", "4Do", "65D", "2Jb", "82Q",
+6	src/crc16_slottable.c	271	60 + 195 + 1 = 256，收满第 3 个 1024 段（232 + 786 + 6）。	"4cj", "6VI", "2mg", "0XD", "0vh", "UZ", "6xe", "4MF", "5PW", "5E6", "Xj", "1ky", "0Ut", "2N", "7KX", "4nZ", "5OC", "6jA", "2Qo", "0dL",	"1ZA", "iR", "6Dm", "45F", "48v", "acO", "db", "0GP", "94M", "JN", "4G3", "4RR", "5Mr", "4H2", "EO", "12T", "0HQ", "kc", "527", "47w",
+7	src/crc16_slottable.c	349	段内占比：2 字符 19.7%、3 字符 80.3%、1 字符 0.0%（分母 1024）。	"70U", "bkl", "0jq", "IC", "go", "306", "5oR", "5z3", "7WA", "46K", "0Im", "28F", "Ds", "0gA", "5LN", "6iL", "0cY", "020", "6mT", "4Xw",	"42S", "6Cx", "nG", "0Mu", "1Pd", "cw", "6NH", "5kJ", "4UG", "74M", "3Kk", "0ni", "0ah", "BZ", "6oe", "4ZF", "40b", "6AI", "lv", "0OD",
+8	src/crc16_slottable.c	426	46 + 210 = 256。	"NV", "0md", "4VJ", "6ci", "6ME", "4xf", "0CH", "22c", "mJ", "0Nx", "4uV", "7PT", "6nY", "baI", "1pu", "Cf", "6V", "0Ql", "4jB", "aus",	"65E", "4Dn", "1oa", "2Jc", "QB", "06x", "b7e", "68u", "5b2", "4gr", "8UD", "dSL", "4g", "8ZE", "4hs", "5m3", "67t", "724", "09y", "1x1",
+9	src/crc16_slottable.c	490	55 + 199 + 2 = 256。	"bvs", "6yc", "2BM", "03f", "0YB", "zp", "6WO", "4bl", "bUo", "a4e", "3H", "0Tr", "87N", "Yl", "5D0", "4Ap", "4Nq", "5K1", "Vm", "01W",	"1KR", "xA", "414", "54t", "4mm", "6XN", "1y", "0VC", "0xo", "2ML", "62j", "4CA", "7xA", "5Mb", "0fm", "2SN", "ks", "0HA", "47g", "6FL",
+10	src/crc16_slottable.c	566	61 + 193 + 2 = 256；本子段 3 字符条目数 193，为全表较低档。	"4i4", "5lt", "1WZ", "dI", "Je", "0iW", "4Ry", "5W9", "6jj", "5Oh", "R4", "GU", "iy", "0JK", "45m", "6DF", "6KG", "5nE", "0EJ", "fx",	"HT", "0kf", "4PH", "6ek", "5X8", "5MY", "0fV", "Ed", "kH", "0Hz", "4sT", "4f5", "4mV", "4x7", "1B", "0Vx", "0xT", "0m5", "62Q", "4Cz",
+11	src/crc16_slottable.c	642	44 + 212 = 256，收满第 9 个 1024 段（203 + 821）。	"G8", "RY", "7oG", "4JE", "4di", "6QJ", "2jd", "1Of", "0Rw", "5M", "480", "4iY", "4Gu", "5B5", "2Ix", "08S", "07R", "Ph", "5M4", "4Ht",	"4fX", "471", "1X6", "1MW", "0PF", "st", "7Nj", "4kh", "4ED", "64o", "2KI", "H9", "CZ", "14A", "5Kg", "6ne", "7Ph", "41b", "0ND", "mv",
+12	src/crc16_slottable.c	719	段内占比：2 字符 22.6%、3 字符 76.9%、1 字符 0.6%（分母 1024）。	"5Ls", "4I3", "F", "13U", "0IP", "jb", "536", "46v", "5oo", "6Jm", "gR", "r3", "0jL", "3ON", "6dA", "4Qb", "5NB", "aAR", "2Pn", "0eM",	"0Ka", "hS", "6El", "44G", "49w", "abN", "ec", "0FQ", "8ae", "KO", "4F2", "4SS", "4X0", "4MQ", "02w", "UM", "0M2", "0XS", "57T", "a8D",
+13	src/crc16_slottable.c	796	60 + 194 + 2 = 256。	"7Ke", "4ng", "0UI", "2s", "XW", "M6", "5Pj", "6uh", "6xX", "6m9", "0vU", "Ug", "2mZ", "0Xy", "4cW", "4v6", "4y7", "4lV", "0Wx", "0B",	"Zf", "0yT", "4Bz", "63Q", "6zi", "4OJ", "B7", "WV", "yz", "0ZH", "4af", "6TE", "5oE", "6JG", "gx", "0DJ", "0jf", "IT", "6dk", "4QH",
+14	src/crc16_slottable.c	858	57 + 199 = 256。	"bRl", "496", "4K", "0Sq", "0bI", "2Wj", "6lD", "4Yg", "43C", "6Bh", "oW", "z6", "0AU", "bg", "6OX", "5jZ", "4TW", "4A6", "LK", "0oy",	"14Q", "CJ", "4N7", "5Kw", "41r", "542", "mf", "0NT", "u7", "22O", "6Mi", "4xJ", "4Vf", "6cE", "Nz", "0mH", "Px", "07B", "4Hd", "69O",
+15	src/crc16_slottable.c	934	46 + 208 + 2 = 256。	"6oI", "4Zj", "0aD", "Bv", "5f", "9Ke", "4ir", "5l2", "66u", "735", "08x", "1y0", "Rr", "05H", "4Jn", "7ol", "6Qa", "4dB", "1OM", "8V",	"7W", "0Pm", "4kC", "7NA", "64D", "4Eo", "83Q", "2Kb", "PC", "07y", "b6d", "69t", "5c3", "4fs", "8TE", "dRM", "374", "22t", "599", "4xq",
+16	src/defrag.c	203	按真实分配长度整块复制，只有两块内容完全一致才能安全切换引用；少拷一个字节新对象尾部就是脏数据。	memcpy(newptr, ptr, size);	if (allocation_size) *allocation_size = size;
+17	src/defrag.c	536	重新取集合的哈希表地址，表结构本身可能已被前面的轮次搬移，沿用旧地址就是悬空引用。	hashtable *ht = objectGetVal(ob);	}
+18	src/defrag.c	691	游标为零表示新一轮或上一轮已结束，从树头开始并把根节点也纳入搬移范围。	if (*cursor == 0) {	defragRaxNode(&s->rax->head);
+19	src/defrag.c	933	同步后台迭代器缓存的库条目地址，漏做则迭代器下一轮仍按旧地址读取，统计与遍历结果全部失真。	bgIteration_updateDbEntryPtr(ob, newob);	if (objectGetExpire(newob) >= 0) {
+20	src/defrag.c	1138	这个检查是延迟处理的第二道防线，主扫描时已挡过一次，但延迟队列存活时间更长。	if (bgIteration_isEntryInuse(ob)) {	return 0;
+21	src/defrag.c	1231	记录处理这个键之前的命中数，用来判断它是否真的搬动过内存，	long long key_defragged = server.stat_active_defrag_hits;	bool timeout = (defragLaterItem(ob, &defrag_later_cursor, endtime, ctx->dbid) == 1);
+22	src/defrag.c	1249	超时立刻退出循环并保留队头节点与游标，让下一轮从这个键的中断处继续，	if (timeout) break;	if (defrag_later_cursor == 0) {
+23	src/defrag.c	1270	把命中基线推进到当前值，下一窗口只看新增命中，避免旧命中反复触发检查，	prev_defragged = server.stat_active_defrag_hits;	prev_scanned = server.stat_active_defrag_scanned;
+24	src/defrag.c	1322	记录扫描基线，配合扫描次数增量阈值防止「命中很少但元素很多」的偏斜，	unsigned long long prev_scanned = server.stat_active_defrag_scanned;	if (state.slot == KVS_SLOT_DEFRAG_LUT) {
+25	src/defrag.c	1355	推进命中基线，避免已经计入的历史命中反复触发阈值判断，	prev_defragged = server.stat_active_defrag_hits;	prev_scanned = server.stat_active_defrag_scanned;
+26	src/defrag.c	1464	易失字段表阶段同样自管游标，不需要外部上下文，显式标记以保持签名一致，	UNUSED(privdata);	int dbid = (uintptr_t)target;
+27	src/defrag.c	1526	模块阶段不需要额外上下文，时间片与进度由模块接口在内部维护，	UNUSED(privdata);	return moduleDefragGlobals(endtime) ? DEFRAG_NOT_DONE : DEFRAG_DONE;
+28	src/defrag.c	1582	区分正常扫完与中途取消两条清理路径，正常结束可以断言阶段队列已空，	if (normal_termination) {	serverAssert(!defrag.current_stage);
+29	src/defrag.c	1600	立刻置空防止后续代码把已释放描述符当成有效阶段，	defrag.current_stage = NULL;	}
+30	src/defrag.c	1637	只取百分比时，几十 KB 的碎片也可能显示成大问题，触发不必要的调参。	float frag_pct = getAllocatorFragmentation(&frag_bytes);	serverLog(LL_VERBOSE, "Active defrag done in %dms, reallocated=%d, frag=%.0f%%, frag_bytes=%zu",
+31	src/defrag.c	1715	补偿进本轮时长后立刻清零欠账，避免同一份超支在后续多轮被重复抵扣，	defrag.timeproc_overage_us = 0;	if (dutyCycleUs < server.active_defrag_cycle_us) {
+32	src/defrag.c	1762	目标周期总时长减去工作时长才是真正需要等待的空闲时长，	long delayUs = totalCycleTimeUs - server.active_defrag_cycle_us;	delayUs += defrag.timeproc_overage_us * (100 - targetCpuPercent) / 100;
+33	src/defrag.c	1784	保留形参是为了匹配时间事件回调的标准原型。	UNUSED(id);	UNUSED(clientData);
+34	src/defrag.c	1826	声明延迟监控变量，由下面的一对开始与结束宏使用，	mstime_t latency;	latencyStartMonitor(latency);
+35	src/defrag.c	1870	结束计时得到本轮真实耗时，用于后续采样与跟踪记录，	latencyEndMonitor(latency);	latencyAddSampleIfNeeded("active-defrag-cycle", latency);
+36	src/kvstore.c	190	累加器用 64 位无符号，因为键总数可能超过 32 位能表达的范围，	unsigned long long sum = 0;	while (idx > 0) {
+37	src/kvstore.c	261	表为空且本次是删除，说明刚删掉最后一个键，槽位由非空转入空状态，	if (delta < 0 && size == 0) {	kvs->non_empty_hashtables--; /* It became empty. */
+38	src/kvstore.c	349	同步递减已分配计数，与创建时的递增严格配对，	kvs->allocated_hashtables--;	}
+39	src/kvstore.c	502	没有按需分配标记时，创建期就把所有槽位建好，读路径可以假定槽位非空，	if (!(kvs->flags & KVSTORE_ALLOCATE_HASHTABLES_ON_DEMAND)) {	for (int i = 0; i < kvs->num_hashtables; i++) createHashtableIfNeeded(kvs, i);
+40	src/kvstore.c	548	链表元素指向的哈希表已被清空，整体丢弃节点即可，	listEmpty(kvs->rehashing);	kvs->key_count = 0;
+41	src/kvstore.c	604	链表及其节点一并释放，此时节点已被上面的置空操作标记为无效，	listRelease(kvs->rehashing);	if (kvs->hashtable_size_index) zfree(kvs->hashtable_size_index);
+42	src/kvstore.c	670	长度是槽位数加一，与分配时的表达式保持一致才能算准。	if (kvs->hashtable_size_index) mem += sizeof(unsigned long long) * (kvs->num_hashtables + 1);	return mem;
+43	src/kvstore.c	761	三种情况跳过该槽位：表不存在、回调判定要跳过、槽位正处于导入中，	int skip = !ht || (skip_cb && skip_cb(ht)) || kvstoreIsImporting(kvs, didx);	if (skip) {
+44	src/kvstore.c	779	已经扫到区间上界，直接归零游标结束本次调用，	if (first_idx >= 0 && didx >= last_idx) {	return 0;
+45	src/kvstore.c	817	逐个槽位尝试调整，而不是整体重建，保持分槽扩容只影响单个槽位的特性，	for (int i = 0; i < kvs->num_hashtables; i++) {	if (skip_cb && skip_cb(i)) continue;
+46	src/kvstore.c	871	记住原始容量，用于判断是否还能补终止符，	size_t orig_bufsize = bufsize;	hashtableStats *mainHtStats = NULL;
+47	src/kvstore.c	912	首个进入此分支的旧表统计直接成为累加器，	if (!rehashHtStats) {	rehashHtStats = stats;
+48	src/kvstore.c	1097	首次进入时才创建导入表迭代器，延迟创建避免不遍历导入键的调用方多分配一份迭代器。	if (kvs_it->importing_iter == NULL) {	kvs_it->importing_iter = hashtableCreateIterator(kvs_it->kvs->importing, 0);
+49	src/kvstore.c	1267	按槽位取桶数，用于观察单张表的装载因子与扩容时机。	unsigned long kvstoreHashtableBuckets(kvstore *kvs, int didx) {	hashtable *ht = kvstoreGetHashtable(kvs, didx);
+50	src/kvstore.c	1496	一次性弹出：查找与删除合并，适合不需要在两步之间插入额外逻辑的场景。	bool kvstoreHashtablePop(kvstore *kvs, int didx, const void *key, void **popped) {	hashtable *ht = kvstoreGetHashtable(kvs, didx);
+51	src/bgiteration.c	146	第二个库号同样要检查上界，两个库号都合法才能继续。	if (dbid2 < 0 || dbid2 >= server.dbnum) return false;	if (dbid1 == dbid2) return false; // Valid, but doesn't do anything
+52	src/bgiteration.c	696	表不存在时游标清零，用于触发下面的换表逻辑。	it->ht_cursor = 0;	}
+53	src/bgiteration.c	1017	只有新建条目才需要增加引用并把计数初始化为 1，已存在条目走递增分支。	if (newEntry) {	incrRefCount(de);
+54	src/bgiteration.c	1166	所有元素引用都递减完成之后，再释放数组本身的内存。	zfree(argv);	}
+55	src/bgiteration.c	1221	断言已经终止进程，此处仅为语法完整性；正常路径不可达。	break;	default:
+56	src/bgiteration.c	1331	只有前次积压明显且目标队列仍可下调时才收缩，避免目标值抖动。	if (left_over > 2 && it->item_count_target >= left_over) {	it->item_count_target -= left_over / 2;
+57	src/bgiteration.c	1410	发送完成即退出喂食循环，本轮不再处理其他批次。	break;	}
+58	src/bgiteration.c	1498	一致迭代需要把当前库号换算成迭代开始时的原始库号。	int dbid = (it->iteration_flags & BGITERATOR_FLAG_CONSISTENT)	? it->keyset_iter->originalDb(it->keyset_iter, cur_dbid)
+59	src/bgiteration.c	1535	调试路径构造描述串，仅在调试开关为真时执行。	sds entryString = createEntryString(dbid, item->u.dbe.de);	debugBuffer = sdscatprintf(debugBuffer, "EARLY: %s\n", entryString);
+60	src/bgiteration.c	1762	登记等待键，条目归还后按键唤醒等待的客户端。	hashtableAdd(waitingOnKeys, oKey);	}
+61	src/bgiteration.c	1806	缺失键没有条目可处理，直接继续检查下一个键。	continue;	}
+62	src/bgiteration.c	1876	临时字典释放，其中保存的键对象引用已由别处持有。	dictRelease(notIteratedKeys);	} else {
+63	src/bgiteration.c	2026	释放参数数组及每个参数持有的引用，缺一不可。	freeRobjArray(item->u.repl.argc, item->u.repl.argv);	break;
+64	src/bgiteration.c	2201	弹出的源队列释放，条目所有权已转到处理流程。	fifoRelease(poppedFifo);	return true;
+65	src/bgiteration.c	2461	没有活跃迭代器时不应产生交换事件，说明调用路径判断有误。	serverAssert(bgIteration_iterationActive());	serverAssert(!server.cluster_enabled);
+66	src/bgiteration.c	2624	只要有一个迭代器需要复制，整条命令就需要补发。	if (it->cur_cmd_may_replicate) return true;	}
+67	src/bgiteration.c	2743	汇总阻塞决定，后续命令仍要继续模拟以维护映射。	mustBlock = true;	}
+68	src/bgiteration.c	2868	屏障条目计数从零开始，事件入队时递增，归还时递减。	it->barrier_items = 0;	elapsedStart(&it->monotonic_start_time);
+69	src/bgiteration.c	3120	设置释放回调，列表中的键对象在清空时自动减引用。	listSetFreeMethod(curCmdMissingKeys, decrRefCountVoid);	bufferedReplicationBytes = 0;
+70	src/bgiteration.c	3263	每条命令开始时清空缺失键列表，避免跨命令累积。	listEmpty(curCmdMissingKeys);	if (c->cmd->proc == execCommand) {
+71	src/valkey-benchmark.c	316	刻意接受的代价。	static bool isBenchmarkFinished(int request_count) {	int warmup_duration = atomic_load_explicit(&config.current_warmup_duration, memory_order_relaxed);
+72	src/valkey-benchmark.c	495	把第二个占位符的内部当成新匹配，也让“一个占位符只登记一次”成立。	void initPlaceholders(const char *cmd, size_t cmd_len) {	resetPlaceholders();
+73	src/valkey-benchmark.c	829	针对的是“命令条数/秒”，而不是“发送轮次/秒”。	static long long acquireTokenOrWait(int tokens) {	uint64_t time_per_token = config.time_per_token;
+74	src/valkey-benchmark.c	1052	避免跨线程锁）。	static long long awakenPausedClient(struct aeEventLoop *eventLoop, long long id, void *clientData) {	UNUSED(id);
+75	src/valkey-benchmark.c	1105	同一个定时器批量唤醒，避免 N 个客户端注册 N 个 1ms 定时器。	static void writeHandler(aeEventLoop *el, int fd, void *privdata, int mask) {	client c = privdata;
+76	src/valkey-benchmark.c	1482	不用 0 填充，避免没有样本时打印出误导性的 0。	static void showReport(void) {	const float reqpersec = (float)config.requests_finished / ((float)config.totlatency / 1000.0f);
+77	src/valkey-benchmark.c	1907	非 0 说明已有人在做，直接放弃）。	static int fetchClusterSlotsConfiguration(client c) {	UNUSED(c);
+78	src/valkey-benchmark.c	2103	就是用户要压测的命令及其参数。	int parseOptions(int argc, char **argv) {	int i;
+79	src/valkey-benchmark.c	2558	这里重置的是计数器而不是丢弃线程：热身流量照常打到服务端，只是不计入	long long showThroughput(struct aeEventLoop *eventLoop, long long id, void *clientData) {	UNUSED(eventLoop);
+80	src/valkey-benchmark.c	2576	每次打印后重置为 0 再累加，避免行变短时留下尾巴。	long long showThroughput(struct aeEventLoop *eventLoop, long long id, void *clientData) {	UNUSED(eventLoop);
+81	src/fuzzer_client.c	14	每个线程一条连接，串行「发一条等一条」：只有这样才能让超时/断连与具体命令	#define _GNU_SOURCE	#include <stdio.h>
+82	src/fuzzer_client.c	43	15 秒只用于「服务端卡死」这种真正需要放弃连接的场景。	#define RECONNECT_MAX_ATTEMPTS 5    /* Maximum number of reconnection attempts */	#define RECONNECT_BASE_DELAY_MS 100 /* Base delay for exponential backoff (milliseconds) */
+83	src/fuzzer_client.c	368	连接超时 1.5s 与命令超时 15s 分开设置，避免连不上时白等 15 秒。	static valkeyContext *connectToServer(const char *host, int port, cliSSLconfig *ssl_config) {	valkeyContext *ctx;
+84	src/fuzzer_client.c	525	协议错误（全局中止）→ 其余（记入错误列表继续）。	static CommandResult handleCommandError(valkeyContext *ctx, FuzzerCommand *cmd, time_t start_time) {	CommandResult result = CMD_ERROR;
+85	src/fuzzer_client.c	585	这个口径决定成功率能否反映生成器正确性，改动前先确认统计含义。	static void validateReplyAndUpdateCounters(valkeyReply *reply, FuzzerCommand *cmd) {	if (reply->type == VALKEY_REPLY_ERROR) {
+86	src/modules/lua/debug_lua.c	25	线程模型：钩子在脚本执行线程里被同步调用，所有命令处理函数也都在该线程执行。	#define LDB_BREAKPOINTS_MAX 64 /* Max number of breakpoints. */	struct ldbState {
+87	src/modules/lua/debug_lua.c	43	bp 用定长数组而非动态表：断点最多 64 个，刻意避免在钩子路径上做分配（钩子内	struct ldbState {	int active;                  /* Are we debugging EVAL right now? */
+88	src/modules/lua/debug_lua.c	130	先剥掉尾部换行再切分，避免脚本末尾多出一个空行、让断点行号与用户视角差 1。	void ldbStart(ValkeyModuleString *source) {	ldb.active = 1;
+89	src/modules/lua/debug_lua.c	180	线性扫描：在 64 项上限下比哈希更省，且钩子路径上不留额外状态。	static int ldbIsBreakpoint(int line) {	int j;
+90	src/modules/lua/debug_lua.c	265	同时构造数组式与键值式两种表示，最后按「首个索引是否为连续递增的 1」择优。	static ValkeyModuleString *ldbCatStackValueRec(ValkeyModuleString *s, lua_State *lua, int idx, int level) {	int t = lua_type(lua, idx);
+91	src/pqsort.c	44	才继续递归，落在区间外的分区直接跳过。因此结果是“全排序结果在该区间上的	#include <sys/types.h>	#include <stdint.h>
+92	src/pqsort.c	48	所以“某段与目标区间不相交”就意味着它整体位于目标区间的左侧或右侧，	#include <sys/types.h>	#include <stdint.h>
+93	src/pqsort.c	84	本文件里 n 都来自指针差，天然满足。	static inline void	swapfunc(char *a, char *b, size_t n, int swaptype)
+94	src/pqsort.c	107	最坏情况概率；这正是该实现优于朴素取首元素的地方。	static inline char *	med3(char *a, char *b, char *c,
+95	src/pqsort.c	119	pa..pb 是“等于枢轴”的前缀，pc..pd 是“等于枢轴”的后缀，	static void	_pqsort(void *a, size_t n, size_t es,
+96	src/sds.c	69	32 型覆盖 64KB 到 4GB，32 位平台上这是实际可用的最大类型。	case SDS_TYPE_32: return sizeof(struct sdshdr32);	case SDS_TYPE_64: return sizeof(struct sdshdr64);
+97	src/sds.c	738	16 型与 8 型逻辑完全相同，只是字段宽度不同。	case SDS_TYPE_16: {	SDS_HDR_VAR(16, s);
+98	src/sds.c	1087	更新绝对写位置，下一次写入从新位置继续，避免覆盖刚写的内容。	i += l;	break;
+99	src/sds.c	1466	逐段消费输入，可打印段整段追加，特殊字符单独转义。	while (len) {	if (isprint(*p) && *p != '\\' && *p != '"') {
+100	src/sds.c	1703	单引号内 \' 还原为一个单引号，并一次消费两个输入字节。	p += 2;	} else if (*p == '\'') {

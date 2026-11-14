@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+const p = 'd:/code/opensource/valkey/docs/annotation/README-rework.md';
+let s = fs.readFileSync(p, 'utf8');
+const start = s.indexOf('B64：`src/throttle.c`');
+const endMark = '按 8.9 口径不拆表达式）。';
+const end = s.indexOf(endMark, start);
+if (start < 0 || end < 0) throw new Error('markers not found');
+const b63 = 'B63：`src/compression_lz4.c` 单文件单片完成，§8.16 清单里第二个收口的文件。重点是三条「账面口径」：其一，自定义分配器把 `ctx_memory` 的地址当作 `LZ4F_CustomMem.opaqueState` 交给 LZ4F，记账按 `zmalloc_size` 而不是请求的 `size`，且释放时必须先减计数再 `zfree`——顺序反了会在已释放块上读头部；其二，`compressionLz4OutputBound` 是「单次 feed 最坏输出」上界，必须同时包含帧头最大长度、输入膨胀上界与排空缓冲三部分，少一项上层缓冲就会溢出；其三，帧一旦开始写就不允许重试：`compressBegin/Update/Flush/End` 任何一步失败都返回 -1 且不回滚，调用方把 writer 置 ERROR，由读取端按截断处理。解码侧写清 `dst_size`/`src_size` 双出参、`ret == 0` 表示帧尾、`input_hint` 必须复位到 `LZ4F_HEADER_SIZE_MIN`，以及 `skipChecksums` 的选择。语句 11.1% → 93.9%、分支 4.8% → 100.0%，`added=82 / extra=0 / water=0 / weak=0 / filler=0 / deletedNonZero=0 / syntaxErr=0`（首轮 3 行 W、1 行 weak，另把 4 条插进三元表达式内部的行撤回，改为在语句上方一次写清两个分支；剩余 6 个未覆盖单元是 2 个参数续行与 4 个三元续行，按 8.9 口径不拆表达式）。';
+const b64 = 'B64：`src/throttle.c` 单文件单片完成，§8.16 清单里第三个收口的文件（22aa802 的 49 行只写在函数头，函数体内近乎空）。按状态机的四个不变量落笔：其一，归属唯一——`throttlerAddClient` 断言 `c->throttler == NULL` 且未节流，`dequeueThrottledClient` 先清 `flag.throttled` 再清指针，三个字段（`throttler`/`throttle_node`/`throttle_start`）同处清；其二，事件配对——只有队列 0→1 才 `aeCreateTimeEvent`，排空时先复位 `time_event_id` 再决定 `freeThrottler`，否则断言失败或重复删事件；其三，释放延迟——`throttle_deregister` 在队列非空时只置 `cleanup` 并把速率放开到 UNLIMITED，真正释放由 `throttlerTimeProc` 在排空点完成，`throttle_removeClient` 走同一条配对逻辑；其四，速率三段夹取——`throttle_setRate` 把 `<EPSILON` 归零、`>UNLIMITED` 截断，guardrail 时间戳只在 0→非 0 跳变时记录；`throttle_adjustRate` 的降速用 5 秒滑窗 incoming TPS 封顶、停摆恢复直接跳 `MIN_ADJUST_AFTER_DISABLE`、升速至少 1 ops/s，乘数上限 3.0 由调用方断言。语句 14.7% → 98.7%、分支 13.3% → 100.0%，`added=189 / extra=0 / water=0 / weak=0 / filler=0 / deletedNonZero=0 / syntaxErr=0`（首轮 21 行 W、11 行 weak，全部补标识符或反引号后清零；剩余 3 个未覆盖单元是 `throttle_register` 的参数续行与两处续行参数）。';
+s = s.slice(0, start) + b63 + '\n\n' + b64 + s.slice(end + endMark.length);
+fs.writeFileSync(p, s);
+console.log('fixed');

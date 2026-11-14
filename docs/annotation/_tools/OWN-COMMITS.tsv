@@ -1,0 +1,757 @@
+003e0380037cab5e3a2066ebb399adaa0d544e2c	zhanglingfeng	2026-11-11 17:00:46 +0800	docs(注释): 回填 b319 批墙钟实测（556s / 12.64 s/行）
+00bcee13d64ac01f1a24fb6380950bd1dda51e16	zhanglingfeng	2026-11-12 00:51:55 +0800	docs(注释): 形状 B 定稿（目录聚类 + 行目标 33 + 上限 30，b350 切换）
+00cf1879f4977b3c8bc1b321a1b713f829b00e3e	zhanglingfeng	2026-11-11 11:00:03 +0800	注释清水 b285：6 文件 1→1 改写 (+70/−70)
+012782e3448ff6569f7c4df143d5989a6e875aaa	zhanglingfeng	2026-11-11 02:41:58 +0800	docs(注释): b271 台账（100 行 / 5 文件，预检 6 处返修，门禁全 0）
+013c4c5cec6d55c1b9b393e6e6048179ca6a4a64	zhanglingfeng	2026-11-03 23:02:22 +0800	docs(注释): 补齐被剔除的 context 段落注释改写
+016f7df894a3e8dcb0e7db155dfbaac650ae1c3d	zhanglingfeng	2026-11-10 10:36:48 +0800	docs(缺陷): 明确按 ID 寻址，位置号会随重排漂移
+020ff365927d81ce526ed4185758b575baf36d93	zhanglingfeng	2026-11-12 11:20:15 +0800	docs(注释): b354 收口（6 文件 30 行）+ 自清累计 10 行 + L 判据口径
+02af44faa28936fd5ff22257325e3e8e405bac52	zhanglingfeng	2026-11-11 13:47:51 +0800	注释清水 b290：6 文件 1→1 改写 (+90/−90)
+02fb276488cda8f6b2763fcda6cc91b9ee939322	zhanglingfeng	2026-11-12 20:47:44 +0800	docs(注释): b399 前定稿 INDEX——批前校验、S5 构造值、GATE-DEBT、收口两行
+035e00bde2f3bf1ccfe0995a357e45c7c1bc1c96	zhanglingfeng	2026-11-11 15:09:32 +0800	注释清水 b306：3 文件 1→1 改写 (+36/−36)
+036caf10a6151a43adfa6a341b7f93a15b39c2ab	zhanglingfeng	2026-11-10 12:35:50 +0800	注释(server): sshAuth 全文件收口 58/58（+52/-0）
+03816530cf2dd80286e6d5bbabbf84f10bb60a81	zhanglingfeng	2026-11-12 16:14:13 +0800	docs(注释): b381 收口（10 文件 30 行，判据类 1 条同义重复已修）+ 台账 + 白名单 668 行
+03b4d9344bc3e65d58ea7d0ff1f1d711e576f691	zhanglingfeng	2026-11-10 15:15:40 +0800	docs(注释): b230–b233 台账、抽样表与计时 (+258)
+03ec13b780352494b83d2293cb292d67d8b28d81	zhanglingfeng	2026-11-12 20:45:18 +0800	docs(注释): b398 回填（收口 77.0 / 墙钟 178.8 / S5 56.0）与主报 0.15h
+0413d21edf5e3ef1e81223ad2f45fe7293c25eee	zhanglingfeng	2026-11-12 15:47:04 +0800	docs(注释): b379 收口（5 文件 15 行标定批，首轮 0 命中）+ 台账 + 白名单 660 行
+0426815240d7582f620a4a39a12b5587f579b2af	zhanglingfeng	2026-11-10 13:46:40 +0800	docs(注释): §8.5 登记 b18 漏提交（remoteAssetInstaller +300，54 行水句待修订）
+042f140e857405e78d563c949cd530fdfc6dbca4	zhanglingfeng	2026-11-11 14:05:52 +0800	注释清水 b293：7 文件 1→1 改写 (+98/−98)
+045139022377695c5cb58e2497cabc5862d9f55e	zhanglingfeng	2026-11-12 01:05:11 +0800	注释清水 b347：4 文件 1→1 改写 (+19/−19)
+046feda903a7cb65802a3cba8f42c59c9cb26841	zhanglingfeng	2026-11-12 13:29:53 +0800	注释清水 b371：6 文件 1→1 改写 (+24/−24)
+04ba2ad6a486d725590acbe245acc49b0a098407	zhanglingfeng	2026-11-11 04:47:23 +0800	chore(注释): 白名单补 a13035fb（b280 台账提交）
+04cd8c4cd9f4a59205517c01733a89888c739726	zhanglingfeng	2026-11-10 13:39:28 +0800	docs(注释): 打包回合三件台账与 §8 扣账（A 组 39 文件 / 4,833 未覆盖）
+05bca5eb597cd4cfa8c4da87aab4b61d3d3dc081	zhanglingfeng	2026-11-10 17:48:51 +0800	docs(注释): b242 台账补记改名被代码提交带走的流程失误 (+1)
+06452007a4bdaa9a5c7cc0db638c3731f1b14c58	zhanglingfeng	2026-11-10 12:14:49 +0800	docs(注释): 补 zaiProviderAdapter 批次记录，一档待做扣到 188 / 23,238 / 19,783
+068d3ec7c8a354868c3e5185745db3934072d8a2	zhanglingfeng	2026-11-12 11:25:53 +0800	docs(注释): 白名单（b355 窗口收口）+ 记账口径订正 done 6341/remain 1080
+068ea17a87589858332e10b46681aa70b31587a2	zhanglingfeng	2026-11-11 03:14:58 +0800	chore(注释): precheck 加集合断言（越界/漏改 exit 8）与 batch_wall 拆两段，b273 补记 out_of_scope_edits=4
+07354856360c63f68da6bb317477649ea437c99a	zhanglingfeng	2026-11-12 12:03:59 +0800	docs(注释): b360 窗口全量重算（白名单 578 / ALIGNED diff=0）；池内 933=可写 438+上游 495；files 136/1520
+0755ad09c84943fd826accd79e6cd4fadb4b9858	zhanglingfeng	2026-11-11 17:50:51 +0800	注释清水 b330：4 文件 1→1 改写 (+40/−40)
+080fc15e0c275e2a1943bbaaac320d43073bb3e3	zhanglingfeng	2026-11-11 02:26:40 +0800	docs(注释): precheck sha 只覆盖正文字节 + 三条负控
+09246e3bf2c80b2e0575a05615a7e1f0fb946856	zhanglingfeng	2026-11-11 17:34:11 +0800	docs(注释): 回填 b325 批墙钟实测（196s / 4.90 s/行）
+092da2c57858e96ebc783b4d556043b7d9ef2980	zhanglingfeng	2026-11-10 18:32:08 +0800	docs(注释): b249 B2 台账 + 成本分账口径 (+226/−6)
+097f354399b71e785d11f9c88cabaad4e04a91c4	zhanglingfeng	2026-11-10 13:22:43 +0800	docs(注释): 撤回 18/55/95/334 回合，改按最近 5 回合折算（甲 14 / 乙 49）
+09cbac2cedaa7f6a827229088061bb3ae334ba54	zhanglingfeng	2026-11-11 02:11:53 +0800	docs(注释): b268 台账（命中 1 处 · 池外自清 1 · 剩余 6025）
+0a6bb326e78fe8d2fa6cf2380e71e5ff8dd15cc4	zhanglingfeng	2026-11-11 02:56:59 +0800	chore(注释): precheck 失败尝试也计入 record_runs，INDEX 归档新 sha 与快照 BOM 口径
+0a8f1b2a3b13ef8b65730680b1ee1aebe3f155cc	zhanglingfeng	2026-11-11 14:34:39 +0800	docs(注释): 白名单更新（335 行，head=HEAD）
+0aa52e00afbe72c96d440f5a10f15fff2901fbe7	zhanglingfeng	2026-11-11 02:23:39 +0800	docs(注释): b269 台账（预检拦 2 W · 门禁首轮 0 · 剩余 5925）
+0b1f07bf83fe27720dc9f38019c412e8e53666f4	zhanglingfeng	2026-11-12 00:50:44 +0800	docs(注释): 碎尾批第二套读数与 >50% 排除占比规则
+0b23b3c194fd4e028c3d01e568337df834257e74	zhanglingfeng	2026-11-11 15:02:30 +0800	注释清水 b304：3 文件 1→1 改写 (+36/−36)
+0bcd3a9dfd4535620d05d76ca959322bebee379c	zhanglingfeng	2026-11-10 22:26:59 +0800	docs(注释): b266 台账 + 产能件 pool-out 四桶 + s/行 中位数口径更新
+0c3e02b357f6237f93b84c80c5b8d3520fa229be	zhanglingfeng	2026-11-10 11:20:57 +0800	docs(注释): 补 oauthService 批次记录（预登记、分批、定格与门禁）
+0c74f244d31d3c0d56a8ac7183c1f3e9e7bf52bf	zhanglingfeng	2026-11-12 12:51:14 +0800	docs(注释): b366 台账回填收口 123s / 批墙钟 338s
+0cab755e377846167e62ed6333eb5f2655ce6a57	zhanglingfeng	2026-11-10 19:49:21 +0800	b261 台账
+0cb3d2899d9087f516934b96a35fa04207d0ef79	zhanglingfeng	2026-11-12 18:03:23 +0800	docs(注释): b389 收口（20 行/10 文件，判据类 1→0）+ 台账 + CLOSING/INDEX 填数
+0dd058e9f3d7e376fee718273762a1de895e5683	zhanglingfeng	2026-11-10 14:58:44 +0800	b229 改写 2 文件的水句 (+19/−50)
+0e3880339009a5ce9d61c88bcd192738e21a06d9	zhanglingfeng	2026-11-12 01:03:11 +0800	docs(注释): 自清 9 条补实际依据 + A 段封存三组口径
+0e50be4cba1c3137f7d817829a3f2f376975861e	zhanglingfeng	2026-11-12 18:59:15 +0800	docs(注释): b392 回填计时（S1 83.0 / S3b 145.5 / 收口 354.0 / 批墙钟 503.1），成本口径加 --cost=A|B|auto
+0ebfa2ddfa5d1f9492f8feec0c836345e25e37d2	zhanglingfeng	2026-11-11 04:47:12 +0800	chore(注释): 预检 mtime 检测 + 白名单新鲜度断言（b281 工具前置）
+0f2ef80d29a8550b4c47fd90f15ecf2f4bf97c33	zhanglingfeng	2026-11-03 22:41:56 +0800	docs(注释): L2-B8 bootstrap 其余
+0fec6782496c3264c9c9674dbdda5f7a8ed47bbe	zhanglingfeng	2026-11-10 14:27:40 +0800	docs(注释): 审计 §4 反向核对 + §8.5 非本线占用登记 (+549)
+10016860a32430874de0858e94bc5929550779bf	zhanglingfeng	2026-11-10 13:16:18 +0800	注释(desktop): desktopHostProcess.ts b7 — spawn 参数、fork env 与消息监听首段（+25 行）
+10071c3f686f00036752ede724637cbc3518f0b8	zhanglingfeng	2026-11-12 11:41:50 +0800	docs(注释): 回填 b357 计时（321s / 收口 158s）+ 收口 n=4 中位数 63.5s、单值 2.5h
+102f21b1c3e6dfbdae4a11342792f98de89af606	zhanglingfeng	2026-11-12 16:11:44 +0800	注释清水 b381：10 文件 1→1 改写 (+30/−30)
+1031bb2f82c5c63fa5d0e282d74281fb9797780a	zhanglingfeng	2026-11-10 12:30:47 +0800	注释(services): oauthCredentialRepo b6 — 收口 229/229（100%），接口/key/魔数段 15 单元
+10cf30dc6d06dcfc475507126edeeda8c61ff867	zhanglingfeng	2026-11-12 18:39:58 +0800	docs(注释): b391 回填计时（S3a 50.8 / S3b 101.0 / S4 1.0 / 收口 169.1 / 批墙钟 274.1，主报 0.71h）
+10e9df5188396e3499c14563af034ac74a1678cc	zhanglingfeng	2026-11-03 22:42:07 +0800	docs(注释): L2-B10b-1 覆盖补齐 a-c 段索引
+11942643101a24322bcbb89fd060949051185af8	zhanglingfeng	2026-11-12 01:07:06 +0800	docs(注释): 回填 b347 批墙钟实测（193s / 10.16 s/行）
+11c6855981188f83c3d1c4391ad69625bc998d58	zhanglingfeng	2026-11-12 14:17:55 +0800	docs(注释): b374 收口（10 文件 30 行）+ 台账 + 白名单 641 行
+12b1a23b568154ad27356c4e846aec839f92571e	zhanglingfeng	2026-11-11 12:01:08 +0800	fix(注释): 修正取值来源断言 3 处（S08 index / providerId 顺序 / chcp 覆盖不回退）
+12bb34b283288fbcf28d7bc29205db92b4abbfc3	zhanglingfeng	2026-11-10 10:31:54 +0800	docs(缺陷): D-31 进自册总表，D-16-1 补总表编号，标注自册总表残缺的假阴性风险
+12d83b4760823ce3a377d47635b6a12429f432c8	zhanglingfeng	2026-11-10 18:27:31 +0800	docs(注释): b248 B1 台账 + own-commits v2 三态 (+300/−6)
+14259fc222bb96b11ac3e9fdb3472f0e3e53b95b	zhanglingfeng	2026-11-12 11:02:52 +0800	docs(注释): 收口 178s 重算总时长 5.9h + 监控改双信号（收口150s / 可控8 s每行）
+143acaf93a40145458fb1d88d411ebd0869061ee	zhanglingfeng	2026-11-11 17:30:22 +0800	docs(注释): 回填 b324 批墙钟实测（299s / 7.12 s/行）
+1449c80bc0119a65dc7bab6b05f98c1824f54081	zhanglingfeng	2026-11-12 00:52:24 +0800	docs(注释): 白名单（b345 开批前，502 行）
+14c0e7e1fa4f93ece2a250b482e56a377aacaaab	zhanglingfeng	2026-11-10 17:47:09 +0800	b242 改写 6 文件的水句 (+9/−14)
+14d5c8cef2454b928e10796edc52b47104e0aabe	zhanglingfeng	2026-11-10 17:03:00 +0800	b236 改写 2 文件的水句 (+2/−49)
+14e81d85e44da52f4c7bc6ae82863a96cca18d07	zhanglingfeng	2026-11-10 15:26:31 +0800	b235 改写 2 文件的水句 (+25/−47)
+1542b6e05434a1e2aebed2c8e86aa4cbb22bb2df	zhanglingfeng	2026-11-11 03:41:53 +0800	docs(注释): b276 台账（total 253.0s / controllable 127.0s / 落笔段 106.2s / tail 3.9s，record_runs=2；pool-out 1 行未触碰；池 851 文件 5,225 行；样本 n=4）
+15a50dabd5907331e5016f10f6520b52ee65a04b	zhanglingfeng	2026-11-11 17:40:20 +0800	注释清水 b327：4 文件 1→1 改写 (+40/−40)
+167154632d2222084f9c32f7fd312ea7b87698a9	zhanglingfeng	2026-11-11 17:23:53 +0800	docs(注释): b323 收口（台账 + 白名单 413 行 + INDEX）
+16cd2108c1a797e3267c251f7cf1159dfae83fdd	zhanglingfeng	2026-11-12 15:48:40 +0800	docs(注释): b379 回填（墙钟 179s，收口 61s）+ 三点证伪 c_f（成本=每批 73s+每行 3.6s）+ 主报改包络 1.3-2.0h + s/行 退役 + 自清表行数订正 12
+17bd407983f6e93139b33ca7f447b90291457c19	zhanglingfeng	2026-11-12 01:06:53 +0800	docs(注释): b347 收口（碎尾批 + 空泛提醒补修记录）
+17c9f04efe5cf172e8f121b4eb8c5439a83bced2	zhanglingfeng	2026-11-11 02:35:16 +0800	docs(注释): b270 自清 4 行归因（判定变化 4 / 删除行 0，逐行字节实测）
+17e4469a65bcf2efc2b3488495432912e7dc236b	zhanglingfeng	2026-11-12 10:22:18 +0800	docs(注释): 白名单（b348 开批前）
+1861ec7c83ac1ed897cb4c0dc80293a98494a4a8	zhanglingfeng	2026-11-10 12:34:23 +0800	docs(注释): 补 oauthUnauthorizedRequest 批次记录，一档待做扣到 184 / 22,617 / 19,352
+18ce278a7bc556b78e9e7de23620f48817b9c2f3	zhanglingfeng	2026-11-12 12:18:44 +0800	docs(注释): 抽检率改加权口径（89.3%/51.0%，不可外推）；D-003 scope 负控实测 exit 1；订正 --scope 注释
+18e274fccfa0b367b304faa8469819fc96f1df89	zhanglingfeng	2026-11-10 17:53:23 +0800	b243 改写 6 文件的水句 (+11/−12)
+1913c289ad2601bbbff9eeab86119caed4616a5f	zhanglingfeng	2026-11-12 18:21:39 +0800	docs(注释): b391 前置：主报改 A 含文档 1.29h、窗口锚点订正为本批、预测区间 x0.8/x1.25
+19a7432d77b460843ca7d8bdc41658fc5785a3bc	zhanglingfeng	2026-11-12 20:47:32 +0800	docs(注释): b399 前定稿——批前 done 脚本校验、S5 剔除已修缺陷样本(57.0 构造值)、GATE-DEBT 8 条逐条落地、收口两行口径
+19b537c453c3ab1b3bef48608d48ab3312ffe7ee	zhanglingfeng	2026-11-12 11:56:07 +0800	注释清水 b359：6 文件 1→1 改写 (+30/−30)
+19f6e744cc91ee3d3af726a35dd7f44a9c90f3e8	zhanglingfeng	2026-11-11 14:12:34 +0800	docs(注释): 白名单更新（320 行，head=e9ab4945）
+1a59316f586c12f487b427b1a4880c6144e4708f	zhanglingfeng	2026-11-10 13:03:17 +0800	docs(注释): index.ts b12 台账（+64 行，UNCOVERED 271→207）
+1a6751b17fc87b114f7bd81280cb3e45587964e2	zhanglingfeng	2026-11-11 16:47:23 +0800	docs(注释): 明确批次计时口径（b317 §10 + INDEX §6.2）
+1ab29ce37ae1767024956da73313aaf9670a0cd7	zhanglingfeng	2026-11-12 13:08:19 +0800	注释清水 b369：6 文件 1→1 改写 (+24/−24)
+1aec55d9189d9ff51b8f22265d50df9b9f044722	zhanglingfeng	2026-11-12 00:04:42 +0800	docs(注释): 回填 b336 批墙钟实测（274s / 8.31 s/行）
+1c0d5ef498eb0ad94a1b4341058bcb0bc17b355c	zhanglingfeng	2026-11-12 00:19:59 +0800	注释清水 b340：4 文件 1→1 改写 (+31/−31)
+1c54edbbe037bb6a02298d33aa61e74c499423ee	zhanglingfeng	2026-11-10 17:59:42 +0800	b243 回溯补修 b240 三行单行 JSDoc (+3/−3)
+1ca9a75f5abb6058c600231b2cd2b0cdcb75ee74	zhanglingfeng	2026-11-11 03:35:53 +0800	docs(注释): INDEX 补 b274/b275 两段墙钟实测（新口径 n=3）
+1d1f84dbd959a3a7711b7daeb1333ef048ee28f2	zhanglingfeng	2026-11-12 20:26:55 +0800	docs(注释): b397 前定稿——S3b 切分状态表、S5_closeout 预登记 160-220s、池外残差降为异常字段、plan=19 验收预登记、order 字段改名
+1da09719b8065c18e71f0c2f9807f2b8ce6bf715	zhanglingfeng	2026-11-10 18:12:42 +0800	docs(注释): b245 台账 + 尺子 v11/v4 (+1149/−5)
+1f7200a35eece5903d95f44877e9fc2307982895	zhanglingfeng	2026-11-12 16:26:48 +0800	docs(注释): 主报改观测包络 1.1-1.9h（1.1-1.6h 标为修正参考）+ ident 放宽反引号 2 字符锚点 + 分段一位小数 + closeout 交叉校验
+20e22e68b2f0c59368140f8bb630e46dc2c583e4	zhanglingfeng	2026-11-10 12:39:25 +0800	注释(services): providerAdapter 全文件收口 19/19（+18/-0，含批次前 6 行）
+222bbb75cfa878d5840555fc22848463c947d028	zhanglingfeng	2026-11-12 10:42:10 +0800	docs(注释): 形状 B 文件上限 30→6（cap30 作废，86 批/3.66h）
+22994ad36a81ba5f21b3baaf09c122b8895a9c02	zhanglingfeng	2026-11-11 10:38:23 +0800	注释清水 b284：6 文件 1→1 改写 (+100/−100)
+22bdbf2a5d76a29423f788165d58d5f4e0e15ffd	zhanglingfeng	2026-11-11 16:37:27 +0800	docs(注释): b316 开批前（白名单 + b315 分歧记录 + 批规模规则）
+22cb4efe5ede341c434f6ea16723d7caed1ce3e1	zhanglingfeng	2026-11-11 02:19:24 +0800	docs(注释): b269 注释清水 100 行（5 文件） (+100/−100)
+22f8414056f5435f3b7d9cc24113bf5497bbd447	zhanglingfeng	2026-11-12 20:23:18 +0800	docs(注释): b396 回填（收口 83.0 / 墙钟 164.3 / S5 58.0）与主报 0.30h
+23712245e45e0bd939503e1665c8364280779b36	zhanglingfeng	2026-11-12 00:02:57 +0800	注释清水 b336：4 文件 1→1 改写 (+33/−33)
+249ca83742bf8ee362dabdeaeb05a11ffc76295b	zhanglingfeng	2026-11-11 17:28:25 +0800	注释清水 b324：4 文件 1→1 改写 (+42/−42)
+24b7a490b93ce08677125492b0f8a32fb3cfa017	zhanglingfeng	2026-11-12 17:15:07 +0800	docs(注释): b386 收口（20 行/10 文件，判据类 0）+ 台账
+260204360ac84003a7663375750557598823f3ea	zhanglingfeng	2026-11-11 14:08:16 +0800	docs(注释): 白名单更新（317 行，head=8f0c3b28）
+2650dd7a2245b78312822536c7634eb7de912d22	zhanglingfeng	2026-11-10 14:50:39 +0800	chore(注释工具): 判据修正同步 + 改写门禁 + 差集工具与改写计划 (+490/−4)
+26a74c66f63965dfa2b6565ea113e6795376e758	zhanglingfeng	2026-11-03 22:39:58 +0800	docs(注释): L1-A4 目标队列与 MCP
+26a9beac03e5bb0c9390efa30cb10a337b43eb41	zhanglingfeng	2026-11-10 17:16:20 +0800	docs(注释): 回填 v5/v6 归档提交号 (+2/−2)
+26b44ecead9f0e600dd513c9c6e6091210fdc143	zhanglingfeng	2026-11-12 13:22:35 +0800	docs(注释): 批数收敛为 65 + 收尾口径写死 + 6,926 待复核 + D-004 两个 pending 分标
+26d9cd654e7530cf5fb7f2a0f2677732222b1d76	zhanglingfeng	2026-11-10 12:51:06 +0800	docs(注释): 新建 index.ts 批次台账（逐批 Δ 核对 + 归属分布 + 分段表）
+271887b4fe9c1eed0de8d0a5f67f437120ffa191	zhanglingfeng	2026-11-11 02:45:49 +0800	chore(注释): precheck 工具自落 t-record/t-verify，返修用 record_runs 显性化
+27e46c345667bd18258841f4e29eb00ee7a4587e	zhanglingfeng	2026-11-10 11:54:41 +0800	注释(desktop): autoUpdater 全文件收口 1,168/1,168（+1,078/−0）
+2825f2271b50a14ed729bcf9a6aeb27dc263fec6	zhanglingfeng	2026-11-12 14:16:54 +0800	注释清水 b374：10 文件 1→1 改写 (+30/−30)
+2896fd1e4cf98d6219fb026c4c1d206697dcb4fc	zhanglingfeng	2026-11-10 18:15:29 +0800	b246 改写 (+10/−10)
+2899378fc628f15e54592728b1a531efb387c73c	zhanglingfeng	2026-11-12 16:51:43 +0800	docs(注释): NEVER-CLEAR 状态列刷新到 b384（CLEARED 115 / ACTIVE 1405）
+28afddda42f974a380fb52ccca64dabf77df48e9	zhanglingfeng	2026-11-11 02:15:28 +0800	docs(注释): b268 排期改工艺分段 + precheck-assert 预检断言
+28b0c9f358b9a4b8f385e1ce6abebbb074039904	zhanglingfeng	2026-11-12 00:08:14 +0800	docs(注释): b337 收口（台账 + 白名单 469 行 + INDEX）
+2918f33a608cb04ce713f4005682faff77969b0b	zhanglingfeng	2026-11-12 12:48:53 +0800	注释清水 b366：6 文件 1→1 改写 (+30/−30)
+2a85d70bb4011bf2d19bb8254d555f001e40bbb2	zhanglingfeng	2026-11-11 15:41:43 +0800	docs(注释): 刷新 OWN-COMMITS 白名单至 d07b89fa（360 行）
+2aa22a6f46af526097589c132d571b3636c80d4c	zhanglingfeng	2026-11-12 12:22:01 +0800	docs(注释): 对外成对报两个增量率；时长暂缓待 b365；D-003 补区别/正负控/注释放大器
+2ad48521d7fe6b7e40b8801681a8c275a9a1d723	zhanglingfeng	2026-11-10 12:26:21 +0800	注释(services): bigmodelProviderAdapter 全文件收口 162/162（+180/-0）
+2bb551a787e7f23d7dc8d1f1959993c43ddae9ca	zhanglingfeng	2026-11-12 19:52:20 +0800	docs(注释): b394 方法论回标——工具往返改 TOOL_TRIP 扣减、S5 单列、controllable 阈值换实测标尺、两个文件数定名
+2bdd2e41062fa3b3f086a833353a65ec7ceca152	zhanglingfeng	2026-11-11 14:00:29 +0800	注释清水 b292：7 文件 1→1 改写 (+98/−98)
+2c15d498e9b923afd3d7ec146cb0c1a63ec443f1	zhanglingfeng	2026-11-12 14:08:17 +0800	docs(注释): 登记 b373 邻接自清 model.ts:131（auto-out-of-pool）
+2c5b95f5a89a4f67b3b95b2fdab9731921bd07dc	zhanglingfeng	2026-11-11 17:41:53 +0800	docs(注释): b327 收口（台账 + 白名单 429 行 + INDEX）
+2dad764a9c473fa82694932d73d50841f9902af9	zhanglingfeng	2026-11-12 11:12:56 +0800	docs(注释): b353 收口（6 文件 35 行，方案①首跑）+ INDEX 同步
+2dd8d70cd2c70912ee8047973be6701b1aa12d78	zhanglingfeng	2026-11-10 22:15:33 +0800	docs(注释): b265 口径补充（s/行 中位数排期/uncovered 边界/收口三断言）
+2de38016995dcabe9bf9dd490c07c98152f562ca	zhanglingfeng	2026-11-11 16:44:02 +0800	注释清水 b317：4 文件 1→1 改写 (+44/−44)
+2e6fc09bd05fea5d27eefe0b461cc66f9a4474ca	zhanglingfeng	2026-11-10 13:03:58 +0800	注释(desktop): index.ts b13 — 退出标志、窗口映射表、cron 转发与遥测核心装配（+57 行）
+2e750056e5f391a86e2d7c13020b9c528d9125d5	zhanglingfeng	2026-11-12 17:15:41 +0800	docs(注释): b386 回填（墙钟 152.0s/收口 54.0s）+ 主报 1.03h + 状态列刷新
+2e7799330ff6b11f7d773633df1ec9358ce62812	zhanglingfeng	2026-11-10 20:24:15 +0800	b263 改写 (+100/−100)
+2fc2ca618af52e76940ebf3d270e841ae8b22e1a	zhanglingfeng	2026-11-11 11:24:53 +0800	fix(注释工具): zc-gate 补导出 isNestedComment（zc-commit v13 导入缺失）
+306f216669bf1c4b59525091441931afee433515	zhanglingfeng	2026-11-11 14:16:00 +0800	docs(注释): b295 台账（97 行全池内 / 首轮 8 条 5W+3L / PARTIAL 1，白名单 322 行）
+30a9d3176afca74c22d6e6337b8fa4efa51d68ce	zhanglingfeng	2026-11-12 11:59:19 +0800	docs(注释): 撤销 2.5h 下界、total 公式复核成立、L 扩词方向写明（区分被驳回）
+31062e28c81ff0446c621077df2065dc83f53b29	zhanglingfeng	2026-11-12 10:27:16 +0800	docs(注释): A 段按 ≥33 重算（正常批 n=0，达成 0/13）+ 33 为目标
+329f2256beb469d2ba4468005dadd0f4619fd6e7	zhanglingfeng	2026-11-10 12:19:37 +0800	docs(注释): 补 protocol 批次记录，一档待做扣到 187 / 23,085 / 19,649
+32a39922cbe6c887d5f618d6bcfaa950af0b0e1b	zhanglingfeng	2026-11-12 17:27:06 +0800	docs(注释): b387 回填（墙钟 165.0s/收口 65.0s）+ 主报 0.99h + 状态列 135/1385
+32eb42afb9f24c922e6731178c06e102f371ca47	zhanglingfeng	2026-11-11 14:20:59 +0800	docs(注释): b296 台账（91 行全池内 / 首轮 10 条 8W+1L+1POEM / 无自清，白名单 325 行）
+32fd8d4b9749fec85707f42cfa885423435c988c	zhanglingfeng	2026-11-11 15:13:34 +0800	docs(注释): b306 台账（36 行全池内 / 首轮 0 命中 / 无自清，白名单 352 行；runner 失败闭合 + 四组负例）
+32fe10028043a79882945fefa234a0a068a976ff	zhanglingfeng	2026-11-03 23:38:10 +0800	fix(注释): 修复注释插入引入的语法错误与重复代码块
+333fd0553682d2e126e72d7ed15f970361d948e4	zhanglingfeng	2026-11-11 17:19:47 +0800	docs(注释): 回填 b322 批墙钟实测（363s / 8.64 s/行）
+33684c039d020ddd53722ff7dd0d86d6d3b22bf8	zhanglingfeng	2026-11-10 13:27:31 +0800	docs(注释): localMediaPreviewProtocol.ts 收口台账与 §8 扣账（A 组 42 文件 / 4,977 未覆盖）
+33e4381e1987e47fe3c46da604e0163c08a387db	zhanglingfeng	2026-11-10 01:38:23 +0800	docs(注释): B228 A1 命令派发单元覆盖（逻辑区 34.0%）
+34a4c40dee2094ff3f092fee78ded57b5a08ba2b	zhanglingfeng	2026-11-11 04:33:34 +0800	docs(注释): 门禁格式负控 + 池外 3,284 行欠账量化（ACCT 只对池内成立）
+34c5d7cea857f6e40d26868e2a4a1e26ae3a4880	zhanglingfeng	2026-11-11 04:59:54 +0800	chore(注释): 预检行级漂移采样 + plan 缺失硬失败（b282 工具前置）
+34d98a2e622983cd9034188f961dc807f5aad399	zhanglingfeng	2026-11-11 16:27:19 +0800	注释清水 b314：3 文件 1→1 改写 (+33/−33)
+352ad021fd75baa55835c5574a3dc6780e44fb20	zhanglingfeng	2026-11-11 15:24:39 +0800	注释清水 b308：3 文件 1→1 改写 (+36/−36)
+3540653949d41f42600ac6a1e0243bfa8bf58ba7	zhanglingfeng	2026-11-12 11:15:27 +0800	docs(注释): 收口目标改回 60s（floor 45）+ docs-only 判据 + 双计数规则 + b353 −5 订正
+3567cd7712a20d7f07e6c0c7362a48709f5705f1	zhanglingfeng	2026-11-10 18:43:21 +0800	b252 B5 去双前缀 (+65/−65) (+65/−65)
+35877143d16c2cd7739e9f0e4e985b2aa57326c5	zhanglingfeng	2026-11-11 15:18:33 +0800	docs(注释): b307 台账（36 行全池内 / 首轮 2 hits 返修 / 池外自清 1 行，白名单 354 行）
+35f676c6d899a1607a55df4741fd06028eba90bf	zhanglingfeng	2026-11-10 13:35:18 +0800	注释(desktop): desktopWebRemoteControlIpc.ts b1 — 远控启动操作与四通道接线（+63 行）
+3623176e7069bca13f40b1bd59914cb7db79c8f1	zhanglingfeng	2026-11-12 17:00:52 +0800	注释清水 b385：10 文件 20 行 1→1 改写 (+20/−20)
+36b9ef969038a09a83f3fba9b17dc54f9eca39ff	zhanglingfeng	2026-11-11 16:23:55 +0800	docs(注释): b313 收口（台账 + 自清分流 + 白名单 378 行 + INDEX）
+36d419b9a3147b0b6afffd5359a445bdb012bb2c	zhanglingfeng	2026-11-11 17:02:18 +0800	docs(注释): b320 插点普查：自足化候选 47 行（INDEX §12.5）
+36dd76a3fb54ae68c4190807ff2a358cb2f2d7b6	zhanglingfeng	2026-11-11 02:09:50 +0800	docs(注释): b268 改写 PLAN#2 五文件注释 (+100/−100)
+3702fcba8cbfca99dd32ee3a1d75898f70d8ae62	zhanglingfeng	2026-11-12 10:25:41 +0800	docs(注释): 回填 b348 批墙钟 162s + §5.3 闸/规范分工
+378ce9fe27c98f823c49881c1856c88a62a5bcb9	zhanglingfeng	2026-11-12 00:45:27 +0800	docs(注释): 写死尾部批规则与计时规模效应标注（b345 起）
+37956299fee0a05f308bf51e4a6683cba16513a5	zhanglingfeng	2026-11-10 12:30:05 +0800	注释(services): oauthCredentialRepo b5 — 覆盖 214/229（93.4%），头像归一与构造区 20 单元
+37ef235fa60914d7fbdad962dd090a6cb77cd0ca	zhanglingfeng	2026-11-11 17:22:32 +0800	注释清水 b323：4 文件 1→1 改写 (+40/−40)
+37f8b297bf1074eaa535200a32ff55c67736a7ea	zhanglingfeng	2026-11-11 16:11:49 +0800	注释清水 b312：4 文件 1→1 改写 (+36/−36)
+384ce0d3c35e138ac20c85d1e5a16b20ade6293b	zhanglingfeng	2026-11-11 02:30:15 +0800	docs(注释): b270 注释清水 100 行（5 文件） (+100/−100)
+385da840c4c98a7de836ce8808d2b1bf606ab5e7	zhanglingfeng	2026-11-11 17:54:41 +0800	注释清水 b331：4 文件 1→1 改写 (+36/−36)
+386809924ff7689056b30228e102b03bd8395d28	zhanglingfeng	2026-11-12 11:20:35 +0800	docs(注释): 回填 b354 计时（289s / 收口 82s）+ 自清原因补实际依据
+38af29decbe37e0ee41aad3ee084ef03fda8d01a	zhanglingfeng	2026-11-12 00:08:29 +0800	docs(注释): 回填 b337 批墙钟实测（179s / 5.59 s/行）
+39ef1c88b1ee540e648ad1081c515f7af6676778	zhanglingfeng	2026-11-10 11:35:41 +0800	docs(注释): 对平一档 194/193/191 与 28,344/25,723/24,983 三处账
+39f948921e38bbdf9a7455a05de64cf2252757fa	zhanglingfeng	2026-11-12 01:03:43 +0800	docs(注释): 白名单（b347 开批前，512 行）
+3a6248208ff26be39ba0ec397aca8e7fa06312b4	zhanglingfeng	2026-11-10 12:39:49 +0800	注释(services): oauth.ts 全文件收口 16/16（+1/-0）
+3a9c4fac4f3dcf9016383ab5cc1d25f9e73c9a6e	zhanglingfeng	2026-11-10 12:46:15 +0800	注释(desktop): index.ts b2 — 覆盖 1234/1355（79 单元），IPC 注册表与语言广播段
+3acc5b7671df41daa90d71321d9e02de090a7462	zhanglingfeng	2026-11-11 23:33:58 +0800	docs(注释): 回填 b333 批墙钟实测（258s / 7.17 s/行）
+3b34ae3adf0d72328be160fd2c54118234e7d707	zhanglingfeng	2026-11-12 20:06:30 +0800	docs(注释): b395 前定稿——S5 计入主报 0.72h、中位标构造值、恒等式降级为定义、阈值冻结 181.5
+3ba55e9a513f04945ab50c7aa70a77c10359984c	zhanglingfeng	2026-11-11 23:31:44 +0800	注释清水 b333：4 文件 1→1 改写 (+36/−36)
+3c12ae20830903a9aa6c5c99b9b46ad6ce90a201	zhanglingfeng	2026-11-10 13:00:40 +0800	docs(注释): index.ts b9 台账（+70 行，UNCOVERED 475→405）
+3d7af5be9bb042c1c53f1953a228d4dcf676060c	zhanglingfeng	2026-11-11 11:04:24 +0800	docs(注释): b285 台账（70 行 / 6 文件，64 行入池，1 W 返修）
+3d84a485abda6cdc27fd82ff13f079718ae9e456	zhanglingfeng	2026-11-10 12:50:33 +0800	注释(desktop): index.ts b4 — 四条遥测通道配置与强制升级/ready 段（+52 行）
+3d9a520d1dd6e6b655a4bcb6fc29cb508d614cbd	zhanglingfeng	2026-11-10 10:39:20 +0800	docs(注释): B228 剩余逻辑单元分层抽样，按 61.3% 定格
+3ddc34f205a92f72448624010e6a7ceab5147857	zhanglingfeng	2026-11-10 17:42:03 +0800	docs(注释): b241 台账、每文件阈值、表头假设缺陷、版本陷阱 (+242/−1)
+3dddf12055738dffdb6920d34833eb62c1079bc1	zhanglingfeng	2026-11-10 18:35:30 +0800	docs(注释): b250 B3 台账 + capacity 口径对齐 (+234/−2)
+3e25528c48d0b180450eb2154876c93680fa92e5	zhanglingfeng	2026-11-10 12:47:19 +0800	docs(注释): 补 §8.8 范围决策表（甲 18 回合 / 乙 53 回合），注明 C 组可能降级
+3e2eef86543035f212b044f4d771fb56328d0d69	zhanglingfeng	2026-11-11 16:48:56 +0800	注释清水 b318：4 文件 1→1 改写 (+44/−44)
+3e50b96c926c7e1055cd0d3fb64009fbb1d05162	zhanglingfeng	2026-11-11 14:57:19 +0800	注释清水 b303：3 文件 1→1 改写 (+36/−36)
+3e82f2b6819b1814e919db5486fc62f9527fb566	zhanglingfeng	2026-11-11 03:35:37 +0800	docs(注释): b275 台账（--scope 首用越界 0；total 546.0s / controllable 202.0s / 落笔段 172.0s / tail 3.6s，record_runs=2；池 857 文件 5,325 行；SELF-CLEAR n=1 out-of-pool）
+3ead6c6ab8c5d1bcea35996d86838c13552d638c	zhanglingfeng	2026-11-04 00:00:50 +0800	docs(注释): 收尾提交 cli、dynamic-workflow 等包纯注释增量
+3f2e1caef51ae995e2242e82b4a68c564a1f233e	zhanglingfeng	2026-11-10 18:11:35 +0800	b245 改写 (+9/−9)
+3f2f4a05a48c2a40c4db516d6a11b1ebbef8d34e	zhanglingfeng	2026-11-11 17:16:20 +0800	注释清水 b322：4 文件 1→1 改写 (+42/−42)
+3f38113b679be8ca581c41378d6f95328f910340	zhanglingfeng	2026-11-11 17:07:19 +0800	注释清水 b321：4 文件 1→1 改写 (+44/−44)
+3f5f1757d029ff4596f4d98a319ae8a537f0f9fd	zhanglingfeng	2026-11-11 14:52:22 +0800	注释清水 b302：3 文件 1→1 改写 (+36/−36)
+3fad6173d62575f9273d54e9ee8aacf01023276e	zhanglingfeng	2026-11-12 16:54:04 +0800	docs(注释): b385 口径修正（表外列恒等式 + 收口窗口同源 + 剩余形状旁注）
+4040ea1561dbbf0ebbe983ab936f6153b4f90670	zhanglingfeng	2026-11-12 00:22:15 +0800	docs(注释): 白名单（b341 开批前，483 行）
+4060a3b6bc5d655aa4ca0f98e832023669116eab	zhanglingfeng	2026-11-10 18:45:04 +0800	docs(注释): b252 B5 台账 + 时长改按文件成本 (+230/−1)
+4089bcc25d00ed5bef578397ccfcfcb09ce34e21	zhanglingfeng	2026-11-12 15:37:28 +0800	docs(注释): b378 回填（墙钟 156s，双参数预测 159s 误差 3s）+ 主报窗口 b376-b378 = 1.7-2.1h + 对账补 b378
+40dca0b42753627e454905bab24af464bd5e2908	zhanglingfeng	2026-11-10 20:38:02 +0800	b263 台账补：白名单误抽上游 sha 的修法与写法约束
+41384f924624c35a360466ab6ed43c6719b5a3f5	zhanglingfeng	2026-11-11 02:57:13 +0800	docs(注释): b272 台账补台账提交 sha
+4139debac432231abd38475aca5f162d9f931ba3	zhanglingfeng	2026-11-10 13:19:55 +0800	docs(注释): desktopHostProcess.ts 收口台账与 §8 扣账（滚动分母 71.6→53.4）
+41d0e159c6fbdb8ab770e6420262b0484ef2d4e9	zhanglingfeng	2026-11-12 16:24:07 +0800	docs(注释): b382 收口（30 行/10 文件，判据类 2、相邻自清 2、集合穿过 1,520 基线）+ 台账 + 白名单 672 行
+426ccbd98f59ef0369f2bdc0012d905b94315a6a	zhanglingfeng	2026-11-12 00:48:56 +0800	docs(注释): 碎尾批绝对下限 15 + 八批三段实测与 1/N 回归结论
+4291eea28737b1273de1aaa969c5993223cf57eb	zhanglingfeng	2026-11-12 14:56:44 +0800	注释清水 b377：10 文件 1→1 改写 (+30/−30)
+43e5e313b1ce53d88bb9e3e0cce9ae3aed52c57a	zhanglingfeng	2026-11-11 16:57:07 +0800	注释清水 b319：4 文件 1→1 改写 (+44/−44)
+43feb7caae21c64e3d63a7cbbd49ddeff4547aed	zhanglingfeng	2026-11-11 15:56:36 +0800	注释清水 b310：4 文件 1→1 改写 (+36/−36)
+44103d621275079f1fe5bb08646d57d40505b1d8	zhanglingfeng	2026-11-12 20:56:22 +0800	docs(注释): b399 回填（收口 95.0 / 墙钟 262.0 / S5 62.0）与主报 0.08h
+445975db102fc1fe781d1c1d24dc082631e99b87	zhanglingfeng	2026-11-12 16:24:32 +0800	docs(注释): b382 回填（墙钟 139s/收口 54s）+ 主报 1.1-1.6h + 可清公式作废（1,520 基线已陈旧）+ 剩余 28 批
+44c27d82b8d97db0b5ad5a7a2892a5f5c2b110a3	zhanglingfeng	2026-11-12 14:10:24 +0800	docs(注释): 滚动中位估计器 + 主报维持 2.6-4.5h + 清零二分 + 反引号分隔符规则入 precheck
+460aa7015935a15218c8a96f08b0b3a4893e4958	zhanglingfeng	2026-11-12 20:03:09 +0800	docs(注释): b394 回填计时（收口 98.0 / 墙钟 218.8 / S5 57.0）与主报 0.62h
+463294e6c24d408c967fc29651754c82c62f7648	zhanglingfeng	2026-11-12 17:36:48 +0800	docs(注释): b388 回填（墙钟 310.0s/收口 155.0s，S0–S4 逐段）
+4680761a591456a03b58ede6102324a93f0b6462	zhanglingfeng	2026-11-10 01:29:18 +0800	docs(注释): B228 browserGuestManager 片 6-14 纯注释增量
+46bdb449329536c2b74f3a5a606999e2f1d3498e	zhanglingfeng	2026-11-12 12:23:30 +0800	注释清水 b363：6 文件 1→1 改写 (+19/−19)
+4702929ec82d0044e56385f43cbbb730dafc5f76	zhanglingfeng	2026-11-10 13:25:09 +0800	注释(desktop): localMediaPreviewProtocol.ts b1 — 授权表与本地媒体协议注册（+94 行）
+473a97b5112e3295168728fe8c1cfc9e5f237555	zhanglingfeng	2026-11-10 12:06:11 +0800	docs(注释): 补 ssh-backend 批次记录，一档待做扣到 189 / 23,464 / 19,970
+477f5d6a4c1fd47554274820ecff94f95d6a25ef	zhanglingfeng	2026-11-10 17:33:26 +0800	b240 改写 6 文件的水句 (+39/−45)
+47e0b8ea74149a2bcade76c9aa4c6980db7a1355	zhanglingfeng	2026-11-10 13:11:18 +0800	docs(注释): index.ts 收口补原始输出；删恒真 Δ 列；成本改最近 5 批滚动平均
+4833389dc8c59896f65bd860bd363db882a4a2d5	zhanglingfeng	2026-11-11 17:30:52 +0800	docs(注释): 白名单（b325 开批前，419 行）
+4833f13922cd1928d4130e45f23e290184f60503	zhanglingfeng	2026-11-12 10:24:30 +0800	注释清水 b348：4 文件 1→1 改写 (+28/−28)
+48d73ec83c0380fede233cd0e7e6ac34ba05d604	zhanglingfeng	2026-11-11 14:48:12 +0800	docs(注释): b301 台账（100 行全池内 / 首轮 2 条 2W / 无自清，白名单 340 行）
+49311a0ae27bfa88c86924aa1343b13db141f917	zhanglingfeng	2026-11-11 03:43:22 +0800	docs(注释): push-plan 备份预案（分支 annot/zcode-deep，范围 origin/main..HEAD 257 提交，对象 7,840 / 112.4 MB，dry-run 403 未推送）+ 分叉快照复核 ahead 257
+499c9bd69ec3939567a10b370d78a4281a874683	zhanglingfeng	2026-11-11 01:59:01 +0800	docs(注释): b267 改写 PLAN#2 五文件注释 (+100/−100)
+49b07c1b7d95093851d9867f3395742638757bb0	zhanglingfeng	2026-11-10 18:59:28 +0800	docs(注释): b255 §1 增量来源拆分 + 注释增量 top5 (+25/−4)
+49b24c521e49ff05f554e544617c27ee67717ed9	zhanglingfeng	2026-11-12 12:14:17 +0800	docs(注释): b361 收口（6 文件 25 行，fix=2 触发语义抽检）+ INDEX 同步
+49bd5b880327f80f7c83027bcc6c6c63afb6258b	zhanglingfeng	2026-11-12 00:17:28 +0800	docs(注释): 回填 b339 批墙钟实测（196s / 6.13 s/行）
+4a8bc51f584b9f9baebddf1c8c709f55488ac2b6	zhanglingfeng	2026-11-10 11:05:15 +0800	docs(注释): 分档表按分母修正重算，补一档 A/B 优先序与取小者成本 9,247
+4af7b282fd369d77868af064e1f7bd9a60ec0d0a	zhanglingfeng	2026-11-11 17:45:34 +0800	docs(注释): 白名单（b329 开批前，435 行）
+4afb642f3b9463ea014d2102ddcb83e793c3534b	zhanglingfeng	2026-11-10 13:04:39 +0800	注释(desktop): index.ts b14 — browser 命令执行包装、内存诊断注册、运行时环境准备（+60 行）
+4b2f5e26d329cb3b7d7e94c0f9ea3a1dcac6a473	zhanglingfeng	2026-11-11 17:34:00 +0800	docs(注释): b325 收口（台账 + 首次自动自清登记 + 白名单 421 行 + INDEX）
+4b413cb39cff67af1d4252b30243e58a1740e740	zhanglingfeng	2026-11-12 14:18:20 +0800	docs(注释): b374 收口 61s 分段闭合 + 滚动中位窗口移到 b372-b374 + 清零二分
+4d4fc015f0705108d6b3e0726a93b4b1d771e81c	zhanglingfeng	2026-11-12 14:26:46 +0800	注释清水 b375：10 文件 1→1 改写 (+30/−30)
+4d7d84ed6720bddbbcf0e89bd396edab78406228	zhanglingfeng	2026-11-11 13:56:56 +0800	注释清水 b291：7 文件 1→1 改写 (+97/−97)
+4db34c8647c253d0de092beea487b7f748b5ea17	zhanglingfeng	2026-11-12 10:56:28 +0800	注释清水 b351：6 文件 1→1 改写 (+36/−36)
+4f5bf021809acf012bebe7f8ebcce294aef25fbe	zhanglingfeng	2026-11-11 17:44:00 +0800	注释清水 b328：4 文件 1→1 改写 (+40/−40)
+4fb6b6f8c44ce57530dc6c61768041acb31594a7	zhanglingfeng	2026-11-11 15:25:56 +0800	docs(注释): b308 台账（36 行全池内 / 首轮 2 hits 返修 / POOL-DIFF 首跑，白名单 357 行）
+4ffdad0495fad46b9e8b7c4ad2d1abba0c1c6146	zhanglingfeng	2026-11-11 16:47:41 +0800	docs(注释): 白名单（b318 开批前）
+5031948e487dc2e0140f89b1b67600b859c93b56	zhanglingfeng	2026-11-12 00:32:42 +0800	注释清水 b342：4 文件 1→1 改写 (+28/−28)
+50dce5a8cb938da1b003c353fd88a1719eaa3e67	zhanglingfeng	2026-11-12 12:24:11 +0800	docs(注释): b363 收口（6 文件 19 行，fix=2）+ INDEX 同步
+51b114113061c2125e580b30acdb230fd0487333	zhanglingfeng	2026-11-11 23:36:39 +0800	注释清水 b334：4 文件 1→1 改写 (+33/−33)
+522e851e0790e48192caffbcda3e9e6bd5fc214d	zhanglingfeng	2026-11-03 22:41:15 +0800	docs(注释): L2-B6 adapters
+53ac2daec9545b9dcf8e390a8efd1d4ad729da34	zhanglingfeng	2026-11-10 15:08:50 +0800	b230 改写 2 文件的水句 (+14/−53)
+54137387f7661678127706956267709bb74c08f0	zhanglingfeng	2026-11-12 00:54:31 +0800	注释清水 b345：4 文件 1→1 改写 (+23/−23)
+542eacbdf25f856955c040c2f4046f79756f0dc5	zhanglingfeng	2026-11-12 10:33:12 +0800	docs(注释): precheck 加 plan_lines_covered（计划行逐行覆盖）+ A 段离群标注
+54869a00abc9efba69491def8b3429b3f9f3ef61	zhanglingfeng	2026-11-10 12:55:33 +0800	docs(注释): index.ts 台账补 b6 行，记录 W 门禁前移与 17 行拦截
+54890d48dd364b98e607a7a8f3d6068be76bcd38	zhanglingfeng	2026-11-12 10:45:47 +0800	注释清水 b350：6 文件 1→1 改写 (+38/−38)
+54ed28c8d0c67fca61a86ec0744026b281d95678	zhanglingfeng	2026-11-12 13:12:41 +0800	docs(注释): b370 台账回填收口 49s / 批墙钟 152s
+54ee86128d92fd360a86f2f37229ecc74887d5e5	zhanglingfeng	2026-11-11 04:37:37 +0800	注释清水 b280：6 文件 1→1 改写 (+92/−92)
+54f51bad001c5a76202da1b4058b042b89e20081	zhanglingfeng	2026-11-03 22:40:35 +0800	docs(注释): L2-B3 handlers a-o
+551efd17ac88873425bf95cef840502ead58747e	zhanglingfeng	2026-11-11 16:51:38 +0800	docs(注释): 白名单（b319 开批前，396 行）
+5522d403f4f0d9ce1de1ee93b783654cc8a6e8f9	zhanglingfeng	2026-11-11 10:34:52 +0800	fix(注释): b283 缩进对齐原文（12 行，第 8 行门禁首跑）
+559694bbbd28b05cf32bed8f2ae6b89bf18e5d68	zhanglingfeng	2026-11-12 19:06:43 +0800	docs(注释): b392 补三条归因（块尾 */ 同句元判据）、闸只出原始量、一页纸只留 0.66h
+55f48e6d02206c64308d72cc6087222d58f48a8a	zhanglingfeng	2026-11-04 00:02:17 +0800	docs(注释): 收尾提交 插件宿主与 dev-docs 纯注释增量
+55fedda3955587f3504c90b3dc4ae174a7875ab6	zhanglingfeng	2026-11-03 22:40:14 +0800	docs(注释): L1-B1 其余 runtime 与 hooks
+5659a31649f3b6dc5d6adb37d6afde4a230f8f95	zhanglingfeng	2026-11-11 12:02:23 +0800	docs(注释): 语义抽检 01 补定向检索（90 候选 / 3 处已修）与口径约束
+5662e20fce5ad440d60d02d53e0d8cd1f98e4cdd	zhanglingfeng	2026-11-11 02:01:55 +0800	docs(注释): b267 台账 + 预检削减返工 + 五批中位数 2.17
+56b767fd58e88bf3f66d84839c13091c05a7bda0	zhanglingfeng	2026-11-10 12:26:25 +0800	docs(注释): 补 bigmodelProviderAdapter 批次记录，一档待做扣到 186 / 22,923 / 19,521
+56d56fb190c1c583eb1fce15fc8b0e34ecfa00f5	zhanglingfeng	2026-11-12 10:59:26 +0800	docs(注释): b351 收口（6 文件 36 行）+ 白名单 542 行 + INDEX 同步
+56d649e89e4ed77abb1bbda7ce61d9a84d62551d	zhanglingfeng	2026-11-10 19:22:27 +0800	docs(注释): b258 B10 台账 + weak-guard 断言 (+316)
+576c78281ff02cd09c6faddce6260025ae0aa48c	zhanglingfeng	2026-11-12 16:51:28 +0800	docs(注释): b384 回填（墙钟 299.3s/收口 166.3s）+ 主报 1.14h/0.97h + 剩余 26 批
+578446621e88da23647b13ba8b0e84ba91846622	zhanglingfeng	2026-11-12 14:00:12 +0800	docs(注释): 时长三档重算（主报 2.6-4.5h）+ 收口分解闭合 + 锚点/巧合纪律进 §5.3
+5847c3e692a26103794fa560179b1261648f320d	zhanglingfeng	2026-11-11 17:49:00 +0800	docs(注释): 回填 b329 批墙钟实测（190s / 4.75 s/行）
+586cf45c16c36d6dcb9d8e9b5e39cb6ff38bf9d8	zhanglingfeng	2026-11-11 14:34:07 +0800	docs(注释): b299 台账（91 行全池内 / 首轮 4 条 3W+1L / 无自清，白名单 334 行）
+59058d3b8d3776ecab4dece7e9e65afe2234a728	zhanglingfeng	2026-11-11 13:58:16 +0800	docs(注释): 白名单更新（311 行，head=7d9ad315）
+596d2806ed823cdca5f14850660504ac046dbf4b	zhanglingfeng	2026-11-10 12:29:39 +0800	注释(services): oauthCredentialRepo b4 — 覆盖 194/229（84.7%），active 系列与归属读写 19 单元
+59dcc46d7b47ef118a78cdc6544b285da077cd28	zhanglingfeng	2026-11-10 15:19:45 +0800	b234 改写 2 文件的水句 (+14/−45)
+5a2c7e851df9efbcd25368a59fe7610e6a9ebe97	zhanglingfeng	2026-11-12 20:14:08 +0800	docs(注释): b395 回填（收口 79.3 / 墙钟 188.5 / S5 45.7）与主报 0.40h
+5a7363a81a58cf0f6b9a81c3ba5c7b1893c20bc1	zhanglingfeng	2026-11-11 11:15:02 +0800	docs(注释): b285 池外对账（3284/3282/3272 三段）+ 计时口径切换与 JSDoc 噪声登记
+5a94ed81446378bf8d856134a81e1a58d5aca387	zhanglingfeng	2026-11-11 14:55:50 +0800	docs(注释): b302 台账（36 行全池内 / 首轮 2 条 2L / 无自清，白名单 344 行）
+5bde632bf01ad0f629408fc6836ef8a84505f688	zhanglingfeng	2026-11-12 20:20:56 +0800	注释清水 b396：20 文件 20 行 1→1 改写（cap20 第 6 批，阈值 173.25） (+20/−20)
+5bf59190a209046799bc295f6c13a832a1c9b7e6	zhanglingfeng	2026-11-10 11:54:47 +0800	docs(注释): 补 autoUpdater 批次记录（预登记、对账、门禁与工具缺陷）
+5c2452e653b04b37fa2a3a240d015d390d867623	zhanglingfeng	2026-11-10 13:03:07 +0800	注释(desktop): index.ts b12 — 遥测上下文、窗口焦点事件、远程会话与灰度 rollout 装配（+64 行）
+5c28b3bdaf04c72a6452ac79f140fb0e227054dd	zhanglingfeng	2026-11-12 16:45:33 +0800	docs(注释): b384 口径修正（allowed 现场读表 + 主报改模型 1.19h + 可清退役 + CLEARED 状态列）
+5d7565cd6c8e57dd0a35ac32eb2e6c91f8027efd	zhanglingfeng	2026-11-11 11:27:34 +0800	docs(注释): b286 补首轮命中率与剩余工时口径，跨批数字加 post-bXXX 标签纪律
+5dac0cb4a2d9ee62b5dfb715e083ac817416db00	zhanglingfeng	2026-11-12 11:27:58 +0800	注释清水 b355：6 文件 1→1 改写 (+34/−34)
+5e0a9514822f6676c8786214b1a98420cdda90a4	zhanglingfeng	2026-11-10 12:32:05 +0800	docs(注释): 补 oauthCredentialRepo 批次记录，一档待做扣到 185 / 22,694 / 19,413
+5e1cbc0bb65267cff866ed8b04548f3a265779d6	zhanglingfeng	2026-11-10 12:38:16 +0800	docs(注释): 成本改累计实测比 1.016 行/单元，补 §8.7 剩余约 60 回合
+5e81d2f5ff27b6103b8b8aba88b86edba47108cf	zhanglingfeng	2026-11-10 19:08:00 +0800	b256 B8 去双前缀 (+68/−68)
+5e9f43553228c33ec5dc1f9a81024d2b65f06dc1	zhanglingfeng	2026-11-12 16:17:35 +0800	docs(注释): 主报剔除 40s 事故改 1.4-1.6h + 放行唯一依据全仓扫描（附 b376-b380 复核）+ 收口封单入口 closeout.mjs + 集合到底标注
+5fdf397f4c7daa8fb666d89e04345d89f861c617	zhanglingfeng	2026-11-12 18:17:17 +0800	docs(注释): b390 收口（20 行/10 文件，判据类 0 / lint 8）+ 台账 + CLOSING/INDEX 填数
+60476845947c8f4bc22b216446c5e8a30ac0eb18	zhanglingfeng	2026-11-11 23:38:20 +0800	docs(注释): 白名单（b335 开批前，459 行）
+604a3480490e3a43e7d3b39553f9d924e2bb3090	zhanglingfeng	2026-11-12 17:03:02 +0800	docs(注释): b385 回填（墙钟 176.0s/收口 84.0s）+ 主报 1.09h/0.93h + 状态列刷新
+608a8b5b4ce2fbdfebed37ae963301c63ff16705	zhanglingfeng	2026-11-10 20:08:46 +0800	b262 台账：补 b262 后的行数与工时（925 文件 / 6,624 行 / 4.64h）
+60a00f8bcc403930cd48e9e3fe8700a07e5f69d6	zhanglingfeng	2026-11-12 18:03:41 +0800	docs(注释): b389 回填计时（S3a 64.0/S3b 962.0 标环境异常/S4 12.0）
+611b24a53e7540119cbbc3cdc3ea6c8e30c8a6ed	zhanglingfeng	2026-11-10 14:40:58 +0800	chore(注释工具): 门禁基线参数 + 审计范围不变量 + 回填脚本落库 (+388/−7)
+6179288f4e20d7ca686887ab2138aa9a8485f5a5	zhanglingfeng	2026-11-10 17:28:31 +0800	docs(注释): b239 台账、产能口径定稿与 INDEX 对照行 (+154)
+6221f71c6eee5d9a3406b4fe231b45bf31f5d8f1	zhanglingfeng	2026-11-10 17:34:39 +0800	docs(注释): b240 合并批台账、估算断言件、白名单补录 (+311/−5)
+622952e80b282aa1124eb1adc896c430eb9b4ca6	zhanglingfeng	2026-11-11 03:40:06 +0800	注释清水 b276：6 文件 1→1 改写 (+100/−100)
+623674607dfa05e2b6845667660811cae167fab6	zhanglingfeng	2026-11-11 15:52:33 +0800	docs(注释): b309 收口（台账 + 登记表 + 白名单 364 行 + INDEX） (+162/−8)
+6247364f034629dc38f48f07d241233dcf330e33	zhanglingfeng	2026-11-11 16:30:04 +0800	docs(注释): 白名单（b315 开批前）
+6269b7654240611eb95ff8642d42aef4d1b2fe7c	zhanglingfeng	2026-11-10 18:17:57 +0800	b247 改写 (+5/−5)
+63c33d52afc990ebcdb801f0f3b79186499892a9	zhanglingfeng	2026-11-12 12:45:17 +0800	chore(注释): 白名单重生成 605 行（含 e3327c8f 词表合并提交）
+63cea69d9e3148268d5ce6a1975f79ca711f37db	zhanglingfeng	2026-11-10 12:58:11 +0800	注释(desktop): index.ts b7 — 更新状态窗口创建与布局段（+92 行）
+63e7cc93c20d9fdc696cdb93821052a206b65435	zhanglingfeng	2026-11-10 13:13:32 +0800	注释(desktop): desktopHostProcess.ts b2 — disposeHostProcess 优雅退出与 3.5s 强杀（+20 行）
+63f081191b541e0a20319ffa3bbea518da690a63	zhanglingfeng	2026-11-10 15:33:18 +0800	docs(注释): 尺子归档与版本索引、b235 sha1 口径更正 (+520)
+6464ceb161a4689be42a9e9cb48efb7bc82a2307	zhanglingfeng	2026-11-11 14:50:05 +0800	docs(注释): 白名单更新（342 行，head=HEAD）
+6471af7216be3f55654a896e8cf3b5ca6165a32a	zhanglingfeng	2026-11-12 18:23:28 +0800	docs(注释): b391 前置：预测区间改实测比值 0.94-1.53h、锚点显式化、新增手算复算 §5.4
+64929f1780c5b02ae9beb63b83d4f18578763b2a	zhanglingfeng	2026-11-12 00:07:13 +0800	注释清水 b337：4 文件 1→1 改写 (+32/−32)
+64b8d27727c780ddcbfa7096e3a4852bd1724aa6	zhanglingfeng	2026-11-10 12:14:45 +0800	注释(services): zaiProviderAdapter 全文件收口 226/226（+273/−0）
+6507ed1942d5551a82a5894c6c5870c29f612552	zhanglingfeng	2026-11-12 15:35:26 +0800	注释清水 b378：10 文件 10 行（全 1 行文件批） (+10/−10)
+6515ce5677592b03e1624672699cdf6c8110b67b	zhanglingfeng	2026-11-10 17:15:54 +0800	docs(注释): b237 台账、归属白名单 v6 归档、b236 中位数更正 (+799/−7)
+65421f418a8180d5ca36a2c99e94b5420de577b5	zhanglingfeng	2026-11-11 23:59:20 +0800	docs(注释): 白名单（b336 开批前，463 行）
+65d659a13b0835d8623ba23f754fb306f1b31e3c	zhanglingfeng	2026-11-10 13:05:37 +0800	注释(desktop): index.ts b15 — 启动装配层逐条补完（+90 行）
+6685faa516196cf28a0998e9569467b061ad45ac	zhanglingfeng	2026-11-12 00:17:19 +0800	docs(注释): b339 收口（台账 + 白名单 477 行 + INDEX）
+668ac8a6da083f67a484489fece69e3afb2a3915	zhanglingfeng	2026-11-12 13:09:05 +0800	docs(注释): b369 收口（6 文件 24 行，4 行补谓词）+ 文件数两列归位 (+24/−24)
+671f96bd0be00c10699e6de59629a2b73180eaa5	zhanglingfeng	2026-11-11 16:20:00 +0800	注释清水 b313：4 文件 1→1 改写 (+36/−36)
+67be296b13555f45139742c5058e07e11ef73957	zhanglingfeng	2026-11-10 13:41:41 +0800	注释(server): b135 补提交 — wslProxy / wsl-detect / tokenizer（+120 行，原批漏提交）
+682cf3282fb40a7a1c222cc712557c37bc9cfa3a	zhanglingfeng	2026-11-11 14:11:35 +0800	注释清水 b294：7 文件 1→1 改写 (+98/−98)
+685509c4179f24fc8bd1f77f1008023baef66f91	zhanglingfeng	2026-11-12 21:03:47 +0800	注释清水 b400：19 文件 19 行 1→1 改写（cap20 收官批，阈值 173.25） (+19/−19)
+694b6a16ce858da5cb69d7e1b4ecb0a859e20269	zhanglingfeng	2026-11-12 01:05:52 +0800	注释清水 b347：补修 conversation-share.ts:249（空泛提醒）
+6a0f8038e23067ec646962100ab7cc12c85c72fa	zhanglingfeng	2026-11-12 16:47:53 +0800	注释清水 b384：10 文件 20 行 1→1 改写 (+20/−20)
+6a8cc6c9478dbea186f253a55a0a87d2c66a1d0a	zhanglingfeng	2026-11-10 13:42:13 +0800	注释(desktop): windowsAumidIcon.ts 补脚本结构说明（+3 行，字符串内 38 单元登记为豁免）
+6abb2f652064ab4dde7d9a09d59314f5677ca956	zhanglingfeng	2026-11-10 18:34:25 +0800	b250 B3 去双前缀 (+62/−62)
+6b4104a66a27322c3c5b293871fb8a2af3d54c68	zhanglingfeng	2026-11-12 20:35:58 +0800	docs(注释): b397 白名单同步至回填提交
+6b765c30f93ea4bb39da779171979d1294a6d573	zhanglingfeng	2026-11-11 10:46:34 +0800	fix(注释): b282 缩进/行尾对齐原文（20 行，历史审计回溯）
+6d19b272a189dc180cc37816cdd025b50319136f	zhanglingfeng	2026-11-03 22:38:38 +0800	docs(注释): L1-A1 Turn 与模型主链路
+6e16d727147db34d8badef64caa322b3a31c46c0	zhanglingfeng	2026-11-11 16:01:09 +0800	docs(注释): 白名单（b311 开批前） (+5/−3)
+6ef90f153f82326cd02fbe648e1e00d1c7cc56d5	zhanglingfeng	2026-11-11 14:42:55 +0800	docs(注释): b300 台账（91 行全池内 / 首轮 6 条 5W+1L / 池外自清 1，白名单 337 行）
+6f49baa36035d9a5f572ecd4b269f67318db70f3	zhanglingfeng	2026-11-12 18:59:30 +0800	chore(注释): 同步 b392 后 OWN-COMMITS 白名单
+6f49bfa9dcc35f1e1d26099bf41b5e22b5ca30b1	zhanglingfeng	2026-11-12 18:51:10 +0800	注释清水 b392：20 文件 20 行 1→1 改写（cap20 试验第 2 批） (+20/−20)
+6f64795e9e5903c2982197bca09579c20d2445d9	zhanglingfeng	2026-11-11 16:31:59 +0800	注释清水 b315：3 文件 1→1 改写 (+33/−33)
+7055aaa97aa4c479a21400607439662cf1116dfd	zhanglingfeng	2026-11-12 01:01:48 +0800	docs(注释): 回填 b346 批墙钟实测（191s / 6.82 s/行）
+706f087ea64f3835facb012dd1070098a12da51e	zhanglingfeng	2026-11-11 16:14:06 +0800	docs(注释): b312 收口（台账 + 自清登记 + 白名单 375 行 + INDEX）
+7071355188e729a21aac23c2a84608b1548a5e3e	zhanglingfeng	2026-11-10 11:25:11 +0800	docs(注释): 一档改按实际证据分 A/B/C，对账 2,621 并补写作成本
+70be419debc0e9ef7b6c08c6684a50ae6d1421e1	zhanglingfeng	2026-11-12 16:00:40 +0800	注释清水 b380：10 文件 16 行（反向对照批 F=10/L=16） (+16/−16)
+714cb92126c1dca831f511e19176ac394c51ec64	zhanglingfeng	2026-11-10 22:23:42 +0800	docs(注释): b266 改写 PLAN#2 五文件注释 (+100/−100)
+7159441357bfffff86f9029386f6c6b00a7933b6	zhanglingfeng	2026-11-12 11:09:20 +0800	docs(注释): 收口重定价（试错拆解/目标 90s/台账模板）+ 新增 preflight.mjs
+717c407848a3c6d93fb5b8612e41807311012f87	zhanglingfeng	2026-11-12 13:02:21 +0800	chore(注释): 白名单重生成 614 行（含 8cb30cf7 b367 回填提交）
+71a5de45870a8ffb78fa486a0238c42e680b26eb	zhanglingfeng	2026-11-12 11:29:11 +0800	docs(注释): 回填 b355 计时（196s / 收口 60s）
+71b58952ade97cac948b7ef0affcd70e52f6e3f6	zhanglingfeng	2026-11-10 15:20:06 +0800	docs(注释): b234 三段计时、搬移不变量与 b229 登记表 judge 列 (+191/−54)
+7237098c5e41f9ca3d5bd77e8c70ba0fd2f5e7e8	zhanglingfeng	2026-11-10 18:00:35 +0800	docs(注释): b243 台账、v10 块注释计数洞、提交集合断言 (+1161/−5)
+7263c7477b753670e302bbe0f229773dece6edd0	zhanglingfeng	2026-11-12 14:29:08 +0800	docs(注释): b375 回填计时分段 + 主报按窗口法定为 1.2-1.7h + 对账列补 b375
+72e9210af1fc0f1b4cf5d1db13a5768129039f44	zhanglingfeng	2026-11-12 18:08:53 +0800	docs(注释): b390 前置：成本口径统一 A/B，b388 与 b389 同规则，切换点订正为 b393
+72f74b51912a55b61b40aab03daa8e23407c1509	zhanglingfeng	2026-11-12 12:20:13 +0800	注释清水 b362：6 文件 1→1 改写 (+20/−20)
+73632ef996f76610eeb2a09644add2c8b2f304b1	zhanglingfeng	2026-11-11 15:42:24 +0800	docs(注释): 批次外修订 6 处（跨仓全称断言审计） (+10/−10)
+73782160342f3e142b371f2278111d978cbf0792	zhanglingfeng	2026-11-03 22:41:42 +0800	docs(注释): L2-B9 context/memory/workflow
+73da7bd3e5be51403991c4869d1923b279d8e118	zhanglingfeng	2026-11-12 00:33:46 +0800	docs(注释): b342 收口（台账 + 白名单 489 行 + INDEX）
+747e519cbbc053fd0b5694898abb53f29a9a610e	zhanglingfeng	2026-11-11 17:52:54 +0800	docs(注释): 白名单（b331 开批前，443 行）
+74c18eb3d19471417db772aa1ef9a46664e8f6c9	zhanglingfeng	2026-11-12 10:43:53 +0800	docs(注释): 白名单（b350 开批前）
+74d13d9fd8d4b1413cb601156b2f6d99a53f1069	zhanglingfeng	2026-11-12 17:36:27 +0800	docs(注释): b388 收口（20 行/10 文件，判据类 2→0）+ 台账 + CLOSING/INDEX 填数
+752fbbfe5eb7be4f77f4df95d9fab6d2bd4153d8	zhanglingfeng	2026-11-11 16:42:08 +0800	docs(注释): 白名单（b317 开批前）
+75501bffb9983b34d9bf37af84b9a8092669345a	zhanglingfeng	2026-11-11 01:54:34 +0800	docs(注释): b266 排期改 2.61 区间口径 + 趋势观察 + 两条等式负控
+75706c9ae6867f1a5206a943a133ea64edb3f963	zhanglingfeng	2026-11-12 12:55:20 +0800	chore(注释): 白名单重生成 610 行（含 c520419d 口径提交）
+75f27b00a110dbd0915265ec4f45ee41e77b2808	zhanglingfeng	2026-11-11 14:02:30 +0800	docs(注释): 白名单更新（314 行，head=c3f38160）
+75f9068a03865497662e845b1e62418cf4f73e20	zhanglingfeng	2026-11-12 11:13:15 +0800	docs(注释): 回填 b353 计时（187s / 收口 45s）
+767fa4de2ed82424f17a830b9bcbcc05d9c0054a	zhanglingfeng	2026-11-10 12:28:35 +0800	注释(services): oauthCredentialRepo b2 — 覆盖 155/229（67.7%），loadCachedSessionTokens/saveTokenSet/loadUserProfileFromKey 16 单元
+769584b97b81b3751468e270c42960e426213917	zhanglingfeng	2026-11-11 10:20:35 +0800	注释清水 b282：6 文件 1→1 改写 (+82/−82)
+76eefe618bbf789ad4b276a00947ca3bdcdc7bfe	zhanglingfeng	2026-11-11 16:09:05 +0800	docs(注释): 白名单（b312 开批前）
+770a0047c0d30f88618b30506539cc333a2b47a1	zhanglingfeng	2026-11-12 11:25:05 +0800	docs(注释): 记账口径写死（done 含池内自清）+ §5.3 因此句式 + 收口分段统计 + b354-fix
+7710e318876eb6e920caeac2671f99e9c13f3026	zhanglingfeng	2026-11-12 00:43:35 +0800	docs(注释): 回填 b344 批墙钟实测（257s / 10.28 s/行）
+77c365ded1601a96640adbe5472d3dcf7550ec54	zhanglingfeng	2026-11-10 18:48:22 +0800	b253 B6 去双前缀 (+60/−60)
+77f80b8595787693f7e2cc09b741d5f905ae7a66	zhanglingfeng	2026-11-12 10:43:46 +0800	docs(注释): §6.1 表格修正 + B 被迫的成本归因（3.66h 为下界）
+7810998609c34a3bc4e092d3cb06f4dc6bacf83d	zhanglingfeng	2026-11-12 13:44:55 +0800	﻿docs(注释): 作废「可写192+495」+ 四个文件分母 + cap 提到 10 + 时长重算 1.7-2.3h
+783d49a6d135fca64db3eb3f94ec2ed835e7fa88	zhanglingfeng	2026-11-03 22:39:38 +0800	docs(注释): L1-A2 压缩与预算
+785ed9e3b35b77e35796015eb9d2b81cb8fdfe6b	zhanglingfeng	2026-11-12 14:08:07 +0800	docs(注释): b373 台账回填 收口 47s / 批墙钟 171s（INDEX 延后策略生效）
+786f54a702dad87f12ed2cc1816dfb17be4e2de6	zhanglingfeng	2026-11-12 00:37:04 +0800	注释清水 b343：4 文件 1→1 改写 (+28/−28)
+7882a7550530861d72a62bc698900f079bc29499	zhanglingfeng	2026-11-12 13:05:30 +0800	docs(注释): b368 收口（6 文件 24 行，一次过）+ 否掉「cap 6 天生吃亏」 (+24/−24)
+78c1e2f9ba47205048ab84062538eaaecf20e1a7	zhanglingfeng	2026-11-10 12:44:52 +0800	注释(desktop): index.ts b1 — 覆盖 1055/1355（29 单元），退出与窗口清理尾段
+790e61ba66c1baf6c0a4fa71dd0d46a1e06b89e0	zhanglingfeng	2026-11-10 15:09:02 +0800	docs(注释): b230 台账与 b229 判据复核、门禁新增标点级检查 (+264/−4)
+791e9e5d89e4b99bcb981300c3e8a02318c17812	zhanglingfeng	2026-11-11 17:10:08 +0800	docs(注释): b321 收口（台账 + 白名单 404 行 + INDEX）
+79b1d418acded04e32874fbad7de7d98da89f21c	zhanglingfeng	2026-11-11 10:34:53 +0800	chore(注释): 第 8 行门禁 indent/EOL + 矩阵按四条边界重编号
+7a64ff8bcebe8e6834b085de3778134a5ae8b112	zhanglingfeng	2026-11-11 17:42:20 +0800	docs(注释): 白名单（b328 开批前，431 行）
+7a6afed213d86078e7d2a8f0a381d5760b73ad6a	zhanglingfeng	2026-11-12 17:40:17 +0800	docs(注释): b388 四条收口（155.0 降级 ±0.5、返修归因、S3 拆 a/b、SHA 修正 bc24a2b7）
+7ab5c457db69e6f852b554e2c66d230043cc4862	zhanglingfeng	2026-11-10 12:59:45 +0800	docs(注释): index.ts b8 台账（+79 行，UNCOVERED 554→475）
+7aeaf5ba507e2887a98ee91a5a96bdaafb49702e	zhanglingfeng	2026-11-04 00:02:34 +0800	docs(注释): 收尾提交 packages 各包纯注释增量
+7aee12bafe775873c683f728e06f1ac5da81a42a	zhanglingfeng	2026-11-12 13:11:38 +0800	注释清水 b370：6 文件 1→1 改写 (+24/−24)
+7b91e523e776f9691288e824a740a92d4953882e	zhanglingfeng	2026-11-12 14:07:40 +0800	docs(注释): b373 收口（10 文件 39 行）+ 台账 + 白名单 636 行
+7b98ecc3884526adc7dbdc84677b5f5ac82f4dcc	zhanglingfeng	2026-11-12 20:37:51 +0800	docs(注释): b398 前定稿——白名单刷新结构化、主报两项统一中位(S5=57.5)、旧S3b判据删除、批报固定三列、GATE-DEBT 计数
+7bd2b15956860391989a761862efee740e76fb84	zhanglingfeng	2026-11-11 13:53:15 +0800	docs(注释): b290 台账（90 行全池内 / 首轮 6 条 3W+3L / 无自清，白名单 307 行）
+7bebc79eed4e3c1de9f311baa761078d9ddebff1	zhanglingfeng	2026-11-10 13:08:14 +0800	docs(注释): §8 扣账 index.ts 并改用未覆盖单元直接折算成本
+7c02b395773612257563aa3e01401918db04be21	zhanglingfeng	2026-11-12 00:09:26 +0800	docs(注释): 白名单（b338 开批前，471 行）
+7c139fa1e09d17f976c433d18605bddcb33c0197	zhanglingfeng	2026-11-11 16:01:07 +0800	docs(注释): INDEX §12.4 自清提前量与 A4 三数闭合 (+36/−2)
+7c2fbf9d47915e030538f6436d055ccfb5f372d3	zhanglingfeng	2026-11-12 00:04:55 +0800	docs(注释): 白名单（b337 开批前，467 行）
+7c5ae36ead014d68f786c4221b1eac73eb58fadc	zhanglingfeng	2026-11-10 12:55:16 +0800	注释(desktop): index.ts b6 — 更新状态窗口与 createWindowInstance 注入段（+83 行）
+7cad6d4c99a97e2336232bb628957fe53282fb5b	zhanglingfeng	2026-11-12 11:49:39 +0800	注释清水 b358：6 文件 1→1 改写 (+30/−30)
+7d2ab5dab964dc9d8e55efe7304c6fccbcaea4d6	zhanglingfeng	2026-11-12 11:28:58 +0800	docs(注释): b355 收口（6 文件 34 行）+ 窗口全量重算 ALIGNED=0 + 白名单 560
+7d4bf34ff07695d545a2ecb318e213694ef14303	zhanglingfeng	2026-11-12 11:12:11 +0800	注释清水 b353：6 文件 1→1 改写 (+35/−35)
+7d8866d39ab4bcbadf3852ffccdf83d15ffb66a6	zhanglingfeng	2026-11-12 17:06:12 +0800	docs(注释): b386 口径修正（表外差集落盘 + b381 事故标记 + 窗口滚动 + 分段和恒等）
+7d9ad31590b14f4cb6345cc6c7429cd3672142ef	zhanglingfeng	2026-11-11 13:58:09 +0800	docs(注释): b291 台账（97 行全池内 / 首轮 9 条 6W+3L / 池外自清 3）
+7dfc6f594c19c59f8769768526048c87a1a88fc4	zhanglingfeng	2026-11-11 17:20:24 +0800	docs(注释): 白名单（b323 开批前，411 行）
+7e75aa1d307d7238989176c770769ac4322308a7	zhanglingfeng	2026-11-11 17:10:33 +0800	docs(注释): 回填 b321 批墙钟实测（379s / 8.61 s/行）
+7ea473bb266ecbcbada0f5a982e1ccba85db3d4b	zhanglingfeng	2026-11-10 13:35:14 +0800	注释(desktop): windowsAumidIcon.ts b1 — 依赖注入与输出校验（+16 行）
+7ea736115d3ff09c920904e5d8dff10781ceb5a4	zhanglingfeng	2026-11-12 17:18:05 +0800	docs(注释): 收口报告骨架 CLOSING.md + b386 分段首违记录 + 窗口滚动规则
+7f25f1fdd7f2954d4ac1054c9409a44a11eb282a	zhanglingfeng	2026-11-10 14:59:12 +0800	docs(注释): b229 测速批登记表与门禁输出 (+100)
+7f6ff7539ab26bbb6034804bc0ef17ecdf7da3d1	zhanglingfeng	2026-11-12 11:35:28 +0800	docs(注释): 回填 b356 计时（260s / 收口 39s）
+7f8a4bad1a127cd4d72c114a0b1346bbec2d854e	zhanglingfeng	2026-11-11 16:03:45 +0800	注释清水 b311：4 文件 1→1 改写 (+36/−36)
+7f8e4c7c022cf310483d0651348063b40f6e641a	zhanglingfeng	2026-11-12 19:39:06 +0800	注释清水 b393：20 文件 20 行 1→1 改写（cap20 试验第 3 批） (+20/−20)
+7f9a8d87957e082957790c7617144f5908d2fa2a	zhanglingfeng	2026-11-12 00:13:33 +0800	docs(注释): 回填 b338 批墙钟实测（233s / 7.28 s/行）
+7ffac30e0265b456462647cf23e7e2534a30a554	zhanglingfeng	2026-11-11 03:55:09 +0800	docs(注释): b277 台账（100 行 / 6 文件，n=5 主档建议不切换）+ push-plan 阻塞条件与解锁命令 + INDEX 样本补到 n=5
+818417fb06e3f4e77289859053f20a7c6cce0af0	zhanglingfeng	2026-11-12 17:45:55 +0800	注释清水 b389：10 文件 20 行 1→1 改写 (+20/−20)
+81b8e3b62397087cebd5871af0135b8e36dd9243	zhanglingfeng	2026-11-11 11:25:53 +0800	docs(注释): 修正 b286 补洞表述——活文件对完整，仅归档 gate 缺导出
+81c272429d3e66b7f3de5666ddea74bdb3e285a2	zhanglingfeng	2026-11-12 19:09:58 +0800	docs(注释): b392 池外残留改为收口实测口径、清零拆注解/归类两列、差集加 cause
+81d14453bd9a7af6f13a171d0b7d2126426aef24	zhanglingfeng	2026-11-10 10:26:51 +0800	docs(注释): B228 A3 attach 与恢复单元覆盖（逻辑区 45.0%）
+81f1eb7047512382480e8df967c209327f45bac5	zhanglingfeng	2026-11-11 23:34:06 +0800	﻿docs(注释): 白名单（b334 开批前，455 行）
+822089fb360c8ad6e7e395f61b2efc38cd4fe54d	zhanglingfeng	2026-11-11 16:50:02 +0800	docs(注释): b318 收口（台账 + 白名单 394 行 + INDEX）
+822232203f15ac3ff9a624f575e6c5b2a15f3d9c	zhanglingfeng	2026-11-12 00:29:27 +0800	docs(注释): 白名单（b342 开批前，487 行）
+8268b4ae45ad468c4ee1ea55c37563e49c81598a	zhanglingfeng	2026-11-12 11:50:56 +0800	docs(注释): b358 收口（6 文件 30 行，fix=2 首轮 9 hit 已分类）+ INDEX 同步
+832a0225ec0880c0ec3b00582407d95fa6a0b083	zhanglingfeng	2026-11-10 17:13:52 +0800	b237 改写 2 文件的水句 (+14/−62)
+832b1d3e4004eacdf2135f36b9f0dd29634103d8	zhanglingfeng	2026-11-11 17:36:12 +0800	注释清水 b326：4 文件 1→1 改写 (+40/−40)
+832e8cb571a55c7155391159ee1719d957fd7ad8	zhanglingfeng	2026-11-10 12:58:30 +0800	docs(注释): index.ts b7 台账（+92 行，UNCOVERED 646→554）
+8371771ca071027c60a9e5f33e606b4b987d5835	zhanglingfeng	2026-11-12 20:19:33 +0800	docs(注释): b396 前定稿——池外残差改名、S3b 禁止记 0、阈值换代 173.25、S5_closeout 单列
+83d23dca7b7447c94d5819698467968451dd9076	zhanglingfeng	2026-11-11 02:32:19 +0800	docs(注释): b270 台账（预检拦 11 · 门禁首轮 0 · 落笔段 1.62 可复算 · 剩余 5825）
+8465f1b2938f4b34109c81eca8eaec418258a3d7	zhanglingfeng	2026-11-12 14:27:40 +0800	docs(注释): b375 收口（10 文件 30 行）+ 台账 + 白名单 645 行
+849f438f1243b254caeaa320eadd50dafd5fd0b1	zhanglingfeng	2026-11-11 14:14:37 +0800	注释清水 b295：7 文件 1→1 改写 (+97/−97)
+84afa5a8ef5a2cb21588d0e6aee1db706c0a82f3	zhanglingfeng	2026-11-11 10:50:38 +0800	docs(注释): b261–b284 历史缩进审计（b282 20 行已修，可失败断言入库）
+8504fbd38feffb3a9025fba6a9741da01cb2aec7	zhanglingfeng	2026-11-12 12:31:07 +0800	docs(注释): 钉住回放基准（131→116，sha e0b58371）；新增 judge 前机械自检；抽检第三轮 80%（加权 82.5%）
+8575456a72d6e05ddf57d29b44b960266ecfdae5	zhanglingfeng	2026-11-12 18:36:19 +0800	注释清水 b391：20 文件 20 行 1→1 改写（cap20 试验） (+20/−20)
+85a3b9c85c649188ce507e70e71ce3dade6d43ac	zhanglingfeng	2026-11-12 01:01:37 +0800	docs(注释): b346 收口（自清累计表 §12.7 + 台账）
+85ac0ff046957c211999bdb8791bb19bdcc232fb	zhanglingfeng	2026-11-11 17:25:30 +0800	docs(注释): 白名单（b324 开批前，415 行）
+8626e043c286a47f7f4dea3bd199ef40eb8c7f0d	zhanglingfeng	2026-11-10 19:13:18 +0800	b257 B9 去双前缀 (+99/−99)
+86421955d64d675d61958b4f263ec04469bbd63f	zhanglingfeng	2026-11-12 11:35:16 +0800	docs(注释): b356 收口（6 文件 30 行，fix=1）
+86801c9822ed792620c8a34daa0e2387d7afe942	zhanglingfeng	2026-11-12 17:12:34 +0800	docs(注释): 1 行文件数订正 199 + b385 提交行补记
+86e07bf3edca76042300e2dd62628b7f5afdab20	zhanglingfeng	2026-11-12 10:52:04 +0800	docs(注释): 形状 B 定案（删 33 目标 / 目录软约束）+ A 案口径删除 + 成本前快后慢与监控
+87167685f28cf7ff6b39327585bac65163237223	zhanglingfeng	2026-11-11 17:37:18 +0800	docs(注释): b326 收口（台账 + 白名单 425 行 + INDEX）
+872332f83f3b5a1d12cc53ef9bad19f682772ce3	zhanglingfeng	2026-11-11 16:51:13 +0800	docs(注释): 修正 b318 批墙钟读数（158s / 3.59 s/行）
+878e95dabf32b03e5ed6d6469329688fcc9ca757	zhanglingfeng	2026-11-03 22:41:00 +0800	docs(注释): L2-B5 contracts
+8795e11e917e7ffc7cdb3e6b2923c67b35d0bfbb	zhanglingfeng	2026-11-11 17:32:16 +0800	注释清水 b325：4 文件 1→1 改写 (+40/−40)
+87bdada009bc7f7d10bd9523361cc2c873251480	zhanglingfeng	2026-11-12 12:20:57 +0800	docs(注释): 回填 b362 计时（104s / 收口 35s）
+87f58e0aae5246a58bfef43d089351c2c3613722	zhanglingfeng	2026-11-10 19:28:11 +0800	docs(注释): b259 B11 台账 + 1b 改键 + CLOSE/FILELIST 断言 (+251/−12)
+883ec155e70cbdc53dbd3e8b55955f87ba4059db	zhanglingfeng	2026-11-12 18:41:24 +0800	docs(注释): b391 订正：cap20 仅 n=1 继续试验、0.65h 单点不采用、0.1s 差值归因整秒截断
+89b2bc243dc9da903b1f9467a801f40ba173efec	zhanglingfeng	2026-11-11 11:57:29 +0800	docs(注释): 语义抽检 01（10 行 N/P 双读 / fail 1，标识符级 1 条）
+89d591aa4cf476480d35add63c7f9ab9a28a3b71	zhanglingfeng	2026-11-10 14:16:57 +0800	注释(server): b18 补提交 remoteAssetInstaller.ts — 54 行水句改写后落盘（+300/−0）
+8a4b0ce16c93681545da01af12e1b8ce5f7704a0	zhanglingfeng	2026-11-11 11:54:57 +0800	docs(注释): b289 台账（90 行全池内 / 首轮 7.8% 6 条 L / 第 8 行门禁实盘基准首批 0/0）
+8a4d8e02066bde45728efbc98c090a9a3cf83544	zhanglingfeng	2026-11-10 18:19:00 +0800	docs(注释): b247 台账 + 802 行立项计划 (+188)
+8a89fb6492b25813112c244a5adfcc4e9d25473e	zhanglingfeng	2026-11-12 17:14:13 +0800	注释清水 b386：10 文件 20 行 1→1 改写 (+20/−20)
+8a9bf367844afea52ca71c8d7e9da0d0a78f97d6	zhanglingfeng	2026-11-10 15:10:51 +0800	b231 改写 2 文件的水句 (+16/−46)
+8acd208e9dd725e27aa3064c98c7d6da65b3c15e	zhanglingfeng	2026-11-10 19:35:09 +0800	docs(注释): b260 B12 台账 + weak-guard 盲区注释 + 802 收尾 (+281/−1)
+8afe86e50eb4799e6c7aeba9b5505db338630fe1	zhanglingfeng	2026-11-10 13:04:48 +0800	docs(注释): index.ts b14 台账（+60 行，UNCOVERED 150→90，转逐条模式）
+8b0d4bedd36e15e94779214de919a02c302a929a	zhanglingfeng	2026-11-12 16:32:33 +0800	docs(注释): b383 收口（24 行/10 文件，判据类 0）+ 台账 + 白名单 676 行
+8beabb5b97da174ee9745728fb6683ec5b0246b9	zhanglingfeng	2026-11-10 21:52:53 +0800	b264 台账：白名单机器化 + 选行三态 + ACCT 行口径 + 五文件改写记录
+8c62e38a1d020b85a1cd82e2ec3255ff5f1a05e5	zhanglingfeng	2026-11-12 12:06:12 +0800	注释清水 b360：6 文件 1→1 改写 (+24/−24)
+8cb30cf7da74a6c964da5ad9f295966bac16e564	zhanglingfeng	2026-11-12 13:01:46 +0800	docs(注释): b367 台账回填收口 235s / 批墙钟 369s
+8cb7a6dd5d6dd808064c7c468e84eef4cde0bdb6	zhanglingfeng	2026-11-12 12:09:38 +0800	docs(注释): 回填 b360 计时（281s / 窗口收口 194s）
+8d238a458f29053e920947105a31581427bcac81	zhanglingfeng	2026-11-12 20:44:21 +0800	docs(注释): b398 台账与文档填数（cap20 第 8 批首轮全绿）
+8d666d4b13354eb7612194f1e15a81beaf22225b	zhanglingfeng	2026-11-12 12:27:45 +0800	注释清水 b364：6 文件 1→1 改写 (+17/−17)
+8dd80f9469c24c39cd2e692ec85125cf1281671b	zhanglingfeng	2026-11-11 23:33:42 +0800	docs(注释): b333 收口（台账 + 白名单 453 行 + INDEX）
+8de73f626564b7ca7e0af882508ff22bea40b457	zhanglingfeng	2026-11-10 12:52:46 +0800	注释(desktop): index.ts b5 — open-url/单实例锁/启动配置读入段（+76 行）
+8e345c2714c6841b9310bb87d4e0378c4ffafce6	zhanglingfeng	2026-11-12 16:14:46 +0800	docs(注释): b381 回填（墙钟 240s/收口 130s）+ 主报窗口 b379-b381 = 1.4-1.9h + 对账补 b381（可清 1）
+8f0c3b287a000c6249b81a33c5473bdae1da1974	zhanglingfeng	2026-11-11 14:08:08 +0800	docs(注释): b293 台账（98 行全池内 / 首轮 2 条 1W+1L / 池外自清 2，白名单 316 行）
+8f0c5b9f689bb56ff85084714c8e37d8846c34af	zhanglingfeng	2026-11-12 12:57:58 +0800	注释清水 b367：6 文件 1→1 改写 (+26/−26)
+8f7daaf032c0c115a227e3c16680124ae082d82c	zhanglingfeng	2026-11-10 14:18:23 +0800	docs(注释): 审计快照时点说明 + 标题更正留痕（+3/−0）
+8fa6027de8032db7b088cd05001dae6e7a015a5c	zhanglingfeng	2026-11-10 13:01:17 +0800	注释(desktop): index.ts b10 — 设置即时同步、更新偏好与退出屏障准备（+47 行）
+8faee85b30e1853c437e2c2ab3bfaf0c2c3e4cf9	zhanglingfeng	2026-11-10 20:36:12 +0800	b263 台账：池外 1,132 定性 + s/文件 单位错/数值错 + ACCT 差 1 行定位
+8fc1950218b6c7e98689c36fdde1cd57b0efe310	zhanglingfeng	2026-11-12 16:13:02 +0800	fix(注释): b381 同义重复（远程/远端）改为宿主机器，消除 weak
+9015853ced94bc70dbbafefaa7f7217615bf63f1	zhanglingfeng	2026-11-11 10:40:30 +0800	docs(注释): b284 台账 + 白名单重生成（100 行，第 8 行门禁首跑）
+9059b7adac204dba64cb13b848e0ec1831fc29a9	zhanglingfeng	2026-11-12 11:18:53 +0800	注释清水 b354：6 文件 1→1 改写 (+30/−30)
+90ced9c5e71d03e9c311f271df4b22dc87451e12	zhanglingfeng	2026-11-10 18:54:39 +0800	b255 B7 去双前缀（合批 2 文件） (+49/−49)
+9181f19ee637c394f0fc55449437c4aa80c0920e	zhanglingfeng	2026-11-12 11:03:34 +0800	docs(注释): 白名单（b352 开批前）
+91c231e73d40f384bee274e737327dde4c99844c	zhanglingfeng	2026-11-12 17:24:19 +0800	注释清水 b387：10 文件 20 行 1→1 改写 (+20/−20)
+9231f118cd6213027cb511b2ea878d1f55889535	zhanglingfeng	2026-11-11 13:53:27 +0800	docs(注释): 白名单更新（308 行，head=7bd2b159）
+92461262944c0110853a8e85565d3bc60f4a70cc	zhanglingfeng	2026-11-12 12:35:15 +0800	docs(注释): 回填 b365 计时（150s / 收口 55s）+ 近四批窗口
+93b3244c87900576e28e39dd926f30e542c4ce8b	zhanglingfeng	2026-11-10 12:36:43 +0800	docs(注释): 补 sshAuth 批次记录，一档待做扣到 183 / 22,559 / 19,300
+948423d31528cff8ac8d247cb67cb45324e9475d	zhanglingfeng	2026-11-12 16:50:39 +0800	docs(注释): b384 收口（20 行/10 文件，判据类 0）+ 台账
+94af4d228e4a03dad183fb8b928b7cf57ac7d6b3	zhanglingfeng	2026-11-11 17:49:13 +0800	docs(注释): 白名单（b330 开批前，439 行）
+962b8b534d4bedc2b9ff09bc23796483d9a846c9	zhanglingfeng	2026-11-12 11:07:16 +0800	docs(注释): 回填 b352 计时（211s / 收口 87s / 5.86 s每行）
+9641a53d2e82572e4ec417c53323295339d3ab7e	zhanglingfeng	2026-11-10 01:29:39 +0800	docs(注释): B228 browserGuestManager 片 6-14 批次文档与缺陷册
+9695122ff291bce3c9067dd31f18f397fe78b58c	zhanglingfeng	2026-11-10 14:22:41 +0800	snapshot(annot): 注释工具脚本与度量 tsv 安全快照 (+178854)
+96a1923e73ecc90430fa31e64912f53c25da4808	zhanglingfeng	2026-11-10 22:08:26 +0800	docs(注释): b265 改写 PLAN#2 五文件注释 (+100/−100)
+96c83b0e861d211c4c49120beed7a300e871c46f	zhanglingfeng	2026-11-11 11:43:16 +0800	docs(注释): b288 台账（90 行全池内 / 首轮 6.7% 含 2 处 SAME / 第 8 行门禁首次实拦 eolChanged=15）
+97592c1b34014ef8019c5ae72fc92cf31e2a3504	zhanglingfeng	2026-11-12 19:03:11 +0800	docs(注释): b392 订正：removed 判据被邻接自清污染、回退作废；S0 拆回 8.6s；主报改两档 0.66h/0.54h
+976a19a403b4ba1f9e80d22a2f5b1cc309ec6823	zhanglingfeng	2026-11-10 12:59:36 +0800	注释(desktop): index.ts b8 — 退出确认、命令入口、录制态与菜单重建（+79 行）
+97a556db2f8a404726268096391fcd95ef3d7e68	zhanglingfeng	2026-11-11 02:45:54 +0800	docs(注释): b271 计时口径更正（落笔/门禁分段、1.01 降级为历史值）与 442 批上界定义
+981e06616b4d31bbfb221ec8149219f41cc8beae	zhanglingfeng	2026-11-11 23:37:51 +0800	docs(注释): b334 收口（台账 + 白名单 457 行 + INDEX）
+98466fee1cb328f7e8025da07e03638ed672952c	zhanglingfeng	2026-11-11 23:58:19 +0800	docs(注释): b335 收口（台账 + 白名单 461 行 + INDEX）
+98ccf35aac6bed532006e8cf1d4eeed050e05670	zhanglingfeng	2026-11-12 18:17:27 +0800	docs(注释): b390 回填计时（S3a 47.0 / S3b 56.0 / S4 16.0 / 收口 136.3 / 批墙钟 250.3）
+98e03c1a173df5b4b9a06100f52bb8158c187fce	zhanglingfeng	2026-11-10 14:18:04 +0800	docs(注释): b18 改写登记 54 行 + §8.5 状态转已补提交（+76/−1）
+99cbac4d71ea60f4dba6a7ae82ecc6bce247b006	zhanglingfeng	2026-11-11 04:56:12 +0800	docs(注释): b281 台账 + 白名单重生成（100 行，n=9 口径，mtime/白名单正负控）
+99d32331739073cfc59b32ce0cd91dea032a21a9	zhanglingfeng	2026-11-11 17:13:04 +0800	docs(注释): b321 快照纠偏——删除复制品，改显式 --pre-weak；--start 前置基准校验
+9a16b176162862c07db49a914cd31fffb9fca8e9	zhanglingfeng	2026-11-10 15:14:36 +0800	b233 改写 2 文件的水句 (+14/−49)
+9a763ccc1f6f21ac46b71908178404960d043283	zhanglingfeng	2026-11-12 00:35:00 +0800	docs(注释): 白名单（b343 开批前，491 行）
+9b0219f3dfe213c96b3913c8bebd773bc75ff9c6	zhanglingfeng	2026-11-12 12:50:56 +0800	docs(注释): b366 收口（6 文件 30 行）+ all-checks 口径首跑 + 落笔顺序固化 (+30/−30)
+9c58a50c7104fc4171ef7546901d18c36c7624ea	zhanglingfeng	2026-11-10 12:53:00 +0800	docs(注释): index.ts 台账补 b5 行与归属分布快照
+9c60218ddea0414dbdab69730ead28b63599eb34	zhanglingfeng	2026-11-11 14:16:05 +0800	docs(注释): 白名单更新（323 行，head=306f2166）
+9caabbc610982bd5f9eb45941f04bf0bc68ffe70	zhanglingfeng	2026-11-12 20:34:34 +0800	docs(注释): b397 台账与文档填数（cap20 第 7 批首轮全绿，S3a/S3b 真拆分）
+9d9e3563adf14a349ff1f00a000b0d762e7bb39e	zhanglingfeng	2026-11-12 00:21:01 +0800	docs(注释): b340 收口（台账 + 白名单 481 行 + INDEX）
+9e8cae3ee5f04877d45e57b21e404bf51b36a64a	zhanglingfeng	2026-11-12 18:34:33 +0800	docs(注释): 确认剩余形状 199 文件 x 1 行，写入 b390 台账与 CLOSING
+9f09a5be9f3f16a1325a931c30ff0909dbf85370	zhanglingfeng	2026-11-10 15:12:49 +0800	b232 改写 2 文件的水句 (+20/−58)
+9f1fd0c9303e22f465b6264f09a881a8ebbeddad	zhanglingfeng	2026-11-11 17:34:42 +0800	docs(注释): 白名单（b326 开批前，423 行）
+9f4b48d93f57393aa269af53e91f5ad25dc447b0	zhanglingfeng	2026-11-11 15:58:29 +0800	docs(注释): b310 收口（台账 + 自清登记 + 白名单 368 行 + INDEX） (+184/−8)
+9fa01291b3a1bb9fd2ede7a140134f7564ad6c8f	zhanglingfeng	2026-11-12 14:49:13 +0800	docs(注释): b375 台账补正（集合改末行 1,571->1,563、可清 43）+ 对账恒等式
+a06f3b55951b52c85a3302211c5d18ea35191ace	zhanglingfeng	2026-11-10 11:05:09 +0800	注释(services): credentialService 校准批全读，60 条逻辑单元补齐、2 条 import 续行按规范豁免
+a06ffbd48d1635ad38896455251ddc90288fdb03	zhanglingfeng	2026-11-12 00:16:09 +0800	注释清水 b339：4 文件 1→1 改写 (+32/−32)
+a08969d297ef91650508c0e94d9e8e6334074e88	zhanglingfeng	2026-11-10 18:25:03 +0800	b248 B1 去双前缀 (+68/−68) (+68/−68)
+a0d9aca64193d3504becab6164e78e0924dce59d	zhanglingfeng	2026-11-12 14:57:51 +0800	docs(注释): b377 收口（10 文件 30 行，首轮 0 命中）+ 台账 + 白名单 652 行
+a0f2b8919320b071fd7210b868df44d08f4d108f	zhanglingfeng	2026-11-12 14:06:53 +0800	注释清水 b373：10 文件 1→1 改写 (+39/−39)
+a11680c68ee385dbad766ae635d2595d99d9db58	zhanglingfeng	2026-11-11 17:52:00 +0800	docs(注释): 回填 b330 批墙钟实测（134s / 3.35 s/行）
+a118f203640893f7a5a91a6577d77ba5acf62805	zhanglingfeng	2026-11-12 10:48:00 +0800	docs(注释): 回填 b350 计时 + INDEX 同步（537 行白名单 / post-b350）
+a13035fbf9cd92aeae98f714fa5c38db155468e2	zhanglingfeng	2026-11-11 04:43:14 +0800	docs(注释): b280 台账与 n=8 口径（顺延 7 行结清 + 白名单滞后教训）
+a149ef4d396a1d23612e1db5e6bd6df6876fa71e	zhanglingfeng	2026-11-10 18:05:40 +0800	b244 改写 (+16/−16)
+a14f139ce2d9a0249ce8b1642270ce2f7142d44a	zhanglingfeng	2026-11-10 18:39:37 +0800	docs(注释): b251 B4 台账 + 唯一批数口径 (+260/−3)
+a17e1a6e6b24bd162ae6864147b7cf59c4654a18	zhanglingfeng	2026-11-10 13:35:09 +0800	注释(desktop): resourceManagerNetwork.ts b1 — 网络采集会话与 IPC 授权（+65 行）
+a18270dd25f25eaa05e2a4b78a945860ec433b98	zhanglingfeng	2026-11-12 18:39:07 +0800	docs(注释): b391 收口（20 行/20 文件，cap20 试验通过）+ CLOSING/INDEX 填数
+a19a8a4528cdc45884e50109b209927b1603baf9	zhanglingfeng	2026-11-11 14:31:05 +0800	docs(注释): 白名单更新（332 行，head=HEAD）
+a1f911d5269864e88f73f35dce3dae17a35ff1ba	zhanglingfeng	2026-11-10 17:05:28 +0800	docs(注释): b236 台账、b229 4 行新口径复核、zc-commit v5 归档 (+648/−1)
+a29b419377a2092056f2828241ff490b7b3d9780	zhanglingfeng	2026-11-11 04:23:55 +0800	docs(注释): b279 台账与 n=7 分组口径（脏树 15 文件判定与回滚 + write_phase=1 照计）
+a2c502d69aec29380eb26ede77670be5d25f03aa	zhanglingfeng	2026-11-10 12:28:58 +0800	注释(services): oauthCredentialRepo b3 — 覆盖 175/229（76.4%），loadLoginAttribution/clearActiveSession/loadTokenSet 20 单元
+a2db2be8044f1ca774c2f8d4691711888a92c5d3	zhanglingfeng	2026-11-12 00:17:35 +0800	docs(注释): 白名单（b340 开批前，479 行）
+a307ec35164688671c571750b47e9b5c69b280f9	zhanglingfeng	2026-11-11 11:51:34 +0800	注释清水 b289：6 文件 1→1 改写 (+90/−90)
+a3866793a38cb9eece7342b23e526a7c273a3fcd	zhanglingfeng	2026-11-12 00:56:53 +0800	docs(注释): 回填 b345 批墙钟实测（258s / 11.22 s/行）与碎尾批首行
+a3c1ebf3d7ad8d27a4d12da423694e3ea857c494	zhanglingfeng	2026-11-11 16:39:45 +0800	注释清水 b316：4 文件 1→1 改写 (+44/−44)
+a3c85968998840a61c16dfca128fcbf151337f36	zhanglingfeng	2026-11-12 15:36:30 +0800	docs(注释): b378 收口（全 1 行文件批，10 行/10 文件，首轮 0 命中）+ 台账 + 白名单 656 行
+a417facbca409c3c8e4337e7a6a8763146f8cd2d	zhanglingfeng	2026-11-11 03:33:22 +0800	注释清水 b275：6 文件 1→1 改写 (+100/−100)
+a435f6619fccf347e675d0e7fb963ccb2ae19ab0	zhanglingfeng	2026-11-12 20:00:30 +0800	注释清水 b394：20 文件 20 行 1→1 改写（cap20 试验第 4 批） (+20/−20)
+a4b7e46c8a78f4c30cb20cc41c3d469fd6809077	zhanglingfeng	2026-11-12 10:46:40 +0800	docs(注释): b350 收口（形状 B 首批 6 文件 38 行）
+a519872029c32d196b05fba7515ea2f3b8f7d66f	zhanglingfeng	2026-11-12 00:26:34 +0800	注释清水 b341：4 文件 1→1 改写 (+28/−28)
+a52e74351944a9df271389299096f7dfd3e7faf1	zhanglingfeng	2026-11-12 15:18:07 +0800	docs(注释): b377 回填分段 68s/墙钟 231s + 主报窗口 b375-b377 收为 1.5-2.1h + 对账补 b377
+a582e7964b562920e181901d51bb2471ca6d407e	zhanglingfeng	2026-11-10 12:38:49 +0800	注释(server): create-backend 全文件收口 23/23（+23/-0）
+a5e4210ceb8b7a5a380258cdfbeb373ff39798cf	zhanglingfeng	2026-11-11 02:06:14 +0800	docs(注释): b267 补命中处数/轮数两列 + 排期两档 + capacity --batch 输入校验
+a672893ba76b9efad0fbc18eaa1f810c6e00349f	zhanglingfeng	2026-11-10 13:15:24 +0800	注释(desktop): desktopHostProcess.ts b5 — CUA 投影、日志归档、browser 执行与 agent 进程事件（+64 行）
+a70edf7e47a233093a807bc31d2da527db324f8b	zhanglingfeng	2026-11-10 18:07:55 +0800	docs(注释): b244 台账 (+279)
+a75ea48467e47f3d934e9e0667a9a9ae7856d2cb	zhanglingfeng	2026-11-10 10:36:34 +0800	docs(注释): B228 A5 中长尾补足单元覆盖（逻辑区 61.3%）
+a7af675df105a455acf064931c115b6820869bd2	zhanglingfeng	2026-11-03 23:51:54 +0800	docs(注释): L2-B10b 覆盖补齐 tui 与 office-runtime
+a7e33e2015cf6c1f65ab425fe0c50bc597f6eee4	zhanglingfeng	2026-11-12 16:03:15 +0800	docs(注释): b380 回填（墙钟 176s/收口 58s）+ 反向对照判死 c_f + 参数改 a=61.4/c_l=3.45 + 上沿形状标注 + 55s 作废
+a803d53d55de4fcbbcbf9739a5c78403922ebab5	zhanglingfeng	2026-11-10 19:17:27 +0800	docs(注释): b257 B9 台账 + 684/2 口径澄清 (+270/−1)
+a8351088e8d9ce9d2b5f9e5bc6926ad120c233ef	zhanglingfeng	2026-11-12 12:28:22 +0800	docs(注释): b364 收口（6 文件 17 行，fix=2 连续两批触发抽检）+ INDEX 同步
+a8784b7e479d3a5864dec41d706d4aa4ecbc6703	zhanglingfeng	2026-11-10 14:21:50 +0800	snapshot(annot): b1–b226 工作区注释安全快照（未逐批验证） (+146860)
+a8883a54e4905ecdfc68751ce66251f518e824a7	zhanglingfeng	2026-11-12 00:13:39 +0800	docs(注释): 白名单（b339 开批前，473 行）
+a899f6453d56de548c9281e5dc3ce694695ae7b1	zhanglingfeng	2026-11-11 11:21:04 +0800	注释清水 b286：6 文件 1→1 改写 (+97/−97)
+a8b666b0387acbf3b5706e7b962f736be31586a7	zhanglingfeng	2026-11-11 14:58:38 +0800	docs(注释): b303 台账（36 行全池内 / 首轮 3 条 2W+1L / 无自清，白名单 346 行）
+a9337237872edd2bfcf77454e1e3e10fa1612afb	zhanglingfeng	2026-11-12 16:01:37 +0800	docs(注释): b380 收口（反向对照批 10 文件 16 行，首轮 0 命中）+ 台账 + 白名单 663 行
+a96e21d936477d8e86788e847cd93cad2c560899	zhanglingfeng	2026-11-12 20:36:07 +0800	docs(注释): b397 S5 订正为 84.0（含白名单同步）
+aab013bdc60a6f99ef9cb248cf790d990f4a7905	zhanglingfeng	2026-11-10 17:48:15 +0800	docs(注释): b242 台账、旧副本改名、门禁自报 sha1、v8 计数洞 (+1074/−9)
+aaf9ad6ef34ad18892a7c9cbc5ebb1a3d8fb77d8	zhanglingfeng	2026-11-12 13:58:11 +0800	docs(注释): b372 台账回填 收口 332s / 批墙钟 500s + 白名单 633 行
+ab364c50448850efb1b56cb1902a40ee744bd755	zhanglingfeng	2026-11-12 13:57:52 +0800	docs(注释): b372 收口（10 文件 40 行，cap 10 首批）+ 台账
+abccbe4753704955e0e8d6d950997e73ca9bc5ef	zhanglingfeng	2026-11-11 14:46:53 +0800	注释清水 b301：8 文件 1→1 改写 (+100/−100)
+abe7f4395c591f45962ef0080b0bc5a79359ce18	zhanglingfeng	2026-11-10 12:19:36 +0800	注释(desktop): protocol 全文件收口 153/153（+134/−0）
+ac2df8e39bc8284f0a0150dd165b17385e9a3288	zhanglingfeng	2026-11-12 00:48:58 +0800	docs(注释): 白名单（b345 开批前，500 行）
+ac8eb8654fa36212fd7b4163360ecb9464e06ecb	zhanglingfeng	2026-11-11 17:56:21 +0800	docs(注释): 回填 b331 批墙钟实测（178s / 4.94 s/行）
+ad14e680fb8c52198f915423df10679234b60cf0	zhanglingfeng	2026-11-10 13:13:11 +0800	注释(desktop): desktopHostProcess.ts b1 — disposeHostProcessAndWait 等待与超时（+30 行）
+ad23c2d65c86e470bb916db434c0c7582ae061ec	zhanglingfeng	2026-11-10 11:55:37 +0800	docs(注释): 一档账目扣减 autoUpdater，待做 190 / 23,815 / 20,275
+ad6dc0eb51ebe5a0499356c9ba6d8b8412be80be	zhanglingfeng	2026-11-03 22:40:27 +0800	docs(注释): L2-B2 runtime
+adbee2b926e0f333cbb7962ca8b44a760291fed0	zhanglingfeng	2026-11-11 23:24:48 +0800	docs(注释): 白名单（b332 开批前，447 行）
+ae2978f6a45b45afc375ef393a5f2759a19b502f	zhanglingfeng	2026-11-11 04:19:08 +0800	注释清水 b279：6 文件 1→1 改写 (+100/−100)
+ae520d6e157165bf0812834612ea12f22749bdaf	zhanglingfeng	2026-11-11 23:38:11 +0800	docs(注释): 回填 b334 批墙钟实测（203s / 6.15 s/行）
+ae64e1caf1a4f6c6f6a401e53b1ed71034e5f68c	zhanglingfeng	2026-11-11 02:57:05 +0800	docs(注释): b272 台账（工具计时 3.5s / record_runs=3、池 875 文件 5,625 行、SELF-CLEAR 池外 1）
+af1c514285ac6b0a1a8375e4891387dea7a564a2	zhanglingfeng	2026-11-12 10:53:47 +0800	docs(注释): 白名单（b351 开批前）
+af1f13f0618f70c654e2abac303956bfc9b01570	zhanglingfeng	2026-11-12 00:13:23 +0800	docs(注释): b338 收口（台账 + 白名单 473 行 + INDEX）
+af3afcd04d994fe1a5fdb31382bb7713815e64a6	zhanglingfeng	2026-11-11 02:38:37 +0800	docs(注释): b271 注释清水 100 行（5 文件） (+100/−100)
+af55d18858421b5c1a491f8f17ffaf14e435e0e2	zhanglingfeng	2026-11-12 13:05:49 +0800	docs(注释): b368 台账回填收口 86s / 批墙钟 188s
+afd940e05660736570f760a4cab18cc60d2f6441	zhanglingfeng	2026-11-11 23:58:35 +0800	docs(注释): 回填 b335 批墙钟实测（1157s，含回退重拍）
+b0c98d4f67f7169d9025a702c70dfb1ae859872b	zhanglingfeng	2026-11-12 11:41:01 +0800	docs(注释): b357 收口（6 文件 23 行，fix=2 停批）+ INDEX 同步
+b12c9948aa8b9b266096bd75e35c27e82bb749d6	zhanglingfeng	2026-11-11 15:16:52 +0800	注释清水 b307：3 文件 1→1 改写 (+36/−36)
+b15269f585ec98da94279dffee958e0efb362f18	zhanglingfeng	2026-11-10 13:02:14 +0800	注释(desktop): index.ts b11 — 远控管理器装配、强制升级拦截与主窗口协调器（+87 行）
+b165dd327eeef17f72709810029cd8f5de8e8dac	zhanglingfeng	2026-11-10 12:33:30 +0800	注释(services): oauthUnauthorizedRequest 全文件收口 77/77（+92/-0）
+b1a603277dd59d5c0dfac9499d75dcf5c8e7582c	zhanglingfeng	2026-11-10 17:25:16 +0800	docs(注释): b238 台账与 INDEX 对照行 (+159)
+b1be4b7b22037952a8d857fdef872f9acde97314	zhanglingfeng	2026-11-10 19:21:08 +0800	b258 B10 去双前缀 (+97/−97)
+b2057e5d0b08bc7f3802391a75afee4646dedaac	zhanglingfeng	2026-11-11 17:47:46 +0800	注释清水 b329：4 文件 1→1 改写 (+40/−40)
+b2083cb18828b87ff9e204e90cdbf759e4a77dcb	zhanglingfeng	2026-11-12 12:34:11 +0800	注释清水 b365：6 文件 1→1 改写 (+13/−13)
+b248975c8d18de2caf26e026db881f4b144e4c8a	zhanglingfeng	2026-11-12 20:43:04 +0800	注释清水 b398：20 文件 20 行 1→1 改写（cap20 第 8 批，阈值 173.25） (+20/−20)
+b294ad4c62329238a3f7d53b2c3f02107d0139ef	zhanglingfeng	2026-11-10 14:22:20 +0800	snapshot(annot): 台账与审计产物安全快照（未逐批验证） (+25380)
+b2cea8741479730c4107668a1335d979cd41dde4	zhanglingfeng	2026-11-12 11:51:06 +0800	docs(注释): 回填 b358 计时（223s / 收口 77s）
+b2f7706f228cb209a7a31dd76f79456dacfb4d2e	zhanglingfeng	2026-11-12 20:02:08 +0800	docs(注释): b394 台账与文档填数（cap20 第 4 批首轮全绿，3/4）
+b30ae37726a77911c2d8fa792927bd2e91be1e28	zhanglingfeng	2026-11-12 00:38:37 +0800	docs(注释): 回填 b343 批墙钟实测（218s / 7.79 s/行）
+b30c9f3e09c64cdc3dce7faf86dc28d53903a445	zhanglingfeng	2026-11-12 16:09:53 +0800	docs(注释): INDEX 补 b380 复核（118.0±0.5s 独立性、|c_f|<=1.3 上界、点估计收口取中位 61 -> 1.43h、可清归零后的执行与完成判据）
+b3170026c74cffb27a3f48677634f7fd31e1d991	zhanglingfeng	2026-11-10 19:46:40 +0800	b261 改写 (+100/−100)
+b33041fa70b703b8e5994bb2fae45e57a7878500	zhanglingfeng	2026-11-11 15:54:13 +0800	docs(注释): INDEX §12.3 两个口径回答两个问题 (+18)
+b33f5432d17b98e61b9b71823281955b39884d6c	zhanglingfeng	2026-11-10 13:02:24 +0800	docs(注释): index.ts b11 台账（+87 行，UNCOVERED 358→271）
+b34d5ba556a74297e6f8028779b486a5e2d3d65a	zhanglingfeng	2026-11-10 00:52:59 +0800	docs(注释): B228 片 1-5 与相邻队列纯注释增量
+b355ff66e973cb605e09fefe8c16f9c6d423af04	zhanglingfeng	2026-11-11 15:04:56 +0800	注释清水 b305：3 文件 1→1 改写 (+36/−36)
+b3baa8c0f4833ec846e2373340fce2b88116192e	zhanglingfeng	2026-11-12 01:00:28 +0800	注释清水 b346：4 文件 1→1 改写 (+28/−28)
+b3cc6d24bf4cd83593413254555866d561dd9d65	zhanglingfeng	2026-11-03 23:52:23 +0800	docs(注释): L2-B10b 覆盖补齐 telemetry 与 prompt-trajectory
+b46920f9b317646de93e2b774aea6ac8ea079ff6	zhanglingfeng	2026-11-12 00:43:23 +0800	docs(注释): b344 收口（台账 + 白名单 497 行 + INDEX，订正 b343 文件数）
+b4a61cedda6f65de93c6aac3f3c5fb449e2ccd5e	zhanglingfeng	2026-11-11 14:18:41 +0800	注释清水 b296：7 文件 1→1 改写 (+91/−91)
+b55eaef9ef353e469a864a46168805b08cab7866	zhanglingfeng	2026-11-11 11:24:58 +0800	docs(注释): b286 台账（97 行 / 新口径计时首例 / 6 文件归零）
+b5b4a9c2f19b08ef97dbaefbee04f8c7b63bc94b	zhanglingfeng	2026-11-10 10:42:28 +0800	docs(注释): B228 第二轮判定表补注回读确认的距离
+b5cd32d6e2bde84a28b55ede3805c2e03fbfdb84	zhanglingfeng	2026-11-11 14:26:29 +0800	docs(注释): b297 台账（91 行全池内 / 首轮 5 条 4W+1L / 池外自清 2，CoveragePanel 转 PARTIAL，白名单 328 行）
+b67657788412cb0541bb880b4367dc7d89a0c9be	zhanglingfeng	2026-11-12 10:30:35 +0800	docs(注释): 回填 b349 计时 + A 段封存表（正常 0 / 尾部 10 / 碎尾 3）
+b6c8f4d0825526cb4badc50a5f6bed57c9ae3831	zhanglingfeng	2026-11-12 16:32:47 +0800	docs(注释): b383 回填（墙钟 96.0s/收口 31.0s）+ 主报 0.7-1.8h（观测包络）+ 剩余 27 批
+b873934d846ebd65b534869657dba72eb6f85c7d	zhanglingfeng	2026-11-12 15:46:04 +0800	注释清水 b379：5 文件 15 行（标定批 F=5） (+15/−15)
+b8843802b39edae1030143c8c9fa494375d9d3e1	zhanglingfeng	2026-11-11 03:03:18 +0800	chore(注释): 计时改三量并列（--start/--order + batch_wall），旧 s/行 整列降级，capacity 快照断言 BOM 与行数
+b910ddfae37c0e307d438e538a582fbc1b1de3f9	zhanglingfeng	2026-11-11 14:37:55 +0800	注释清水 b300：7 文件 1→1 改写 (+91/−91)
+b99060708371c4e096fd0ce2eb92281af8d75fcb	zhanglingfeng	2026-11-10 13:14:07 +0800	注释(desktop): desktopHostProcess.ts b3 — InitLocal 投递、ServicePort 与 exit 清理（+33 行）
+b994fa3aa52bd62f336a64e6e20a41abf190e5a2	zhanglingfeng	2026-11-11 14:21:15 +0800	docs(注释): 白名单更新（326 行，head=32eb42af）
+ba223d99ad6b3a9ce3abcea9a5cab720f237ddb4	zhanglingfeng	2026-11-12 12:11:19 +0800	docs(注释): 进度双列 87.8%/94.0%；414 行复跑 45 批 1.70h；L 命中集中一类，进动笔清单
+ba39c654a88a578fd60359597c40e01cfe50d6c7	zhanglingfeng	2026-11-12 19:46:53 +0800	docs(注释): b393 回填计时（S3b 233.8 / 收口 307.0 / 墙钟 424.8）与主报 0.85h；收口顺序改为 13 步
+ba6dd35db2fd1424b8525fe9009a33cb93776df6	zhanglingfeng	2026-11-12 01:11:49 +0800	docs(注释): 块注释 1:1 口径 / 并列数必带分母 / fix 固定字段
+babb5900ff2df886d582bfdeb059552e82d7cb1a	zhanglingfeng	2026-11-11 16:29:34 +0800	docs(注释): b314 收口（台账 + 白名单 381 行 + INDEX）
+bb01adbd17a7172d11ee0945d7333d96e9baef13	zhanglingfeng	2026-11-11 15:05:53 +0800	docs(注释): b305 台账（36 行全池内 / 首轮 0 命中 / 无自清，白名单 350 行；runner 单次五门全 PASS）
+bb0c5b81f680d15a1e39cb33b267b07d3616da9e	zhanglingfeng	2026-11-11 14:26:35 +0800	docs(注释): 白名单更新（329 行，head=b5cd32d6）
+bb29b8b7a4f9d903cdf3cd6c0472872ea0006d1d	zhanglingfeng	2026-11-12 17:37:18 +0800	docs(注释): b388 记录批次本体提交标题缺陷（--subject 重复）
+bc19166637f91b576caeb28ab15828bb81a252fb	zhanglingfeng	2026-11-12 01:13:50 +0800	docs(注释): 未定位 5 条查清（转义假象）+ 块/行数订正 575/594
+bc24a2b79ece18c15fa1beab72ad82df903b9b3d	zhanglingfeng	2026-11-12 17:33:52 +0800	注释清水 b388：10 文件 20 行 1→1 改写 (+20/−20)
+bc6ac3125e11e892e878411dc349b020936ecff9	zhanglingfeng	2026-11-11 03:10:21 +0800	docs(注释): b273 台账补台账提交 sha
+bce5596a9d083222724f6e9796a5c19eab5f7201	zhanglingfeng	2026-11-03 23:02:11 +0800	docs(注释): 补齐被剔除的 runtime/tool 注释改写
+bd9252de53d2f7a0dc257ef44090fc31007969dc	zhanglingfeng	2026-11-12 00:42:06 +0800	注释清水 b344：4 文件 1→1 改写 (+25/−25)
+beb1e51cb06055c8dda305eb90d1a416c868d9cb	zhanglingfeng	2026-11-12 12:14:27 +0800	docs(注释): 回填 b361 计时（165s / 收口 46s）
+bf15b454df12281b02c5504f330d081abe908179	zhanglingfeng	2026-11-12 20:35:36 +0800	docs(注释): b397 回填（收口 114.0 / 墙钟 242.0 / S5 实测）与主报 0.22h
+bf52e36081a92778bd01a7c1016696a7673cb3ab	zhanglingfeng	2026-11-11 14:30:45 +0800	docs(注释): b298 台账（90 行全池内 / 首轮 4 条 3W+1L / 无自清，1 次 BOM 越界已自纠，白名单 331 行）
+bf951d79946736e1764cefbd233f20178a3889cb	zhanglingfeng	2026-11-12 20:11:58 +0800	注释清水 b395：20 文件 20 行 1→1 改写（cap20 试验第 5 批） (+20/−20)
+c00a33dc5e0eb1ebaf8e1e23e5bdfe34f312f982	zhanglingfeng	2026-11-10 12:48:20 +0800	注释(desktop): index.ts b3 — 启动配置与托盘/更新初始化段（+67 行）
+c04f803905a48a7344374b370efdefd344a9cfd6	zhanglingfeng	2026-11-12 13:09:20 +0800	docs(注释): b369 台账回填收口 46s / 批墙钟 158s
+c051a3aaf1aaa11e7b6a4074aae17aaadb42f277	zhanglingfeng	2026-11-12 20:55:23 +0800	docs(注释): b399 台账与文档填数（cap20 第 9 批，19 行待收口）
+c0573d62e1f3f6777d0aaacaaaa7906a9fa5b8e2	zhanglingfeng	2026-11-11 17:30:09 +0800	docs(注释): b324 收口（台账 + 白名单 417 行 + INDEX）
+c08edd0286edfc84f290893e2cdd53e442717886	zhanglingfeng	2026-11-12 00:29:18 +0800	docs(注释): 回填 b341 批墙钟实测（379s / 13.54 s/行）
+c0ee5c0a8af37df72664e18ea98eb8a1430e99c4	zhanglingfeng	2026-11-11 16:40:58 +0800	docs(注释): b316 收口（台账 + 白名单 387 行 + INDEX）
+c11fcf096e721fad7ec3411812eebdc47a6014c0	zhanglingfeng	2026-11-10 15:28:33 +0800	docs(注释): b235 台账、b234 覆盖快照对照与剩余 weak 定性 (+120)
+c16972a4b0e8fb70c6803b046262dc74e5c69757	zhanglingfeng	2026-11-11 17:45:08 +0800	docs(注释): b328 收口（台账 + 白名单 433 行 + INDEX）
+c17c73a8a33d3632175966b0dd2e5864c01bdff6	zhanglingfeng	2026-11-12 14:43:15 +0800	docs(注释): b376 收口（10 文件 30 行，首轮 0 命中）+ 台账 + 白名单 648 行 + 集合口径改为末行 files=
+c1ff4c055e76aae008c2d55ddc0b5bf71cbd3f9b	zhanglingfeng	2026-11-12 15:37:55 +0800	docs(注释): 主报算术订正（下沿 1.45h->1.61h 笔误，窗口 b376-b378 = 1.6-2.1h）
+c2d442745b76ddf82c4274909d4c17b171c65f18	zhanglingfeng	2026-11-10 12:42:08 +0800	docs(注释): 补 create-backend/providerAdapter/oauth 批次记录，一档待做扣到 180 / 22,501 / 19,264
+c30614809c46744f4e5a3c17b9f7531cfc99aa90	zhanglingfeng	2026-11-12 17:02:16 +0800	docs(注释): b385 收口（20 行/10 文件，判据类 0）+ 台账
+c3590b12231a9ce0116a1f52a71241cdff039974	zhanglingfeng	2026-11-03 22:40:48 +0800	docs(注释): L2-B4 handlers p-z 与 tool 其余
+c35a6046c58300ee6a55e0513d785db6c9813d74	zhanglingfeng	2026-11-12 12:16:43 +0800	docs(注释): 语义抽检第二轮 18/20=90%（Wilson 69.9-97.2%）通过；§5.3 三类词订正；补改行定位流程
+c3f38160628017d82f6fda387f4614f375220d35	zhanglingfeng	2026-11-11 14:02:18 +0800	docs(注释): b292 台账（98 行全池内 / 首轮 10 条 8W+2L / 无自清，白名单 313 行）
+c3f5fbc428df4f387496e23ed3b55797f864bfe5	zhanglingfeng	2026-11-10 17:24:40 +0800	b238 改写 2 文件的水句 (+7/−49)
+c40c4d70e676dc4afa1f7d83b365a31a46e96426	zhanglingfeng	2026-11-10 18:51:19 +0800	docs(注释): b253 B6 台账 + 中间检查 + zc-commit v12 (+692/−4)
+c4325d90bde8bc3b6ebb943311333f8e78560a6d	zhanglingfeng	2026-11-10 19:31:43 +0800	b260 B12 去双前缀 (+60/−60)
+c47e66c29f5155c7c0a1a8e79de9813887c772a6	zhanglingfeng	2026-11-11 17:48:48 +0800	docs(注释): b329 收口（台账 + 白名单 437 行 + INDEX）
+c490cb1c5b8b829eb8d4e99f94eae4991272bc8d	zhanglingfeng	2026-11-12 19:44:09 +0800	docs(注释): b393 台账与文档填数（cap20 第 3 批：首轮全绿、cause 降行级、收口顺序固化）
+c4b1728fb2e6036a9e4d5e82db25492673dcf40c	zhanglingfeng	2026-11-11 15:22:44 +0800	docs(注释): b307 池漂移追查（句元合并 1 行）+ 第 11 道 POOL-DIFF 门禁上线
+c4ba712c0c7d4e539fc758daa50bdcbb7e6786f6	zhanglingfeng	2026-11-11 17:38:01 +0800	docs(注释): 白名单（b327 开批前，427 行）
+c4c8624997ddd201e9c127cd2762ae366bba4182	zhanglingfeng	2026-11-12 13:01:30 +0800	docs(注释): b367 收口（6 文件 26 行）+ 池外自清登记机制说明 (+26/−26)
+c520419d10cfd62fe09cb5767f8cc2d239915e6d	zhanglingfeng	2026-11-12 12:54:39 +0800	docs(注释): 重钉回放语料 e4567efd（136 批/7,531 行）+ hit_rate 加下界标记 + 阈值写方向 + D-004
+c5f1e134220ce983c5e78b402aa681076e9d861a	zhanglingfeng	2026-11-10 19:27:13 +0800	b259 B11 去双前缀 (+42/−42)
+c5f494a64ebbd586821ec94c088cb931b6627c06	zhanglingfeng	2026-11-11 10:53:12 +0800	docs(注释): b285 起笔前白名单重生成（+84afa5a8，285 行）
+c61bd7ff5af343488052be350fa555f39f267da2	zhanglingfeng	2026-11-12 12:32:24 +0800	docs(注释): 233→196 留痕作废；补三档边界判例与一致率；同结论只留一行
+c68d52ec7b3a13ee8b50c1688521d111bbc37fca	zhanglingfeng	2026-11-12 12:20:48 +0800	docs(注释): b362 收口（6 文件 20 行，fix=0 零返修）+ INDEX 同步
+c718c5fe6041a4401767af14ccd137b0b4a4af80	zhanglingfeng	2026-11-11 16:34:34 +0800	docs(注释): b315 收口（台账 + 白名单 384 行 + INDEX）
+c788391116b812947285ba2c58104fc5211bf24d	zhanglingfeng	2026-11-10 11:20:53 +0800	注释(services): oauthService 校准批全读，659 个可注单元补齐、零删行
+c788b9f1d5bd5e78c26132d363d11c4f75ef7dee	zhanglingfeng	2026-11-03 23:59:36 +0800	docs(注释): 收尾提交 core 与 contracts 纯注释增量
+c7fe04f3f3735154d67ba3aff4698501191bb3e5	zhanglingfeng	2026-11-11 10:22:23 +0800	docs(注释): b282 台账 + 白名单重生成（82 行，n=10，行级漂移首个读数）
+c803e6b73efc17e1ebaed7c8a7914c5de9b89b36	zhanglingfeng	2026-11-12 17:25:24 +0800	docs(注释): b387 收口（20 行/10 文件，判据类 0）+ 台账 + CLOSING 填数
+c8a7a11c647c79ea52375adac5d8429421b6d2f1	zhanglingfeng	2026-11-12 10:35:36 +0800	docs(注释): DEFECTS-MASTER 记 D-001 平移 / D-002 删行假通过
+c8e58ba32b7dcd93ff93c57a2c5658546be9ae97	zhanglingfeng	2026-11-11 11:30:40 +0800	注释清水 b287：6 文件 1→1 改写 (+92/−92)
+c90de9a13d872c0d8d1f9964443baa49acb4b5e9	zhanglingfeng	2026-11-11 01:51:10 +0800	docs(注释): b266 四态等式断言（exit 5）+ 两列计时口径
+c90fe5df696ffe1ce2a4db94fb0c41b2a744f643	zhanglingfeng	2026-11-10 18:16:18 +0800	docs(注释): b246 台账 (+212)
+c918c2f5cf483d32378376e61c2351c72a39d07b	zhanglingfeng	2026-11-11 16:07:45 +0800	docs(注释): b311 收口（台账 + 自清登记 + 白名单 372 行 + INDEX）
+c92adb626cf096d07753d065022cd97731391900	zhanglingfeng	2026-11-12 10:25:27 +0800	docs(注释): b348 收口（fix 首用 + 台账）
+c957692521602e9e43c38a6142bc33334e68e828	zhanglingfeng	2026-11-11 10:27:44 +0800	注释清水 b283：6 文件 1→1 改写 (+96/−96)
+c9b063c7a4dfce6557034f809b15fc89a522411c	zhanglingfeng	2026-11-12 14:44:24 +0800	docs(注释): b376 回填分段 207s/墙钟 417s + 主报按窗口 b374-b376 重算为 1.3-3.9h
+c9fb71dd13cafc5f27744807f057f9ceb65fc320	zhanglingfeng	2026-11-12 12:24:20 +0800	docs(注释): 回填 b363 计时（111s / 收口 41s）+ 近三批滚动窗口
+ca1a32cecfbbb101338f1b9776d75a16b6ff56d0	zhanglingfeng	2026-11-12 13:36:49 +0800	docs(注释): b371 收口（6 文件 24 行）+ 台账 + 批数 64
+ca2cfb8554450bf4bf3e28d0019944fbb5ee1fc1	zhanglingfeng	2026-11-11 11:48:06 +0800	fix(注释): 第 8 行门禁改取 --start 实盘逐行基准，SAME 空替换进门禁（b289 起）
+ca38493e0017d688615dead40beda64acc2ec8e7	zhanglingfeng	2026-11-11 15:47:15 +0800	注释清水 b309：4 文件 1→1 改写 (+36/−36)
+caa8ff9a094376b79770096409e3b79be3bbd3a5	zhanglingfeng	2026-11-12 10:27:47 +0800	docs(注释): 白名单（b349 开批前）
+cb64137737f52f7f25327728c7641a5671fe9c9f	zhanglingfeng	2026-11-12 20:13:16 +0800	docs(注释): b395 台账与文档填数（cap20 第 5 批首轮全绿，连续两批稳定）
+cc48f6a874b17f35f3599b23c1fe18defcf25a2a	zhanglingfeng	2026-11-12 10:59:42 +0800	docs(注释): 回填 b351 计时（352s / 9.78 s/行）
+cc4b727d55236b8a75066f203384212db19165fd	zhanglingfeng	2026-11-10 10:20:06 +0800	docs(注释): B228 A2 录制单元覆盖（逻辑区 37.4%）
+ccc8ef74789a2b41093d6ff571acddf51ffc31e3	zhanglingfeng	2026-11-03 22:39:44 +0800	docs(注释): L1-A3 持久化与回退
+cce264eb24ac35881775c120a49dfb43c59e4849	zhanglingfeng	2026-11-10 10:41:09 +0800	docs(注释): B228 补 releaseToUser 两个索引清理注释
+cd4d61d1914d760fd4eacc664d66b228a151a73a	zhanglingfeng	2026-11-10 13:04:07 +0800	docs(注释): index.ts b13 台账（+57 行，UNCOVERED 207→150）
+cd630192453d363c6a600bfdcef1313c256ae0e7	zhanglingfeng	2026-11-11 03:10:14 +0800	docs(注释): b273 台账（新口径三量首用 batch_wall 943.0s / 落笔段 150.5s / tail 4.2s，record_runs=1，池 869 文件 5,525 行）
+cd7589786eb5bcced7bac85a8a030c38e9fa9051	zhanglingfeng	2026-11-10 12:06:03 +0800	注释(server): ssh-backend 全文件收口 351/351（+423/−0）
+cd782cc3a89ba5be18d723d58d690da0fbba49ca	zhanglingfeng	2026-11-10 19:09:34 +0800	docs(注释): b256 B8 台账 + deep-quality v2.0 + 三列滚动断言 (+257/−7)
+cdae1e842c803494687f71f107324e31348176d0	zhanglingfeng	2026-11-11 17:13:36 +0800	docs(注释): 白名单（b322 开批前，407 行）
+ce8cb1cde5bc82bc63f34deb5d6ffb35394c5b3e	zhanglingfeng	2026-11-12 13:04:04 +0800	注释清水 b368：6 文件 1→1 改写 (+24/−24)
+ce9ecd32c635fe34c11914fcc7d568ae13d13608	zhanglingfeng	2026-11-10 13:45:27 +0800	docs(注释): WAI 38 行豁免登记 + §8.5 占用归属 + 数值修订留痕（+21/−0）
+cea5a675769af3dec591162cde9b039bf219759f	zhanglingfeng	2026-11-10 13:17:18 +0800	注释(desktop): desktopHostProcess.ts b9 — 类型契约、loadWindow 与剩余分支逐条补完（+64 行）
+cf26a733c3903a06ad7cf6383b08098474f26835	zhanglingfeng	2026-11-10 21:52:22 +0800	docs(注释): b264 改写 PLAN#1 五文件注释 (+100/−100)
+cf5777ee14b93872a721227ea1423ade5ee98234	zhanglingfeng	2026-11-10 13:29:07 +0800	docs(注释): §8.7 回合数改条件式（甲 14 打包 / 53 不打包），作废表定址
+cf77a8708db7c5158a637db254933ec5f061509d	zhanglingfeng	2026-11-12 18:57:04 +0800	docs(注释): b392 收口：cap20 试验未过回退 cap10（removed=23、首轮 pool-diff FAIL），主报 1.18h
+d06f97bceda3960f63617e7861c09de162b58e03	zhanglingfeng	2026-11-11 03:58:06 +0800	docs(注释): out_of_scope_edits 拆 write/record 两列并回填 b273/b277（回滚不等于未发生）+ zc-commit v13 顺序前置拦截与两例负控
+d07b89fa6fc3ee8bb83a8dd7957f17d87b679856	zhanglingfeng	2026-11-11 15:39:02 +0800	docs(注释): 基线可复算记录（611b24a5，逐字节复现 7,421）+ 句子级口径用词硬规则
+d0ae6bd6d2cdc4936f3c3c8de24d46430fbcbaa2	zhanglingfeng	2026-11-11 11:32:46 +0800	docs(注释): b287 台账（92 行 / 首轮 2.2% / 池外 -5 含 3 行邻行自清）
+d0b6e6cecaedc646e1229a4966cecd38a2ff82af	zhanglingfeng	2026-11-11 14:33:10 +0800	注释清水 b299：7 文件 1→1 改写 (+91/−91)
+d0d0b960f7775db71ab4fa567d4086b796978df2	zhanglingfeng	2026-11-12 00:33:55 +0800	docs(注释): 回填 b342 批墙钟实测（205s / 7.32 s/行）
+d14f86414865a48e14d2b7cddb42f5873f7ccb11	zhanglingfeng	2026-11-12 10:29:23 +0800	注释清水 b349：4 文件 1→1 改写 (+20/−20)
+d173d3e73ed8bb807af79d848e985ddf00dd9944	zhanglingfeng	2026-11-11 16:17:48 +0800	docs(注释): 白名单（b313 开批前）
+d18d3e223fd045449920b89fa43f6ee4a91da9cb	zhanglingfeng	2026-11-12 11:30:44 +0800	docs(注释): 对账表五列 + 收口 n=4 口径 + total 起止点写明
+d20f69a31f8032b36578fc1bcd97f1ae938e47f0	zhanglingfeng	2026-11-12 10:20:33 +0800	docs(注释): §5.3 禁用句式（L 列举三类）+ 注释行数 594 订正
+d29e2e15f1639680a6ba2b305602a9c9de74ca61	zhanglingfeng	2026-11-12 16:23:14 +0800	注释清水 b382：10 文件 1→1 改写 (+30/−30)
+d451994d5cd6c629af77703ea844c88f42c3920c	zhanglingfeng	2026-11-12 11:05:33 +0800	注释清水 b352：6 文件 1→1 改写 (+36/−36)
+d4ad2c79aa4ced131ba27ed4a7484de534c1c4d0	zhanglingfeng	2026-11-12 21:12:10 +0800	docs(注释): b400 收口——CLOSING/INDEX/台账（池内归零，全仓 3,232，主报 0.08h）
+d4ee66740532d948fb1f8670d84b642a1d50fad3	zhanglingfeng	2026-11-12 11:54:05 +0800	docs(注释): 收口项改 61s 重算 3.4-3.8h；hit_rate 停批规则；L 扩关系谓词并回放 7,353 行；订正 b358 register
+d54fdf89be42995db8c72286a94dd52b71327017	zhanglingfeng	2026-11-12 12:26:20 +0800	docs(注释): 扩系词 为/即/表示（回放 233→196）；滚动窗口不用于反推批数
+d5dcd2d9390833d3a53d8c39256672f0d0cfd930	zhanglingfeng	2026-11-12 14:20:12 +0800	docs(注释): 主报统一为窗口值 1.3-4.5h + b372 分解标估算 + 清零对账列
+d647385e65caeb3a9edf96613f16cf8fed3e309b	zhanglingfeng	2026-11-12 00:56:40 +0800	docs(注释): b345 收口（碎尾批首例 + 自清登记 + 台账）
+d67d3d66d6952ec4828e5df71ce8f6bd4aefd78f	zhanglingfeng	2026-11-10 13:16:45 +0800	注释(desktop): desktopHostProcess.ts b8 — spawn 签名与依赖契约（+58 行）
+d6cf1991a70ed9be2992336b0434ce6d27e3f720	zhanglingfeng	2026-11-11 14:24:12 +0800	注释清水 b297：7 文件 1→1 改写 (+91/−91)
+d735dd8b383b5f67bdbc8c108bb53e2aeec086a1	zhanglingfeng	2026-11-12 13:37:17 +0800	docs(注释): b371 台账回填 收口 416s / 批墙钟 537s + 白名单 629 行
+d74fd00a4447fcfdf8fed67d1be26d3519919d70	zhanglingfeng	2026-11-10 18:29:28 +0800	b249 B2 去双前缀 (+64/−64)
+d7577e7f94cfea351e4bd3236a1fb1acd82ab040	zhanglingfeng	2026-11-11 10:24:02 +0800	docs(注释): 边界×门禁矩阵（b283 申请单，含归责更正）
+d7621e535f5b6ecb892d173089a6a8949da73b08	zhanglingfeng	2026-11-12 20:35:50 +0800	docs(注释): b397 S5 实测 74.0 补记
+d7ca39bfdd44fff62abb436b0a2097cf1f5820ed	zhanglingfeng	2026-11-12 16:32:02 +0800	注释清水 b383：10 文件 24 行 1→1 改写 (+24/−24)
+d820bc7306bb4c4cd072eb3ed628ef4e87f2e7b5	zhanglingfeng	2026-11-11 17:42:05 +0800	docs(注释): 回填 b327 批墙钟实测（210s / 5.25 s/行）
+d8c5fd767e16548a473367f8e2c00b9cccc7cbde	zhanglingfeng	2026-11-10 10:42:04 +0800	docs(注释): B228 第二轮抽样 60 条，按 61.4% 定格
+d9ab5b18943457d6caa2c8fa2f73c7c95c683454	zhanglingfeng	2026-11-12 12:13:31 +0800	注释清水 b361：6 文件 1→1 改写 (+25/−25)
+da131eb88d965931940b39a8dead95449c0f14d9	zhanglingfeng	2026-11-12 00:40:00 +0800	docs(注释): 白名单（b344 开批前，495 行）
+da7c866878494ae08eab20d0ce6e0aa9a28f9f12	zhanglingfeng	2026-11-10 17:39:48 +0800	b241 改写 6 文件的水句 (+9/−12)
+daa89fa22b8c7506aef4c65fab1c5fc74ab297ab	zhanglingfeng	2026-11-11 04:51:20 +0800	注释清水 b281：6 文件 1→1 改写 (+100/−100)
+db138e23d0b24db587e3e17f58b1339bca842e55	zhanglingfeng	2026-11-11 04:16:07 +0800	docs(注释): 起笔前置校验工作树干净（exit 6）
+db65b56525a2f7643960a202e9f26a331d81c36c	zhanglingfeng	2026-11-11 03:21:23 +0800	docs(注释): b274 清水 (+100/−100)
+dbd4bd6381fcb3f78eea3925524297e4a1634f50	zhanglingfeng	2026-11-11 17:19:31 +0800	docs(注释): b322 收口（台账 + 白名单 409 行 + INDEX）
+dbffe1b30a82274be8ab23be38423af4c337386f	zhanglingfeng	2026-11-11 14:48:50 +0800	docs(注释): 白名单更新（341 行，head=48d73ec8）
+dddb3eeadc2d6b85a1a5f54ef7cd0b39fb9c99a4	zhanglingfeng	2026-11-11 16:24:07 +0800	docs(注释): 白名单（b314 开批前）
+dddb9c31a96bab99fd87dda5ca61e06a2ebc0f80	zhanglingfeng	2026-11-11 17:03:52 +0800	docs(注释): 普查定档每 40 批（下次 b360）+ 47 行收口期 backlog + 1,046 成本区间
+de94bfa7f53ce0872f89372846180274cd5145cc	zhanglingfeng	2026-11-10 18:58:02 +0800	docs(注释): b255 B7 台账 + 收尾断言改判 + 记账断言 (+286)
+deb218dadf86a89a31b880f369bfa7cd73f468ba	zhanglingfeng	2026-11-03 22:41:31 +0800	docs(注释): L2-B7 bootstrap-v4
+df53996699e76414912c618ca67c6d8b970d4790	zhanglingfeng	2026-11-11 03:24:16 +0800	docs(注释): b274 台账补台账提交 sha
+e0060254a6593ffcca49f0cc9ef7e333c7f71b12	zhanglingfeng	2026-10-29 23:58:49 +0800	增加日志记录
+e1a97424bce3b4fe451a67d9c98f0bf56483825f	zhanglingfeng	2026-11-12 18:40:03 +0800	docs(注释): b391 补提交 rewrite.tsv 与 outside-diff.tsv
+e1bb22f97b3a0297ea8916cb6204049e936216db	zhanglingfeng	2026-11-12 20:32:40 +0800	注释清水 b397：20 文件 20 行 1→1 改写（cap20 第 7 批，阈值 173.25） (+20/−20)
+e29a41f213ff3ffd89cbaaa6ebb0d8e766116d62	zhanglingfeng	2026-11-10 14:31:22 +0800	docs(注释): b207–b226 回填提交号与六件套实测 (+460)
+e29e6b3f32e19540e8031f3fa2ac12b89a063739	zhanglingfeng	2026-11-12 18:15:00 +0800	注释清水 b390：10 文件 20 行 1→1 改写 (+20/−20)
+e2b33ee85d863dbba59248ab61058298510a2b36	zhanglingfeng	2026-11-11 03:24:07 +0800	docs(注释): b274 台账（集合断言首用 out_of_scope_edits=0，越界 1 已回滚；total 662.0s / controllable 210.0s / 落笔段 111.2s / tail 4.4s，record_runs=2；池 863 文件 5,425 行）
+e3116a93fdf9de66cf2a45565ff5a52e975170ed	zhanglingfeng	2026-11-10 19:54:57 +0800	b262 改写 (+100/−100)
+e3327c8f01d7e2c4ca617b197dc00e851c137685	zhanglingfeng	2026-11-12 12:41:50 +0800	docs(注释): 词表并为单一真源；hit_rate 改 all-checks 并回算 b353-b365
+e3ae4f13c1ba16382737f154a39abce40e5fda80	zhanglingfeng	2026-11-10 15:36:44 +0800	chore(注释工具): 7975a4486eae 旧副本改名，避免与活尺子同名可执行
+e3d96774887f60c6c14cde7a43d00fd98736a31e	zhanglingfeng	2026-11-10 13:14:31 +0800	注释(desktop): desktopHostProcess.ts b4 — cron/off-peak 结算转发与运行计数（+31 行）
+e408c7f9fc2f52db90dc91389d4f534eab0d996d	zhanglingfeng	2026-11-12 13:09:55 +0800	chore(注释): 白名单重生成 622 行（含 b369 回填提交）
+e449cb2e54a06da68039b644cebbc0c25bf2c9af	zhanglingfeng	2026-11-12 00:04:29 +0800	docs(注释): b336 收口（台账 + 白名单 465 行 + INDEX）
+e54a814c77633d6c9acd3c71999a6bee5430fe8f	zhanglingfeng	2026-11-12 12:28:32 +0800	docs(注释): 回填 b364 计时（104s / 收口 37s）
+e5a0c62fe63baea699c39c9c7070883dc6d14c18	zhanglingfeng	2026-11-12 11:34:37 +0800	注释清水 b356：6 文件 1→1 改写 (+30/−30)
+e5da249728de36e89b2a5f057610093e3474fd3a	zhanglingfeng	2026-11-11 11:38:47 +0800	注释清水 b288：6 文件 1→1 改写 (+90/−90)
+e61bcb23ad8699827641cb1adaa859f1ca746433	zhanglingfeng	2026-11-12 15:21:05 +0800	docs(注释): hit_rate 拆三列（判据/格式/lint）+ 可清随集合报 + allowed=42 定式 + 区间宽度免责 + 双参数估计器
+e649e95f7bffd410e84a4bf939e6273b2fef191d	zhanglingfeng	2026-11-10 22:10:34 +0800	docs(注释): b265 台账与四项口径定稿（权威计数器/三列/uncovered/self-clearing）
+e6654edff8e2af93cf501a1b646fa21117d4c66a	zhanglingfeng	2026-11-10 13:15:56 +0800	注释(desktop): desktopHostProcess.ts b6 — 资源采样、遥测转发、媒体授权与插件沙箱（+56 行）
+e68441400323a946fcf0f425433ee9593cb8928d	zhanglingfeng	2026-11-12 10:18:40 +0800	docs(注释): 5 个散文块定性（570 不变）+ module.c 转义复核 1,316→1,320
+e6ff6fab42ff2261be620203804a6bcfd7ff965e	zhanglingfeng	2026-11-04 00:36:54 +0800	docs(注释): 提交 desktop host 目录纯注释增量
+e7354db1dfad1b685cae42556794d261cfcd7420	zhanglingfeng	2026-11-11 23:42:09 +0800	注释清水 b335：4 文件 1→1 改写 (+33/−33)
+e92ebfd2af3ce46607927a7a0e36d0b1bf645cfc	zhanglingfeng	2026-11-11 23:29:01 +0800	docs(注释): 白名单（b333 开批前，451 行）
+e9ab49451e89c740ce4ac0f732b995849ae60fda	zhanglingfeng	2026-11-11 14:12:28 +0800	docs(注释): b294 台账（98 行全池内 / 首轮 6 条全 W / 无自清，白名单 319 行）
+ea6518ee43e909bccc9d31e23ee1d0ffbe0cdb03	zhanglingfeng	2026-11-12 20:57:54 +0800	docs(注释): b400 前定稿——EOL 判定前置、*_runs 固定字段、阈值换代封顶 1 次、批前校验自测
+ea6c25ff1aaf10247871563e0cf532b8b9a0d97e	zhanglingfeng	2026-11-11 17:24:10 +0800	docs(注释): 回填 b323 批墙钟实测（219s / 5.48 s/行）
+ea942c5de051f1119fb6c815acdf9bae9f362f0d	zhanglingfeng	2026-11-11 14:29:45 +0800	注释清水 b298：7 文件 1→1 改写 (+90/−90)
+eaa331c7ab2f2830b7687a2fbc63c39d5c728092	zhanglingfeng	2026-11-10 17:27:54 +0800	b239 改写 2 文件的水句 (+7/−44)
+eafbe147200f1d2512c15588a8df28f15a653e38	zhanglingfeng	2026-11-12 00:21:11 +0800	docs(注释): 回填 b340 批墙钟实测（184s / 5.94 s/行）
+eb3f5247312a67bcf0327aff82fb51f0de0ea73a	zhanglingfeng	2026-11-11 15:44:24 +0800	docs(注释): 白名单至 73632ef9 + b309 台账 §0（批次外修订 6 处） (+53/−3)
+ebc694e9ba830058b35d419d70657fd3d95070ff	zhanglingfeng	2026-11-12 00:11:32 +0800	注释清水 b338：4 文件 1→1 改写 (+32/−32)
+ebe9ff4e2f45188facf815f8a94b171c11af91d2	zhanglingfeng	2026-11-11 17:45:21 +0800	docs(注释): 回填 b328 批墙钟实测（148s / 3.70 s/行）
+ebef0575b5be4146e2f217b00300ffd54d24ae08	zhanglingfeng	2026-11-12 13:12:27 +0800	docs(注释): b370 收口（6 文件 24 行）+ b368-b370 同形状 s/行 稳定在 4.3 (+24/−24)
+ec04202dc21cbf61a14bc56c2570d9275c472404	zhanglingfeng	2026-11-10 13:01:26 +0800	docs(注释): index.ts b10 台账（+47 行，UNCOVERED 405→358）
+ec4f414d3e983e085f11411ba77190044123e808	zhanglingfeng	2026-11-10 14:14:22 +0800	docs(注释): 全量台账审计 1,300 文件 / 115,870 行未落提交（+1,688/−0）
+ecb131bf0edb3080017c67ab1fb7e86d18302e3d	zhanglingfeng	2026-11-10 00:53:07 +0800	docs(注释): 归档 B228 片 1-5 审计报告与缺陷册更新
+ed03e83a9e16022376edf3f156e26b01b6066347	zhanglingfeng	2026-11-11 10:30:38 +0800	docs(注释): b283 台账 + 白名单重生成（96 行，n=11，矩阵后首批）
+edaf8d21839ed50e643ee6fdb19cc4b90354b436	zhanglingfeng	2026-11-04 00:01:25 +0800	docs(注释): 收尾提交 插件宿主与 dev-docs 纯注释增量
+eddf66ccc7fa42e51b56315fbfbb002186af6019	zhanglingfeng	2026-11-11 17:00:28 +0800	docs(注释): b319 收口（台账 + 白名单 398 行 + INDEX）
+ee6dc6e9a364794377f1ff3c721e567ee2b5de33	zhanglingfeng	2026-11-12 10:30:08 +0800	docs(注释): b349 收口（A 段最后一批）
+ee933d5234c6629b61a9dd6851c579cbceb21c11	zhanglingfeng	2026-11-03 23:02:17 +0800	docs(注释): 补齐被剔除的 contracts/bootstrap-v4 注释改写
+eec79644936a5c760a6936eac9d146a659d94d11	zhanglingfeng	2026-11-12 20:22:18 +0800	docs(注释): b396 台账与文档填数（cap20 第 6 批首轮全绿，阈值 173.25）
+ef382fd6dae43f5e2934519c15144201b3ee70c4	zhanglingfeng	2026-11-11 15:54:20 +0800	docs(注释): 白名单至 b33041fa（b310 开批前） (+5/−3)
+efd81da2a71b83457c14e5734388d8642a71f6b2	zhanglingfeng	2026-11-11 23:28:18 +0800	docs(注释): b332 收口（台账 + 白名单 449 行 + INDEX）
+f06e7c91aefbe320c2a503e4ebebf17bf7287abb	zhanglingfeng	2026-11-12 14:39:48 +0800	注释清水 b376：10 文件 1→1 改写 (+30/−30)
+f0b3a7280bfadee38be3bb20ed267b77cd661f68	zhanglingfeng	2026-11-12 11:57:08 +0800	docs(注释): b359 收口（6 文件 30 行，fix=1）+ INDEX 同步
+f172ae6ac971fcf67a5400fb0489b435897ff084	zhanglingfeng	2026-11-11 04:07:22 +0800	docs(注释): b278 台账与 n=6 口径（越界两列、顺序拦截实测）
+f2ae565a704f4bef37304884e6d07f806aeecbab	zhanglingfeng	2026-11-12 13:06:26 +0800	chore(注释): 白名单重生成 618 行（含 af55d188 b368 回填提交）
+f2ee1ca2ec26e3faea3cc88d9a34891ce7d1adbe	zhanglingfeng	2026-11-11 17:56:09 +0800	docs(注释): b331 收口（台账 + POOL-SELF-CLEAR + 白名单 445 行 + INDEX）
+f311439cbd8736e80860d418373d2009c052e336	zhanglingfeng	2026-11-11 11:34:35 +0800	docs(注释): 新增收口清单（A1 六条件/三条断言/口径作废表/远端三选项）
+f32569828d6540ff429ba824a9736580e318e935	zhanglingfeng	2026-11-11 23:27:17 +0800	注释清水 b332：4 文件 1→1 改写 (+36/−36)
+f3979f41efb5f92044855ffeaae490d5a1845117	zhanglingfeng	2026-11-12 12:35:06 +0800	docs(注释): b365 收口（6 文件 13 行，fix=1，precheck 首跑）+ INDEX 同步
+f3d1459b7ad0997a04a55b103b0ae6634a3689c6	zhanglingfeng	2026-11-12 00:57:57 +0800	docs(注释): 白名单（b346 开批前，508 行）
+f3d21b7c7af502147cef61eefe6ef7fa2f6d6826	zhanglingfeng	2026-11-11 17:51:48 +0800	docs(注释): b330 收口（台账 + 白名单 441 行 + INDEX）
+f3e3cfe3140370932fda78a728ed052b8fbd8293	zhanglingfeng	2026-11-10 20:08:16 +0800	b262 台账：s/文件 作废改按行计价 + 全仓 weak 地板 2,173
+f43c07b2c3238280415373d74164abb4c86482ad	zhanglingfeng	2026-11-11 03:28:06 +0800	chore(注释): 新鲜度三态 + precheck --scope + 分叉快照（禁 merge/rebase/push --force）
+f522d2138c3da2337acb222e6673a0108a7b7c97	zhanglingfeng	2026-11-10 13:00:31 +0800	注释(desktop): index.ts b9 — E2E 强制退出、命令超时包装、Windows 更新前清理（+70 行）
+f537bc52b9b7aa6d0613652764557a3329dd2773	zhanglingfeng	2026-11-12 12:09:26 +0800	docs(注释): b360 收口（6 文件 24 行，fix=2）+ 窗口三项审计全过 + INDEX 同步
+f553827644bed2f07c4186cee4554b713af537b3	zhanglingfeng	2026-11-11 15:34:30 +0800	docs(注释): 句元合并敏感度实测（合并率 42.7%）与口径定死（维持句子级，remain 2,646 不变分母）
+f682e3a878be961b2c93d8865dedcfc8bf8ac53f	zhanglingfeng	2026-11-11 03:50:14 +0800	注释清水 b277：6 文件 1→1 改写 (+100/−100)
+f74a5a4977ce7a41a66f18d2b23f1b4e51f8d94d	zhanglingfeng	2026-11-10 10:31:03 +0800	docs(注释): B228 A4 截图与销毁单元覆盖（逻辑区 55.0%）
+f7bc695bd86e3992123fcb1ccf1f12ca42567d92	zhanglingfeng	2026-11-12 11:46:20 +0800	docs(注释): preflight 增 STALE-EXPECTED 与 total 起点校验；池密度 2.12、78 批 3.5-3.9h；files 拆可清/永不清零
+f7c64e44d2634fe17982a817bd8360a444c082ff	zhanglingfeng	2026-11-10 13:06:58 +0800	docs(注释): index.ts 收口——归属分布、逐批 Δ、分段表与 IPC 通道索引
+f860de78174df66ee058385975342d694b6c14d2	zhanglingfeng	2026-11-11 17:37:30 +0800	docs(注释): 回填 b326 批墙钟实测（164s / 4.10 s/行）
+f868560f43d1b48670acd22fd7d4067f02b90a05	zhanglingfeng	2026-11-11 03:07:26 +0800	docs(annot): b273 注释清水改写 (+100/−100)
+f9270c82cb78bad76d910ef11652ec3ec14ff39b	zhanglingfeng	2026-11-03 23:52:38 +0800	docs(注释): 新增注释覆盖与语法安全核查报告
+f9f4a4cd04a59ec06755ebabee3239a8cb557c6d	zhanglingfeng	2026-11-11 17:04:05 +0800	docs(注释): 白名单（b321 开批前，402 行）
+fa550dc735bc51cd7c42864ce7ff7863002ed9dc	zhanglingfeng	2026-11-12 11:07:00 +0800	docs(注释): b352 收口（6 文件 36 行）+ 白名单 547 + 收口拆解入册
+fa64af7b440cfbbaaf403e259344381fb9f0b060	zhanglingfeng	2026-11-10 18:37:31 +0800	b251 B4 去双前缀 (+68/−68)
+fa8b80f1fb0d4e9b09662538ba807d7ad6ba0342	zhanglingfeng	2026-11-11 23:28:31 +0800	docs(注释): 回填 b332 批墙钟实测（160s / 4.44 s/行）
+face945cfc548db0f6a2382c5580fa8ab416770e	zhanglingfeng	2026-11-12 11:38:23 +0800	注释清水 b357：6 文件 1→1 改写 (+23/−23)
+fb9e504b1414d52b6f0ddf826c0e7dea770fd825	zhanglingfeng	2026-11-03 22:40:04 +0800	docs(注释): L1-A5 工具执行器
+fd39f928033d0de194f94d3ce71e41a46bdece47	zhanglingfeng	2026-11-12 11:57:18 +0800	docs(注释): 回填 b359 计时（170s / 收口 61s）
+fd5f1cdbd5fd4df5b770b90895ff9c2126d122ef	zhanglingfeng	2026-11-12 20:53:48 +0800	注释清水 b399：20 文件 20 行 1→1 改写（cap20 第 9 批，阈值 173.25） (+20/−20)
+fd668bbf5f51776ca3a5e124a9ab712916c00a06	zhanglingfeng	2026-11-12 00:29:08 +0800	docs(注释): b341 收口（台账 + 白名单 485 行 + INDEX）
+fd6dfa8f93fe2fb8895014ee837d684a1dbac0dd	zhanglingfeng	2026-11-11 02:51:43 +0800	docs(annot): b272 注释清水改写 (+100/−100)
+fd77731e919f04fbc96457c505e720ea2b70788b	zhanglingfeng	2026-11-10 12:28:11 +0800	注释(services): oauthCredentialRepo b1 — 覆盖 139/229（60.7%），尾段 clearAll/clearCorrupt 等 18 单元
+fd7c023ce0f5175748608edd818cc2c21f010595	zhanglingfeng	2026-11-11 04:02:43 +0800	注释清水 b278：6 文件 1→1 改写 (+100/−100)
+fd95ba27b7fee87312e2ba9d7505ca6ffde0a0b4	zhanglingfeng	2026-11-12 00:38:26 +0800	docs(注释): b343 收口（台账 + 白名单 493 行 + INDEX）
+fe531d0e5a18372c65e076577f6d084a9d901b22	zhanglingfeng	2026-11-11 16:45:18 +0800	docs(注释): b317 收口（台账 + 白名单 390 行 + INDEX）
+fec0930ba55ab75a9f4cc99d63f47eb08d72d79f	zhanglingfeng	2026-11-12 13:52:20 +0800	注释清水 b372：10 文件 1→1 改写 (+40/−40)
+ff3167eb56a4d0ab50ce7ae5f997156cc8711d48	zhanglingfeng	2026-11-11 15:03:52 +0800	docs(注释): b304 台账（36 行全池内 / 首轮 0 命中 / 无自清，白名单 348 行；apply-run 与 gate-run 上线）
+ff356c8535223fd17b144bbd64df437cfd4c7c9b	zhanglingfeng	2026-11-11 13:43:58 +0800	docs(注释): 白名单更新（305 行，head=5659a316）
+ff8c11843fbf9c905c7a0740890c797f222d7bf6	zhanglingfeng	2026-11-11 14:43:05 +0800	docs(注释): 白名单更新（338 行，head=HEAD）

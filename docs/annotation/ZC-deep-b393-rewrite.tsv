@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/desktop/scripts/mcp-apps-host-fixture/agent.ts	127	a8784b7e	// [契约] 服务端请求全部经 onRequest 分流：运行偏好与权限走对应发射器；未知方法回 32601，不静默吞掉。
+packages/desktop/scripts/mcp-apps-host-fixture/chain-combinations.ts	178	a8784b7e	// [并发] cancel 与 release 同轮发出：终态由 ack.cancelled 反推；两个断言必须互补，不假设谁先到达。
+packages/desktop/scripts/mcp-apps-host-fixture/widget.tsx	154	a8784b7e	// [边界] receivedFeed.input 只登记 sequence 序号，不在回调里校验：夹具要观测宿主原样行为。
+packages/desktop/src/renderer/src/desktopPlatform.ts	106	a8784b7e	// [权衡] openCuaPermissionOnboarding 用条件表达式而非可选链兜底：上层靠方法是否存在判断系统能力。
+packages/desktop/src/renderer/src/main.tsx	207	a8784b7e	// [资源] installDocumentHiddenMotionPause 在 createRoot 前注册，首帧前生效；窗口隐藏即停动画；DocumentTimeline 不再持有已卸载子树。
+packages/desktop/src/renderer/src/plugin-sandbox/relay.ts	136	a8784b7e	// [契约] 首帧只接受唯一一个 MessagePort：缺端口或多于一个都按协议错误处理，直接 showError 并返回。
+packages/e2e-report/src/viewer/ChartPanels.tsx	168	a8784b7e	// [权衡] combineSeries 只按 points.length > 0 过滤：不校验数值有效性，脏数据留给坐标轴格式化兜底。
+packages/formal-proof/src/model.ts	716	a8784b7e	// [顺序] 系统事件分支先返回：进入 evaluate 后不会再落回用户动作或 phase 分支，新增 kind 必须在入口显式列出。
+packages/model-option-map/src/parser.ts	246	a8784b7e	// [权衡] Object.freeze 只冻结容器不深拷贝元素：元素构造后无写入点，深拷贝的代价换不到任何不变性。
+packages/provider/src/config/provider-data-schema.ts	111	a8784b7e	// [契约] modelIdsDataSchema 同时用于 builtinModelIds 与 personalModelIds：readonly 禁就地改写，nullable 与 optional 兼容缺省配置。
+packages/rpc/src/channelClient.ts	341	a8784b7e	// [顺序] _onDidInitialize.dispose() 放在最后：先前已拒掉 pendingRejections 并清空 activeRequests；握手等待者可能静默挂起，属已知取舍。
+packages/rpc/src/channelServer.ts	115	a8784b7e	// [边界] 跨版本兜底：旧端收到新请求类型回请求错误而非崩溃，request.method 未登记就走兜底分支。
+packages/server/src/http.ts	418	a8784b7e	// [边界] 布尔变量只决定是否调用 app.get 注册路由；注册与否不改变已有路由的匹配结果。
+packages/server/src/remote/remoteAssetCache.ts	1112	a8784b7e	// [权衡] remoteAssetComponentLocks 内再查一次命中：拿锁前可能等过别人的下载；等待期间目录补齐就直接返回，省掉整轮下载。
+packages/server/src/remote/zcodeAgentDeploy.ts	167	a8784b7e	// [契约] requiredRelativePaths 保留完整清单而非首个缺口：跳过判定处能一次列出所有缺失文件，避免逐个重试。
+packages/services/src/bigmodel/codingPlanEntitlement.ts	116	a8784b7e	// [边界] 列表混有无关商品：单条脏数据只跳过本条，不遮蔽后续 product 上的有效订阅。
+packages/services/src/bots/bots.ts	200	a8784b7e	// [边界] listBots 返回值不含凭据明文：密钥只经 saveBot 与测试入口使用，UI 与日志拿不到。
+packages/services/src/bots/channelMentionResolver.ts	24	a8784b7e	// [契约] MAX_CANDIDATES = 10 与卡片展示能力对齐：超过上限就转澄清提问，不无限展开候选列表。
+packages/services/src/bots/groupAdminAttention.ts	35	a8784b7e	// [契约] scope 键 = botId + chatId + threadId + owner 的 JSON：同群不同话题各算一条提醒，互不吞并。
+packages/services/src/bots/messages.ts	57	a8784b7e	// [契约] help 文案的排列顺序与 bots/commandOrder 一致：两处口径漂移会让菜单与命令提示对不上。

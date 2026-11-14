@@ -1,0 +1,34 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/adapters/src/exec/execution-command.ts	67	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// buildExecutionEnv 默认从 process.env 复制，不原地修改原对象。
+apps/zcode-cli/packages/adapters/src/exec/execution-command.ts	68	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// overlay.base === "empty" 时跳过继承与清洗。
+apps/zcode-cli/packages/adapters/src/exec/execution-command.ts	69	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 文本编码在 applyNetworkEgressEnv 之前注入。
+apps/zcode-cli/packages/adapters/src/exec/execution-command.ts	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// overlay 的 unset 删除先于 set 设置。
+apps/zcode-cli/packages/adapters/src/exec/execution-command.ts	223	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// setResolvedShellLoginMode 只处理 shell === false 且带 usesLoginShell 的形态。
+apps/zcode-cli/packages/adapters/src/exec/execution-command.ts	224	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 命令行取 args.at(-1) 末位。
+apps/zcode-cli/packages/adapters/src/exec/execution-command.ts	225	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 重组 args 时按 useLoginShell 决定是否保留 -l 参数。
+apps/zcode-cli/packages/adapters/src/exec/execution-command.ts	243	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// usesLoginShell 形态保留 -l 标志只换 args 末位。
+apps/zcode-cli/packages/cli/src/plugins-command-format.ts	42	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 调用方决定写 stdout 还是 stderr，formatDiagnosticLines 只负责拼接。
+apps/zcode-cli/packages/cli/src/plugins-command-format.ts	48	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// pluginId 与 path 都可缺失，缺失时不留下空括号。
+apps/zcode-cli/packages/cli/src/plugins-command-format.ts	49	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 格式固定为 - [severity] pluginId code: message (path)。
+apps/zcode-cli/packages/cli/src/plugins-command-format.ts	50	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// severity 原样输出不做本地化，保持脚本可匹配。
+apps/zcode-cli/packages/cli/src/plugins-command-format.ts	82	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// version 缺失时不留空格占位。
+apps/zcode-cli/packages/cli/src/plugins-command-format.ts	84	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// description 缩进一行，缺省则整行省略。
+apps/zcode-cli/packages/cli/src/plugins-command-format.ts	96	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// marketplaces 为空列表时同样早退。
+apps/zcode-cli/packages/cli/src/plugins-command-format.ts	117	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 没有 locator 时只输出 kind 类型名。
+packages/shared/src/cloudContent.ts	26	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// class 与 style 各自限长 512。
+packages/shared/src/cloudContent.ts	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// url 禁止内嵌 username 与 password。
+packages/shared/src/cloudContent.ts	121	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// cloudContentPayloadSchema 顶层字段全量声明。
+packages/shared/src/cloudContent.ts	122	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// dialog.buttons 最多四个。
+packages/shared/src/cloudContent.ts	123	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// actions 表最多十六项。
+packages/shared/src/cloudContent.ts	152	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// button.id 必须唯一。
+packages/shared/src/cloudContent.ts	153	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// button.actionId 必须指向已声明动作。
+packages/shared/src/cloudContent.ts	154	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 违规逐条 addIssue 记录问题。
+packages/ui/src/v4/telemetry/useSessionOpenArmsTelemetry.ts	37	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// SESSION_OPEN_TIMEOUT_MS 触顶后按兜底结果结算，不抛错也不重试。
+packages/ui/src/v4/telemetry/useSessionOpenArmsTelemetry.ts	49	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// now() 优先用 performance.now 高精度计时，环境缺失时回退 Date.now。
+packages/ui/src/v4/telemetry/useSessionOpenArmsTelemetry.ts	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 无 requestAnimationFrame 时退化为 setTimeout，保持同一回调契约。
+packages/ui/src/v4/telemetry/useSessionOpenArmsTelemetry.ts	75	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// errorCodeFromMessage 只接受 fault.* 标准形态，带括号的尾注也提取。
+packages/ui/src/v4/telemetry/useSessionOpenArmsTelemetry.ts	85	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// runtime.finished 已结算直接返回，保证一次打开只上报一次。
+packages/ui/src/v4/telemetry/useSessionOpenArmsTelemetry.ts	86	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 非 cold 启动不携带 openTiming 阶段耗时，避免混入上一次数据。
+packages/ui/src/v4/telemetry/useSessionOpenArmsTelemetry.ts	87	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 总耗时以 now() 单调差值计算并夹紧到零。
+packages/ui/src/v4/telemetry/useSessionOpenArmsTelemetry.ts	187	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// identity 变化时重建 runtimeRef 运行时并重新计时。
+packages/ui/src/v4/telemetry/useSessionOpenArmsTelemetry.ts	195	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resolvedOpenKind 推断只影响归因，不改变订阅行为。

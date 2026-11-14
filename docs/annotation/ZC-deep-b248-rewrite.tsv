@@ -1,0 +1,69 @@
+file	baseLine	blame	content
+packages/ui/src/store/offPeakTaskStore.ts	167	a8784b7e479d3a	// // [并发] 下面这几个模块级变量是 zustand state 之外的准入协调层，不放进 store：
+packages/ui/src/store/offPeakTaskStore.ts	168	a8784b7e479d3a	// // 写它们必须与订阅通知同序，而 set 每写一次都会触发订阅者重算选择器。
+packages/ui/src/store/offPeakTaskStore.ts	169	a8784b7e479d3a	// // [权衡] 若把在途 Promise 塞进 state，置空那一刻就通知一遍订阅者，
+packages/ui/src/store/offPeakTaskStore.ts	170	a8784b7e479d3a	// // 且 React 渲染批次无法保证「清空」与「下一次触发」的先后，去重会漏。
+packages/ui/src/store/offPeakTaskStore.ts	171	a8784b7e479d3a	// // initializeInFlight 只覆盖 initialize，eligibilityInFlight 只覆盖资格查询，不可合并：
+packages/ui/src/store/offPeakTaskStore.ts	172	a8784b7e479d3a	// // initialize 内部要 await 资格查询，合并后它会等待自身，入口直接死锁。
+packages/ui/src/store/offPeakTaskStore.ts	173	a8784b7e479d3a	// // [失败路径] 两者都靠 finally 复位，任何绕过 finally 的出口都会永久锁死入口；
+packages/ui/src/store/offPeakTaskStore.ts	174	a8784b7e479d3a	// // 复位时同时比对持有者身份，避免旧一轮清掉新一轮的句柄。
+packages/ui/src/store/offPeakTaskStore.ts	201	a8784b7e479d3a	// // [并发] 灰度配置与任务列表并行发起，二者互不依赖，串行会把首屏拖成两次往返。
+packages/ui/src/store/offPeakTaskStore.ts	202	a8784b7e479d3a	// // 两路都就地兜底成空值：灰度拉不到只影响入口可见性，列表拉不到只影响首屏行数，
+packages/ui/src/store/offPeakTaskStore.ts	203	a8784b7e479d3a	// // 任一失败都不该让 initialize 拒绝，否则 loading 永远停在真。
+packages/ui/src/store/offPeakTaskStore.ts	204	a8784b7e479d3a	// // [失败路径] 降级后界面呈现「未启用 / 无任务」，这是有意的静默：
+packages/ui/src/store/offPeakTaskStore.ts	205	a8784b7e479d3a	// // 此处拿不到区分「服务不可用」与「确实没有数据」的依据，
+packages/ui/src/store/offPeakTaskStore.ts	206	a8784b7e479d3a	// // 强行报错会把一次网络抖动展示成产品故障。
+packages/ui/src/store/offPeakTaskStore.ts	207	a8784b7e479d3a	// // 这条链的 set 只写 grayConfig 与 tasks，不碰 support 与额度：
+packages/ui/src/store/offPeakTaskStore.ts	208	a8784b7e479d3a	// // 两处 set 若都写同一批字段，中间态会出现「有任务但支持度未知」的组合被下游读到。
+packages/ui/src/store/offPeakTaskStore.ts	223	a8784b7e479d3a	// // run 必须先取到 Promise 再登记为在途。refreshCodingPlanSupport 是同步函数，
+packages/ui/src/store/offPeakTaskStore.ts	224	a8784b7e479d3a	// // 进入它时内部已经把自己的在途句柄设好，这里的单飞分支若先登记就会误判「已在途」，
+packages/ui/src/store/offPeakTaskStore.ts	225	a8784b7e479d3a	// // initialize 的 finally 也就会把 loading 归零在真正完成之前。
+packages/ui/src/store/offPeakTaskStore.ts	226	a8784b7e479d3a	// // [并发] 这里不 await 而直接赋给 initializeInFlight，是为了让并发的第二个 initialize
+packages/ui/src/store/offPeakTaskStore.ts	227	a8784b7e479d3a	// // 在第一次 await 之前就命中提前返回，而不是各自跑完一轮再撞车。
+packages/ui/src/store/offPeakTaskStore.ts	228	a8784b7e479d3a	// // [失败路径] finally 里必须比对 initializeInFlight === run 才复位：
+packages/ui/src/store/offPeakTaskStore.ts	229	a8784b7e479d3a	// // 若中途被新一轮替换，旧轮不得清空 loading，也不得清掉新轮的句柄。
+packages/ui/src/store/offPeakTaskStore.ts	260	a8784b7e479d3a	// // [权衡] 去重键取 service 引用加通知方给的 freshnessKey，而不是比凭证内容：
+packages/ui/src/store/offPeakTaskStore.ts	261	a8784b7e479d3a	// // renderer 侧只有脱敏快照，比内容既判断不出「变了」也判断不出「没变」，
+packages/ui/src/store/offPeakTaskStore.ts	262	a8784b7e479d3a	// // 把「什么算同一次变更」交给知道变更来源的一侧判定，才可能稳定。
+packages/ui/src/store/offPeakTaskStore.ts	263	a8784b7e479d3a	// // freshnessKey 为 undefined 表示手动刷新，此时写入 null 而不是一条空键记录，
+packages/ui/src/store/offPeakTaskStore.ts	264	a8784b7e479d3a	// // 否则下一次同键的自动通知会误命中「刚查过」而跳过，
+packages/ui/src/store/offPeakTaskStore.ts	265	a8784b7e479d3a	// // 而手动刷新又把状态固定住，用户会看到「刷了但没变」。
+packages/ui/src/store/offPeakTaskStore.ts	266	a8784b7e479d3a	// // [并发] 该变量只在 refreshCodingPlanSupport 的同步段读写，
+packages/ui/src/store/offPeakTaskStore.ts	267	a8784b7e479d3a	// // 异步部分全部走代号校验，不依赖这个键的时效性。
+packages/ui/src/store/offPeakTaskStore.ts	279	a8784b7e479d3a	// // [并发] 串行 drain：同一时刻只有一个循环在跑，新触发只更新待办 service 与代号，
+packages/ui/src/store/offPeakTaskStore.ts	280	a8784b7e479d3a	// // 由当前循环在下一轮消化，N 次通知被压成至多两次 RPC 往返。
+packages/ui/src/store/offPeakTaskStore.ts	281	a8784b7e479d3a	// // 用 Promise.resolve 起步而不是立即执行函数，保证返回前句柄已经赋值，
+packages/ui/src/store/offPeakTaskStore.ts	282	a8784b7e479d3a	// // 否则并发的第二次调用会看到 null 再起一个循环，两个循环互相覆盖状态。
+packages/ui/src/store/offPeakTaskStore.ts	283	a8784b7e479d3a	// // [事务] 每轮先在本地取走 service 与代号、再清空待办：
+packages/ui/src/store/offPeakTaskStore.ts	284	a8784b7e479d3a	// // 中途到达的新触发写入待办并在本轮结束后被接走，既不丢也不重复。
+packages/ui/src/store/offPeakTaskStore.ts	285	a8784b7e479d3a	// // 三处代号比对分别挡住「await 前已被取代」「支持度回来时已被取代」「额度回来时已被取代」，
+packages/ui/src/store/offPeakTaskStore.ts	286	a8784b7e479d3a	// // 漏掉任意一处，旧一代的完整结果就会覆盖新连接的状态。
+packages/ui/src/store/offPeakTaskStore.ts	302	a8784b7e479d3a	// // [权衡] 仅在灰度启用且（套餐已激活或凭证受支持）时读额度：
+packages/ui/src/store/offPeakTaskStore.ts	303	a8784b7e479d3a	// // 未启用时该 RPC 在宿主侧必然失败，每次都打只会刷满失败日志并拖慢首屏；
+packages/ui/src/store/offPeakTaskStore.ts	304	a8784b7e479d3a	// // 而把它当成 0 又会伪装成「额度已用完」，所以宁可不读、状态回 idle。
+packages/ui/src/store/offPeakTaskStore.ts	305	a8784b7e479d3a	// // idle 与 error 的区别是语义的：前者表示「无需读」，后者表示「读过但坏了」，
+packages/ui/src/store/offPeakTaskStore.ts	306	a8784b7e479d3a	// // 两者的 UI 表现相同（都禁入），日志里靠 warning 原文区分。
+packages/ui/src/store/offPeakTaskStore.ts	307	a8784b7e479d3a	// // [失败路径] 支持度失败与额度失败共用同一个 catch，均归为 error：
+packages/ui/src/store/offPeakTaskStore.ts	308	a8784b7e479d3a	// // 对用户的后果一致，多分一个分支只会多一条无法处置的提示路径。
+packages/ui/src/store/offPeakTaskStore.ts	340	a8784b7e479d3a	// // 创建是非幂等取号，因此 store 内不做自动重试：一次点击对应一次票据申请，
+packages/ui/src/store/offPeakTaskStore.ts	341	a8784b7e479d3a	// // 自动重试会把额度消耗放大，用户看到的是「只点一次却扣了多张」。
+packages/ui/src/store/offPeakTaskStore.ts	342	a8784b7e479d3a	// // [事务] 成功路径必须先把列表刷完再返回：调用方拿到 ok 时列表里要已有这条任务，
+packages/ui/src/store/offPeakTaskStore.ts	343	a8784b7e479d3a	// // 否则新建后跳转详情会找不到 id。列表与额度读的是不同 RPC，用并发发出。
+packages/ui/src/store/offPeakTaskStore.ts	344	a8784b7e479d3a	// // [失败路径] 业务失败与传输失败是两条路径，但都必须作废额度快照：
+packages/ui/src/store/offPeakTaskStore.ts	345	a8784b7e479d3a	// // 失败恰恰证明上一份准入已过期，继续沿用会让用户连点连败。
+packages/ui/src/store/offPeakTaskStore.ts	346	a8784b7e479d3a	// // 入参 permissionMode 的取值收窄放在服务端，store 只透传，
+packages/ui/src/store/offPeakTaskStore.ts	347	a8784b7e479d3a	// // 避免枚举在两端各写一份而慢慢分叉。
+packages/ui/src/store/offPeakTaskStore.ts	354	a8784b7e479d3a	// // ok 为真时 result 里带着新任务标识，但 store 不把它拼进 tasks 而要整表重拉：
+packages/ui/src/store/offPeakTaskStore.ts	355	a8784b7e479d3a	// // 位次是全局排队序，本地插入必然与其他任务的名次冲突。
+packages/ui/src/store/offPeakTaskStore.ts	356	a8784b7e479d3a	// // [并发] 刷新期间 operationId 仍是 create，按钮据此继续禁用提交，
+packages/ui/src/store/offPeakTaskStore.ts	357	a8784b7e479d3a	// // 二次取号被挡在 store 层而不是靠 UI 自觉。
+packages/ui/src/store/offPeakTaskStore.ts	358	a8784b7e479d3a	// // 若把这两次刷新挪到 finally 之后，operationId 会先归零，
+packages/ui/src/store/offPeakTaskStore.ts	359	a8784b7e479d3a	// // 刷新窗口里按钮已可点击，连点就会发出两个创建请求。
+packages/ui/src/store/offPeakTaskStore.ts	360	a8784b7e479d3a	// // 成功返回的 result 原样给调用方，用于跳转与埋点，store 不复制其中的字段。
+packages/ui/src/store/offPeakTaskStore.ts	442	a8784b7e479d3a	// // [事务] 取消与暂停、继续、删除共用同一形状：先置 operationId、再发 RPC、
+packages/ui/src/store/offPeakTaskStore.ts	443	a8784b7e479d3a	// // 成功后整表重拉、finally 复位。顺序不能改：先刷新后置锁会让刷新窗口内的
+packages/ui/src/store/offPeakTaskStore.ts	444	a8784b7e479d3a	// // 反向操作（取消后立刻继续）按到达顺序被服务端定终态，
+packages/ui/src/store/offPeakTaskStore.ts	445	a8784b7e479d3a	// // 而本地列表已按第一个结果渲染，出现「界面已取消、实际仍在跑」。
+packages/ui/src/store/offPeakTaskStore.ts	446	a8784b7e479d3a	// // [失败路径] catch 只写 error 不重试：这些操作由用户显式再点一次重试，
+packages/ui/src/store/offPeakTaskStore.ts	447	a8784b7e479d3a	// // store 内自动重试会把取消与完成的竞态放大成重复取消，
+packages/ui/src/store/offPeakTaskStore.ts	448	a8784b7e479d3a	// // 而终态迁移是单向的，重复取消会污染已经落定的历史记录。

@@ -1,0 +1,26 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/core/src/runtime/methods/steering.ts	115	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// hasSteerInput 会同时检查 input、attachments 与 conversationQuotes，任一为真则返回 true。
+apps/zcode-cli/packages/core/src/runtime/methods/steering.ts	140	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// inputSize 只按 measureUtf8Bytes(request.input) 统计正文，不含附件体积。
+apps/zcode-cli/packages/core/src/runtime/methods/steering.ts	349	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// enqueueDeferredInput 是无活跃轮次时的排队入口，下一次真正开轮时再消费。
+apps/zcode-cli/packages/core/src/runtime/methods/steering.ts	1260	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] beforePendingInputId 不存在时退回队尾，而不是丢项。
+apps/zcode-cli/packages/core/src/runtime/methods/steering.ts	1781	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 只把 admitted 结算成 discarded，不会删除账本，保留「这条输入去哪了」的痕迹。
+apps/zcode-cli/packages/core/src/runtime/methods/steering.ts	1826	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [资源] pendingByTurn 的构造是重启期一次性开销，数量与残留输入条数成正比。
+apps/zcode-cli/packages/debug/server/analyzer.ts	427	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	//   无候选 + 有时间 -> 直接采用 summary.firstUserMessage；
+apps/zcode-cli/packages/debug/server/analyzer.ts	429	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	//   有候选 + 新候选更早 -> 用新值替换 summary.firstUserMessageAt；
+apps/zcode-cli/packages/debug/server/analyzer.ts	521	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// buildTimeline 最后统一倒序：最新的在最上面，at 缺失的排最后。
+apps/zcode-cli/packages/debug/server/analyzer.ts	602	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// timelineFromDbMessage 让 traceId/turnId 保持 undefined，前端据此区分「无归因」与「归因到空」。
+apps/zcode-cli/packages/debug/server/analyzer.ts	1459	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// cacheLimitations 的三条文案互不排斥，可以同时出现。
+apps/zcode-cli/packages/debug/server/analyzer.ts	1853	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 标题来自系统提示，是自然语言，categorizeSection 不能假设只有英文。
+packages/shared/src/task-realtime.ts	97	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// TaskStreamMirrorBatchEvent 的 ops 携带 fromSeq..toSeq 连续区间，前端据此检测缺口。
+packages/shared/src/task-realtime.ts	98	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// terminal 为真表示该 runId 不再有新批次。
+packages/shared/src/task-realtime.ts	99	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ownerClientId 与 ownerDeviceLabel 用于回显来源设备。
+packages/shared/src/task-realtime.ts	118	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// TaskRunLeaseTarget 与 TaskStreamMirrorTarget 同构，单独命名只为语义清晰。
+packages/shared/src/task-realtime.ts	139	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// TaskOwnerCommandRequest 是闭合联合，新增命令必须同步消费方。
+packages/shared/src/task-realtime.ts	140	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 每条命令自带 commandRequestId，重复投递按幂等处理。
+packages/shared/src/task-realtime.ts	141	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 权限与征询命令分别带 permissionRequestId 与 elicitationRequestId，由宿主编排回复。
+packages/ui/src/ModelConfigSelect.tsx	350	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] expandedWidth 取自打开瞬间按钮的 getBoundingClientRect 宽度，关闭即清空。
+packages/ui/src/ModelConfigSelect.tsx	373	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 只看 composerOptions 是否有分组，不检查分组内是否真的存在可选模型。
+packages/ui/src/ModelConfigSelect.tsx	422	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 非合并入口 composerOptions 为空，不锁宽也不测量，省一次布局读取。
+packages/ui/src/ModelConfigSelect.tsx	641	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] options.length 为 0 即不渲染头部，由调用方决定是否退化为纯标签。
+packages/ui/src/ModelConfigSelect.tsx	730	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 高速档由 isGlmHighspeedModel 按模型 name 判定，查找范围是 modelGroups 全部 items。
+packages/ui/src/ModelConfigSelect.tsx	731	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 当前值找不到模型时 name 传空串，isGlmHighspeedModel 需能安全处理空值。

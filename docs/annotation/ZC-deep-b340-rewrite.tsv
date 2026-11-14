@@ -1,0 +1,32 @@
+file	baseLine	blame	content
+packages/ui/src/app-shell/types.ts	210	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// AppProps 的必选回调缺失属装配错误，应在启动期暴露而非点击时崩溃。
+packages/ui/src/app-shell/types.ts	215	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// AppProps 只暴露 IServiceAccessor，不泄漏实现类型以保持跨入口可编译。
+packages/ui/src/app-shell/types.ts	274	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// WorkspaceMainView 是有限字面量集合，新增值必须同时补齐导航与持久化。
+packages/ui/src/app-shell/types.ts	275	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 切换 WorkspaceMainView 不销毁会话，只改壳层渲染分支。
+packages/ui/src/app-shell/types.ts	276	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 缺省 WorkspaceMainView 由调用方决定，此处不预设顺序。
+packages/ui/src/app-shell/types.ts	283	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// toggleSidebarShortcutLabel 等标签由平台层格式化，壳层不拼接按键。
+packages/ui/src/app-shell/types.ts	285	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isSidebarVisible 与 isTerminalOpen 是受控布尔，壳层不维护本地副本。
+packages/ui/src/settings/saved-workflows/SavedWorkflowRunHistoryPanel.tsx	42	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// canOpen 决定「查看实例」入口是否出现。
+packages/ui/src/settings/saved-workflows/SavedWorkflowRunHistoryPanel.tsx	105	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// canOpenRun 先短路，未开启时不必再看会话标识。
+packages/ui/src/settings/saved-workflows/SavedWorkflowRunHistoryPanel.tsx	106	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// parentSessionId 与 toolCallId 必须成对。
+packages/ui/src/settings/saved-workflows/SavedWorkflowRunHistoryPanel.tsx	107	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resolveRunProject 存在时还要求 project.canOpen 为真。
+packages/ui/src/settings/saved-workflows/SavedWorkflowRunHistoryPanel.tsx	108	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 三者同时成立时 openable 才为真。
+packages/ui/src/settings/saved-workflows/SavedWorkflowRunHistoryPanel.tsx	122	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// switch (kind) 的四个分支各自绑定 icon 与 statusClass。
+packages/ui/src/settings/saved-workflows/SavedWorkflowRunHistoryPanel.tsx	123	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 未知 kind 落到 default 的中性配色。
+packages/ui/src/settings/saved-workflows/SavedWorkflowRunHistoryPanel.tsx	124	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// statusClass 只取 text-success 这类语义令牌。
+packages/ui/src/v4/V4ChatPane.tsx	77	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// openTrigger 只影响埋点归因，不改变打开行为。
+packages/ui/src/v4/V4ChatPane.tsx	87	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// gitSummary 为空时下层不展示评审入口。
+packages/ui/src/v4/V4ChatPane.tsx	113	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// conversationFindQuery 为空时默认不启用搜索态。
+packages/ui/src/v4/V4ChatPane.tsx	128	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 外层用 V4ConversationProvider 包上下文，内层固定单一面板。
+packages/ui/src/v4/V4ChatPane.tsx	129	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// paneId 固定为 workspace-main，保证会话归属稳定。
+packages/ui/src/v4/V4ChatPane.tsx	130	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// unavailableFallback 与断线横幅由 Provider 统一注入。
+packages/ui/src/v4/V4ChatPane.tsx	131	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 其余 props 原样透传给会话面板，不做二次解释。
+packages/ui/src/v4/V4ChatPane.tsx	182	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 两者由 V4ConversationProvider 决定何时展示。
+packages/ui/src/v4/composer/useDraftModelReadinessGate.ts	94	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// current.scope 不等于 scope 时直接丢弃旧结果。
+packages/ui/src/v4/composer/useDraftModelReadinessGate.ts	95	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// revealMissing 为真时清除 dismissed 标记。
+packages/ui/src/v4/composer/useDraftModelReadinessGate.ts	96	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 同类 missing 沿用既有的 dismissed。
+packages/ui/src/v4/composer/useDraftModelReadinessGate.ts	97	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 其它 status 一律把 dismissed 置假。
+packages/ui/src/v4/composer/useDraftModelReadinessGate.ts	170	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// !enabled 时 ensureReadyForSend 直接返回 true。
+packages/ui/src/v4/composer/useDraftModelReadinessGate.ts	171	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 发送前重新 await getView 拿最新选择。
+packages/ui/src/v4/composer/useDraftModelReadinessGate.ts	172	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// status 为 missing 时更新状态并返回 false。
+packages/ui/src/v4/composer/useDraftModelReadinessGate.ts	173	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// getView 抛错时回落主机门禁判定。

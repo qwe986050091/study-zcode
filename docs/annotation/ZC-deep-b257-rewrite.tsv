@@ -1,0 +1,100 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/tui/src/app-events.ts	60	a8784b7e479d3a	// // [状态] 这里只声明依赖，不创建状态：所有 setter 由父层传入，本模块拿到的是写入通道而不是数据本身。
+apps/zcode-cli/packages/tui/src/app-events.ts	61	a8784b7e479d3a	// // 新增字段时必须同步父层注入点，漏注入会在第一个用到它的事件上读到 undefined。
+apps/zcode-cli/packages/tui/src/app-events.ts	62	a8784b7e479d3a	// // 带 ? 的 setter 表示宿主可降级：缺 setModifiedFiles 就不显示 diff，缺 setQueuedInputs 就不刷排队条。
+apps/zcode-cli/packages/tui/src/app-events.ts	63	a8784b7e479d3a	// // [并发] assistantMessageIdsByToolCallId 与 toolNamesById 是跨事件可变 Map，生命周期必须覆盖整个 session。
+apps/zcode-cli/packages/tui/src/app-events.ts	64	a8784b7e479d3a	// // 若每次事件新建 Map，流式与工具卡会丢关联，表现为同一工具出现重复气泡或状态栏丢工具名。
+apps/zcode-cli/packages/tui/src/app-events.ts	65	a8784b7e479d3a	// // workspaceDirectory 只用于结果路径归一化，缺失时统计走原始路径，跨平台分隔符可能对不上。
+apps/zcode-cli/packages/tui/src/app-events.ts	109	a8784b7e479d3a	// // [入口] 分发函数无状态、无缓存：同一事件重复投递得到同一状态，重放安全的前提是不在这里做累加。
+apps/zcode-cli/packages/tui/src/app-events.ts	110	a8784b7e479d3a	// // payload 先经 asRecord 归一化，后面所有 reducer 都只面对 Record 形态，不需要各自判空。
+apps/zcode-cli/packages/tui/src/app-events.ts	111	a8784b7e479d3a	// // [失败路径] copy 缺省用 DEFAULT_TUI_COPY 兜底，保证文案键缺失不抛错，只会回退英文。
+apps/zcode-cli/packages/tui/src/app-events.ts	112	a8784b7e479d3a	// // 分支顺序本身无副作用，但同类事件必须相邻：TurnError 与 ModelError 共用一段，避免两处逻辑漂移。
+apps/zcode-cli/packages/tui/src/app-events.ts	113	a8784b7e479d3a	// // [权衡] 巨型 switch 比映射表更好读：每个 case 的写入序列要能被一次扫读确认。
+apps/zcode-cli/packages/tui/src/app-events.ts	114	a8784b7e479d3a	// // 新增分支只允许调用 setter 或同目录 reducer，禁止在此等待任何异步操作。
+apps/zcode-cli/packages/tui/src/app-events.ts	115	a8784b7e479d3a	// // 状态写入是有序的：setStatus 与 setActiveTurnId 的先后影响渲染帧，改动前先确认 UI 取值时机。
+apps/zcode-cli/packages/tui/src/app-events.ts	144	a8784b7e479d3a	// // [事务] 压缩期的 turn 错误必须同时落到压缩卡与全局错误，只写一半会让卡片停在 running。
+apps/zcode-cli/packages/tui/src/app-events.ts	145	a8784b7e479d3a	// // turnPhase 是唯一的阶段判据：不要用文案或错误码猜阶段，压缩失败与普通轮次失败的用户处置不同。
+apps/zcode-cli/packages/tui/src/app-events.ts	146	a8784b7e479d3a	// // 压缩分支里的 break 不能省：落到下面的普通分支会追加第二条错误气泡，转录出现重复。
+apps/zcode-cli/packages/tui/src/app-events.ts	147	a8784b7e479d3a	// // [失败路径] 两条分支都清空排队输入：本轮已死，残留待发会在下一轮被误执行。
+apps/zcode-cli/packages/tui/src/app-events.ts	148	a8784b7e479d3a	// // 压缩失败用 copy.status.compactFailed，普通失败用 turnFailed，混用会让用户误判可重试性。
+apps/zcode-cli/packages/tui/src/app-events.ts	149	a8784b7e479d3a	// // 若后续新增压缩子阶段，判据仍收敛在 turnPhase，不要在别处再分叉。
+apps/zcode-cli/packages/tui/src/app-events.ts	284	a8784b7e479d3a	// // [并发] workflow 镜像走外部 setter，事件顺序由服务端保证；本模块只转发，不排序也不合并。
+apps/zcode-cli/packages/tui/src/app-events.ts	285	a8784b7e479d3a	// // 这个 case 是显式登记的样板：新事件若只加协议不加 case，会被默认分支静默吞掉。
+apps/zcode-cli/packages/tui/src/app-events.ts	286	a8784b7e479d3a	// // 兜底分支必须保持空实现：任何兜底日志或提示都会在版本错配时刷屏。
+apps/zcode-cli/packages/tui/src/app-events.ts	287	a8784b7e479d3a	// // [权衡] 静默忽略换来向前兼容，代价是漏 case 只能靠新增事件时的检查清单发现。
+apps/zcode-cli/packages/tui/src/app-events.ts	288	a8784b7e479d3a	// // 排查状态不更新时，先确认事件类型是否已在 switch 中登记，再怀疑 reducer 内部。
+apps/zcode-cli/packages/tui/src/app-events.ts	289	a8784b7e479d3a	// // 分支末尾统一 break，避免 fallthrough 让两个事件类型互相污染状态。
+apps/zcode-cli/packages/tui/src/app-events.ts	464	a8784b7e479d3a	// // [失败路径] 非 TodoWrite 直接返回：其他工具的输出不是 todo 结构，解析只会白费并可能抛错。
+apps/zcode-cli/packages/tui/src/app-events.ts	465	a8784b7e479d3a	// // 完成态在返回前已写入，因此提前 return 不会让状态栏停在 running。
+apps/zcode-cli/packages/tui/src/app-events.ts	466	a8784b7e479d3a	// // 只有 content 是非空字符串才尝试解析 JSON，缺失时保持既有 todos。
+apps/zcode-cli/packages/tui/src/app-events.ts	467	a8784b7e479d3a	// // [权衡] 解析失败静默吞掉是刻意的：工具输出非 JSON 是常态，报错只会污染转录。
+apps/zcode-cli/packages/tui/src/app-events.ts	468	a8784b7e479d3a	// // 整批校验通过才替换：部分更新会让列表增删跳动，用户无法判断是模型改的还是渲染错。
+apps/zcode-cli/packages/tui/src/app-events.ts	469	a8784b7e479d3a	// // todos 的字段校验在 parseTodoItem，非法项被过滤后长度不等即整体放弃。
+apps/zcode-cli/packages/tui/src/app-events.ts	470	a8784b7e479d3a	// // 若将来支持多工具写 todo，判据要改成能力标记而非工具名字面量。
+apps/zcode-cli/packages/tui/src/app-events.ts	500	a8784b7e479d3a	// // [并发] 去重集合记录已统计的 toolCallId：事件重放或断线重连会重复投递结果，不去重就重复累加。
+apps/zcode-cli/packages/tui/src/app-events.ts	501	a8784b7e479d3a	// // 先查集合再算 stats，避免为已处理的事件做无谓的路径归一化。
+apps/zcode-cli/packages/tui/src/app-events.ts	502	a8784b7e479d3a	// // [事务] 只有 stats 非空才写集合：空结果不入账，后续真正带 diff 的同 id 事件仍能被统计。
+apps/zcode-cli/packages/tui/src/app-events.ts	503	a8784b7e479d3a	// // 缺少 setModifiedFiles 时整体跳过，连去重集合都不动，保证宿主降级后行为一致。
+apps/zcode-cli/packages/tui/src/app-events.ts	504	a8784b7e479d3a	// // toolCallId 缺失直接返回：没有幂等键就无法去重，宁可少统计也不要重复统计。
+apps/zcode-cli/packages/tui/src/app-events.ts	505	a8784b7e479d3a	// // 集合与 Map 一样由父层持有，生命周期必须与 session 对齐，否则重连后历史统计会翻倍。
+apps/zcode-cli/packages/tui/src/app-events.ts	506	a8784b7e479d3a	// // 统计合并走 applyModifiedFileStats，本函数只负责闸门与去重，不碰合并规则。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	43	a8784b7e479d3a	// // [权衡] 退避按 30 秒、60 秒、120 秒、300 秒四档递增，而不是线性或指数增长：
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	44	a8784b7e479d3a	// // 现状的失败几乎都是短时网络抖动与后台重启，前两档足以覆盖；拉到 5 分钟是为了
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	45	a8784b7e479d3a	// // 避免鉴权彻底失效时，每次切页都去打一次注定返回 401 的接口，把限流一起打满。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	46	a8784b7e479d3a	// // 固定四档并靠下标夹取，而不按次数换算成公式，是为了让最坏情况可预期：表长即上限。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	47	a8784b7e479d3a	// // [失败路径] 该数组只读使用，任何调用方都不得就地修改，否则退避时长会跨账号串味。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	48	a8784b7e479d3a	// // 数值单位是毫秒，且与 USAGE_ENTITLEMENT_ACCESS_REFRESH_MS 刻意分属两个量级：
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	49	a8784b7e479d3a	// // 那是分钟级的访问去重，这是秒级的失败冷却，混用会让刚失败就重试或正常访问被判冷却。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	74	a8784b7e479d3a	// // [并发] 每个 usageStatsService 各持一张代数表，键是 freshnessKey；两个服务实例之间
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	75	a8784b7e479d3a	// // 互不可见，桌面端与内嵌 WebView 才不会用同一个 key 互相作废对方的在途请求。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	76	a8784b7e479d3a	// // 计数只在购买、鉴权切换这类显式失效时自增，普通刷新沿用当前代，因此同一 key 上
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	77	a8784b7e479d3a	// // 先后发出的两个只读请求可以同时有效，后到的结果不会让先到的判为作废。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	78	a8784b7e479d3a	// // [资源] 以服务实例为 WeakMap 键：实例被回收后整张表随之释放，无需注册清理钩子；
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	79	a8784b7e479d3a	// // 若换成模块级普通 Map，长驻进程里每次新建服务都会留下永不释放的代数表。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	80	a8784b7e479d3a	// // [失败路径] 表项缺失一律按 0 处理而不抛错：首帧请求发生在任何失效动作之前，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	81	a8784b7e479d3a	// // 缺失是正常起点，把它当异常处理会把首屏额度直接打空。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	84	a8784b7e479d3a	// // [契约] 本函数只维护哪一代请求还有资格落盘，调用方拿 requestKey 带进请求，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	85	a8784b7e479d3a	// // 再用 isCurrent 决定是否写回；它不碰网络，也不读快照，失败语义全在外部。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	86	a8784b7e479d3a	// // [并发] 读代数与写代数之间没有 await，单线程下这段是原子的；一旦将来改成异步，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	87	a8784b7e479d3a	// // 两次调用可能读到同一代并各自加一，两个 isCurrent 会同时为真，需要比较并交换。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	88	a8784b7e479d3a	// // requestKey 用数组序列化而不是模板字符串拼接，是为了让 freshnessKey 里出现的分隔符
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	89	a8784b7e479d3a	// // 无法伪造出另一个键；[失败路径] 两段被拼成同一字符串时，旧回包会写到新请求的缓存位。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	90	a8784b7e479d3a	// // invalidate 为假时代数不变，返回的 isCurrent 与更早的只读请求共享同一代，这是有意为之。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	118	a8784b7e479d3a	// // 用途是给同一身份的访问类刷新去重：设置页、侧栏、推荐入口可能同时挂载，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	119	a8784b7e479d3a	// // 没有这层闸门，一次切页会并发发出三份完全相同的额度查询。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	120	a8784b7e479d3a	// // 严格小于让窗口恰好在 60 秒整放行；[权衡] 若写成小于等于，等间隔轮询每次都落在边界，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	121	a8784b7e479d3a	// // 全部被判为推迟，轮询会永久空转，用户看到的是永不更新的额度。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	122	a8784b7e479d3a	// // [失败路径] requestedAt 缺失时返回假而不是真：从未请求过就必须放行，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	123	a8784b7e479d3a	// // 把缺失当推迟会让首屏永远等不到第一次查询。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	124	a8784b7e479d3a	// // 只读注入的 now，不读系统时钟也不写状态，[并发] 因此它是可重入的纯查询。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	144	a8784b7e479d3a	// // 这个字符串是缓存分区的唯一依据，任何影响服务端返回的选项都必须出现在这里；
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	145	a8784b7e479d3a	// // 少一个字段，两个语义不同的请求就共用一份快照，用户会看到不属于当前身份的数据。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	146	a8784b7e479d3a	// // [权衡] invalidateBalanceCache 为假时整键省略而不是写成 false：两者语义等价，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	147	a8784b7e479d3a	// // 但省略能让旧调用方升级后不必换缓存键，已缓存的额度不会因为新增字段整体失效。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	148	a8784b7e479d3a	// // allowEnvApiKey 却保留 null 与 true 的区分：环境变量 Key 会改变服务端认定的套餐来源，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	149	a8784b7e479d3a	// // 折叠成布尔会把它与显式关闭混为一谈，缓存直接串区。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	150	a8784b7e479d3a	// // [失败路径] accountAccess 允许为空，因此用 null 占位；直接透传会让 undefined 从 JSON 里消失，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	151	a8784b7e479d3a	// // 结果是“无账号信息”与“账号信息为空对象”拼出同一个键。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	203	a8784b7e479d3a	// // 发布是唯一能把失败计数清零的入口，成功路径必须走这里，不允许绕过它直写快照表；
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	204	a8784b7e479d3a	// // [失败路径] 只写快照不清退避，会出现余额已刷新成功、下次刷新仍被冷却挡住的状态。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	205	a8784b7e479d3a	// // nextAllowedAt 归零而不是删字段，是为了让快照记录只有一种形状，读取方不必同时
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	206	a8784b7e479d3a	// // 区分字段缺失与值为 0 两种表示。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	207	a8784b7e479d3a	// // [并发] 广播放在写表之后同步执行：订阅者回调里读到的必然是新快照；
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	208	a8784b7e479d3a	// // 反过来先广播再写表，回调中读到的还是旧值，等于推了一份过期数据。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	209	a8784b7e479d3a	// // 监听器集合可能在遍历期间被注销（回调里触发组件卸载），Set 的遍历对此是安全的，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	210	a8784b7e479d3a	// // [权衡] 因此不额外复制数组，避免每次发布都多分配一次。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	232	a8784b7e479d3a	// // 失败次数优先取快照记录上的值，其次取退避表，最后落到 0：成功发布后快照计数被
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	233	a8784b7e479d3a	// // 清零而退避表可能尚未删除，两处不一致时必须让快照为准，否则计数会凭空跳高。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	234	a8784b7e479d3a	// // [失败路径] 快照不存在时仍要写退避表，否则从未成功过的账号会无限重试，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	235	a8784b7e479d3a	// // 这条分支是首屏额度查询失败时唯一能踩到刹车的路径。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	236	a8784b7e479d3a	// // 下标夹取保证第五次及以后的失败都落在最后一档，不会读到数组长度之外。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	237	a8784b7e479d3a	// // [权衡] 冷却按 key 累计而不按账号累计：同一账号在不同 provider 下的失败原因不同，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	238	a8784b7e479d3a	// // 混成一条计数会让一次 401 拖慢另一条本来健康的查询线。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	239	a8784b7e479d3a	// // 广播先于快照写回，监听器拿到的是失败前最后一次成功的快照加错误标记，正好用来保留旧值并提示失败。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	302	a8784b7e479d3a	// // 这是缓存复用的唯一判据：无记录、有失败、超过间隔三种情况都必须放行去真实查询。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	303	a8784b7e479d3a	// // [权衡] 失败计数大于 0 时直接判不可用而不是继续看时间窗口：失败后旧的更新时间仍在
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	304	a8784b7e479d3a	// // 窗口内，只比时间会让用户在两分钟内反复看到同一份过期额度。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	305	a8784b7e479d3a	// // 间隔比较用小于等于，恰好等于间隔时仍复用缓存，因为上游轮询间隔就按这个值配置，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	306	a8784b7e479d3a	// // 边界多打一次请求没有收益，异常路径已经由失败闸门挡住。
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	307	a8784b7e479d3a	// // 返回的是记录里存的对象引用，不做深拷贝：快照在发布时整体替换，读取方只读，
+packages/ui/src/lib/usageEntitlementRefreshPolicy.ts	308	a8784b7e479d3a	// // 拷贝反而让同一份数据在每个调用点各有一份，失去共享与去重的意义。

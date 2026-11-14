@@ -1,0 +1,34 @@
+file	baseLine	blame	content
+packages/ui/src/BotsDialog.tsx	468	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// saveBot 成功后必须把 creatingBot 置回 false，否则右侧仍停在渠道选择页。
+packages/ui/src/BotsDialog.tsx	564	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 扫码成功只写 feishuAppId 凭据，bindCode 仍由后续绑定阶段生成。
+packages/ui/src/BotsDialog.tsx	852	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// allowedWorkspaces 里的「全部工作区」是哨兵值，不是真实 workspaceId。
+packages/ui/src/BotsDialog.tsx	872	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 要清的是凭据草稿、feishuRegistration 与 weixinRegistration 三份临时态。
+packages/ui/src/BotsDialog.tsx	1056	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// useEffect 总闸：!open 或 creatingBot 或 !selectedBot 成立时直接 return。
+packages/ui/src/BotsDialog.tsx	1058	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	//   !credentialRef -> 自动拉起一次扫码注册；
+packages/ui/src/BotsDialog.tsx	1162	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 用户直接粘贴到聊天框即可，不用自己拼 /bind 前缀与 code。
+packages/ui/src/BotsDialog.tsx	1217	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// deleteBot 可能级联清理运行态，只有 refresh() 拿到的才是真实结果。
+packages/ui/src/ControlHintTooltip.tsx	65	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ref 为空直接 return，不抛错。
+packages/ui/src/ControlHintTooltip.tsx	66	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 函数型 Ref 以 ref(value) 形式调用。
+packages/ui/src/ControlHintTooltip.tsx	81	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 合并 childRef 与 triggerRef 后一起写入。
+packages/ui/src/ControlHintTooltip.tsx	173	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// SidebarTooltipProvider 统一 delayDuration={300}。
+packages/ui/src/ControlHintTooltip.tsx	174	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// skipDelayDuration={0}，连续划过仍要等满 300ms。
+packages/ui/src/ControlHintTooltip.tsx	175	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// disableHoverableContent 防止提示内容悬停时闪烁。
+packages/ui/src/ControlHintTooltip.tsx	176	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// SidebarTooltipContext 让子树知道自己在侧栏范围内。
+packages/ui/src/ControlHintTooltip.tsx	194	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 非侧栏直接返回 Slot.Root，不改 title 也不包 span。
+packages/ui/src/ToolCallBlocks/renderers/execute-group.tsx	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ACTIVE_STATUSES 是模块级常量，不随渲染重建。
+packages/ui/src/ToolCallBlocks/renderers/execute-group.tsx	41	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// formatCompletedSummary 用两个消息键拼命令数，failed 与 stopped 各自追加。
+packages/ui/src/ToolCallBlocks/renderers/execute-group.tsx	42	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 单条走 command.one，多条走 command.other。
+packages/ui/src/ToolCallBlocks/renderers/execute-group.tsx	43	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// stoppedCount 与 failedCount 各自独立追加，可以同时出现。
+packages/ui/src/ToolCallBlocks/renderers/execute-group.tsx	74	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 子项渲染器取自 context.nestedToolRenderer。
+packages/ui/src/ToolCallBlocks/renderers/execute-group.tsx	111	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 子项以 child.toolCall.toolId 作为 React key。
+packages/ui/src/ToolCallBlocks/renderers/execute-group.tsx	112	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ml-2 与左侧 border-l 表达子项对父命令的从属关系。
+packages/ui/src/ToolCallBlocks/renderers/execute-group.tsx	113	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onOpenCodeViewer 等回调原样透传，子项保持父级能力。
+packages/ui/src/settings/RemoteSkillSyncDialog.tsx	98	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] exists 只影响 resolveDefaultRemoteSkillSyncSelection 与筛选，不阻止用户显式选择覆盖。
+packages/ui/src/settings/RemoteSkillSyncDialog.tsx	190	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] data.phase 只能取 selected-content 等三个字面量，其余值视为结构不符。
+packages/ui/src/settings/RemoteSkillSyncDialog.tsx	305	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 不自绘 checkbox，保留原生 input 以维持键盘与读屏行为。
+packages/ui/src/settings/RemoteSkillSyncDialog.tsx	313	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] checked 由 React 受控属性接管，effect 只写 indeterminate。
+packages/ui/src/settings/RemoteSkillSyncDialog.tsx	439	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] cleanup 只把 cancelled 置 true，不调取消接口，请求由服务端超时兜底。
+packages/ui/src/settings/RemoteSkillSyncDialog.tsx	443	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] cleanup 只丢弃结果，open 分支负责初始化，两段职责不重叠。
+packages/ui/src/settings/RemoteSkillSyncDialog.tsx	460	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] selectedSyncIds 每次渲染重算 visibleMissingIds 与 selectedIds 的交集，规模很小。
+packages/ui/src/settings/RemoteSkillSyncDialog.tsx	538	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [事务] importSkillsArchive 成功后必须先 await onSynced() 再 setStep("complete")，三步严格串行。
+packages/ui/src/settings/RemoteSkillSyncDialog.tsx	542	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] onSynced 由宿主决定是否真的请求网络，弹窗按异步 await 处理。

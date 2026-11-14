@@ -1,0 +1,101 @@
+file	baseLine	blame	content
+packages/desktop/scripts/mcp-apps-host-fixture/managed-late-checks.ts	22	a8784b7e479d3a	// 三条用例共用同一夹具与断言入口。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-late-checks.ts	29	a8784b7e479d3a	// 页面脚本统一走这个入口。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-late-checks.ts	64	a8784b7e479d3a	// 旧端口监听已经释放。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-late-checks.ts	72	a8784b7e479d3a	// 第二条：先扣住旧页面的项目级授权。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-late-checks.ts	91	a8784b7e479d3a	// 旧授权迟到也不得留下执行记录。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	40	a8784b7e479d3a	// 非字符串返回空。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	41	a8784b7e479d3a	// 统一转小写。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	42	a8784b7e479d3a	// 去掉非字母数字。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	43	a8784b7e479d3a	// 只用于工具名比较。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	44	a8784b7e479d3a	// 不做其他归一。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	78	a8784b7e479d3a	// 字符串先尝试解析。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	79	a8784b7e479d3a	// 非对象直接判无效。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	80	a8784b7e479d3a	// 缺任务标识返回空。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	81	a8784b7e479d3a	// 标题与状态去空白。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	82	a8784b7e479d3a	// 位次需正有限数。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	117	a8784b7e479d3a	// 原始入参需为对象。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	118	a8784b7e479d3a	// 多候选按序探测。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	119	a8784b7e479d3a	// 首个有效即返回。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	120	a8784b7e479d3a	// 全部失败返回空。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	121	a8784b7e479d3a	// 不读取实时状态。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	148	a8784b7e479d3a	// 有位次说排在第几位。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	149	a8784b7e479d3a	// 缺位次说已入队。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	150	a8784b7e479d3a	// 位次需为正数。
+packages/ui/src/ToolCallBlocks/renderers/offpeak-create.tsx	151	a8784b7e479d3a	// 文案全部走国际化。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	47	a8784b7e479d3a	// 列表与错误来自专用钩子。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	48	a8784b7e479d3a	// 同时只允许一个进行中请求。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	49	a8784b7e479d3a	// 可桥接走切换。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	50	a8784b7e479d3a	// 其余走重连并刷新。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	51	a8784b7e479d3a	// 失败提示后清理待定键。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	61	a8784b7e479d3a	// 先记录待定键。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	62	a8784b7e479d3a	// 按可桥接性分派。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	63	a8784b7e479d3a	// 重连成功后刷新。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	64	a8784b7e479d3a	// 失败记日志并提示。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	65	a8784b7e479d3a	// 最终一定清空待定键。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	101	a8784b7e479d3a	// 连接态映射到展示态。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	102	a8784b7e479d3a	// 待定且不可桥接算重连中。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	103	a8784b7e479d3a	// 失败优先于离线。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	104	a8784b7e479d3a	// 连接中视为忙碌。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	105	a8784b7e479d3a	// 展示只读派生值。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	118	a8784b7e479d3a	// 连接中禁用整行。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	119	a8784b7e479d3a	// 有待定请求也禁用。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	120	a8784b7e479d3a	// 无重连能力同样禁用。
+packages/ui/src/project-sidebar/HomeOnlyWorkspaceRows.tsx	121	a8784b7e479d3a	// 禁用时指针显示等待。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	114	a8784b7e479d3a	// 新增交互优先走回调，不要在组件内直接改分组数据。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	152	a8784b7e479d3a	// 不要用它控制按钮是否可用。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	215	a8784b7e479d3a	// 不要复用它做布局定位。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	234	a8784b7e479d3a	// 与菜单定时器分开存储，两者可能同时存在。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	257	a8784b7e479d3a	// [契约] 仅当无草稿且无任务时展示空分组投放区。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	258	a8784b7e479d3a	// 有草稿时草稿行本身即可承接操作，不再叠加空态。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	259	a8784b7e479d3a	// 判断顺序不能反，否则草稿行与空态同时出现。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	262	a8784b7e479d3a	// 保留这一层是为了把“动画中”与“逻辑折叠”留出扩展位，当前两者相同。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	299	a8784b7e479d3a	// [契约] 整组容器作为“拖到组上”的落点。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	309	a8784b7e479d3a	// [契约] 折叠态整组落点，展开时禁用。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	320	a8784b7e479d3a	// [契约] 展开态头部落点，语义是“插入到本组最前”。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	331	a8784b7e479d3a	// [契约] 展开态底部落点，语义是“追加到本组末尾”。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	352	a8784b7e479d3a	// [资源] 容器同时承载整组落点与拖拽覆盖落点。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	374	a8784b7e479d3a	// 此时输入框走内容自适应，属可接受降级。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	454	a8784b7e479d3a	// [事务] 菜单项只登记意图，不立即进入编辑态。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	490	a8784b7e479d3a	// [并发] 菜单关闭自动聚焦时先尝试消费重命名意图。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	605	a8784b7e479d3a	// 仅忽略关闭，不忽略打开。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	623	a8784b7e479d3a	// [契约] 颜色变更原样上抛，组件不校验取值合法性。
+packages/ui/src/project-sidebar/grouped/group-item.tsx	625	a8784b7e479d3a	// 系统分组同样允许改色，这是与重命名/解散的关键差异。
+packages/ui/src/settings/SubagentsSection.tsx	130	a8784b7e479d3a	// 因此这里只引用，不复制，也不做本地排序。
+packages/ui/src/settings/SubagentsSection.tsx	144	a8784b7e479d3a	// 顺序即渲染顺序，属于用户肌肉记忆；增删会改变复选框位置，不要随意重排。
+packages/ui/src/settings/SubagentsSection.tsx	489	a8784b7e479d3a	// 这个不一致是刻意的：用户需要看见“我配过什么”，也需要在保存时被告知“它已失效”。
+packages/ui/src/settings/SubagentsSection.tsx	554	a8784b7e479d3a	// 分组函数保持纯函数，方便直接对投影结果做单测。
+packages/ui/src/settings/SubagentsSection.tsx	694	a8784b7e479d3a	// “全部”形态下不显示数字，因为条数没有意义。
+packages/ui/src/settings/SubagentsSection.tsx	700	a8784b7e479d3a	// 前缀在名称中间出现时不切：只去掉第一个冒号之前的部分。
+packages/ui/src/settings/SubagentsSection.tsx	725	a8784b7e479d3a	// 断点用 sm：手机宽度下覆盖控件与删除按钮需要各自一行。
+packages/ui/src/settings/SubagentsSection.tsx	814	a8784b7e479d3a	// 即改即存控件：没有保存按钮，选择变化立即写覆盖通道。
+packages/ui/src/settings/SubagentsSection.tsx	841	a8784b7e479d3a	// 与聊天工具栏保持同一确认体验。
+packages/ui/src/settings/SubagentsSection.tsx	922	a8784b7e479d3a	// 后到的旧请求可能覆盖新选择。
+packages/ui/src/settings/SubagentsSection.tsx	1284	a8784b7e479d3a	// 这里只判非空：提示词质量不在前端校验范围。
+packages/ui/src/settings/SubagentsSection.tsx	1652	a8784b7e479d3a	// 搜索框的清空按钮只改这里，不触发任何加载。
+packages/ui/src/settings/SubagentsSection.tsx	1804	a8784b7e479d3a	// 而不是永远停在加载态（那样用户没有任何重试入口）。
+packages/ui/src/settings/SubagentsSection.tsx	1845	a8784b7e479d3a	// 断线后旧结果不应继续渲染。
+packages/ui/src/settings/SubagentsSection.tsx	2010	a8784b7e479d3a	// 防止行内控件被错误渲染后仍能写入。
+packages/ui/src/settings/SubagentsSection.tsx	2086	a8784b7e479d3a	// 这与“当前用户是否登录”无关，登录态由更上层页面负责。
+packages/ui/src/settings/SubagentsSection.tsx	2095	a8784b7e479d3a	// 两者都不触发加载：新建不需要读任何服务端事实。
+packages/ui/src/settings/SubagentsSection.tsx	2278	a8784b7e479d3a	// 两者取或：刷新是全局冻结，单次写入是局部冻结。
+packages/ui/src/settings/SubagentsSection.tsx	2294	a8784b7e479d3a	// 搜索无结果与“本来就没有”是两种空态：前者给搜索提示，后者给创建引导。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	54	a8784b7e479d3a	// 空快照无可保留。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	55	a8784b7e479d3a	// 鉴权态一致才保留。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	56	a8784b7e479d3a	// 不一致返回假。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	57	a8784b7e479d3a	// 只比较鉴权维度。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	58	a8784b7e479d3a	// 不读取套餐内容。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	66	a8784b7e479d3a	// 可保留则返回原快照。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	67	a8784b7e479d3a	// 无静态目录返回空。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	68	a8784b7e479d3a	// 否则用空定价构造。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	69	a8784b7e479d3a	// 商品按家族打标。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	70	a8784b7e479d3a	// 结果仍带当前鉴权态。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	120	a8784b7e479d3a	// 服务可缺省。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	121	a8784b7e479d3a	// 作用域含账号与会话序号。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	122	a8784b7e479d3a	// 渲染期先按作用域隔离。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	123	a8784b7e479d3a	// 写入前校验作用域与挂载。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	181	a8784b7e479d3a	// 未启用只收尾。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	182	a8784b7e479d3a	// 无服务给固定错误码。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	183	a8784b7e479d3a	// 刷新时保留同身份数据。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	184	a8784b7e479d3a	// 静态与定价并行请求。
+packages/ui/src/settings/model-provider-section/useEnterpriseCodingPlanProducts.ts	185	a8784b7e479d3a	// 回写前再次校验身份。

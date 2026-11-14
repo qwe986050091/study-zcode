@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/ui/src/PermissionDialog.tsx	624	a8784b7e	// [契约] `isMobileTextInputViewport` 只在顶层取一次，向下以布尔传递；
+packages/ui/src/PermissionDialog.tsx	685	a8784b7e	// `blockContext` 由手机远控与桌面共用，只允许宿主换语言。
+packages/ui/src/plugin-ui/adapters/usePluginUiSidePaneModel.tsx	114	a8784b7e	// 面板呈现信息取自 `rowPresentation` 而非工具行，标题与资源地址都由清单决定。
+packages/ui/src/plugin-ui/adapters/usePluginUiSidePaneModel.tsx	161	a8784b7e	// `placementKey` 登记侧栏模式：面板由侧栏展示时，内联卡片让位。
+packages/ui/src/project-sidebar/ArchiveGroupCard.tsx	66	a8784b7e	// `dateFormat` 在渲染函数内创建，语言切换后随重渲染得到新实例。
+packages/ui/src/project-sidebar/ArchiveGroupCard.tsx	130	a8784b7e	// `onAction` 被卸载与删除共用，差别只在操作类型字符串。
+packages/ui/src/project-sidebar/ProjectCreation.tsx	102	a8784b7e	// 改错故障：`workspaceKey` 采样与比对不同源，新建成功后草稿停在旧项目上。
+packages/ui/src/project-sidebar/ProjectCreation.tsx	117	a8784b7e	// 改错故障：`originDraft` 随渲染漂移，新建后无条件抢走当前草稿焦点。
+packages/ui/src/project-sidebar/ProjectEditor.tsx	379	a8784b7e	// [契约] `hostId` 非 local 时走内置浏览器：原生选择器只服务本机路径。
+packages/ui/src/project-sidebar/ProjectEditor.tsx	434	a8784b7e	// [事务] `created` 已存在时只补外层登记与关闭，不再走保存分支。
+packages/ui/src/project-sidebar/ProjectNodeContent.tsx	238	a8784b7e	// `editable` / `entryId` / `onRemoveEntry` 任一缺失就整体不渲染，不做禁用态占位。
+packages/ui/src/project-sidebar/ProjectNodeContent.tsx	240	a8784b7e	// `onRemoveEntry` 不写入项目存储，只影响本机入口列表。
+packages/ui/src/project-sidebar/remote-project-connection.ts	107	a8784b7e	// `stillRetained` 通过之前不动任何副作用。
+packages/ui/src/project-sidebar/remote-project-connection.ts	150	a8784b7e	// 向导打开前再调一次 `stillRetained` 复验。
+packages/ui/src/quickpick/TaskFindDialog.tsx	101	a8784b7e	// 改错后果：清空输入仍显示上一轮 `conversationMatchCount`，用户以为聊天区还留着高亮。
+packages/ui/src/quickpick/TaskFindDialog.tsx	130	a8784b7e	// 改错后果：重开查找框时旧 `query` 立即生效，用户以为输入法串词。
+packages/ui/src/remote-connection-flow/requestRemoteProjectConnection.ts	29	a8784b7e	// 入口先做一次 `preference` 时效检查，过期即弃。
+packages/ui/src/remote-connection-flow/requestRemoteProjectConnection.ts	95	a8784b7e	// 按 `errorCode` 重新归类，判断是否仍需交互。
+packages/ui/src/resource-manager/ResourceManagerApp.tsx	128	a8784b7e	// [事务] `getSnapshot` 首轮立即执行一次再起定时器，界面不必先空等一个完整间隔。
+packages/ui/src/resource-manager/ResourceManagerApp.tsx	167	a8784b7e	// [事务] 折叠回调以函数式更新写回 `groups`，先展开最新表再翻转目标分类。

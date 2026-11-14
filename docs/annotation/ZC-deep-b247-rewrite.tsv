@@ -1,0 +1,6 @@
+file	baseLine	blame	content
+packages/ui/src/settings/MigrationSection.tsx	237	a8784b7e479d3a	// 数字输入产不出不限哨兵，因此这里恒为数字；哨兵分支留给其他调用方
+packages/ui/src/settings/OffPeakEditView.tsx	406	a8784b7e479d3a	// 模型变化属于重要改动，即使标题与指令没变也要弹确认。
+packages/ui/src/settings/PluginsSection.tsx	427	a8784b7e479d3a	// 前者驱动渲染，后者决定是否显示「一个都没装」的空态。
+packages/ui/src/settings/usage-stats/UsageHeatmap.tsx	96	a8784b7e479d3a	// 不要为省一次计算改读末列单元格：末列可能被补齐成空单元格。
+packages/ui/src/v4/composer/V4ComposerToolbar.tsx	1616	a8784b7e479d3a	// 零模型但有管理入口时要能进入设置；有模型时管理入口由子组件内部展示。

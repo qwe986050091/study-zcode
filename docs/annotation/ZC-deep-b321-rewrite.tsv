@@ -1,0 +1,45 @@
+file	baseLine	blame	content
+packages/ui/src/resource-manager/resourceUsageParts.tsx	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// UsageMetric 的两个取值同时是 UsageGroupProps.metric 与列名选择的输入。
+packages/ui/src/resource-manager/resourceUsageParts.tsx	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// UsageMeter 顶部显示 appValue 大数字，下方是 systemPercent 与 appPercent 两条比例条。
+packages/ui/src/resource-manager/resourceUsageParts.tsx	58	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// systemPercent 条先渲染作底色，appPercent 条绝对定位覆盖在其上。
+packages/ui/src/resource-manager/resourceUsageParts.tsx	59	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 容器 role="img" 的 aria-label 把 appLabel 与 systemLabel 两段数值合成一句读屏描述。
+packages/ui/src/resource-manager/resourceUsageParts.tsx	112	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// columns.cpu 与 columns.memory 按 metric 二选一，表头与数据行共用同一个 columns 对象。
+packages/ui/src/resource-manager/resourceUsageParts.tsx	131	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// expanded 为 true 时先渲染 ROW_GRID_CLASS 表头，再按 group.processes 逐行渲染 ProcessRow。
+packages/ui/src/resource-manager/resourceUsageParts.tsx	132	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// group.processes 为空时只渲染一行 emptyText，不输出表头。
+packages/ui/src/resource-manager/resourceUsageParts.tsx	133	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// data-testid 用 group.category 拼接，标题改名不会改变测试定位。
+packages/ui/src/resource-manager/resourceUsageParts.tsx	203	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ProcessRow 名称列用 truncate 截断，并给内层 div 挂 title={process.name} 显示全名。
+packages/ui/src/resource-manager/resourceUsageParts.tsx	204	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// process.category 不是 "base" 时在名称下方补 groupLabel 一行。
+packages/ui/src/resource-manager/resourceUsageParts.tsx	205	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 数值为 null 时显示 UNSAMPLED_PLACEHOLDER，title 挂在整格而不是数字上。
+packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	35	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// setStartupCheckCompleted 初值取 !enabled，未启用时启动门禁直接算完成。
+packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	36	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// startupCheckCompletedRef 先于 setState 置 true，防止同一轮 effect 重复发起检查。
+packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	37	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// providerAvailabilityHydrated 只由 modelSelectionView !== null 决定。
+packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 返回值只含 startupCheckCompleted 与 syncLoginEntryWithProviderAvailability。
+packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	64	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// enabled 为 false 时直接返回 hasUsableProvider: true 且 shouldOpenLoginEntry: false。
+packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	65	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// options.forceRefresh 为 true 时先 await refreshProviderState 再 readModelSelectionView。
+packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	66	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// shouldOpenLoginEntry 由本函数算一次并 setLoginEntryOpen，弹窗与返回值不会分叉。
+packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	67	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// logger.info 记录 reason/source/providerCount/hasUser/hasProviderFamilyDomain。
+packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	118	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// !enabled 时置 ref 与 state 为 true 后提前 return，不发请求。
+packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	119	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// modelSelectionError 存在时记 logger.error 并结束等待，避免永久 loading。
+packages/ui/src/root/useProviderAvailabilityLoginEntryGuard.ts	120	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isRestoringOAuthSession 或 providerAvailabilityHydrated 为 false 时本轮 effect 直接返回。
+packages/ui/src/root/useRootWorkspaceActions.ts	103	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 若忽略显式 targetWorkspace，跨项目发起的已保存工作流会被当前 workbench 焦点覆盖。
+packages/ui/src/root/useRootWorkspaceActions.ts	195	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] workspaceActionError 只保留一条，setWorkspaceActionError 覆盖旧值，成功路径显式传 null 清空。
+packages/ui/src/root/useRootWorkspaceActions.ts	202	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// requestConfirmation 是异步 Promise，resolve 前不得读取设置快照，账号可能已切换。
+packages/ui/src/root/useRootWorkspaceActions.ts	209	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// remoteProjectOpener 只在点击回调里读取，不进渲染路径，所以不需要触发重渲染。
+packages/ui/src/root/useRootWorkspaceActions.ts	256	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 若 composerClientNamespace 与读取方不一致，草稿会写进别的命名空间，重开后读不到。
+packages/ui/src/root/useRootWorkspaceActions.ts	272	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 若在这里重算 scope 而不复用上方对象，草稿会落到别的 projectId 桶里。
+packages/ui/src/root/useRootWorkspaceActions.ts	291	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 若把 rememberComposerWorkspaceScope 放进条件分支，重进工作区将找不到这条草稿映射。
+packages/ui/src/root/useRootWorkspaceActions.ts	337	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 若去掉 initialPrompt.trim() 判断，空串会经 persistV4ComposerDraft 覆盖已有草稿文本。
+packages/ui/src/root/useRootWorkspaceActions.ts	375	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 若不自增 navigationSequence.current，两次快速导航会共享序号，旧流程不会被 isCurrent 作废。
+packages/ui/src/root/useRootWorkspaceActions.ts	450	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// activeGroupId 的三次 getState 若不在同一次求值内完成，落点与分组会来自不同时刻。
+packages/ui/src/root/useRootWorkspaceActions.ts	591	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 若在 logout 之后才读设置或 await telemetry，会用登出后的空值回写且拖慢退出。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	46	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// draft 是唯一数据来源，SavedWorkflowMetaForm 内部不持有本地草稿副本。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	47	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onDescriptionChange 等 8 个回调全部由 SavedWorkflowDetailView 注入。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	48	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 错误分两层：descriptionError 管说明字段，rowErrors 按 row key 管参数行。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	49	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 本组件不 useState 草稿，避免与上层 draft 出现两份真相。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	69	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 解构顺序与 SavedWorkflowMetaFormProps 一致，draft 在前回调在后。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 函数体只读 props 并返回 JSX，唯一调用是 useZCodeIntl 取 intl。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	71	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 输入变更全部走上抛回调，组件不直接改动 draft。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	72	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 组件无内部状态，可直接用固定 draft 做快照测试。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	88	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// formatMessage 的 id 统一用 workflows.hub.detail.* 前缀。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	89	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 所有文案取自 intl.formatMessage，组件内不拼自然语言。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMetaForm.tsx	90	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 键缺失时由 IntlProvider 兜底显示 id，不静默返回空串。

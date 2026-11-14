@@ -1,0 +1,98 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	35	a8784b7e479d3a	// 信封只含三个字段。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	36	a8784b7e479d3a	// 类型决定宿主处理分支。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	37	a8784b7e479d3a	// 载荷保持原始形态透传。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	38	a8784b7e479d3a	// 标识用于把回执配对回等待方。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	39	a8784b7e479d3a	// 宿主不解释载荷内容。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	69	a8784b7e479d3a	// 请求处理必须返回可序列化值。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	70	a8784b7e479d3a	// 事件处理不参与控制流。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	71	a8784b7e479d3a	// 取消信号在收尾时撤销注册。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	171	a8784b7e479d3a	// 空行不产生任何副作用。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	172	a8784b7e479d3a	// 事件消息先于请求分发。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	173	a8784b7e479d3a	// 完成消息只记录不立即返回。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	174	a8784b7e479d3a	// 请求处理成功写成功回执。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	175	a8784b7e479d3a	// 请求处理失败写失败回执。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	84	a8784b7e479d3a	// 问题键会反复进出，空列表引用必须稳定。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	85	a8784b7e479d3a	// 产物键在零产物时缺席，同样需要稳定空值。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	86	a8784b7e479d3a	// 两个常量都冻结为只读，防止下游误改。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	94	a8784b7e479d3a	// 回调只接收补齐了作用域的请求，调用方不关心作用域。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	96	a8784b7e479d3a	// 组件不持有运行态，全部读投影。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	97	a8784b7e479d3a	// 展示层只面向用户，技术细节不回到这里。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	165	a8784b7e479d3a	// 静态图按发起工具行取，与轮尾卡片同一张表。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	168	a8784b7e479d3a	// 缺省不是错误，界面给出图不可用提示。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	279	a8784b7e479d3a	// 后继打开回调可选，缺省则不暴露入口。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	346	a8784b7e479d3a	// 落点键带上打开时间，保证每次打开都重新落位。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	347	a8784b7e479d3a	// 没有目标阶段时不产生落点。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	348	a8784b7e479d3a	// 键变化触发清单滚动一次。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	349	a8784b7e479d3a	// 同一阶段重复点击也会刷新落点。
+packages/ui/src/app-shell/WorkflowRunSidePane.tsx	363	a8784b7e479d3a	// 打开产物不带版本号，默认最新。
+packages/ui/src/hooks/useWebElementPicker.ts	85	a8784b7e479d3a	// 选择中标志只控制界面态。
+packages/ui/src/hooks/useWebElementPicker.ts	86	a8784b7e479d3a	// 运行号是并发正确性的核心。
+packages/ui/src/hooks/useWebElementPicker.ts	88	a8784b7e479d3a	// 启动与取消共享同一运行号。
+packages/ui/src/hooks/useWebElementPicker.ts	102	a8784b7e479d3a	// 先递增运行号再复位界面。
+packages/ui/src/hooks/useWebElementPicker.ts	103	a8784b7e479d3a	// 随后才向页面发送取消脚本。
+packages/ui/src/hooks/useWebElementPicker.ts	104	a8784b7e479d3a	// 取消脚本失败不影响状态。
+packages/ui/src/hooks/useWebElementPicker.ts	105	a8784b7e479d3a	// 日志只记录错误消息。
+packages/ui/src/hooks/useWebElementPicker.ts	106	a8784b7e479d3a	// 回调不依赖外部可变值。
+packages/ui/src/hooks/useWebElementPicker.ts	120	a8784b7e479d3a	// 启动时先占领运行号。
+packages/ui/src/hooks/useWebElementPicker.ts	121	a8784b7e479d3a	// 回包后先比对运行号。
+packages/ui/src/hooks/useWebElementPicker.ts	122	a8784b7e479d3a	// 形状不符只告警不抛错。
+packages/ui/src/hooks/useWebElementPicker.ts	123	a8784b7e479d3a	// 取消态直接结束本次。
+packages/ui/src/hooks/useWebElementPicker.ts	124	a8784b7e479d3a	// 载荷无效则丢弃并记警告。
+packages/ui/src/hooks/useWebElementPicker.ts	202	a8784b7e479d3a	// 卸载时移除同一引用。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	140	a8784b7e479d3a	// [权衡] 判定放在行内而不是列表层，是为了让每一行只关心自己的工作区。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	150	a8784b7e479d3a	// [资源] 订阅随行卸载自动释放，不要在渲染中手动创建第二个实例。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	165	a8784b7e479d3a	// 活动信息包含工作流运行态，决定标题下是否追加运行行。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	167	a8784b7e479d3a	// [权衡] 派生放在行内而不是列表层，允许拖动预览拿到同样的展示结果。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	174	a8784b7e479d3a	// 注意力徽章有两条来源：待处理交互与活动注意力，任一存在即视为有交互。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	176	a8784b7e479d3a	// [权衡] 用布尔汇总而不是直接判空，是为了让三个渲染分支共用同一个条件。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	185	a8784b7e479d3a	// [权衡] 隐藏而不是禁用，减少用户对不可用按钮的无效尝试。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	229	a8784b7e479d3a	// 该布尔同时控制悬停态样式与操作按钮分支，不只是样式开关。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	329	a8784b7e479d3a	// [权衡] 复制一份展示结构而不是复用交互行，代价是两处样式需同步。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	424	a8784b7e479d3a	// 只接受回车与空格，其余按键保持浏览器默认行为。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	442	a8784b7e479d3a	// 新增禁用条件时，这里与可放置的禁用条件要一起评估。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	448	a8784b7e479d3a	// [并发] 拖动开始与结束的回调由列表层统一处理，行组件不监听。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	456	a8784b7e479d3a	// 附加数据类型与拖拽侧保持一致，放置方据此判断是否接受。
+packages/ui/src/project-sidebar/grouped/task-row.tsx	481	a8784b7e479d3a	// [权衡] 触屏设备常驻按钮是为了没有悬停能力时仍可操作。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	35	a8784b7e479d3a	// 只给建议，不替用户落盘。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	36	a8784b7e479d3a	// 家庭域与原始选择缺一即退出。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	37	a8784b7e479d3a	// 目标提供方必须与失效事件一致。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	38	a8784b7e479d3a	// 锁内版本取当前值并给零兜底。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	39	a8784b7e479d3a	// 事件已过期就不再计算。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	61	a8784b7e479d3a	// 原始连接必须仍是当前且不可用。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	62	a8784b7e479d3a	// 三个条件缺一不可。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	63	a8784b7e479d3a	// 连接键参与比较，防止已重连。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	64	a8784b7e479d3a	// 可用性判断按选择类型分流。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	65	a8784b7e479d3a	// 团队选择按组织与项目精确查询。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	103	a8784b7e479d3a	// 个人套餐优先尝试。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	104	a8784b7e479d3a	// 团队产品逐个组织项目展开。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	105	a8784b7e479d3a	// 与原始选择相同的候选跳过。
+packages/ui/src/root/accountConnectionLossSuggestion.ts	106	a8784b7e479d3a	// 找到第一个可用即停止。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	28	a8784b7e479d3a	// 解析中与提示态各自独立。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	30	a8784b7e479d3a	// 身份随打开与模型变化重建。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	60	a8784b7e479d3a	// 恢复调用可跳过默认条件。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	62	a8784b7e479d3a	// 代次在请求前自增。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	63	a8784b7e479d3a	// 当前判断综合三项条件。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	64	a8784b7e479d3a	// 成功后写结果并可回调应用。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	116	a8784b7e479d3a	// 延迟触发复用同一解析函数。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	117	a8784b7e479d3a	// 可取消避免输入抖动。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	118	a8784b7e479d3a	// 可立即触发供手动刷新。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	119	a8784b7e479d3a	// 触发只决定时序不决定条件。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	163	a8784b7e479d3a	// 身份不符的结果对外不可见。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	164	a8784b7e479d3a	// 避免旧身份结果短暂展示。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	165	a8784b7e479d3a	// 取消与恢复都走同一代次。
+packages/ui/src/settings/model-provider-section/useModelConfigResolution.ts	166	a8784b7e479d3a	// 返回结构整体只读。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	57	a8784b7e479d3a	// 生成结果只作展示与去重键的一部分，不参与排序。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	66	a8784b7e479d3a	// 工作区键在前、评论标识在后，用不可见分隔符隔开。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	67	a8784b7e479d3a	// 分隔符选择保证两段内容不会与拼接结果产生歧义。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	68	a8784b7e479d3a	// 返回字符串可直接用于集合与映射的键。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	92	a8784b7e479d3a	// 一次提交同时更新引用与状态，二者不会短暂不一致。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	93	a8784b7e479d3a	// 先按新集合算出被移除项，再逐个通知上游。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	94	a8784b7e479d3a	// 通知发生在引用替换之前，回调看到的是旧列表。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	110	a8784b7e479d3a	// 目标键不存在时集合长度不变，直接跳过提交。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	111	a8784b7e479d3a	// 过滤而非就地删除，保证引用语义与记忆化比较可靠。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	112	a8784b7e479d3a	// 提交函数负责通知被移除项，这里不重复调用回调。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	113	a8784b7e479d3a	// 只依赖提交函数，回调变化不影响本函数身份。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	142	a8784b7e479d3a	// 清空内部已在空列表时短路，不产生多余通知。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	155	a8784b7e479d3a	// 四类校验任一不通过都放弃：类型、载荷、已阻止、不可取消。
+packages/ui/src/v4/composer/useCodeCommentContexts.ts	157	a8784b7e479d3a	// 认领后再次确认默认行为已被阻止，防止竞争。

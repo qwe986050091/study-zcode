@@ -1,0 +1,40 @@
+file	baseLine	blame	content
+packages/ui/src/settings/PluginStoreSourcesDialog.tsx	37	a8784b7e	// `isPublicStoreMarketplaceId` 命中的公共市场与 `DEFAULT_MARKETPLACE_ID` 都不可移除。
+packages/ui/src/settings/PluginStoreSourcesDialog.tsx	73	a8784b7e	// 弹窗只管理 `marketplaces` 里已登记的市场，新增走外部 New 按钮。
+packages/ui/src/settings/PluginStoreSourcesDialog.tsx	95	a8784b7e	// `sortMarketplaceSources` 按 `locale` 排序，切换语言立即重排。
+packages/ui/src/settings/PluginStoreSourcesDialog.tsx	208	a8784b7e	// `formatSourceTime` 用 `toLocaleString()` 按当前区域设置格式化。
+packages/ui/src/settings/RemoteMcpSyncDialog.tsx	118	a8784b7e	// [资源] `resolveDefaultRemoteMcpSyncSelection` 每次加载只调一次，规模是 `rows` 的候选数量级。
+packages/ui/src/settings/RemoteMcpSyncDialog.tsx	146	a8784b7e	// 不要用空串代替 `undefined`：服务端据此区分「无工作区」与「工作区为空」。
+packages/ui/src/settings/RemoteMcpSyncDialog.tsx	151	a8784b7e	// [资源] `buildRemoteMcpSyncImportParams` 只读入参且不复制 `exported.servers`，无副作用。
+packages/ui/src/settings/RemoteMcpSyncDialog.tsx	611	a8784b7e	// `complete` 已展示完，用户有权直接关：不要额外拦截。
+packages/ui/src/side-pane-full-view/model.ts	33	a8784b7e	// `FLOATING_ANCHORS` 的七个吸附点是对外契约的一部分。
+packages/ui/src/side-pane-full-view/model.ts	132	a8784b7e	// `resolveFloatingTransformOrigin` 的缩放原点贴在同一个吸附角。
+packages/ui/src/side-pane-full-view/model.ts	145	a8784b7e	// 先以 `DEFAULT_FLOATING_ANCHOR` 兜底，再按 `Math.hypot` 距离取更近者。
+packages/ui/src/side-pane-full-view/model.ts	214	a8784b7e	// 只清 `seenTurnKey` 基线，已经弹出的回答保留。
+packages/ui/src/slashCommandHelpers.ts	68	a8784b7e	// 先过 `normalizeSlashCommandValue`，返回空串的 command 不进建议列表。
+packages/ui/src/slashCommandHelpers.ts	107	a8784b7e	// `normalizeSlashCommandValue` 统一去掉远端命令自带的前导斜杠。
+packages/ui/src/slashCommandHelpers.ts	111	a8784b7e	// `replace` 配 `/^\/+/` 只裁剪前导斜杠，保留内部内容。
+packages/ui/src/slashCommandHelpers.ts	210	a8784b7e	// `selection.isCollapsed()` 为 false 时直接返回 null，不参与命令匹配。
+packages/ui/src/v4/ConversationDraftSuggestedPromptsContainer.tsx	184	a8784b7e	// [并发] `onboardingRecordService?.updateRecordPreferences` 用可选链：该服务在部分平台不存在。
+packages/ui/src/v4/ConversationDraftSuggestedPromptsContainer.tsx	206	a8784b7e	// [并发] `requestVersionRef` 只增不减，用来丢弃所有基于旧点击的异步结果。
+packages/ui/src/v4/ConversationDraftSuggestedPromptsContainer.tsx	738	a8784b7e	// [并发] 手动切换视为预期接管：`activeOperationRef` 的旧操作取消但不提示取消。
+packages/ui/src/v4/ConversationDraftSuggestedPromptsContainer.tsx	837	a8784b7e	// [契约] 安装与启用只在 `flow.stage` 走到插入落地后才打开确认，见下一条。
+packages/ui/src/v4/ConversationFileSummaryPanel.tsx	84	a8784b7e	// `context.onOpenCodeViewer` 可能缺失（例如受限环境），这里不做兜底界面。
+packages/ui/src/v4/ConversationFileSummaryPanel.tsx	271	a8784b7e	// [事务] 先 `setDialogOpen(true)` 再发预检：用户点击后要立刻看到容器与加载态。
+packages/ui/src/v4/ConversationFileSummaryPanel.tsx	345	a8784b7e	// 折叠头与内容区共用 `Collapsible` 容器，撤销弹窗挂在同层 Fragment 上。
+packages/ui/src/v4/ConversationFileSummaryPanel.tsx	417	a8784b7e	// `item.patches` 为空或 `onOpenCodeViewer` 缺失时保留行展示，只关闭审阅入口。
+packages/ui/src/v4/pendingCommandRegistry.ts	232	a8784b7e	// [并发] `this.now()` 只在登记时读一次，后续过期判断都以 `expiresAt` 为准。
+packages/ui/src/v4/pendingCommandRegistry.ts	297	a8784b7e	// [契约] `rejectCommand` 先释放草稿归属再删账本，顺序反了会丢诊断状态。
+packages/ui/src/v4/pendingCommandRegistry.ts	621	a8784b7e	// [契约] `load()` 冷启动只做形状校验后灌入内存，不发任何网络或协议请求。
+packages/ui/src/v4/pendingCommandRegistry.ts	653	a8784b7e	// [契约] `expiresAt <= now` 且不持有草稿才算过期，两个条件缺一不可。
+packages/ui/src/v4/SessionPane.tsx	1004	a8784b7e	// 用户没点编辑也要能预览：`pendingShareRowIds` 先取 `pendingExcludedRowIds`，再回退到 `excludedRowIds`。
+packages/ui/src/v4/SessionPane.tsx	3750	a8784b7e	// `onSendWorkflowSaveRequest` 这道门不含芯片：芯片只展示事实，不产生副作用。
+packages/ui/src/v4/SessionPane.tsx	4747	a8784b7e	// 收敛成 `markDraftProviderNotReady()` 的正常等待态，不走错误横幅，用户只需重试。
+packages/ui/src/v4/SessionPane.tsx	6489	a8784b7e	// `shareSelectionPanelVisible` 为真时禁止确认：用户还在编辑范围，确认等同于放弃编辑。
+packages/ui/src/v4/telemetry/conversationTelemetryParityE2E.ts	62	a8784b7e	// `compareScenarioResults` 只按这些字段算差异，不解释场景内容。
+packages/ui/src/v4/telemetry/conversationTelemetryParityE2E.ts	63	a8784b7e	// 改 `operationCount` 这类字段名等同改口径，必须与场景定义同批修改。
+packages/ui/src/v4/telemetry/conversationTelemetryParityE2E.ts	64	a8784b7e	// `caseId` 或 `stateAssertions` 缺失即视为契约破坏，不是可选补充。
+packages/ui/src/v4/telemetry/conversationTelemetryParityE2E.ts	477	a8784b7e	// 内层仍完整跑完 `operations` 全量，不做降级或短路。
+apps/zcode-cli/packages/cli/src/command-center/handlers/plugins.ts	182	a8784b7e	// 先按 `id` 排序，保证相同输入产生相同顺序。
+apps/zcode-cli/packages/cli/src/command-center/handlers/plugins.ts	183	a8784b7e	// 每项 `command` 按当前启用态生成 toggle 动作，不缓存构造期快照。
+apps/zcode-cli/packages/cli/src/command-center/handlers/plugins.ts	184	a8784b7e	// `keywords` 覆盖 `id` 与各展示字段，所以模糊匹配能命中别名。

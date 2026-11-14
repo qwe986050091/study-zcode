@@ -1,0 +1,11 @@
+dir	path	cause
+-	packages/ui/src/DeveloperToolsPane.tsx	annotation
+-	packages/ui/src/components/ui/smooth-metric-value.tsx	annotation
+-	packages/ui/src/git-action-menu/commitConversationContext.ts	annotation
+-	packages/ui/src/hooks/useOAuth.ts	annotation
+-	packages/ui/src/hooks/useUsageEntitlement.ts	annotation
+-	packages/ui/src/i18n/IntlProvider.tsx	annotation
+-	packages/ui/src/lib/composerPlanGroups.ts	annotation
+-	packages/ui/src/lib/conversationTelemetryLegacyParityE2E.ts	annotation
+-	packages/ui/src/lib/mcpStatusProbe.ts	annotation
+-	packages/ui/src/lib/messageTelemetry.ts	annotation

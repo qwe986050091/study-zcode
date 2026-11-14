@@ -1,0 +1,41 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/core/src/runtime/methods/title-generation-sidecar.ts	56	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// selection 允许为空：未显式配置标题模型时走默认选择。
+apps/zcode-cli/packages/core/src/runtime/methods/title-generation-sidecar.ts	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// requestDependencies 可选：透传入队时的请求依赖。
+apps/zcode-cli/packages/core/src/runtime/methods/title-generation-sidecar.ts	58	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// release 只释放本对象持有的票据，不影响主路径租约。
+apps/zcode-cli/packages/core/src/runtime/methods/title-generation-sidecar.ts	65	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 闲时票据必须在入队时读取，生成阶段再取可能已被释放。
+apps/zcode-cli/packages/core/src/runtime/methods/title-generation-sidecar.ts	66	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 只有 lifecycle 非 terminal 且未被 ownedByUser 接管才借票。
+apps/zcode-cli/packages/core/src/runtime/methods/title-generation-sidecar.ts	67	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 普通路径无票据，返回的 release 是空操作。
+apps/zcode-cli/packages/core/src/runtime/methods/title-generation-sidecar.ts	164	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// modelSelection 缺省时降级返回 null，不抛错。
+apps/zcode-cli/packages/core/src/runtime/methods/title-generation-sidecar.ts	316	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// replace(/\s+/g, " ") 把连续空白折叠成单个空格。
+apps/zcode-cli/packages/core/src/runtime/methods/title-generation-sidecar.ts	317	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 再按 MAX_TITLE_INPUT_CHARS 硬截断。
+apps/zcode-cli/packages/core/src/runtime/methods/title-generation-sidecar.ts	318	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 按 UTF-16 长度截断，不处理码点边界。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-core.ts	123	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// safeFlags 只放行 -e/-p/-s/-t 四个键，且值都是 "none"。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-core.ts	124	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// --batch-check 属于批量查询，批量写入形态不在白名单内。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-core.ts	125	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 未挂 additionalCommandIsDangerousCallback：该子命令无需额外语义判断。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-core.ts	139	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// key 限定到 config --get，写形态 set/unset 根本不匹配这个前缀。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-core.ts	140	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// --global/--local/--system/--worktree 只限定读取范围。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-core.ts	205	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// GIT_LOG_SAFE_FLAGS 本身只覆盖检索与输出形态。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-core.ts	218	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 全部是索引与工作区查询选项，-c/-d/-f 都只读。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-core.ts	219	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// -x/-X 两个排除模式短参数只读模式串，不会改写索引。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-core.ts	220	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 未匹配选项会改变退出码，但仍是只读查询。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-git-subcommands-core.ts	221	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// --recurse-submodules 只在查询范围内生效。
+packages/shared/src/background-task-notifications.ts	36	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 不含 <task-notification> 前缀的文本直接返回 null。
+packages/shared/src/background-task-notifications.ts	37	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// tool-use-id 缺失即视为无效通知。
+packages/shared/src/background-task-notifications.ts	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 各标签经 readTaskNotificationTag 独立读取，互不影响。
+packages/shared/src/background-task-notifications.ts	39	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// readTaskNotificationTag 返回的标签原文先做实体解码再写入字段。
+packages/shared/src/background-task-notifications.ts	64	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 只扫描 info.role === "user" 的消息。
+packages/shared/src/background-task-notifications.ts	65	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 解析失败返回 null 的消息跳过。
+packages/shared/src/background-task-notifications.ts	66	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 同一 toolUseId 后写覆盖先写。
+packages/shared/src/background-task-notifications.ts	102	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// notification 为空时原样返回 raw。
+packages/shared/src/background-task-notifications.ts	103	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 元数据经 asPlainRecord 逐层补全，不覆盖已有字段。
+packages/shared/src/background-task-notifications.ts	104	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// asPlainRecord 对非纯对象负载返回空记录。
+packages/ui/src/v4/ConversationDraftEmptyState.tsx	65	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// date = new Date() 只是让组件侧少建一个临时变量，不改变纯函数性质。
+packages/ui/src/v4/ConversationDraftEmptyState.tsx	72	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// hour >= 5 && hour < 9 是首条分支，hour < 5 与 hour >= 23 都落到末条 lateNight 兜底。
+packages/ui/src/v4/ConversationDraftEmptyState.tsx	73	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 用连续 if 判断而非查 GREETING_BOUNDARY_HOURS 表，区间语义在代码里一眼可读。
+packages/ui/src/v4/ConversationDraftEmptyState.tsx	85	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [资源] 每次只算下一个边界，所以档位一变就得由 effect 重新挂 setTimeout。
+packages/ui/src/v4/ConversationDraftEmptyState.tsx	107	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 按 availableWidthPx 与 naturalTextWidthPx 的比例线性缩放并 Math.floor，宁可小一像素。
+packages/ui/src/v4/ConversationDraftEmptyState.tsx	117	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// compactForRemoteControl 为真时先命中这条，后面的宽度判断与缩放都不再生效。
+packages/ui/src/v4/ConversationDraftEmptyState.tsx	156	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [并发] 渲染期间不读实时时钟，greetingDate 只由 setTimeout 推进。
+packages/ui/src/v4/ConversationDraftEmptyState.tsx	185	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 测量放在 useLayoutEffect 里：先量容器可用宽度与隐藏副本自然宽度，再算字号。
+packages/ui/src/v4/ConversationDraftEmptyState.tsx	216	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 用函数式 setGreetingFontSizePx 更新，读到的是最新字号而非闭包旧值。
+packages/ui/src/v4/ConversationDraftEmptyState.tsx	314	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [无障碍] 两层图形都标了 aria-hidden，图形不参与朗读。

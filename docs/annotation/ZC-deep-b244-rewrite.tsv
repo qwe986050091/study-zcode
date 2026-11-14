@@ -1,0 +1,17 @@
+file	baseLine	blame	content
+packages/ui/src/CodingPlanBillingDiscount.tsx	53	a8784b7e479d3a	// 调大→活动下线后仍展示旧福利；调小→每次进入订阅页都多一次远端读取。
+packages/ui/src/CodingPlanBillingDiscount.tsx	221	a8784b7e479d3a	// [权衡] 图标可关但文字不可关，关掉图标只减少视觉噪音，不影响信息完整性。
+packages/ui/src/CodingPlanUsageRemainingPanel.tsx	84	a8784b7e479d3a	//   这是纯数据，不携带任何渲染态。
+packages/ui/src/CodingPlanUsageRemainingPanel.tsx	426	a8784b7e479d3a	//   任一存在就认为「有东西可展示」，宁可显示部分额度也不误报不可用；
+packages/ui/src/app-shell/SidePaneTabOverview.tsx	169	a8784b7e479d3a	// 打开分组为空而已关闭分组非空时总判定为真，页面只渲染已关闭分组，不显示任何占位。
+packages/ui/src/app-shell/SidePaneTabOverview.tsx	200	a8784b7e479d3a	// 这里不调用任何父层回调，收起概览不改变当前激活页签。
+packages/ui/src/app-shell/useAppChromeState.ts	39	a8784b7e479d3a	// 先看平台是否上报了几何，缺省时用默认值。
+packages/ui/src/app-shell/useAppChromeState.ts	242	a8784b7e479d3a	// 订阅推送每次自增修订号，并同步旧的就绪版本。
+packages/ui/src/app-shell/workflow-artifacts/presets/ArtifactChartView.tsx	308	a8784b7e479d3a	// 图例在全尺寸分支无条件渲染，零序列的输入已被上层空态拦掉，所以这里不做判空。
+packages/ui/src/app-shell/workflow-artifacts/presets/ArtifactChartView.tsx	393	a8784b7e479d3a	// 空数据不在这里兜底，交给后面的空态分支统一决定标题与占位。
+packages/ui/src/chat-input-toolbar/CodingPlanUsageHeaderAction.tsx	60	a8784b7e479d3a	// 成功态只保留一秒，随后自动回到可点击形态。
+packages/ui/src/chat-input-toolbar/CodingPlanUsageHeaderAction.tsx	114	a8784b7e479d3a	// 阻断冒泡，防止同时触发外层菜单的关闭逻辑。
+packages/ui/src/chat-input-toolbar/contextUsage.tsx	249	a8784b7e479d3a	// 开发者面板与埋点仍需要真实低命中值。
+packages/ui/src/chat-input-toolbar/contextUsage.tsx	291	a8784b7e479d3a	// 调用方据此决定是否渲染整行，而不是拿到空串再判断。
+packages/ui/src/components/ai-elements/audio-player.tsx	47	a8784b7e479d3a	// // [权衡] 采用裁掉而非继承，意味着本组件的音频语义不可被调用方翻转。
+packages/ui/src/components/ai-elements/audio-player.tsx	182	a8784b7e479d3a	// // 两个组件只改插槽名与方向，其余结构与样式完全对称。

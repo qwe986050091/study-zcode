@@ -1,0 +1,34 @@
+file	baseLine	blame	content
+packages/services/src/skills/skillsService.ts	327	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	跳过 otherIndex === index 与不存在的 other：后者不构成覆盖证据。
+packages/services/src/skills/skillsService.ts	395	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	捕获组 match[1] 必然存在，判空只为收窄类型而不改变匹配语义。
+packages/services/src/skills/skillsService.ts	548	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	严格解析成功时 keys 取 Object.keys(parsed)，宽松键只服务回退分支。
+packages/services/src/skills/skillsService.ts	600	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	colonIndex < 0 的行（块标量续行、空行）不是键值对，直接跳过。
+packages/services/src/skills/skillsService.ts	647	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	line.length === 0 的空行不含键，先跳过以减少后面的判断。
+packages/services/src/skills/skillsService.ts	651	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	line.trim().startsWith("#") 的注释行不构成键。
+packages/services/src/skills/skillsService.ts	675	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	colonIndex < 0 的行不可能是键值对，跳过。
+packages/services/src/skills/skillsService.ts	750	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	逐项校验 typeof === "string" 且 trim 后非空：安装器可能写入空串。
+packages/services/src/skills/skillsService.ts	1209	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	installedRoots 已是候选形状，直接展开，不再补 defaultEnabled。
+packages/services/src/skills/skillsService.ts	1551	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	diagnostics 原样透出，前端据此判断「是否扫全」。
+packages/services/src/skills/skillsService.ts	1781	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	contained 命中任一受控根即可放行，无需继续比较其余 root。
+packages/ui/src/TaskListItem.tsx	394	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	hasPendingInteraction 同时驱动元信息隐藏、归档动作隐藏与交互胶囊渲染。
+packages/ui/src/TaskListItem.tsx	413	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	[权衡] resolveTaskSourceLabel 每次渲染调用一次，函数内部无重计算。
+packages/ui/src/TaskListItem.tsx	512	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	[契约] 右键只通知容器打开菜单（onOpenTaskContextMenu），行内不自行定位或渲染菜单；
+packages/ui/src/TaskListItem.tsx	572	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	isTaskCron 只决定时间列是否显示时钟图标。
+packages/ui/src/TaskListItem.tsx	573	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	[失败路径] 行内自行判断 schedule 字段会把一次性定时任务误标。
+packages/ui/src/TaskListItem.tsx	574	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	[权衡] isCronTask 每次渲染调用一次，函数内部为字段检查。
+packages/ui/src/TaskListItem.tsx	595	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	[权衡] shouldSuppressWorkspaceTaskMetadata 抑制的是元信息列，不是整行内容。
+packages/ui/src/TaskListItem.tsx	604	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	[契约] 相对时间由 formatTaskRelativeTime 生成，行内不做时间差计算；
+packages/ui/src/TaskListItem.tsx	607	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	[权衡] 相对时间不自动走秒，刷新由列表更新（task.updatedAt）驱动。
+packages/ui/src/TaskListItem.tsx	772	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	[权衡] 置顶态与操作态复用同一按钮，靠 shouldRenderPinAction 的可见性区分。
+packages/ui/src/TaskListItem.tsx	1119	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	[权衡] 组件级挂载策略与 loadTaskPaths 探测开关是一对约束，改动需成对评估。
+packages/ui/src/TaskRenameDialog.tsx	37	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	open / value / inputRef 全部受控，组件不持有可写副本。
+packages/ui/src/TaskRenameDialog.tsx	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	compositionActiveRef 用引用保存组合标记。
+packages/ui/src/TaskRenameDialog.tsx	39	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	onConfirm 与 onCancel 都回传宿主，组件不决定结果。
+packages/ui/src/TaskRenameDialog.tsx	40	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	组件不持有 useState，内部无可写状态。
+packages/ui/src/TaskRenameDialog.tsx	62	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	compositionActiveRef 初值 false，表示未在组合。
+packages/ui/src/TaskRenameDialog.tsx	63	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	onCompositionStart 置为 true。
+packages/ui/src/TaskRenameDialog.tsx	64	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	onCompositionEnd 置回 false。
+packages/ui/src/TaskRenameDialog.tsx	65	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	Enter 前读取该值，组合中不提交。
+packages/ui/src/TaskRenameDialog.tsx	68	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	Dialog 的 open / onOpenChange 由宿主受控。
+packages/ui/src/TaskRenameDialog.tsx	69	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	Input 的 value / onChange 绑定宿主值。
+packages/ui/src/TaskRenameDialog.tsx	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	DialogFooter 放取消与确认两个 Button。

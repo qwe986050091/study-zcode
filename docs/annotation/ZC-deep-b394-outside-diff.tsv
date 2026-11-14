@@ -1,0 +1,11 @@
+dir	path	cause
+-	packages/services/src/bots/providers/feishuGroupMessages.ts	annotation
+-	packages/services/src/bots/topicResource.ts	annotation
+-	packages/services/src/commands/commandFileParser.ts	annotation
+-	packages/services/src/feedback/feedbackService.ts	annotation
+-	packages/services/src/highspeed/highspeedMockTransport.ts	annotation
+-	packages/services/src/index.ts	annotation
+-	packages/services/src/marketing-touch/marketingTouchService.ts	annotation
+-	packages/services/src/model-provider/accountProviderTeamPlanRequestKey.ts	annotation
+-	packages/services/src/plugin-sync/pluginSyncService.ts	annotation
+-	packages/services/src/providers/zaiBusinessTokenResolver.ts	annotation

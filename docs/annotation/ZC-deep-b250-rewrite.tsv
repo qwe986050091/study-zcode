@@ -1,0 +1,63 @@
+file	baseLine	blame	content
+packages/shared/src/git.ts	22	a8784b7e479d3a	// // [权衡] 头状态只保留 branch 与 detached 两值，不再区分空仓库、rebase 中或
+packages/shared/src/git.ts	23	a8784b7e479d3a	// // bisect 中：那些是操作状态，由 issue 码单独表达，混进这里会让每个消费方
+packages/shared/src/git.ts	24	a8784b7e479d3a	// // 都多写一条分支，漏一处就把游离头当成正常分支。
+packages/shared/src/git.ts	25	a8784b7e479d3a	// // 空仓库与游离头在 git 侧同样没有可用的分支引用，因此统一归入 detached；
+packages/shared/src/git.ts	26	a8784b7e479d3a	// // 若给空仓库单列一种值，界面就会在首个提交之前显示分支并允许推送，
+packages/shared/src/git.ts	27	a8784b7e479d3a	// // 实际推上去的是一个不存在的引用。
+packages/shared/src/git.ts	28	a8784b7e479d3a	// // [失败路径] 消费方必须先判 headRefType 再读 branchName，branchName 为 null 是常态；
+packages/shared/src/git.ts	29	a8784b7e479d3a	// // 反过来先取名字会把 null 拼进标题或命令参数，界面呈现为空分支。
+packages/shared/src/git.ts	49	a8784b7e479d3a	// // [失败路径] 四种可用性按信息量递减排列，消费方必须显式处理每一种，缺省分支
+packages/shared/src/git.ts	50	a8784b7e479d3a	// // 不能落回 patch：把 binary 当空 patch 会让用户以为文件没有改动。
+packages/shared/src/git.ts	51	a8784b7e479d3a	// // truncated 与 unavailable 的区别是前者有内容但被截断，后者完全没取到；
+packages/shared/src/git.ts	52	a8784b7e479d3a	// // 混用会把太大提示成取不到，用户不知道重试是否有意义。
+packages/shared/src/git.ts	53	a8784b7e479d3a	// // [权衡] 不用空字符串表示不可用：空 patch 在 git 语义里是合法的无差异，
+packages/shared/src/git.ts	54	a8784b7e479d3a	// // 两者共用一种表示就分不清文件没变和这次没读到。
+packages/shared/src/git.ts	55	a8784b7e479d3a	// // binary 由 git 的二进制判定给出，不在这里按扩展名猜，否则文本日志会被
+packages/shared/src/git.ts	56	a8784b7e479d3a	// // 误判成二进制而跳过展示。
+packages/shared/src/git.ts	61	a8784b7e479d3a	// // 这些码是服务端对 git 失败文本的翻译结果，界面按码决定提示与补救动作，
+packages/shared/src/git.ts	62	a8784b7e479d3a	// // 因此新增码必须同时给出可读的 message，不能只靠 detail 传原文。
+packages/shared/src/git.ts	63	a8784b7e479d3a	// // [失败路径] tracked-changes-would-be-overwritten 与 untracked-changes-would-be-overwritten
+packages/shared/src/git.ts	64	a8784b7e479d3a	// // 分成两码，因为前者可提示提交或暂存，后者只能提示删除或移动，补救动作不同。
+packages/shared/src/git.ts	65	a8784b7e479d3a	// // operation-in-progress 覆盖 merge、rebase、cherry-pick 未结束的情形，此时任何
+packages/shared/src/git.ts	66	a8784b7e479d3a	// // 切换都会失败，提前拦下比让 git 抛一堆英文冲突更可控。
+packages/shared/src/git.ts	67	a8784b7e479d3a	// // [权衡] unknown 必须始终保留：git 升级会带来新文案，识别不了时宁可退成通用
+packages/shared/src/git.ts	68	a8784b7e479d3a	// // 失败，也不要把原始 stderr 直接抛给用户。
+packages/shared/src/git.ts	80	a8784b7e479d3a	// // [并发] summary 是刷新瞬间的快照，字段之间不保证时间一致：ahead、behind 与
+packages/shared/src/git.ts	81	a8784b7e479d3a	// // 改动列表分两次读取 git，用户在此期间提交就会让两者错位，因此不能拿它做
+packages/shared/src/git.ts	82	a8784b7e479d3a	// // 提交前置校验，只能用于展示。
+packages/shared/src/git.ts	83	a8784b7e479d3a	// // isDirty 只表达已跟踪文件在索引或工作区的改动，不含未跟踪文件，避免构建产物
+packages/shared/src/git.ts	84	a8784b7e479d3a	// // 让界面永久显示脏状态。
+packages/shared/src/git.ts	85	a8784b7e479d3a	// // [资源] autoRefreshWatchPaths 只覆盖 git 元数据目录，工作区内容监听由界面按
+packages/shared/src/git.ts	86	a8784b7e479d3a	// // 宿主平台另建；这里若把整个仓库根塞进来，大仓库会触发海量文件事件并压满 watcher。
+packages/shared/src/git.ts	87	a8784b7e479d3a	// // workspaceInRepoPath 为空串表示 workspace 就是仓库根，不能据此推断不在仓库内。
+packages/shared/src/git.ts	109	a8784b7e479d3a	// // [失败路径] x 与 y 直接对应 porcelain 的两个状态位，顺序是索引在前、工作区在后，
+packages/shared/src/git.ts	110	a8784b7e479d3a	// // 交换后暂存与未暂存会整体颠倒，用户点暂存实际提交的是另一份内容。
+packages/shared/src/git.ts	111	a8784b7e479d3a	// // 未跟踪文件只有 y 位，新加入索引的文件 x 为 A 且 y 为空，消费方必须容忍
+packages/shared/src/git.ts	112	a8784b7e479d3a	// // 其中一位缺失。
+packages/shared/src/git.ts	113	a8784b7e479d3a	// // [权衡] 这里保留原始字符而不是把状态枚举化：porcelain 会新增冲突组合，
+packages/shared/src/git.ts	114	a8784b7e479d3a	// // 枚举化会把未知字符吞成 modified，界面就再也看不到真实冲突。
+packages/shared/src/git.ts	115	a8784b7e479d3a	// // kind 是展示用的粗分类，与 x、y 不构成双射，重命名可以同时带内容修改。
+packages/shared/src/git.ts	116	a8784b7e479d3a	// // 冲突文件不进 staged 与 unstaged，否则同一路径会出现三条可操作项，丢弃时互相覆盖。
+packages/shared/src/git.ts	166	a8784b7e479d3a	// // [权衡] 提交图按页取回，hash 与 parents 用完整对象名而非短哈希：短哈希跨页
+packages/shared/src/git.ts	167	a8784b7e479d3a	// // 拼接需要前缀补全，一旦出现歧义就会把两个提交连成同一条线。
+packages/shared/src/git.ts	168	a8784b7e479d3a	// // refs 覆盖分支、远端、标签与 HEAD 四类，同一提交上可同时存在多个，
+packages/shared/src/git.ts	169	a8784b7e479d3a	// // 界面必须全部展示，只取第一个会漏掉标签或远端分支。
+packages/shared/src/git.ts	170	a8784b7e479d3a	// // [失败路径] authorName 与 authoredAtMs 允许为 null：编码损坏或时区缺失的提交
+packages/shared/src/git.ts	171	a8784b7e479d3a	// // 仍要能画出来，缺字段只影响气泡文案，不能让整页取图失败。
+packages/shared/src/git.ts	172	a8784b7e479d3a	// // subject 只取首行主题，正文不在本结构里；需要正文时必须另发请求，
+packages/shared/src/git.ts	173	a8784b7e479d3a	// // 不能在这里按长度截断，否则主题与正文的边界会被误当成省略。
+packages/shared/src/git.ts	225	a8784b7e479d3a	// // [失败路径] baseRef 与 headRef 都可以为 null：仓库还没有远端分支，或本地分支
+packages/shared/src/git.ts	226	a8784b7e479d3a	// // 尚未建立 upstream 时，比较结果不存在，而不是零改动。
+packages/shared/src/git.ts	227	a8784b7e479d3a	// // comparisonLabel 是给界面直接显示的比较说明，已带好方向与远端名，
+packages/shared/src/git.ts	228	a8784b7e479d3a	// // 界面不要再自行拼接 base 与 head，否则会出现重复的远端前缀。
+packages/shared/src/git.ts	229	a8784b7e479d3a	// // [权衡] 比较结果带完整 changes 而不是只给计数：分支视图要能直接丢弃与查看
+packages/shared/src/git.ts	230	a8784b7e479d3a	// // 单文件 diff，二次请求会按路径重算，期间分支变化会得到两份不一致的结果。
+packages/shared/src/git.ts	231	a8784b7e479d3a	// // 分支比较只在显式请求时计算，默认刷新不带，避免大分支差异拖慢首屏。
+packages/shared/src/git.ts	380	a8784b7e479d3a	// // [失败路径] reason 决定自动恢复能否继续：content-mismatch 可覆盖，
+packages/shared/src/git.ts	381	a8784b7e479d3a	// // missing-in-worktree 与 unexpected-file-in-worktree 只能跳过，type-mismatch 必须中止。
+packages/shared/src/git.ts	382	a8784b7e479d3a	// // 三种都退化成通用冲突，会让恢复流程对目录与文件互换的位置直接覆盖，
+packages/shared/src/git.ts	383	a8784b7e479d3a	// // 造成不可逆的数据丢失。
+packages/shared/src/git.ts	384	a8784b7e479d3a	// // [资源] 冲突列表只为用户确认而存在，不持有工作区句柄；确认后按路径逐个写回，
+packages/shared/src/git.ts	385	a8784b7e479d3a	// // 中途失败已写回的路径不回滚，界面必须按 restoredPaths 展示部分成功。
+packages/shared/src/git.ts	386	a8784b7e479d3a	// // force 为真只跳过冲突检查，不改变写入顺序与失败语义。

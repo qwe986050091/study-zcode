@@ -1,0 +1,26 @@
+file	baseLine	blame	content
+packages/ui/src/root/botsTaskBroadcast.ts	28	a8784b7e	// isBotTaskBroadcastPayload 只做结构校验，不修改 payload，判定失败即返回 false。
+packages/ui/src/root/botsTaskBroadcast.ts	86	a8784b7e	// message.channel 不等于 BOT_TASK_BROADCAST_CHANNEL 时直接返回 null，不进入结构校验。
+packages/ui/src/root/botsTaskBroadcast.ts	94	a8784b7e	// 目标键与页签键都由 buildTaskWorkspaceKey 构造，两处编码规则必须一致。
+packages/ui/src/root/botsTaskBroadcast.ts	99	a8784b7e	// tabs.some 逐个比对工作区键，命中同一 targetWorkspaceKey 才算已打开。
+packages/ui/src/root/botsTaskBroadcast.ts	135	a8784b7e	// updated 事件必须由 "streaming" 改回 "ready"，清掉 loading 指示，避免配置更新被当成流式。
+packages/ui/src/updateStatusModel.ts	59	a8784b7e	// displayVersion 由三档依次回退：readyVersion、progressVersion、availableVersion，取第一个非空值。
+packages/ui/src/updateStatusModel.ts	70	a8784b7e	// dialogPhase 与 displayVersion 同源，都由 readyVersion 与 isDownloadingUpdate 推导。
+packages/ui/src/updateStatusModel.ts	94	a8784b7e	// isUpdateActionCompleted 集中判定动作锁释放，download 与 cancel 各有独立条件。
+packages/ui/src/updateStatusModel.ts	103	a8784b7e	// download 只有在 kind 为 download-progress 或 update-downloaded 时才算完成。
+packages/ui/src/ToolCallBlocks/ToolPresentation.tsx	63	a8784b7e	// capabilities 由 useToolPresentationCapabilities 注入，缺省返回空能力集而非抛错。
+packages/ui/src/ToolCallBlocks/ToolPresentation.tsx	84	a8784b7e	// CUA 组内的嵌套渲染指回 ToolPresentation 自身，保持与单卡一致的行为。
+packages/ui/src/ToolCallBlocks/ToolPresentation.tsx	110	a8784b7e	// identity.family 为 "todo" 时必须 options.showTodoToolCalls === true 才渲染。
+packages/ui/src/ToolCallBlocks/ToolPresentation.tsx	125	a8784b7e	// 常规分支统一展开 context，Renderer 由 resolveToolCallRenderer 决定。
+packages/ui/src/browser-use/useBrowserResizeOperationWarning.ts	22	a8784b7e	// RESIZE_WARNING_DURATION_MS = 3_000，提示三秒后自动消失。
+packages/ui/src/browser-use/useBrowserResizeOperationWarning.ts	26	a8784b7e	// AGENT_LAYOUT_SETTLE_QUIET_DURATION_MS = 100，每次回调由该值顺延 100ms，上限取 MAX 常量。
+packages/ui/src/browser-use/useBrowserResizeOperationWarning.ts	124	a8784b7e	// 无 element 或 ResizeObserver 未定义时静默返回，不注册监听。
+packages/ui/src/browser-use/useBrowserResizeOperationWarning.ts	134	a8784b7e	// 宽或高 ≤ 0 时视为零尺寸直接返回，不写入 lastSizeRef。
+packages/ui/src/root/useReconnectingRemoteWorkspaceLogs.ts	45	a8784b7e	// logsByWorkspaceKey 以 workspaceKey 为键分组保存，各项目日志互不干扰。
+packages/ui/src/root/useReconnectingRemoteWorkspaceLogs.ts	54	a8784b7e	// resolveWorkspaceTargetByKey 返回 null 的项目，其日志必须一并清掉。
+packages/ui/src/root/useReconnectingRemoteWorkspaceLogs.ts	77	a8784b7e	// reconnectingKeys 为空时日志与本次重连无关，直接返回。
+packages/ui/src/root/useReconnectingRemoteWorkspaceLogs.ts	82	a8784b7e	// 只把 resolveWorkspaceTargetByKey 非空的项目交给匹配器，已消失的必须剔掉。
+packages/ui/src/resource-manager/storage/StorageCategoryList.tsx	56	a8784b7e	// cleanable 必须同时满足 cleanability !== "none" 且 bytes > 0，缺一条就不能清。
+packages/ui/src/resource-manager/storage/StorageCategoryList.tsx	68	a8784b7e	// 整行 button 是打开详情的入口，data-testid 由 TID_RESOURCE_MANAGER_STORAGE_CATEGORY_ROW 拼上分类 id。
+packages/ui/src/resource-manager/storage/StorageCategoryList.tsx	82	a8784b7e	// 尺寸用 tabular-nums 等宽数字，刷新时宽度不会跳动。
+packages/ui/src/resource-manager/storage/StorageCategoryList.tsx	111	a8784b7e	// 箭头按钮没有可见文字，aria-label 必须用分类标题补上名称，否则读屏无法定位。

@@ -1,0 +1,16 @@
+file	baseLine	blame	content
+packages/ui/src/project-sidebar/grouped/task-context-menu-content.tsx	28	a8784b7e	// `ContextMenuItem` 等原语已覆盖禁用与定位：新增能力先确认可复用，不要自绘下拉容器。
+packages/ui/src/project-sidebar/grouped/task-context-menu-content.tsx	39	a8784b7e	// `TaskGroupColorDot` 与分组头部同一组件，菜单色与侧栏色保持同源。
+packages/ui/src/project-sidebar/grouped/task-context-menu-content.tsx	103	a8784b7e	// 关闭即卸载由 Radix `Presence` 处理，渲染期不写任何持久化或副作用。
+packages/ui/src/project-sidebar/grouped/view.ts	224	a8784b7e	// 改错故障：`replaceTaskInGroupedView` 漏掉任一层，同一任务会出现两个版本的标题。
+packages/ui/src/project-sidebar/grouped/view.ts	327	a8784b7e	// 改错故障：`findGroupIdByTaskKey` 漏看组内任务，组内容区拖放不会触发组间移动。
+packages/ui/src/project-sidebar/grouped/view.ts	379	a8784b7e	// 改错故障：`resolveGroupedDraftTaskPlacementForTask` 落错分组，用户会以为草稿丢失。
+packages/ui/src/remote-connection/RemoteConnectionConnectingStep.tsx	343	a8784b7e	// 同一阶段两者可能同时为真：优先展示信息量更大的 `recognizedDeviceName`。
+packages/ui/src/remote-connection/RemoteConnectionConnectingStep.tsx	607	a8784b7e	// 带着 `errorMessage` 进入时 `logsExpanded` 初值为真，用户不必先点开日志。
+packages/ui/src/remote-connection/RemoteConnectionConnectingStep.tsx	909	a8784b7e	// `logs.reverse()` 每个阶段只做一次，日志数百条量级下可接受。
+packages/ui/src/remote-connection/RemoteConnectionHistoryInput.tsx	40	a8784b7e	// `RemoteConnectionHistoryInput` 只管输入与历史建议：连哪台机、何时重连由调用方决定。
+packages/ui/src/remote-connection/RemoteConnectionHistoryInput.tsx	114	a8784b7e	// `handleOpenChange` 是可见性唯一写入口：外部触发与内部收起都汇到一处。
+packages/ui/src/remote-connection/RemoteConnectionHistoryInput.tsx	172	a8784b7e	// `activeIndex` 为 -1（候选为空）时方向键直接放行，光标仍在输入框内移动。
+packages/ui/src/root/oauthProviderFamilySelectionRefresh.ts	151	a8784b7e	// 条件写入的预期版本取自 `expectedAccountSettings`，即查询前的设置。
+packages/ui/src/root/oauthProviderFamilySelectionRefresh.ts	181	a8784b7e	// `codingPlanEntitlement` 或 `startPlanEntitlement` 为空时由选择器自行降级。
+packages/ui/src/root/oauthProviderFamilySelectionRefresh.ts	211	a8784b7e	// `selection` 为空时不写入，保留原有 `providerFamilyConnectionSelections`。

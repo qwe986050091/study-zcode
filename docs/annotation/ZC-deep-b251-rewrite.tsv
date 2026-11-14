@@ -1,0 +1,69 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/tui/src/app-view.tsx	130	a8784b7e479d3a	// // [并发] 鼠标抬起是整壳唯一的事件汇聚点：复制选区与恢复焦点必须在同一次同步回调内完成，
+apps/zcode-cli/packages/tui/src/app-view.tsx	131	a8784b7e479d3a	// // 中间不等待任何异步任务，否则紧接着的按下事件会把刚选中的文本清掉。
+apps/zcode-cli/packages/tui/src/app-view.tsx	132	a8784b7e479d3a	// // 复制返回值被丢弃是有意的：无选区时复制失败属于常态，此处弹提示反而打断输入。
+apps/zcode-cli/packages/tui/src/app-view.tsx	133	a8784b7e479d3a	// // 焦点恢复排在复制之后，因为编辑器获得焦点会重置选区，先聚焦就只能复制到光标位置。
+apps/zcode-cli/packages/tui/src/app-view.tsx	134	a8784b7e479d3a	// // [失败路径] 只读态下 editorRef 仍指向旧编辑器实例，跳过聚焦可避免把按键送进隐藏的输入框。
+apps/zcode-cli/packages/tui/src/app-view.tsx	135	a8784b7e479d3a	// // 依赖数组刻意带上 readOnly：漏掉它会让闭包永久记住进入只读前的值，退出详情后焦点不回来。
+apps/zcode-cli/packages/tui/src/app-view.tsx	136	a8784b7e479d3a	// // copyCurrentSelection 返回布尔表示是否真的写入剪贴板，这里不消费该值：提示由状态行统一负责，
+apps/zcode-cli/packages/tui/src/app-view.tsx	137	a8784b7e479d3a	// // 视图层再补一条会连闪两次。同理若把这段逻辑下放到壳组件，只读判断就得写两遍并迟早漂移。
+apps/zcode-cli/packages/tui/src/app-view.tsx	142	a8784b7e479d3a	// // 宽度每帧重算而不是存进组件状态：终端 resize 只有到下一次渲染才能反映，
+apps/zcode-cli/packages/tui/src/app-view.tsx	143	a8784b7e479d3a	// // 缓存值一旦与实际终端列数不同步，就会把内容排到侧栏底下。
+apps/zcode-cli/packages/tui/src/app-view.tsx	144	a8784b7e479d3a	// // 计算基准是终端宽度减去侧栏预留，而不是当前剩余可用宽度：
+apps/zcode-cli/packages/tui/src/app-view.tsx	145	a8784b7e479d3a	// // 侧栏可见性与预留宽度必须来自同一份布局快照，否则浮层展开的瞬间内容会比容器宽一列，边框换行。
+apps/zcode-cli/packages/tui/src/app-view.tsx	146	a8784b7e479d3a	// // 该值同时喂给会话区、审批面板、选择面板与各候选面板，保证同一屏内所有块级区域同宽。
+apps/zcode-cli/packages/tui/src/app-view.tsx	147	a8784b7e479d3a	// // 若各处自己算宽度，候选项与正文的对齐会差出侧栏宽度，看起来像两套布局拼在一起。
+apps/zcode-cli/packages/tui/src/app-view.tsx	148	a8784b7e479d3a	// // [权衡] 向下层传终端总宽与预留宽度、由下层单点做扣减，避免宽度被扣两次而逐层收窄。
+apps/zcode-cli/packages/tui/src/app-view.tsx	149	a8784b7e479d3a	// // 该值刻意不参与记忆化：宽度变化必须穿透到每一层，缓存命中会让 resize 后仍按旧列数换行。
+apps/zcode-cli/packages/tui/src/app-view.tsx	154	a8784b7e479d3a	// // [资源] 该 hook 内部持有订阅与周期性请求，只允许在组件挂载期间存在；
+apps/zcode-cli/packages/tui/src/app-view.tsx	155	a8784b7e479d3a	// // 登录态缺失时传 undefined 是让它停订的唯一入口，传空回调会让它继续按旧地址轮询。
+apps/zcode-cli/packages/tui/src/app-view.tsx	156	a8784b7e479d3a	// // [失败路径] 登出后未停订的后果是后台请求持续返回未授权，错误态覆盖状态行，用户以为是网络故障。
+apps/zcode-cli/packages/tui/src/app-view.tsx	157	a8784b7e479d3a	// // 订阅随 loginRequired 变化重建，因此这里不能给入参加记忆化，否则切换登录态后仍连着旧会话。
+apps/zcode-cli/packages/tui/src/app-view.tsx	158	a8784b7e479d3a	// // [权衡] 把停订判定放在视图层而非 hook 内部，是为了让 hook 保持无状态、可在测试里直接驱动。
+apps/zcode-cli/packages/tui/src/app-view.tsx	159	a8784b7e479d3a	// // 状态本身只读：视图层不改写返回值，侧栏每次拿到的都是同一份快照。
+apps/zcode-cli/packages/tui/src/app-view.tsx	164	a8784b7e479d3a	// // 流式文本不写回 messages：messages 是上层持有的已落库历史，
+apps/zcode-cli/packages/tui/src/app-view.tsx	165	a8784b7e479d3a	// // 视图层追写会让已确认与正在生成两种状态混进同一个数组，回滚时无法区分。
+apps/zcode-cli/packages/tui/src/app-view.tsx	166	a8784b7e479d3a	// // 每次渲染都新建数组、引用恒变，因此下游不能靠引用相等跳过重渲染；
+apps/zcode-cli/packages/tui/src/app-view.tsx	167	a8784b7e479d3a	// // [权衡] 接受这份重算，换来流式结束时不需要额外一次状态同步，避免最后一帧丢字。
+apps/zcode-cli/packages/tui/src/app-view.tsx	168	a8784b7e479d3a	// // 合成的消息不带 id 与时间戳：它只是展示用的尾巴，带上 id 会让列表对比把它当成新历史。
+apps/zcode-cli/packages/tui/src/app-view.tsx	169	a8784b7e479d3a	// // streaming 标记交给下层决定样式（光标、淡化），本文件不判断内容是否为空。
+apps/zcode-cli/packages/tui/src/app-view.tsx	170	a8784b7e479d3a	// // [失败路径] liveModelText 为空串时走 props.messages 的原引用，避免空消息插入造成高度跳动。
+apps/zcode-cli/packages/tui/src/app-view.tsx	171	a8784b7e479d3a	// // 消息计数取合成后的长度，侧栏与滚动锚点因此与用户实际看到的气泡数一致。
+apps/zcode-cli/packages/tui/src/app-view.tsx	186	a8784b7e479d3a	// // placement 只有两个取值，这里用是否等于 composer 来判断，而不是对主区取反：
+apps/zcode-cli/packages/tui/src/app-view.tsx	187	a8784b7e479d3a	// // 未知取值会落进主区分支，宁可面板出现在正文区，也不要两处同时显示。
+apps/zcode-cli/packages/tui/src/app-view.tsx	188	a8784b7e479d3a	// // 互斥的直接收益是按键消费唯一：候选项上下移动只被一个面板处理，不会一次跳两行。
+apps/zcode-cli/packages/tui/src/app-view.tsx	189	a8784b7e479d3a	// // [失败路径] 两处渲染同一个 selection 时，回车会触发两次确认，第二次落在已关闭的面板上变成空操作，
+apps/zcode-cli/packages/tui/src/app-view.tsx	190	a8784b7e479d3a	// // 用户看到的是第一次没反应、第二次才生效，很难复现。
+apps/zcode-cli/packages/tui/src/app-view.tsx	191	a8784b7e479d3a	// // actionSelection 由 composerSelection 的反向结果推导，保证两者不会同时有值。
+apps/zcode-cli/packages/tui/src/app-view.tsx	192	a8784b7e479d3a	// // 该推导不写任何状态，纯函数性质让测试快照与服务端渲染都可重复。
+apps/zcode-cli/packages/tui/src/app-view.tsx	196	a8784b7e479d3a	// // 侧栏是否渲染只看 sidebarLayout.visible，不重复判断终端宽度：宽度不足时由布局层决定切浮层，
+apps/zcode-cli/packages/tui/src/app-view.tsx	197	a8784b7e479d3a	// // 视图层再判一次就会出现布局以为可见、视图没渲染的宽度错配。
+apps/zcode-cli/packages/tui/src/app-view.tsx	198	a8784b7e479d3a	// // 打开子代理详情且处于浮层模式时要顺手收起侧栏，否则详情页被浮层压在左边，只剩半屏宽度。
+apps/zcode-cli/packages/tui/src/app-view.tsx	199	a8784b7e479d3a	// // [失败路径] 收起动作失败（回调未提供）不阻断打开详情：详情照常渲染，只是侧栏继续占位。
+apps/zcode-cli/packages/tui/src/app-view.tsx	200	a8784b7e479d3a	// // 侧栏入参里的 messageCount 用合成后的长度，保证侧栏与正文对消息条数的口径一致。
+apps/zcode-cli/packages/tui/src/app-view.tsx	201	a8784b7e479d3a	// // 所有数据都是透传，侧栏不持有副本，因此本文件卸载时无需清理任何订阅。
+apps/zcode-cli/packages/tui/src/app-view.tsx	202	a8784b7e479d3a	// // [权衡] 先把侧栏建成变量再交给壳组件，而不是内联在返回结构里，是为了让可见性判断紧挨宽度计算，
+apps/zcode-cli/packages/tui/src/app-view.tsx	203	a8784b7e479d3a	// // 后续改宽度逻辑时不容易漏掉这一支。
+apps/zcode-cli/packages/tui/src/app-view.tsx	269	a8784b7e479d3a	// // 审批优先于一切：只要队首存在，选择面板与输入区都不渲染，键盘焦点只能落在审批按钮上。
+apps/zcode-cli/packages/tui/src/app-view.tsx	270	a8784b7e479d3a	// // 只渲染队首而不是整队，是因为审批需要独占确认；同屏多个待批会让回车语义变得不确定。
+apps/zcode-cli/packages/tui/src/app-view.tsx	271	a8784b7e479d3a	// // [失败路径] 队首处理完由上层出队，本文件不做本地已处理标记；
+apps/zcode-cli/packages/tui/src/app-view.tsx	272	a8784b7e479d3a	// // 若在此处标记，上层重渲染时同一请求会再出现一次，用户可能重复批准。
+apps/zcode-cli/packages/tui/src/app-view.tsx	273	a8784b7e479d3a	// // 审批面板出现时输入区被卸载，草稿留在上层 props.draft 里，不会随卸载丢失。
+apps/zcode-cli/packages/tui/src/app-view.tsx	274	a8784b7e479d3a	// // 这也是草稿必须受控的原因：非受控输入框随面板卸载会把已输入内容一起丢掉。
+apps/zcode-cli/packages/tui/src/app-view.tsx	275	a8784b7e479d3a	// // busy 在审批态下仍透传，用于禁用重复提交，而不是用来隐藏面板。
+apps/zcode-cli/packages/tui/src/app-view.tsx	276	a8784b7e479d3a	// // [权衡] 用三元链而非提前返回，保持返回结构单一，避免两条分支各自维护一份壳组件入参。
+apps/zcode-cli/packages/tui/src/app-view.tsx	399	a8784b7e479d3a	// // 队列面板常驻挂载，空队列时由它自己渲染空内容：条件挂载会让面板高度在入队瞬间跳变，
+apps/zcode-cli/packages/tui/src/app-view.tsx	400	a8784b7e479d3a	// // 输入框随之上移，正好打断用户正在敲的那一行。
+apps/zcode-cli/packages/tui/src/app-view.tsx	401	a8784b7e479d3a	// // 它排在所有候选面板之后、输入框之前：队列是已确定的后续输入，视觉上要贴着输入框。
+apps/zcode-cli/packages/tui/src/app-view.tsx	402	a8784b7e479d3a	// // [失败路径] 若把队列面板放到候选之前，模型或模式候选会被压到下方并裁掉，用户看不到选中项。
+apps/zcode-cli/packages/tui/src/app-view.tsx	403	a8784b7e479d3a	// // 队列内容只读展示，本文件不提供删除或重排回调，改队列必须回到上层状态里做。
+apps/zcode-cli/packages/tui/src/app-view.tsx	404	a8784b7e479d3a	// // contentWidth 与其它面板同源，保证队列条目换行位置与正文一致，不出现半宽条目。
+apps/zcode-cli/packages/tui/src/app-view.tsx	405	a8784b7e479d3a	// // [权衡] 不在这里按条数裁剪：裁剪阈值属于展示策略，交给面板内部才能在窗口变化时重新计算。
+apps/zcode-cli/packages/tui/src/app-view.tsx	406	a8784b7e479d3a	// // 面板拿到的 inputs 是已兜底的空数组，因此它无需再判断 undefined。
+apps/zcode-cli/packages/tui/src/app-view.tsx	426	a8784b7e479d3a	// // 状态行永远最后渲染且占位高度固定：放在输入框之前会让忙碌提示把输入框往下推，光标位置跳动。
+apps/zcode-cli/packages/tui/src/app-view.tsx	427	a8784b7e479d3a	// // active 直接取 busy，不额外维护一份正在加载标志：两份状态迟早有一方先变，出现转圈但可输入的矛盾态。
+apps/zcode-cli/packages/tui/src/app-view.tsx	428	a8784b7e479d3a	// // contextUsage 与输入区其它位置共用同一份快照，避免状态行显示的占用率与提示条不一致。
+apps/zcode-cli/packages/tui/src/app-view.tsx	429	a8784b7e479d3a	// // [失败路径] 忙碌态与错误态互斥由上层保证；状态行不自行判断错误，否则错误文案会被忙碌提示盖住。
+apps/zcode-cli/packages/tui/src/app-view.tsx	430	a8784b7e479d3a	// // 快捷键提示文案由状态行内部决定，本文件不参与优先级排序，按键分发统一在输入组件里完成。
+apps/zcode-cli/packages/tui/src/app-view.tsx	431	a8784b7e479d3a	// // [权衡] 不把登录提示并进状态行：登录是阻塞态，需要独立高度与醒目样式，混排会削弱提示。
+apps/zcode-cli/packages/tui/src/app-view.tsx	432	a8784b7e479d3a	// // 该组件没有交互回调，纯展示，因此不引入任何订阅或清理逻辑。

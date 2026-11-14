@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/adapters/src/model/runner-stream.ts	529	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 外层只消费控制信号：visible、retryScheduled 与 terminal 三个布尔。
+apps/zcode-cli/packages/adapters/src/model/runner-stream.ts	1293	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 不 cancel baseStream 就是「连续重试后请求卡在发送前」的根因。
+apps/zcode-cli/packages/adapters/src/model/runner-stream.ts	1428	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// toModelStreamEvent 只做形态转换，重试判断留在上层。
+packages/ui/src/SettingsPage.tsx	1457	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 故这里只持久化 caCertPath 并提示重启，不热更新证书链。
+packages/ui/src/SettingsPage.tsx	1640	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 这里只写偏好，不触发 checkForUpdates，用户可能在截图或演示。
+packages/ui/src/SettingsPage.tsx	2374	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 真正的调度由 updateService 负责，本开关只写偏好。
+packages/ui/src/settings/useShortcutRecording.ts	60	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// recording 为 false 时不挂 window keydown 监听。
+packages/ui/src/settings/useShortcutRecording.ts	64	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 录制期间 handleRecordingKeydown 先 preventDefault 再解析。
+packages/ui/src/settings/useShortcutRecording.ts	73	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// Escape 只调 cancelRecording，不改动已有绑定。
+packages/ui/src/settings/useShortcutRecording.ts	77	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// Backspace 恢复该 commandId 的默认键位。
+packages/ui/src/settings/useShortcutRecording.ts	83	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 组合判定交给 recordShortcutBinding，本层不做键位解析。
+packages/ui/src/settings/useShortcutRecording.ts	115	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 只与 effective[commandId] 比较，跨命令同键不算冲突。
+packages/ui/src/settings/useShortcutRecording.ts	165	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// mode === "add" 或 bindingIndex === null 时录制等价于追加。
+packages/ui/src/store/pluginStore.ts	206	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [事务] 这次 set 只写 workspaceIdentity 与列表保留策略，列表内容等响应回来再写。
+packages/ui/src/store/pluginStore.ts	267	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [并发] 后台 refresh 期间旧列表仍在展示，条目可能短暂落后于服务端。
+packages/ui/src/store/pluginStore.ts	307	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 这里与 install/uninstall 不同：空输入是调用方错误，不写 error 横幅。
+packages/ui/src/store/pluginStore.ts	363	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] updateMarket 的 marketId 为空表示全部市场，置忙用固定占位名。
+packages/ui/src/store/pluginStore.ts	414	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] install 兼容两种签名：旧形态省略 scope，默认按 user 级处理。
+packages/ui/src/store/pluginStore.ts	415	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [并发] busyKey 由 scope 与 pluginName 拼成，安装期间只锁这一行。
+packages/ui/src/store/pluginStore.ts	538	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 第三参为 enabled（旧）或 scope（新），按 typeof 布尔分流。

@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/ui/src/settings/model-provider-section/useStartPlanPreview.ts	34	a8784b7e	// `previewRequest` 是模块级单飞闸门，同一时刻只保留 1 个在飞请求。
+packages/ui/src/settings/model-provider-section/useStartPlanPreview.ts	57	a8784b7e	// `service` 为空或缺 `getStartPlanPreview` 方法时都落成不可用状态。
+packages/ui/src/settings/usage-stats/CodingPlanUsageLineChart.tsx	150	a8784b7e	// [契约] 颜色在 `visibleSeries` 里一次性分配，图例圆点与提示浮层复用同一份。
+packages/ui/src/settings/usage-stats/CodingPlanUsageLineChart.tsx	231	a8784b7e	// [契约] 空态要 3 个条件同时成立：`visibleSeries` 无项 且 无时间点 且 全零。
+packages/ui/src/store/subagentsStore.ts	160	a8784b7e	// `hasCachedAgents` 为假即视为新上下文，走清空重载而不是增量合并。
+packages/ui/src/store/subagentsStore.ts	343	a8784b7e	// `new:` 前缀键只在请求期间存在，刷新后由真实 `agentId` 行接管展示。
+packages/ui/src/store/taskQueryCacheStore.ts	627	a8784b7e	// [契约] 用 `expected` 与当前版本比对，不一致就判过期并丢弃结果。
+packages/ui/src/store/taskQueryCacheStore.ts	1141	a8784b7e	// [契约] `clearAll` 不做等价判断：显式清空允许产生新引用。
+packages/ui/src/ToolCallBlocks/renderers/eval-workflow-snippet.tsx	195	a8784b7e	// `running` 与成功态共用同一面板，差别只在 `content` 的来源。
+packages/ui/src/ToolCallBlocks/renderers/eval-workflow-snippet.tsx	196	a8784b7e	// `running` 时渲染待执行代码，终态渲染解包后的 `response`。
+packages/ui/src/ToolCallBlocks/renderers/read.tsx	92	a8784b7e	// [权衡] `readReadMetadataFromRaw` 同时吃标签式与结构化输出，代价是分支难穷举。
+packages/ui/src/ToolCallBlocks/renderers/read.tsx	283	a8784b7e	// [事务] `clickable` 为真时渲染 `button`，键盘可达并复用默认焦点行为。
+packages/ui/src/TreemappingPane.tsx	318	a8784b7e	// [资源] `getFileWeight` 是纯函数；渲染期可调用，复杂度 O(1)。
+packages/ui/src/TreemappingPane.tsx	480	a8784b7e	// 不在渲染期改 `selectedPath`：选中态留到下次点击自然对齐。
+packages/ui/src/v4/agentConversationTransportWorkflowRuns.ts	84	a8784b7e	// 术语区分：`artifact` 属于产物面，`workflowRun` 的顶层返回值不含这一层。
+packages/ui/src/v4/agentConversationTransportWorkflowRuns.ts	112	a8784b7e	// 区间裁剪不在 `workflowRunArtifactRead` 做：`offset` 与 `limit` 的校验归服务端。
+packages/ui/src/v4/ConversationShareReadonlyTimeline.tsx	363	a8784b7e	// `UserInputPresentation` 的附件与气泡都右对齐，与实时时间线保持同一套视觉。
+packages/ui/src/v4/ConversationShareReadonlyTimeline.tsx	572	a8784b7e	// 工件卡片固定 4 段布局：图标 / 名称 / 类型与大小 / 右侧动作。
+packages/ui/src/v4/ConversationTurnNavigator.tsx	182	a8784b7e	// [并发] `railVirtualizer` 的滚动订阅由库在卸载时回收，不要另建第 2 个实例。
+packages/ui/src/v4/ConversationTurnNavigator.tsx	233	a8784b7e	// [资源] 滚动条由 `scrollbar-hide` 隐藏但滚动保留，轨道高度上限取视口的百分比。

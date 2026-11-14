@@ -1,0 +1,37 @@
+file	baseLine	blame	content
+packages/ui/src/components/workflow-timeline/timeline-model.ts	16	a8784b7e479d3a	// 模块职责：把工作流图与运行投影折成时间线的站、轨道段、弧与带。
+packages/ui/src/components/workflow-timeline/timeline-model.ts	243	a8784b7e479d3a	// 先补隐式阶段，再收缩留白头。
+packages/ui/src/components/workflow-timeline/timeline-model.ts	345	a8784b7e479d3a	// 头像按实例身份分配，跨阶段复用。
+packages/ui/src/components/workflow-timeline/timeline-model.ts	385	a8784b7e479d3a	// 等待中的留白就是当前站。
+packages/ui/src/components/workflow-timeline/timeline-model.ts	479	a8784b7e479d3a	// 行进边优先走再入回边。
+packages/ui/src/project-sidebar/ProjectComposerMenu.tsx	132	a8784b7e479d3a	// 改错后果：每次打开菜单搜索被清空，多项目场景反复输入。
+packages/ui/src/project-sidebar/ProjectComposerMenu.tsx	195	a8784b7e479d3a	// 改错后果：门禁在正常交互中被重置，或旧意图永久存活。
+packages/ui/src/project-sidebar/ProjectComposerMenu.tsx	215	a8784b7e479d3a	// 不要用时间戳或随机数：序号需要可比较且无碰撞。
+packages/ui/src/project-sidebar/ProjectComposerMenu.tsx	226	a8784b7e479d3a	// 改错后果：重启后菜单显示一个已失效的设备选择弹窗。
+packages/ui/src/project-sidebar/ProjectComposerMenu.tsx	326	a8784b7e479d3a	// 改错后果：已下线的设备借继续按钮重新登记到项目中。
+packages/ui/src/project-sidebar/ProjectComposerMenu.tsx	397	a8784b7e479d3a	// 改错后果：跨设备同名项目被误判为当前项目，编辑动作打错目标。
+packages/ui/src/project-sidebar/ProjectComposerMenu.tsx	414	a8784b7e479d3a	// [契约] 脱离项目只在本地、允许选择、允许脱离且当前确实属于项目时成立。
+packages/ui/src/project-sidebar/ProjectComposerMenu.tsx	417	a8784b7e479d3a	// 改错后果：远程项目出现 X 按钮，点击后草稿归属丢失。
+packages/ui/src/project-sidebar/ProjectComposerMenu.tsx	442	a8784b7e479d3a	// 它只做展示，不参与任何身份判断。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	53	a8784b7e479d3a	// 工作流名只用于描述。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	54	a8784b7e479d3a	// 候选列表为只读数组。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	55	a8784b7e479d3a	// 忙碌标记由调用方控制。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	56	a8784b7e479d3a	// 提交回调携带完整候选对象。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	73	a8784b7e479d3a	// 选中键独立于候选维护。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	74	a8784b7e479d3a	// 候选变化时先调和再写回。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	75	a8784b7e479d3a	// 无效选择回落到默认项目。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	76	a8784b7e479d3a	// 无候选时转成只读提示。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	101	a8784b7e479d3a	// 先挡住空候选与忙碌。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	102	a8784b7e479d3a	// 再按键定位真实候选。
+packages/ui/src/settings/saved-workflows/SavedWorkflowMoveDialog.tsx	103	a8784b7e479d3a	// 定位失败则静默放弃。
+packages/ui/src/v4/ConversationWorkflowDigests.tsx	40	a8784b7e479d3a	// 空摘要直接返回空。
+packages/ui/src/v4/ConversationWorkflowDigests.tsx	41	a8784b7e479d3a	// 名称缺失用通用文案。
+packages/ui/src/v4/ConversationWorkflowDigests.tsx	42	a8784b7e479d3a	// 子代理模型名由宿主查表。
+packages/ui/src/v4/ConversationWorkflowDigests.tsx	43	a8784b7e479d3a	// 每条摘要独立派生回调。
+packages/ui/src/v4/ConversationWorkflowDigests.tsx	83	a8784b7e479d3a	// 打开详情要求回调与会话。
+packages/ui/src/v4/ConversationWorkflowDigests.tsx	84	a8784b7e479d3a	// 恢复到要求可恢复标记。
+packages/ui/src/v4/ConversationWorkflowDigests.tsx	85	a8784b7e479d3a	// 取消只对运行中显示。
+packages/ui/src/v4/ConversationWorkflowDigests.tsx	86	a8784b7e479d3a	// 药丸要求活投影。
+packages/ui/src/v4/ConversationWorkflowDigests.tsx	179	a8784b7e479d3a	// 卡片承接全部可选回调。
+packages/ui/src/v4/ConversationWorkflowDigests.tsx	180	a8784b7e479d3a	// 可选字段按需展开。
+packages/ui/src/v4/ConversationWorkflowDigests.tsx	181	a8784b7e479d3a	// 设置轮在卡片上方加一行。

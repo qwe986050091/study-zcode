@@ -1,0 +1,45 @@
+file	baseLine	blame	content
+packages/ui/src/lib/shikiHighlighter.ts	30	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// foreground 与 background 各取主题默认色，缺失时分别兜底
+packages/ui/src/lib/shikiHighlighter.ts	37	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// bundledLanguageIds 取 bundledLanguages 的键集合
+packages/ui/src/lib/shikiHighlighter.ts	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// bundledLanguageAliases 由 bundledLanguagesInfo.flatMap 展开
+packages/ui/src/lib/shikiHighlighter.ts	39	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 两个集合建好后只读，不随调用修改
+packages/ui/src/lib/shikiHighlighter.ts	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// codeLanguage 命中 PLAIN_TEXT_CODE_LANGUAGES 时直接返回 false
+packages/ui/src/lib/shikiHighlighter.ts	58	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 其余语言需命中 bundledLanguageIds 或 aliases，否则不启用高亮
+packages/ui/src/lib/shikiHighlighter.ts	59	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 判定与归一化共用 bundledLanguageAliases 一套表
+packages/ui/src/lib/shikiHighlighter.ts	69	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 空串直接返回 FALLBACK_CODE_LANGUAGE
+packages/ui/src/lib/shikiHighlighter.ts	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先查 bundledLanguageAliases，命中后仍校验官方 id
+packages/ui/src/lib/shikiHighlighter.ts	71	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 别名与 id 都未命中时返回 FALLBACK_CODE_LANGUAGE
+packages/ui/src/lib/shikiHighlighter.ts	92	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// highlighterCache 存 Promise，并发调用共享同一次 createHighlighter
+packages/ui/src/onboarding/onboardingMeshRenderer.ts	54	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// getContext("webgl") 返回 null 时直接返回 null
+packages/ui/src/onboarding/onboardingMeshRenderer.ts	55	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// compile 失败先 deleteShader，program 失败再删两个 shader
+packages/ui/src/onboarding/onboardingMeshRenderer.ts	56	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 两个 shader attach 到 program 后立即 deleteShader
+packages/ui/src/onboarding/onboardingMeshRenderer.ts	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 返回对象只暴露 draw 与 dispose
+packages/ui/src/onboarding/onboardingMeshRenderer.ts	116	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// draw 用 Math.min(1, 960 / max(w, h)) 限制尺寸
+packages/ui/src/onboarding/onboardingMeshRenderer.ts	117	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// canvas.width / height 与目标值不同才赋值
+packages/ui/src/onboarding/onboardingMeshRenderer.ts	118	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// aspect uniform 取 width / height，不用缩放后尺寸
+packages/ui/src/onboarding/onboardingMeshRenderer.ts	119	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// drawArrays 以 gl.TRIANGLES 与 6 个顶点做一次绘制
+packages/ui/src/onboarding/onboardingMeshRenderer.ts	140	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// dispose 先 deleteBuffer，再 deleteProgram
+packages/ui/src/onboarding/onboardingMeshRenderer.ts	141	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// dispose 只删本实例的 buffer 与 program
+packages/ui/src/onboarding/onboardingMeshRenderer.ts	142	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// WebGL 对重复 delete 不报错，dispose 不另设幂等标记
+packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	177	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] showScrollBottomMask 由 scrollTop / clientHeight 派生，不看业务数据；
+packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	234	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// canOpenInFileManager 取 wslFileManagerEditor 或本地可用且非远程树。
+packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	264	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] useWorkspaceFileSearchResults 每次输入重算，成本随 entries 线性增长。
+packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	326	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] effect 依赖 gitStatusAvailable，只在翻转时触发。
+packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	432	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// overflowAnchor: "none" 关闭锚定，防止插入行时视口跳动。
+packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	571	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] handleRefresh 同时调 refreshLoadedDirectories 与 refreshSearchIndex；
+packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	572	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 搜索态必须调 refreshSearchIndex，否则结果仍是旧快照。
+packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	573	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [失败路径] 只刷目录会让已删除文件继续出现在搜索结果。
+packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	584	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] refreshInProgress 控制动画，disabled 只看目录刷新。
+packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	597	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// openInEditor 与本地打开都返回 { success, error }，调用方不区分来源。
+packages/ui/src/workspace-file-tree/WorkspaceFileTree.tsx	726	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 分流在 handleDirectoryAction 内，子组件无需感知 hasFileSearchQuery。
+packages/zcode-server-cli/src/ipc/controlServer.ts	40	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// createControlServer 先 rm(endpoint)，再 mkdir 父目录。
+packages/zcode-server-cli/src/ipc/controlServer.ts	41	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// listen 成功后 removeListener("error")，避免监听期错误被吞。
+packages/zcode-server-cli/src/ipc/controlServer.ts	42	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// chmod(endpoint, 0o600) 只允许属主读写。
+packages/zcode-server-cli/src/ipc/controlServer.ts	43	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// closePromise 只建一次，后续 close 复用同一 Promise。
+packages/zcode-server-cli/src/ipc/controlServer.ts	96	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// socket error 只 destroy 当前 socket。
+packages/zcode-server-cli/src/ipc/controlServer.ts	97	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// JsonLineDecoder.push 抛错时写 invalid-frame response 后 destroy。
+packages/zcode-server-cli/src/ipc/controlServer.ts	98	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 每个 frame 走 void dispatch，不串行 await handler。
+packages/zcode-server-cli/src/ipc/controlServer.ts	99	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// end 事件调 decoder.finish()，残留半帧则 destroy。
+packages/zcode-server-cli/src/ipc/controlServer.ts	157	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// writeResponse 先 controlResponseSchema.parse 校验。
+packages/zcode-server-cli/src/ipc/controlServer.ts	158	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// socket.destroyed 或 writableEnded 时直接 return。
+packages/zcode-server-cli/src/ipc/controlServer.ts	159	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// socket.write 回调收到 error 时 destroy。

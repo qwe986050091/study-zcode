@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/ui/src/lib/remoteConnectionWizard.ts	326	a8784b7e	// `containerName` 的空值已由收集阶段拦下，构造阶段可直接取用 `settings.containerName`。
+packages/ui/src/lib/settingsNavigation.ts	130	a8784b7e	// `buildSettingsLocation` 是纯函数且无存储副作用，可在渲染期安全调用。
+packages/ui/src/lib/userActionTelemetry.ts	339	a8784b7e	// 批次上限取 `USER_ACTION_TELEMETRY_BATCH_LIMIT` 并与发送端接收上限同源，调用点不得写死数字。
+packages/ui/src/lib/webElementPickerScript.ts	756	a8784b7e	// 点击空白等价于取消：`resolvePickedElement` 返回 null，而不是产出空元素载荷。
+packages/ui/src/mentions/MentionPlugin.tsx	101	a8784b7e	// [契约] `MENTION_NAV_KEYS` 的循环取模是面板导航语义：首项按上键到末项，末项按下键回首项。
+packages/ui/src/onboarding/OccupationOnboarding.tsx	295	a8784b7e	// `needsOnboarding` 判定中且无历史职业时先不渲染，宁可多等一帧也不闪引导再消失。
+packages/ui/src/onboarding/OnboardingFlowParts.tsx	443	a8784b7e	// [契约] `md:grid-cols-3` 汇总内层再用两列网格：标签在左，数字在右。
+packages/ui/src/plugin-ui/adapters/pluginUiManagedPage.ts	302	a8784b7e	// [契约] `createPluginUiDownloadInteraction` 与调用方交互合成一份；能力声明按合成后回调是否存在逐项判断。
+packages/ui/src/plugin-ui/app/pluginUiHostController.ts	198	a8784b7e	// [并发] `attachPort` 进入即重置采样并关闭旧传输：同一时刻只允许一条活跃页面通道。
+packages/ui/src/plugin-ui/domain/pluginUiToolFeed.ts	57	a8784b7e	// `toolCall` 或 `presentation` 缺一即返回 undefined：上游没有可下发的工具结果。
+packages/ui/src/presentation/presentationElementModel.ts	106	a8784b7e	// 偏移量每次用 `slice` 重算以换取可读性，大表格下 O(n²) 的代价需先确认规模。
+packages/ui/src/PreviewPane.tsx	1151	a8784b7e	// 恢复点只取「卸载前那一帧」，`rememberScrollMetrics` 由卸载 effect 调用而非滚动监听。
+packages/ui/src/previewPaneOfficeDocxContent.tsx	20	a8784b7e	// 模块职责：预览面板的文档渲染层，负责 `renderAsync` 解析与尺寸适配。
+packages/ui/src/project-sidebar/grouped/useGroupedDrag.ts	242	a8784b7e	// [事务] 结束阶段先算 `groupedMoveCommand` 再复位手势：命令为空时只清预览，不触达持久层。
+packages/ui/src/project-sidebar/grouped/virtualized-group-task-list.tsx	35	a8784b7e	// `GROUPED_TASK_ROW_ESTIMATE_PX` 等三个常量共同定义虚拟化策略，调用点不得写魔法数字。
+packages/ui/src/project-sidebar/useProjectTree.ts	64	a8784b7e	// [契约] `windowProjectDirectory` 在远端 bridge 下属于 Source 侧，侧栏读写与失效流必须整组取自窗口目录。
+packages/ui/src/resource-manager/storage/StorageSection.tsx	157	a8784b7e	// [权衡] 其余可清理类别直接执行以省一次点击：删除不可撤销，`cleanability` 已在前一步分流。
+packages/ui/src/Root.tsx	873	a8784b7e	// `handleReauthenticationRequired` 只写入 `session-expired` 原因，跳转由门禁统一决定。
+packages/ui/src/root/useBotBroadcastEffects.ts	112	a8784b7e	// `useEffect` 生命周期与组件挂载对齐，一次挂载只订阅一次广播。
+packages/ui/src/root/useRootOAuthEffects.ts	78	a8784b7e	// `connectionInitialized` 只参与后续两步门控，不用登录成败的语义解读。

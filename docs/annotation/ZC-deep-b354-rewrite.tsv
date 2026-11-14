@@ -1,0 +1,31 @@
+file	baseLine	blame	content
+packages/services/src/bots/commandParser.ts	17	a8784b7e479d3a	// 去掉前导斜杠后再切分。
+packages/services/src/bots/commandParser.ts	42	a8784b7e479d3a	// 退出话题。
+packages/services/src/bots/commandParser.ts	66	a8784b7e479d3a	// 取消选择。
+packages/services/src/bots/commandParser.ts	79	a8784b7e479d3a	// 重连远端。
+packages/services/src/bots/commandParser.ts	119	a8784b7e479d3a	// 停止当前运行。
+packages/services/src/bots/workspaceHelpers.ts	39	a8784b7e479d3a	// 两种“全部允许”的表示。
+packages/services/src/bots/workspaceHelpers.ts	45	a8784b7e479d3a	// 去空白与空串。
+packages/services/src/bots/workspaceHelpers.ts	59	a8784b7e479d3a	// 判定口径与过滤保持一致。
+packages/services/src/bots/workspaceHelpers.ts	79	a8784b7e479d3a	// 空值不解析。
+packages/services/src/bots/workspaceHelpers.ts	86	a8784b7e479d3a	// 精确 id 命中优先。
+packages/ui/src/GitBranchSwitcher.tsx	217	a8784b7e479d3a	// [并发] 过滤是纯函数、无副作用，可在输入高频变化时反复调用。
+packages/ui/src/GitBranchSwitcher.tsx	224	a8784b7e479d3a	// [契约] 列表打开且已有分支时，把当前分支滚入可视区域，减少长列表查找。
+packages/ui/src/GitBranchSwitcher.tsx	283	a8784b7e479d3a	// [资源] 弹层按需挂载，关闭时不渲染内容，减少列表与图谱的开销。
+packages/ui/src/GitBranchSwitcher.tsx	370	a8784b7e479d3a	// [契约] 关闭弹层后把焦点还给聊天输入框，保持连续输入体验。
+packages/ui/src/GitBranchSwitcher.tsx	456	a8784b7e479d3a	// [权衡] 不复用列表内输入框，换取明确的表单布局与错误展示位。
+packages/ui/src/OpenSplitButton.tsx	123	a8784b7e479d3a	// [契约] 编辑器上下文由预览源的工作区身份推导。
+packages/ui/src/OpenSplitButton.tsx	214	a8784b7e479d3a	// [契约] 查询路径来自当前目标而不是闭包外的变量。
+packages/ui/src/OpenSplitButton.tsx	215	a8784b7e479d3a	// 平台调用是异步的，
+packages/ui/src/OpenSplitButton.tsx	216	a8784b7e479d3a	// 返回后必须先用请求号确认自己仍是最新的一次。
+packages/ui/src/OpenSplitButton.tsx	340	a8784b7e479d3a	// [权衡] 右键菜单承担补充动作，下拉保持平铺应用列表。
+packages/ui/src/settings/model-provider-section/InlineEditableProviderCard.tsx	198	a8784b7e479d3a	// 草稿与保存事务完全在本组件内闭环，父层只负责持久化。
+packages/ui/src/settings/model-provider-section/InlineEditableProviderCard.tsx	424	a8784b7e479d3a	// 该判断只影响提示，不影响已写入的服务端结果。
+packages/ui/src/settings/model-provider-section/InlineEditableProviderCard.tsx	821	a8784b7e479d3a	// 提交前先定位原模型，找不到或 id 为空直接抛错。
+packages/ui/src/settings/model-provider-section/InlineEditableProviderCard.tsx	870	a8784b7e479d3a	// 内置模型不进入删除分支，删除能力只属于个人模型。
+packages/ui/src/settings/model-provider-section/InlineEditableProviderCard.tsx	880	a8784b7e479d3a	// [契约] 仅非内置模型可删；内置模型是产品能力的一部分。
+packages/ui/src/v4/composer/toolbarShortcuts.ts	60	a8784b7e479d3a	// 当前值不在选项里时从第一项开始，而不是报错。
+packages/ui/src/v4/composer/toolbarShortcuts.ts	118	a8784b7e479d3a	// 没有可选项时整条链路无意义，直接退出。
+packages/ui/src/v4/composer/toolbarShortcuts.ts	163	a8784b7e479d3a	// 禁用项直接跳过，不参与后续匹配。
+packages/ui/src/v4/composer/toolbarShortcuts.ts	219	a8784b7e479d3a	// 录制态下按键只用于采集，绝不能触发真实动作。
+packages/ui/src/v4/composer/toolbarShortcuts.ts	220	a8784b7e479d3a	// 这个判断必须早于任何匹配，包括诊断日志分支。

@@ -1,0 +1,37 @@
+file	baseLine	blame	content
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	31	a8784b7e479d3a	// 兜底图标表示未知工具。
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	32	a8784b7e479d3a	// 允许调用方覆盖为更具体的图标。
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	33	a8784b7e479d3a	// 图标样式与父布局一致。
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	36	a8784b7e479d3a	// 摘要模式只显示一行文案。
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	37	a8784b7e479d3a	// 隐藏原始回退用于已有专门渲染时。
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	38	a8784b7e479d3a	// 其余字段全部继承通用上下文。
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	46	a8784b7e479d3a	// 种类标签取首个单词首字母大写。
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	47	a8784b7e479d3a	// 内联预览存在时不再展示原始结构。
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	48	a8784b7e479d3a	// 加载完整字段按工具标识回调。
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	72	a8784b7e479d3a	// 正文、快照提示与原始结构依次排列。
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	73	a8784b7e479d3a	// 快照提示仅在有加载能力时出现。
+packages/ui/src/ToolCallBlocks/renderers/fallback.tsx	74	a8784b7e479d3a	// 原始结构受内联预览与隐藏开关双重控制。
+packages/ui/src/hooks/useBotBoundGroups.ts	28	a8784b7e479d3a	// 一行代表一个已绑定群。
+packages/ui/src/hooks/useBotBoundGroups.ts	29	a8784b7e479d3a	// 主题数量是派生值，不落库。
+packages/ui/src/hooks/useBotBoundGroups.ts	30	a8784b7e479d3a	// 开关状态取群本身。
+packages/ui/src/hooks/useBotBoundGroups.ts	38	a8784b7e479d3a	// 没有归属账号时不返回任何行。
+packages/ui/src/hooks/useBotBoundGroups.ts	39	a8784b7e479d3a	// 主题行不单独成行，只计入计数。
+packages/ui/src/hooks/useBotBoundGroups.ts	40	a8784b7e479d3a	// 计数按群标识去重线程标识。
+packages/ui/src/hooks/useBotBoundGroups.ts	65	a8784b7e479d3a	// 读取与保存在同一代次下协调。
+packages/ui/src/hooks/useBotBoundGroups.ts	66	a8784b7e479d3a	// 广播只触发重新读取，不直接改本地。
+packages/ui/src/hooks/useBotBoundGroups.ts	67	a8784b7e479d3a	// 卸载后所有写状态都跳过。
+packages/ui/src/hooks/useBotBoundGroups.ts	111	a8784b7e479d3a	// 保存在途时忽略重复点击。
+packages/ui/src/hooks/useBotBoundGroups.ts	112	a8784b7e479d3a	// 成功后再读一次权威状态。
+packages/ui/src/hooks/useBotBoundGroups.ts	113	a8784b7e479d3a	// 授权未改变按失败处理。
+packages/ui/src/lib/exploreToolCall.ts	36	a8784b7e479d3a	// 先去除首尾空白。
+packages/ui/src/lib/exploreToolCall.ts	77	a8784b7e479d3a	// 字符串直接作为候选。
+packages/ui/src/lib/exploreToolCall.ts	78	a8784b7e479d3a	// 数组分两种形态处理。
+packages/ui/src/lib/exploreToolCall.ts	79	a8784b7e479d3a	// 纯字符串数组先找 -lc。
+packages/ui/src/lib/exploreToolCall.ts	80	a8784b7e479d3a	// 找不到则整体拼接。
+packages/ui/src/lib/exploreToolCall.ts	82	a8784b7e479d3a	// 最终统一剥壳与去重。
+packages/ui/src/lib/exploreToolCall.ts	153	a8784b7e479d3a	// 先解析工具身份。
+packages/ui/src/lib/exploreToolCall.ts	155	a8784b7e479d3a	// 无命令视为待补。
+packages/ui/src/lib/exploreToolCall.ts	156	a8784b7e479d3a	// 该判定不区分读写。
+packages/ui/src/lib/exploreToolCall.ts	157	a8784b7e479d3a	// 供执行判定复用。
+packages/ui/src/lib/exploreToolCall.ts	164	a8784b7e479d3a	// 读搜索抓取家族直接通过。
+packages/ui/src/lib/exploreToolCall.ts	166	a8784b7e479d3a	// 写命令与重定向先行排除。

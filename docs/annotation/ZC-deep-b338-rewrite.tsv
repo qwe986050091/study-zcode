@@ -1,0 +1,33 @@
+file	baseLine	blame	content
+packages/ui/src/project-sidebar/grouped/drag.ts	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 只向上寻找真正可滚动的 ancestor：overflow 为 auto/scroll 且内容超出。
+packages/ui/src/project-sidebar/grouped/drag.ts	177	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] collisionDetection 只负责筛选候选容器，排序仍交给 closestCenter。
+packages/ui/src/project-sidebar/grouped/drag.ts	180	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 在 collisionDetection 里过滤而非重写排序，复用成熟算法，行为更可预期。
+packages/ui/src/project-sidebar/grouped/drag.ts	317	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] group 不支持嵌套，因此这里不存在组内插入分支。
+packages/ui/src/project-sidebar/grouped/drag.ts	379	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [边界] GROUPED_TASK_DROP_ANIMATION 只描述放置回弹，不参与布局补间。
+packages/ui/src/project-sidebar/grouped/drag.ts	380	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] duration 不随距离动态调整，行为可预期优先。
+packages/ui/src/project-sidebar/grouped/drag.ts	381	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改 GROUPED_TASK_DROP_ANIMATION.duration 会同时影响所有分组视图，属于全局视觉决策。
+packages/ui/src/project-sidebar/grouped/drag.ts	394	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 只测量 height/left/top 三个量，width 对纵向重排没有意义。
+packages/ui/src/resource-manager/NetworkSection.tsx	30	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// PAGE_SIZE 只影响内存切片，桥接始终返回全量快照。
+packages/ui/src/resource-manager/NetworkSection.tsx	35	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// bridge 缺省时整块降级为不可用提示，不发起任何请求。
+packages/ui/src/resource-manager/NetworkSection.tsx	40	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// locale 变化时重建 Intl 实例，其余渲染复用同一个。
+packages/ui/src/resource-manager/NetworkSection.tsx	61	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// clearing 为真时跳过请求，卸载时清掉待执行的 timer。
+packages/ui/src/resource-manager/NetworkSection.tsx	86	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// filter 只作用在投影后的 rows 上，不写回采集侧快照。
+packages/ui/src/resource-manager/NetworkSection.tsx	101	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// pageCount 至少为 1，空列表也能显示第一页。
+packages/ui/src/resource-manager/NetworkSection.tsx	102	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// currentPage 取 page 与 pageCount-1 的较小值，筛选收缩后自动收敛。
+packages/ui/src/resource-manager/NetworkSection.tsx	107	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// finally 里解除 busy 并递增 revision，成败路径都会触发刷新。
+packages/ui/src/settings/HookForm.tsx	93	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 拆出 HookScopeMenu 让文字标签也能触发下拉，牺牲一层 scope 传参换取更大点击区域。
+packages/ui/src/settings/HookForm.tsx	176	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 用单个 customError 换实现简单，多个问题并存时只展示首个。
+packages/ui/src/settings/HookForm.tsx	213	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [资源] 本次保存只经一次 JSON.parse，渲染期合法性判断不复用该结果。
+packages/ui/src/settings/HookForm.tsx	219	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] JSON.parse 放在保存时而非输入时，换取打字过程不被报错打断。
+packages/ui/src/settings/HookForm.tsx	224	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 只校验顶层 plain object，嵌套内容原样透传交给执行侧解释。
+packages/ui/src/settings/HookForm.tsx	234	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 不替用户修补 JSON 尾逗号，换取存储内容与所见严格一致。
+packages/ui/src/settings/HookForm.tsx	243	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [事务] 组装后同步调用 onSave，回调返回前不产生持久化副作用。
+packages/ui/src/settings/HookForm.tsx	263	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] async 开关只对命令型生效，取值直接来自 asyncCommand 布尔草稿。
+packages/web/src/web-remote-control/ui/webRemoteControlConnectionSheet.tsx	59	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 入参 timestamp 为秒级，与中继协议单位保持一致。
+packages/web/src/web-remote-control/ui/webRemoteControlConnectionSheet.tsx	60	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// elapsed 取整到最近的单位，不显示小数位。
+packages/web/src/web-remote-control/ui/webRemoteControlConnectionSheet.tsx	61	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// formatRelative 对不足一分钟统一显示刚刚，避免秒级抖动。
+packages/web/src/web-remote-control/ui/webRemoteControlConnectionSheet.tsx	62	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 超过一个月改用 toLocaleDateString，相对天数已难以阅读。
+packages/web/src/web-remote-control/ui/webRemoteControlConnectionSheet.tsx	81	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 整行由 button 承载，点击区域覆盖图标与内容。
+packages/web/src/web-remote-control/ui/webRemoteControlConnectionSheet.tsx	82	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 左侧 icon 列宽度固定，保证多行文本对齐。
+packages/web/src/web-remote-control/ui/webRemoteControlConnectionSheet.tsx	83	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// divider 只画在内容区，首行省略以形成分组视觉。
+packages/web/src/web-remote-control/ui/webRemoteControlConnectionSheet.tsx	183	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// description 附带在线数量，帮助用户判断选哪个会话。

@@ -1,0 +1,25 @@
+file	baseLine	blame	content
+packages/ui/src/WorkspaceSidebarFooterUsageSummary.tsx	196	a8784b7e	// `personalPlan` 与 `quota` 都为空即无可用个人套餐，徽标与个人额度保持空。
+packages/ui/src/WorkspaceSidebarFooterUsageSummary.tsx	392	a8784b7e	// `mountedRefresh` 同样为假，与个人额度共用 `refresh` 入口。
+packages/ui/src/WorkspaceSidebarFooterUsageSummary.tsx	502	a8784b7e	// 不做兜底捕获：`parseUsageSummary` 是纯函数，异常应在测试里暴露。
+packages/web/src/share/ConversationShareLandingPage.tsx	430	a8784b7e	// 离开页面（真正唤起成功）后自然消失：`pendingShareOpen` 不持久化。
+packages/web/src/share/ConversationShareLandingPage.tsx	580	a8784b7e	// 页面被切到后台即视为唤起成功，`visibilityState` 判据不打扰用户。
+packages/web/src/share/ConversationShareLandingPage.tsx	964	a8784b7e	// 错误态只存一份：`shareError` 由父级持有，子组件不再复制。
+packages/zcode-server-cli/src/packaging/stageArchives.ts	25	a8784b7e	// 打包命令的统一出口：`stageArchives` 是唯一调用点。
+packages/zcode-server-cli/src/packaging/stageArchives.ts	135	a8784b7e	// 归档格式随目标平台：`darwin` 取 zip、`win32` 取 7z。
+packages/zcode-server-cli/src/packaging/stageArchives.ts	140	a8784b7e	// `zip` 与 `7z` 两条路径共用同一份临时树。
+packages/zcode-server-cli/src/packaging/stageDependencies.ts	37	a8784b7e	// `@scope/pkg` 取两段，其余包名只取首段。
+packages/zcode-server-cli/src/packaging/stageDependencies.ts	86	a8784b7e	// `entryPackage` 以可选身份入队：缺入口不阻断构建。
+packages/zcode-server-cli/src/packaging/stageDependencies.ts	167	a8784b7e	// 与 `targetPlatform` 无关的包全部保留。
+packages/desktop/scripts/mcp-apps-host-fixture/rows-renderer.tsx	63	a8784b7e	// `onReady` 在命令挂载后调用，测试随后开始驱动。
+packages/desktop/scripts/mcp-apps-host-fixture/rows-renderer.tsx	172	a8784b7e	// `check` 可能被多次触发，取消后 `cancelled` 置真即不再生效。
+packages/desktop/scripts/mcp-apps-host-fixture/sampling-main.ts	147	a8784b7e	// 第三轮结束后断言 `approvalHistory` 为零：采样不走工具审批链路。
+packages/desktop/scripts/mcp-apps-host-fixture/sampling-main.ts	286	a8784b7e	// 整段结束后只允许新增一次 `modelRequest`，其余非法调用在准入阶段被拦。
+packages/e2e-report/src/viewer/CoveragePanel.tsx	72	a8784b7e	// [权衡] `meta` 不展示时间戳：报告时间由页头统一负责。
+packages/e2e-report/src/viewer/CoveragePanel.tsx	167	a8784b7e	// [权衡] 不为复用再抽小单元：四张卡片差异仅在 `label`。
+packages/model-option-map/src/merge-patch.ts	75	a8784b7e	// `commonPrefix` 全部相同即视为重叠。
+packages/model-option-map/src/merge-patch.ts	88	a8784b7e	// 合并只在 `structuredClone` 的副本上执行，入参不被改写。
+packages/provider/src/config-service.ts	718	a8784b7e	// 先置位 `releasing` 再释放，防止释放期回调重入。
+packages/provider/src/config-service.ts	762	a8784b7e	// 名称比较统一转小写：`normalizedName`，展示层保留用户大小写。
+packages/provider/src/config/model-config.ts	202	a8784b7e	// [权衡] 保留 `ModelOverlay` 单叶子结构而非裸布尔：新增输出能力不必改覆盖语义。
+packages/provider/src/config/model-config.ts	462	a8784b7e	// [事务] `composeModelConfig` 只做纯函数拼接：不写回任何一层。

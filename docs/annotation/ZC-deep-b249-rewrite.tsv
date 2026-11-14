@@ -1,0 +1,65 @@
+file	baseLine	blame	content
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	28	a8784b7e479d3a	// // [权衡] 目录项同时带 key、turnId、unitIndex、rowId 是刻意冗余：key 供虚拟列表
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	29	a8784b7e479d3a	// // 去重与复用，turnId 供先把视口定位到所属容器，rowId 供滚动到具体消息，
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	30	a8784b7e479d3a	// // unitIndex 供反查活跃单元。只留 key 会让调用方解析字符串才能定位，把格式
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	31	a8784b7e479d3a	// // 约定泄漏到渲染层；只留 rowId 则同一 row 被重渲染成新 turn 时无法区分。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	32	a8784b7e479d3a	// // 三个预览字段成组出现，kind 是判别式，读取方必须按 kind 决定是否信任 text。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	33	a8784b7e479d3a	// // userPreview 与 assistantPreview 允许为空串，只有 kind 为 text 才代表真实内容。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	34	a8784b7e479d3a	// // isRunning 描述该条 query 是否仍代表当前进行中的工作，不是全局忙闲标志。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	35	a8784b7e479d3a	// // 新增字段应保持可序列化，目录项会进虚拟列表缓存与后端状态快照。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	47	a8784b7e479d3a	// // 三个必填预览文案由调用方注入，避免本模块硬编码界面语，便于多语言与测试断言；
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	48	a8784b7e479d3a	// // 两个上限可省略，省略时走 DEFAULT_MAX_PREVIEW_CHARS 与 DEFAULT_MAX_PREVIEW_PARAGRAPHS。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	49	a8784b7e479d3a	// // 函数内部用 Required 收窄成全部必填，因此默认值必须在进入 flatMap 之前补齐，
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	50	a8784b7e479d3a	// // 不能在每条 unit 上重复回填，否则同一次构建里不同项会拿到不同默认值。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	51	a8784b7e479d3a	// // [权衡] 越界上限直接夹到安全下限而不抛错：目录是滚动路径上的高频调用，
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	52	a8784b7e479d3a	// // 参数配错时应降级成可读截断，而不是让整条会话列表因一个配置错误而崩溃。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	106	a8784b7e479d3a	// // 864px 是可容纳目录条与消息列的实测最小宽度，低于它目录会压住正文，是硬门槛
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	107	a8784b7e479d3a	// // 而非建议值；水合判定用大于等于，恰好 864 时仍开启。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	108	a8784b7e479d3a	// // [权衡] 用像素常量而不是断点 token：目录宽度取决于侧栏折叠与分栏比例，媒体
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	109	a8784b7e479d3a	// // 查询表达的是视口宽度，折叠侧栏后两者不再等价，只有容器宽度是真实可用空间。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	110	a8784b7e479d3a	// // 该值被水合判定与视觉回归快照共同引用，改动会使已归档截图基线失效，需同步更新快照。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	111	a8784b7e479d3a	// // [失败路径] 容器宽度为 NaN 或负数时比较恒为假，水合静默不开启，界面表现为目录
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	112	a8784b7e479d3a	// // 按钮始终置灰；排查应先怀疑布局测量，常量保持纯数字，不要引入带单位字符串。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	138	a8784b7e479d3a	// // 重试预算是固定两档：首次失败 250ms 后重试，第二次失败 1s 后重试，第三次起放弃。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	139	a8784b7e479d3a	// // 返回 null 表示终止，而不是返回一个很大的延迟，避免调用方继续排定时器。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	140	a8784b7e479d3a	// // [失败路径] 放弃后目录保持未水合且不抛错：水合只是提速手段，缺失时仍可按需
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	141	a8784b7e479d3a	// // 加载，把失败升级成异常会让一次网络抖动拖垮整条会话视图。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	142	a8784b7e479d3a	// // [权衡] 不做长周期指数退避：重试窗口越长，用户看到空目录的时间越久，两档
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	143	a8784b7e479d3a	// // 已能覆盖冷启动竞态；更长的退避应交给上层重新进入页面时再触发。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	152	a8784b7e479d3a	// // 段落切分只认空行，行内单个换行被折叠成空格：消息里的软换行属于排版细节，
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	153	a8784b7e479d3a	// // 若也当段落，目录里会塞满只有一行的碎片。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	154	a8784b7e479d3a	// // 每段再压缩连续空白并 trim，使预览长度可预测，避免制表符撑开布局。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	155	a8784b7e479d3a	// // 空段在这里被丢弃，这正是返回数组可能为空的唯一来源。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	156	a8784b7e479d3a	// // 上限先夹到不小于 1，传 0 或负数等价于只要一段，而不是一段都不要。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	157	a8784b7e479d3a	// // [权衡] 先切段再截字符而非反过来：反过来会把最后一段截成半句，拼回单行后
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	158	a8784b7e479d3a	// // 看起来像正文缺字；当前顺序保证省略号一定落在完整段落之后。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	169	a8784b7e479d3a	// // 下限 8 保证「上限减 3 个字符」至少还剩 5 个字符，省略号不会吃掉全部内容。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	170	a8784b7e479d3a	// // [失败路径] 若上限小于 4，切片长度变负会得到近乎空串，界面上只剩省略号，
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	171	a8784b7e479d3a	// // 用户无法分辨不同 query，因此必须夹住而不是信任调用方。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	172	a8784b7e479d3a	// // 未超长时原样返回，不补省略号，避免短预览被误读成「还有更多内容」。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	173	a8784b7e479d3a	// // 尾部 trimEnd 去掉截断留下的空白，防止省略号与文字之间出现空隙。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	248	a8784b7e479d3a	// // timelineOnly 单元代表只挂在时间线上、不占用户可见 query 的位置，直接跳过。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	249	a8784b7e479d3a	// // 过滤用 origin 严格等于 realUser，而不是物理 role：provider 与 store 的物理
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	250	a8784b7e479d3a	// // user 行里还混着 background、goal、mailbox 等系统上下文，把它们当目录项会让
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	251	a8784b7e479d3a	// // 用户看到自己从未输入过的内容。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	252	a8784b7e479d3a	// // 返回空数组而不是占位项，让 flatMap 直接摊平，避免下游过滤 undefined。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	253	a8784b7e479d3a	// // [权衡] 判定放在构建预览之前，是因为空目录项没有消费方，提前返回可省掉一次
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	254	a8784b7e479d3a	// // 段落切分与截断。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	283	a8784b7e479d3a	// // 只有最后一条 query 继承 running 标记：同一 product turn 可能已经历多个
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	284	a8784b7e479d3a	// // 已结束的 guide 片段，若全部标 running，用户会以为多个请求同时在跑。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	285	a8784b7e479d3a	// // [并发] 该判定只读 unit.isRunning 快照，不订阅运行态变化，因此构建完成后
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	286	a8784b7e479d3a	// // 运行态翻转不会反映到已生成的目录项，需要重建才能刷新强调。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	287	a8784b7e479d3a	// // 依赖 realUserInputs 长度而不是 unit 内原始行数，是因为被过滤掉的系统上下文
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	288	a8784b7e479d3a	// // 不应把「最后一条」推到看不见的位置。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	308	a8784b7e479d3a	// // 同一 unitIndex 会对应多条 query（steer 场景），Map 构造保留最后一条，反查
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	309	a8784b7e479d3a	// // 活跃单元时以该单元最后一条 query 的位置为准，这与「最新 query 代表当前工作」
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	310	a8784b7e479d3a	// // 的强调口径保持一致。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	311	a8784b7e479d3a	// // [权衡] 不改成 unitIndex 到数组的映射再二次选择：多一层结构会让距离比较
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	312	a8784b7e479d3a	// // 退化为内层循环，而收益仅是更精细的边界语义。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	313	a8784b7e479d3a	// // items 为空已提前返回，这里不会构造出空 Map 后被误用。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	378	a8784b7e479d3a	// // 排序作用在 map 产物上，因此调用方传入的 positions 不会被就地改写。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	379	a8784b7e479d3a	// // 起点相同时用 rowId 升序兜底，保证同一输入得到确定顺序；否则比较对等值
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	380	a8784b7e479d3a	// // 返回 0 会让结果依赖引擎的排序实现，活跃行在边界像素上跳变。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	381	a8784b7e479d3a	// // [权衡] rowId 兜底把平台差异压掉，代价是比较函数多一次减法。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	382	a8784b7e479d3a	// // 归一化已保证 end 不小于 start，所以比较只需看 start。
+packages/ui/src/v4/conversationTurnNavigatorHelpers.ts	383	a8784b7e479d3a	// // 比较只用减法与逻辑或，不依赖 locale，跨环境顺序一致。

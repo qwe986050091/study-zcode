@@ -1,0 +1,37 @@
+file	baseLine	blame	content
+packages/ui/src/lib/remoteConnectionPresentationErrors.ts	47	a8784b7e479d3a	// 允许下载是分类结果的一部分，调用方不再自行判断错误类型。
+packages/ui/src/lib/remoteConnectionPresentationErrors.ts	99	a8784b7e479d3a	// 分类函数：先按公开码取标题与分类，再按具体码细化主操作。
+packages/ui/src/lib/remoteConnectionPresentationErrors.ts	118	a8784b7e479d3a	// 分派：认证、断连、安装、升级、身份确认、主机与空间类各自给出主操作。
+packages/ui/src/lib/remoteConnectionPresentationErrors.ts	174	a8784b7e479d3a	// 目标缺失时不追加后缀。
+packages/ui/src/lib/remoteConnectionPresentationErrors.ts	217	a8784b7e479d3a	// 格式化：先分类再翻译标题，可重试时追加一句重试提示。
+packages/ui/src/lib/remoteConnectionPresentationErrors.ts	241	a8784b7e479d3a	// 其余错误照常提示。
+packages/ui/src/lib/sessionOpenArmsTelemetry.ts	94	a8784b7e479d3a	// 保持可空：测试与早期启动阶段允许没有上报端。
+packages/ui/src/lib/sessionOpenArmsTelemetry.ts	96	a8784b7e479d3a	// 测试清理函数与设置函数分开命名，防止生产代码误用。
+packages/ui/src/lib/sessionOpenArmsTelemetry.ts	107	a8784b7e479d3a	// 非数字、非有限、负数一律视为缺失。
+packages/ui/src/lib/sessionOpenArmsTelemetry.ts	207	a8784b7e479d3a	// 构造与上报分离：调用方可以只取载荷做断言。
+packages/ui/src/lib/sessionOpenArmsTelemetry.ts	208	a8784b7e479d3a	// 第二参数允许覆盖上报端，用于测试与特殊链路。
+packages/ui/src/lib/sessionOpenArmsTelemetry.ts	209	a8784b7e479d3a	// 本函数同步返回，不暴露异步细节。
+packages/ui/src/openWorkspacePageThemeHero.tsx	37	a8784b7e479d3a	// 默认浅色，蓝白渐层配天蓝光晕。
+packages/ui/src/openWorkspacePageThemeHero.tsx	49	a8784b7e479d3a	// 品牌浅色，白底与品牌蓝单色光晕。
+packages/ui/src/openWorkspacePageThemeHero.tsx	61	a8784b7e479d3a	// 品牌深色，墨黑过渡到深蓝。
+packages/ui/src/openWorkspacePageThemeHero.tsx	92	a8784b7e479d3a	// 订阅全局主题，变化时组件自动重算。
+packages/ui/src/openWorkspacePageThemeHero.tsx	115	a8784b7e479d3a	// 主光晕锚在左上，营造聚光。
+packages/ui/src/openWorkspacePageThemeHero.tsx	122	a8784b7e479d3a	// 次光晕在右下，补足层次。
+packages/ui/src/project-sidebar/useProjectSidebarPreferences.ts	37	a8784b7e479d3a	// 偏好统一存一个键，三块内容一起持久化。
+packages/ui/src/project-sidebar/useProjectSidebarPreferences.ts	67	a8784b7e479d3a	// 入参只描述目录现状，不承载持久化细节。
+packages/ui/src/project-sidebar/useProjectSidebarPreferences.ts	68	a8784b7e479d3a	// 可用性映射默认空，升级键推导只依赖它。
+packages/ui/src/project-sidebar/useProjectSidebarPreferences.ts	69	a8784b7e479d3a	// 偏好状态在首次渲染时同步读取并归一。
+packages/ui/src/project-sidebar/useProjectSidebarPreferences.ts	90	a8784b7e479d3a	// 排序键先按当前项目归一，加载期不追加新键。
+packages/ui/src/project-sidebar/useProjectSidebarPreferences.ts	165	a8784b7e479d3a	// 改序时先与空项目列表归一，再应用变更。
+packages/ui/src/settings/HooksSection.tsx	109	a8784b7e479d3a	// [权衡] 用排除法表达而不是白名单来源，新增外部来源时无需改这里。
+packages/ui/src/settings/HooksSection.tsx	241	a8784b7e479d3a	// [权衡] 搜索词用延迟值参与过滤，输入框保持即时响应，过滤稍后跟上。
+packages/ui/src/settings/HooksSection.tsx	304	a8784b7e479d3a	// [契约] 通过包装只覆盖读写与信任三个入口，其余能力原样透传。
+packages/ui/src/settings/HooksSection.tsx	328	a8784b7e479d3a	// [契约] 信任动作绑定当前选中的工作区，而不是审核绑定所属的工作区。
+packages/ui/src/settings/HooksSection.tsx	343	a8784b7e479d3a	// [契约] 作用域缺失按用户级处理，与上游默认值一致。
+packages/ui/src/settings/HooksSection.tsx	503	a8784b7e479d3a	// [契约] 目标为空表示绑定指向已关闭工作区，此时不得切换作用域。
+packages/ui/src/settings/model-provider-section/providerFamilyConnectionVisibility.ts	237	a8784b7e479d3a	// [契约] 存在订阅详情即已购，这是权益侧最强证据，不需要再确认额度是否存在。
+packages/ui/src/settings/model-provider-section/providerFamilyConnectionVisibility.ts	425	a8784b7e479d3a	// 这里隐藏的是入口而不是账号事实，登录后无需重新计算即可恢复。
+packages/ui/src/settings/model-provider-section/providerFamilyConnectionVisibility.ts	489	a8784b7e479d3a	// 这里不做去重，去重与校正留给后续按项目键合并。
+packages/ui/src/settings/model-provider-section/providerFamilyConnectionVisibility.ts	499	a8784b7e479d3a	// [契约] 兜底团队项只在已保存家族选择且该家族有展示基线时生成。
+packages/ui/src/settings/model-provider-section/providerFamilyConnectionVisibility.ts	501	a8784b7e479d3a	// 是否真正展示仍受购买兜底开关约束，开关关掉时该路为空。
+packages/ui/src/settings/model-provider-section/providerFamilyConnectionVisibility.ts	655	a8784b7e479d3a	// 被过滤掉的项不进入最终列表，因此不计入条数、不参与插入锚点定位。

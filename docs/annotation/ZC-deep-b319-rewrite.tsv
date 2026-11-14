@@ -1,0 +1,45 @@
+file	baseLine	blame	content
+packages/provider-node/src/zcode-builtin-download.ts	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先建 AbortController 再挂 20_000 毫秒定时器：到点置 timedOut 为 true 并 abort。
+packages/provider-node/src/zcode-builtin-download.ts	58	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// options.signal 存在时用 AbortSignal.any 与控制器信号合流，任一路 abort 都中断 readJson。
+packages/provider-node/src/zcode-builtin-download.ts	59	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// stage 从 client-config 推进到 cdn，异常消息据此指出失败环节。
+packages/provider-node/src/zcode-builtin-download.ts	60	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// downloadUrl 为 undefined 说明服务端未下发内置包，直接返回 null 且不发起 CDN 请求。
+packages/provider-node/src/zcode-builtin-download.ts	100	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 进入 readJson 先调 signal.throwIfAborted()，已取消时不再构造 RequestInit。
+packages/provider-node/src/zcode-builtin-download.ts	101	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 请求固定 credentials: "omit" 与 redirect: "error"，既不带控制面凭据也不允许换源。
+packages/provider-node/src/zcode-builtin-download.ts	102	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// bytes 累加每次 chunk 的 byteLength，超过 10_000_000 抛 DownloadBoundaryError。
+packages/provider-node/src/zcode-builtin-download.ts	103	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// finally 里 reader.releaseLock() 释放锁；异常路径先 reader.cancel() 再向外抛。
+packages/provider-node/src/zcode-builtin-download.ts	149	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// DownloadBoundaryError 只承载边界失败原因，网络异常不包装成这个类型。
+packages/provider-node/src/zcode-builtin-download.ts	150	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 抛出的消息固定为 ZCode Built-in 加 stage 加 reason，不携带 URL query 与响应正文。
+packages/provider-node/src/zcode-builtin-download.ts	151	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// signal.aborted 时以 timedOut 区分 timeout 与 cancelled，两者都优先于原始 error。
+packages/shared/src/model-config.ts	27	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// optionMapSchema 先用 z.string().min(1) 拒绝空映射文本，空串不会进入 compileModelOptionMap。
+packages/shared/src/model-config.ts	28	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// compileModelOptionMap 抛错时经 context.addIssue 转成字段级问题，不冒泡成整页异常。
+packages/shared/src/model-config.ts	29	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// addIssue 的 message 优先取 error.message，非 Error 才回落 "Option map 无法编译"。
+packages/shared/src/model-config.ts	30	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// variableName 只接受 reasoningLevel 或 maxOutputTokens，编译错误据此带上字段名。
+packages/shared/src/model-config.ts	128	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// completeModelConfigDataSchema 要求 enabled/properties/optionSpecs 三块齐备，缺一即校验失败。
+packages/shared/src/model-config.ts	129	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// enabled 声明为 z.boolean()：禁用态必须显式写 false，缺省不会被当成禁用。
+packages/shared/src/model-config.ts	130	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// properties 与 optionSpecs 分别复用各自的 complete 模式，保证两块形状完整而不共享可选性。
+packages/shared/src/model-config.ts	131	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 三层 .strict() 逐层生效，properties/optionSpecs 内层的多余字段同样被拒绝。
+packages/shared/src/model-config.ts	148	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 能力类型全部由 z.infer 自 complete 模式导出，模式改动时类型自动跟随。
+packages/shared/src/model-config.ts	149	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 需要新类型时先加模式再 z.infer，避免同一形状出现第二份手写定义。
+packages/shared/src/model-config.ts	150	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 公共合同只含数据字段；Provider 行为与 IO 留在各自包内，不进 model-config。
+packages/ui/src/App.tsx	195	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// useShortcutCommandLabel 取不到绑定就返回空串，命令中心据此只显示标题而不回退硬编码键位。
+packages/ui/src/App.tsx	506	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// conversationFindMatchCount 只接子组件上报的 matchCount，导航索引仍在 conversationFindState 内。
+packages/ui/src/App.tsx	507	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 两个 state 若合并，输入时匹配数回写会覆盖同一次导航的 activeIndex。
+packages/ui/src/App.tsx	508	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// matchCount 只喂对话框的「第 N 项」文案，高亮仍按 conversationFindState 的 activeIndex 走。
+packages/ui/src/App.tsx	514	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// searchResultHighlightRequest 只活在内存，切页卸载后即清空，不做持久化恢复。
+packages/ui/src/App.tsx	913	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// handleSearchResultHighlightDone 只比 requestId，不复用位置或文本做相等判断。
+packages/ui/src/App.tsx	924	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [并发] 完成回调可能晚于下一次请求到达，requestId 不等时保留当前请求不清空。
+packages/ui/src/App.tsx	948	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// openFeedbackTickets 从 feedbackStore 取，App 不再持有第二份票单弹窗布尔。
+packages/ui/src/App.tsx	973	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// platform.openCommunity 内部对不可用能力 no-op，调用处不再判断 window.zcode 是否存在。
+packages/ui/src/App.tsx	1148	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// handleOpenAutomationConsumed 由自动化页定位完成后回调，负责成对清空自动化深链字段。
+packages/ui/src/App.tsx	1181	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 清空必须同时写 openAutomationId 与 openAutomationTab，只清 id 会让下次进入沿用旧 tab。
+packages/ui/src/ElicitationDialog.tsx	272	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// request.questions 为空数组时用 message/header/options 合成单题数组，下游只面对统一结构。
+packages/ui/src/ElicitationDialog.tsx	405	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// answers/answer_i/answer 只为非空 getQuestionAnswers 结果写入，下游可用键是否存在判断作答。
+packages/ui/src/ElicitationDialog.tsx	469	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// getElicitationQuestionAdvanceKind 只看 questionIndex 与 questions.length，空答案同样走到最后一题。
+packages/ui/src/ElicitationDialog.tsx	516	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isQuestionExpanded 初值 false；折叠样式仅 max-md 生效，桌面端问题始终完整显示。
+packages/ui/src/ElicitationDialog.tsx	524	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// customInputRef 同时给键盘导航的末行落点与整行点击聚焦，两处共用同一个 textarea 引用。
+packages/ui/src/ElicitationDialog.tsx	671	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// selectOption 先用 updateElicitationDraftsForOption 落草稿，单选题再调 advanceFromQuestion。
+packages/ui/src/ElicitationDialog.tsx	722	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// submit 直接把 drafts 交给 submitWithDrafts，不调 getDraftsWithAutoSelectedOption 补选。
+packages/ui/src/ElicitationDialog.tsx	743	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// goNextPage 先用 getDraftsWithAutoSelectedOption 补选，再调 advanceFromQuestion 推进而不提交。
+packages/ui/src/ElicitationDialog.tsx	893	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resolveElicitationCustomInputKeyAction 只返回动作名，handleCustomInputKeyDown 负责执行对应副作用。
+packages/ui/src/ElicitationDialog.tsx	1235	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onMouseEnter 调 reportFirstInteraction("panelHover")，悬停后倒计时不再自动结束弹窗。
+packages/ui/src/ElicitationDialog.tsx	1242	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 折叠态用 max-md:hidden 隐藏内容区，桌面端由按钮控制展开而不隐藏内容。

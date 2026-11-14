@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/shared/src/zcodeEndpoint.ts	266	a8784b7e	// `ZCODE_ENV` 漏注入时回落 `production` 是安全默认：宁可连生产域，也不让正式用户落到测试后端。
+packages/ui/src/app-shell/SidePaneTabTrigger.tsx	252	a8784b7e	// `canCloseOtherTabs` 为假只禁用「关闭其他」一项，用户仍可走「关闭」与「关闭全部」完成清理。
+packages/ui/src/app-shell/WorkflowRunSidePaneSections.tsx	55	a8784b7e	// `formatCount` 只影响用量行的数字呈现，新增调用点前先确认是否同样需要千分位。
+packages/ui/src/app-shell/WorkflowWorkspaceSidePane.tsx	14	a8784b7e	// 租约生命周期随组件挂载建立并于卸载释放，滚动落点由 `WorkflowWorkspaceContent` 在每次打开时重置一次。
+packages/ui/src/BotsDialog/BotSummaryCard.tsx	180	a8784b7e	// `onFocus` 触发全选：用户改名时直接覆盖原值而无需手动清空。
+packages/ui/src/browser-use/UnifiedBrowserView.tsx	361	a8784b7e	// [资源] `webviewTeardownProbeRef` 只做销毁归因，不参与任何业务分支判断。
+packages/ui/src/chat-input-toolbar/ComposerModelMenu.tsx	231	a8784b7e	// 分母取 `options.levels.length - 1` 而不是标签侧的思考档数量，两套口径不得互换。
+packages/ui/src/chat-input-toolbar/ThoughtLevelCycleControl.tsx	233	a8784b7e	// `currentEntry` 无效时仍要渲染下拉，让用户能自行纠正。
+packages/ui/src/ChatErrorBanner.tsx	267	a8784b7e	// `openFeedbackSubmit` 只允许在用户点击反馈按钮后调用，不得在渲染期触发。
+packages/ui/src/components/ai-elements/context.tsx	246	a8784b7e	// `maxTokens` 只做展示，不参与 `usedPercent` 的上限推导。
+packages/ui/src/components/ai-elements/conversation.tsx	56	a8784b7e	// `ConversationContent` 不参与滚动策略，只负责宽度与内边距。
+packages/ui/src/components/ai-elements/markdown-image.tsx	397	a8784b7e	// 开关回调只在关闭时走焦点恢复；打开时仅调用 `setPreviewOpen` 开关，不附加副作用。
+packages/ui/src/components/ai-elements/mic-selector.tsx	109	a8784b7e	// `setDevices` 整表覆盖而非追加，拔掉麦克风后列表减少也能正确反映。
+packages/ui/src/components/ai-elements/prompt-input.tsx	711	a8784b7e	// [契约] 每次 `add` 生成新的 `nanoid()`，同一文档加入两次视为两条引用。
+packages/ui/src/components/ai-elements/queue.tsx	320	a8784b7e	// `Queue` 根容器用 `pt-2 pb-2` 小于 `px-3`：分组标题自带行高，贴边后不会显得拥挤。
+packages/ui/src/components/ai-elements/snippet.tsx	130	a8784b7e	// `writeText` 成功后先置 `isCopied` 反馈，再启动复位定时器。
+packages/ui/src/components/ai-elements/terminal.tsx	243	a8784b7e	// `output` 或 `autoScroll` 变化后把容器 `scrollTop` 推到底部，让最新追加的行可见。
+packages/ui/src/components/cloud-content-dialog/CloudDialogHero.tsx	309	a8784b7e	// `hero.type === "image"` 是开销最低的分支，既不需要标题也不需要就绪回调。
+packages/ui/src/components/marketing-touch/MarketingDialogs.tsx	113	a8784b7e	// `button` 缺失或 `action.type` 不是 `navigate` 都抛 `marketing_navigation_invalid`。
+packages/ui/src/components/marketing-touch/marketingTouchController.ts	435	a8784b7e	// [导出] `MarketingTouchController` 由 `ReturnType` 反推，新增对外方法无需同步维护两处签名。

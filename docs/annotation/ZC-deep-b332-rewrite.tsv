@@ -1,0 +1,37 @@
+file	baseLine	blame	content
+packages/shared/src/browser-use/command-metadata.ts	26	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// minWidth 与 maxWidth、minHeight 与 maxHeight 成对出现。
+packages/shared/src/browser-use/command-metadata.ts	52	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 在 browserViewportSizeSchema 上追加范围约束。
+packages/shared/src/browser-use/command-metadata.ts	54	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 只校验 setViewportSize 入参，不约束自然视口。
+packages/shared/src/browser-use/command-metadata.ts	83	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 只描述人类主动打开的 Browser tab。
+packages/shared/src/browser-use/command-metadata.ts	84	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// mode 决定是否按 responsive 展示。
+packages/shared/src/browser-use/command-metadata.ts	85	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// strict() 拒绝多余字段。
+packages/shared/src/browser-use/command-metadata.ts	104	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 方法名作为 BrowserCommand.method 的判别字段值。
+packages/shared/src/browser-use/command-metadata.ts	105	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 两端共享同一份 browserCommandMethodSchema 枚举。
+packages/shared/src/browser-use/command-metadata.ts	106	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 新增命令必须同时更新这里与分派表。
+packages/ui/src/AssistantCodeCommentCards.tsx	37	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 只剥离 [P{priority}] 形态的前缀，其余方括号内容保持原样。
+packages/ui/src/AssistantCodeCommentCards.tsx	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 剥离后对 title 再 trimStart，避免标题以空白开头。
+packages/ui/src/AssistantCodeCommentCards.tsx	39	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// displayTitle 是纯函数，供徽标与标题共用。
+packages/ui/src/AssistantCodeCommentCards.tsx	88	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// visibleCards 就是 cards 全量，折叠只影响渲染不影响数据。
+packages/ui/src/AssistantCodeCommentCards.tsx	89	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 单独取名 visibleCards 是为了让后续筛选逻辑有明确落点。
+packages/ui/src/AssistantCodeCommentCards.tsx	90	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isOpen 为真时才 map visibleCards，折叠态不做任何映射。
+packages/ui/src/AssistantCodeCommentCards.tsx	140	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// card.startLine 存在时才拼行号，单行不显示区间。
+packages/ui/src/AssistantCodeCommentCards.tsx	141	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// startLine 与 endLine 不同时用短横连接，相同则只显示 startLine。
+packages/ui/src/AssistantCodeCommentCards.tsx	142	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 两者都为空时 locationLabel 退化为纯 displayPath。
+packages/ui/src/BotsDialog/BoundGroupsCard.tsx	30	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 每行以 row.sessionId 作 key。
+packages/ui/src/BotsDialog/BoundGroupsCard.tsx	31	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 名称经 CSS 截断，title 保留全文供悬停查看。
+packages/ui/src/BotsDialog/BoundGroupsCard.tsx	32	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// Switch 的 checked 完全由 row 数据决定。
+packages/ui/src/BotsDialog/BoundGroupsCard.tsx	33	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// saving 为真时整列 Switch 都 disabled。
+packages/ui/src/BotsDialog/BoundGroupsCard.tsx	80	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// loading 为真时不再渲染空态，error 优先于空态。
+packages/ui/src/BotsDialog/BoundGroupsCard.tsx	81	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 空态不覆盖 error，error 优先渲染。
+packages/ui/src/BotsDialog/BoundGroupsCard.tsx	82	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// bot.enabled 为假时补一句说明。
+packages/ui/src/BotsDialog/BoundGroupsCard.tsx	83	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// error 旁提供 reload 重试入口。
+packages/ui/src/BotsDialog/BoundGroupsCard.tsx	87	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 组件不自行 fetch，全部经 useBotBoundGroups。
+packages/ui/src/GitPane.tsx	149	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] datasets 缺 currentSourceOption.id 时回落到 unstaged。
+packages/ui/src/GitPane.tsx	150	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 这样 sourceOptions 切换的中间态不会渲染成空列表。
+packages/ui/src/GitPane.tsx	151	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 回落只影响 currentDataset 展示，不改变 selectedSourceId。
+packages/ui/src/GitPane.tsx	243	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 调用方不需要自己判重 loadDiffForChange，
+packages/ui/src/GitPane.tsx	244	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 这也让查找预加载可以无脑遍历整份 currentChanges。
+packages/ui/src/GitPane.tsx	404	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] fileChangeFindState.total 变化后立即上报。
+packages/ui/src/GitPane.tsx	428	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 预加载遍历 currentChanges 整份扁平列表。
+packages/ui/src/GitPane.tsx	437	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] activeFileChangeFindMatch 为空时不展开也不滚动。
+packages/ui/src/GitPane.tsx	481	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 命中跳转以导航请求号 requestId 为唯一触发器。

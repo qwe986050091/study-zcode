@@ -1,0 +1,13 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/core/src/workflow/scheduler/node-runner.ts	148	a8784b7e479d3a	// 取消信号触发的异常不在这里结算，直接向上抛给调度器。
+apps/zcode-cli/packages/core/src/workflow/scheduler/node-runner.ts	212	a8784b7e479d3a	// 完成态活动同时登记输入与输出产物，形成可追溯的边。
+apps/zcode-cli/packages/office-runtime/ui/viewers/XlsxView.tsx	80	a8784b7e479d3a	// 控制器选区可能反向，先取行列的较小较大值再统一加一。
+apps/zcode-cli/packages/office-runtime/ui/viewers/XlsxView.tsx	214	a8784b7e479d3a	// 最小宽二像素、高十六像素，单击也能得到一个可点击的选区条。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	91	a8784b7e479d3a	// // 交互归属：按键、焦点、选中与滚动都不在本层，宿主持有交互，这里只声明布局与回调。
+apps/zcode-cli/packages/tui/src/app-sidebar.tsx	260	a8784b7e479d3a	// // 丢弃而非隐藏，折叠态不占用纵向空间，侧栏高度随之还原。
+packages/client/src/webRemoteControlRelayProtocol.ts	128	a8784b7e479d3a	// 缓冲是有限资源，达到上限时整体清空而不是丢最旧一帧，是为了让缺口显式暴露给对端。
+packages/client/src/webRemoteControlRelayProtocol.ts	133	a8784b7e479d3a	// 上限与超时是两道独立保险：上限防内存膨胀，超时防链路长时间无进展。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-environment.ts	52	a8784b7e479d3a	// [权衡] 不走安装函数的默认环境推导：显式传参让夹具在源码与构建产物两种布局下都指向同一份实现。
+packages/desktop/scripts/mcp-apps-host-fixture/managed-environment.ts	202	a8784b7e479d3a	// [并发] 同一方法的多次调用共享一个门控，第二次调用在第一次放行后立即通过。
+packages/desktop/scripts/mcp-apps-host-fixture/model.ts	44	a8784b7e479d3a	// 流式与非流式在同一个处理器里分流，先读完整请求体再判断。
+packages/desktop/scripts/mcp-apps-host-fixture/model.ts	55	a8784b7e479d3a	// 非流式分支支持延迟应答：测试可先断言请求到达，再放行响应。

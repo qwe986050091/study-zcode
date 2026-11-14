@@ -1,0 +1,31 @@
+file	baseLine	blame	content
+packages/provider-node/src/zcode-builtin-provider-config-source.ts	119	a8784b7e	// `onDidChange` 订阅前先 `#assertNotDisposed()`，已销毁实例直接抛错。
+packages/provider-node/src/zcode-builtin-provider-config-source.ts	120	a8784b7e	// 监听器存入 `#listeners` 集合，同一函数重复订阅天然去重。
+packages/provider-node/src/zcode-builtin-provider-config-source.ts	121	a8784b7e	// `#dispose()` 时 `#listeners.clear()` 整体清空，不逐个回调。
+packages/server/src/remote/zcodeAgentDevDeploy.ts	153	a8784b7e	// [权衡] `computeDevelopmentAgentAssetsSha256` 全量读盘哈希：开发态规模可接受，换取内容变更必被感知。
+packages/server/src/remote/zcodeAgentDevDeploy.ts	269	a8784b7e	// [权衡] `shouldSkipDevelopmentZCodeAgentDeploy` 宁可多传一次，也不让远端跑与本地不一致的产物。
+packages/server/src/remote/zcodeAgentDevDeploy.ts	571	a8784b7e	// [权衡] `buildRemoteAgentBundleWrapper` 生成脚本而非分发二进制，规避跨平台二进制不匹配。
+packages/services/src/model-provider/accountProviderConnectionResolver.ts	195	a8784b7e	// 读 `lastKnownGood` 前必须先用当前身份比对，切账号后的网络失败不得复活旧权益。
+packages/services/src/model-provider/accountProviderConnectionResolver.ts	285	a8784b7e	// `identitiesUnchanged` 必然多发一次读取，但每轮只在末尾一次，成本可控。
+packages/services/src/model-provider/accountProviderConnectionResolver.ts	339	a8784b7e	// `createAccountProviderConfigSource` 只组装依赖，不持有凭据。
+packages/services/src/session/automationRepo.ts	745	a8784b7e	// `getScheduledRunCount` 只数定时派发；manual run 计入 `run_count` 仅供 Card 累计展示。
+packages/services/src/session/automationRepo.ts	1013	a8784b7e	// 返回的 `automation` 由 `row` 展开后覆盖 `running: 1` 与 `claimed_at`，等价于提交后回读。
+packages/services/src/session/automationRepo.ts	1236	a8784b7e	// 顺序不靠内存排序：SQL 的 `ORDER BY created_at ASC` 直接决定派发先后。
+packages/services/src/session/tasksDatabase/schema-v1.ts	96	a8784b7e	// 自动化表组：`AUTOMATION_SCHEMA` 里先建调度定义表，再建运行记录表。
+packages/services/src/session/tasksDatabase/schema-v1.ts	112	a8784b7e	// `AUTOMATION_SCHEMA` 的列按「定义 / 调度 / 租约 / 统计 / 终态」五组理解。
+packages/services/src/session/tasksDatabase/schema-v1.ts	190	a8784b7e	// 所有时间列一律毫秒整数（`next_run_at`、`claimed_at`），可空表示尚未发生。
+packages/services/src/telemetry/telemetryCore.ts	191	a8784b7e	// `isFreshDailyActiveInFlight` 过期即视为僵尸，让下一次启动重新尝试，而不是永久跳过当天。
+packages/services/src/telemetry/telemetryCore.ts	192	a8784b7e	// `date` 与当前日期不匹配同样视为无效：跨天后的旧占位不得拦住新一天的上报。
+packages/services/src/telemetry/telemetryCore.ts	748	a8784b7e	// [事务] `reportAppDailyActive` 三阶段提交：短锁判定并占位 → 锁外发送 → 短锁提交完成态。
+packages/services/src/zcode-agent/zcodeAgentProcessManager.ts	332	a8784b7e	// `tail` 超限即 `shift()` 丢最旧一行：诊断只关心退出前上下文，不需要完整历史。
+packages/services/src/zcode-agent/zcodeAgentProcessManager.ts	528	a8784b7e	// `resolveBundledWorkspaceZCodeAgentCommand` 返回空时保持旧启动协议，不等待迁移通知。
+packages/services/src/zcode-agent/zcodeAgentProcessManager.ts	1442	a8784b7e	// `firstCleanupReason` 保留首次清理原因，作为 `terminationReason` 的结构化根因。
+packages/shared/src/index.ts	134	a8784b7e	// [权衡] `export * from "./errors.js"` 让新增错误零成本扩散，代价是消费者侧失去编译期护栏。
+packages/shared/src/index.ts	236	a8784b7e	// 这里导出的是收口后的安全入口：`sanitizeTelemetryEventDetail` 等脱敏函数，不是原始上报通道。
+packages/shared/src/index.ts	465	a8784b7e	// [契约] `ProjectAccessTokenInput` 与 `ProjectAccessTokenMaterial` 随客户端成组导出，构造契约随本行公开。
+packages/shared/src/zcode-protocol-v4/wire-reassembly.ts	47	a8784b7e	// `frameMatchesEnvelope` 之前只用编码估算完整帧体积，不参与分片路径。
+packages/shared/src/zcode-protocol-v4/wire-reassembly.ts	48	a8784b7e	// 信封匹配同时校验 `topic` 与 `subscriptionId`，避免跨订阅串帧。
+packages/shared/src/zcode-protocol-v4/wire-reassembly.ts	49	a8784b7e	// `frame` 非对象或空值直接判不匹配，绝不走原型链读取。
+packages/shared/src/zcode-protocol/index.ts	3045	a8784b7e	// 回传同一个 `operationId` 让调用方确认取消落在哪一次操作上，并发多次生成时尤其重要。
+packages/shared/src/zcode-protocol/index.ts	3152	a8784b7e	// 只回显开关值（`enabled`）时用户看不到影响范围，所以额外返回 `snoozedInteractionCount`。
+packages/shared/src/zcode-protocol/index.ts	3776	a8784b7e	// `zcodeSkillsReferenceCatalogResultSchema` 与插件目录不合并：两者失效条件与刷新代价差别很大。

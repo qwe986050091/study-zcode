@@ -1,0 +1,43 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/cli/src/command-center/handlers/expert.ts	41	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先 await deps.getApp() 取应用，再 parseExpertCommandArgs 解析动作。
+apps/zcode-cli/packages/cli/src/command-center/handlers/expert.ts	42	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 四个分支各自检查 app 上对应能力，缺失时统一返回同一句不可用提示。
+apps/zcode-cli/packages/cli/src/command-center/handlers/expert.ts	43	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resume 与 start 在 mode 不是 guarded 时 await deps.setMode("yolo")。
+apps/zcode-cli/packages/cli/src/command-center/handlers/expert.ts	44	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 四个分支的 traceId 都取 result.traceId，缺省才回退 app.traceId。
+apps/zcode-cli/packages/cli/src/command-center/handlers/expert.ts	139	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// args.trim() 为空串时直接返回 { action: "status" }。
+apps/zcode-cli/packages/cli/src/command-center/handlers/expert.ts	140	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 用 trimmed.search(/\s/) 找首个空白，切出 first 与 rest。
+apps/zcode-cli/packages/cli/src/command-center/handlers/expert.ts	141	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// action 不在 status/resume/stop/cancel 内时返回 { action: "start", task: trimmed }。
+apps/zcode-cli/packages/cli/src/command-center/handlers/expert.ts	159	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// action 为 "cancel" 时与 "stop" 同路，统一返回 action: "stop"。
+apps/zcode-cli/packages/cli/src/command-center/handlers/expert.ts	160	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// rest 为空串时 runId 传 undefined，交给下游取默认运行。
+apps/zcode-cli/packages/cli/src/command-center/handlers/expert.ts	161	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 走到函数末尾即未知首词，整串 trimmed 作为 task。
+apps/zcode-cli/packages/cli/src/command-center/login-flow.ts	34	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// locale 只传给 getZCodeCopy，不影响 command/id/keywords。
+apps/zcode-cli/packages/cli/src/command-center/login-flow.ts	121	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// label 依次试 user.name 与 user.email 与 user.user_id 取首个非空值。
+apps/zcode-cli/packages/cli/src/command-center/login-flow.ts	122	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// browser 存在且 opened 为 false 时把 reason 追加到末行 Model selection。
+apps/zcode-cli/packages/cli/src/command-center/login-flow.ts	123	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 返回数组固定四行：Configured、Model、Credentials、Model selection。
+apps/zcode-cli/packages/cli/src/command-center/login-flow.ts	124	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// credentialsPath 与 configPath 原样输出，不做相对化或省略。
+apps/zcode-cli/packages/cli/src/command-center/login-flow.ts	125	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 本函数不做脱敏，密钥类内容不会进入这两个路径字段。
+apps/zcode-cli/packages/cli/src/command-center/login-flow.ts	188	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// kind 必须等于 zai-coding-plan-api-key 或 bigmodel-coding-plan-api-key。
+apps/zcode-cli/packages/cli/src/command-center/login-flow.ts	189	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// kind 未命中上面两种时返回 null，由其他 /login 分支接手。
+apps/zcode-cli/packages/cli/src/command-center/login-flow.ts	190	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// rest.join(" ").trim() 保留密钥内部空格。
+apps/zcode-cli/packages/cli/src/command-center/login-flow.ts	191	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// providerId 由 kind.startsWith("bigmodel") 决定。
+packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// getComposerBackgroundWorkCounts 只统计 work.status === "running" 的条目。
+packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	39	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// workflow 记入 workflowCount，不并入 bashCount。
+packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	40	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// subagentCount 用 Math.max 把 runningSubagentCount 下限钳到 0。
+packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	41	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// totalCount 恒等于 bashCount 加 workflowCount 加 subagentCount。
+packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	79	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 组件体内先 useZCodeIntl 取文案，再 useMemo 派生 counts。
+packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	80	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onOpen 缺失或 counts.totalCount 为 0 时直接 return null。
+packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	81	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// activeKindCount 统计三类中大于 0 的个数，用于选择 tooltip 文案。
+packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	82	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// openTarget === "workflow-run" 时优先取 tooltipWorkflowDetails。
+packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	103	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// activeKindCount 为 1 时按 bashCount/workflowCount 选终端或工作流文案。
+packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	104	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// activeKindCount 大于 1 时统一用 tooltipMixed。
+packages/ui/src/v4/composer/ConversationBackgroundWorkTrigger.tsx	105	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ariaLabel 传入 bashCount/workflowCount/subagentCount/count 四个占位值。
+packages/ui/src/v4/telemetry/localTtftRecord.ts	33	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// LocalTtftPending 以会话为单位持有，context 与 sessionId 随记录带走。
+packages/ui/src/v4/telemetry/localTtftRecord.ts	34	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// confirmations 数组按发生顺序累积，最后整体写入 details。
+packages/ui/src/v4/telemetry/localTtftRecord.ts	35	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// rows 用 turnId 与 kind 做索引，不保留行内容。
+packages/ui/src/v4/telemetry/localTtftRecord.ts	62	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 墙钟与单调钟偏差超过 100 毫秒时置 pending.clockInvalid。
+packages/ui/src/v4/telemetry/localTtftRecord.ts	87	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// start 或 stop 为 undefined 时 interval 直接返回，不产生区间。
+packages/ui/src/v4/telemetry/localTtftRecord.ts	88	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// stop 小于 start 或差值为非有限数时置 invalid 并丢弃区间。
+packages/ui/src/v4/telemetry/localTtftRecord.ts	89	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// interval 的第一个参数是 LocalTtftRecord.intervals 的 stage 联合值。
+packages/ui/src/v4/telemetry/localTtftRecord.ts	107	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// aligned 为 true 时才记录 command_admission 区间。
+packages/ui/src/v4/telemetry/localTtftRecord.ts	117	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// details 用 slice 截到 LOCAL_TTFT_MAX_DETAILS 条。
+packages/ui/src/v4/telemetry/localTtftRecord.ts	118	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 截断时 truncated 为 true（details 总数超过上限）。
+packages/ui/src/v4/telemetry/localTtftRecord.ts	119	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// calibration 存在时记录 clockErrorMs，便于核对跨进程偏移。

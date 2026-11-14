@@ -1,0 +1,69 @@
+file	baseLine	blame	content
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	115	a8784b7e479d3a	// // [权衡] visualScale 只在 active 分支参与计算，是因为 Fit 同时依赖 canvasSize、
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	116	a8784b7e479d3a	// // desktopZoomFactor 与 zoom 三者，而 inactive 时它恒为 1：隐藏 tab 若继续
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	117	a8784b7e479d3a	// // 保留缩放变换，切回时首帧会先按旧比例排版再跳正，guest 跟随重排一次。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	118	a8784b7e479d3a	// // canvasSize 为 null 表示首次测量尚未完成，此时解析函数走兜底比例，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	119	a8784b7e479d3a	// // 首帧偏小但随后被 layout effect 的实测值覆盖，属于可接受的中间态。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	120	a8784b7e479d3a	// // [失败路径] 非正画布尺寸已在测量入口丢弃，这里不再重复判断零分母。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	121	a8784b7e479d3a	// // [资源] visualScale 是纯派生值，不缓存到 ref，避免与 rendererScaleRef 双写不一致。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	122	a8784b7e479d3a	// // 它同时是 data-responsive-scale 的取值来源，外部换算依赖它与实际变换一致。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	134	a8784b7e479d3a	// // [事务] 这里是尺寸提交的唯一出口，顺序固定为钳制、比对旧值、写 ref、通知父层；
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	135	a8784b7e479d3a	// // ref 必须先于 onViewportSizeChange 更新，否则父层同步回传新 props 时
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	136	a8784b7e479d3a	// // 拖拽仍读到旧尺寸，下一次 pointermove 会把刚提交的值覆盖回去。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	137	a8784b7e479d3a	// // [并发] ref 是跨 pointer、键盘与 effect 共享的游标，React 批处理下 state 滞后，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	138	a8784b7e479d3a	// // 去重只能以 ref 为基准，否则同一帧内两次提交都能通过相等判断。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	139	a8784b7e479d3a	// // [权衡] 宽高同时相等才早退：只更新单轴会让另一轴的手柄命中区与 guest 视口错位。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	140	a8784b7e479d3a	// // 钳制在提交前完成，保证写进 ref 的值可以直接被下一次拖拽当作合法起点。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	159	a8784b7e479d3a	// // [资源] 每帧只保留一个 rAF 句柄，待提交值覆盖写在该帧内最后一次请求上；
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	160	a8784b7e479d3a	// // 句柄非 0 时只更新待提交值而不重复排期，这是所有拖拽输入的合流点。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	161	a8784b7e479d3a	// // 若改成每次 pointermove 直接提交，一次拖拽可产生上百次 render，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	162	a8784b7e479d3a	// // guest 的 resize 与重绘成本远高于 React，表现为拖拽粘手与掉帧。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	163	a8784b7e479d3a	// // [事务] 回调内先清句柄再读取待提交值，保证即使后续提交抛错也不会留下非 0 句柄，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	164	a8784b7e479d3a	// // 否则门闩永久关闭，之后所有排期都被静默丢弃。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	165	a8784b7e479d3a	// // [失败路径] 待提交值为空时直接跳过，不把空值当作零尺寸提交。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	181	a8784b7e479d3a	// // [资源] 结束路径的释放顺序不可交换：先置空 dragRef 让 lostpointercapture 重入时可判定，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	182	a8784b7e479d3a	// // 再取消 rAF，最后尝试释放 capture；反序时释放动作触发的 lostpointercapture
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	183	a8784b7e479d3a	// // 会读到仍非空的 dragRef 并第二次进入本函数。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	184	a8784b7e479d3a	// // [权衡] commitPendingSize 为 false 用于隐藏态与卸载：此时写入不可见，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	185	a8784b7e479d3a	// // 且会与下一个 tab 的测量竞争，宁可直接丢弃最后一帧尺寸。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	186	a8784b7e479d3a	// // [失败路径] capture 释放包在 try 内，系统已撤销时的异常只吞掉不重抛，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	187	a8784b7e479d3a	// // 因为状态已清理完毕，异常不携带可恢复信息，重抛只会打断调用方的卸载流程。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	222	a8784b7e479d3a	// // [资源] capture 挂在手柄节点而非 window，保证后续 move 事件落在同一节点；
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	223	a8784b7e479d3a	// // 抢新 capture 前先用 pointer-replaced 收尾旧手势，否则两个 pointerId 会
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	224	a8784b7e479d3a	// // 同时持有 dragRef，后写者覆盖前者，旧指针的 move 仍能改尺寸。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	225	a8784b7e479d3a	// // [失败路径] 自动化合成事件可能没有活跃 pointer，setPointerCapture 会抛出，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	226	a8784b7e479d3a	// // 此处吞掉异常后仍写入 dragRef：同一节点上的 move 依然能验证尺寸逻辑，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	227	a8784b7e479d3a	// // 代价是指针离开节点后收不到后续事件，手势提前结束。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	228	a8784b7e479d3a	// // [权衡] 只有鼠标主键按下才起步，触摸与笔不校验 button，否则触屏无法拖拽。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	258	a8784b7e479d3a	// // [权衡] 缩放补偿在读 ref 时再做一次非正保护，而不只是信任比例公式：
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	259	a8784b7e479d3a	// // rendererScale 由 desktopZoomFactor 反比得到，极端 zoom 下可能取到 0，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	260	a8784b7e479d3a	// // 一旦作除数会把增量放大成无穷，直接击穿尺寸上限并让 guest 布局失效。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	261	a8784b7e479d3a	// // 读 ref 而非闭包捕获的 rendererScale，使 pointermove 始终拿到最新比例。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	262	a8784b7e479d3a	// // [事务] 起点尺寸取 pointerdown 时的快照，增量只由总位移决定而不做累加，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	263	a8784b7e479d3a	// // 因此即使中间某个 pointermove 被合并或丢弃，也不会产生累积误差。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	264	a8784b7e479d3a	// // 增量先除以 rendererScale 再乘方向符号，保证 50% 与 200% 下拖拽手感一致。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	320	a8784b7e479d3a	// // [事务] 同步测量先于 observer 建立，effect 结束时 canvasSize 已是真实值，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	321	a8784b7e479d3a	// // 首帧绘制就能拿到正确画布，不必等 observer 的异步回调再补一帧。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	322	a8784b7e479d3a	// // [权衡] setState 用函数式更新并在宽高同值时返回 previous，引用不变让 React
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	323	a8784b7e479d3a	// // 跳过渲染：滚动条出现或消失会让 contentRect 抖动一像素，若每次都提交新对象，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	324	a8784b7e479d3a	// // Fit 会跟着重算，画面持续出现轻微缩放抖动。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	325	a8784b7e479d3a	// // [失败路径] 首次测量与随后 observer 回报不一致时以后者为准，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	326	a8784b7e479d3a	// // 两者都来自真实布局，不存在需要合并的中间态，也不需要保留历史值。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	352	a8784b7e479d3a	// // [资源] observer 的生命周期严格绑定本次 effect 运行：active、isComposed、
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	353	a8784b7e479d3a	// // zoom 或 desktopZoomFactor 任一变化都会先断开再重建，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	354	a8784b7e479d3a	// // 不存在跨依赖版本复用同一个 observer 的情况。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	355	a8784b7e479d3a	// // 清理函数必须无条件返回，否则卸载后 observer 仍持有 canvas 引用，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	356	a8784b7e479d3a	// // 并继续把尺寸回调写给已卸载组件的 setState。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	357	a8784b7e479d3a	// // [权衡] 不用 observer 的首次回调代替同步测量，因为首帧之前拿不到数值。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	369	a8784b7e479d3a	// // [失败路径] 监听挂在 window 而非手柄：焦点变化时事件目标是 document.body，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	370	a8784b7e479d3a	// // 手柄节点上的冒泡监听收不到，只有 window 层级能保证收到。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	371	a8784b7e479d3a	// // [权衡] blur 时提交待处理尺寸而非丢弃，用户位移已完成，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	372	a8784b7e479d3a	// // 丢弃会让松手前最后一次拖动看起来无效；切走 tab 的 inactive 路径
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	373	a8784b7e479d3a	// // 则显式丢弃，因为隐藏态写入不可见，且会与下一个 tab 的测量竞争。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	374	a8784b7e479d3a	// // 注册与注销同处一个 effect，清理时先移除监听再收尾手势，顺序不可交换。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	417	a8784b7e479d3a	// // [权衡] 这三个 data 属性暴露视觉尺寸与视觉缩放，而不是 CSS 盒尺寸：
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	418	a8784b7e479d3a	// // 外部据此换算点击坐标与截图裁剪，必须与 style 中的 scale 同源，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	419	a8784b7e479d3a	// // 不能改写成 viewportSize 与 rendererScale 的乘积。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	420	a8784b7e479d3a	// // [失败路径] inactive 时统一为 undefined，避免隐藏 tab 残留上一轮数值，
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	421	a8784b7e479d3a	// // 被测试或调试工具误读为仍然激活并据此定位元素。
+packages/ui/src/browser-use/ResponsiveBrowserViewport.tsx	422	a8784b7e479d3a	// // 属性只读，唯一写入方是 viewportSize 与 zoom 两条输入。

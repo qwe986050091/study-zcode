@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+const a = JSON.parse(fs.readFileSync('d:/code/_annot_baseline/_rb_deep_b2_after.json', 'utf8')).rows;
+const b = JSON.parse(fs.readFileSync('d:/code/_annot_baseline/_rb_deep_b1_after2.json', 'utf8')).rows;
+const all = a.concat(b);
+all.sort((x, y) => x.codeRatio - y.codeRatio);
+const cr = all.map((r) => r.codeRatio).sort((x, y) => x - y);
+const med = cr.length % 2 ? cr[(cr.length - 1) / 2] : (cr[cr.length / 2 - 1] + cr[cr.length / 2]) / 2;
+const sum = (k) => all.reduce((n, r) => n + r[k], 0);
+const below20 = all.filter((r) => (r.comment / r.total) * 100 < 20).map((r) => r.path + ' ' + ((r.comment / r.total) * 100).toFixed(2));
+console.log('files', all.length);
+console.log('comment', sum('comment'), 'code', sum('code'), 'total', sum('total'));
+console.log('codeRatio median', med.toFixed(2), 'min', cr[0].toFixed(2), 'max', cr[cr.length - 1].toFixed(2));
+console.log('comment/total', ((sum('comment') / sum('total')) * 100).toFixed(2));
+console.log('newComments', sum('newComments'));
+console.log('below20total', below20.length, below20.join('; '));

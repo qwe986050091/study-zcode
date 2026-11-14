@@ -1,0 +1,11 @@
+file	baseLine	blame	content
+packages/ui/src/v4/ConversationShareSuccessDock.tsx	20	a8784b7e	// 模块职责：`ConversationShareSuccessDock` 渲染分享成功后的链接与警告，并承载复制 / 打开 / 关闭三个动作。
+packages/ui/src/v4/conversationTurnWorkSegments.ts	230	a8784b7e	// 被剔除的行不回填到 `segmentFollowingRows`，两片合计可能少于流程行总数：这是刻意让位。
+packages/ui/src/v4/featureSuggestedPrompts.ts	438	a8784b7e	// `tianyancha` 的输出是尽调清单而非结论性报告：每条都要带更新日期与来源。
+packages/ui/src/v4/sessionsIndexStore.ts	127	a8784b7e	// `applySessionsIndexFrame` 是纯函数：水位与断档语义可脱离订阅生命周期单测。
+packages/ui/src/v4/telemetry/localTtftObserver.ts	98	a8784b7e	// 容量满 `LOCAL_TTFT_MAX_PENDING` 时只回收一条已收口观察，在途观察一律不顶掉。
+packages/ui/src/web-remote-control/WebRemoteControlDialog.tsx	81	a8784b7e	// `REMOTE_CONTROL_BOT_ENTRIES` 不补占位项：入口列表就是能力清单。
+packages/ui/src/workspace-file-tree/useWorkspaceFileTreeData.ts	446	a8784b7e	// [契约] `gitStatusRequestVersionRef` 的写入与读取都在这一处，外部不得直接操作。
+packages/ui/src/workspace-plugin-preview/WorkspacePluginPreview.tsx	279	a8784b7e	// [事务] `selectPlugin` 只做一次转发：不记录最近使用，也不写任何持久化。
+packages/ui/src/WorkspaceHelpMenuButton.tsx	63	a8784b7e	// `WorkspaceHelpMenuButton` 的菜单动作表只创建一次并复用，避免每帧新建闭包。
+packages/web/src/web-remote-control/domain/webRemoteControlScreenCopy.ts	142	a8784b7e	// `desktop-bootstrap-timeout` 的下一步先让用户确认桌面端没有休眠、没有卡在确认弹窗。

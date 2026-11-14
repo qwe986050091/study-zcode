@@ -1,0 +1,25 @@
+file	baseLine	blame	content
+packages/ui/src/v4/ConversationTurnRow.tsx	62	a8784b7e	// row 必须原样下传给 ConversationRowView，不做拷贝，保持行数据只读。
+packages/ui/src/v4/ConversationTurnRow.tsx	79	a8784b7e	// 解构到此结束，属性名必须与 ConversationTurnRowProps 逐字一致，否则透传会漏字段。
+packages/ui/src/v4/ConversationTurnRow.tsx	99	a8784b7e	// reasoningContentVariant 由调用方选择，这里只透传，不读默认值。
+packages/ui/src/v4/ConversationTurnRow.tsx	113	a8784b7e	// assistantTextRows 多段优先，为空时退回 latestAssistantTextRow.text，保证总有可复制文本。
+packages/ui/src/v4/ConversationUserInputContent.tsx	53	a8784b7e	// match 结果由三段组成：leadingText、commandText、trailingText，前后原文都保留。
+packages/ui/src/v4/ConversationUserInputContent.tsx	93	a8784b7e	// normalizeCommandMentionLabel 先 trim 再去前导斜杠并转小写，仅为比较服务。
+packages/ui/src/v4/ConversationUserInputContent.tsx	100	a8784b7e	// mentionClassName 统一拼装提及块样式，正文与助手消息体共用 text-ui-base。
+packages/ui/src/v4/ConversationUserInputContent.tsx	113	a8784b7e	// V4UserInputMention 由 part.type 分派渲染，命令块走独立分支，非权威命令必须退回纯文本。
+packages/ui/src/v4/index.ts	70	a8784b7e	// sessionsIndexRegistry 的租约注册表连同 LOCAL_SESSIONS_INDEX_ENDPOINT 一并导出。
+packages/ui/src/v4/index.ts	91	a8784b7e	// 分屏布局与 workspace 工作台宿主归同一分组，导出顺序不参与运行时。
+packages/ui/src/v4/index.ts	134	a8784b7e	// V4InteractionDialogs 单独占一条 export，便于按需懒加载。
+packages/ui/src/v4/index.ts	140	a8784b7e	// 适配函数排在 export 列表末尾，与 pendingInteractionAdapter 的职责顺序一致。
+packages/ui/src/v4/useDraftSuggestedPluginActionPopover.ts	24	a8784b7e	// 错误态用 PLUGIN_ACTION_ERROR_DURATION_MS = 3000，比成功态多留 1s 阅读时间。
+packages/ui/src/v4/useDraftSuggestedPluginActionPopover.ts	46	a8784b7e	// resultTimerRef 同时存 operationId 与 timer，清理时据此只清匹配操作。
+packages/ui/src/v4/useDraftSuggestedPluginActionPopover.ts	86	a8784b7e	// 展示新操作前先 clearTimer(resultTimerRef)，避免旧计时把新提示提前关掉。
+packages/ui/src/v4/useDraftSuggestedPluginActionPopover.ts	99	a8784b7e	// onDismiss 可选，未传时按钮只执行 onAction 不回调关闭。
+packages/ui/src/components/ai-elements/prompt-input-actions.tsx	143	a8784b7e	// 打开文件对话框由 usePromptInputAttachments 的 openFileDialog 统一实现，本组件不持有选择逻辑。
+packages/ui/src/components/ai-elements/prompt-input-actions.tsx	160	a8784b7e	// 截图入口先调 onSelect 让外部拦截，未 preventDefault 才继续 captureScreenshot。
+packages/ui/src/components/ai-elements/prompt-input-actions.tsx	176	a8784b7e	// captureScreenshot 返回空表示用户取消或能力不足，此时不调用 attachments.add。
+packages/ui/src/components/ai-elements/prompt-input-actions.tsx	214	a8784b7e	// 未传 children 时触发器用 PlusIcon 占位，保持至少 1 行可点击面积。
+packages/ui/src/settings/McpServerForm.tsx	61	a8784b7e	// [契约] McpScopeMenu 纯受控：selected、scopeKey、workspaceTabs 与 onChange 全由调用方传入，内部不存副本。
+packages/ui/src/settings/McpServerForm.tsx	255	a8784b7e	// editorMode 非 json 时直接 onSave，必填校验由 canSave 驱动的禁用态先挡住。
+packages/ui/src/settings/McpServerForm.tsx	269	a8784b7e	// jsonDraft.trim() 为空时直接 return false，省去一次无意义解析。
+packages/ui/src/settings/McpServerForm.tsx	293	a8784b7e	// envPlaceholder 按 form.type 二分：stdio 给 env 键值对示例，远程给 Authorization 头示例。

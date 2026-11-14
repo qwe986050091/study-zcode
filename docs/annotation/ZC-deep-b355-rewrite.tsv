@@ -1,0 +1,35 @@
+file	baseLine	blame	content
+packages/desktop/src/host/taskRealtimeBridge.ts	70	a8784b7e479d3a	// 调用方据空值跳过注册。
+packages/desktop/src/host/taskRealtimeBridge.ts	132	a8784b7e479d3a	// 已见即返回否。
+packages/desktop/src/host/taskRealtimeBridge.ts	133	a8784b7e479d3a	// 写入后按容量淘汰。
+packages/desktop/src/host/taskRealtimeBridge.ts	134	a8784b7e479d3a	// 淘汰同步删索引。
+packages/desktop/src/host/taskRealtimeBridge.ts	310	a8784b7e479d3a	// 先置关闭标志。
+packages/desktop/tsup.config.ts	33	a8784b7e479d3a	// 该模块只在沙箱别名的成功回调里使用，不参与代码打包。
+packages/desktop/tsup.config.ts	47	a8784b7e479d3a	// 结果以常量注入，运行时代码只看到布尔值，不感知构建分支。
+packages/desktop/tsup.config.ts	63	a8784b7e479d3a	// 只解析键值对形式，注释与空行自然跳过。
+packages/desktop/tsup.config.ts	206	a8784b7e479d3a	// 生产压缩与函数名保留只在非覆盖率构建开启。
+packages/desktop/tsup.config.ts	241	a8784b7e479d3a	// 环境与产品身份来自上面解析的结果，构建期固化，运行时不再回读环境变量。
+packages/ui/src/TaskListItemContextMenu.tsx	49	a8784b7e479d3a	// 禁用原因由调用方给出。
+packages/ui/src/TaskListItemContextMenu.tsx	96	a8784b7e479d3a	// 菜单项组件由调用方注入。
+packages/ui/src/TaskListItemContextMenu.tsx	98	a8784b7e479d3a	// 分隔线同样注入。
+packages/ui/src/TaskListItemContextMenu.tsx	109	a8784b7e479d3a	// 可选动作原样下传。
+packages/ui/src/TaskListItemContextMenu.tsx	111	a8784b7e479d3a	// 轨迹入口只对支持的来源出现。
+packages/ui/src/TaskListItemContextMenu.tsx	114	a8784b7e479d3a	// 禁用态整体传给动作清单。
+packages/ui/src/WorkspaceSidebarFooter.tsx	5	a8784b7e479d3a	//   不做什么：不持久化主题或语言、不发起登录、不实现缩放，全部通过回调与平台抽象转发。
+packages/ui/src/WorkspaceSidebarFooter.tsx	234	a8784b7e479d3a	// [资源] 头像与名称组合成一块可复用的内容。
+packages/ui/src/WorkspaceSidebarFooter.tsx	312	a8784b7e479d3a	// 释放函数是可选的，
+packages/ui/src/WorkspaceSidebarFooter.tsx	313	a8784b7e479d3a	// 因此调用处使用可选调用而不是直接执行。
+packages/ui/src/WorkspaceSidebarFooter.tsx	320	a8784b7e479d3a	// [资源] 清理阶段先置取消标志，再解绑监听。
+packages/ui/src/WorkspaceSidebarFooter.tsx	325	a8784b7e479d3a	// 这里不要做额外的异步等待。
+packages/ui/src/store/commandsStore.ts	21	a8784b7e479d3a	// 模块职责：命令面板与设置页共用的命令注册表投影，负责拉取、增删改与启停开关。
+packages/ui/src/store/commandsStore.ts	44	a8784b7e479d3a	// 列表引用即渲染依据，更新时优先原位替换而非整体重建。
+packages/ui/src/store/commandsStore.ts	86	a8784b7e479d3a	// 身份键的唯一构造点，去重、在途登记与写回比对都从这里取值。
+packages/ui/src/store/commandsStore.ts	97	a8784b7e479d3a	// [并发] 每次写回前重新取当前键，而不是复用发起时闭包里的旧值。
+packages/ui/src/store/commandsStore.ts	127	a8784b7e479d3a	// [并发] 共享在途是幂等的实现，第二个调用者不新增请求，只等同一结果。
+packages/ui/src/store/commandsStore.ts	149	a8784b7e479d3a	// 投影归属与列表在同一次写入中落定，二者不可分开更新。
+packages/ui/src/store/zcodeSessionStoreSelectors.ts	51	a8784b7e479d3a	// 只做去空白，不做任何规范化。
+packages/ui/src/store/zcodeSessionStoreSelectors.ts	72	a8784b7e479d3a	// 身份比较先去空白，空身份不参与匹配。
+packages/ui/src/store/zcodeSessionStoreSelectors.ts	93	a8784b7e479d3a	// 无基础状态时直接返回默认状态。
+packages/ui/src/store/zcodeSessionStoreSelectors.ts	94	a8784b7e479d3a	// 有身份才做一次性迁移，无身份不迁移任何任务。
+packages/ui/src/store/zcodeSessionStoreSelectors.ts	95	a8784b7e479d3a	// 展示级种子整体继承，任务级状态只按身份筛选。
+packages/ui/src/store/zcodeSessionStoreSelectors.ts	181	a8784b7e479d3a	// 写入前先解析键，决定是否走身份迁移种子。

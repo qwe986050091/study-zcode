@@ -1,0 +1,31 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/office-runtime/src/adapters/parse/xlsx.ts	40	a8784b7e	// `ROWS_PER_UNIT` 同时决定分页粒度与默认预览行数：调大减少页数，但单页更重。
+apps/zcode-cli/packages/office-runtime/src/adapters/parse/xlsx.ts	207	a8784b7e	// `locator` 为空时每张 sheet 只给一份预览，并提示剩余行数。
+apps/zcode-cli/packages/office-runtime/src/adapters/parse/xlsx.ts	208	a8784b7e	// 空表只输出 `sheetLabel` 标题占位，不构造假行。
+apps/zcode-cli/packages/office-runtime/ui/main.tsx	11	a8784b7e	// INV 表逐条可核对：下面每个实现点都标了它守的是哪一条 `INV-xx`。
+apps/zcode-cli/packages/office-runtime/ui/main.tsx	298	a8784b7e	// [并发] `loadSeq` 代次：后发加载立即让先发失效，旧响应在两处 `mine !== loadSeq.current` 处丢弃。
+apps/zcode-cli/packages/office-runtime/ui/main.tsx	464	a8784b7e	// `document.visibilityState !== "visible"` 时跳过本次请求：只省资源，不改变轮询节奏。
+apps/zcode-cli/packages/office-runtime/ui/shell/parts.tsx	245	a8784b7e	// `IDLE_MS` 只控制淡出延时，不控制唤醒；唤醒由滚动与 `pointermove` 热区独立触发。
+apps/zcode-cli/packages/office-runtime/ui/shell/parts.tsx	499	a8784b7e	// 补 try/finally 要连带决定 `onSend` 失败提示的落点与重试入口，改动面大于本组件。
+apps/zcode-cli/packages/office-runtime/ui/shell/parts.tsx	634	a8784b7e	// `onClose` 与 `onNext` 都只回调，不直接操作查看器：跳转由外壳统一调度。
+packages/desktop/scripts/mcp-apps-host-fixture/background-main.ts	168	a8784b7e	// `admitted` 存 `win` / `guest` 引用而非 id，才能识别「销毁后重建」这种假恢复。
+packages/desktop/scripts/mcp-apps-host-fixture/background-main.ts	199	a8784b7e	// [契约] `mode` 的三种取值分别对应纯后台冷启 / 侧栏锚点隐藏 / 最小化冷启，顺序固定。
+packages/desktop/scripts/mcp-apps-host-fixture/background-main.ts	377	a8784b7e	// `env.guests.set` 还原之后，后续同一性断言才成立。
+packages/desktop/src/host/index.ts	629	a8784b7e	// `OffPeakRuntime` 的三元组：`service`、逐请求鉴权构造器与派发前的模型可用性校验。
+packages/desktop/src/host/index.ts	2812	a8784b7e	// `sourceAvailability=offline` 让上层区分「项目在但执行面不可用」与「项目不存在」。
+packages/desktop/src/host/index.ts	4339	a8784b7e	// `basePortClosed` 用局部标志而非监听器里直接释放，让初始化每阶段都能主动检查。
+packages/desktop/src/host/windowRemoteConnectionRegistry.ts	150	a8784b7e	// [契约] `closing` 期间同 key 的新建会被拒绝，直到状态落到 `disconnected`。
+packages/desktop/src/host/windowRemoteConnectionRegistry.ts	305	a8784b7e	// `normalizeServerConnectionUrl` 只做字符串归一，不做鉴权或连通性探测。
+packages/desktop/src/host/windowRemoteConnectionRegistry.ts	2173	a8784b7e	// `waitForScopedServices` 可能永不返回：调用方必须自行加超时。
+packages/desktop/src/renderer/src/plugin-sandbox/aliasRuntime.ts	374	a8784b7e	// [事务] `markForeignApp()` 只在 `connectPromise` 为空时置位，已建立的会话不受影响。
+packages/desktop/src/renderer/src/plugin-sandbox/aliasRuntime.ts	375	a8784b7e	// `foreignApp` 置位后握手入口直接拒绝，不做任何补救重连。
+packages/desktop/src/renderer/src/plugin-sandbox/aliasRuntime.ts	376	a8784b7e	// `foreignApp` 是单向标记：调用方不得把它当临时开关复位。
+packages/desktop/src/scheduler/index.ts	82	a8784b7e	// [权衡] 退避状态留在内存而非写库：省掉每轮一次 `AutomationRepo` 写，代价是重启后归零。
+packages/desktop/src/scheduler/index.ts	185	a8784b7e	// [事务] 正常派发必须按「落台账 → 登记 `inFlight` → 发请求」三步走，次序不可换。
+packages/desktop/src/scheduler/index.ts	405	a8784b7e	// 闲时 `inFlight` 逐条释放后清空，少量残留由启动时的中断恢复兜底。
+packages/e2e-report/src/viewer/App.tsx	107	a8784b7e	// [权衡] 不做轮询刷新：`useEffect` 空依赖只拉一次，牺牲实时性换可预测性。
+packages/e2e-report/src/viewer/App.tsx	114	a8784b7e	// [权衡] 不细分网络与解析错误：统一走 `StateScreen`，牺牲分类指引换实现简单。
+packages/e2e-report/src/viewer/App.tsx	383	a8784b7e	// [事务] 单位后缀由调用点传入：`statsValue` 只做空值判断与格式化。
+packages/provider-node/src/endpoint-scoped-zcode-builtin-source.ts	63	a8784b7e	// 返回的退订函数直接 `this.#listeners.delete(listener)`，不做引用计数。
+packages/provider-node/src/endpoint-scoped-zcode-builtin-source.ts	89	a8784b7e	// `#ensureCurrent` 让并发读共享同一次解析，`#dispose()` 或端点切换后重新解析。
+packages/provider-node/src/endpoint-scoped-zcode-builtin-source.ts	159	a8784b7e	// `#assertNotDisposed` 在 `#disposed` 为真时立即抛错。

@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+const file = 'd:\\code\\opensource\\uv\\crates\\uv-resolver\\src\\pubgrub\\report.rs';
+let lines = fs.readFileSync(file, 'utf8').split('\n');
+const bad = lines.findIndex((l) => l.trim() === '// 既禁用索引又没有 find-links。');
+if (bad < 0) throw new Error('comment not found');
+lines.splice(bad, 1);
+const anchor = lines.findIndex((l) => l.trim() === 'let no_find_links = index_locations.flat_indexes().peekable().peek().is_none();');
+if (anchor < 0) throw new Error('anchor not found');
+const indent = (/^[ \t]*/.exec(lines[anchor]) || [''])[0];
+lines.splice(anchor, 0, `${indent}// 既禁用索引又没有 find-links。`);
+fs.writeFileSync(file, lines.join('\n'));
+console.log('moved to line', anchor + 1);

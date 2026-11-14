@@ -1,0 +1,37 @@
+file	baseLine	blame	content
+packages/ui/src/WorkspaceWebRemoteControlTrigger.tsx	47	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// status === "error" 优先，其余状态只影响 iconClassName。
+packages/ui/src/WorkspaceWebRemoteControlTrigger.tsx	48	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 文案全部走 formatMessage，不在组件里拼字符串。
+packages/ui/src/WorkspaceWebRemoteControlTrigger.tsx	49	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 未识别状态回退 triggerStatus.idle 文案，保证 tooltip 总有可读提示。
+packages/ui/src/WorkspaceWebRemoteControlTrigger.tsx	50	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// getWebRemoteControlTriggerPresentation 是纯函数，status 对象只需两字段。
+packages/ui/src/WorkspaceWebRemoteControlTrigger.tsx	51	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// iconClassName 只取语义色类名，不写具体色值。
+packages/ui/src/WorkspaceWebRemoteControlTrigger.tsx	67	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// text-success 只在这一支出现。
+packages/ui/src/WorkspaceWebRemoteControlTrigger.tsx	153	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 只采用 resolver 给出的 live session，未恢复时让弹层保持 remote-waiting。
+packages/ui/src/WorkspaceWebRemoteControlTrigger.tsx	154	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 状态轮询结果只影响图标与 tooltip，不阻断入口。
+packages/ui/src/WorkspaceWebRemoteControlTrigger.tsx	155	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// workspaceIdentity 与 workspacePath 都缺失时按本地工作区上报。
+packages/ui/src/components/ai-elements/persona.tsx	66	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// idle 态由 state 的四个布尔输入全为假表示。
+packages/ui/src/components/ai-elements/persona.tsx	71	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// variant 决定 sources 取项，缺省变体为 obsidian。
+packages/ui/src/components/ai-elements/persona.tsx	88	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// sources 表：每个 variant 声明 source 地址，并带 hasModel 与 dynamicColor 两个开关。
+packages/ui/src/components/ai-elements/persona.tsx	125	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// getCurrentTheme：先看 documentElement 的 dark 类名，再看 prefers-color-scheme，都没有时返回 light。
+packages/ui/src/components/ai-elements/persona.tsx	140	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// useTheme 订阅：仅在 source.dynamicColor 为真时挂 MutationObserver 与 matchMedia 监听。
+packages/ui/src/components/ai-elements/persona.tsx	141	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 根元素只观察 class 属性，系统侧只监听 prefers-color-scheme 变化。
+packages/ui/src/components/ai-elements/persona.tsx	190	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 有模型分支：useViewModelInstance 创建默认实例并取颜色通道，跟随 theme 写入黑白。
+packages/ui/src/components/ai-elements/persona.tsx	191	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// theme 变化时重新写入颜色，dark 用白、light 用黑。
+packages/ui/src/components/ai-elements/persona.tsx	192	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// dynamicColor 为假的 variant 直接跳过写入。
+packages/ui/src/components/ui/command.tsx	32	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 背景与圆角在 CommandPrimitive 上统一，调用方只需追加 className 布局类。
+packages/ui/src/components/ui/command.tsx	52	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 对话框标题与描述仅给 DialogHeader 的读屏使用，视觉上由输入框承担提示。
+packages/ui/src/components/ui/command.tsx	53	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 内容区去内边距，CommandPrimitive 自己控制列表留白。
+packages/ui/src/components/ui/command.tsx	86	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// SearchIcon 放在 InputGroupAddon 附加位，不占用输入光标区域。
+packages/ui/src/components/ui/command.tsx	87	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// CommandPrimitive.Input 禁用时不接收焦点，样式同时降 opacity。
+packages/ui/src/components/ui/command.tsx	121	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// scrollbar-hide 隐藏滚动条保持视觉干净，滚轮与键盘仍可操作。
+packages/ui/src/components/ui/command.tsx	154	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// CommandPrimitive.Group 自身裁掉溢出，标题与选项共用同一内边距基线。
+packages/ui/src/components/ui/command.tsx	173	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// CommandPrimitive.Separator 用负外边距抵消容器内边距，视觉上通栏。
+packages/ui/src/components/ui/command.tsx	215	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 字号与字距在 CommandShortcut 上统一，调用方只传内容不传排版。
+packages/ui/src/lib/taskChangeSummary.ts	250	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] appendPatch 把空白补丁视为无效，直接返回 current 原值
+packages/ui/src/lib/taskChangeSummary.ts	251	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 多段 normalizedPatch 之间用换行连接，顺序即工具调用发生顺序
+packages/ui/src/lib/taskChangeSummary.ts	252	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// current 为空时直接采用首段 normalizedPatch，不产生前导换行
+packages/ui/src/lib/taskChangeSummary.ts	371	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] filesByPath 跨消息按路径合并，writeCount 与 added / removed 相加
+packages/ui/src/lib/taskChangeSummary.ts	372	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// lastTurnIndex 用 Math.max 合并，消息乱序时仍取最新轮次
+packages/ui/src/lib/taskChangeSummary.ts	373	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// assistant 消息优先用自身 turnIndex，缺失时回退到 messageIndex
+packages/ui/src/lib/taskChangeSummary.ts	504	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] buildPerTurnChangeSummaries 只为有内容的轮次建条目，空轮次不占位
+packages/ui/src/lib/taskChangeSummary.ts	505	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// Map 的键是 turnIndex，调用方按消息轮次查表
+packages/ui/src/lib/taskChangeSummary.ts	506	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 同一 turnIndex 重复出现时后者覆盖前者

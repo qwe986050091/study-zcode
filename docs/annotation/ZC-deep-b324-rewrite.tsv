@@ -1,0 +1,43 @@
+file	baseLine	blame	content
+packages/shared/src/channel-mention.ts	50	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// channelReplyPartsSchema 的 text 片段与 channelContentPartSchema 的 text 分支字段形状一致。
+packages/shared/src/channel-mention.ts	51	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// text 由 2000 字符上限约束，mention 的 refId 由 1–200 长度约束。
+packages/shared/src/channel-mention.ts	52	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// mentionName 的 candidateRef 可缺省，出现时必须是 1–200 字符的候选标识。
+packages/shared/src/channel-mention.ts	53	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 数组级 .min(1) 与 .max(50) 同时限制段数，空数组与超长回复都会解析失败。
+packages/shared/src/channel-mention.ts	125	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// type === "text" 的片段原样拼入结果，不做 trim 或转义。
+packages/shared/src/channel-mention.ts	126	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 提及片段展开为 @ 加 name，name 取自 channelMentionSchema 校验后的值。
+packages/shared/src/channel-mention.ts	127	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// join("") 直接拼接片段，不再插入空格或换行。
+packages/shared/src/channel-mention.ts	132	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先遍历 source 建立 refId 到 channelMentionSchema 结果的映射，模型侧输入此时还没参与。
+packages/shared/src/channel-mention.ts	133	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 同一 refId 出现两次且 JSON 串不同即抛错，判定粒度是整条记录而非单个字段。
+packages/shared/src/channel-mention.ts	134	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// parts 里只接受 refId 或 mentionName，模型直传的平台 ID 一律拒绝。
+packages/shared/src/coding-plan-subscription.ts	30	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [权衡] 不把 CodingPlanPayType 与 CodingPlanOverseasPaymentChannel 并成一个大联合：签名接口分境内与海外两条链路，合并后每次调用都要再判组别。
+packages/shared/src/coding-plan-subscription.ts	51	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 金额按两套口径成组：originalAmount、discountAmount、payAmount 是整单口径，monthlyOriginalAmount 等三个月均字段由服务端单独给值。
+packages/shared/src/coding-plan-subscription.ts	140	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] CodingPlanStaticTeamProduct.priceCurrency 钉死为 "CNY"，这是业务事实而非漏写美元。
+packages/shared/src/coding-plan-subscription.ts	457	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] CodingPlanStripePayRequest.estimatePayAmount 只是渠道侧提示，真实金额以服务端下单结果为准。
+packages/shared/src/coding-plan-subscription.ts	555	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] EnterpriseCodingPlanPricingProduct 的价格按组织与项目两个维度取上下文，同档位在不同项目下可能不同。
+packages/shared/src/coding-plan-subscription.ts	621	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] giveBalance、cashBalance、totalBalance 三段余额全部由服务端给出，前端不得自行相加。
+packages/shared/src/coding-plan-subscription.ts	646	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] EnterpriseCodingPlanOrderCalculateResponse 的 totalOriginalAmount/totalPayAmount/thirdPayAmount 三个顶层金额必填。
+packages/shared/src/coding-plan-subscription.ts	647	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] discountDetails 只作解释，金额以 totalPayAmount 等顶层字段为准。
+packages/shared/src/coding-plan-subscription.ts	661	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] EnterpriseCodingPlanCreateOrderRequest 的 giveAmount 与 balanceDeductAmount 可缺省，缺省即不使用该项抵扣。
+packages/shared/src/coding-plan-subscription.ts	691	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] EnterpriseCodingPlanPendingOrder 的 amount 是本次应付，totalAmount 是订单原值。
+packages/ui/src/components/ui/context-menu.tsx	41	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ContextMenuContent 的外壳自带 rounded-lg，调用方无需再传圆角类。
+packages/ui/src/components/ui/context-menu.tsx	42	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// className 由 cn() 放在最后合并，调用方可以覆盖任意默认类。
+packages/ui/src/components/ui/context-menu.tsx	62	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ContextMenuItem 用 min-h-7 固定条目高度，图标与文字不再抖动。
+packages/ui/src/components/ui/context-menu.tsx	63	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// inset 与 destructive 变体各自成组：缩进由 data-inset:pl-7.5 给出，危险态由 data-[variant=destructive] 类给出。
+packages/ui/src/components/ui/context-menu.tsx	64	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// data-disabled 时只关掉 pointer-events，文字仍以 foreground-subtlest 保持可读。
+packages/ui/src/components/ui/context-menu.tsx	105	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ContextMenuSubTrigger 末尾渲染 ChevronRightIcon，ml-auto 把它推到右侧。
+packages/ui/src/components/ui/context-menu.tsx	106	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// data-[state=open] 与 data-[highlighted] 共用 bg-menu-hover，展开后底色不会突变。
+packages/ui/src/components/ui/context-menu.tsx	107	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// children 先于 ChevronRightIcon 渲染，箭头因此始终贴在最右侧。
+packages/ui/src/components/ui/context-menu.tsx	132	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ContextMenuSubContent 用 min-w-32，比主菜单的 min-w-44 窄一档。
+packages/ui/src/components/ui/context-menu.tsx	133	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// duration-100 与 fade/zoom 类与 ContextMenuContent 一致，两级菜单动画因此不会错位。
+packages/ui/src/components/ui/context-menu.tsx	134	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// origin-(--radix-context-menu-content-transform-origin) 让缩放锚定在内容变换原点。
+packages/ui/src/project-sidebar/ProjectTaskRows.tsx	36	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// pinnedTasks 只在任务未置顶时取 EMPTY，避免每行各建一个空数组。
+packages/ui/src/project-sidebar/ProjectTaskRows.tsx	37	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 显式的 ProjectTask[] 标注让 TS 拒绝向 EMPTY 推入元素，只能读取。
+packages/ui/src/project-sidebar/ProjectTaskRows.tsx	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// EMPTY 以只读方式传给 TaskList，改它会被类型检查拦下。
+packages/ui/src/project-sidebar/ProjectTaskRows.tsx	64	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// rows 用 useMemo 包住单元素数组，否则每次 render 都给 TaskList 一个新引用。
+packages/ui/src/project-sidebar/ProjectTaskRows.tsx	65	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 依赖数组只有 task，task 引用不变时 rows 与 organizationActions 一起命中 memo。
+packages/ui/src/project-sidebar/ProjectTaskRows.tsx	66	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// rows 同时传给 TaskList 的 tasks 与 pinnedTasks，两处共享引用才能命中浅比较。
+packages/ui/src/project-sidebar/ProjectTaskRows.tsx	119	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// pageSize 与 taskRowVariant 由 kind 决定，缺省 "project" 走普通项目列表。
+packages/ui/src/project-sidebar/ProjectTaskRows.tsx	120	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// showEmptyState 只透传给 TaskList，是否展示空态由列表持有者决定。
+packages/ui/src/project-sidebar/ProjectTaskRows.tsx	137	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// pageSize 是首次展开条数，更多按钮每次把 limit 加一页。
+packages/ui/src/project-sidebar/ProjectTaskRows.tsx	138	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// kind === "pinned" 时忽略 limit，改用 showAll 一次展开全部。
+packages/ui/src/project-sidebar/ProjectTaskRows.tsx	139	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// pageSize 只在挂载时算一次并作 useState 初值，之后不随 kind 变化重算。

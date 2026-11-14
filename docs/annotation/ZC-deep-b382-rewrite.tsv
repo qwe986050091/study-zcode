@@ -1,0 +1,31 @@
+file	baseLine	blame	content
+packages/ui/src/ToolCallBlocks/renderers/resolve-workflow-question.tsx	32	a8784b7e	// 对象直接返回：`typeof value === "object"` 且非数组才算记录。
+packages/ui/src/ToolCallBlocks/renderers/resolve-workflow-question.tsx	33	a8784b7e	// 字符串只试一次宽容解析，`JSON.parse` 抛错即放弃。
+packages/ui/src/ToolCallBlocks/renderers/resolve-workflow-question.tsx	34	a8784b7e	// 解析结果仍要求 `typeof === "object"` 且非数组，防止把数组当输入。
+packages/ui/src/ToolCallBlocks/renderers/skill.tsx	190	a8784b7e	// 展开内容在回调内组装，`deps` 变化才重建整棵子树。
+packages/ui/src/ToolCallBlocks/renderers/skill.tsx	191	a8784b7e	// 参数区仅在 `args` 存在时渲染，缺失时不占位也不留空框。
+packages/ui/src/ToolCallBlocks/renderers/skill.tsx	192	a8784b7e	// 详情区优先归一 `outputText`，无文本且非运行态才提示无输出。
+packages/ui/src/ToolCallBlocks/renderers/submit-result.tsx	31	a8784b7e	// 概要只给大概，完整内容在展开体 `detailExpanded` 里。
+packages/ui/src/ToolCallBlocks/renderers/submit-result.tsx	64	a8784b7e	// 与引擎侧一致：`JSON.parse` 只调用一次，失败即换展示。
+packages/ui/src/ToolCallBlocks/renderers/submit-result.tsx	130	a8784b7e	// 驳回与停止是两种结果：`rejected` 与 `stopped` 卡面文案不同。
+packages/ui/src/v4/composer/useComposerAttachments.ts	361	a8784b7e	// [契约] 按 ttachmentId 精确更新，找不到时静默无操作（条目可能已被移除）。
+packages/ui/src/v4/composer/useComposerAttachments.ts	546	a8784b7e	// [契约] 结构化超限错误按 `locale` 格式化，与 `chatAttachments` 的序列化边界同源。
+packages/ui/src/v4/composer/useComposerAttachments.ts	643	a8784b7e	// 本地附件不受远程 `maxAttachments` 配额限制。
+packages/ui/src/v4/conversationAssistantWorkItems.ts	121	a8784b7e	// 适配层的异常由适配器自己兜底，本层不再包 try。
+packages/ui/src/v4/conversationAssistantWorkItems.ts	134	a8784b7e	// 两者共用同一份连续行聚合，靠 `groupKind` 把组类型与展示名分开。
+packages/ui/src/v4/conversationAssistantWorkItems.ts	241	a8784b7e	// 写入被取消时子项各自显示终态，父级只表达 `phase` 是否仍在可见序列尾部。
+packages/ui/src/v4/ConversationShareConfirmationDock.tsx	153	a8784b7e	//   改错故障：发布中仍能点「调整范围」：`publishRequest` 与改选并发，范围不确定。
+packages/ui/src/v4/ConversationShareConfirmationDock.tsx	308	a8784b7e	// 只表达「用户已尝试确认但还没勾选」，属提示态而非 `validationError`。
+packages/ui/src/v4/ConversationShareConfirmationDock.tsx	422	a8784b7e	// [契约] 只做「数字 + 单位」的展示格式化，`formatShareCount` 不改语义。
+packages/ui/src/v4/workbenchGroupStore.ts	160	a8784b7e	// 需要初始态请展开复制，不要直接持有 `initialState` 引用。
+packages/ui/src/v4/workbenchGroupStore.ts	178	a8784b7e	// 新增模式时要显式决定是否进入 `PERSISTED_MODES` 链路。
+packages/ui/src/v4/workbenchGroupStore.ts	381	a8784b7e	// 调用方用 === 比较 snapshot 引用，不要深比较。
+packages/ui/src/v4/WorkflowNotificationHoleRow.tsx	36	a8784b7e	// 从联合类型中精确取出 `hole` 形态。
+packages/ui/src/v4/WorkflowNotificationHoleRow.tsx	39	a8784b7e	// `waiting`、`completing` 与已离场三种态覆盖全部留白形态。
+packages/ui/src/v4/WorkflowNotificationHoleRow.tsx	51	a8784b7e	// 只剩 `waiting` 与 `completing` 两种细分。
+packages/ui/src/v4/workspaceSessionsIndexSubscriptionSet.ts	84	a8784b7e	// 绑定完全相同时直接跳过，不重复 `subscribe`。
+packages/ui/src/v4/workspaceSessionsIndexSubscriptionSet.ts	120	a8784b7e	// 其余情况由 `releaseBinding` 整条释放并移除。
+packages/ui/src/v4/workspaceSessionsIndexSubscriptionSet.ts	148	a8784b7e	// 有变化时统一通知一次，`notify` 只发一帧。
+packages/ui/src/WorkspaceHeaderSections.tsx	356	a8784b7e	// 远端要附带 `deviceSuffix` 后缀，避免同名项目混在一起。
+packages/ui/src/WorkspaceHeaderSections.tsx	384	a8784b7e	// `SYNC_SERVICES` 三种全部存在才显示入口：缺任一视为本地没有同步能力。
+packages/ui/src/WorkspaceHeaderSections.tsx	541	a8784b7e	// `onCancelConfirm` 不得顺手做清理：取消改名属另一动作。

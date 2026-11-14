@@ -1,0 +1,9 @@
+dir	path	cause
+-	packages/ui/src/BotsDialog/BotSummaryCard.tsx	annotation
+-	packages/ui/src/components/ai-elements/conversation.tsx	annotation
+-	packages/ui/src/components/ai-elements/markdown-image.tsx	annotation
+-	packages/ui/src/components/ai-elements/snippet.tsx	annotation
+-	packages/ui/src/components/ai-elements/terminal.tsx	annotation
+-	packages/ui/src/components/cloud-content-dialog/CloudDialogHero.tsx	annotation
+-	packages/ui/src/components/marketing-touch/MarketingDialogs.tsx	annotation
+-	packages/ui/src/components/marketing-touch/marketingTouchController.ts	annotation

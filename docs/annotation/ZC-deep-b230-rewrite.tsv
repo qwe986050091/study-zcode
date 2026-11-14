@@ -1,0 +1,54 @@
+file	baseLine	blame	content
+packages/ui/src/ToolCallBlocks/renderers.tsx	38	a8784b7e479d3a	// 统计缺失或全零时整块不渲染，避免出现加零减零。
+packages/ui/src/ToolCallBlocks/renderers.tsx	39	a8784b7e479d3a	// 增删两段各自独立，缺一不占位。
+packages/ui/src/ToolCallBlocks/renderers.tsx	40	a8784b7e479d3a	// 数字只做一次短翻页，投影已按秒给出真实统计。
+packages/ui/src/ToolCallBlocks/renderers.tsx	41	a8784b7e479d3a	// 等宽与表格数字保证增减变化时不抖动。
+packages/ui/src/ToolCallBlocks/renderers.tsx	42	a8784b7e479d3a	// 无障碍标签与悬停标题都带符号，读屏能区分方向。
+packages/ui/src/ToolCallBlocks/renderers.tsx	43	a8784b7e479d3a	//
+packages/ui/src/ToolCallBlocks/renderers.tsx	55	a8784b7e479d3a	// 零增零删视为没有变化。
+packages/ui/src/ToolCallBlocks/renderers.tsx	56	a8784b7e479d3a	// 负值同样按无变化处理，防御异常投影。
+packages/ui/src/ToolCallBlocks/renderers.tsx	57	a8784b7e479d3a	//
+packages/ui/src/ToolCallBlocks/renderers.tsx	96	a8784b7e479d3a	// 可点态渲染按钮，其余渲染纯文本。
+packages/ui/src/ToolCallBlocks/renderers.tsx	97	a8784b7e479d3a	// 按下时阻止默认行为，避免抢走行选择。
+packages/ui/src/ToolCallBlocks/renderers.tsx	98	a8784b7e479d3a	// 点击只停冒泡，不跳过业务回调。
+packages/ui/src/ToolCallBlocks/renderers.tsx	99	a8784b7e479d3a	// 标题缺省取完整展示路径，悬停可看全路径。
+packages/ui/src/ToolCallBlocks/renderers.tsx	100	a8784b7e479d3a	// 文件名只取叶子，父目录由标题承担。
+packages/ui/src/ToolCallBlocks/renderers.tsx	101	a8784b7e479d3a	//
+packages/ui/src/ToolCallBlocks/renderers.tsx	152	a8784b7e479d3a	// 空路径直接返回空，不渲染占位。
+packages/ui/src/ToolCallBlocks/renderers.tsx	153	a8784b7e479d3a	// 窄会话流隐藏次要路径，避免与文件名争空间。
+packages/ui/src/ToolCallBlocks/renderers.tsx	154	a8784b7e479d3a	// 路径文本不换行，由父容器负责截断。
+packages/ui/src/ToolCallBlocks/renderers.tsx	155	a8784b7e479d3a	//
+packages/ui/src/ToolCallBlocks/renderers.tsx	170	a8784b7e479d3a	// 先按操作类型与动作标签推断编辑种类。
+packages/ui/src/ToolCallBlocks/renderers.tsx	171	a8784b7e479d3a	// 写入与删除各自区分进行态与完成态。
+packages/ui/src/ToolCallBlocks/renderers.tsx	172	a8784b7e479d3a	// 没有动作标签时仍按编辑处理。
+packages/ui/src/ToolCallBlocks/renderers.tsx	173	a8784b7e479d3a	// 删除优先于写入，顺序由推断函数决定。
+packages/ui/src/ToolCallBlocks/renderers.tsx	174	a8784b7e479d3a	// 未知来源按编辑兜底。
+packages/ui/src/ToolCallBlocks/renderers.tsx	175	a8784b7e479d3a	// 推断结果只影响文案键，不影响渲染。
+packages/ui/src/ToolCallBlocks/renderers.tsx	199	a8784b7e479d3a	// 多个文件用逗号连接，首项前不加分隔。
+packages/ui/src/ToolCallBlocks/renderers.tsx	200	a8784b7e479d3a	// 键取路径，保证同一批文件顺序稳定。
+packages/ui/src/ToolCallBlocks/renderers.tsx	201	a8784b7e479d3a	// 点击回调按摘要逐项绑定时才存在。
+packages/ui/src/ToolCallBlocks/renderers.tsx	202	a8784b7e479d3a	//
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	51	a8784b7e479d3a	// 留白灯优先于状态灯。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	52	a8784b7e479d3a	// 已补全的留白回到普通灯。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	53	a8784b7e479d3a	// 等待留白用警示色描边。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	54	a8784b7e479d3a	// 其余留白用最浅描边。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	55	a8784b7e479d3a	// 运行灯带呼吸光晕。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	56	a8784b7e479d3a	// 减少动效时关闭呼吸。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	94	a8784b7e479d3a	// 双线段用于并行两站。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	95	a8784b7e479d3a	// 两条线相距两像素。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	96	a8784b7e479d3a	// 单线段缺轨道时隐藏。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	97	a8784b7e479d3a	// 线宽固定一像素。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	98	a8784b7e479d3a	// 墨色随轨道数据变化。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	99	a8784b7e479d3a	// 段宽由调用方给定。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	134	a8784b7e479d3a	// 空索引直接不渲染。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	135	a8784b7e479d3a	// 灯数超过五枚折叠为加号。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	136	a8784b7e479d3a	// 靠内容一侧接短轨道。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	137	a8784b7e479d3a	// 每枚灯是可选按钮。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	138	a8784b7e479d3a	// 标签含站名与状态。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	139	a8784b7e479d3a	// 左右两侧镜像排列。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	241	a8784b7e479d3a	// 拇指不存在时不渲染。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	242	a8784b7e479d3a	// 拖动按指针标识跟踪。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	243	a8784b7e479d3a	// 位移按滚动比例换算。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	244	a8784b7e479d3a	// 轨道点击按半屏翻页。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	245	a8784b7e479d3a	// 减少动效时改为瞬时滚动。
+packages/ui/src/components/workflow-timeline/WorkflowTimelineLedge.tsx	246	a8784b7e479d3a	// 点击事件到此终止。

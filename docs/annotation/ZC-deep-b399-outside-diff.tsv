@@ -1,0 +1,8 @@
+dir	path	cause
+-	packages/ui/src/Root.tsx	annotation
+-	packages/ui/src/plugin-ui/adapters/pluginUiManagedPage.ts	annotation
+-	packages/ui/src/plugin-ui/domain/pluginUiToolFeed.ts	annotation
+-	packages/ui/src/project-sidebar/grouped/useGroupedDrag.ts	annotation
+-	packages/ui/src/project-sidebar/grouped/virtualized-group-task-list.tsx	annotation
+-	packages/ui/src/project-sidebar/useProjectTree.ts	annotation
+-	packages/ui/src/root/useBotBroadcastEffects.ts	annotation

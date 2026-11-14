@@ -1,0 +1,46 @@
+file	baseLine	blame	content
+apps/dev-docs/src/data/productCapabilityMap.ts	446	a8784b7e479d3a	// 静态门禁、报告与覆盖率治理；质量指标不得混入产品埋点数据。
+apps/dev-docs/src/data/productCapabilityMap.ts	700	a8784b7e479d3a	// 门控只影响提示与选择，不改变已提交附件的历史记录。
+apps/dev-docs/src/feature-boundary-graph/FeatureBoundaryGraphView.tsx	105	a8784b7e479d3a	// 不要在组件内按筛选条件重算统计；筛选是渲染期概念，不是数据事实。
+apps/dev-docs/src/feature-boundary-graph/FeatureBoundaryGraphView.tsx	314	a8784b7e479d3a	// [契约] 等级筛选只作用于边，节点集合始终全量，避免筛选后出现孤立点造成结构误读。
+apps/dev-docs/src/feature-boundary-graph/FeatureBoundaryGraphView.tsx	529	55f48e6d02206c	// 工具栏：搜索与等级筛选均为受控输入，只把变更回传画布；
+apps/dev-docs/src/feature-boundary-graph/FeatureBoundaryGraphView.tsx	712	55f48e6d02206c	// 点击任意关系即把选中切换到对端，形成沿图游走。
+apps/dev-docs/src/feature-boundary-graph/FeatureBoundaryGraphView.tsx	724	55f48e6d02206c	// 空列表用短横线占位，保持各详情分区的行高一致。
+apps/dev-docs/src/feature-boundary-graph/FeatureBoundaryGraphView.tsx	770	55f48e6d02206c	// 详情分区容器：统一标题与上分隔线，仅做布局，不处理数据。
+apps/zcode-cli/packages/adapters/src/fs/text-range-reader.ts	67	a8784b7e479d3a	// 入口只做门禁与快慢分流。
+apps/zcode-cli/packages/adapters/src/fs/text-range-reader.ts	171	a8784b7e479d3a	// 逐块解码并按行切分。
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	90	522e851e0790e4	/** 合并后的请求头（含来源/归因头）；缺省表示不额外发送。 */
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	116	522e851e0790e4	/** 诊断日志。 */
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	128	522e851e0790e4	/** 代理绕过列表。 */
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	136	522e851e0790e4	/** 实际生效的请求头。 */
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	175	522e851e0790e4	/** 环境变量（代理判定）。 */
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	183	522e851e0790e4	/** 显式代理地址。 */
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	185	522e851e0790e4	/** 代理绕过列表。 */
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	418	a8784b7e479d3a	// 资源权衡：每请求多一次链式闭包分配，换取重试线索与可观测性，成本远低于一次网络往返。
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	539	a8784b7e479d3a	// 并发语义：首次并发请求可能各自创建并分别写入，最后一次写入生效，语义仍然等价。
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	764	522e851e0790e4	/** 显式代理地址。 */
+apps/zcode-cli/packages/adapters/src/model/model-execution.ts	766	522e851e0790e4	/** 代理绕过列表。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	174	a8784b7e479d3a	// 之所以不信任条目版本：市场维护者经常忘记同步它，而安装产物是插件包本身。
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	202	522e851e0790e4	/** 已归一化的插件条目。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	217	522e851e0790e4	/** 规范化来源；刷新时以它重新拉取。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	219	522e851e0790e4	/** 展示名（当前与 id 相同）。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	221	522e851e0790e4	/** 市场描述。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	231	522e851e0790e4	/** 条目数量。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	242	522e851e0790e4	/** 面向用户的错误原因。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	249	522e851e0790e4	/** 插件名。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	251	522e851e0790e4	/** 来源市场 id。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	261	522e851e0790e4	/** 首次安装时间。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	263	522e851e0790e4	/** 最近升级时间。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	287	522e851e0790e4	/** 所有已安装插件记录。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	301	522e851e0790e4	/** 诊断码。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	307	522e851e0790e4	/** 关联插件 id。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	324	522e851e0790e4	/** 按类型分组的组件名称+描述。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	333	522e851e0790e4	/** 作者名。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	339	522e851e0790e4	/** 插件版本。 */
+apps/zcode-cli/packages/adapters/src/plugins/marketplace.ts	1321	a8784b7e479d3a	// 走市场条目解析拿到的是最新版本，可能与用户当前安装的版本不一致。
+apps/zcode-cli/packages/adapters/src/storage/session-target.ts	53	522e851e0790e4	/** 累计运行秒数（按心跳/收口时间差累计，向上取整）。 */
+apps/zcode-cli/packages/adapters/src/storage/session-target.ts	258	a8784b7e479d3a	// 起止时间与心跳初值都取同一个开始时刻。
+apps/zcode-cli/packages/adapters/src/storage/session-target.ts	259	a8784b7e479d3a	// 条件里的目标标识与活跃状态保证只给当前目标挂运行态。
+apps/zcode-cli/packages/adapters/src/storage/session-target.ts	260	a8784b7e479d3a	// 负数时间戳被夹到 0，防止异常时钟写入历史。
+apps/zcode-cli/packages/adapters/src/storage/session-target.ts	261	a8784b7e479d3a	// 未命中时返回当前行而不报错，重放同一启动请求是幂等的。
+apps/zcode-cli/packages/adapters/src/storage/session-target.ts	405	a8784b7e479d3a	// 结束时间取最后心跳，缺失时退回开始时间，绝不用当前时刻。

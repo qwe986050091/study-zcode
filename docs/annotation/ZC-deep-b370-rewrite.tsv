@@ -1,0 +1,25 @@
+file	baseLine	blame	content
+packages/services/src/conversation-share/conversationShareArtifactDiscovery.ts	336	a8784b7e	// preflightMatches 为 false 时不阻断操作，只把候选退回全量。
+packages/services/src/conversation-share/conversationShareArtifactDiscovery.ts	583	a8784b7e	// nextOffset === null 表示服务端已到末尾，是正常退出的唯一条件。
+packages/services/src/conversation-share/conversationShareArtifactDiscovery.ts	652	a8784b7e	// row.kind !== "userInput"、附件缺失或长度为 0 时直接跳过，其它行不进入附件改写。
+packages/services/src/conversation-share/conversationShareArtifactDiscovery.ts	830	a8784b7e	// lastRowIndexByProductTurnId 用下标而不是「下一行轮次不同」，因为最后一行没有下一行可比。
+packages/services/src/model-provider/legacyZCodeConfigProviderReader.ts	847	a8784b7e	// disabledReason 顶层优先于扩展，扩展里的旧禁用原因不会盖掉新版解禁。
+packages/services/src/model-provider/legacyZCodeConfigProviderReader.ts	849	a8784b7e	// supportsTools 与 supportsStructuredOutput 都按「顶层 > 扩展」读，两者都缺时由工厂函数按协议推断。
+packages/services/src/model-provider/legacyZCodeConfigProviderReader.ts	873	a8784b7e	// 大小写不同视为同一模型：key 小写去重，models 里保留首个入列的原始拼写。
+packages/services/src/model-provider/legacyZCodeConfigProviderReader.ts	1359	a8784b7e	// 对外契约里 deletedAt 非空即视为不存在：调用方拿到过滤后的列表，不能靠墓碑 ID 做判断。
+packages/services/src/zcode-agent/zcodeAgentConnectionScope.ts	70	a8784b7e	// TRUSTED_UNSUBSCRIBE_ROUTE_FIELD 缺失任何一段就直接返回 null，不退化成用半份身份去匹配订阅。
+packages/services/src/zcode-agent/zcodeAgentConnectionScope.ts	578	a8784b7e	// [资源] stageFrame 在 overflowReason 非空或 invalidatedByRuntimeRestart 时直接返回，不再接收新帧，
+packages/services/src/zcode-agent/zcodeAgentConnectionScope.ts	579	a8784b7e	// 已经溢出或失效的占位再收帧既不生效，也让 pending.stagedBytes 继续增长。
+packages/services/src/zcode-agent/zcodeAgentConnectionScope.ts	923	a8784b7e	// params.clock 时直接走 base.queryConversationCommandsV4，跳过下面的 workspaceKey 绑定逻辑。
+packages/services/src/zcode-agent/zcodeTaskIndexSyncer.ts	402	a8784b7e	// bytes 单项超过 MAX_PENDING_TOPIC_BYTES 就够判恢复，不需要再看帧数与累计字节。
+packages/services/src/zcode-agent/zcodeTaskIndexSyncer.ts	519	a8784b7e	// 去掉 reason 会退回历史缺省值，输入框的轻量操作会再次触发左侧列表整刷。
+packages/services/src/zcode-agent/zcodeTaskIndexSyncer.ts	908	a8784b7e	// discardIndexRecovery 先 clearRecoveryDeadline 再置 null，调用点不必自己清。
+packages/services/src/zcode-agent/zcodeTaskIndexSyncer.ts	1555	a8784b7e	// 回放阶段只保留 subscriptionId === result.ack.subscriptionId 的暂存帧，其它 id 的早到帧丢弃。
+packages/shared/src/conversation-share-content.ts	78	a8784b7e	// safeJson 只保证值有界、结构不限，体积由 SHARE_CONTENT_LIMITS.jsonDepth 的递归预算限制。
+packages/shared/src/conversation-share-content.ts	85	a8784b7e	// depth 超限时在函数入口直接返回 false，标量也不再判，省掉一次类型分支。
+packages/shared/src/conversation-share-content.ts	226	a8784b7e	// conversationShareContentBlockBaseSchema 统一提供 id / type / version / source 行号与时间戳五个锚点。
+packages/shared/src/conversation-share-content.ts	319	a8784b7e	// content_block_versions[type] >= version 才放行，客户端版本更高时不会降级拒绝。
+packages/shared/src/validation.ts	324	a8784b7e	// 两个字段都 optional：新客户端读 initialViewState、老客户端读 mobileViewState，任一缺失也不会报错。
+packages/shared/src/validation.ts	338	a8784b7e	// schema 不做引用完整性校验：activeWorkspaceKey 与 workspaces 的一致性由消费方保证。
+packages/shared/src/validation.ts	408	a8784b7e	//   4) taskHostId 反向约束：它只在 taskId 或 fileTreeTaskId 同时存在时有意义，单独出现即无法定位。
+packages/shared/src/validation.ts	1190	a8784b7e	// 消息体里没有 workspacePath 字段，客户端无法指定落盘目录，因此这条路径不会被绕过。

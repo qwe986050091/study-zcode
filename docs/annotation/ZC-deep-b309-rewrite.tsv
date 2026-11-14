@@ -1,0 +1,37 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	43	a8784b7e479d3a	// 缺省取三秒上限，下界为一毫秒。
+apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	52	a8784b7e479d3a	// 定位只是选择器的薄封装。
+apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	60	a8784b7e479d3a	// 跨平台修饰键统一归一。
+apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	61	a8784b7e479d3a	// 苹果平台用命令键，其余用控制键。
+apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	74	a8784b7e479d3a	// 通过临时会话执行表达式，拿到可序列化结果。
+apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	75	a8784b7e479d3a	// 函数形态先序列化参数再拼接调用。
+apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	76	a8784b7e479d3a	// 异常优先取描述，其次取文本。
+apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	77	a8784b7e479d3a	// 无论成败都断开会话，避免泄漏。
+apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	181	a8784b7e479d3a	// 页面级求值与下载由独立工具承担。
+apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	192	a8784b7e479d3a	// 每个分支只做一次调用并包成结果。
+apps/zcode-cli/packages/adapters/src/browser/playwright-command.ts	193	a8784b7e479d3a	// 异常统一向上抛，由调用方结算。
+apps/zcode-cli/packages/core/src/permission/service.ts	309	a8784b7e479d3a	// [权衡] 预批只省一次确认，不改变副作用范围，因此不额外增加审计负担。
+packages/web-share/src/main.tsx	50	a8784b7e479d3a	// 已存主题优先于默认值。
+packages/web-share/src/main.tsx	51	a8784b7e479d3a	// 存储读取只在启动时发生。
+packages/web-share/src/main.tsx	52	a8784b7e479d3a	// 默认值取浅色主题。
+packages/web-share/src/main.tsx	64	a8784b7e479d3a	// 中英两段回调路径都识别。
+packages/web-share/src/main.tsx	65	a8784b7e479d3a	// 只比对路径名。
+packages/web-share/src/main.tsx	66	a8784b7e479d3a	// 查询参数不参与判断。
+packages/web-share/src/main.tsx	74	a8784b7e479d3a	// 返回地址先做安全解析。
+packages/web-share/src/main.tsx	75	a8784b7e479d3a	// 解析失败回退分享首页。
+packages/web-share/src/main.tsx	76	a8784b7e479d3a	// 成功与重试各自跳转。
+packages/web-share/src/main.tsx	89	a8784b7e479d3a	// 语言同时写入根元素与标题。
+packages/web-share/src/main.tsx	90	a8784b7e479d3a	// 缺少分享码直接报无效契约。
+packages/web-share/src/main.tsx	91	a8784b7e479d3a	// 模拟模式仅在开发态生效。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	34	a8784b7e479d3a	// 仅特定平台做有界重试。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	35	a8784b7e479d3a	// 只对占用与权限错误重试。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	36	a8784b7e479d3a	// 退避间隔随次数线性增长。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	37	a8784b7e479d3a	// 超过上限原样抛出。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	58	a8784b7e479d3a	// 先确保父目录存在。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	59	a8784b7e479d3a	// 临时文件名带进程与随机段。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	60	a8784b7e479d3a	// 写入后原子替换目标。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	61	a8784b7e479d3a	// 收尾删除临时文件。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	78	a8784b7e479d3a	// 初始化只创建三个私有目录。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	79	a8784b7e479d3a	// 更新前先写事务标记。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	80	a8784b7e479d3a	// 恢复时优先回到旧指针。
+packages/zcode-server-cli/src/runtime/releaseManager.ts	81	a8784b7e479d3a	// 执行前重新校验发布目录边界。

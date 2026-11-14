@@ -1,0 +1,41 @@
+file	baseLine	blame	content
+packages/ui/src/lib/codingPlanQuotaResetCoordinator.ts	260	a8784b7e	// 改错后果：打乱 `stop()` 的清理顺序会导致页面隐藏后仍在后台刷新，重挂载时计时器与监听翻倍。
+packages/ui/src/lib/codingPlanQuotaResetCoordinator.ts	274	a8784b7e	// [并发] `startVisiblePolling` 进入即先调 `clearInterval()`，使可见性来回切换收敛为最多一个计时器。
+packages/ui/src/lib/codingPlanQuotaResetCoordinator.ts	279	a8784b7e	// 改错后果：漏掉 `clearInterval()` 会叠加计时器，把 `STATUS_POLL_INTERVAL_MS` 压到秒级并触发后端限流。
+packages/ui/src/lib/codingPlanQuotaResetCoordinator.ts	389	a8784b7e	// 改错后果：`retryIdempotencyKey` 不稳定时，网络抖动会被后端计成多次重置，额度与界面显示不一致。
+packages/ui/src/lib/keyboardShortcuts.ts	9	a8784b7e	// INV-09 数字映射：守住 `1`–`9` 到 `Digit1`–`Digit9` 的构造；改错故障：数字快捷键在布局改写后失效。
+packages/ui/src/lib/keyboardShortcuts.ts	13	a8784b7e	// INV-13 Alt 组合：`altKey` 判定先于裸键匹配；改错故障：Alt 组合被普通组合抢占。
+packages/ui/src/lib/keyboardShortcuts.ts	54	a8784b7e	// `isAppleKeyboardPlatform` 只影响标签与修饰键选择，不改变业务行为。
+packages/ui/src/lib/keyboardShortcuts.ts	126	a8784b7e	// 键名展示：`[` 与 `]` 保持原样，其余走 `toUpperCase()`。
+packages/ui/src/lib/slashCommands.ts	22	a8784b7e	// 前缀命中在 `scoreFuzzyMatch` 里拿最低档分值，同分时名称更短者靠前。
+packages/ui/src/lib/slashCommands.ts	111	a8784b7e	// `score` 相同先比 `command.name.length`，短命令更可能是用户想要的。
+packages/ui/src/lib/slashCommands.ts	112	a8784b7e	// 再按 `localeCompare` 兜底，保证渲染顺序稳定可预期。
+packages/ui/src/lib/slashCommands.ts	113	a8784b7e	// 不要改成按注册顺序：这套 `sort` 比较器是历史行为的一部分。
+packages/ui/src/plugin-ui/adapters/pluginUiPagePlane.ts	42	a8784b7e	// 刻意不用浮层跟随坐标：`root` 与正文同滚动树，滚动天然同步。
+packages/ui/src/plugin-ui/adapters/pluginUiPagePlane.ts	68	a8784b7e	// `disposed` / `loaded` / `pluginLoaded` / `visible` 四个布尔共享一次声明，语义各自独立。
+packages/ui/src/plugin-ui/adapters/pluginUiPagePlane.ts	159	a8784b7e	// 侧边栏是常驻入口，`placement.kind === "sidebar"` 优先；其余取 `at(-1)` 近似最新页面。
+packages/ui/src/plugin-ui/adapters/pluginUiPagePlane.ts	172	a8784b7e	// `chosen` 为空意味着没有前台页面：承载层回到 `parkingRoot()`，隐藏并禁用交互。
+packages/ui/src/remote-connection/RemoteConnectionSelection.tsx	173	a8784b7e	// `matches` 同时比对 `alias` / `host` / `username`，任一命中即保留。
+packages/ui/src/remote-connection/RemoteConnectionSelection.tsx	212	a8784b7e	// [契约] 只接管 `ArrowDown` / `ArrowUp`：其余按键保持浏览器默认，回车与空格仍由聚焦按钮原生触发。
+packages/ui/src/remote-connection/RemoteConnectionSelection.tsx	245	a8784b7e	// 截取 3 条必须由调用方完成，因为 `getRecentRemoteWorkspaceHistory` 不限数量，其他列表可能要不同条数。
+packages/ui/src/remote-connection/RemoteConnectionSelection.tsx	282	a8784b7e	// [权衡] `historyProfile` 回退而不是禁用：代价是可能连到不同地址，但这是产品接受的行为。
+packages/ui/src/root/useRemoteWorkspaceHistory.ts	392	a8784b7e	// 注入后调用方每次传当前的 `runReconnectRemoteWorkspace`，天然规避陈旧闭包。
+packages/ui/src/root/useRemoteWorkspaceHistory.ts	2008	a8784b7e	// 比节流更精确：`refreshQueued` 不丢请求，只合并已经在路上的那一段。
+packages/ui/src/root/useRemoteWorkspaceHistory.ts	2157	a8784b7e	//     好处是首屏立刻有完整侧栏（`workspaceHistory` 直出）：用户点哪条才连哪条，不必等网络。
+packages/ui/src/root/useRemoteWorkspaceHistory.ts	2524	a8784b7e	// 可恢复断连分支：只做软降级，绝不写 `disconnected` 这类终态。
+packages/ui/src/settings-sync/SettingsSyncSelectionStep.tsx	59	a8784b7e	// `agentsWithCategory` 结果为空时仍展示分组，但全选按钮禁用。
+packages/ui/src/settings-sync/SettingsSyncSelectionStep.tsx	155	a8784b7e	// `allSelected` / `partiallySelected` 组成三态：部分选中显示减号。
+packages/ui/src/settings-sync/SettingsSyncSelectionStep.tsx	156	a8784b7e	// 两个布尔都要求 `total > 0`：空分类不显示任何勾。
+packages/ui/src/settings-sync/SettingsSyncSelectionStep.tsx	157	a8784b7e	// `partiallySelected` 显式带 `selectedForCategory < total`，与全选互斥。
+packages/ui/src/settings/model-provider-section/ProviderFormControls.tsx	86	a8784b7e	// `isTesting` 只表达本行探测在途，不上抛父层；跨行并发由各行实例独立承担。
+packages/ui/src/settings/model-provider-section/ProviderFormControls.tsx	170	a8784b7e	// 不要在这里加异步清理：`handleMetadataDialogOpenChange` 必须同步决定开关。
+packages/ui/src/settings/model-provider-section/ProviderFormControls.tsx	309	a8784b7e	// `Loader2Icon` 的 `animate-spin` 不附带延时或清理，卸载即停止。
+packages/ui/src/settings/model-provider-section/ProviderFormControls.tsx	347	a8784b7e	// 删除 / 开关 / 测试按钮按 `onDelete` 等回调是否存在决定是否出现：缺省隐藏而不占位。
+packages/ui/src/settings/model-provider-section/StartPlanBalanceCard.tsx	20	a8784b7e	// 模块职责：`StartPlanBalanceCard` 按额度桶展示余量比例、重置时间与模型名。
+packages/ui/src/settings/model-provider-section/StartPlanBalanceCard.tsx	34	a8784b7e	// `embedded` 模式去掉外框与内边距，嵌进套餐详情时不出现双层卡片。
+packages/ui/src/settings/model-provider-section/StartPlanBalanceCard.tsx	67	a8784b7e	// 过期标签：只在 `expireTime` 非空时生成，纯空白与空串同样按缺失处理。
+packages/ui/src/settings/model-provider-section/StartPlanBalanceCard.tsx	119	a8784b7e	// `renewTimeLabel` 可为空：为空时不渲染占位节点。
+packages/ui/src/settings/model-provider-section/useCodingPlanProducts.ts	74	a8784b7e	// [权衡] `CODING_PLAN_OAUTH_REQUIRED_ERROR` 保持模块内可见即可，不必提升为共享常量表。
+packages/ui/src/settings/model-provider-section/useCodingPlanProducts.ts	105	a8784b7e	// [权衡] `getServiceCache` 的桶数以活跃服务数为上界（通常 1–2 个），不需要淘汰策略。
+packages/ui/src/settings/model-provider-section/useCodingPlanProducts.ts	130	a8784b7e	// [契约] `supportedProvider` 只做能力判定、不发请求，所以可以在渲染期同步计算。
+packages/ui/src/settings/model-provider-section/useCodingPlanProducts.ts	649	a8784b7e	// [权衡] `normalizeErrorMessage` 不过滤敏感信息，调用方只展示给开发者或已确认安全的场景。

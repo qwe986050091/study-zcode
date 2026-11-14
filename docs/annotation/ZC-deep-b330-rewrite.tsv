@@ -1,0 +1,41 @@
+file	baseLine	blame	content
+packages/ui/src/v4/MarkdownSelectionTooltip.tsx	41	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// inspect 的选区检查只在 rootRef 根节点内。
+packages/ui/src/v4/MarkdownSelectionTooltip.tsx	42	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// SelectionActionMenu 的 top 与 center 来自 range.getBoundingClientRect。
+packages/ui/src/v4/MarkdownSelectionTooltip.tsx	43	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 侧聊可用性经 useSyncExternalStore 另取外部状态。
+packages/ui/src/v4/MarkdownSelectionTooltip.tsx	60	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// selection.isCollapsed 为真或 rangeCount≠1 时直接放弃。
+packages/ui/src/v4/MarkdownSelectionTooltip.tsx	61	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// hasExcludedConversationSelectionEndpoint 命中任一端点时放弃。
+packages/ui/src/v4/MarkdownSelectionTooltip.tsx	62	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// selection.toString 为空或 rect 宽高皆零时放弃。
+packages/ui/src/v4/MarkdownSelectionTooltip.tsx	83	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// useTextSelection 经 observeSelectionChange 订阅选区变化。
+packages/ui/src/v4/MarkdownSelectionTooltip.tsx	110	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 超长选区下 SelectionActionMenu 只保留加入任务一项。
+packages/ui/src/v4/MarkdownSelectionTooltip.tsx	111	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// sideState 为 unavailable 时给出原因文案。
+packages/ui/src/v4/MarkdownSelectionTooltip.tsx	112	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onOpen 成功返回后才调 close 收起菜单。
+packages/ui/src/v4/composer/PptxElementReferenceChip.tsx	30	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// getReferenceText 优先取 reference.selectedText。
+packages/ui/src/v4/composer/PptxElementReferenceChip.tsx	31	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 其次取 reference.text。
+packages/ui/src/v4/composer/PptxElementReferenceChip.tsx	32	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 再回退到 reference.nodeName 与 reference.nodeType。
+packages/ui/src/v4/composer/PptxElementReferenceChip.tsx	33	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// getReferenceText 的四级回退经逻辑或串联，保证返回非空。
+packages/ui/src/v4/composer/PptxElementReferenceChip.tsx	38	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// references.length 为 0 时直接返回 null。
+packages/ui/src/v4/composer/PptxElementReferenceChip.tsx	39	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// label 按 references.length 取 one 或 many 两条文案。
+packages/ui/src/v4/composer/PptxElementReferenceChip.tsx	40	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// removeLabel 单独经 intl.formatMessage 格式化。
+packages/ui/src/v4/composer/PptxElementReferenceChip.tsx	65	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// ContextAttachmentPill 承接 icon 与 onRemoveAll。
+packages/ui/src/v4/composer/PptxElementReferenceChip.tsx	66	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 逐条 map 出 reference 对应的引用行。
+packages/ui/src/v4/composer/PptxElementReferenceChip.tsx	67	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onOpen 存在时才把引用行渲染成按钮。
+packages/web/src/web-remote-control/adapters/payloadRequester.ts	46	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 只有 relay-unavailable 与 desktop-bootstrap-timeout 两种 reason 可恢复。
+packages/web/src/web-remote-control/adapters/payloadRequester.ts	47	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// recoverTimeout 显式为 true 时才恢复超时。
+packages/web/src/web-remote-control/adapters/payloadRequester.ts	48	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 其余 failure.reason 一律原样抛出。
+packages/web/src/web-remote-control/adapters/payloadRequester.ts	60	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// recoveryPromise 只建一次，由 finally 清空。
+packages/web/src/web-remote-control/adapters/payloadRequester.ts	61	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 并发请求共用 recoveryPromise 这一次恢复。
+packages/web/src/web-remote-control/adapters/payloadRequester.ts	62	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// finally 收尾时把 recoveryPromise 置为 undefined。
+packages/web/src/web-remote-control/adapters/payloadRequester.ts	63	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 恢复失败后原 sender 请求重放一次。
+packages/web/src/web-remote-control/adapters/payloadRequester.ts	94	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// pending 挂起表以 requestId 为键。
+packages/web/src/web-remote-control/adapters/payloadRequester.ts	95	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// defaultTimeoutMs 默认 10_000 毫秒。
+packages/web/src/web-remote-control/adapters/payloadRequester.ts	96	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 返回值只含 request 与 consume 等方法，另提供 reject 与 dispose。
+packages/zcode-server-cli/src/server-core/taskActivityTracker.ts	32	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// TaskActivityTracker 对外只暴露三项能力。
+packages/zcode-server-cli/src/server-core/taskActivityTracker.ts	33	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onDidChangeRunningTaskCount 的 Event 只携带 number。
+packages/zcode-server-cli/src/server-core/taskActivityTracker.ts	34	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// readRunningTasks 返回 SourceServerRunningTask 快照。
+packages/zcode-server-cli/src/server-core/taskActivityTracker.ts	57	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// changed 发射器只在数量变化时 fire。
+packages/zcode-server-cli/src/server-core/taskActivityTracker.ts	58	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// workspaces 映射以 workspaceKey 索引。
+packages/zcode-server-cli/src/server-core/taskActivityTracker.ts	59	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 计数由 activeSessionIds 汇总得出。
+packages/zcode-server-cli/src/server-core/taskActivityTracker.ts	60	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// disposed 标记只置一次，之后事件全部忽略。
+packages/zcode-server-cli/src/server-core/taskActivityTracker.ts	100	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// disposed 为真时 acceptLifecycle 直接返回。
+packages/zcode-server-cli/src/server-core/taskActivityTracker.ts	101	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// state 为 unavailable 时按 runtimeIdentity 移除。
+packages/zcode-server-cli/src/server-core/taskActivityTracker.ts	102	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 在线则先 dispose 旧 telemetry 再登记。

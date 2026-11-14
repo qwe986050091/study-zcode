@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/services/src/zcode-agent/agentStderrCollector.ts	34	a8784b7e	// [契约] waitForDrain 只收紧死线：新 timeoutMs 更早则重置定时器，更晚则保留原计划；绝不延长既有等待。
+packages/services/src/zcode-agent/groupAttachmentUpload.ts	16	a8784b7e	// [边界] 桌面路径不得跨端传递：字节必须经 uploadBotGroupAttachments 推过协议，引用只留在群队列。
+packages/services/src/zcode-agent/localRuntimeNetworkCapture.ts	58	a8784b7e	// [边界] onNotification 只转发 processNetworkRequests：其余通知直接丢弃，避免 capture 承担无关流量。
+packages/services/src/zcode-agent/modelTrajectory.ts	441	a8784b7e	// [契约] 未知分片落成 {kind:"unknown", raw} 并保留 raw：新分片上线后读取侧无需改动即可排查。
+packages/services/src/zcode-agent/topicResourceBridge.ts	87	a8784b7e	// [顺序] dispose 先打断在途请求再清表：迟到的 finally 只会删已不存在的键，不影响新请求。
+packages/services/src/zcode-agent/zcodeAgentPluginParams.ts	57	a8784b7e	// [契约] removePluginMarketplace 只删索引与来源：已安装记录可能指向悬空市场，读取侧必须容忍。
+packages/services/src/zcode-agent/zcodeProtocolClient.ts	103	a8784b7e	// [契约] pendingDrained 只统计业务请求：观测类请求完成后不得触发，否则会给被观察进程续命。
+packages/services/src/zcode-agent/zcodeProtocolTransport.ts	14	a8784b7e	// [边界] ZCodeProtocolTransport 只收发帧与关闭通知：业务语义解析全部留在上层，实现方不得介入。
+packages/services/src/zcode-agent/zcodeStdioTapDevConfig.ts	52	a8784b7e	// [契约] readZCodeStdioTapDevState 同时给 enabled 与 visible：渲染开关的判定留在本函数，调用方不重复判断环境。
+packages/services/src/zcode-agent/zcodeStdioTransport.ts	107	a8784b7e	// [失败路径] send 写前查四项（释放/关闭/kill/stdin 可写）：任一成立即抛错，上层按错误码重连或回收。
+packages/services/src/zcode-agent/zcodeStorageStartupGate.ts	14	a8784b7e	// [契约] ZCodeStorageStartupGate 只消费当前连接的合法控制帧：一个 protocol client 对应一个进程代次。
+packages/shared/src/bots.ts	812	a8784b7e	// [契约] BOT_TASK_BROADCAST_CHANNEL 只许追加新频道：替换会让已连接的订阅方静默收不到事件。
+packages/shared/src/forceUpdate.ts	32	a8784b7e	// [边界] parseSemver 只去空白与 v 前缀：段数不得在解析期补全，否则会打乱后续三条正则的先后顺序。
+packages/shared/src/permission-request-preview.ts	79	a8784b7e	// [契约] isRecord 排除 null 与数组：所有递归入口先判型，作为环检测之外的第二道防线。
+packages/shared/src/project-access-token-client.ts	355	a8784b7e	// [权衡] defaultProject 只是启发式：名称含默认机构与默认项目优先，取不到再退回首个可用组织与项目。
+packages/shared/src/session-debug.ts	128	a8784b7e	// [契约] tps 不做四舍五入：毫秒换算后原样返回，精度与舍入全部交给展示层。
+packages/shared/src/source-server/contracts.ts	82	a8784b7e	// [边界] passwordCredentialKey 只校验非空：凭据是否存在留给运行时，解析期没有凭据库上下文。
+packages/shared/src/web-remote-control-rpc-transport.ts	263	a8784b7e	// [契约] boundedPositive 对过大值夹到上限：兼容历史调用方传极大数，不改变协议语义。
+packages/shared/src/zcode-protocol-v4/rows.ts	263	a8784b7e	// [契约] conversationArtifactTypeSchema 是闭集：新增产物类型必须同步 share 投影，否则透传本地路径。
+packages/shared/src/zcode-protocol-v4/workspace-hook-review.ts	237	a8784b7e	// [权衡] presentWorkspaceHookReviewRequestSchema 的分区与作用域写成字面量：换取跳转确定性，代价是新增分区必须改协议。

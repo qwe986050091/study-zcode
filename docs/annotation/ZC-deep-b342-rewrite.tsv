@@ -1,0 +1,29 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/core/src/session-context/topic-archive.ts	43	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// readTopicArchive 纯读，只消费 runtime 已保存的输入事实。
+apps/zcode-cli/packages/core/src/session-context/topic-archive.ts	58	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// sourceSchema.safeParse 失败即丢弃该来源。
+apps/zcode-cli/packages/core/src/session-context/topic-archive.ts	64	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// sources 的最后一项决定本次检索作用域。
+apps/zcode-cli/packages/core/src/session-context/topic-archive.ts	66	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 按 record.id 去重，Map 后写覆盖先写。
+apps/zcode-cli/packages/core/src/session-context/topic-archive.ts	86	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// toLocaleLowerCase 归一后匹配，降低地区差异。
+apps/zcode-cli/packages/core/src/session-context/topic-archive.ts	92	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// budget 取 query.maxTokens 与硬上限 12000 的较小值。
+apps/zcode-cli/packages/core/src/session-context/topic-archive.ts	117	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// next 游标只推进 selected 的条数。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-model-content.ts	68	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// formatPersistedBashModelContent 只预览 serializer 已写入的 content。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-model-content.ts	88	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// formatProviderErrorContent 保留退出码与三段输出。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-model-content.ts	89	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// staleReadFileStateHint 等提示段只在存在时参与拼接。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-model-content.ts	90	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 空段经 filter(Boolean) 后不留下分隔空行。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-model-content.ts	148	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// stderr 先 trim 收敛空白。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-model-content.ts	149	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// interrupted 时补上明确的 error 标记。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-model-content.ts	150	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 有正文时标记前置换行，避免与 stderr 粘连。
+packages/ui/src/app-shell/WorkspaceShellLayout.tsx	796	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// rememberExpandedSize 为 true：浏览器面板拉宽后关闭再打开不回弹到默认值。
+packages/ui/src/app-shell/WorkspaceShellLayout.tsx	840	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// collapseSidebarIfStillNarrow 先收右侧面板，下一帧再量宽度决定是否收侧栏。
+packages/ui/src/app-shell/WorkspaceShellLayout.tsx	2846	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// V4SplitPaneEntryProvider 只在本地桌面布局存在目标容器时启用。
+packages/ui/src/app-shell/WorkspaceShellLayout.tsx	2944	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// floatingAnchor 持久化到偏好：刷新后浮窗回到上次拖到的角落，
+packages/ui/src/app-shell/WorkspaceShellLayout.tsx	2945	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// floatingAnchor 不再每次重新居中遮挡内容。
+packages/ui/src/app-shell/WorkspaceShellLayout.tsx	2986	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isTerminalVisible 时对话列退化为“上半部分”，需要下圆角与下边框衔接终端；
+packages/ui/src/app-shell/WorkspaceShellLayout.tsx	3327	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isSidePaneVisible 时终端与浏览器并排，需要独立的圆角边框；
+packages/ui/src/plugin-ui/components/PluginUiLauncherItems.tsx	80	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// error 只以一次 toast 暴露，不阻断后续列表渲染。
+packages/ui/src/plugin-ui/components/PluginUiLauncherItems.tsx	88	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 骨架用 aria-hidden 且无事件处理器，点击不穿透到真实行。
+packages/ui/src/plugin-ui/components/PluginUiLauncherItems.tsx	129	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// sessionId 为空或 entries 为空共用一个出口，都不产出可点击入口。
+packages/ui/src/plugin-ui/components/PluginUiLauncherItems.tsx	143	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// uiSurfaces 可能整体缺失，先按 surfaceId 精确查找再决定标题。
+packages/ui/src/plugin-ui/components/PluginUiLauncherItems.tsx	163	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// open 分发只此一处，菜单与网格分支都复用它。
+packages/ui/src/plugin-ui/components/PluginUiLauncherItems.tsx	169	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 菜单分支在未就绪时还需 event.preventDefault 阻止默认收起。
+packages/ui/src/plugin-ui/components/PluginUiLauncherItems.tsx	170	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 未安装或未启用时不要打开面板，只调用 prepare。

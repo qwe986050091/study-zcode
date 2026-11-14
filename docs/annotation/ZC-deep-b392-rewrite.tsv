@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/core/src/mcp/image-normalization.ts	338	a8784b7e	// [权衡] 预算在调用前一次讲清而不是压完再量：端口可同时收敛 base64 体积与维度，压完才发现超标的路径在下方兜底为 undefined。
+apps/zcode-cli/packages/core/src/runtime/methods/index.ts	366	a8784b7e	// [契约] ensureContextInitialized 与 refreshMcpToolsIfChanged 都绑在 AgentRuntime 原型上：绑定名必须与 turn loop 调用点逐字一致，改名只能两侧同批改。
+apps/zcode-cli/packages/core/src/runtime/methods/rewind-message.ts	281	a8784b7e	// [权衡] 不用内存历史补位：投影裁剪后的内存副本与 sessionStore 的持久事实可能分叉，回退范围必须以 store 为准。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-command-parser.ts	145	a8784b7e	// [契约] isBashCommandPermissionSafe 回答的是「能否进入前缀匹配」而不是「命令本身安全」，调用方不能把 true 读成放行。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-read-file-sources.ts	116	a8784b7e	// [权衡] SIMPLE_IGNORED_COMMAND_RE 用宽松前缀匹配注册名：宁可把带参数的标签行也认成可忽略，也不漏判一次真实读取。
+apps/zcode-cli/packages/core/src/tool/handlers/bash-readonly-policy-callbacks.ts	432	a8784b7e	// [契约] 判定覆盖三类写法；独立选项走 arg === flag，等号与粘连分别走 startsWith(flag + "=") 与 arg.startsWith(flag)。
+apps/zcode-cli/packages/core/src/tool/handlers/read.ts	678	a8784b7e	// Math.min 的三项对应删除 current[rightIndex - 1] + 1、插入 previous[rightIndex] + 1 与替换 previous[rightIndex - 1] + cost。
+apps/zcode-cli/packages/core/src/workflow/scheduler/collection-planner.ts	147	a8784b7e	// [契约] shouldDeferInitialExpansion 只决定首轮是否空转一次：frontier>0 与三条零观测条件同时成立才延迟，任一为 false 立刻放行。
+apps/zcode-cli/packages/debug/src/shared.ts	320	a8784b7e	// [契约] NetworkRequestAttribution 四键全可选：取不到就省略键而不是填空串，否则 trace 视图会按假归因并入错误链路。
+apps/zcode-cli/packages/dynamic-workflow/src/schema/emit.ts	130	a8784b7e	// [契约] 按 type.flags 位标志分发：any 与 never 先抛 SchemaRejection 并带 path 定位，unknown 放行成空 schema。
+apps/zcode-cli/packages/dynamic-workflow/src/testing/journal-contract-runs.ts	40	a8784b7e	// [权衡] 只断言 toThrow 不约束错误类型：SQLite 与内存实现抛出的类不同，锁死类型会把实现差异变成测试失败。
+apps/zcode-cli/packages/ios-simulator-plugin/src/mcp/server.ts	52	a8784b7e	// device 与 runtime 都按名称片段交给 provider 做包含匹配，只有 udid 是精确键；省略三者时才落到已启动或默认 iPhone。
+apps/zcode-cli/packages/node-repl-host/src/cua-bridge.ts	69	a8784b7e	// [顺序] assertAvailable 先跑 assertActive 比对 generation：内核重置后旧绑定立即抛 stale，作用域与 broker 检查都不会执行。
+apps/zcode-cli/packages/telemetry/src/agent-trace-runtime.ts	445	a8784b7e	// [契约] executionKind !== "foreground" 时 linkedRoot 为真：span 以 ROOT_CONTEXT 起根，causation 只落成 link 不作父上下文。
+apps/zcode-cli/packages/telemetry/src/bootstrap.ts	59	a8784b7e	// [权衡] noopExecution 是进程级单例：禁用与无 Owner 路径共用同一个空实现，调用点省掉判空。
+apps/zcode-cli/packages/tui/src/app-tool-transcript.ts	88	a8784b7e	// [边界] toolNameFromPayload 不校验名称合法性：非法名只污染展示标题，卡片仍按 toolCallId 定位与更新。
+packages/client/src/webRemoteControlAcknowledgedRelayProtocol.ts	113	a8784b7e	// [契约] 构造函数只归一 identity 并解析 limits 与绑定时钟，既不发送任何帧也不置 degraded 标志。
+packages/client/src/websocket.ts	86	a8784b7e	// [边界] connectViaWebSocket 不做重连：ws 关闭后只回调 onClose，退避与重建连接由上层控制器负责。
+packages/desktop/scripts/gen-ui-fixture/file-summary.tsx	25	a8784b7e	// [边界] FileSummaryFixture 仅供 gen-ui-fixture 截图与端到端用例使用，入口不在生产构建里。
+packages/desktop/scripts/gen-ui-fixture/main.ts	529	a8784b7e	// [失败路径] catch 块必须接住就绪链抛出的任何异常：内部只写 stderr 并截 failure.png 然后 app.exit(1)，不得再抛新错覆盖原始栈。

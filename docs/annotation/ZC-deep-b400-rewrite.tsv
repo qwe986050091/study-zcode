@@ -1,0 +1,20 @@
+file	baseLine	blame	content
+packages/ui/src/settings/model-provider-section/ModelConfigHelp.tsx	83	a8784b7e	// `onMouseDown` 只拦焦点转移，不拦 click：按钮获得焦点会让相邻输入先失焦。
+packages/ui/src/settings/model-provider-section/Navigation.tsx	308	a8784b7e	// `lg` 以下容器改为纵向居中并只留图标，卡片间距同步收窄。
+packages/ui/src/settings/model-provider-section/ProviderFamilyModeHeader.tsx	329	a8784b7e	// 【设计权衡】`normalizeLabel` 只做首尾去空白，内部空白原样保留以尊重团队命名。
+packages/ui/src/settings/model-provider-section/ProviderModelMetadata.ts	31	a8784b7e	// `ProviderModelMetadata` 的导出面只有两个函数与两个类型，其余均为内部实现。
+packages/ui/src/settings/ModelProviderSection.tsx	1510	a8784b7e	// `authByProvider` 整表下传而不只传当前项，详情页可能同时展示多个套餐卡。
+packages/ui/src/settings/PluginStorePage.tsx	220	a8784b7e	// [契约] `marketSourceDialogOpen` 由页面持有，弹窗只受控并在关闭时回报。
+packages/ui/src/settings/saved-workflows/savedWorkflowArgsForm.ts	61	a8784b7e	// `fields` 遍历声明而不是实参：表单形状只由 `parseArgsSchema` 决定。
+packages/ui/src/settings/saved-workflows/SavedWorkflowCard.tsx	92	a8784b7e	// `updatedAt` 而非 `createdAt`：徽标回答的是工作流上次跑了多久以前。
+packages/ui/src/settings/saved-workflows/SavedWorkflowDetailView.tsx	284	a8784b7e	// [契约] `onMetaSaved` 不触发重新拉取：服务端值未变，重取只会白跑一次请求。
+packages/ui/src/settings/saved-workflows/SavedWorkflowGlobalGroup.tsx	20	a8784b7e	// 模块职责：`GlobalWorkflowGroup` 渲染设置页固定的「全局」组，并承载列表与运行弹窗。
+packages/ui/src/settings/settingsPageConfig.ts	95	a8784b7e	// `SETTINGS_PAGE_SECTIONS` 保持全量清单：平台与灰度门禁都在消费时过滤，不在源头裁剪。
+packages/ui/src/settings/SkillsSection.tsx	625	a8784b7e	// `deleteSkill` 流程：作用域守卫 → 确认弹窗 → 远端删除 → 草稿失效 → 关详情 → 重载。
+packages/ui/src/store/hooksStore.ts	337	a8784b7e	// `upsertHook` 命中后只替换命中项并保持其余引用，减少无关行重渲染。
+packages/ui/src/store/mcpStore.ts	769	a8784b7e	// `presetServers` 只在用户没删过且尚不存在时注入，避免复活已删条目。
+packages/ui/src/store/pluginManagementStoreLoading.ts	65	a8784b7e	// [事务] `globalLoadingEpoch` 只增不减，唯一作用是给在途查询标注失效时间。
+packages/ui/src/store/whiteboardStore.ts	191	a8784b7e	// `commitStroke` 追加并清空 `redoStack`；撤销与重做只在两条栈之间搬移最后一项。
+packages/ui/src/store/zcodeSessionStoreTaskSlice.ts	383	a8784b7e	// `persistTaskState` 写库前先归一，后续比较与存储都使用同一份归一值。
+packages/zcode-server-cli/src/runtime/componentCache.ts	233	a8784b7e	// `autoClose: false` 把关闭时机交给显式 `close()`，不要改回自动关闭。
+packages/zcode-server-cli/src/runtime/updateCommand.ts	254	a8784b7e	// `readInstalledVersion` 同时兜住文件被外部清理或并发覆盖，缺失时返回 undefined。

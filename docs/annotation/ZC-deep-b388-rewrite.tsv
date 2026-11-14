@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/ui/src/resource-manager/storage/useStorageUsage.ts	85	a8784b7e	// 卸载后与 `jobId` 不匹配的尾包都在 `disposed` 判断处丢弃。
+packages/ui/src/resource-manager/storage/useStorageUsage.ts	101	a8784b7e	// `start()` 在 effect 建立时立即执行，不推迟到首个定时回调。
+packages/ui/src/root/useRootPlatformEffects.ts	632	a8784b7e	// [契约] 收口只在 `finally` 发生：退订并清空 `activeIntent` 与操作号，最后自增版本号唤醒下一轮。
+packages/ui/src/root/useRootPlatformEffects.ts	752	a8784b7e	// [资源] `setApplicationLocale` 不持有订阅，无需额外释放；仅靠 `disposed` 判有效性。
+packages/ui/src/settings/automationAgentConfigOptions.ts	37	a8784b7e	// `AUTOMATION_DEFAULT_MODE` 是表单 mode 的兜底值，新建与缺省编辑态共用。
+packages/ui/src/settings/automationAgentConfigOptions.ts	92	a8784b7e	// `modelValue` 无 `/` 时 `separator` 为 -1，整串按 `qualifiedModelId` 处理。
+packages/ui/src/settings/AutomationEditView.tsx	3548	a8784b7e	// 两个回调都缺时 `hasActions` 为假，渲染空菜单会多出一个空入口。
+packages/ui/src/settings/AutomationEditView.tsx	3549	a8784b7e	// 空 `DropdownMenu` 展开后 0 项，比不显示这一列更令人困惑。
+packages/ui/src/settings/ExternalAgentImportDialog.tsx	1358	a8784b7e	// 抽成 `ImportStat` 而非内联 3 份，让「数字 + 标签」的字重与间距只维护一处。
+packages/ui/src/settings/ExternalAgentImportDialog.tsx	1721	a8784b7e	// 左侧复选框只切换 `importableResourceKeys` 整组勾选，文字区只切换 `expanded`。
+packages/ui/src/settings/HooksList.tsx	96	a8784b7e	// [契约] 单次遍历 `pluginHooks` 填桶，循环内不排序也不查找；复杂度 O(n)。
+packages/ui/src/settings/HooksList.tsx	253	a8784b7e	// [契约] `PluginHookRow` 的三类来源共用同一骨架：图标 / 内容 / 动作 3 列，窄屏收敛为 2 列。
+packages/ui/src/settings/McpSettingsSection.tsx	593	a8784b7e	// 抽成 `shouldShowPluginMcpServersInMcpSettings` 而非内联取反，新增上下文时只改 1 处。
+packages/ui/src/settings/McpSettingsSection.tsx	918	a8784b7e	// `onEditorOpenChange` 同步 `isFormView`，父级隐藏列表标题与搜索框。
+packages/ui/src/settings/model-provider-section/CodingPlanStatusMeta.tsx	90	a8784b7e	// 管理项前的分隔符只看 `hasMetaContent` 与管理标签，条件比实际渲染略宽。
+packages/ui/src/settings/model-provider-section/CodingPlanStatusMeta.tsx	294	a8784b7e	// `formatStartPlanEffectiveDate` 对 2 天内用相对日期加时分，更远退化为月日加时分。
+packages/ui/src/settings/model-provider-section/ProviderModelModalityOptions.tsx	45	a8784b7e	// `disabled` 时仍保留完整不透明度，锁定状态改由图标表达而不是变淡。
+packages/ui/src/settings/model-provider-section/ProviderModelModalityOptions.tsx	131	a8784b7e	// `disabled` 时不传 `onToggle`，从渲染层杜绝被点开的可能。
+packages/ui/src/settings/model-provider-section/useModelProviderNavigation.ts	309	a8784b7e	// `groups` 保留空数组项：分组标题本身是导航结构的一部分。
+packages/ui/src/settings/model-provider-section/useModelProviderNavigation.ts	396	a8784b7e	// `navigationUnavailable` 只驱动提示展示，不阻止侧栏渲染；不可拿来做早退。

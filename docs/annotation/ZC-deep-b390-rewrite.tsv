@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/ui/src/WebRemoteControlMobileShell.tsx	135	a8784b7e	// [契约] 宿主传入的传输态优先于全局投影；两条来源在 `useWebRemoteControlTerminalTransportState` 内归一，外壳不再二次加工。
+packages/ui/src/WebRemoteControlMobileShell.tsx	194	a8784b7e	// [事件] `popstate` 是前进与后退的唯一入口，浏览器手势与按钮都经 `handlePopState` 重投影 `currentPage`。
+packages/ui/src/WelcomeScreen.tsx	108	a8784b7e	// [状态机] `LoginPanel` 只渲染 `status` 对应的一态；新分支先归入 idle / waiting / failed 之一，不往渠道列表同一屏塞错误提示。
+packages/ui/src/WelcomeScreen.tsx	634	a8784b7e	// [契约] `getProviderPriority` 只排展示序：z.ai 取 0 / BigModel 取 1 / 其余 `10 + provider.order`，首屏前两位不随渠道增减漂移。
+packages/ui/src/WindowsCaptionMenuButton.tsx	88	a8784b7e	// 【契约】新建与打开工作区的标签都来自 `useShortcutCommandLabel`；键位改绑后菜单文案同步变化，无需另存文案表。
+packages/ui/src/WindowsCaptionMenuButton.tsx	224	a8784b7e	// 【生命周期】勾选态只存在于 `DropdownMenu` 子树；关闭即卸载，重新打开由 `syncStdioTapDevState` 拉新快照而不留副本。
+packages/ui/src/WorkspaceHeader.tsx	47	a8784b7e	// [契约] `resolveTopOverlayLeadingPaddingClass` 只回答一件事：侧栏收起后顶栏要给左上角浮层让出多少左边距，其余属性不归函数管。
+packages/ui/src/WorkspaceHeader.tsx	200	a8784b7e	// [渲染] variant 为 draft 时 `border-transparent` 去掉底边，与下方浮动输入区连成一片；常规 variant 保留 `border-border/50` 的分隔。
+packages/web/src/auth/webAuthService.ts	70	a8784b7e	// [失败路径] crypto 两条路径都不可用时 `createBrowserNonce` 抛错而不退回 Math.random：nonce 参与 CSRF 比对，弱随机等于没有防护。
+packages/web/src/auth/webAuthService.ts	113	a8784b7e	// [契约] 四个依赖全部可选，缺省常量走真实浏览器实现；注入只替换 runtime / config / provider / repo 而不改变分支。
+packages/web/src/web-remote-control/adapters/webRemoteControlTransport.ts	79	a8784b7e	// [状态] `wasPaired` 只描述本代 socket：新一轮建连的计时器回调重置为 false，表示重新从 waiting 开始配对。
+packages/web/src/web-remote-control/adapters/webRemoteControlTransport.ts	429	a8784b7e	// [契约] `parseRelayMessage` 统一解码 `event.data` 的 Blob / ArrayBuffer / string 三种形态；调用方不按浏览器分支。
+packages/web/src/web-remote-control/contracts/transport.ts	45	a8784b7e	// [判据] `visibilityState` 与 `hiddenDurationMs` 一起进入 socket-close：页面隐藏期间的断线归为后台回收，前台断线才算异常掉线。
+packages/web/src/web-remote-control/contracts/transport.ts	106	a8784b7e	// [分层] `onPayload` / `onStateChange` 等钩子由宿主实现；传输层只回调而不碰 document 与路由，便于脱离页面复用。
+packages/zcode-server-cli/src/cli.ts	147	a8784b7e	// [契约] `runServerCli` 是唯一对外入口；命令分派与错误收敛都在函数内完成，退出码由函数返回供测试断言。
+packages/zcode-server-cli/src/cli.ts	579	a8784b7e	// [权衡] `APPLY_UPDATE_TIMEOUT_MS` 按最坏回滚路径取上界：超时误报会让 CLI 提前判失败，偏长只增加用户等待。
+packages/zcode-server-cli/src/packaging/stageCli.ts	41	a8784b7e	// [契约] 日志前缀固定为 `[stage]`；打包输出与构建日志共用一条流，靠前缀区分来源。
+packages/zcode-server-cli/src/packaging/stageCli.ts	87	a8784b7e	// [契约] fetch 使用 `redirect: "follow"` 跟完镜像跳转；`downloadFile` 的调用方拿到的仍是最终文件。
+packages/zcode-server-cli/src/runtime/updateHandoff.ts	36	a8784b7e	// [判据] `DAEMON_START_TIMEOUT_MS` 只兜底拉起失败；就绪与否由随后 `readRuntimeIdentity` 的身份校验决定，超时本身不构成失败证据。
+packages/zcode-server-cli/src/runtime/updateHandoff.ts	77	a8784b7e	// [分工] `runDaemonLauncher` 只负责 spawn 与收集输出，不等待就绪；服务是否可用由退出码与 `readRuntimeIdentity` 判定。

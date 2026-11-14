@@ -1,0 +1,31 @@
+file	baseLine	blame	content
+packages/ui/src/settings/model-provider-section/StatusCards.tsx	107	a8784b7e	// 改错故障：`CodingPlanStatusPanel` 把已用比例当剩余展示，用户会以为额度快用完。
+packages/ui/src/settings/model-provider-section/StatusCards.tsx	404	a8784b7e	// `PlanStatusCardSurface` 把十几处阈值比较抽成常量，分支条件读起来接近业务描述。
+packages/ui/src/settings/model-provider-section/StatusCards.tsx	648	a8784b7e	// 解析函数先丢弃 `plan` 为空的额度桶，组件不再做第二次过滤。
+packages/ui/src/settings/model-provider-section/useCodingPlanEntitlements.ts	67	a8784b7e	// `resolveCodingPlanProviderFingerprintAutoRefresh` 记指纹而非布尔值，指纹变化后仍能触发。
+packages/ui/src/settings/model-provider-section/useCodingPlanEntitlements.ts	74	a8784b7e	// 抑制期记下的 `lastFingerprint` 再挡一次：随后清空记忆，同指纹下次放行。
+packages/ui/src/settings/model-provider-section/useCodingPlanEntitlements.ts	259	a8784b7e	// 刷新入口汇总两个家族共四个查询：全部并行发出，一次 `Promise.all` 收口。
+packages/ui/src/settings/PluginStoreDetailView.tsx	391	a8784b7e	// [资源] 按钮内图片走静态导入 `EXAMPLE_PROMPT_DOCUMENT_ICON_URLS`，不产生额外网络请求。
+packages/ui/src/settings/PluginStoreDetailView.tsx	530	a8784b7e	// [权衡] `PluginStoreDetailView` 用 `??` 而非 `||`：空串是否有值交给下游判定。
+packages/ui/src/settings/PluginStoreDetailView.tsx	675	a8784b7e	// [契约] 高级区是受控外壳：内容由父级注入，`PluginStoreDetailView` 不取数。
+packages/ui/src/settings/saved-workflows/SavedWorkflowDetailHeader.tsx	99	a8784b7e	// `busy` 为真或条目缺失时，运行按钮禁用。
+packages/ui/src/settings/saved-workflows/SavedWorkflowDetailHeader.tsx	114	a8784b7e	// 菜单只受 `busy` 约束，浏览类动作不受影响。
+packages/ui/src/settings/saved-workflows/SavedWorkflowDetailHeader.tsx	143	a8784b7e	// 测试 id 带工作流名 `workflowName`，用例可定位到具体条目。
+packages/ui/src/settings/saved-workflows/SavedWorkflowLaunchDialog.tsx	20	a8784b7e	// 模块职责：`SavedWorkflowLaunchDialog` 收集声明实参、校验后把启动请求交给上层。
+packages/ui/src/settings/saved-workflows/SavedWorkflowLaunchDialog.tsx	74	a8784b7e	// 改 `workflowArgInputId` 前缀时要同步检查测试定位与截图基线。
+packages/ui/src/settings/saved-workflows/SavedWorkflowLaunchDialog.tsx	226	a8784b7e	// 校验通过后把入口与运行目标交给上层，实参随 `args` 一起带出。
+packages/ui/src/settings/WorkspaceFileSearchSection.tsx	56	a8784b7e	// 本层不取数：读取与写盘全部由 `ActiveWorkspaceFileSearchEditor` 负责。
+packages/ui/src/settings/WorkspaceFileSearchSection.tsx	144	a8784b7e	// 结果只写进草稿 `draft`：已加载内容不变，改动仍可放弃。
+packages/ui/src/settings/WorkspaceFileSearchSection.tsx	232	a8784b7e	// 远程 workspace 的规则文件在远端机器上：本地打不开，按钮不展示。
+packages/ui/src/store/automationManagementStore.ts	168	a8784b7e	// `toMessage` 是纯函数，可被所有 `catch` 分支复用。
+packages/ui/src/store/automationManagementStore.ts	266	a8784b7e	// [权衡] `automationManagementStore` 不拆多切片：方法共享序号与锁，拆开只增加协调成本。
+packages/ui/src/store/automationManagementStore.ts	313	a8784b7e	// [权衡] `automationManagementStore` 不区分手动与自动刷新，行为一致更可预测。
+packages/ui/src/terminal/terminalComposedInputFallback.ts	89	a8784b7e	// `text` 相等才复用候选，防止同一拍里的无关输入被误消费。
+packages/ui/src/terminal/terminalComposedInputFallback.ts	109	a8784b7e	// 回车与输入法处理键（`keydown` 提交类）只记录时间戳。
+packages/ui/src/terminal/terminalComposedInputFallback.ts	168	a8784b7e	// 记录按键命中：先按最大时效 `MAX_AGE` 淘汰历史，再判断候选是否新鲜。
+packages/ui/src/ToolCallBlocks/QueuedSummaryContent.tsx	28	a8784b7e	// `SUMMARY_ROLL_TOTAL_MS` 对外导出，测试与调用方可按两个常量相加推导单拍总时长。
+packages/ui/src/ToolCallBlocks/QueuedSummaryContent.tsx	38	a8784b7e	// 折中取 `SUMMARY_ROLL_MAX_PENDING = 2`：兼顾可读性与实时性，不要随手调整。
+packages/ui/src/ToolCallBlocks/QueuedSummaryContent.tsx	90	a8784b7e	// 接口只描述数据结构，`QueuedSummaryContent` 不承载比较或派生逻辑。
+packages/ui/src/ToolCallBlocks/renderers/cuaListDetails.tsx	179	a8784b7e	// [权衡] `cuaListDetails` 的图标表整体替换而非逐项合并：条目变化时旧图标不残留。
+packages/ui/src/ToolCallBlocks/renderers/cuaListDetails.tsx	182	a8784b7e	// [权衡] 列表容器限高纵向滚动：cuaListDetails 应用多时只滚内容区，不撑高宿主卡片。
+packages/ui/src/ToolCallBlocks/renderers/cuaListDetails.tsx	239	a8784b7e	// [权衡] `width` 与 `height` 都非空才展示尺寸，单边缺失宁可省略。

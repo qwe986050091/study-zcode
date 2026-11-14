@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+apps/dev-docs/src/data/protocolDocs.ts	1598	a8784b7e	// 三个字段分工固定：seq 定位水位；traceId 串观测链；payload.inputId 标归属，缺一个排障就少一条线索。
+apps/zcode-cli/packages/adapters/src/exec/node-execution-adapter-results.ts	121	a8784b7e	// 结算读 originalPersistOutput 与 originalMaxArtifactBytes 两个入参，不重新拼默认值：后台阶段改过的上限不能带回前台。
+apps/zcode-cli/packages/adapters/src/fs/index.ts	673	a8784b7e	// [契约] textSearchEngine === "javascript" 时跳过 ripgrep 与运行时探测：受限环境里 ripgrep 可能存在但不可用，探测本身不确定。
+apps/zcode-cli/packages/adapters/src/model/runner-generate.ts	235	a8784b7e	// [契约] 重解析只换票据不换模型：把 resolveModel 结果缓存到 attempt 外，鉴权刷新后仍打旧 provider 身份。
+apps/zcode-cli/packages/adapters/src/model/runner-status.ts	183	a8784b7e	// [契约] attempt > 1 才换 requestId：adapter retry 是新的物理请求，复用首轮 id 会把重试日志与首轮串在一起。
+apps/zcode-cli/packages/bootstrap/src/app/bundled-plugins.ts	430	a8784b7e	// [权衡] 断言把 getBuiltinModule 收窄成 node:sea 专用签名；仅为省去调用点断言，运行时仍是同一个函数。
+apps/zcode-cli/packages/bootstrap/src/app/create-app.ts	426	a8784b7e	// [顺序] openStartupSessionStore 先跑迁移再返回 store；迁移前读设置会拿到旧列定义，写入直接失败。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-process.ts	175	849f438f	// [失败路径] handleRequest 抛错时回执 ok:false 并附 stack：子进程按 ok:false 退出非零，父进程不必再猜错误来源。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-runtime.ts	368	a8784b7e	// [权衡] 取消发生在 limiter.run 之前，序号与活动行已提交：要么留一条排队痕迹；要么把创建挪进闸门内让调用消失。
+apps/zcode-cli/packages/bootstrap/src/app/script-workflow-tool-port.ts	413	a8784b7e	// [权衡] candidates 顺序把 .zcode/workflows 放在家目录之前：仓库内同名脚本覆盖全局版本，首个可读文件胜出。
+apps/zcode-cli/packages/bootstrap/src/app/session-facade.ts	707	a8784b7e	// [边界] disconnectMcpServer 只断连接，不注销已注册工具：工具卸载由 replaceMcpServer 单独负责；合并会让重连丢工具。
+apps/zcode-cli/packages/bootstrap/src/app/workflow-methods.ts	171	a8784b7e	// 【权衡】listWorkflows 直接等于 deps.listWorkflowRuns，不包一层：分页与排序只在实现里写一次；门面复制会漂移。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/interaction-broker.ts	297	a8784b7e	// [并发] v4AnswerToPermissionResponse 只读入参并返回新对象，不碰 handler 状态；多个 resolve 竞速时调用顺序不影响结果。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/plugins.ts	282	a8784b7e	// [契约] 归属比较只走 normalizePluginRootForComparison：调用点各自拼 resolve 与小写逻辑，win32 上必然出现两种结果。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol/subagent-session-query.ts	122	a8784b7e	// [失败路径] 捕获后返回 null 而不记日志重抛：会话列表按条目容错，单条脏 output 不能升级成整个接口失败。
+apps/zcode-cli/packages/cli/src/command-center/types.ts	97	a8784b7e	// [契约] CommandCenterPluginUninstallResult 被卸载命令与格式化函数共同消费：removed 为 null 时两处都必须走「未安装」文案。
+apps/zcode-cli/packages/cli/src/prompt-command.ts	111	a8784b7e	// [契约] 空 prompt 在构造 app 之前返回 1：下游只看到「什么都没发生」，不会收到一条空回合记录。
+apps/zcode-cli/packages/cli/src/run.ts	206	a8784b7e	// [契约] normalizePromptMode 先 toLowerCase 再比对白名单：手输 BUILD 可用，但返回值始终是小写枚举。
+apps/zcode-cli/packages/core/src/browser-client/manifest.ts	98	a8784b7e	// [权衡] FALLBACK_MANIFEST 刻意是保守子集：无文档时宁可少暴露成员，也不放开 api.json 里的全部能力。
+apps/zcode-cli/packages/core/src/hooks/runner.ts	455	a8784b7e	// [资源] timer.unref 只对 Node 的 Timeout 生效：定时器不阻止进程退出，hook 的存活仍由 callback 的 promise 保证。

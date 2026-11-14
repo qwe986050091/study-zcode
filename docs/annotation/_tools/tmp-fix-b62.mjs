@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+const p = 'd:/code/opensource/valkey/docs/annotation/README-rework.md';
+let s = fs.readFileSync(p, 'utf8');
+const start = s.indexOf('B63：`src/compression_lz4.c`');
+const endMark = '属豁免范围）。';
+const end = s.indexOf(endMark, start);
+if (start < 0 || end < 0) throw new Error('markers not found');
+const b62 = 'B62：`src/stat_calc.c` 单文件单片完成，是 §8.16「已动未达标」清单里第一个收口的文件（22aa802 只给了 11 行函数级注释，语句 11.5% / 分支 0%）。写清两组计算器的口径差异：`tpsCalculator` 用 `zmalloc` 且把窗口存成 `double`，`trendCalculator` 用 `zcalloc` 因为 `metrics` 必须先为 0；两者都用 `update_freq_us` 把「未到结算点就 return」与「已到结算点」分开，前者的 `is_new` 决定首笔样本走整窗归一化 `total * window_us / elapsed_us` 还是走衰减，后者的 `is_new` 决定是否用当前均值填满 10 点环形窗口。三个容易写错的边界逐条落在行上：`uncounted_total` 与 `uncounted_samples` 必须同处清零；前半窗与后半窗各自左移一格后分别累加，新值单独写进 `metrics[9]` 并计入后半窗总和；`time_between_centers` 是 `window_sec / 2.0`，不是整窗。语句 11.5% → 100.0%、分支 0.0% → 100.0%，`added=77 / extra=0 / water=0 / weak=0 / filler=0 / deletedNonZero=0 / syntaxErr=0`（首轮 1 行 W 缺标识符、12 行 weak 缺锚点，补 `trans_per_window`、`older_total`、`newer_avg` 等后清零；文件内剩余 1 行 weak 是上游英文公式块第 215 行，属豁免范围）。';
+const b63 = 'B63：`src/compression_lz4.c` 单文件单片完成，§8.16 清单里第二个收口的文件。重点是三条「账面口径」：其一，自定义分配器把 `ctx_memory` 的地址当作 `LZ4F_CustomMem.opaqueState` 交给 LZ4F，记账按 `zmalloc_size` 而不是请求的 `size`，且释放时必须先减计数再 `zfree`——顺序反了会在已释放块上读头部；其二，`compressionLz4OutputBound` 是「单次 feed 最坏输出」上界，必须同时包含帧头最大长度、输入膨胀上界与排空缓冲三部分，少一项上层缓冲就会溢出；其三，帧一旦开始写就不允许重试：`compressBegin/Update/Flush/End` 任何一步失败都返回 -1 且不回滚，调用方把 writer 置 ERROR，由读取端按截断处理。解码侧写清 `dst_size`/`src_size` 双出参、`ret == 0` 表示帧尾、`input_hint` 必须复位到 `LZ4F_HEADER_SIZE_MIN`，以及 `skipChecksums` 的选择。语句 11.1% → 93.9%、分支 4.8% → 100.0%，`added=82 / extra=0 / water=0 / weak=0 / filler=0 / deletedNonZero=0 / syntaxErr=0`（首轮 3 行 W、1 行 weak，另把 4 条插进三元表达式内部的行撤回，改为在语句上方一次写清两个分支；剩余 6 个未覆盖单元是 2 个参数续行与 4 个三元续行，按 8.9 口径不拆表达式）。';
+s = s.slice(0, start) + b62 + '\n\n' + b63 + s.slice(end + endMark.length);
+fs.writeFileSync(p, s);
+console.log('fixed');

@@ -1,0 +1,21 @@
+file	baseLine	blame	content
+packages/ui/src/components/marketing-touch/MarketingTouchProvider.tsx	388	a8784b7e	// 轮询间隔由 `resolveMarketingTouchPollIntervalMs` 按 `PROD` 与 `ZCODE_ENV` 推导，测试与预发不得硬编码常量。
+packages/ui/src/components/TaskTitleOverflowText.tsx	33	a8784b7e	// `marqueeGapPx` 等常量集中在文件顶部统一单位，动画与静态态复用同一套视觉规则。
+packages/ui/src/components/ui/chart.tsx	393	a8784b7e	// `ChartConfig` 解析只解一层 `payload.payload`：深层嵌套罕见，换来路径可控且可预期。
+packages/ui/src/components/ui/pdf-viewer.tsx	44	a8784b7e	// `RANGE_CHUNK_BYTES` 同时喂给 pdf.js 的 `rangeChunkSize`，两处不同步会让预取范围与请求粒度错配。
+packages/ui/src/components/ui/select.tsx	79	a8784b7e	// 包装保持单行表达式：分支推给调用方后，`Select` 不会在内部替调用方猜测受控或非受控。
+packages/ui/src/components/ui/smooth-metric-value.tsx	121	a8784b7e	// `clampMetricSpeed` 与时间源和减弱动效订阅共用默认值，任一处缺失都会让首帧速度失真。
+packages/ui/src/DeveloperToolsPane.tsx	85	a8784b7e	// `formatTimestamp` 只输出时分秒以省列宽：条目按时间倒序排列，跨天由相邻记录自行区分。
+packages/ui/src/feedback/FeedbackScreenshotPicker.tsx	194	a8784b7e	// `ScreenshotThumb` 的删除按钮同时挂 `aria-label` 与 `title`，读屏与悬停各取所需。
+packages/ui/src/git-action-menu/commitConversationContext.ts	129	a8784b7e	// 连续空行折成一个空行：`normalizeConversationText` 要保留段落语义，同时不让模型上下文被空白撑大。
+packages/ui/src/git-branch-switcher/GitBranchDialogs.tsx	242	a8784b7e	// `hasIdentity` 不复用告警条件：告警只管展示，禁用还要求身份已被 `hasGitCommitIdentity` 真正探测过。
+packages/ui/src/global-notice/globalNoticeStore.ts	20	a8784b7e	// 模块职责：`globalNoticeStore` 持有唯一最新通知与关闭冷却，持久层只存快照且订阅者只读广播。
+packages/ui/src/hooks/useOAuth.ts	109	a8784b7e	// `startOAuthWithPolling` 返回后再比一次 `loginAttemptRef`：期间可能有更新的登录发起，旧请求不登记 state。
+packages/ui/src/hooks/useUsageEntitlement.ts	207	a8784b7e	// `requestVersionRef` 只在发起请求时递增：回包与当前代不一致即丢弃，避免旧响应覆盖新额度。
+packages/ui/src/i18n/IntlProvider.tsx	102	a8784b7e	// `resolveLocalePreferenceFromSettings` 中远控入口以设置服务为准，其余入口按「本地存储 > 设置偏好 > 设置语言」回落。
+packages/ui/src/lib/chatErrorAttributionEvidence.ts	96	a8784b7e	// `GENERIC_PROVIDER_INVALID_REQUEST_CODES` 是模块级 `Set`：构造一次后按哈希命中，不产生每次调用分配。
+packages/ui/src/lib/composerPlanGroups.ts	85	a8784b7e	// `chooseConnectionModel` 先按名称精确匹配并在未命中时回退 `items[0]`，保证切换连接后仍有可用模型。
+packages/ui/src/lib/conversationSelectionReference.ts	94	a8784b7e	// `referenceScopeKey` 的键只供整体比较：调用方解析内部格式后，分隔符变更会静默错配。
+packages/ui/src/lib/conversationTelemetryLegacyParityE2E.ts	152	a8784b7e	// `window.__zcodeConversationTelemetryParityE2E` 是单槽位：后挂载实例覆盖前一个，卸载函数靠身份比较避免误删新实例。
+packages/ui/src/lib/mcpStatusProbe.ts	75	a8784b7e	// 每次 `probeMcpServer` 单独建 `AbortController` 并设 `MCP_PROBE_TIMEOUT_MS`，慢服务不会拖住后续探测。
+packages/ui/src/lib/messageTelemetry.ts	1530	a8784b7e	// 每个正文分片都刷新 `lastMessageChunkAt`，直到 `finalize` 才定格供尾延迟与生成耗时共用。

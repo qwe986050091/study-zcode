@@ -1,0 +1,9 @@
+dir	path	cause
+-	packages/ui/src/settings/ModelProviderSection.tsx	annotation
+-	packages/ui/src/settings/SkillsSection.tsx	annotation
+-	packages/ui/src/settings/model-provider-section/ModelConfigHelp.tsx	annotation
+-	packages/ui/src/settings/saved-workflows/SavedWorkflowCard.tsx	annotation
+-	packages/ui/src/settings/settingsPageConfig.ts	annotation
+-	packages/ui/src/store/pluginManagementStoreLoading.ts	annotation
+-	packages/ui/src/store/whiteboardStore.ts	annotation
+-	packages/ui/src/store/zcodeSessionStoreTaskSlice.ts	annotation

@@ -1,0 +1,29 @@
+file	baseLine	blame	content
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/transcript-hydration.ts	92	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错故障：漏发 entryFacts 会让历史验证结论在恢复后静默消失。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/transcript-hydration.ts	98	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 改错故障：highspeed provider 重启后出现“加速 → 原模型”的虚假切换提示。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/transcript-hydration.ts	324	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 同一轮内出现 cancelled 即整轮取消，不因后续 success 而回升。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/transcript-hydration.ts	640	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] epilogueStart 只接受非负整数，浮点或字符串按缺席处理。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/transcript-hydration.ts	1266	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 其余记录（含 payload 解析失败）一律静默剔除，绝不抛错。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/transcript-hydration.ts	1488	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [契约] 旧 subtask 缺工具生命周期，冷恢复不得据此推断失败，统一按 completed 还原。
+apps/zcode-cli/packages/bootstrap/src/zcode-protocol-v4/transcript-hydration.ts	1953	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 不要在这里读系统时钟，timestamp 取 sourceTimestampMs 或 baseMs+seq。
+apps/zcode-cli/packages/cli/src/command-center/handlers/goal.ts	43	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// trim 之后首尾空白不参与子命令判定。
+apps/zcode-cli/packages/cli/src/command-center/handlers/goal.ts	46	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// readTarget/setTarget/updateTargetStatus/clearTarget 缺一即整体降级为提示。
+apps/zcode-cli/packages/cli/src/command-center/handlers/goal.ts	62	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// splitArgs 只取首个词判断是否子命令。
+apps/zcode-cli/packages/cli/src/command-center/handlers/goal.ts	64	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// pause 分支只改状态，不触发续跑。
+apps/zcode-cli/packages/cli/src/command-center/handlers/goal.ts	85	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// clearTarget 的结果按布尔如实回报。
+apps/zcode-cli/packages/cli/src/command-center/handlers/goal.ts	104	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 非 forceReplace 写入需先 readTarget 检查是否已有目标。
+apps/zcode-cli/packages/cli/src/command-center/handlers/goal.ts	117	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// setTarget 落库后立刻进入统一续跑出口。
+packages/services/src/conversation-share/conversationShareService.ts	317	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// IMPORTED_CONVERSATION_SHARE_FORMAT_VERSION 只描述本地落盘格式，不跟随 wire 协议升级。
+packages/services/src/conversation-share/conversationShareService.ts	496	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// collectShareStructureIssues 一次性收集所有阻断问题，不遇到第一个就抛。
+packages/services/src/conversation-share/conversationShareService.ts	1354	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// assistantTextByProductTurnId 通常只有个位数，串行查询的额外延迟可以接受。
+packages/services/src/conversation-share/conversationShareService.ts	1496	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// video/audio 不参与 allowedArtifacts 白名单，始终以预览卡片呈现，跳过上传清单。
+packages/services/src/conversation-share/conversationShareService.ts	2259	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 每条 import 记录同时写精确表与宽表，宽表用于重启后的跨请求去重。
+packages/services/src/conversation-share/conversationShareService.ts	2769	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// progressEmitters 以 removeLastListener 为销毁信号并从表中删除，不做定时清理。
+packages/services/src/conversation-share/conversationShareService.ts	2947	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 扩展名比较先去掉前导点再 toLowerCase，因为能力清单与服务端回写的大小写不一致。
+packages/ui/src/WorkspaceSidebar/RemoteProjectDetailsPopover.tsx	35	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// disabled 为真时立即收起并 clearTimer，解除后再重新参与 hover。
+packages/ui/src/WorkspaceSidebar/RemoteProjectDetailsPopover.tsx	62	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// mode 显式记录 hover 或 click，null 表示关闭。
+packages/ui/src/WorkspaceSidebar/RemoteProjectDetailsPopover.tsx	86	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// disabled 与卸载都复用 clearTimer。
+packages/ui/src/WorkspaceSidebar/RemoteProjectDetailsPopover.tsx	113	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// callback 可选，仅关闭浮层时也可以调用。
+packages/ui/src/WorkspaceSidebar/RemoteProjectDetailsPopover.tsx	124	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// open 条件：disabled 时无论 mode 是什么都不展示。
+packages/ui/src/WorkspaceSidebar/RemoteProjectDetailsPopover.tsx	203	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// onCloseAutoFocus 先 preventDefault 再判断，行仍聚焦时把焦点还给行元素。
+packages/ui/src/WorkspaceSidebar/RemoteProjectDetailsPopover.tsx	205	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 回填只针对 anchorRef 指向的行元素，浮层内按钮不参与。

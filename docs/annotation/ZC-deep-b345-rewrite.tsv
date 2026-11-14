@@ -1,0 +1,24 @@
+file	baseLine	blame	content
+packages/services/src/bots/providers/feishuProvider.ts	566	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// buildFeishuElicitationCardPayloadBody 按「历史答案 → 计划正文 → 当前题 → 按钮/表单」拼装。
+packages/services/src/bots/providers/feishuProvider.ts	639	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// planApprovalContent 非空时在正文后插 hr 与「审批」小标题，把内容区与操作区分开；
+packages/services/src/bots/providers/feishuProvider.ts	1173	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// incomingChatType 为 group 时允许空正文，仅 @ 即唤起，引用与话题由服务层补全；
+packages/services/src/bots/providers/feishuProvider.ts	2205	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resolveFeishuUserDisplayName 不拼接也不音译，展示格式由上层决定。
+packages/services/src/bots/providers/feishuProvider.ts	3844	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// signal?.throwIfAborted() 先暴露取消，再判 AbortError 转成本层超时，两者处理策略不同。
+packages/services/src/zcode-agent/zcodeAgentService.ts	668	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// isProtocolMethodNotFoundError 只认数值 -32601，让上层降级到旧方法而不是当协议错误上报给用户。
+packages/services/src/zcode-agent/zcodeAgentService.ts	2050	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// setTimeout 回调里的超时清理不向外抛异常，后台定时器没有调用方可以承接。
+packages/services/src/zcode-agent/zcodeAgentService.ts	4575	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// existing-only 观察者拿到的是「当前事实」，不是「允许执行」的许可。
+packages/services/src/zcode-agent/zcodeAgentService.ts	6344	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// resolveSavedWorkflowCarrier 决定 meta 改动落在哪个 workspace，与列表/读取同一作用域判定。
+packages/services/src/zcode-agent/zcodeAgentService.ts	6569	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// marketplace 显式给出时只刷新该源，缺省则刷新全部已配置源。
+packages/shared/src/zcode-protocol-v4/wire-codec.ts	50	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// measureTopicNotificationEnvelopeBytes 分别算 cliNdjsonBytes / channelSocketBytes / mobileRelayBytes，取 maxBytes 作保守上限。
+packages/shared/src/zcode-protocol-v4/wire-codec.ts	136	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// hardBound 的 value 缺省时回落 maximum，即调用方不传就用协议上限。
+packages/shared/src/zcode-protocol-v4/wire-codec.ts	137	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// !Number.isFinite 或 <=0 时直接抛 TopicWireFrameEncodingError，不做静默修正。
+packages/shared/src/zcode-protocol-v4/wire-codec.ts	138	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 返回值 Math.min(Math.floor(resolved), maximum)，向下取整并夹到上限。
+packages/shared/src/zcode-protocol-v4/wire-codec.ts	183	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// findFragmentByteBudget 在 logicalBytes 与 maxPhysicalFrameBytes 之间二分最大分片。
+packages/shared/src/zcode-protocol-v4/wire-codec.ts	184	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 候选帧按最坏分片序号与总片数构造，因此二分结果只会偏大。
+packages/shared/src/zcode-protocol-v4/wire-codec.ts	185	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 二分不可行时返回 0，由调用方转成 TopicWireFrameEncodingError。
+packages/ui/src/RemoteConnectionFields.tsx	636	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// aliasOption.alias 与 selectedSshConfigAlias 通常相同，但别名会被规范化大小写后展示。
+packages/ui/src/RemoteConnectionFields.tsx	674	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// wslUser 空串合法，语义是使用发行版默认用户。
+packages/ui/src/RemoteConnectionFields.tsx	729	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 全部已填时 focus 提交按钮，让「导入后按回车即可提交」成立。
+packages/ui/src/RemoteConnectionFields.tsx	757	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// disabled 只有两个来源：sshConfigAliasesLoading 为真，或候选为空且 selectedSshConfigAlias 缺省。
+packages/ui/src/RemoteConnectionFields.tsx	758	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// selectedSshConfigAlias 有值而列表为空时仍可点，否则用户无法打开并清除失效关联。
+packages/ui/src/RemoteConnectionFields.tsx	978	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// SSH 密码用于远程主机认证，不是本站在线账号，因此 autoComplete 会关掉自动填充。

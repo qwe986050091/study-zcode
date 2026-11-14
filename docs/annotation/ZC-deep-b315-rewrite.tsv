@@ -1,0 +1,34 @@
+file	baseLine	blame	content
+packages/ui/src/lib/taskListMembershipSets.ts	93	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// E2E 专用：holdTaskListMembershipRefreshResultForE2E 把已读好的快照挂在 await 上
+packages/ui/src/lib/taskListMembershipSets.ts	94	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 已有 activeTaskListMembershipRefreshHold 时抛错，避免两套暂停互相覆盖
+packages/ui/src/lib/taskListMembershipSets.ts	95	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先 clearTaskListMembershipCache，下一次读取必然走到暂停点
+packages/ui/src/lib/taskListMembershipSets.ts	152	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// scopeParams 把 scope 转成服务入参，workspaceIdentity 为空时不展开该键
+packages/ui/src/lib/taskListMembershipSets.ts	153	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// [边界] 写成空串而非省略会让服务按 workspaceIdentity = "" 查询
+packages/ui/src/lib/taskListMembershipSets.ts	154	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 不做默认值填充，缺 workspaceIdentity 就不带该字段
+packages/ui/src/lib/taskListMembershipSets.ts	155	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 返回值只含 TaskListMembershipService 认识的 workspacePath 与 workspaceIdentity
+packages/ui/src/lib/taskListMembershipSets.ts	156	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 用条件 spread 展开 workspaceIdentity，为空时对象不含该键
+packages/ui/src/lib/taskListMembershipSets.ts	390	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 任务行按 taskId 去重，后者覆盖前者
+packages/ui/src/lib/taskListMembershipSets.ts	391	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 五类附属映射逐项合并，Set 取并 Map 后写覆盖
+packages/ui/src/lib/taskListMembershipSets.ts	392	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 返回合并后的 TaskListMembershipSets
+packages/web/src/share/mockConversationSharePreviewClient.ts	26	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// createdAt 取 Date.now() 减 60 秒，预览里相对时间稳定显示
+packages/web/src/share/mockConversationSharePreviewClient.ts	27	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// expires_at = createdAt + 24 * 60 * 60 * 1_000，固定一天后
+packages/web/src/share/mockConversationSharePreviewClient.ts	28	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// rows 三条覆盖 userInput、assistantText、artifact 三类
+packages/web/src/share/mockConversationSharePreviewClient.ts	29	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// title 按 accessMode === "private" 三元切换
+packages/web/src/share/mockConversationSharePreviewClient.ts	107	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// MockConversationSharePreviewClient 的 getPreview 签名与真实客户端一致
+packages/web/src/share/mockConversationSharePreviewClient.ts	108	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// shareCode === "mock-expired" 抛 kind: "expired"
+packages/web/src/share/mockConversationSharePreviewClient.ts	109	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// shareCode === "mock-not-found" 抛 kind: "not_found"
+packages/web/src/share/mockConversationSharePreviewClient.ts	110	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 其余 shareCode 回退到 previewFor("public_importable")
+packages/web/src/share/mockConversationSharePreviewClient.ts	146	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// mock-partial-unsupported 返回 unsupportedRowCount: 1 触发软提示
+packages/web/src/share/mockConversationSharePreviewClient.ts	147	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 认得的 rows 照常渲染，只有一行被 build 跳过
+packages/web/src/share/mockConversationSharePreviewClient.ts	148	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// mock-* 入口仅用于手工验收，真实链路走 conversationSharePreviewClient
+packages/zcode-server-cli/src/runtime/immutableRelease.ts	41	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// readdir 结果按 entry.name 排序，保证哈希遍历顺序稳定
+packages/zcode-server-cli/src/runtime/immutableRelease.ts	42	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// relativePath === RELEASE_INTEGRITY_FILE 时 continue，自身不参与哈希
+packages/zcode-server-cli/src/runtime/immutableRelease.ts	43	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// directory 写路径、file 写路径加 stat.mode & 0o777
+packages/zcode-server-cli/src/runtime/immutableRelease.ts	44	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// entry.isFile() 为假即抛 Unsupported release entry
+packages/zcode-server-cli/src/runtime/immutableRelease.ts	69	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先读 .release-integrity.json 与 manifest.json
+packages/zcode-server-cli/src/runtime/immutableRelease.ts	70	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// hashReleaseTree(releaseDir) 重算 contentSha256
+packages/zcode-server-cli/src/runtime/immutableRelease.ts	71	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// integrity 与 expected 逐字段比对，含 contentSha256
+packages/zcode-server-cli/src/runtime/immutableRelease.ts	72	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 冲突包成 Error 时保留 error.message 作为原因
+packages/zcode-server-cli/src/runtime/immutableRelease.ts	112	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 先按归档摘要格式校验 archiveSha256
+packages/zcode-server-cli/src/runtime/immutableRelease.ts	113	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 未晋升的 incomingDir 在失败路径统一清理
+packages/zcode-server-cli/src/runtime/immutableRelease.ts	114	a8784b7e479d3a5864dec41d706d4aa4ecbc6703	// 并发发布仅在 identity 命中已有 release 时复用
