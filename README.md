@@ -230,3 +230,15 @@ node dist/zcode/debug/zcode/bin/zcode.mjs --web \
 ## 项目声明
 
 功能与优惠范围、维护规则、执行与数据风险，以及许可和第三方版权说明，详见 [NOTICE.md](NOTICE.md)。
+
+---
+
+## 关于本仓库（学习注释版）
+
+- 这是**学习用的中文注释版**，不是上游官方仓库，也不代表上游维护者的立场。
+- 上游仓库：[zai-org/ZCode](https://github.com/zai-org/ZCode)
+- 上游提交基线：`3c5b2276`
+- 新增注释范围：从 CLI 分流 → 会话接纳 → 单轮生命周期 → 主循环 → 模型请求 → 工具执行的主链路（`apps/zcode-cli` 与相关 packages）。中文注释直接写在源码中，原有英文注释与代码逻辑全部保留。
+- 注释文档入口：[docs/annotation/READING-GUIDE.md](docs/annotation/READING-GUIDE.md)
+- 上游许可证：Apache-2.0；本仓已保留上游 [LICENSE](LICENSE) 原文。
+- 免责声明：代码版权归上游作者所有，本仓库仅用于个人学习；中文注释部分由本人编写。
